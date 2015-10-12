@@ -32,7 +32,39 @@
 	  </div>
 	</noscript>
 
-          <h1 id="language-specific-features">Language-specific features</h1>
+          <h1 id="additional-language-specific-values-for-universal-features">Additional language-specific values for universal features</h1>
+
+<p>The following features are included in the <a href="u/feat/index.html">universal set</a>, but some values are missing there.
+It is likely that these values will be included in future versions of the universal set.</p>
+
+<h2 id="degree">Degree</h2>
+<ul>
+  <li><a href="">u-feat/Degree</a><code> = Dim</code>: diminutive (used for nouns e.g. in <a href="nl-feat/Degree">Dutch</a>: <em>stoeltje, huisje, nippertje</em>)</li>
+</ul>
+
+<h2 id="prontype">PronType</h2>
+<ul>
+  <li><a href="">u-feat/PronType</a><code> = Exc</code>: exclamative pronoun or determiner. It expresses the speaker’s surprise towards the modified noun, e.g. <em>what</em> in <em><b>What</b> a surprise!</em> In many languages, exclamative determiners are recruited from the set of interrogative determiners. Therefore, not all tagsets distinguish them. For instance, they are distinguished in Spanish (es::conll2009), Catalan (ca::conll2009), Italian (it::isdt) and Persian (fa::conll).</li>
+  <li><code>PronType = Clit</code>: used for clitic pronouns in Italian, e.g. <em><b>Si</b> è rotto</em> “It has broken”</li>
+</ul>
+
+<h2 id="tense">Tense</h2>
+<ul>
+  <li><a href="">u-feat/Tense</a><code> = Aor</code>: aorist (as opposed to <code>Past</code>) in <a href="grc-feat/Tense">Ancient Greek</a>. Note that other languages may have a past tense that they traditionally call aorist but they mark it using the normal <code>Past</code> value because the other past tenses have their own special values. <a href="bg-feat/Tense">Bulgarian</a> is an example: Bulgarian aorist is labeled <code>Past</code> and imperfect past is labeled <code>Imp</code>.</li>
+</ul>
+
+<h2 id="verbform">VerbForm</h2>
+<ul>
+  <li><a href="">u-feat/VerbForm</a><code> = Gdv</code>: gerundive (as opposed to the gerund) in <a href="la-feat/VerbForm">Latin</a>.</li>
+</ul>
+
+<h2 id="voice">Voice</h2>
+<ul>
+  <li><a href="">u-feat/Voice</a><code> = Mid</code>: middle voice in <a href="grc-feat/Voice">Ancient Greek</a>. (The mediopassive voice can be expressed as <code>Voice=Mid,Pass</code>.)</li>
+  <li><code>Voice = Int</code>: intensive voice/aspect (the PIEL binyan) in Hebrew.</li>
+</ul>
+
+<h1 id="language-specific-features">Language-specific features</h1>
 
 <p>In addition to the <a href="u/feat/index.html">universal set of features</a>,
 it is desirable to recognize word features that are particular
@@ -67,7 +99,9 @@ from existing tagsets of various languages to the universal part-of-speech tags 
 
 <h2 id="abbr">Abbr</h2>
 <ul>
+  <li><a href="ar-feat/Abbr">Arabic values</a>: Yes</li>
   <li><a href="cs-feat/Abbr">Czech values</a>: Yes</li>
+  <li><a href="et-feat/Abbr">Estonian values</a>: Yes</li>
   <li><a href="fi-feat/Abbr">Finnish values</a>: Yes</li>
   <li><a href="sl-feat/Abbr">Slovenian values</a>: Yes</li>
   <li><a href="ext-feat/Abbr">Interset</a>: Yes</li>
@@ -75,7 +109,14 @@ from existing tagsets of various languages to the universal part-of-speech tags 
 
 <h2 id="adptype">AdpType</h2>
 <ul>
+  <li><a href="grc-feat/AdpType">Ancient Greek values</a>: Prep</li>
+  <li><a href="ar-feat/AdpType">Arabic values</a>: Prep</li>
   <li><a href="cs-feat/AdpType">Czech values</a>: Prep, Voc, Comprep</li>
+  <li><a href="nl-feat/AdpType">Dutch values</a>: Prep, Post, Circ</li>
+  <li><a href="et-feat/AdpType">Estonian values</a>: Prep, Post</li>
+  <li><a href="la-feat/AdpType">Latin values</a>: Prep</li>
+  <li><a href="pt-feat/AdpType">Portuguese values</a>: Prep</li>
+  <li><a href="ta-feat/AdpType">Tamil values</a>: Post</li>
   <li><a href="ext-feat/AdpType">Interset</a>: Prep, Post, Circ, Voc</li>
 </ul>
 
@@ -107,9 +148,12 @@ from existing tagsets of various languages to the universal part-of-speech tags 
 
 <h2 id="foreign">Foreign</h2>
 <ul>
+  <li><a href="ar-feat/Foreign">Arabic values</a>: Foreign</li>
   <li><a href="cs-feat/Foreign">Czech values</a>: Foreign, Fscript, Tscript</li>
+  <li><a href="nl-feat/Foreign">Dutch values</a>: Foreign</li>
   <li><a href="fi-feat/Foreign">Finnish values</a>: Foreign, Fscript</li>
   <li><a href="sl-feat/Foreign">Slovenian values</a>: Yes</li>
+  <li><a href="es-feat/Foreign">Spanish values</a>: Foreign, Fscript</li>
   <li><a href="ext-feat/Foreign">Interset</a>: Foreign, Fscript, Tscript</li>
 </ul>
 
@@ -135,6 +179,7 @@ from existing tagsets of various languages to the universal part-of-speech tags 
 <h2 id="hyph">Hyph</h2>
 <ul>
   <li><a href="cs-feat/Hyph">Czech values</a>: Yes</li>
+  <li><a href="pt-feat/Hyph">Portuguese values</a>: Yes</li>
   <li><a href="ext-feat/Hyph">Interset</a>: Yes</li>
 </ul>
 
@@ -146,6 +191,7 @@ from existing tagsets of various languages to the universal part-of-speech tags 
 <h2 id="nametype">NameType</h2>
 <ul>
   <li><a href="cs-feat/NameType">Czech values</a>: Geo, Prs, Giv, Sur, Nat, Com, Pro, Oth</li>
+  <li><a href="et-feat/NameType">Estonian values</a>: Nat</li>
   <li><a href="ext-feat/NameType">Interset</a>: Geo, Prs, Giv, Sur, Nat, Com, Pro, Oth</li>
 </ul>
 
@@ -181,19 +227,24 @@ from existing tagsets of various languages to the universal part-of-speech tags 
 <ul>
   <li><a href="cs/feat/Number-psor.html">Czech values</a>: Sing, Plur</li>
   <li><a href="fi/feat/Number-psor.html">Finnish values</a>: Sing, Plur</li>
+  <li><a href="pt-feat/Number-psor">Portuguese values</a>: Sing, Plur</li>
   <li><a href="sl-feat/Number-psor">Slovenian values</a>: Sing, Dual, Plur</li>
   <li><a href="ext-feat/PossNumber">Interset</a>: Sing, Plur</li>
 </ul>
 
 <h2 id="numform">NumForm</h2>
 <ul>
+  <li><a href="ar-feat/NumForm">Arabic values</a>: Digit, Word</li>
   <li><a href="cs-feat/NumForm">Czech values</a>: Digit, Roman, Word</li>
+  <li><a href="et-feat/NumForm">Estonian values</a>: Digit, Word</li>
   <li><a href="sl-feat/NumForm">Slovenian values</a>: Digit, Roman, Word</li>
+  <li><a href="ta-feat/NumForm">Tamil values</a>: Digit</li>
   <li><a href="ext-feat/NumForm">Interset</a>: Digit, Roman, Word</li>
 </ul>
 
 <h2 id="numvalue">NumValue</h2>
 <ul>
+  <li><a href="ar-feat/NumValue">Arabic values</a>: 1, 2, 3</li>
   <li><a href="cs-feat/NumValue">Czech values</a>: 1, 2, 3</li>
   <li><a href="ext-feat/NumValue">Interset</a>: 1, 2, 3</li>
 </ul>
@@ -205,6 +256,7 @@ from existing tagsets of various languages to the universal part-of-speech tags 
 
 <h2 id="parttype">PartType</h2>
 <ul>
+  <li><a href="nl-feat/PartType">Dutch values</a>: Inf, Vbp</li>
   <li><a href="ext-feat/PartType">Interset</a>: Mod, Emp, Res, Inf, Vbp</li>
 </ul>
 
@@ -235,6 +287,8 @@ from existing tagsets of various languages to the universal part-of-speech tags 
 <h2 id="polite">Polite</h2>
 <ul>
   <li><a href="ext-feat/Polite">Basque values</a>: Inf, Pol</li>
+  <li><a href="es-feat/Polite">Spanish values</a>: Pol</li>
+  <li><a href="ta-feat/Polite">Tamil values</a>: Pol</li>
   <li><a href="ext-feat/Polite">Interset</a>: Inf, Pol</li>
 </ul>
 
@@ -264,16 +318,22 @@ from existing tagsets of various languages to the universal part-of-speech tags 
 <h2 id="prepcase">PrepCase</h2>
 <ul>
   <li><a href="cs-feat/PrepCase">Czech values</a>: Npr, Pre</li>
+  <li><a href="pt-feat/PrepCase">Portuguese values</a>: Pre</li>
+  <li><a href="es-feat/PrepCase">Spanish values</a>: Npr, Pre</li>
   <li><a href="ext-feat/PrepCase">Interset</a>: Npr, Pre</li>
 </ul>
 
 <h2 id="punctside">PunctSide</h2>
 <ul>
+  <li><a href="nl-feat/PunctSide">Dutch values</a>: Ini, Fin</li>
   <li><a href="ext-feat/PunctSide">Interset</a>: Ini, Fin</li>
 </ul>
 
 <h2 id="puncttype">PunctType</h2>
 <ul>
+  <li><a href="nl-feat/PunctType">Dutch values</a>: Brck, Colo, Comm, Excl, Peri, Qest, Quot, Semi</li>
+  <li><a href="et-feat/PunctType">Estonian values</a>: Comm, Excl, Peri, Qest</li>
+  <li><a href="ta-feat/PunctType">Tamil values</a>: Comm, Peri</li>
   <li><a href="ext-feat/PunctType">Interset</a>: Peri, Qest, Excl, Quot, Brck, Comm, Colo, Semi, Dash</li>
 </ul>
 
@@ -286,50 +346,29 @@ from existing tagsets of various languages to the universal part-of-speech tags 
 
 <h2 id="subcat">Subcat</h2>
 <ul>
+  <li><a href="nl-feat/Subcat">Dutch values</a>: Intr, Trans</li>
   <li><a href="ext-feat/Subcat">Interset</a>: Intr, Trans</li>
 </ul>
 
 <h2 id="typo">Typo</h2>
 <ul>
   <li><a href="fi-feat/Typo">Finnish values</a>: Yes</li>
+  <li><a href="pt-feat/Typo">Portuguese values</a>: Yes</li>
   <li><a href="ext-feat/Typo">Interset</a>: Yes</li>
 </ul>
 
 <h2 id="variant">Variant</h2>
 <ul>
   <li><a href="cs-feat/Variant">Czech values</a>: Short</li>
+  <li><a href="nl-feat/Variant">Dutch values</a>: Short</li>
   <li><a href="sl-feat/Variant">Slovenian values</a>: Bound, Short</li>
 </ul>
 
 <h2 id="verbtype">VerbType</h2>
 <ul>
+  <li><a href="nl-feat/VerbType">Dutch values</a>: Aux, Cop, Mod</li>
+  <li><a href="et-feat/VerbType">Estonian values</a>: Mod</li>
   <li><a href="ext-feat/VerbType">Interset</a>: Aux, Cop, Mod, Light</li>
-</ul>
-
-<h1 id="additional-language-specific-values-for-universal-features">Additional language-specific values for universal features</h1>
-
-<p>The following features are included in the <a href="u/feat/index.html">universal set</a>, but some values are missing there:</p>
-
-<h2 id="degree">Degree</h2>
-<ul>
-  <li><a href="">u-feat/Degree</a><code> = Dim</code>: diminutive (used for nouns e.g. in Dutch: <em>stoeltje, huisje, nippertje</em>)</li>
-</ul>
-
-<h2 id="prontype">PronType</h2>
-<ul>
-  <li><a href="">u-feat/PronType</a><code> = Exc</code>: exclamative pronoun or determiner. It expresses the speaker’s surprise towards the modified noun, e.g. <em>what</em> in <em><b>What</b> a surprise!</em> In many languages, exclamative determiners are recruited from the set of interrogative determiners. Therefore, not all tagsets distinguish them. For instance, they are distinguished in Spanish (es::conll2009), Catalan (ca::conll2009), Italian (it::isdt) and Persian (fa::conll).</li>
-  <li><code>PronType = Clit</code>: used for clitic pronouns in Italian, e.g. <em><b>Si</b> è rotto</em> “It has broken”</li>
-</ul>
-
-<h2 id="verbform">VerbForm</h2>
-<ul>
-  <li><a href="">u-feat/VerbForm</a><code> = Gdv</code>: gerundive (as opposed to the gerund) in Latin.</li>
-</ul>
-
-<h2 id="voice">Voice</h2>
-<ul>
-  <li><a href="">u-feat/Voice</a><code> = Mid</code>: middle voice in Ancient Greek. (The mediopassive voice can be expressed as <code>Voice=Mid,Pass</code>.)</li>
-  <li><code>Voice = Int</code>: intensive voice/aspect (the PIEL binyan) in Hebrew.</li>
 </ul>
 
 
