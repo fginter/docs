@@ -24,7 +24,7 @@ def analyze_readme(dir_name):
     return readme_data
                 
 def get_language_span(l):
-    return """<span class="widespan" style="padding-left:3em">{}</span>""".format(l.replace(u"_",u" "))
+    return """<span class="doublewidespan" style="padding-left:3em">{}</span>""".format(l.replace(u"_",u" "))
 
 def get_wide_span(l):
     return """<span class="widespan">{}</span>""".format(l.replace(u"_",u" "))
@@ -75,7 +75,10 @@ def gen_table(args):
         if validates:
             print >> a_data, """<span class="validationpass">PASS</span>"""
         else:
-            print >> a_data, """<span class="validationfail">FAIL</span>"""
+            if val_output=="No data":
+                print >> a_data, """<span class="validationfail">NO DATA</span>"""
+            else:
+                print >> a_data, """<span class="validationfail">FAIL</span>"""
         print >> a_data, "</div>"
 
         print >> a_data, "<div>"
