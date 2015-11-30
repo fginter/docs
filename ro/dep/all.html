@@ -383,6 +383,7 @@ case(masă, pe)
 
 <pre><code class="language-sdparse">Maria și Ion tocmai au sosit . \n Mary and John just have arrived .
 cc(Maria, și)
+conj(Maria, Ion)
 </code></pre>
 
 <p>A coordinating conjunction may also appear at the beginning of a sentence. This is also called a <code>cc</code>, and it depends on the root predicate of the sentence. (In fact there is a coordination that spans multiple sentences. We cannot attach a word to the first conjunct because it is in another sentence. Thus we attach it to the first conjunct available in the current sentence: its main predicate.)</p>
@@ -600,6 +601,14 @@ expl(apucat, o)
 expl(știe, nu)
 </code></pre>
 
+<ul>
+  <li>possession:</li>
+</ul>
+
+<pre><code class="language-sdparse">Mi- am vândut mașina .
+expl:poss(vândut, Mi-)
+</code></pre>
+
 <p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_ro-dep/expl.md" target="#">edit expl</a></p>
 
 <p><a id="al-ro-dep/foreign" class="al-dest"></a></p>
@@ -762,6 +771,16 @@ for <code>punct</code>.</p>
 
 <p><a id="al-ro-dep/remnant" class="al-dest"></a></p>
 <h2><code>remnant</code>: remnant in ellipsis</h2>
+
+<pre><code class="language-sdparse">Dan a desenat o casă , iar Maria un copac .
+remnant(Dan, Maria)
+remnant(casă, copac)
+</code></pre>
+
+<pre><code class="language-sdparse">ROOT Când a intrat preotul , toți în genunchi .
+root(ROOT, genunchi)
+nsubj(genunchi, toți)
+</code></pre>
 
 <p>This document is a placeholder for the language-specific documentation
 for <code>remnant</code>.</p>

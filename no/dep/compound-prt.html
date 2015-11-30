@@ -3,7 +3,7 @@
 <html lang="en-GB" xml:lang="en-GB" xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
-    <title>DET</title>
+    <title>compound:prt</title>
     <link rel="root" href=""/> <!-- for JS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="../../css/jquery-ui-redmond.css"/>
@@ -21,8 +21,8 @@
       <div id="hp-header">
 	
           <span class="header-text"><a href="http://universaldependencies.github.io/docs/#language-no">home</a></span>
-          <span class="header-text"><a href="http://universaldependencies.github.io/docs/no/pos">no/pos</a></span>
-          <span class="header-text"><a href="https://github.com/universaldependencies/docs/edit/pages-source/_no-pos/DET.md" target="#">edit page</a></span>
+          <span class="header-text"><a href="http://universaldependencies.github.io/docs/no/dep">no/dep</a></span>
+          <span class="header-text"><a href="https://github.com/universaldependencies/docs/edit/pages-source/_no-dep/compound-prt.md" target="#">edit page</a></span>
           <span class="header-text"><a href="https://github.com/universaldependencies/docs/issues">issue tracker</a></span>
       </div>
 
@@ -36,86 +36,31 @@
 	  </div>
 	</noscript>
 
-          <h2><code>DET</code>: determiner</h2>
+          <h2><code>compound:prt</code>: compound:prt</h2>
 
-<h4 id="definition">Definition</h4>
-<p>Determiners are words that modify nouns or noun phrases and express the reference of the noun phrase in context.
-In Norwegian, most determiners agree with the nominal head in terms of gender and number, e.g. <em><b>min</b> bil</em> “my car”, <em><b>mitt</b> barn</em> “my child”, <em><b>mine</b> barn</em> “my children”. 
-We distinguish three main types of determiners: possessive, demonstrative and quantifying.</p>
+<p>This language-specific relation is used for verbal particles in Norwegian and describes the relation of the particle to its verbal head.</p>
 
-<p><strong>Possessive</strong></p>
+<p>Particles exhibit a number of syntactic properties which sets them apart from regular prepositions. For instance, a pronominal object may intercede the verb and the preposition in the particle case <em>satte den på</em> “put it on”, but not in the case of a regular preposition and its complement <em>*lette den etter</em> “*looked it for”,  and only complements of a preposition may occur in an impersonal passive <em>Det ble lett etter den nye boka</em> “It was looked for the new book”, but an object in a particle construction may not <em>*Det ble satt den på</em> “*It was put it on”.</p>
 
-<p>Possessive determiners agree in gender and number with the noun the modify, their form varies depending on person. In Norwegian, possessive determiners usually precede their head noun, but may occur after the head noun when the noun is in the definite form, e.g. <em>bilen <b>hans</b></em> “his car”
-* <em><b>mitt</b> barn</em> “my child” 
-* <em><b>våre</b> barn</em> “our children”
-* <em>barnet <b>vårt</b></em> “our child”</p>
+<pre><code class="language-sdparse">Den gang ble alt samlet inn \n That time all was collected
+compound:prt(samlet,inn)
+</code></pre>
 
-<p><strong>Demonstrative</strong></p>
+<pre><code class="language-sdparse">Regjeringen har lagt frem et raust statsbudsjett \n The government has put forward a generous budget
+compound:prt(lagt,frem)
+</code></pre>
 
-<p>Demonstrative determiners agree in gender and number with the noun the modify. This group of determiners include the interrogative <em>hvilken</em> “which”. The demonstratives may only precede the noun they modify.</p>
+<pre><code class="language-sdparse">Forskningsrådet delte onsdag kveld ut to sentrale priser \n The research council handed out to central prizes Wednesday evening
+compound:prt(delte,ut)
+</code></pre>
 
-<ul>
-  <li><em><b>dette</b> barnet</em> “this child”, <em><b>det</b> barnet</em> “that child”, <em><b>den</b> bilen</em>“that car”</li>
-  <li><em>(det) <b>samme</b> barnet</em> “(the) same child”, <em>(det) <b>andre</b> barnet</em> “(the) other child”</li>
-  <li><em><b>hvilken</b> bil</em> “which car”, <em><b>hvilket</b> hus</em> “which house”</li>
-</ul>
+<p><strong>References</strong>
+Kari Kinn, Per Erik Solberg and Pål Kristian Eriksen. “<a href="http://www.nb.no/sbfil/dok/20140314_guidelines_ndt_english.pdf">NDT Guidelines for Morphological Annotation</a>”. National Library Tech Report.</p>
 
-<p><strong>Quantifying</strong></p>
-
-<p>The quantifying pronouns are a heterogenous group of determiners which all occur before the noun they modify. Some of these agree with their nominal head (like articles and indefinite determiners) and some do not.</p>
-
-<ul>
-  <li><em><b>en</b> bil</em> “a car”, <em><b>et</b> barn</em> “a child”, <em><b>ei</b> jente</em> “a girl”</li>
-  <li><em><b>noen</b> biler</em> “some cars”</li>
-  <li><em><b>alle</b> biler</em> “all cars”</li>
-  <li><em><b>begge</b> bilene</em> “both cars”</li>
-</ul>
-
-<h4 id="references">References</h4>
-<p>Jan Terje Faarlund, Svein Lie and Kjell Ivar Vannebo. 1997. “Norsk referansegrammatikk”. Universitetsforlaget, Oslo, Norway.</p>
 
 
 <!-- "in other languages" links -->
 <hr/>
-
-DET in other languages:
-
-[<a href="../../bg/pos/DET.html">bg</a>]
-
-[<a href="../../cs/pos/DET.html">cs</a>]
-
-[<a href="../../de/pos/DET.html">de</a>]
-
-[<a href="../../el/pos/DET.html">el</a>]
-
-[<a href="../../en/pos/DET.html">en</a>]
-
-[<a href="../../es/pos/DET.html">es</a>]
-
-[<a href="../../eu/pos/DET.html">eu</a>]
-
-[<a href="../../fa/pos/DET.html">fa</a>]
-
-[<a href="../../fi/pos/DET.html">fi</a>]
-
-[<a href="../../fr/pos/DET.html">fr</a>]
-
-[<a href="../../ga/pos/DET.html">ga</a>]
-
-[<a href="../../he/pos/DET.html">he</a>]
-
-[<a href="../../hu/pos/DET.html">hu</a>]
-
-[<a href="../../it/pos/DET.html">it</a>]
-
-[<a href="../../ja/pos/DET.html">ja</a>]
-
-[<a href="../../ko/pos/DET.html">ko</a>]
-
-[<a href="../../sv/pos/DET.html">sv</a>]
-
-[<a href="../../u/pos/DET.html">u</a>]
-
 
 
 
@@ -190,7 +135,7 @@ DET in other languages:
         setupAccordions();
 
         // mark current collection (filled in by Jekyll)
-        Collections.listing['_current'] = 'no-pos';
+        Collections.listing['_current'] = 'no-dep';
 
 	// perform all embedding and support functions
 	Annodoc.activate(Config.bratCollData, Collections.listing);
