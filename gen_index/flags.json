@@ -15,6 +15,7 @@
 "Danish":"DK",
 "Dutch":"NL",
 "English":"US",
+"English-ESL":"US",
 "Estonian":"EE",
 "French":"FR",
 "German":"DE",
@@ -43,5 +44,6 @@
 "Kazakh":"KZ",
 "Turkish":"TR",
 "Polish":"PL",
-"Norwegian":"NO"
+"Norwegian":"NO",
+"Ukrainian":"UA"
 }
