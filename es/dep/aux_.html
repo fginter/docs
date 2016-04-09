@@ -11,6 +11,7 @@
     <link rel="stylesheet" type="text/css" href="../../css/style-vis.css"/>
     <link rel="stylesheet" type="text/css" href="../../css/hint.css"/>
     <script type="text/javascript" src="../../lib/ext/head.load.min.js"></script>
+    <script type="text/javascript" src="../../lib/ext/jquery.timeago.js.js"></script>
 <!--     <link rel="shortcut icon" href="favicon.ico"/> -->
 
 
@@ -20,8 +21,8 @@
 
       <div id="hp-header">
 	
-          <span class="header-text"><a href="http://universaldependencies.github.io/docs/#language-es">home</a></span>
-          <span class="header-text"><a href="http://universaldependencies.github.io/docs/es/dep">es/dep</a></span>
+          <span class="header-text"><a href="http://universaldependencies.org/#language-es">home</a></span>
+          <span class="header-text"><a href="http://universaldependencies.org/es/dep">es/dep</a></span>
           <span class="header-text"><a href="https://github.com/universaldependencies/docs/edit/pages-source/_es-dep/aux_.md" target="#">edit page</a></span>
           <span class="header-text"><a href="https://github.com/universaldependencies/docs/issues">issue tracker</a></span>
       </div>
@@ -62,6 +63,73 @@ aux(muerto, ha)
 <!-- "automatic stats" -->
 
 
+
+
+
+
+
+<hr />
+
+<h2 id="treebank-statistics-udspanish">Treebank Statistics (UD_Spanish)</h2>
+
+<p>This relation is universal.</p>
+
+<p>4195 nodes (1%) are attached to their parents as <code>aux</code>.</p>
+
+<p>4184 instances of <code>aux</code> (100%) are right-to-left (child precedes parent).
+Average distance between parent and child is 1.41382598331347.</p>
+
+<p>The following 20 pairs of parts of speech are connected with <code>aux</code>: <a href="">es-pos/VERB</a>-<a href="">es-pos/AUX</a> (3872; 92% instances), <a href="">es-pos/NOUN</a>-<a href="">es-pos/AUX</a> (126; 3% instances), <a href="">es-pos/ADJ</a>-<a href="">es-pos/AUX</a> (122; 3% instances), <a href="">es-pos/PRON</a>-<a href="">es-pos/AUX</a> (18; 0% instances), <a href="">es-pos/VERB</a>-<a href="">es-pos/VERB</a> (15; 0% instances), <a href="">es-pos/PROPN</a>-<a href="">es-pos/AUX</a> (11; 0% instances), <a href="">es-pos/VERB</a>-<a href="">es-pos/X</a> (7; 0% instances), <a href="">es-pos/PROPN</a>-<a href="">es-pos/PROPN</a> (4; 0% instances), <a href="">es-pos/X</a>-<a href="">es-pos/AUX</a> (4; 0% instances), <a href="">es-pos/NUM</a>-<a href="">es-pos/AUX</a> (3; 0% instances), <a href="">es-pos/VERB</a>-<a href="">es-pos/SYM</a> (3; 0% instances), <a href="">es-pos/ADJ</a>-<a href="">es-pos/VERB</a> (2; 0% instances), <a href="">es-pos/ADP</a>-<a href="">es-pos/AUX</a> (1; 0% instances), <a href="">es-pos/AUX</a>-<a href="">es-pos/AUX</a> (1; 0% instances), <a href="">es-pos/CONJ</a>-<a href="">es-pos/AUX</a> (1; 0% instances), <a href="">es-pos/DET</a>-<a href="">es-pos/AUX</a> (1; 0% instances), <a href="">es-pos/NOUN</a>-<a href="">es-pos/NOUN</a> (1; 0% instances), <a href="">es-pos/NOUN</a>-<a href="">es-pos/PROPN</a> (1; 0% instances), <a href="">es-pos/VERB</a>-<a href="">es-pos/NOUN</a> (1; 0% instances), <a href="">es-pos/X</a>-<a href="">es-pos/X</a> (1; 0% instances).</p>
+
+<pre><code class="language-conllu"># visual-style 3	bgColor:blue
+# visual-style 3	fgColor:white
+# visual-style 4	bgColor:blue
+# visual-style 4	fgColor:white
+# visual-style 4 3 aux	color:blue
+1	¿	¿	PUNCT	_	_	4	punct	_	_
+2	Cómo	cómo	ADV	_	_	4	advmod	_	_
+3	habéis	habéis	AUX	_	Mood=Ind|Number=Plur|Person=2|Tense=Pres|VerbForm=Fin	4	aux	_	_
+4	vivido	vivido	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part	0	root	_	_
+5	toda	todo	DET	_	Gender=Fem|Number=Sing|PronType=Tot	7	det	_	_
+6	esta	este	DET	_	Gender=Fem|Number=Sing|PronType=Dem	7	det	_	_
+7	expectación	expectación	NOUN	_	Gender=Fem|Number=Sing	4	dobj	_	_
+8	?	?	PUNCT	_	_	4	punct	_	_
+
+</code></pre>
+
+<pre><code class="language-conllu"># visual-style 3	bgColor:blue
+# visual-style 3	fgColor:white
+# visual-style 5	bgColor:blue
+# visual-style 5	fgColor:white
+# visual-style 5 3 aux	color:blue
+1	Yo	yo	PRON	_	Case=Nom|Number=Sing|Person=1|PronType=Prs	5	nsubj	_	_
+2	también	también	ADV	_	_	5	advmod	_	_
+3	he	haber	AUX	_	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	5	aux	_	_
+4	sido	ser	VERB	_	Gender=Masc|Number=Sing|Tense=Past|VerbForm=Part	5	cop	_	_
+5	víctima	víctima	NOUN	_	Gender=Fem|Number=Sing	0	root	_	_
+6	de	de	ADP	_	_	8	case	_	_
+7	esta	este	DET	_	Gender=Fem|Number=Sing|PronType=Dem	8	det	_	_
+8	tienda	tienda	NOUN	_	Gender=Fem|Number=Sing	5	nmod	_	_
+9	.	.	PUNCT	_	_	5	punct	_	_
+
+</code></pre>
+
+<pre><code class="language-conllu"># visual-style 2	bgColor:blue
+# visual-style 2	fgColor:white
+# visual-style 5	bgColor:blue
+# visual-style 5	fgColor:white
+# visual-style 5 2 aux	color:blue
+1	No	no	ADV	_	_	3	neg	_	_
+2	puedo	poder	AUX	_	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	5	aux	_	_
+3	estar	estar	VERB	_	VerbForm=Inf	5	cop	_	_
+4	más	más	ADV	_	Degree=Cmp	5	advmod	_	_
+5	contento	contento	ADJ	_	Gender=Masc|Number=Sing	0	root	_	_
+6	con	con	ADP	_	_	8	case	_	_
+7	mi	mi	DET	_	Number=Sing|Person=1|Poss=Yes|PronType=Prs	8	det	_	_
+8	estilista	estilista	NOUN	_	Number=Sing	5	nmod	_	_
+9	.	.	PUNCT	_	_	5	punct	_	_
+
+</code></pre>
 
 
 
@@ -120,6 +188,7 @@ aux in other languages:
         root + 'lib/ext/jquery.min.js',
         root + 'lib/ext/jquery.svg.min.js',
         root + 'lib/ext/jquery.svgdom.min.js',
+        root + 'lib/ext/jquery.timeago.js',
         root + 'lib/ext/jquery-ui.min.js',
         root + 'lib/ext/waypoints.min.js',
         root + 'lib/ext/jquery.address.min.js',
@@ -151,11 +220,40 @@ aux in other languages:
     ];
 
     var setupAccordions = function() {
-        // standard jQuery UI "accordion" element initialization
+	// preserve state in URL hash, following in part
+	// http://www.boduch.ca/2011/05/remembering-jquery-ui-accordion.html
+	var accordionChange = function(event, ui) {
+	    var context = ui.newHeader ? ui.newHeader.context : null;
+	    if (context) {
+		var languageCode = context.getAttribute('data-lc');
+		if (languageCode !== null) {
+		    window.location.hash = languageCode;
+		}
+	    }
+	}
+        // jQuery UI "accordion" element initialization
 	$(".jquery-ui-accordion").accordion({
 	    collapsible: true,
-	    active: false
+	    active: false,
+	    change: accordionChange
 	});
+	if ($(".jquery-ui-accordion").length) {
+	    var matches = window.location.hash.match(/^\#(.*)$/);
+	    console.log(matches);
+	    if (matches !== null) {
+		var languageCode = matches[1];
+		var tab = $('[data-lc="'+languageCode+'"]');
+		// the following will only work after accordion is initialized
+		var index = $('.jquery-ui-accordion div.ui-accordion-header').index(tab);
+		if (index !== -1) {
+		    $(".jquery-ui-accordion").accordion({ active: index });
+		}
+	    }
+	}
+    };
+
+    var setupTimeago = function() {
+        jQuery("time.timeago").timeago();
     };
 
     var setupTabs = function() {
@@ -179,6 +277,7 @@ aux in other languages:
         // set up UI tabs on page
         setupTabs();
         setupAccordions();
+        setupTimeago();
 
         // mark current collection (filled in by Jekyll)
         Collections.listing['_current'] = 'es-dep';
@@ -204,7 +303,7 @@ aux in other languages:
 
       <div id="footer">
 	  <p class="footer-text">&copy; 2014 
-	    <a href="http://universaldependencies.github.io/docs/introduction.html#contributors" style="color:gray">Universal Dependencies contributors</a>. 
+	    <a href="http://universaldependencies.org/introduction.html#contributors" style="color:gray">Universal Dependencies contributors</a>. 
 	    Site powered by <a href="http://spyysalo.github.io/annodoc" style="color:gray">Annodoc</a> and <a href="http://brat.nlplab.org/" style="color:gray">brat</a></p>.
       </div>
     </div>

@@ -11,6 +11,7 @@
     <link rel="stylesheet" type="text/css" href="../../css/style-vis.css"/>
     <link rel="stylesheet" type="text/css" href="../../css/hint.css"/>
     <script type="text/javascript" src="../../lib/ext/head.load.min.js"></script>
+    <script type="text/javascript" src="../../lib/ext/jquery.timeago.js.js"></script>
 <!--     <link rel="shortcut icon" href="favicon.ico"/> -->
 
 
@@ -20,8 +21,8 @@
 
       <div id="hp-header">
 	
-          <span class="header-text"><a href="http://universaldependencies.github.io/docs/#language-sv">home</a></span>
-          <span class="header-text"><a href="http://universaldependencies.github.io/docs/sv/dep">sv/dep</a></span>
+          <span class="header-text"><a href="http://universaldependencies.org/#language-sv">home</a></span>
+          <span class="header-text"><a href="http://universaldependencies.org/sv/dep">sv/dep</a></span>
           <span class="header-text"><a href="https://github.com/universaldependencies/docs/edit/pages-source/_sv-dep/neg.md" target="#">edit page</a></span>
           <span class="header-text"><a href="https://github.com/universaldependencies/docs/issues">issue tracker</a></span>
       </div>
@@ -56,6 +57,68 @@ neg(jämförbara, icke)
 <!-- "automatic stats" -->
 
 
+
+
+
+
+
+<hr />
+
+<h2 id="treebank-statistics-udswedish">Treebank Statistics (UD_Swedish)</h2>
+
+<p>This relation is universal.</p>
+
+<p>768 nodes (1%) are attached to their parents as <code>neg</code>.</p>
+
+<p>532 instances of <code>neg</code> (69%) are right-to-left (child precedes parent).
+Average distance between parent and child is 1.85807291666667.</p>
+
+<p>The following 9 pairs of parts of speech are connected with <code>neg</code>: <a href="">sv-pos/VERB</a>-<a href="">sv-pos/ADV</a> (551; 72% instances), <a href="">sv-pos/ADJ</a>-<a href="">sv-pos/ADV</a> (94; 12% instances), <a href="">sv-pos/NOUN</a>-<a href="">sv-pos/ADV</a> (81; 11% instances), <a href="">sv-pos/ADV</a>-<a href="">sv-pos/ADV</a> (17; 2% instances), <a href="">sv-pos/CONJ</a>-<a href="">sv-pos/ADV</a> (13; 2% instances), <a href="">sv-pos/PRON</a>-<a href="">sv-pos/ADV</a> (7; 1% instances), <a href="">sv-pos/NUM</a>-<a href="">sv-pos/ADV</a> (3; 0% instances), <a href="">sv-pos/DET</a>-<a href="">sv-pos/ADV</a> (1; 0% instances), <a href="">sv-pos/PROPN</a>-<a href="">sv-pos/ADV</a> (1; 0% instances).</p>
+
+<pre><code class="language-conllu"># visual-style 8	bgColor:blue
+# visual-style 8	fgColor:white
+# visual-style 9	bgColor:blue
+# visual-style 9	fgColor:white
+# visual-style 9 8 neg	color:blue
+1	Två	två	NUM	RG|NOM	Case=Nom	2	nummod	_	_
+2	huvudfaktorer	huvudfaktor	NOUN	NN|UTR|PLU|IND|NOM	Case=Nom|Definite=Ind|Gender=Com|Number=Plur	4	nsubjpass	_	_
+3	kan	kunna	AUX	VB|PRS|AKT	Mood=Ind|Tense=Pres|VerbForm=Fin|Voice=Act	4	aux	_	_
+4	urskiljas	urskilja	VERB	VB|INF|SFO	VerbForm=Inf|Voice=Pass	0	root	_	_
+5	som	som	PRON	HP|-|-|-	PronType=Int,Rel	6	nsubj	_	_
+6	förklarar	förklara	VERB	VB|PRS|AKT	Mood=Ind|Tense=Pres|VerbForm=Fin|Voice=Act	2	acl	_	_
+7	men	men	CONJ	KN	_	6	cc	_	_
+8	inte	inte	ADV	AB	_	9	neg	_	_
+9	ursäktar	ursäkta	VERB	VB|PRS|AKT	Mood=Ind|Tense=Pres|VerbForm=Fin|Voice=Act	6	conj	_	_
+10	:	:	PUNCT	MAD	_	4	punct	_	_
+
+</code></pre>
+
+<pre><code class="language-conllu"># visual-style 3	bgColor:blue
+# visual-style 3	fgColor:white
+# visual-style 6	bgColor:blue
+# visual-style 6	fgColor:white
+# visual-style 6 3 neg	color:blue
+1	Kvinnorna	kvinna	NOUN	NN|UTR|PLU|DEF|NOM	Case=Nom|Definite=Def|Gender=Com|Number=Plur	6	nsubj	_	_
+2	är	vara	AUX	VB|PRS|AKT	Mood=Ind|Tense=Pres|VerbForm=Fin|Voice=Act	6	cop	_	_
+3	inte	inte	ADV	AB	_	6	neg	_	_
+4	något	någon	ADV	AB	_	5	advmod	_	_
+5	vidare	vid	ADV	AB|KOM	Degree=Cmp	6	advmod	_	_
+6	aktiva	aktiv	ADJ	JJ|POS|UTR/NEU|PLU|IND/DEF|NOM	Case=Nom|Degree=Pos|Number=Plur	0	root	_	_
+7	annars	annars	ADV	AB	_	6	advmod	_	_
+8	.	.	PUNCT	MAD	_	6	punct	_	_
+
+</code></pre>
+
+<pre><code class="language-conllu"># visual-style 1	bgColor:blue
+# visual-style 1	fgColor:white
+# visual-style 2	bgColor:blue
+# visual-style 2	fgColor:white
+# visual-style 2 1 neg	color:blue
+1	Inte	inte	ADV	AB	_	2	neg	_	_
+2	mannen	man	NOUN	NN|UTR|SIN|DEF|NOM	Case=Nom|Definite=Def|Gender=Com|Number=Sing	0	root	_	_
+3	.	.	PUNCT	MAD	_	2	punct	_	_
+
+</code></pre>
 
 
 
@@ -114,6 +177,7 @@ neg in other languages:
         root + 'lib/ext/jquery.min.js',
         root + 'lib/ext/jquery.svg.min.js',
         root + 'lib/ext/jquery.svgdom.min.js',
+        root + 'lib/ext/jquery.timeago.js',
         root + 'lib/ext/jquery-ui.min.js',
         root + 'lib/ext/waypoints.min.js',
         root + 'lib/ext/jquery.address.min.js',
@@ -145,11 +209,40 @@ neg in other languages:
     ];
 
     var setupAccordions = function() {
-        // standard jQuery UI "accordion" element initialization
+	// preserve state in URL hash, following in part
+	// http://www.boduch.ca/2011/05/remembering-jquery-ui-accordion.html
+	var accordionChange = function(event, ui) {
+	    var context = ui.newHeader ? ui.newHeader.context : null;
+	    if (context) {
+		var languageCode = context.getAttribute('data-lc');
+		if (languageCode !== null) {
+		    window.location.hash = languageCode;
+		}
+	    }
+	}
+        // jQuery UI "accordion" element initialization
 	$(".jquery-ui-accordion").accordion({
 	    collapsible: true,
-	    active: false
+	    active: false,
+	    change: accordionChange
 	});
+	if ($(".jquery-ui-accordion").length) {
+	    var matches = window.location.hash.match(/^\#(.*)$/);
+	    console.log(matches);
+	    if (matches !== null) {
+		var languageCode = matches[1];
+		var tab = $('[data-lc="'+languageCode+'"]');
+		// the following will only work after accordion is initialized
+		var index = $('.jquery-ui-accordion div.ui-accordion-header').index(tab);
+		if (index !== -1) {
+		    $(".jquery-ui-accordion").accordion({ active: index });
+		}
+	    }
+	}
+    };
+
+    var setupTimeago = function() {
+        jQuery("time.timeago").timeago();
     };
 
     var setupTabs = function() {
@@ -173,6 +266,7 @@ neg in other languages:
         // set up UI tabs on page
         setupTabs();
         setupAccordions();
+        setupTimeago();
 
         // mark current collection (filled in by Jekyll)
         Collections.listing['_current'] = 'sv-dep';
@@ -198,7 +292,7 @@ neg in other languages:
 
       <div id="footer">
 	  <p class="footer-text">&copy; 2014 
-	    <a href="http://universaldependencies.github.io/docs/introduction.html#contributors" style="color:gray">Universal Dependencies contributors</a>. 
+	    <a href="http://universaldependencies.org/introduction.html#contributors" style="color:gray">Universal Dependencies contributors</a>. 
 	    Site powered by <a href="http://spyysalo.github.io/annodoc" style="color:gray">Annodoc</a> and <a href="http://brat.nlplab.org/" style="color:gray">brat</a></p>.
       </div>
     </div>

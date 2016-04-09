@@ -11,6 +11,7 @@
     <link rel="stylesheet" type="text/css" href="../../css/style-vis.css"/>
     <link rel="stylesheet" type="text/css" href="../../css/hint.css"/>
     <script type="text/javascript" src="../../lib/ext/head.load.min.js"></script>
+    <script type="text/javascript" src="../../lib/ext/jquery.timeago.js.js"></script>
 <!--     <link rel="shortcut icon" href="favicon.ico"/> -->
 
 
@@ -20,8 +21,8 @@
 
       <div id="hp-header">
 	
-          <span class="header-text"><a href="http://universaldependencies.github.io/docs/#language-fr">home</a></span>
-          <span class="header-text"><a href="http://universaldependencies.github.io/docs/fr/dep">fr/dep</a></span>
+          <span class="header-text"><a href="http://universaldependencies.org/#language-fr">home</a></span>
+          <span class="header-text"><a href="http://universaldependencies.org/fr/dep">fr/dep</a></span>
           <span class="header-text"><a href="https://github.com/universaldependencies/docs/edit/pages-source/_fr-dep/aux_.md" target="#">edit page</a></span>
           <span class="header-text"><a href="https://github.com/universaldependencies/docs/issues">issue tracker</a></span>
       </div>
@@ -56,6 +57,74 @@ aux(eu, a)
 <!-- "automatic stats" -->
 
 
+
+
+
+
+
+<hr />
+
+<h2 id="treebank-statistics-udfrench">Treebank Statistics (UD_French)</h2>
+
+<p>This relation is universal.</p>
+
+<p>6149 nodes (2%) are attached to their parents as <code>aux</code>.</p>
+
+<p>6139 instances of <code>aux</code> (100%) are right-to-left (child precedes parent).
+Average distance between parent and child is 1.56269312083266.</p>
+
+<p>The following 14 pairs of parts of speech are connected with <code>aux</code>: <a href="">fr-pos/VERB</a>-<a href="">fr-pos/AUX</a> (5827; 95% instances), <a href="">fr-pos/NOUN</a>-<a href="">fr-pos/AUX</a> (146; 2% instances), <a href="">fr-pos/ADJ</a>-<a href="">fr-pos/AUX</a> (119; 2% instances), <a href="">fr-pos/VERB</a>-<a href="">fr-pos/VERB</a> (17; 0% instances), <a href="">fr-pos/PROPN</a>-<a href="">fr-pos/AUX</a> (15; 0% instances), <a href="">fr-pos/PRON</a>-<a href="">fr-pos/AUX</a> (12; 0% instances), <a href="">fr-pos/NUM</a>-<a href="">fr-pos/AUX</a> (4; 0% instances), <a href="">fr-pos/X</a>-<a href="">fr-pos/AUX</a> (2; 0% instances), <a href="">fr-pos/X</a>-<a href="">fr-pos/X</a> (2; 0% instances), <a href="">fr-pos/ADV</a>-<a href="">fr-pos/AUX</a> (1; 0% instances), <a href="">fr-pos/AUX</a>-<a href="">fr-pos/AUX</a> (1; 0% instances), <a href="">fr-pos/INTJ</a>-<a href="">fr-pos/AUX</a> (1; 0% instances), <a href="">fr-pos/VERB</a>-<a href="">fr-pos/NOUN</a> (1; 0% instances), <a href="">fr-pos/VERB</a>-<a href="">fr-pos/PRON</a> (1; 0% instances).</p>
+
+<pre><code class="language-conllu"># visual-style 9	bgColor:blue
+# visual-style 9	fgColor:white
+# visual-style 10	bgColor:blue
+# visual-style 10	fgColor:white
+# visual-style 10 9 aux	color:blue
+1	Elle	_	PRON	_	_	2	nsubj	_	_
+2	fonce	_	VERB	_	_	0	root	_	_
+3	et	_	CONJ	_	_	2	cc	_	_
+4	c'	_	PRON	_	_	5	nsubj	_	_
+5	est	_	VERB	_	_	2	conj	_	_
+6	cette	_	DET	_	_	7	det	_	_
+7	audace	_	NOUN	_	_	5	dobj	_	_
+8	qui	_	PRON	_	_	10	nsubj	_	_
+9	est	_	AUX	_	_	10	aux	_	_
+10	récompensée	_	VERB	_	_	7	acl:relcl	_	_
+11	.	_	PUNCT	_	_	2	punct	_	_
+
+</code></pre>
+
+<pre><code class="language-conllu"># visual-style 2	bgColor:blue
+# visual-style 2	fgColor:white
+# visual-style 5	bgColor:blue
+# visual-style 5	fgColor:white
+# visual-style 5 2 aux	color:blue
+1	Il	_	PRON	_	_	5	nsubj	_	_
+2	a	_	AUX	_	_	5	aux	_	_
+3	également	_	ADV	_	_	5	advmod	_	_
+4	été	_	VERB	_	_	5	cop	_	_
+5	capitaine	_	NOUN	_	_	0	root	_	_
+6	de	_	ADP	_	_	8	case	_	_
+7	l'	_	DET	_	_	8	det	_	_
+8	équipe	_	NOUN	_	_	5	nmod	_	_
+9	bruxelloise	_	ADJ	_	_	8	amod	_	_
+10	.	_	PUNCT	_	_	5	punct	_	_
+
+</code></pre>
+
+<pre><code class="language-conllu"># visual-style 3	bgColor:blue
+# visual-style 3	fgColor:white
+# visual-style 5	bgColor:blue
+# visual-style 5	fgColor:white
+# visual-style 5 3 aux	color:blue
+1	La	_	DET	_	_	2	det	_	_
+2	pose	_	NOUN	_	_	5	nsubj	_	_
+3	a	_	AUX	_	_	5	aux	_	_
+4	était	_	VERB	_	_	5	cop	_	_
+5	parfaite	_	ADJ	_	_	0	root	_	_
+6	!	_	PUNCT	_	_	5	punct	_	_
+
+</code></pre>
 
 
 
@@ -114,6 +183,7 @@ aux in other languages:
         root + 'lib/ext/jquery.min.js',
         root + 'lib/ext/jquery.svg.min.js',
         root + 'lib/ext/jquery.svgdom.min.js',
+        root + 'lib/ext/jquery.timeago.js',
         root + 'lib/ext/jquery-ui.min.js',
         root + 'lib/ext/waypoints.min.js',
         root + 'lib/ext/jquery.address.min.js',
@@ -145,11 +215,40 @@ aux in other languages:
     ];
 
     var setupAccordions = function() {
-        // standard jQuery UI "accordion" element initialization
+	// preserve state in URL hash, following in part
+	// http://www.boduch.ca/2011/05/remembering-jquery-ui-accordion.html
+	var accordionChange = function(event, ui) {
+	    var context = ui.newHeader ? ui.newHeader.context : null;
+	    if (context) {
+		var languageCode = context.getAttribute('data-lc');
+		if (languageCode !== null) {
+		    window.location.hash = languageCode;
+		}
+	    }
+	}
+        // jQuery UI "accordion" element initialization
 	$(".jquery-ui-accordion").accordion({
 	    collapsible: true,
-	    active: false
+	    active: false,
+	    change: accordionChange
 	});
+	if ($(".jquery-ui-accordion").length) {
+	    var matches = window.location.hash.match(/^\#(.*)$/);
+	    console.log(matches);
+	    if (matches !== null) {
+		var languageCode = matches[1];
+		var tab = $('[data-lc="'+languageCode+'"]');
+		// the following will only work after accordion is initialized
+		var index = $('.jquery-ui-accordion div.ui-accordion-header').index(tab);
+		if (index !== -1) {
+		    $(".jquery-ui-accordion").accordion({ active: index });
+		}
+	    }
+	}
+    };
+
+    var setupTimeago = function() {
+        jQuery("time.timeago").timeago();
     };
 
     var setupTabs = function() {
@@ -173,6 +272,7 @@ aux in other languages:
         // set up UI tabs on page
         setupTabs();
         setupAccordions();
+        setupTimeago();
 
         // mark current collection (filled in by Jekyll)
         Collections.listing['_current'] = 'fr-dep';
@@ -198,7 +298,7 @@ aux in other languages:
 
       <div id="footer">
 	  <p class="footer-text">&copy; 2014 
-	    <a href="http://universaldependencies.github.io/docs/introduction.html#contributors" style="color:gray">Universal Dependencies contributors</a>. 
+	    <a href="http://universaldependencies.org/introduction.html#contributors" style="color:gray">Universal Dependencies contributors</a>. 
 	    Site powered by <a href="http://spyysalo.github.io/annodoc" style="color:gray">Annodoc</a> and <a href="http://brat.nlplab.org/" style="color:gray">brat</a></p>.
       </div>
     </div>

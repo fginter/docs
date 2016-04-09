@@ -11,6 +11,7 @@
     <link rel="stylesheet" type="text/css" href="css/style-vis.css"/>
     <link rel="stylesheet" type="text/css" href="css/hint.css"/>
     <script type="text/javascript" src="lib/ext/head.load.min.js"></script>
+    <script type="text/javascript" src="lib/ext/jquery.timeago.js.js"></script>
 <!--     <link rel="shortcut icon" href="favicon.ico"/> -->
 
 
@@ -20,7 +21,7 @@
 
       <div id="hp-header">
 	
-          <span class="header-text"><a href="http://universaldependencies.github.io/docs/#language-">home</a></span>
+          <span class="header-text"><a href="http://universaldependencies.org/#language-">home</a></span>
 
           <span class="header-text"><a href="https://github.com/universaldependencies/docs/edit/pages-source/format.md" target="#">edit page</a></span>
           <span class="header-text"><a href="https://github.com/universaldependencies/docs/issues">issue tracker</a></span>
@@ -39,7 +40,7 @@
           <h1 id="conll-u-format">CoNLL-U Format</h1>
 
 <p>We use a revised version of <a href="http://ilk.uvt.nl/conll/#dataformat">the CoNLL-X format</a> called CoNLL-U. 
-Annotations are encoded in plain text files (UTF-8) with three types of lines:</p>
+Annotations are encoded in plain text files (UTF-8, using only the LF character as line break) with three types of lines:</p>
 
 <ol>
   <li>Word lines containing the annotation of a word/token in 10 fields separated by single tab characters; see below.</li>
@@ -70,6 +71,7 @@ In addition, we have modified the usage of the ID, FORM, LEMMA, XPOSTAG, FEATS a
 <ul>
   <li>Fields must not be empty.</li>
   <li>Fields must not contain space characters.</li>
+  <li>Underscore (_) is used to denote unspecified values in all fields except ID. Note that no format-level distinction is made for the rare cases where the FORM or LEMMA is the literal underscore – processing in such cases is application-dependent. Further, in UD treebanks the UPOSTAG, HEAD, and DEPREL columns are not allowed to be left unspecified.</li>
 </ul>
 
 <h1 id="words-and-tokens">Words and Tokens</h1>
@@ -251,6 +253,7 @@ Empty sentences are not allowed.</p>
         root + 'lib/ext/jquery.min.js',
         root + 'lib/ext/jquery.svg.min.js',
         root + 'lib/ext/jquery.svgdom.min.js',
+        root + 'lib/ext/jquery.timeago.js',
         root + 'lib/ext/jquery-ui.min.js',
         root + 'lib/ext/waypoints.min.js',
         root + 'lib/ext/jquery.address.min.js',
@@ -282,11 +285,40 @@ Empty sentences are not allowed.</p>
     ];
 
     var setupAccordions = function() {
-        // standard jQuery UI "accordion" element initialization
+	// preserve state in URL hash, following in part
+	// http://www.boduch.ca/2011/05/remembering-jquery-ui-accordion.html
+	var accordionChange = function(event, ui) {
+	    var context = ui.newHeader ? ui.newHeader.context : null;
+	    if (context) {
+		var languageCode = context.getAttribute('data-lc');
+		if (languageCode !== null) {
+		    window.location.hash = languageCode;
+		}
+	    }
+	}
+        // jQuery UI "accordion" element initialization
 	$(".jquery-ui-accordion").accordion({
 	    collapsible: true,
-	    active: false
+	    active: false,
+	    change: accordionChange
 	});
+	if ($(".jquery-ui-accordion").length) {
+	    var matches = window.location.hash.match(/^\#(.*)$/);
+	    console.log(matches);
+	    if (matches !== null) {
+		var languageCode = matches[1];
+		var tab = $('[data-lc="'+languageCode+'"]');
+		// the following will only work after accordion is initialized
+		var index = $('.jquery-ui-accordion div.ui-accordion-header').index(tab);
+		if (index !== -1) {
+		    $(".jquery-ui-accordion").accordion({ active: index });
+		}
+	    }
+	}
+    };
+
+    var setupTimeago = function() {
+        jQuery("time.timeago").timeago();
     };
 
     var setupTabs = function() {
@@ -310,6 +342,7 @@ Empty sentences are not allowed.</p>
         // set up UI tabs on page
         setupTabs();
         setupAccordions();
+        setupTimeago();
 
         // mark current collection (filled in by Jekyll)
         Collections.listing['_current'] = '';
@@ -335,7 +368,7 @@ Empty sentences are not allowed.</p>
 
       <div id="footer">
 	  <p class="footer-text">&copy; 2014 
-	    <a href="http://universaldependencies.github.io/docs/introduction.html#contributors" style="color:gray">Universal Dependencies contributors</a>. 
+	    <a href="http://universaldependencies.org/introduction.html#contributors" style="color:gray">Universal Dependencies contributors</a>. 
 	    Site powered by <a href="http://spyysalo.github.io/annodoc" style="color:gray">Annodoc</a> and <a href="http://brat.nlplab.org/" style="color:gray">brat</a></p>.
       </div>
     </div>

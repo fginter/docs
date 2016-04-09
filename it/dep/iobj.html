@@ -11,6 +11,7 @@
     <link rel="stylesheet" type="text/css" href="../../css/style-vis.css"/>
     <link rel="stylesheet" type="text/css" href="../../css/hint.css"/>
     <script type="text/javascript" src="../../lib/ext/head.load.min.js"></script>
+    <script type="text/javascript" src="../../lib/ext/jquery.timeago.js.js"></script>
 <!--     <link rel="shortcut icon" href="favicon.ico"/> -->
 
 
@@ -20,8 +21,8 @@
 
       <div id="hp-header">
 	
-          <span class="header-text"><a href="http://universaldependencies.github.io/docs/#language-it">home</a></span>
-          <span class="header-text"><a href="http://universaldependencies.github.io/docs/it/dep">it/dep</a></span>
+          <span class="header-text"><a href="http://universaldependencies.org/#language-it">home</a></span>
+          <span class="header-text"><a href="http://universaldependencies.org/it/dep">it/dep</a></span>
           <span class="header-text"><a href="https://github.com/universaldependencies/docs/edit/pages-source/_it-dep/iobj.md" target="#">edit page</a></span>
           <span class="header-text"><a href="https://github.com/universaldependencies/docs/issues">issue tracker</a></span>
       </div>
@@ -45,6 +46,89 @@ for <code>iobj</code>.</p>
 <!-- "automatic stats" -->
 
 
+
+
+
+
+
+<hr />
+
+<h2 id="treebank-statistics-uditalian">Treebank Statistics (UD_Italian)</h2>
+
+<p>This relation is universal.</p>
+
+<p>390 nodes (0%) are attached to their parents as <code>iobj</code>.</p>
+
+<p>306 instances of <code>iobj</code> (78%) are right-to-left (child precedes parent).
+Average distance between parent and child is 1.41025641025641.</p>
+
+<p>The following 4 pairs of parts of speech are connected with <code>iobj</code>: <a href="">it-pos/VERB</a>-<a href="">it-pos/PRON</a> (382; 98% instances), <a href="">it-pos/ADJ</a>-<a href="">it-pos/PRON</a> (6; 2% instances), <a href="">it-pos/AUX</a>-<a href="">it-pos/PRON</a> (1; 0% instances), <a href="">it-pos/NOUN</a>-<a href="">it-pos/PRON</a> (1; 0% instances).</p>
+
+<pre><code class="language-conllu"># visual-style 2	bgColor:blue
+# visual-style 2	fgColor:white
+# visual-style 3	bgColor:blue
+# visual-style 3	fgColor:white
+# visual-style 3 2 iobj	color:blue
+1	"	"	PUNCT	FB	_	3	punct	_	_
+2	Mi	mi	PRON	PC	Number=Sing|Person=1|PronType=Clit	3	iobj	_	_
+3	pare	parere	VERB	V	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	_	_
+4	che	che	SCONJ	CS	_	6	mark	_	_
+5	siano	essere	VERB	V	Mood=Sub|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	6	cop	_	_
+6	proposte	proposta	NOUN	S	Gender=Fem|Number=Plur	3	csubj	_	_
+7	serie	serio	ADJ	A	Gender=Fem|Number=Plur	6	amod	_	_
+8	e	e	CONJ	CC	_	7	cc	_	_
+9	condivisibili	condivisibile	ADJ	A	Number=Plur	7	conj	_	_
+10	"	"	PUNCT	FB	_	3	punct	_	_
+11	.	.	PUNCT	FS	_	3	punct	_	_
+
+</code></pre>
+
+<pre><code class="language-conllu"># visual-style 1	bgColor:blue
+# visual-style 1	fgColor:white
+# visual-style 3	bgColor:blue
+# visual-style 3	fgColor:white
+# visual-style 3 1 iobj	color:blue
+1	Le	lo	PRON	PC	Gender=Fem|Person=3|PronType=Clit	3	iobj	_	_
+2	è	essere	VERB	V	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	3	cop	_	_
+3	simpatica	simpatico	ADJ	A	Gender=Fem|Number=Sing	0	root	_	_
+4	Nicole	Nicole	PROPN	SP	_	3	nsubj	_	_
+5	Kidman	Kidman	PROPN	SP	_	4	name	_	_
+6	?	?	PUNCT	FS	_	3	punct	_	_
+
+</code></pre>
+
+<pre><code class="language-conllu"># visual-style 16	bgColor:blue
+# visual-style 16	fgColor:white
+# visual-style 17	bgColor:blue
+# visual-style 17	fgColor:white
+# visual-style 17 16 iobj	color:blue
+1	Pur	pure	ADV	B	_	2	advmod	_	_
+2	sapendo	sapere	VERB	V	VerbForm=Ger	17	acl	_	_
+3	che	che	SCONJ	CS	_	5	mark	_	_
+4	si	si	PRON	PC	Person=3|PronType=Clit	5	expl	_	_
+5	tratta	trattare	VERB	V	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	2	ccomp	_	_
+6	soltanto	soltanto	ADV	B	_	10	advmod	_	_
+7	di	di	ADP	E	_	10	case	_	_
+8	un	uno	DET	RI	Definite=Ind|Gender=Masc|Number=Sing|PronType=Art	10	det	_	_
+9	piccolo	piccolo	ADJ	A	Gender=Masc|Number=Sing	10	amod	_	_
+10	passo	passo	NOUN	S	Gender=Masc|Number=Sing	5	nmod	_	_
+11	verso	verso	ADP	E	_	14	case	_	_
+12	una	uno	DET	RI	Definite=Ind|Gender=Fem|Number=Sing|PronType=Art	14	det	_	_
+13	maggiore	maggiore	ADJ	A	Degree=Cmp|Number=Sing	14	amod	_	_
+14	sicurezza	sicurezza	NOUN	S	Gender=Fem|Number=Sing	10	nmod	_	_
+15	,	,	PUNCT	FF	_	2	punct	_	_
+16	vi	vi	PRON	PC	Number=Plur|Person=2|PronType=Clit	17	iobj	_	_
+17	invito	invito	NOUN	S	Gender=Masc|Number=Sing	0	root	_	_
+18	a	a	ADP	E	_	19	mark	_	_
+19	votare	votare	VERB	V	VerbForm=Inf	17	acl	_	_
+20	a	a	ADP	E	_	21	case	_	_
+21	favore	favore	NOUN	S	Gender=Masc|Number=Sing	19	nmod	_	_
+22	di	di	ADP	E	_	24	case	_	_
+23	la	il	DET	RD	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	24	det	_	_
+24	relazione	relazione	NOUN	S	Gender=Fem|Number=Sing	21	nmod	_	_
+25	.	.	PUNCT	FS	_	17	punct	_	_
+
+</code></pre>
 
 
 
@@ -101,6 +185,7 @@ iobj in other languages:
         root + 'lib/ext/jquery.min.js',
         root + 'lib/ext/jquery.svg.min.js',
         root + 'lib/ext/jquery.svgdom.min.js',
+        root + 'lib/ext/jquery.timeago.js',
         root + 'lib/ext/jquery-ui.min.js',
         root + 'lib/ext/waypoints.min.js',
         root + 'lib/ext/jquery.address.min.js',
@@ -132,11 +217,40 @@ iobj in other languages:
     ];
 
     var setupAccordions = function() {
-        // standard jQuery UI "accordion" element initialization
+	// preserve state in URL hash, following in part
+	// http://www.boduch.ca/2011/05/remembering-jquery-ui-accordion.html
+	var accordionChange = function(event, ui) {
+	    var context = ui.newHeader ? ui.newHeader.context : null;
+	    if (context) {
+		var languageCode = context.getAttribute('data-lc');
+		if (languageCode !== null) {
+		    window.location.hash = languageCode;
+		}
+	    }
+	}
+        // jQuery UI "accordion" element initialization
 	$(".jquery-ui-accordion").accordion({
 	    collapsible: true,
-	    active: false
+	    active: false,
+	    change: accordionChange
 	});
+	if ($(".jquery-ui-accordion").length) {
+	    var matches = window.location.hash.match(/^\#(.*)$/);
+	    console.log(matches);
+	    if (matches !== null) {
+		var languageCode = matches[1];
+		var tab = $('[data-lc="'+languageCode+'"]');
+		// the following will only work after accordion is initialized
+		var index = $('.jquery-ui-accordion div.ui-accordion-header').index(tab);
+		if (index !== -1) {
+		    $(".jquery-ui-accordion").accordion({ active: index });
+		}
+	    }
+	}
+    };
+
+    var setupTimeago = function() {
+        jQuery("time.timeago").timeago();
     };
 
     var setupTabs = function() {
@@ -160,6 +274,7 @@ iobj in other languages:
         // set up UI tabs on page
         setupTabs();
         setupAccordions();
+        setupTimeago();
 
         // mark current collection (filled in by Jekyll)
         Collections.listing['_current'] = 'it-dep';
@@ -185,7 +300,7 @@ iobj in other languages:
 
       <div id="footer">
 	  <p class="footer-text">&copy; 2014 
-	    <a href="http://universaldependencies.github.io/docs/introduction.html#contributors" style="color:gray">Universal Dependencies contributors</a>. 
+	    <a href="http://universaldependencies.org/introduction.html#contributors" style="color:gray">Universal Dependencies contributors</a>. 
 	    Site powered by <a href="http://spyysalo.github.io/annodoc" style="color:gray">Annodoc</a> and <a href="http://brat.nlplab.org/" style="color:gray">brat</a></p>.
       </div>
     </div>

@@ -11,6 +11,7 @@
     <link rel="stylesheet" type="text/css" href="../../css/style-vis.css"/>
     <link rel="stylesheet" type="text/css" href="../../css/hint.css"/>
     <script type="text/javascript" src="../../lib/ext/head.load.min.js"></script>
+    <script type="text/javascript" src="../../lib/ext/jquery.timeago.js.js"></script>
 <!--     <link rel="shortcut icon" href="favicon.ico"/> -->
 
 
@@ -20,8 +21,8 @@
 
       <div id="hp-header">
 	
-          <span class="header-text"><a href="http://universaldependencies.github.io/docs/#language-eu">home</a></span>
-          <span class="header-text"><a href="http://universaldependencies.github.io/docs/eu/dep">eu/dep</a></span>
+          <span class="header-text"><a href="http://universaldependencies.org/#language-eu">home</a></span>
+          <span class="header-text"><a href="http://universaldependencies.org/eu/dep">eu/dep</a></span>
           <span class="header-text"><a href="https://github.com/universaldependencies/docs/edit/pages-source/_eu-dep/case.md" target="#">edit page</a></span>
           <span class="header-text"><a href="https://github.com/universaldependencies/docs/issues">issue tracker</a></span>
       </div>
@@ -45,6 +46,74 @@ for <code>case</code>.</p>
 <!-- "automatic stats" -->
 
 
+
+
+
+
+
+<hr />
+
+<h2 id="treebank-statistics-udbasque">Treebank Statistics (UD_Basque)</h2>
+
+<p>This relation is universal.</p>
+
+<p>1890 nodes (2%) are attached to their parents as <code>case</code>.</p>
+
+<p>1890 instances of <code>case</code> (100%) are left-to-right (parent precedes child).
+Average distance between parent and child is 1.00952380952381.</p>
+
+<p>The following 10 pairs of parts of speech are connected with <code>case</code>: <a href="">eu-pos/NOUN</a>-<a href="">eu-pos/ADP</a> (1069; 57% instances), <a href="">eu-pos/PROPN</a>-<a href="">eu-pos/ADP</a> (232; 12% instances), <a href="">eu-pos/DET</a>-<a href="">eu-pos/ADP</a> (206; 11% instances), <a href="">eu-pos/ADJ</a>-<a href="">eu-pos/ADP</a> (132; 7% instances), <a href="">eu-pos/NUM</a>-<a href="">eu-pos/ADP</a> (105; 6% instances), <a href="">eu-pos/ADV</a>-<a href="">eu-pos/ADP</a> (86; 5% instances), <a href="">eu-pos/PRON</a>-<a href="">eu-pos/ADP</a> (41; 2% instances), <a href="">eu-pos/NOUN</a>-<a href="">eu-pos/NOUN</a> (10; 1% instances), <a href="">eu-pos/PROPN</a>-<a href="">eu-pos/PROPN</a> (6; 0% instances), <a href="">eu-pos/ADV</a>-<a href="">eu-pos/ADV</a> (3; 0% instances).</p>
+
+<pre><code class="language-conllu"># visual-style 3	bgColor:blue
+# visual-style 3	fgColor:white
+# visual-style 2	bgColor:blue
+# visual-style 2	fgColor:white
+# visual-style 2 3 case	color:blue
+1	Hortik	hor	ADV	_	Case=Abl	7	advmod	_	_
+2	amaiera	amaiera	NOUN	_	Case=All	7	nmod	_	_
+3	arte	arte	ADP	_	Animacy=Inan|Case=Abs	2	case	_	_
+4	,	,	PUNCT	_	_	7	punct	_	_
+5	bina	bi+na	NUM	_	_	6	nmod	_	_
+6	tanto	tanto	NOUN	_	Case=Abs|Definite=Ind	7	dobj	_	_
+7	egin	egin	VERB	_	Aspect=Perf|VerbForm=Part	0	root	_	_
+8	zituzten	*edun	AUX	_	Mood=Ind|Number[abs]=Plur|Number[erg]=Plur|Person[abs]=3|Person[erg]=3	7	aux	_	_
+9	(	(	PUNCT	_	_	7	punct	_	_
+10	22-20	22-20	NUM	_	NumType=Card	7	parataxis	_	_
+11	)	)	PUNCT	_	_	7	punct	_	_
+12	.	.	PUNCT	_	_	7	punct	_	_
+
+</code></pre>
+
+<pre><code class="language-conllu"># visual-style 2	bgColor:blue
+# visual-style 2	fgColor:white
+# visual-style 1	bgColor:blue
+# visual-style 1	fgColor:white
+# visual-style 1 2 case	color:blue
+1	Haroren	Haro	PROPN	_	Case=Gen	3	nmod	_	_
+2	aurka	aurka	ADP	_	Case=Abs|Definite=Def|Number=Sing	1	case	_	_
+3	jokatuko	jokatu	VERB	_	Aspect=Pro|VerbForm=Part	0	root	_	_
+4	du	*edun	AUX	_	Mood=Ind|Number[abs]=Sing|Number[erg]=Sing|Person[abs]=3|Person[erg]=3	3	aux	_	_
+5	gaur	gaur	ADV	_	_	3	advmod	_	_
+6	Alavesek	Alaves	PROPN	_	Case=Erg|Definite=Def|Number=Sing	3	nsubj	_	_
+7	.	.	PUNCT	_	_	3	punct	_	_
+
+</code></pre>
+
+<pre><code class="language-conllu"># visual-style 3	bgColor:blue
+# visual-style 3	fgColor:white
+# visual-style 2	bgColor:blue
+# visual-style 2	fgColor:white
+# visual-style 2 3 case	color:blue
+1	Horren	hori	DET	_	Case=Gen|Definite=Def|Number=Sing	3	nmod	_	_
+2	guztiaren	guzti	DET	_	Case=Gen	7	nmod	_	_
+3	atzean	atze	ADP	_	Case=Ine|Definite=Def|Number=Sing	2	case	_	_
+4	mezu	mezu	NOUN	_	_	7	nsubj	_	_
+5	argi	argi	ADJ	_	_	4	amod	_	_
+6	bat	bat	NUM	_	NumType=Card	4	nummod	_	_
+7	dago	egon	VERB	_	Aspect=Prog|Mood=Ind|Number[abs]=Sing|Person[abs]=3	0	root	_	_
+8	.	.	PUNCT	_	_	7	punct	_	_
+
+</code></pre>
 
 
 
@@ -103,6 +172,7 @@ case in other languages:
         root + 'lib/ext/jquery.min.js',
         root + 'lib/ext/jquery.svg.min.js',
         root + 'lib/ext/jquery.svgdom.min.js',
+        root + 'lib/ext/jquery.timeago.js',
         root + 'lib/ext/jquery-ui.min.js',
         root + 'lib/ext/waypoints.min.js',
         root + 'lib/ext/jquery.address.min.js',
@@ -134,11 +204,40 @@ case in other languages:
     ];
 
     var setupAccordions = function() {
-        // standard jQuery UI "accordion" element initialization
+	// preserve state in URL hash, following in part
+	// http://www.boduch.ca/2011/05/remembering-jquery-ui-accordion.html
+	var accordionChange = function(event, ui) {
+	    var context = ui.newHeader ? ui.newHeader.context : null;
+	    if (context) {
+		var languageCode = context.getAttribute('data-lc');
+		if (languageCode !== null) {
+		    window.location.hash = languageCode;
+		}
+	    }
+	}
+        // jQuery UI "accordion" element initialization
 	$(".jquery-ui-accordion").accordion({
 	    collapsible: true,
-	    active: false
+	    active: false,
+	    change: accordionChange
 	});
+	if ($(".jquery-ui-accordion").length) {
+	    var matches = window.location.hash.match(/^\#(.*)$/);
+	    console.log(matches);
+	    if (matches !== null) {
+		var languageCode = matches[1];
+		var tab = $('[data-lc="'+languageCode+'"]');
+		// the following will only work after accordion is initialized
+		var index = $('.jquery-ui-accordion div.ui-accordion-header').index(tab);
+		if (index !== -1) {
+		    $(".jquery-ui-accordion").accordion({ active: index });
+		}
+	    }
+	}
+    };
+
+    var setupTimeago = function() {
+        jQuery("time.timeago").timeago();
     };
 
     var setupTabs = function() {
@@ -162,6 +261,7 @@ case in other languages:
         // set up UI tabs on page
         setupTabs();
         setupAccordions();
+        setupTimeago();
 
         // mark current collection (filled in by Jekyll)
         Collections.listing['_current'] = 'eu-dep';
@@ -187,7 +287,7 @@ case in other languages:
 
       <div id="footer">
 	  <p class="footer-text">&copy; 2014 
-	    <a href="http://universaldependencies.github.io/docs/introduction.html#contributors" style="color:gray">Universal Dependencies contributors</a>. 
+	    <a href="http://universaldependencies.org/introduction.html#contributors" style="color:gray">Universal Dependencies contributors</a>. 
 	    Site powered by <a href="http://spyysalo.github.io/annodoc" style="color:gray">Annodoc</a> and <a href="http://brat.nlplab.org/" style="color:gray">brat</a></p>.
       </div>
     </div>

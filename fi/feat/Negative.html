@@ -11,6 +11,7 @@
     <link rel="stylesheet" type="text/css" href="../../css/style-vis.css"/>
     <link rel="stylesheet" type="text/css" href="../../css/hint.css"/>
     <script type="text/javascript" src="../../lib/ext/head.load.min.js"></script>
+    <script type="text/javascript" src="../../lib/ext/jquery.timeago.js.js"></script>
 <!--     <link rel="shortcut icon" href="favicon.ico"/> -->
 
 
@@ -20,8 +21,8 @@
 
       <div id="hp-header">
 	
-          <span class="header-text"><a href="http://universaldependencies.github.io/docs/#language-fi">home</a></span>
-          <span class="header-text"><a href="http://universaldependencies.github.io/docs/fi/feat">fi/feat</a></span>
+          <span class="header-text"><a href="http://universaldependencies.org/#language-fi">home</a></span>
+          <span class="header-text"><a href="http://universaldependencies.org/fi/feat">fi/feat</a></span>
           <span class="header-text"><a href="https://github.com/universaldependencies/docs/edit/pages-source/_fi-feat/Negative.md" target="#">edit page</a></span>
           <span class="header-text"><a href="https://github.com/universaldependencies/docs/issues">issue tracker</a></span>
       </div>
@@ -44,6 +45,60 @@ negation verb <em>ei</em>.</p>
 
 <!-- "automatic stats" -->
 
+
+
+
+
+
+<hr />
+
+<h2 id="treebank-statistics-udfinnish">Treebank Statistics (UD_Finnish)</h2>
+
+<p>This feature is universal.
+It occurs with 1 different values: <code>Neg</code>.</p>
+
+<p>2224 tokens (1%) have a non-empty value of <code>Negative</code>.
+83 types (0%) occur at least once with a non-empty value of <code>Negative</code>.
+9 lemmas (0%) occur at least once with a non-empty value of <code>Negative</code>.
+The feature is used with 1 part-of-speech tags: <a href="">fi-pos/VERB</a> (2224; 1% instances).</p>
+
+<h3 id="verb"><code>VERB</code></h3>
+
+<p>2224 <a href="">fi-pos/VERB</a> tokens (7% of all <code>VERB</code> tokens) have a non-empty value of <code>Negative</code>.</p>
+
+<p>The most frequent other feature values with which <code>VERB</code> and <code>Negative</code> co-occurred: <tt><a href="Degree.html">Degree</a>=EMPTY</tt> (2224; 100%), <tt><a href="PartForm.html">PartForm</a>=EMPTY</tt> (2224; 100%), <tt><a href="Voice.html">Voice</a>=Act</tt> (2224; 100%), <tt><a href="VerbForm.html">VerbForm</a>=Fin</tt> (2224; 100%), <tt><a href="InfForm.html">InfForm</a>=EMPTY</tt> (2224; 100%), <tt><a href="Case.html">Case</a>=EMPTY</tt> (2224; 100%), <tt><a href="Tense.html">Tense</a>=EMPTY</tt> (2224; 100%), <tt><a href="Mood.html">Mood</a>=EMPTY</tt> (2195; 99%), <tt><a href="Number.html">Number</a>=Sing</tt> (1919; 86%), <tt><a href="Person.html">Person</a>=3</tt> (1802; 81%).</p>
+
+<p><code>VERB</code> tokens may have the following values of <code>Negative</code>:</p>
+
+<ul>
+  <li><code>Neg</code> (2224; 100% of non-empty <code>Negative</code>): <em>ei, en, eivät, eikä, ettei, emme, et, enkä, etten, eivätkä</em></li>
+  <li><code>EMPTY</code> (29439): <em>on, oli, ovat, ole, olla, ollut, olisi, ottaa, olivat, tulee</em></li>
+</ul>
+
+<hr />
+
+<h2 id="treebank-statistics-udfinnish-ftb">Treebank Statistics (UD_Finnish-FTB)</h2>
+
+<p>This feature is universal.
+It occurs with 1 different values: <code>Neg</code>.</p>
+
+<p>3153 tokens (2%) have a non-empty value of <code>Negative</code>.
+83 types (0%) occur at least once with a non-empty value of <code>Negative</code>.
+1 lemmas (0%) occur at least once with a non-empty value of <code>Negative</code>.
+The feature is used with 1 part-of-speech tags: <a href="">fi-pos/VERB</a> (3153; 2% instances).</p>
+
+<h3 id="verb-1"><code>VERB</code></h3>
+
+<p>3153 <a href="">fi-pos/VERB</a> tokens (8% of all <code>VERB</code> tokens) have a non-empty value of <code>Negative</code>.</p>
+
+<p>The most frequent other feature values with which <code>VERB</code> and <code>Negative</code> co-occurred: <tt><a href="VerbForm.html">VerbForm</a>=EMPTY</tt> (3153; 100%), <tt><a href="PartForm.html">PartForm</a>=EMPTY</tt> (3153; 100%), <tt><a href="Voice.html">Voice</a>=Act</tt> (3153; 100%), <tt><a href="InfForm.html">InfForm</a>=EMPTY</tt> (3153; 100%), <tt><a href="Case.html">Case</a>=EMPTY</tt> (3153; 100%), <tt><a href="Tense.html">Tense</a>=EMPTY</tt> (3153; 100%), <tt><a href="Mood.html">Mood</a>=EMPTY</tt> (3031; 96%), <tt><a href="Number.html">Number</a>=Sing</tt> (2816; 89%), <tt><a href="Person.html">Person</a>=3</tt> (2374; 75%).</p>
+
+<p><code>VERB</code> tokens may have the following values of <code>Negative</code>:</p>
+
+<ul>
+  <li><code>Neg</code> (3153; 100% of non-empty <code>Negative</code>): <em>ei, en, eivät, eikä, et, älä, eikö, emme, eihän, ette</em></li>
+  <li><code>EMPTY</code> (34623): <em>on, oli, ole, ovat, olla, olisi, voi, ollut, olen, tulee</em></li>
+</ul>
 
 
 
@@ -102,6 +157,7 @@ Negative in other languages:
         root + 'lib/ext/jquery.min.js',
         root + 'lib/ext/jquery.svg.min.js',
         root + 'lib/ext/jquery.svgdom.min.js',
+        root + 'lib/ext/jquery.timeago.js',
         root + 'lib/ext/jquery-ui.min.js',
         root + 'lib/ext/waypoints.min.js',
         root + 'lib/ext/jquery.address.min.js',
@@ -133,11 +189,40 @@ Negative in other languages:
     ];
 
     var setupAccordions = function() {
-        // standard jQuery UI "accordion" element initialization
+	// preserve state in URL hash, following in part
+	// http://www.boduch.ca/2011/05/remembering-jquery-ui-accordion.html
+	var accordionChange = function(event, ui) {
+	    var context = ui.newHeader ? ui.newHeader.context : null;
+	    if (context) {
+		var languageCode = context.getAttribute('data-lc');
+		if (languageCode !== null) {
+		    window.location.hash = languageCode;
+		}
+	    }
+	}
+        // jQuery UI "accordion" element initialization
 	$(".jquery-ui-accordion").accordion({
 	    collapsible: true,
-	    active: false
+	    active: false,
+	    change: accordionChange
 	});
+	if ($(".jquery-ui-accordion").length) {
+	    var matches = window.location.hash.match(/^\#(.*)$/);
+	    console.log(matches);
+	    if (matches !== null) {
+		var languageCode = matches[1];
+		var tab = $('[data-lc="'+languageCode+'"]');
+		// the following will only work after accordion is initialized
+		var index = $('.jquery-ui-accordion div.ui-accordion-header').index(tab);
+		if (index !== -1) {
+		    $(".jquery-ui-accordion").accordion({ active: index });
+		}
+	    }
+	}
+    };
+
+    var setupTimeago = function() {
+        jQuery("time.timeago").timeago();
     };
 
     var setupTabs = function() {
@@ -161,6 +246,7 @@ Negative in other languages:
         // set up UI tabs on page
         setupTabs();
         setupAccordions();
+        setupTimeago();
 
         // mark current collection (filled in by Jekyll)
         Collections.listing['_current'] = 'fi-feat';
@@ -186,7 +272,7 @@ Negative in other languages:
 
       <div id="footer">
 	  <p class="footer-text">&copy; 2014 
-	    <a href="http://universaldependencies.github.io/docs/introduction.html#contributors" style="color:gray">Universal Dependencies contributors</a>. 
+	    <a href="http://universaldependencies.org/introduction.html#contributors" style="color:gray">Universal Dependencies contributors</a>. 
 	    Site powered by <a href="http://spyysalo.github.io/annodoc" style="color:gray">Annodoc</a> and <a href="http://brat.nlplab.org/" style="color:gray">brat</a></p>.
       </div>
     </div>

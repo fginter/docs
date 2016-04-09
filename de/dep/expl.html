@@ -11,6 +11,7 @@
     <link rel="stylesheet" type="text/css" href="../../css/style-vis.css"/>
     <link rel="stylesheet" type="text/css" href="../../css/hint.css"/>
     <script type="text/javascript" src="../../lib/ext/head.load.min.js"></script>
+    <script type="text/javascript" src="../../lib/ext/jquery.timeago.js.js"></script>
 <!--     <link rel="shortcut icon" href="favicon.ico"/> -->
 
 
@@ -20,8 +21,8 @@
 
       <div id="hp-header">
 	
-          <span class="header-text"><a href="http://universaldependencies.github.io/docs/#language-de">home</a></span>
-          <span class="header-text"><a href="http://universaldependencies.github.io/docs/de/dep">de/dep</a></span>
+          <span class="header-text"><a href="http://universaldependencies.org/#language-de">home</a></span>
+          <span class="header-text"><a href="http://universaldependencies.org/de/dep">de/dep</a></span>
           <span class="header-text"><a href="https://github.com/universaldependencies/docs/edit/pages-source/_de-dep/expl.md" target="#">edit page</a></span>
           <span class="header-text"><a href="https://github.com/universaldependencies/docs/issues">issue tracker</a></span>
       </div>
@@ -45,6 +46,84 @@ for <code>expl</code>.</p>
 <!-- "automatic stats" -->
 
 
+
+
+
+
+
+<hr />
+
+<h2 id="treebank-statistics-udgerman">Treebank Statistics (UD_German)</h2>
+
+<p>This relation is universal.</p>
+
+<p>403 nodes (0%) are attached to their parents as <code>expl</code>.</p>
+
+<p>230 instances of <code>expl</code> (57%) are right-to-left (child precedes parent).
+Average distance between parent and child is 2.50620347394541.</p>
+
+<p>The following 7 pairs of parts of speech are connected with <code>expl</code>: <a href="">de-pos/VERB</a>-<a href="">de-pos/PRON</a> (359; 89% instances), <a href="">de-pos/ADJ</a>-<a href="">de-pos/PRON</a> (30; 7% instances), <a href="">de-pos/NOUN</a>-<a href="">de-pos/PRON</a> (9; 2% instances), <a href="">de-pos/AUX</a>-<a href="">de-pos/PRON</a> (2; 0% instances), <a href="">de-pos/ADV</a>-<a href="">de-pos/PRON</a> (1; 0% instances), <a href="">de-pos/PRON</a>-<a href="">de-pos/PRON</a> (1; 0% instances), <a href="">de-pos/PROPN</a>-<a href="">de-pos/PROPN</a> (1; 0% instances).</p>
+
+<pre><code class="language-conllu"># visual-style 2	bgColor:blue
+# visual-style 2	fgColor:white
+# visual-style 6	bgColor:blue
+# visual-style 6	fgColor:white
+# visual-style 6 2 expl	color:blue
+1	Wenn	_	SCONJ	_	_	6	mark	_	_
+2	es	_	PRON	_	_	6	expl	_	_
+3	schon	_	ADV	_	_	6	advmod	_	_
+4	Fastfood	_	NOUN	_	_	6	nsubj	_	_
+5	sein	_	AUX	_	_	6	aux	_	_
+6	muss	_	VERB	_	_	11	advcl	_	_
+7	,	_	PUNCT	_	_	11	punct	_	_
+8	dann	_	ADV	_	_	11	advmod	_	_
+9	bei	_	ADP	_	_	11	case	_	_
+10	Jim	_	PROPN	_	_	11	name	_	_
+11	Block	_	PROPN	_	_	0	root	_	_
+12	.	_	PUNCT	_	_	11	punct	_	_
+
+</code></pre>
+
+<pre><code class="language-conllu"># visual-style 1	bgColor:blue
+# visual-style 1	fgColor:white
+# visual-style 6	bgColor:blue
+# visual-style 6	fgColor:white
+# visual-style 6 1 expl	color:blue
+1	Es	_	PRON	_	_	6	expl	_	_
+2	ist	_	VERB	_	_	6	cop	_	_
+3	alles	_	PRON	_	_	6	nsubj	_	_
+4	noch	_	ADV	_	_	6	advmod	_	_
+5	sehr	_	ADV	_	_	6	advmod	_	_
+6	neu	_	ADJ	_	_	0	root	_	_
+7	und	_	CONJ	_	_	6	cc	_	_
+8	modern	_	ADJ	_	_	6	conj	_	_
+9	.	_	PUNCT	_	_	6	punct	_	_
+
+</code></pre>
+
+<pre><code class="language-conllu"># visual-style 4	bgColor:blue
+# visual-style 4	fgColor:white
+# visual-style 2	bgColor:blue
+# visual-style 2	fgColor:white
+# visual-style 2 4 expl	color:blue
+1	Ihr	_	DET	_	_	2	nmod:poss	_	_
+2	Ziel	_	NOUN	_	_	0	root	_	_
+3	war	_	VERB	_	_	2	cop	_	_
+4	es	_	PRON	_	_	2	expl	_	_
+5	,	_	PUNCT	_	_	2	punct	_	_
+6	die	_	DET	_	_	9	det	_	_
+7	traditionelle	_	ADJ	_	_	9	amod	_	_
+8	georgische	_	ADJ	_	_	9	amod	_	_
+9	Kultur	_	NOUN	_	_	15	dobj	_	_
+10	mit	_	ADP	_	_	11	case	_	_
+11	Moderne	_	NOUN	_	_	15	nmod	_	_
+12	und	_	CONJ	_	_	11	cc	_	_
+13	Technik	_	NOUN	_	_	11	conj	_	_
+14	zu	_	PART	_	_	15	aux	_	_
+15	verbinden	_	VERB	_	_	2	csubj	_	_
+16	.	_	PUNCT	_	_	2	punct	_	_
+
+</code></pre>
 
 
 
@@ -103,6 +182,7 @@ expl in other languages:
         root + 'lib/ext/jquery.min.js',
         root + 'lib/ext/jquery.svg.min.js',
         root + 'lib/ext/jquery.svgdom.min.js',
+        root + 'lib/ext/jquery.timeago.js',
         root + 'lib/ext/jquery-ui.min.js',
         root + 'lib/ext/waypoints.min.js',
         root + 'lib/ext/jquery.address.min.js',
@@ -134,11 +214,40 @@ expl in other languages:
     ];
 
     var setupAccordions = function() {
-        // standard jQuery UI "accordion" element initialization
+	// preserve state in URL hash, following in part
+	// http://www.boduch.ca/2011/05/remembering-jquery-ui-accordion.html
+	var accordionChange = function(event, ui) {
+	    var context = ui.newHeader ? ui.newHeader.context : null;
+	    if (context) {
+		var languageCode = context.getAttribute('data-lc');
+		if (languageCode !== null) {
+		    window.location.hash = languageCode;
+		}
+	    }
+	}
+        // jQuery UI "accordion" element initialization
 	$(".jquery-ui-accordion").accordion({
 	    collapsible: true,
-	    active: false
+	    active: false,
+	    change: accordionChange
 	});
+	if ($(".jquery-ui-accordion").length) {
+	    var matches = window.location.hash.match(/^\#(.*)$/);
+	    console.log(matches);
+	    if (matches !== null) {
+		var languageCode = matches[1];
+		var tab = $('[data-lc="'+languageCode+'"]');
+		// the following will only work after accordion is initialized
+		var index = $('.jquery-ui-accordion div.ui-accordion-header').index(tab);
+		if (index !== -1) {
+		    $(".jquery-ui-accordion").accordion({ active: index });
+		}
+	    }
+	}
+    };
+
+    var setupTimeago = function() {
+        jQuery("time.timeago").timeago();
     };
 
     var setupTabs = function() {
@@ -162,6 +271,7 @@ expl in other languages:
         // set up UI tabs on page
         setupTabs();
         setupAccordions();
+        setupTimeago();
 
         // mark current collection (filled in by Jekyll)
         Collections.listing['_current'] = 'de-dep';
@@ -187,7 +297,7 @@ expl in other languages:
 
       <div id="footer">
 	  <p class="footer-text">&copy; 2014 
-	    <a href="http://universaldependencies.github.io/docs/introduction.html#contributors" style="color:gray">Universal Dependencies contributors</a>. 
+	    <a href="http://universaldependencies.org/introduction.html#contributors" style="color:gray">Universal Dependencies contributors</a>. 
 	    Site powered by <a href="http://spyysalo.github.io/annodoc" style="color:gray">Annodoc</a> and <a href="http://brat.nlplab.org/" style="color:gray">brat</a></p>.
       </div>
     </div>

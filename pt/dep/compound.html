@@ -11,6 +11,7 @@
     <link rel="stylesheet" type="text/css" href="../../css/style-vis.css"/>
     <link rel="stylesheet" type="text/css" href="../../css/hint.css"/>
     <script type="text/javascript" src="../../lib/ext/head.load.min.js"></script>
+    <script type="text/javascript" src="../../lib/ext/jquery.timeago.js.js"></script>
 <!--     <link rel="shortcut icon" href="favicon.ico"/> -->
 
 
@@ -20,8 +21,8 @@
 
       <div id="hp-header">
 	
-          <span class="header-text"><a href="http://universaldependencies.github.io/docs/#language-pt">home</a></span>
-          <span class="header-text"><a href="http://universaldependencies.github.io/docs/pt/dep">pt/dep</a></span>
+          <span class="header-text"><a href="http://universaldependencies.org/#language-pt">home</a></span>
+          <span class="header-text"><a href="http://universaldependencies.org/pt/dep">pt/dep</a></span>
           <span class="header-text"><a href="https://github.com/universaldependencies/docs/edit/pages-source/_pt-dep/compound.md" target="#">edit page</a></span>
           <span class="header-text"><a href="https://github.com/universaldependencies/docs/issues">issue tracker</a></span>
       </div>
@@ -52,16 +53,33 @@ for <code>compound</code>.</p>
 
 <hr />
 
-<h2 id="treebank-statistics">Treebank Statistics</h2>
+<h2 id="treebank-statistics-udportuguese">Treebank Statistics (UD_Portuguese)</h2>
 
 <p>This relation is universal.</p>
 
-<p>132 nodes (0%) are attached to their parents as <code>compound</code>.</p>
+<p>767 nodes (0%) are attached to their parents as <code>compound</code>.</p>
 
-<p>104 instances of <code>compound</code> (79%) are right-to-left (child precedes parent).
-Average distance between parent and child is 1.3030303030303.</p>
+<p>663 instances of <code>compound</code> (86%) are left-to-right (parent precedes child).
+Average distance between parent and child is 1.97392438070404.</p>
 
-<p>The following 2 pairs of parts of speech are connected with <code>compound</code>: <a href="">pt-pos/NUM</a>-<a href="">pt-pos/NUM</a> (130; 98% instances), <a href="">pt-pos/NOUN</a>-<a href="">pt-pos/NUM</a> (2; 2% instances).</p>
+<p>The following 8 pairs of parts of speech are connected with <code>compound</code>: <a href="">pt-pos/NOUN</a>-<a href="">pt-pos/NOUN</a> (613; 80% instances), <a href="">pt-pos/NUM</a>-<a href="">pt-pos/NUM</a> (133; 17% instances), <a href="">pt-pos/NOUN</a>-<a href="">pt-pos/CONJ</a> (7; 1% instances), <a href="">pt-pos/NOUN</a>-<a href="">pt-pos/NUM</a> (7; 1% instances), <a href="">pt-pos/NOUN</a>-<a href="">pt-pos/PUNCT</a> (3; 0% instances), <a href="">pt-pos/ADJ</a>-<a href="">pt-pos/NOUN</a> (2; 0% instances), <a href="">pt-pos/NOUN</a>-<a href="">pt-pos/ADJ</a> (1; 0% instances), <a href="">pt-pos/NOUN</a>-<a href="">pt-pos/ADV</a> (1; 0% instances).</p>
+
+<pre><code class="language-conllu"># visual-style 6	bgColor:blue
+# visual-style 6	fgColor:white
+# visual-style 4	bgColor:blue
+# visual-style 4	fgColor:white
+# visual-style 4 6 compound	color:blue
+1	Paulo	Paulo	PROPN	prop|M|S	_	8	nsubj	_	_
+2	Pereira	Pereira	PROPN	PROPN	_	1	name	_	_
+3	,	,	PUNCT	punc	_	1	punct	_	_
+4	vice-presidente	vice-presidente	NOUN	n|M|S	_	1	nmod	_	_
+5	do	do	ADP	ADP	AdpType=Prep|Gender=Masc|Number=Sing	6	case	_	_
+6	Ippar	Ippar	NOUN	NOUN	_	4	compound	_	_
+7	,	,	PUNCT	punc	_	1	punct	_	_
+8	acrescenta	acrescentar	VERB	v-fin|PR|3S|IND	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	_	_
+9	:	:	PUNCT	punc	_	8	punct	_	_
+
+</code></pre>
 
 <pre><code class="language-conllu"># visual-style 7	bgColor:blue
 # visual-style 7	fgColor:white
@@ -79,29 +97,36 @@ Average distance between parent and child is 1.3030303030303.</p>
 
 </code></pre>
 
-<pre><code class="language-conllu"># visual-style 15	bgColor:blue
-# visual-style 15	fgColor:white
-# visual-style 16	bgColor:blue
-# visual-style 16	fgColor:white
-# visual-style 16 15 compound	color:blue
-1	O	o	DET	art|&lt;artd&gt;|M|S	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	2	det	_	_
-2	Benfica	Benfica	PROPN	prop|M|S	Gender=Masc|Number=Sing	4	nsubj	_	_
-3	já	já	ADV	adv	_	4	advmod	_	_
-4	conta	contar	VERB	v-fin|PR|3S|IND	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	_	_
-5	,	,	PUNCT	punc	_	4	punct	_	_
-6	em	em	ADP	prp|&lt;sam-&gt;	AdpType=Prep	8	case	_	_
-7	este	este	DET	pron-det|&lt;-sam&gt;|&lt;dem&gt;|M|S	Gender=Masc|Number=Sing|PronType=Dem	8	det	_	_
-8	momento	momento	NOUN	n|M|S	Gender=Masc|Number=Sing	4	nmod	_	_
-9	,	,	PUNCT	punc	_	4	punct	_	_
-10	com	com	ADP	prp	AdpType=Prep	13	case	_	_
-11	setenta	setenta	NUM	num|&lt;card&gt;|M|P	Gender=Masc|Number=Plur|NumType=Card	12	compound	_	_
-12	mil	mil	NOUN	n|&lt;card&gt;|M|P	Gender=Masc|Number=Plur|NumType=Card	13	nmod	_	_
-13	sócios	sócio	NOUN	n|M|P	Gender=Masc|Number=Plur	4	dobj	_	_
-14	e	e	CONJ	conj-c|&lt;co-prparg&gt;	_	13	cc	_	_
-15	sete	sete	NUM	num|&lt;card&gt;|M|P	Gender=Masc|Number=Plur|NumType=Card	16	compound	_	_
-16	mil	mil	NOUN	n|&lt;card&gt;|M|P	Gender=Masc|Number=Plur|NumType=Card	17	nmod	_	_
-17	praticantes	praticante	NOUN	n|M/F|P	Number=Plur	13	conj	_	_
-18	.	.	PUNCT	punc	_	4	punct	_	_
+<pre><code class="language-conllu"># visual-style 11	bgColor:blue
+# visual-style 11	fgColor:white
+# visual-style 10	bgColor:blue
+# visual-style 10	fgColor:white
+# visual-style 10 11 compound	color:blue
+1	Formada	formar	VERB	v-pcp|F|S	Gender=Fem|Number=Sing|VerbForm=Part	16	advcl	_	_
+2	por	por	ADP	prp	AdpType=Prep	3	case	_	_
+3	técnicos	técnico	NOUN	n|M|P	Gender=Masc|Number=Plur	1	dobj	_	_
+4	de	de	ADP	prp|&lt;sam-&gt;	AdpType=Prep	6	case	_	_
+5	a	o	DET	art|&lt;-sam&gt;|&lt;artd&gt;|F|S	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	6	det	_	_
+6	Fazenda	fazenda	NOUN	n|&lt;prop&gt;|F|S	Gender=Fem|Number=Sing	3	cc	_	_
+7	e	e	CONJ	conj-c|&lt;co-postnom&gt;	_	6	cc	_	_
+8	de	de	ADP	prp|&lt;sam-&gt;	AdpType=Prep	10	case	_	_
+9	as	o	DET	art|&lt;-sam&gt;|&lt;artd&gt;|F|P	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	10	det	_	_
+10	Minas	Minas	NOUN	n|&lt;prop&gt;|F|P	_	6	conj	_	_
+11	e	e	CONJ	CONJ	Gender=Fem|Number=Plur	10	compound	_	_
+12	Energia	Energia	NOUN	NOUN	_	10	compound	_	_
+13	,	,	PUNCT	punc	_	16	punct	_	_
+14	a	o	DET	art|&lt;artd&gt;|F|S	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	15	det	_	_
+15	comissão	comissão	NOUN	n|F|S	Gender=Fem|Number=Sing	16	nsubj	_	_
+16	tem	ter	VERB	v-fin|PR|3S|IND	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	_	_
+17	prazo	prazo	NOUN	n|M|S	Gender=Masc|Number=Sing	16	dobj	_	_
+18	de	de	ADP	prp	AdpType=Prep	20	case	_	_
+19	60	60	NUM	num|&lt;card&gt;|M|P	Gender=Masc|Number=Plur|NumType=Card	20	nummod	_	_
+20	dias	dia	NOUN	n|M|P	Gender=Masc|Number=Plur	17	nmod	_	_
+21	para	para	ADP	prp	AdpType=Prep	22	mark	_	_
+22	conluir	conluir	VERB	v-inf	VerbForm=Inf	17	acl	_	_
+23	o	o	DET	art|&lt;artd&gt;|M|S	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	24	det	_	_
+24	trabalho	trabalho	NOUN	n|M|S	Gender=Masc|Number=Sing	22	dobj	_	_
+25	.	.	PUNCT	punc	_	16	punct	_	_
 
 </code></pre>
 
@@ -162,6 +187,7 @@ compound in other languages:
         root + 'lib/ext/jquery.min.js',
         root + 'lib/ext/jquery.svg.min.js',
         root + 'lib/ext/jquery.svgdom.min.js',
+        root + 'lib/ext/jquery.timeago.js',
         root + 'lib/ext/jquery-ui.min.js',
         root + 'lib/ext/waypoints.min.js',
         root + 'lib/ext/jquery.address.min.js',
@@ -193,11 +219,40 @@ compound in other languages:
     ];
 
     var setupAccordions = function() {
-        // standard jQuery UI "accordion" element initialization
+	// preserve state in URL hash, following in part
+	// http://www.boduch.ca/2011/05/remembering-jquery-ui-accordion.html
+	var accordionChange = function(event, ui) {
+	    var context = ui.newHeader ? ui.newHeader.context : null;
+	    if (context) {
+		var languageCode = context.getAttribute('data-lc');
+		if (languageCode !== null) {
+		    window.location.hash = languageCode;
+		}
+	    }
+	}
+        // jQuery UI "accordion" element initialization
 	$(".jquery-ui-accordion").accordion({
 	    collapsible: true,
-	    active: false
+	    active: false,
+	    change: accordionChange
 	});
+	if ($(".jquery-ui-accordion").length) {
+	    var matches = window.location.hash.match(/^\#(.*)$/);
+	    console.log(matches);
+	    if (matches !== null) {
+		var languageCode = matches[1];
+		var tab = $('[data-lc="'+languageCode+'"]');
+		// the following will only work after accordion is initialized
+		var index = $('.jquery-ui-accordion div.ui-accordion-header').index(tab);
+		if (index !== -1) {
+		    $(".jquery-ui-accordion").accordion({ active: index });
+		}
+	    }
+	}
+    };
+
+    var setupTimeago = function() {
+        jQuery("time.timeago").timeago();
     };
 
     var setupTabs = function() {
@@ -221,6 +276,7 @@ compound in other languages:
         // set up UI tabs on page
         setupTabs();
         setupAccordions();
+        setupTimeago();
 
         // mark current collection (filled in by Jekyll)
         Collections.listing['_current'] = 'pt-dep';
@@ -246,7 +302,7 @@ compound in other languages:
 
       <div id="footer">
 	  <p class="footer-text">&copy; 2014 
-	    <a href="http://universaldependencies.github.io/docs/introduction.html#contributors" style="color:gray">Universal Dependencies contributors</a>. 
+	    <a href="http://universaldependencies.org/introduction.html#contributors" style="color:gray">Universal Dependencies contributors</a>. 
 	    Site powered by <a href="http://spyysalo.github.io/annodoc" style="color:gray">Annodoc</a> and <a href="http://brat.nlplab.org/" style="color:gray">brat</a></p>.
       </div>
     </div>

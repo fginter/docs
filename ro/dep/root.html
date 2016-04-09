@@ -11,6 +11,7 @@
     <link rel="stylesheet" type="text/css" href="../../css/style-vis.css"/>
     <link rel="stylesheet" type="text/css" href="../../css/hint.css"/>
     <script type="text/javascript" src="../../lib/ext/head.load.min.js"></script>
+    <script type="text/javascript" src="../../lib/ext/jquery.timeago.js.js"></script>
 <!--     <link rel="shortcut icon" href="favicon.ico"/> -->
 
 
@@ -20,8 +21,8 @@
 
       <div id="hp-header">
 	
-          <span class="header-text"><a href="http://universaldependencies.github.io/docs/#language-ro">home</a></span>
-          <span class="header-text"><a href="http://universaldependencies.github.io/docs/ro/dep">ro/dep</a></span>
+          <span class="header-text"><a href="http://universaldependencies.org/#language-ro">home</a></span>
+          <span class="header-text"><a href="http://universaldependencies.org/ro/dep">ro/dep</a></span>
           <span class="header-text"><a href="https://github.com/universaldependencies/docs/edit/pages-source/_ro-dep/root.md" target="#">edit page</a></span>
           <span class="header-text"><a href="https://github.com/universaldependencies/docs/issues">issue tracker</a></span>
       </div>
@@ -60,6 +61,83 @@ root(ROOT, bine)
 <!-- "automatic stats" -->
 
 
+
+
+
+
+
+<hr />
+
+<h2 id="treebank-statistics-udromanian">Treebank Statistics (UD_Romanian)</h2>
+
+<p>This relation is universal.</p>
+
+<p>633 nodes (5%) are attached to their parents as <code>root</code>.</p>
+
+<p>633 instances of <code>root</code> (100%) are left-to-right (parent precedes child).
+Average distance between parent and child is 6.55766192733017.</p>
+
+<p>The following 9 pairs of parts of speech are connected with <code>root</code>: <a href="">ro-pos/ROOT</a>-<a href="">ro-pos/VERB</a> (516; 82% instances), <a href="">ro-pos/ROOT</a>-<a href="">ro-pos/NOUN</a> (65; 10% instances), <a href="">ro-pos/ROOT</a>-<a href="">ro-pos/ADJ</a> (31; 5% instances), <a href="">ro-pos/ROOT</a>-<a href="">ro-pos/ADV</a> (5; 1% instances), <a href="">ro-pos/ROOT</a>-<a href="">ro-pos/AUX</a> (4; 1% instances), <a href="">ro-pos/ROOT</a>-<a href="">ro-pos/PRON</a> (4; 1% instances), <a href="">ro-pos/ROOT</a>-<a href="">ro-pos/PROPN</a> (4; 1% instances), <a href="">ro-pos/ROOT</a>-<a href="">ro-pos/NUM</a> (3; 0% instances), <a href="">ro-pos/ROOT</a>-<a href="">ro-pos/DET</a> (1; 0% instances).</p>
+
+<pre><code class="language-conllu"># visual-style 5	bgColor:blue
+# visual-style 5	fgColor:white
+# visual-style 0	bgColor:blue
+# visual-style 0	fgColor:white
+# visual-style 0 5 root	color:blue
+1	Lui	el	PRON	Pp3mso--------s	Case=Gen|Gender=Masc|Number=Sing|Person=3|PronType=Prs|Strength=Strong	2	det	_	_
+2	A.	A.	NOUN	Ed	_	5	iobj	_	AltTag=NOUN-NUM
+3	i	el	PRON	Pp3-sd--------w	Case=Dat|Number=Sing|Person=3|PronType=Prs|Strength=Weak	5	expl	_	_
+4	se	sine	PRON	Px3--a--------w	Case=Acc|Person=3|PronType=Prs|Reflex=Yes|Strength=Weak	5	expl:pv	_	_
+5	datorează	datora	VERB	Vmip3	Mood=Ind|Person=3|Tense=Pres|VerbForm=Fin	0	root	_	_
+6	mai	mai	ADV	Rp	_	7	advmod	_	_
+7	multe	mult	DET	Di3fp	Gender=Fem|Number=Plur|Person=3|PronType=Ind	8	amod	_	_
+8	cărți	carte	NOUN	Ncfp-n	Definite=Ind|Gender=Fem|Number=Plur	5	nsubj	_	_
+9	religioase	religios	ADJ	Afpfp-n	Definite=Ind|Degree=Pos|Gender=Fem|Number=Plur	8	amod	_	_
+10	,	,	PUNCT	COMMA	_	5	punct	_	_
+11	dar	dar	CONJ	Ccssp	Negative=Pos	9	cc	_	_
+12	și	și	CONJ	Crssp	Negative=Pos	9	cc	_	_
+13	pedagogice	pedagogic	ADJ	Afpfp-n	Definite=Ind|Degree=Pos|Gender=Fem|Number=Plur	9	conj	_	_
+14	.	.	PUNCT	PERIOD	_	5	punct	_	_
+
+</code></pre>
+
+<pre><code class="language-conllu"># visual-style 3	bgColor:blue
+# visual-style 3	fgColor:white
+# visual-style 0	bgColor:blue
+# visual-style 0	fgColor:white
+# visual-style 0 3 root	color:blue
+1	Era	fi	VERB	Vmii3s	Mood=Ind|Number=Sing|Person=3|Tense=Imp|VerbForm=Fin	3	cop	_	_
+2	o	un	DET	Tifsr	Case=Nom|Gender=Fem|Number=Sing|PronType=Ind	3	det	_	_
+3	plăcere	plăcere	NOUN	Ncfsrn	Case=Nom|Definite=Ind|Gender=Fem|Number=Sing	0	root	_	_
+4	să	să	PART	Qs	Mood=Sub	5	mark	_	_
+5	asiști	asista	VERB	Vmip2s	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	3	csubj	_	_
+6	la	la	ADP	Spsa	AdpType=Prep|Case=Acc	8	case	_	_
+7	o	un	DET	Tifsr	Case=Nom|Gender=Fem|Number=Sing|PronType=Ind	8	det	_	_
+8	examinare	examinare	NOUN	Ncfsrn	Case=Nom|Definite=Ind|Gender=Fem|Number=Sing	5	nmod:pmod	_	_
+9	a	al	DET	Tsfs	Gender=Fem|Number=Sing|Poss=Yes|PronType=Prs	10	det	_	_
+10	lui	lui	DET	Ds3---s	Number[psor]=Sing|Person=3|Poss=Yes|PronType=Prs	8	nmod	_	_
+11	.	.	PUNCT	PERIOD	_	3	punct	_	_
+
+</code></pre>
+
+<pre><code class="language-conllu"># visual-style 6	bgColor:blue
+# visual-style 6	fgColor:white
+# visual-style 0	bgColor:blue
+# visual-style 0	fgColor:white
+# visual-style 0 6 root	color:blue
+1	-	-	PUNCT	DASH	_	6	punct	_	_
+2	Nu	nu	PART	Qz	Negative=Neg	6	neg	_	_
+3	sunt	fi	VERB	Vmip1s	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	6	cop	_	_
+4	de-	de	ADP	Spsay	AdpType=Prep|Case=Acc|Variant=Short	5	case	_	_
+5	adevăratelea	adevăratelea	ADV	Rgp	Degree=Pos	6	advmod	_	_
+6	bolnavă	bolnav	ADJ	Afpfsrn	Case=Nom|Definite=Ind|Degree=Pos|Gender=Fem|Number=Sing	0	root	_	_
+7	,	,	PUNCT	COMMA	_	10	punct	_	_
+8	m-	eu	PRON	Pp1-sa--y-----w	Case=Acc|Number=Sing|Person=1|PronType=Prs|Strength=Weak|Variant=Short	10	dobj	_	_
+9	a	avea	AUX	Va--3s	Number=Sing|Person=3	10	aux	_	_
+10	lămurit	lămuri	VERB	Vmp--sm	Gender=Masc|Number=Sing|VerbForm=Part	6	parataxis	_	_
+11	.	.	PUNCT	PERIOD	_	6	punct	_	_
+
+</code></pre>
 
 
 
@@ -118,6 +196,7 @@ root in other languages:
         root + 'lib/ext/jquery.min.js',
         root + 'lib/ext/jquery.svg.min.js',
         root + 'lib/ext/jquery.svgdom.min.js',
+        root + 'lib/ext/jquery.timeago.js',
         root + 'lib/ext/jquery-ui.min.js',
         root + 'lib/ext/waypoints.min.js',
         root + 'lib/ext/jquery.address.min.js',
@@ -149,11 +228,40 @@ root in other languages:
     ];
 
     var setupAccordions = function() {
-        // standard jQuery UI "accordion" element initialization
+	// preserve state in URL hash, following in part
+	// http://www.boduch.ca/2011/05/remembering-jquery-ui-accordion.html
+	var accordionChange = function(event, ui) {
+	    var context = ui.newHeader ? ui.newHeader.context : null;
+	    if (context) {
+		var languageCode = context.getAttribute('data-lc');
+		if (languageCode !== null) {
+		    window.location.hash = languageCode;
+		}
+	    }
+	}
+        // jQuery UI "accordion" element initialization
 	$(".jquery-ui-accordion").accordion({
 	    collapsible: true,
-	    active: false
+	    active: false,
+	    change: accordionChange
 	});
+	if ($(".jquery-ui-accordion").length) {
+	    var matches = window.location.hash.match(/^\#(.*)$/);
+	    console.log(matches);
+	    if (matches !== null) {
+		var languageCode = matches[1];
+		var tab = $('[data-lc="'+languageCode+'"]');
+		// the following will only work after accordion is initialized
+		var index = $('.jquery-ui-accordion div.ui-accordion-header').index(tab);
+		if (index !== -1) {
+		    $(".jquery-ui-accordion").accordion({ active: index });
+		}
+	    }
+	}
+    };
+
+    var setupTimeago = function() {
+        jQuery("time.timeago").timeago();
     };
 
     var setupTabs = function() {
@@ -177,6 +285,7 @@ root in other languages:
         // set up UI tabs on page
         setupTabs();
         setupAccordions();
+        setupTimeago();
 
         // mark current collection (filled in by Jekyll)
         Collections.listing['_current'] = 'ro-dep';
@@ -202,7 +311,7 @@ root in other languages:
 
       <div id="footer">
 	  <p class="footer-text">&copy; 2014 
-	    <a href="http://universaldependencies.github.io/docs/introduction.html#contributors" style="color:gray">Universal Dependencies contributors</a>. 
+	    <a href="http://universaldependencies.org/introduction.html#contributors" style="color:gray">Universal Dependencies contributors</a>. 
 	    Site powered by <a href="http://spyysalo.github.io/annodoc" style="color:gray">Annodoc</a> and <a href="http://brat.nlplab.org/" style="color:gray">brat</a></p>.
       </div>
     </div>

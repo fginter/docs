@@ -11,6 +11,7 @@
     <link rel="stylesheet" type="text/css" href="../../css/style-vis.css"/>
     <link rel="stylesheet" type="text/css" href="../../css/hint.css"/>
     <script type="text/javascript" src="../../lib/ext/head.load.min.js"></script>
+    <script type="text/javascript" src="../../lib/ext/jquery.timeago.js.js"></script>
 <!--     <link rel="shortcut icon" href="favicon.ico"/> -->
 
 
@@ -20,8 +21,8 @@
 
       <div id="hp-header">
 	
-          <span class="header-text"><a href="http://universaldependencies.github.io/docs/#language-et">home</a></span>
-          <span class="header-text"><a href="http://universaldependencies.github.io/docs/et/dep">et/dep</a></span>
+          <span class="header-text"><a href="http://universaldependencies.org/#language-et">home</a></span>
+          <span class="header-text"><a href="http://universaldependencies.org/et/dep">et/dep</a></span>
           <span class="header-text"><a href="https://github.com/universaldependencies/docs/edit/pages-source/_et-dep/csubj.md" target="#">edit page</a></span>
           <span class="header-text"><a href="https://github.com/universaldependencies/docs/issues">issue tracker</a></span>
       </div>
@@ -45,6 +46,81 @@ for <code>csubj</code>.</p>
 <!-- "automatic stats" -->
 
 
+
+
+
+
+
+<hr />
+
+<h2 id="treebank-statistics-udestonian">Treebank Statistics (UD_Estonian)</h2>
+
+<p>This relation is universal.</p>
+
+<p>10 nodes (0%) are attached to their parents as <code>csubj</code>.</p>
+
+<p>9 instances of <code>csubj</code> (90%) are left-to-right (parent precedes child).
+Average distance between parent and child is 4.</p>
+
+<p>The following 3 pairs of parts of speech are connected with <code>csubj</code>: <a href="">et-pos/VERB</a>-<a href="">et-pos/VERB</a> (5; 50% instances), <a href="">et-pos/ADJ</a>-<a href="">et-pos/VERB</a> (4; 40% instances), <a href="">et-pos/NOUN</a>-<a href="">et-pos/VERB</a> (1; 10% instances).</p>
+
+<pre><code class="language-conllu"># visual-style 8	bgColor:blue
+# visual-style 8	fgColor:white
+# visual-style 3	bgColor:blue
+# visual-style 3	fgColor:white
+# visual-style 3 8 csubj	color:blue
+1	Teisipäeval	teisi_päev+l	NOUN	n/com,sg,ad,%cap	Case=Ade|Number=Sing	3	nmod	_	_
+2	aga	aga+0	ADV	adv/--	_	3	advmod	_	_
+3	selgus	selgu+s	VERB	v/main,indic,impf,ps3,sg,ps,af	Mood=Ind|Negative=Pos|Number=Sing|Person=3|Tense=Imp|VerbForm=Fin	0	root	_	_
+4	,	--	PUNCT	punc/--	_	8	punct	_	_
+5	et	et+0	SCONJ	conj-s/sub	_	8	mark	_	_
+6	kolmandat	kolmas+t	NUM	num/ord,sg,part,l	Case=Par|Number=Sing|NumForm=Word|NumType=Ord	7	nummod	_	_
+7	kandidaati	kandidaat+0	NOUN	n/com,sg,part	Case=Par|Number=Sing	8	nsubj	_	_
+8	polegi	ole+gi	VERB	v/main,indic,pres,ps,neg	Mood=Ind|Negative=Neg|Tense=Pres|VerbForm=Fin	3	csubj	_	_
+9	.	--	PUNCT	punc/--	_	3	punct	_	_
+
+</code></pre>
+
+<pre><code class="language-conllu"># visual-style 12	bgColor:blue
+# visual-style 12	fgColor:white
+# visual-style 7	bgColor:blue
+# visual-style 7	fgColor:white
+# visual-style 7 12 csubj	color:blue
+1	Kui	kui+0	SCONJ	conj-s/sub,%cap	_	3	mark	_	_
+2	Arnold	Arnold+0	PROPN	prop/prop,sg,nom,%cap	Case=Nom|Number=Sing	3	nsubj	_	_
+3	kõneleb	kõnele+b	VERB	v/main,indic,pres,ps3,sg,ps,af	Mood=Ind|Negative=Pos|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	7	advcl	_	_
+4	,	--	PUNCT	punc/--	_	3	punct	_	_
+5	siis	siis+0	ADV	adv/--	_	7	advmod	_	_
+6	on	ole+0	VERB	v/main,indic,pres,ps3,sg,ps,af	Mood=Ind|Negative=Pos|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	7	cop	_	_
+7	raske	raske+0	ADJ	adj/pos,sg,nom	Case=Nom|Degree=Pos|Number=Sing	0	root	_	_
+8	pikas	pikk+s	ADJ	adj/pos,sg,in	Case=Ine|Degree=Pos|Number=Sing	9	amod	_	_
+9	lausetejorus	lause+te_joru+s	NOUN	n/com,sg,in	Case=Ine|Number=Sing	12	nmod	_	_
+10	asja	asi+0	NOUN	n/com,sg,gen	Case=Gen|Number=Sing	11	nmod	_	_
+11	tuuma	tuum+0	NOUN	n/com,sg,part	Case=Par|Number=Sing	12	dobj	_	_
+12	tabada	taba+da	VERB	v/main,inf	VerbForm=Inf	7	csubj	_	_
+13	.	--	PUNCT	punc/--	_	7	punct	_	_
+
+</code></pre>
+
+<pre><code class="language-conllu"># visual-style 4	bgColor:blue
+# visual-style 4	fgColor:white
+# visual-style 11	bgColor:blue
+# visual-style 11	fgColor:white
+# visual-style 11 4 csubj	color:blue
+1	'	--	PUNCT	punc/--	_	4	punct	_	_
+2	Suur	suur+0	ADJ	adj/pos,sg,nom,%cap	Case=Nom|Degree=Pos|Number=Sing	3	amod	_	_
+3	Vend	vend+0	NOUN	n/com,sg,nom,%cap	Case=Nom|Number=Sing	4	nsubj	_	_
+4	valvab	valva+b	VERB	v/main,indic,pres,ps3,sg,ps,af	Mood=Ind|Negative=Pos|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	11	csubj	_	_
+5	sind	sina+d	PRON	pron/pers,ps2,sg,part	Case=Par|Number=Sing|Person=2|PronType=Prs	4	dobj	_	_
+6	'	--	PUNCT	punc/--	_	4	punct	_	_
+7	,	--	PUNCT	punc/--	_	4	punct	_	_
+8	oli	ole+i	VERB	v/main,indic,impf,ps3,sg,ps,af	Mood=Ind|Negative=Pos|Number=Sing|Person=3|Tense=Imp|VerbForm=Fin	11	cop	_	_
+9	pildi	pilt+0	NOUN	n/com,sg,gen	Case=Gen|Number=Sing	11	nmod	_	_
+10	all	all+0	ADP	prp/post,%gen	AdpType=Post	9	case	_	_
+11	kiri	kiri+0	NOUN	n/com,sg,nom	Case=Nom|Number=Sing	0	root	_	_
+12	.	--	PUNCT	punc/--	_	11	punct	_	_
+
+</code></pre>
 
 
 
@@ -103,6 +179,7 @@ csubj in other languages:
         root + 'lib/ext/jquery.min.js',
         root + 'lib/ext/jquery.svg.min.js',
         root + 'lib/ext/jquery.svgdom.min.js',
+        root + 'lib/ext/jquery.timeago.js',
         root + 'lib/ext/jquery-ui.min.js',
         root + 'lib/ext/waypoints.min.js',
         root + 'lib/ext/jquery.address.min.js',
@@ -134,11 +211,40 @@ csubj in other languages:
     ];
 
     var setupAccordions = function() {
-        // standard jQuery UI "accordion" element initialization
+	// preserve state in URL hash, following in part
+	// http://www.boduch.ca/2011/05/remembering-jquery-ui-accordion.html
+	var accordionChange = function(event, ui) {
+	    var context = ui.newHeader ? ui.newHeader.context : null;
+	    if (context) {
+		var languageCode = context.getAttribute('data-lc');
+		if (languageCode !== null) {
+		    window.location.hash = languageCode;
+		}
+	    }
+	}
+        // jQuery UI "accordion" element initialization
 	$(".jquery-ui-accordion").accordion({
 	    collapsible: true,
-	    active: false
+	    active: false,
+	    change: accordionChange
 	});
+	if ($(".jquery-ui-accordion").length) {
+	    var matches = window.location.hash.match(/^\#(.*)$/);
+	    console.log(matches);
+	    if (matches !== null) {
+		var languageCode = matches[1];
+		var tab = $('[data-lc="'+languageCode+'"]');
+		// the following will only work after accordion is initialized
+		var index = $('.jquery-ui-accordion div.ui-accordion-header').index(tab);
+		if (index !== -1) {
+		    $(".jquery-ui-accordion").accordion({ active: index });
+		}
+	    }
+	}
+    };
+
+    var setupTimeago = function() {
+        jQuery("time.timeago").timeago();
     };
 
     var setupTabs = function() {
@@ -162,6 +268,7 @@ csubj in other languages:
         // set up UI tabs on page
         setupTabs();
         setupAccordions();
+        setupTimeago();
 
         // mark current collection (filled in by Jekyll)
         Collections.listing['_current'] = 'et-dep';
@@ -187,7 +294,7 @@ csubj in other languages:
 
       <div id="footer">
 	  <p class="footer-text">&copy; 2014 
-	    <a href="http://universaldependencies.github.io/docs/introduction.html#contributors" style="color:gray">Universal Dependencies contributors</a>. 
+	    <a href="http://universaldependencies.org/introduction.html#contributors" style="color:gray">Universal Dependencies contributors</a>. 
 	    Site powered by <a href="http://spyysalo.github.io/annodoc" style="color:gray">Annodoc</a> and <a href="http://brat.nlplab.org/" style="color:gray">brat</a></p>.
       </div>
     </div>

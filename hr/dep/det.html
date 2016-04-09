@@ -11,6 +11,7 @@
     <link rel="stylesheet" type="text/css" href="../../css/style-vis.css"/>
     <link rel="stylesheet" type="text/css" href="../../css/hint.css"/>
     <script type="text/javascript" src="../../lib/ext/head.load.min.js"></script>
+    <script type="text/javascript" src="../../lib/ext/jquery.timeago.js.js"></script>
 <!--     <link rel="shortcut icon" href="favicon.ico"/> -->
 
 
@@ -20,8 +21,8 @@
 
       <div id="hp-header">
 	
-          <span class="header-text"><a href="http://universaldependencies.github.io/docs/#language-hr">home</a></span>
-          <span class="header-text"><a href="http://universaldependencies.github.io/docs/hr/dep">hr/dep</a></span>
+          <span class="header-text"><a href="http://universaldependencies.org/#language-hr">home</a></span>
+          <span class="header-text"><a href="http://universaldependencies.org/hr/dep">hr/dep</a></span>
           <span class="header-text"><a href="https://github.com/universaldependencies/docs/edit/pages-source/_hr-dep/det.md" target="#">edit page</a></span>
           <span class="header-text"><a href="https://github.com/universaldependencies/docs/issues">issue tracker</a></span>
       </div>
@@ -45,6 +46,74 @@ for <code>det</code>.</p>
 <!-- "automatic stats" -->
 
 
+
+
+
+
+
+<hr />
+
+<h2 id="treebank-statistics-udcroatian">Treebank Statistics (UD_Croatian)</h2>
+
+<p>This relation is universal.</p>
+
+<p>859 nodes (1%) are attached to their parents as <code>det</code>.</p>
+
+<p>856 instances of <code>det</code> (100%) are right-to-left (child precedes parent).
+Average distance between parent and child is 1.25844004656577.</p>
+
+<p>The following 27 pairs of parts of speech are connected with <code>det</code>: <a href="">hr-pos/NOUN</a>-<a href="">hr-pos/PRON</a> (621; 72% instances), <a href="">hr-pos/NOUN</a>-<a href="">hr-pos/ADJ</a> (96; 11% instances), <a href="">hr-pos/NOUN</a>-<a href="">hr-pos/ADV</a> (59; 7% instances), <a href="">hr-pos/NUM</a>-<a href="">hr-pos/ADV</a> (24; 3% instances), <a href="">hr-pos/ADV</a>-<a href="">hr-pos/ADV</a> (10; 1% instances), <a href="">hr-pos/PRON</a>-<a href="">hr-pos/AUX</a> (6; 1% instances), <a href="">hr-pos/NOUN</a>-<a href="">hr-pos/ADP</a> (5; 1% instances), <a href="">hr-pos/ADJ</a>-<a href="">hr-pos/ADV</a> (4; 0% instances), <a href="">hr-pos/ADJ</a>-<a href="">hr-pos/PRON</a> (4; 0% instances), <a href="">hr-pos/ADJ</a>-<a href="">hr-pos/ADJ</a> (3; 0% instances), <a href="">hr-pos/PRON</a>-<a href="">hr-pos/ADJ</a> (3; 0% instances), <a href="">hr-pos/PROPN</a>-<a href="">hr-pos/ADJ</a> (3; 0% instances), <a href="">hr-pos/ADJ</a>-<a href="">hr-pos/PART</a> (2; 0% instances), <a href="">hr-pos/NOUN</a>-<a href="">hr-pos/NOUN</a> (2; 0% instances), <a href="">hr-pos/NUM</a>-<a href="">hr-pos/CONJ</a> (2; 0% instances), <a href="">hr-pos/PRON</a>-<a href="">hr-pos/ADV</a> (2; 0% instances), <a href="">hr-pos/PRON</a>-<a href="">hr-pos/PRON</a> (2; 0% instances), <a href="">hr-pos/PROPN</a>-<a href="">hr-pos/PRON</a> (2; 0% instances), <a href="">hr-pos/ADV</a>-<a href="">hr-pos/PART</a> (1; 0% instances), <a href="">hr-pos/NOUN</a>-<a href="">hr-pos/CONJ</a> (1; 0% instances), <a href="">hr-pos/NOUN</a>-<a href="">hr-pos/NUM</a> (1; 0% instances), <a href="">hr-pos/NUM</a>-<a href="">hr-pos/ADP</a> (1; 0% instances), <a href="">hr-pos/NUM</a>-<a href="">hr-pos/PRON</a> (1; 0% instances), <a href="">hr-pos/PROPN</a>-<a href="">hr-pos/ADV</a> (1; 0% instances), <a href="">hr-pos/SCONJ</a>-<a href="">hr-pos/PART</a> (1; 0% instances), <a href="">hr-pos/VERB</a>-<a href="">hr-pos/ADV</a> (1; 0% instances), <a href="">hr-pos/VERB</a>-<a href="">hr-pos/PRON</a> (1; 0% instances).</p>
+
+<pre><code class="language-conllu"># visual-style 4	bgColor:blue
+# visual-style 4	fgColor:white
+# visual-style 5	bgColor:blue
+# visual-style 5	fgColor:white
+# visual-style 5 4 det	color:blue
+1	Do	do	ADP	_	Case=Gen	2	case	_	_
+2	sada	sada	ADV	_	Degree=Pos	6	advmod	_	_
+3	je	biti	AUX	_	Number=Sing|Person=3|Tense=Pres	6	auxpass	_	_
+4	takav	takav	PRON	_	Case=Nom|Gender=Masc|Number=Sing|PronType=Dem	5	det	_	_
+5	tim	tim	NOUN	_	Case=Nom|Gender=Masc|Number=Sing	6	nsubjpass	_	_
+6	ustrojen	ustrojiti	ADJ	_	Case=Nom|Degree=Pos|Gender=Masc|Number=Sing|VerbForm=Part	0	root	_	_
+7	u	u	ADP	_	Case=Loc	8	case	_	_
+8	Federaciji	federacija	NOUN	_	Case=Loc|Gender=Fem|Number=Sing	6	nmod	_	_
+9	BiH	BiH	PROPN	_	Case=Gen|Gender=Fem|Number=Sing	8	nmod	_	_
+10	.	.	PUNCT	_	_	6	punct	_	_
+
+</code></pre>
+
+<pre><code class="language-conllu"># visual-style 1	bgColor:blue
+# visual-style 1	fgColor:white
+# visual-style 2	bgColor:blue
+# visual-style 2	fgColor:white
+# visual-style 2 1 det	color:blue
+1	Svi	sav	ADJ	_	Case=Nom|Degree=Pos|Gender=Masc|Number=Plur	2	det	_	_
+2	nastavnici	nastavnik	NOUN	_	Case=Nom|Gender=Masc|Number=Plur	5	nsubj	_	_
+3	i	i	CONJ	_	_	2	cc	_	_
+4	učenici	učenik	NOUN	_	Case=Nom|Gender=Masc|Number=Plur	2	conj	_	_
+5	gledali	gledati	VERB	_	Gender=Masc|Number=Plur|VerbForm=Part	0	root	_	_
+6	su	biti	AUX	_	Number=Plur|Person=3|Tense=Pres	5	aux	_	_
+7	i	i	CONJ	_	_	5	cc	_	_
+8	slušali	slušati	VERB	_	Gender=Masc|Number=Plur|VerbForm=Part	5	conj	_	_
+9	[	[	PUNCT	_	_	10	punct	_	_
+10	glasovanje	glasovanje	NOUN	_	Case=Acc|Gender=Neut|Number=Sing	5	dobj	_	_
+11	]	]	PUNCT	_	_	10	punct	_	_
+12	.	.	PUNCT	_	_	5	punct	_	_
+
+</code></pre>
+
+<pre><code class="language-conllu"># visual-style 1	bgColor:blue
+# visual-style 1	fgColor:white
+# visual-style 3	bgColor:blue
+# visual-style 3	fgColor:white
+# visual-style 3 1 det	color:blue
+1	Toliko	toliko	ADV	_	Degree=Pos	3	det	_	_
+2	je	biti	AUX	_	Number=Sing|Person=3|Tense=Pres	4	auxpass	_	_
+3	radnika	radnik	NOUN	_	Case=Gen|Gender=Masc|Number=Plur	4	dobj	_	_
+4	otpušteno	otpustiti	ADJ	_	Case=Nom|Degree=Pos|Gender=Neut|Number=Sing|VerbForm=Part	0	root	_	_
+5	.	.	PUNCT	_	_	4	punct	_	_
+
+</code></pre>
 
 
 
@@ -103,6 +172,7 @@ det in other languages:
         root + 'lib/ext/jquery.min.js',
         root + 'lib/ext/jquery.svg.min.js',
         root + 'lib/ext/jquery.svgdom.min.js',
+        root + 'lib/ext/jquery.timeago.js',
         root + 'lib/ext/jquery-ui.min.js',
         root + 'lib/ext/waypoints.min.js',
         root + 'lib/ext/jquery.address.min.js',
@@ -134,11 +204,40 @@ det in other languages:
     ];
 
     var setupAccordions = function() {
-        // standard jQuery UI "accordion" element initialization
+	// preserve state in URL hash, following in part
+	// http://www.boduch.ca/2011/05/remembering-jquery-ui-accordion.html
+	var accordionChange = function(event, ui) {
+	    var context = ui.newHeader ? ui.newHeader.context : null;
+	    if (context) {
+		var languageCode = context.getAttribute('data-lc');
+		if (languageCode !== null) {
+		    window.location.hash = languageCode;
+		}
+	    }
+	}
+        // jQuery UI "accordion" element initialization
 	$(".jquery-ui-accordion").accordion({
 	    collapsible: true,
-	    active: false
+	    active: false,
+	    change: accordionChange
 	});
+	if ($(".jquery-ui-accordion").length) {
+	    var matches = window.location.hash.match(/^\#(.*)$/);
+	    console.log(matches);
+	    if (matches !== null) {
+		var languageCode = matches[1];
+		var tab = $('[data-lc="'+languageCode+'"]');
+		// the following will only work after accordion is initialized
+		var index = $('.jquery-ui-accordion div.ui-accordion-header').index(tab);
+		if (index !== -1) {
+		    $(".jquery-ui-accordion").accordion({ active: index });
+		}
+	    }
+	}
+    };
+
+    var setupTimeago = function() {
+        jQuery("time.timeago").timeago();
     };
 
     var setupTabs = function() {
@@ -162,6 +261,7 @@ det in other languages:
         // set up UI tabs on page
         setupTabs();
         setupAccordions();
+        setupTimeago();
 
         // mark current collection (filled in by Jekyll)
         Collections.listing['_current'] = 'hr-dep';
@@ -187,7 +287,7 @@ det in other languages:
 
       <div id="footer">
 	  <p class="footer-text">&copy; 2014 
-	    <a href="http://universaldependencies.github.io/docs/introduction.html#contributors" style="color:gray">Universal Dependencies contributors</a>. 
+	    <a href="http://universaldependencies.org/introduction.html#contributors" style="color:gray">Universal Dependencies contributors</a>. 
 	    Site powered by <a href="http://spyysalo.github.io/annodoc" style="color:gray">Annodoc</a> and <a href="http://brat.nlplab.org/" style="color:gray">brat</a></p>.
       </div>
     </div>

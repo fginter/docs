@@ -11,6 +11,7 @@
     <link rel="stylesheet" type="text/css" href="../../css/style-vis.css"/>
     <link rel="stylesheet" type="text/css" href="../../css/hint.css"/>
     <script type="text/javascript" src="../../lib/ext/head.load.min.js"></script>
+    <script type="text/javascript" src="../../lib/ext/jquery.timeago.js.js"></script>
 <!--     <link rel="shortcut icon" href="favicon.ico"/> -->
 
 
@@ -20,8 +21,8 @@
 
       <div id="hp-header">
 	
-          <span class="header-text"><a href="http://universaldependencies.github.io/docs/#language-bg">home</a></span>
-          <span class="header-text"><a href="http://universaldependencies.github.io/docs/bg/dep">bg/dep</a></span>
+          <span class="header-text"><a href="http://universaldependencies.org/#language-bg">home</a></span>
+          <span class="header-text"><a href="http://universaldependencies.org/bg/dep">bg/dep</a></span>
           <span class="header-text"><a href="https://github.com/universaldependencies/docs/edit/pages-source/_bg-dep/iobj.md" target="#">edit page</a></span>
           <span class="header-text"><a href="https://github.com/universaldependencies/docs/issues">issue tracker</a></span>
       </div>
@@ -63,6 +64,68 @@ iobj(ask-I, something)
 <!-- "automatic stats" -->
 
 
+
+
+
+
+
+<hr />
+
+<h2 id="treebank-statistics-udbulgarian">Treebank Statistics (UD_Bulgarian)</h2>
+
+<p>This relation is universal.</p>
+
+<p>3515 nodes (2%) are attached to their parents as <code>iobj</code>.</p>
+
+<p>2873 instances of <code>iobj</code> (82%) are left-to-right (parent precedes child).
+Average distance between parent and child is 2.59317211948791.</p>
+
+<p>The following 12 pairs of parts of speech are connected with <code>iobj</code>: <a href="">bg-pos/VERB</a>-<a href="">bg-pos/NOUN</a> (2439; 69% instances), <a href="">bg-pos/VERB</a>-<a href="">bg-pos/PRON</a> (685; 19% instances), <a href="">bg-pos/VERB</a>-<a href="">bg-pos/PROPN</a> (250; 7% instances), <a href="">bg-pos/VERB</a>-<a href="">bg-pos/ADJ</a> (54; 2% instances), <a href="">bg-pos/VERB</a>-<a href="">bg-pos/DET</a> (37; 1% instances), <a href="">bg-pos/VERB</a>-<a href="">bg-pos/NUM</a> (21; 1% instances), <a href="">bg-pos/VERB</a>-<a href="">bg-pos/ADP</a> (12; 0% instances), <a href="">bg-pos/ADJ</a>-<a href="">bg-pos/PRON</a> (7; 0% instances), <a href="">bg-pos/NOUN</a>-<a href="">bg-pos/PRON</a> (5; 0% instances), <a href="">bg-pos/VERB</a>-<a href="">bg-pos/ADV</a> (3; 0% instances), <a href="">bg-pos/ADV</a>-<a href="">bg-pos/PRON</a> (1; 0% instances), <a href="">bg-pos/VERB</a>-<a href="">bg-pos/VERB</a> (1; 0% instances).</p>
+
+<pre><code class="language-conllu"># visual-style 2	bgColor:blue
+# visual-style 2	fgColor:white
+# visual-style 4	bgColor:blue
+# visual-style 4	fgColor:white
+# visual-style 4 2 iobj	color:blue
+1	На	на	ADP	R	_	2	case	_	_
+2	заека	заек	NOUN	Ncmsh	Definite=Def|Gender=Masc|Number=Sing	4	iobj	_	_
+3	му	аз	PRON	Ppetds3m	Case=Dat|Gender=Masc|Number=Sing|Person=3|PronType=Prs	4	expl	_	_
+4	омръзна	омръзне-ми	VERB	Vnpif-o3s	Aspect=Perf|Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin|Voice=Act	0	root	_	_
+5	да	да	PART	Tx	_	6	aux	_	_
+6	студува	студувам	VERB	Vpiif-r3s	Aspect=Imp|Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	4	csubj	_	_
+7	.	.	PUNCT	punct	_	4	punct	_	_
+
+</code></pre>
+
+<pre><code class="language-conllu"># visual-style 7	bgColor:blue
+# visual-style 7	fgColor:white
+# visual-style 5	bgColor:blue
+# visual-style 5	fgColor:white
+# visual-style 5 7 iobj	color:blue
+1	Не	не	INTJ	Tn	_	2	neg	_	_
+2	помня	помня	VERB	Vpitf-r1s	Aspect=Imp|Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin|Voice=Act	0	root	_	_
+3	да	да	PART	Tx	_	5	aux	_	_
+4	съм	съм	AUX	Vxitf-r1s	Aspect=Imp|Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin|Voice=Act	5	aux	_	_
+5	ходил	ходя-(си)	VERB	Vpitcao-smi	Aspect=Imp|Definite=Ind|Gender=Masc|Number=Sing|Tense=Past|VerbForm=Fin|Voice=Act	2	ccomp	_	_
+6	у	у	ADP	R	_	7	case	_	_
+7	тях	аз	PRON	Ppelap3	Case=Acc|Number=Plur|Person=3|PronType=Prs	5	iobj	_	_
+8	.	.	PUNCT	punct	_	2	punct	_	_
+
+</code></pre>
+
+<pre><code class="language-conllu"># visual-style 5	bgColor:blue
+# visual-style 5	fgColor:white
+# visual-style 3	bgColor:blue
+# visual-style 3	fgColor:white
+# visual-style 3 5 iobj	color:blue
+1	След	след	ADP	R	_	2	case	_	_
+2	седмица	седмица	NOUN	Ncfsi	Definite=Ind|Gender=Fem|Number=Sing	3	nmod	_	_
+3	отиде	отида-(си)	VERB	Vppif-o3s	Aspect=Perf|Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin|Voice=Act	0	root	_	_
+4	у	у	ADP	R	_	5	case	_	_
+5	Ганини	ганини	PROPN	H-pi	Definite=Ind|Number=Plur	3	iobj	_	_
+6	.	.	PUNCT	punct	_	3	punct	_	_
+
+</code></pre>
 
 
 
@@ -119,6 +182,7 @@ iobj in other languages:
         root + 'lib/ext/jquery.min.js',
         root + 'lib/ext/jquery.svg.min.js',
         root + 'lib/ext/jquery.svgdom.min.js',
+        root + 'lib/ext/jquery.timeago.js',
         root + 'lib/ext/jquery-ui.min.js',
         root + 'lib/ext/waypoints.min.js',
         root + 'lib/ext/jquery.address.min.js',
@@ -150,11 +214,40 @@ iobj in other languages:
     ];
 
     var setupAccordions = function() {
-        // standard jQuery UI "accordion" element initialization
+	// preserve state in URL hash, following in part
+	// http://www.boduch.ca/2011/05/remembering-jquery-ui-accordion.html
+	var accordionChange = function(event, ui) {
+	    var context = ui.newHeader ? ui.newHeader.context : null;
+	    if (context) {
+		var languageCode = context.getAttribute('data-lc');
+		if (languageCode !== null) {
+		    window.location.hash = languageCode;
+		}
+	    }
+	}
+        // jQuery UI "accordion" element initialization
 	$(".jquery-ui-accordion").accordion({
 	    collapsible: true,
-	    active: false
+	    active: false,
+	    change: accordionChange
 	});
+	if ($(".jquery-ui-accordion").length) {
+	    var matches = window.location.hash.match(/^\#(.*)$/);
+	    console.log(matches);
+	    if (matches !== null) {
+		var languageCode = matches[1];
+		var tab = $('[data-lc="'+languageCode+'"]');
+		// the following will only work after accordion is initialized
+		var index = $('.jquery-ui-accordion div.ui-accordion-header').index(tab);
+		if (index !== -1) {
+		    $(".jquery-ui-accordion").accordion({ active: index });
+		}
+	    }
+	}
+    };
+
+    var setupTimeago = function() {
+        jQuery("time.timeago").timeago();
     };
 
     var setupTabs = function() {
@@ -178,6 +271,7 @@ iobj in other languages:
         // set up UI tabs on page
         setupTabs();
         setupAccordions();
+        setupTimeago();
 
         // mark current collection (filled in by Jekyll)
         Collections.listing['_current'] = 'bg-dep';
@@ -203,7 +297,7 @@ iobj in other languages:
 
       <div id="footer">
 	  <p class="footer-text">&copy; 2014 
-	    <a href="http://universaldependencies.github.io/docs/introduction.html#contributors" style="color:gray">Universal Dependencies contributors</a>. 
+	    <a href="http://universaldependencies.org/introduction.html#contributors" style="color:gray">Universal Dependencies contributors</a>. 
 	    Site powered by <a href="http://spyysalo.github.io/annodoc" style="color:gray">Annodoc</a> and <a href="http://brat.nlplab.org/" style="color:gray">brat</a></p>.
       </div>
     </div>

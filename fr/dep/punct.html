@@ -11,6 +11,7 @@
     <link rel="stylesheet" type="text/css" href="../../css/style-vis.css"/>
     <link rel="stylesheet" type="text/css" href="../../css/hint.css"/>
     <script type="text/javascript" src="../../lib/ext/head.load.min.js"></script>
+    <script type="text/javascript" src="../../lib/ext/jquery.timeago.js.js"></script>
 <!--     <link rel="shortcut icon" href="favicon.ico"/> -->
 
 
@@ -20,8 +21,8 @@
 
       <div id="hp-header">
 	
-          <span class="header-text"><a href="http://universaldependencies.github.io/docs/#language-fr">home</a></span>
-          <span class="header-text"><a href="http://universaldependencies.github.io/docs/fr/dep">fr/dep</a></span>
+          <span class="header-text"><a href="http://universaldependencies.org/#language-fr">home</a></span>
+          <span class="header-text"><a href="http://universaldependencies.org/fr/dep">fr/dep</a></span>
           <span class="header-text"><a href="https://github.com/universaldependencies/docs/edit/pages-source/_fr-dep/punct.md" target="#">edit page</a></span>
           <span class="header-text"><a href="https://github.com/universaldependencies/docs/issues">issue tracker</a></span>
       </div>
@@ -53,6 +54,78 @@ punct(mouillé, .)
 <!-- "automatic stats" -->
 
 
+
+
+
+
+
+<hr />
+
+<h2 id="treebank-statistics-udfrench">Treebank Statistics (UD_French)</h2>
+
+<p>This relation is universal.</p>
+
+<p>44306 nodes (11%) are attached to their parents as <code>punct</code>.</p>
+
+<p>35625 instances of <code>punct</code> (80%) are left-to-right (parent precedes child).
+Average distance between parent and child is 9.60646413578296.</p>
+
+<p>The following 20 pairs of parts of speech are connected with <code>punct</code>: <a href="">fr-pos/VERB</a>-<a href="">fr-pos/PUNCT</a> (21350; 48% instances), <a href="">fr-pos/NOUN</a>-<a href="">fr-pos/PUNCT</a> (12951; 29% instances), <a href="">fr-pos/PROPN</a>-<a href="">fr-pos/PUNCT</a> (5044; 11% instances), <a href="">fr-pos/ADJ</a>-<a href="">fr-pos/PUNCT</a> (2358; 5% instances), <a href="">fr-pos/NUM</a>-<a href="">fr-pos/PUNCT</a> (1101; 2% instances), <a href="">fr-pos/PRON</a>-<a href="">fr-pos/PUNCT</a> (428; 1% instances), <a href="">fr-pos/X</a>-<a href="">fr-pos/PUNCT</a> (390; 1% instances), <a href="">fr-pos/ADV</a>-<a href="">fr-pos/PUNCT</a> (280; 1% instances), <a href="">fr-pos/SYM</a>-<a href="">fr-pos/PUNCT</a> (133; 0% instances), <a href="">fr-pos/CONJ</a>-<a href="">fr-pos/PUNCT</a> (74; 0% instances), <a href="">fr-pos/ADP</a>-<a href="">fr-pos/PUNCT</a> (63; 0% instances), <a href="">fr-pos/INTJ</a>-<a href="">fr-pos/PUNCT</a> (42; 0% instances), <a href="">fr-pos/PUNCT</a>-<a href="">fr-pos/PUNCT</a> (32; 0% instances), <a href="">fr-pos/DET</a>-<a href="">fr-pos/PUNCT</a> (14; 0% instances), <a href="">fr-pos/AUX</a>-<a href="">fr-pos/PUNCT</a> (13; 0% instances), <a href="">fr-pos/PROPN</a>-<a href="">fr-pos/SYM</a> (13; 0% instances), <a href="">fr-pos/X</a>-<a href="">fr-pos/SYM</a> (9; 0% instances), <a href="">fr-pos/SCONJ</a>-<a href="">fr-pos/PUNCT</a> (7; 0% instances), <a href="">fr-pos/PART</a>-<a href="">fr-pos/PUNCT</a> (3; 0% instances), <a href="">fr-pos/PROPN</a>-<a href="">fr-pos/NOUN</a> (1; 0% instances).</p>
+
+<pre><code class="language-conllu"># visual-style 9	bgColor:blue
+# visual-style 9	fgColor:white
+# visual-style 3	bgColor:blue
+# visual-style 3	fgColor:white
+# visual-style 3 9 punct	color:blue
+1	Mais	_	CONJ	_	_	3	cc	_	_
+2	comment	_	ADV	_	_	3	advmod	_	_
+3	faire	_	VERB	_	_	0	root	_	_
+4	dans	_	ADP	_	_	6	case	_	_
+5	un	_	DET	_	_	6	det	_	_
+6	contexte	_	NOUN	_	_	3	nmod	_	_
+7	structurellement	_	ADV	_	_	8	advmod	_	_
+8	raciste	_	ADJ	_	_	6	amod	_	_
+9	?	_	PUNCT	_	_	3	punct	_	_
+
+</code></pre>
+
+<pre><code class="language-conllu"># visual-style 12	bgColor:blue
+# visual-style 12	fgColor:white
+# visual-style 9	bgColor:blue
+# visual-style 9	fgColor:white
+# visual-style 9 12 punct	color:blue
+1	C'	_	PRON	_	_	9	nsubj	_	_
+2	est	_	VERB	_	_	9	cop	_	_
+3	véritablement	_	ADV	_	_	9	advmod	_	_
+4	pour	_	ADP	_	_	6	case	_	_
+5	le	_	DET	_	_	6	det	_	_
+6	futur	_	NOUN	_	_	9	nmod	_	_
+7	baptisé	_	VERB	_	_	6	acl	_	_
+8	un	_	DET	_	_	9	det	_	_
+9	changement	_	NOUN	_	_	0	root	_	_
+10	de	_	ADP	_	_	11	case	_	_
+11	cap	_	NOUN	_	_	9	nmod	_	_
+12	.	_	PUNCT	_	_	9	punct	_	_
+
+</code></pre>
+
+<pre><code class="language-conllu"># visual-style 2	bgColor:blue
+# visual-style 2	fgColor:white
+# visual-style 1	bgColor:blue
+# visual-style 1	fgColor:white
+# visual-style 1 2 punct	color:blue
+1	Aviator	_	PROPN	_	_	0	root	_	_
+2	,	_	PUNCT	_	_	1	punct	_	_
+3	un	_	DET	_	_	4	det	_	_
+4	film	_	NOUN	_	_	1	appos	_	_
+5	sur	_	ADP	_	_	7	case	_	_
+6	la	_	DET	_	_	7	det	_	_
+7	vie	_	NOUN	_	_	4	nmod	_	_
+8	de	_	ADP	_	_	9	case	_	_
+9	Hughes	_	PROPN	_	_	7	nmod	_	_
+10	.	_	PUNCT	_	_	1	punct	_	_
+
+</code></pre>
 
 
 
@@ -111,6 +184,7 @@ punct in other languages:
         root + 'lib/ext/jquery.min.js',
         root + 'lib/ext/jquery.svg.min.js',
         root + 'lib/ext/jquery.svgdom.min.js',
+        root + 'lib/ext/jquery.timeago.js',
         root + 'lib/ext/jquery-ui.min.js',
         root + 'lib/ext/waypoints.min.js',
         root + 'lib/ext/jquery.address.min.js',
@@ -142,11 +216,40 @@ punct in other languages:
     ];
 
     var setupAccordions = function() {
-        // standard jQuery UI "accordion" element initialization
+	// preserve state in URL hash, following in part
+	// http://www.boduch.ca/2011/05/remembering-jquery-ui-accordion.html
+	var accordionChange = function(event, ui) {
+	    var context = ui.newHeader ? ui.newHeader.context : null;
+	    if (context) {
+		var languageCode = context.getAttribute('data-lc');
+		if (languageCode !== null) {
+		    window.location.hash = languageCode;
+		}
+	    }
+	}
+        // jQuery UI "accordion" element initialization
 	$(".jquery-ui-accordion").accordion({
 	    collapsible: true,
-	    active: false
+	    active: false,
+	    change: accordionChange
 	});
+	if ($(".jquery-ui-accordion").length) {
+	    var matches = window.location.hash.match(/^\#(.*)$/);
+	    console.log(matches);
+	    if (matches !== null) {
+		var languageCode = matches[1];
+		var tab = $('[data-lc="'+languageCode+'"]');
+		// the following will only work after accordion is initialized
+		var index = $('.jquery-ui-accordion div.ui-accordion-header').index(tab);
+		if (index !== -1) {
+		    $(".jquery-ui-accordion").accordion({ active: index });
+		}
+	    }
+	}
+    };
+
+    var setupTimeago = function() {
+        jQuery("time.timeago").timeago();
     };
 
     var setupTabs = function() {
@@ -170,6 +273,7 @@ punct in other languages:
         // set up UI tabs on page
         setupTabs();
         setupAccordions();
+        setupTimeago();
 
         // mark current collection (filled in by Jekyll)
         Collections.listing['_current'] = 'fr-dep';
@@ -195,7 +299,7 @@ punct in other languages:
 
       <div id="footer">
 	  <p class="footer-text">&copy; 2014 
-	    <a href="http://universaldependencies.github.io/docs/introduction.html#contributors" style="color:gray">Universal Dependencies contributors</a>. 
+	    <a href="http://universaldependencies.org/introduction.html#contributors" style="color:gray">Universal Dependencies contributors</a>. 
 	    Site powered by <a href="http://spyysalo.github.io/annodoc" style="color:gray">Annodoc</a> and <a href="http://brat.nlplab.org/" style="color:gray">brat</a></p>.
       </div>
     </div>

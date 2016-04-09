@@ -11,6 +11,7 @@
     <link rel="stylesheet" type="text/css" href="../../css/style-vis.css"/>
     <link rel="stylesheet" type="text/css" href="../../css/hint.css"/>
     <script type="text/javascript" src="../../lib/ext/head.load.min.js"></script>
+    <script type="text/javascript" src="../../lib/ext/jquery.timeago.js.js"></script>
 <!--     <link rel="shortcut icon" href="favicon.ico"/> -->
 
 
@@ -20,8 +21,8 @@
 
       <div id="hp-header">
 	
-          <span class="header-text"><a href="http://universaldependencies.github.io/docs/#language-ar">home</a></span>
-          <span class="header-text"><a href="http://universaldependencies.github.io/docs/ar/dep">ar/dep</a></span>
+          <span class="header-text"><a href="http://universaldependencies.org/#language-ar">home</a></span>
+          <span class="header-text"><a href="http://universaldependencies.org/ar/dep">ar/dep</a></span>
           <span class="header-text"><a href="https://github.com/universaldependencies/docs/edit/pages-source/_ar-dep/advcl.md" target="#">edit page</a></span>
           <span class="header-text"><a href="https://github.com/universaldependencies/docs/issues">issue tracker</a></span>
       </div>
@@ -45,6 +46,78 @@ for <code>advcl</code>.</p>
 <!-- "automatic stats" -->
 
 
+
+
+
+
+
+<hr />
+
+<h2 id="treebank-statistics-udarabic">Treebank Statistics (UD_Arabic)</h2>
+
+<p>This relation is universal.</p>
+
+<p>1617 nodes (1%) are attached to their parents as <code>advcl</code>.</p>
+
+<p>1436 instances of <code>advcl</code> (89%) are left-to-right (parent precedes child).
+Average distance between parent and child is 12.4192949907236.</p>
+
+<p>The following 29 pairs of parts of speech are connected with <code>advcl</code>: <a href="">ar-pos/VERB</a>-<a href="">ar-pos/VERB</a> (1112; 69% instances), <a href="">ar-pos/NOUN</a>-<a href="">ar-pos/VERB</a> (172; 11% instances), <a href="">ar-pos/ADJ</a>-<a href="">ar-pos/VERB</a> (95; 6% instances), <a href="">ar-pos/X</a>-<a href="">ar-pos/VERB</a> (52; 3% instances), <a href="">ar-pos/VERB</a>-<a href="">ar-pos/ADJ</a> (27; 2% instances), <a href="">ar-pos/VERB</a>-<a href="">ar-pos/NOUN</a> (27; 2% instances), <a href="">ar-pos/CONJ</a>-<a href="">ar-pos/VERB</a> (20; 1% instances), <a href="">ar-pos/CONJ</a>-<a href="">ar-pos/ADJ</a> (19; 1% instances), <a href="">ar-pos/PRON</a>-<a href="">ar-pos/VERB</a> (14; 1% instances), <a href="">ar-pos/PART</a>-<a href="">ar-pos/VERB</a> (12; 1% instances), <a href="">ar-pos/ADV</a>-<a href="">ar-pos/VERB</a> (11; 1% instances), <a href="">ar-pos/CONJ</a>-<a href="">ar-pos/NOUN</a> (9; 1% instances), <a href="">ar-pos/NOUN</a>-<a href="">ar-pos/NOUN</a> (9; 1% instances), <a href="">ar-pos/NUM</a>-<a href="">ar-pos/VERB</a> (5; 0% instances), <a href="">ar-pos/ADJ</a>-<a href="">ar-pos/NOUN</a> (4; 0% instances), <a href="">ar-pos/ADJ</a>-<a href="">ar-pos/ADJ</a> (3; 0% instances), <a href="">ar-pos/NOUN</a>-<a href="">ar-pos/ADJ</a> (3; 0% instances), <a href="">ar-pos/PRON</a>-<a href="">ar-pos/NOUN</a> (3; 0% instances), <a href="">ar-pos/VERB</a>-<a href="">ar-pos/X</a> (3; 0% instances), <a href="">ar-pos/CONJ</a>-<a href="">ar-pos/X</a> (2; 0% instances), <a href="">ar-pos/VERB</a>-<a href="">ar-pos/ADV</a> (2; 0% instances), <a href="">ar-pos/VERB</a>-<a href="">ar-pos/NUM</a> (2; 0% instances), <a href="">ar-pos/VERB</a>-<a href="">ar-pos/PART</a> (2; 0% instances), <a href="">ar-pos/X</a>-<a href="">ar-pos/ADJ</a> (2; 0% instances), <a href="">ar-pos/X</a>-<a href="">ar-pos/NOUN</a> (2; 0% instances), <a href="">ar-pos/X</a>-<a href="">ar-pos/X</a> (2; 0% instances), <a href="">ar-pos/ADJ</a>-<a href="">ar-pos/ADV</a> (1; 0% instances), <a href="">ar-pos/ADP</a>-<a href="">ar-pos/VERB</a> (1; 0% instances), <a href="">ar-pos/PUNCT</a>-<a href="">ar-pos/ADP</a> (1; 0% instances).</p>
+
+<pre><code class="language-conllu"># visual-style 5	bgColor:blue
+# visual-style 5	fgColor:white
+# visual-style 1	bgColor:blue
+# visual-style 1	fgColor:white
+# visual-style 1 5 advcl	color:blue
+1	تَنتَحِلُ	_	VERB	VIIA-3FS--	Aspect=Imp|Gender=Fem|Mood=Ind|Number=Sing|Person=3|VerbForm=Fin|Voice=Act	0	root	_	Translit=tantaḥilu
+2	صِفَةَ	_	NOUN	N------S4R	Case=Acc|Definite=Red|Number=Sing	1	dobj	_	Translit=ṣifata
+3	خَادِمَةٍ	_	NOUN	N------S2I	Case=Gen|Definite=Ind|Number=Sing	2	nmod	_	Translit=ḫādimatin
+4	لِ	_	CONJ	C---------	_	5	mark	_	Translit=li
+5	تَتَسَلَّلَ	_	VERB	VISA-3FS--	Aspect=Imp|Gender=Fem|Mood=Sub|Number=Sing|Person=3|VerbForm=Fin|Voice=Act	1	advcl	_	Translit=tatasallala
+6	لِ	_	ADP	P---------	AdpType=Prep	7	case	_	Translit=li
+7	اَلمَنَازِلِ	_	NOUN	N------P2D	Case=Gen|Definite=Def|Number=Plur	5	nmod	_	Translit=al-manāzili
+
+</code></pre>
+
+<pre><code class="language-conllu"># visual-style 6	bgColor:blue
+# visual-style 6	fgColor:white
+# visual-style 2	bgColor:blue
+# visual-style 2	fgColor:white
+# visual-style 2 6 advcl	color:blue
+1	بِ	_	ADP	P---------	AdpType=Prep	2	case	_	Translit=bi
+2	اِعتِبَارِ	_	NOUN	N------S2R	Case=Gen|Definite=Red|Number=Sing	0	root	_	Translit=iʿtibāri
+3	اَلأَبِ	_	NOUN	N------S2D	Case=Gen|Definite=Def|Number=Sing	2	nmod	_	Translit=al-ʾabi
+4	ـ	_	PUNCT	G---------	_	6	punct	_	Translit=ـ
+5	كَمَا	_	CONJ	C---------	_	6	mark	_	Translit=kamā
+6	أَشَّرَت	_	VERB	VP-A-3FS--	Aspect=Perf|Gender=Fem|Number=Sing|Person=3|Voice=Act	2	advcl	_	Translit=ʾaššarat
+7	ـ	_	PUNCT	G---------	_	6	punct	_	Translit=ـ
+8	اَلرَّكِيزَةَ	_	NOUN	N------S4D	Case=Acc|Definite=Def|Number=Sing	2	dobj	_	Translit=ar-rakīzata
+9	اَلأَسَاسِيَّةَ	_	ADJ	A-----FS4D	Case=Acc|Definite=Def|Gender=Fem|Number=Sing	8	amod	_	Translit=al-ʾasāsīyata
+10	لِ	_	ADP	P---------	AdpType=Prep	12	case	_	Translit=li
+11	هٰذَا	_	DET	SD----MS2-	Case=Gen|Gender=Masc|Number=Sing|PronType=Dem	12	det	_	Translit=hāḏā
+12	اَلبِنَاءِ	_	NOUN	N------S2D	Case=Gen|Definite=Def|Number=Sing	8	nmod	_	Translit=al-bināʾi
+13	اَلِاجتِمَاعِيِّ	_	ADJ	A-----MS2D	Case=Gen|Definite=Def|Gender=Masc|Number=Sing	12	amod	_	Translit=al-i-ʼǧtimāʿīyi
+14	"	_	PUNCT	G---------	_	13	punct	_	Translit="
+15	اَلمُتَكَامِلِ	_	ADJ	A-----MS2D	Case=Gen|Definite=Def|Gender=Masc|Number=Sing	12	amod	_	Translit=al-mutakāmili
+16	.	_	PUNCT	G---------	_	2	punct	_	Translit=.
+
+</code></pre>
+
+<pre><code class="language-conllu"># visual-style 4	bgColor:blue
+# visual-style 4	fgColor:white
+# visual-style 2	bgColor:blue
+# visual-style 2	fgColor:white
+# visual-style 2 4 advcl	color:blue
+1	يَومٌ	_	NOUN	N------S1I	Case=Nom|Definite=Ind|Number=Sing	0	root	_	Translit=yawmun
+2	مُنَاسِبٌ	_	ADJ	A-----MS1I	Case=Nom|Definite=Ind|Gender=Masc|Number=Sing	1	amod	_	Translit=munāsibun
+3	لِكَي	_	CONJ	C---------	_	4	mark	_	Translit=li-kay
+4	تَهتَمَّ	_	VERB	VISA-2MS--	Aspect=Imp|Gender=Masc|Mood=Sub|Number=Sing|Person=2|VerbForm=Fin|Voice=Act	2	advcl	_	Translit=tahtamma
+5	بِ	_	ADP	P---------	AdpType=Prep	6	case	_	Translit=bi
+6	اِستِثمَارَاتِ	_	NOUN	N------P2R	Case=Gen|Definite=Red|Number=Plur	4	dobj	_	Translit=istiṯmārāti
+7	كَ	_	PRON	SP---2MS2-	Case=Gen|Gender=Masc|Number=Sing|Person=2|PronType=Prs	6	nmod	_	Translit=ka
+8	.	_	PUNCT	G---------	_	1	punct	_	Translit=.
+
+</code></pre>
 
 
 
@@ -103,6 +176,7 @@ advcl in other languages:
         root + 'lib/ext/jquery.min.js',
         root + 'lib/ext/jquery.svg.min.js',
         root + 'lib/ext/jquery.svgdom.min.js',
+        root + 'lib/ext/jquery.timeago.js',
         root + 'lib/ext/jquery-ui.min.js',
         root + 'lib/ext/waypoints.min.js',
         root + 'lib/ext/jquery.address.min.js',
@@ -134,11 +208,40 @@ advcl in other languages:
     ];
 
     var setupAccordions = function() {
-        // standard jQuery UI "accordion" element initialization
+	// preserve state in URL hash, following in part
+	// http://www.boduch.ca/2011/05/remembering-jquery-ui-accordion.html
+	var accordionChange = function(event, ui) {
+	    var context = ui.newHeader ? ui.newHeader.context : null;
+	    if (context) {
+		var languageCode = context.getAttribute('data-lc');
+		if (languageCode !== null) {
+		    window.location.hash = languageCode;
+		}
+	    }
+	}
+        // jQuery UI "accordion" element initialization
 	$(".jquery-ui-accordion").accordion({
 	    collapsible: true,
-	    active: false
+	    active: false,
+	    change: accordionChange
 	});
+	if ($(".jquery-ui-accordion").length) {
+	    var matches = window.location.hash.match(/^\#(.*)$/);
+	    console.log(matches);
+	    if (matches !== null) {
+		var languageCode = matches[1];
+		var tab = $('[data-lc="'+languageCode+'"]');
+		// the following will only work after accordion is initialized
+		var index = $('.jquery-ui-accordion div.ui-accordion-header').index(tab);
+		if (index !== -1) {
+		    $(".jquery-ui-accordion").accordion({ active: index });
+		}
+	    }
+	}
+    };
+
+    var setupTimeago = function() {
+        jQuery("time.timeago").timeago();
     };
 
     var setupTabs = function() {
@@ -162,6 +265,7 @@ advcl in other languages:
         // set up UI tabs on page
         setupTabs();
         setupAccordions();
+        setupTimeago();
 
         // mark current collection (filled in by Jekyll)
         Collections.listing['_current'] = 'ar-dep';
@@ -187,7 +291,7 @@ advcl in other languages:
 
       <div id="footer">
 	  <p class="footer-text">&copy; 2014 
-	    <a href="http://universaldependencies.github.io/docs/introduction.html#contributors" style="color:gray">Universal Dependencies contributors</a>. 
+	    <a href="http://universaldependencies.org/introduction.html#contributors" style="color:gray">Universal Dependencies contributors</a>. 
 	    Site powered by <a href="http://spyysalo.github.io/annodoc" style="color:gray">Annodoc</a> and <a href="http://brat.nlplab.org/" style="color:gray">brat</a></p>.
       </div>
     </div>

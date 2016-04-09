@@ -11,6 +11,7 @@
     <link rel="stylesheet" type="text/css" href="../../css/style-vis.css"/>
     <link rel="stylesheet" type="text/css" href="../../css/hint.css"/>
     <script type="text/javascript" src="../../lib/ext/head.load.min.js"></script>
+    <script type="text/javascript" src="../../lib/ext/jquery.timeago.js.js"></script>
 <!--     <link rel="shortcut icon" href="favicon.ico"/> -->
 
 
@@ -20,8 +21,8 @@
 
       <div id="hp-header">
 	
-          <span class="header-text"><a href="http://universaldependencies.github.io/docs/#language-hu">home</a></span>
-          <span class="header-text"><a href="http://universaldependencies.github.io/docs/hu/dep">hu/dep</a></span>
+          <span class="header-text"><a href="http://universaldependencies.org/#language-hu">home</a></span>
+          <span class="header-text"><a href="http://universaldependencies.org/hu/dep">hu/dep</a></span>
           <span class="header-text"><a href="https://github.com/universaldependencies/docs/edit/pages-source/_hu-dep/vocative.md" target="#">edit page</a></span>
           <span class="header-text"><a href="https://github.com/universaldependencies/docs/issues">issue tracker</a></span>
       </div>
@@ -45,6 +46,72 @@ for <code>vocative</code>.</p>
 <!-- "automatic stats" -->
 
 
+
+
+
+
+
+<hr />
+
+<h2 id="treebank-statistics-udhungarian">Treebank Statistics (UD_Hungarian)</h2>
+
+<p>This relation is universal.</p>
+
+<p>1 nodes (0%) are attached to their parents as <code>vocative</code>.</p>
+
+<p>1 instances of <code>vocative</code> (100%) are right-to-left (child precedes parent).
+Average distance between parent and child is 3.</p>
+
+<p>The following 1 pairs of parts of speech are connected with <code>vocative</code>: <a href="">hu-pos/VERB</a>-<a href="">hu-pos/NOUN</a> (1; 100% instances).</p>
+
+<pre><code class="language-conllu"># visual-style 31	bgColor:blue
+# visual-style 31	fgColor:white
+# visual-style 34	bgColor:blue
+# visual-style 34	fgColor:white
+# visual-style 34 31 vocative	color:blue
+1	Akkoriban	akkoriban	ADV	_	PronType=Dem	2	advmod:tlocy	_	_
+2	kezdtem	kezd	VERB	_	Definite=Ind|Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin|Voice=Act	0	root	_	_
+3	egyre	egyre	ADV	_	_	4	advmod:mode	_	_
+4	jelentősebb	jelentős	ADJ	_	Case=Nom|Degree=Cmp|Number=Sing|Number[psed]=None|Number[psor]=None|Person[psor]=None	5	amod:att	_	_
+5	szerepeket	szerep	NOUN	_	Case=Acc|Number=Plur|Number[psed]=None|Number[psor]=None|Person[psor]=None	6	dobj	_	_
+6	kapni	kap	VERB	_	VerbForm=Inf|Voice=Act	2	xcomp	_	_
+7	,	,	PUNCT	_	_	2	punct	_	_
+8	s	s	CONJ	_	_	2	cc	_	_
+9	egy	egy	DET	_	Definite=Ind|PronType=Art	11	det	_	_
+10	Bánk	Bánk	PROPN	_	Case=Nom|Number=Sing|Number[psed]=None|Number[psor]=None|Person[psor]=None	11	name	_	_
+11	bán	bán	PROPN	_	Case=Nom|Number=Sing|Number[psed]=None|Number[psor]=None|Person[psor]=None	26	nmod	_	_
+12	után	után	ADP	_	_	11	case	_	_
+13	,	,	PUNCT	_	_	26	punct	_	_
+14	amelyben	amely	PRON	_	Case=Ine|Number=Sing|Number[psed]=None|Number[psor]=None|Person=3|Person[psor]=None|PronType=Rel	17	nmod:obl	_	_
+15	akkor	akkor	ADV	_	PronType=Dem	17	advmod:tlocy	_	_
+16	Biberachot	Biberach	PROPN	_	Case=Acc|Number=Sing|Number[psed]=None|Number[psor]=None|Person[psor]=None	17	dobj	_	_
+17	alakítottam	alakít	VERB	_	Definite=Def|Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin|Voice=Act	11	acl	_	_
+18	,	,	PUNCT	_	_	17	punct	_	_
+19	Palló	Palló	PROPN	_	Case=Nom|Number=Sing|Number[psed]=None|Number[psor]=None|Person[psor]=None	20	name	_	_
+20	Imre	Imre	PROPN	_	Case=Nom|Number=Sing|Number[psed]=None|Number[psor]=None|Person[psor]=None	26	nsubj	_	_
+21	,	,	PUNCT	_	_	20	punct	_	_
+22	a	a	DET	_	Definite=Def|PronType=Art	24	det	_	_
+23	kiváló	kiváló	ADJ	_	Case=Nom|Degree=Pos|Number=Sing|Number[psed]=None|Number[psor]=None|Person[psor]=None	24	amod:att	_	_
+24	bariton	bariton	NOUN	_	Case=Nom|Number=Sing|Number[psed]=None|Number[psor]=None|Person[psor]=None	20	appos	_	_
+25	azt	az	PRON	_	Case=Acc|Number=Sing|Number[psed]=None|Number[psor]=None|Person=3|Person[psor]=None|PronType=Dem	26	dobj	_	_
+26	mondta	mond	VERB	_	Definite=Def|Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin|Voice=Act	2	conj	_	_
+27	nekem	én	PRON	_	Case=Dat|Number=Sing|Number[psed]=None|Number[psor]=None|Person=1|Person[psor]=None|PronType=Prs	26	iobj	_	_
+28	:	:	PUNCT	_	_	26	punct	_	_
+29	"	"	PUNCT	_	_	34	punct	_	_
+30	Gyuri	Gyuri	PROPN	_	Case=Nom|Number=Sing|Number[psed]=None|Number[psor]=None|Person[psor]=None	31	appos	_	_
+31	fiam	fia	NOUN	_	Case=Nom|Number=Sing|Number[psed]=None|Number[psor]=Sing|Person[psor]=1	34	vocative	_	_
+32	,	,	PUNCT	_	_	34	punct	_	_
+33	ne	ne	ADV	_	PronType=Neg	34	neg	_	_
+34	felejtsd	felejt	VERB	_	Definite=Def|Mood=Imp|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin|Voice=Act	26	ccomp:obj	_	_
+35	el	el	ADV	_	_	34	compound:preverb	_	_
+36	,	,	PUNCT	_	_	34	punct	_	_
+37	előadás	előadás	NOUN	_	Case=Nom|Number=Sing|Number[psed]=None|Number[psor]=None|Person[psor]=None	39	nmod	_	_
+38	után	után	ADP	_	_	37	case	_	_
+39	indulás	indulás	NOUN	_	Case=Nom|Number=Sing|Number[psed]=None|Number[psor]=None|Person[psor]=None	34	ccomp:obj	_	_
+40	haza	haza	ADV	_	_	39	advmod:to	_	_
+41	.	.	PUNCT	_	_	2	punct	_	_
+
+</code></pre>
 
 
 
@@ -103,6 +170,7 @@ vocative in other languages:
         root + 'lib/ext/jquery.min.js',
         root + 'lib/ext/jquery.svg.min.js',
         root + 'lib/ext/jquery.svgdom.min.js',
+        root + 'lib/ext/jquery.timeago.js',
         root + 'lib/ext/jquery-ui.min.js',
         root + 'lib/ext/waypoints.min.js',
         root + 'lib/ext/jquery.address.min.js',
@@ -134,11 +202,40 @@ vocative in other languages:
     ];
 
     var setupAccordions = function() {
-        // standard jQuery UI "accordion" element initialization
+	// preserve state in URL hash, following in part
+	// http://www.boduch.ca/2011/05/remembering-jquery-ui-accordion.html
+	var accordionChange = function(event, ui) {
+	    var context = ui.newHeader ? ui.newHeader.context : null;
+	    if (context) {
+		var languageCode = context.getAttribute('data-lc');
+		if (languageCode !== null) {
+		    window.location.hash = languageCode;
+		}
+	    }
+	}
+        // jQuery UI "accordion" element initialization
 	$(".jquery-ui-accordion").accordion({
 	    collapsible: true,
-	    active: false
+	    active: false,
+	    change: accordionChange
 	});
+	if ($(".jquery-ui-accordion").length) {
+	    var matches = window.location.hash.match(/^\#(.*)$/);
+	    console.log(matches);
+	    if (matches !== null) {
+		var languageCode = matches[1];
+		var tab = $('[data-lc="'+languageCode+'"]');
+		// the following will only work after accordion is initialized
+		var index = $('.jquery-ui-accordion div.ui-accordion-header').index(tab);
+		if (index !== -1) {
+		    $(".jquery-ui-accordion").accordion({ active: index });
+		}
+	    }
+	}
+    };
+
+    var setupTimeago = function() {
+        jQuery("time.timeago").timeago();
     };
 
     var setupTabs = function() {
@@ -162,6 +259,7 @@ vocative in other languages:
         // set up UI tabs on page
         setupTabs();
         setupAccordions();
+        setupTimeago();
 
         // mark current collection (filled in by Jekyll)
         Collections.listing['_current'] = 'hu-dep';
@@ -187,7 +285,7 @@ vocative in other languages:
 
       <div id="footer">
 	  <p class="footer-text">&copy; 2014 
-	    <a href="http://universaldependencies.github.io/docs/introduction.html#contributors" style="color:gray">Universal Dependencies contributors</a>. 
+	    <a href="http://universaldependencies.org/introduction.html#contributors" style="color:gray">Universal Dependencies contributors</a>. 
 	    Site powered by <a href="http://spyysalo.github.io/annodoc" style="color:gray">Annodoc</a> and <a href="http://brat.nlplab.org/" style="color:gray">brat</a></p>.
       </div>
     </div>

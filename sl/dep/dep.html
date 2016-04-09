@@ -11,6 +11,7 @@
     <link rel="stylesheet" type="text/css" href="../../css/style-vis.css"/>
     <link rel="stylesheet" type="text/css" href="../../css/hint.css"/>
     <script type="text/javascript" src="../../lib/ext/head.load.min.js"></script>
+    <script type="text/javascript" src="../../lib/ext/jquery.timeago.js.js"></script>
 <!--     <link rel="shortcut icon" href="favicon.ico"/> -->
 
 
@@ -20,8 +21,8 @@
 
       <div id="hp-header">
 	
-          <span class="header-text"><a href="http://universaldependencies.github.io/docs/#language-sl">home</a></span>
-          <span class="header-text"><a href="http://universaldependencies.github.io/docs/sl/dep">sl/dep</a></span>
+          <span class="header-text"><a href="http://universaldependencies.org/#language-sl">home</a></span>
+          <span class="header-text"><a href="http://universaldependencies.org/sl/dep">sl/dep</a></span>
           <span class="header-text"><a href="https://github.com/universaldependencies/docs/edit/pages-source/_sl-dep/dep.md" target="#">edit page</a></span>
           <span class="header-text"><a href="https://github.com/universaldependencies/docs/issues">issue tracker</a></span>
       </div>
@@ -45,6 +46,77 @@ for <code>dep</code>.</p>
 <!-- "automatic stats" -->
 
 
+
+
+
+
+
+<hr />
+
+<h2 id="treebank-statistics-udslovenian">Treebank Statistics (UD_Slovenian)</h2>
+
+<p>This relation is universal.</p>
+
+<p>8 nodes (0%) are attached to their parents as <code>dep</code>.</p>
+
+<p>8 instances of <code>dep</code> (100%) are right-to-left (child precedes parent).
+Average distance between parent and child is 8.5.</p>
+
+<p>The following 2 pairs of parts of speech are connected with <code>dep</code>: <a href="">sl-pos/VERB</a>-<a href="">sl-pos/NUM</a> (6; 75% instances), <a href="">sl-pos/NOUN</a>-<a href="">sl-pos/NUM</a> (2; 25% instances).</p>
+
+<pre><code class="language-conllu"># visual-style 1	bgColor:blue
+# visual-style 1	fgColor:white
+# visual-style 9	bgColor:blue
+# visual-style 9	fgColor:white
+# visual-style 9 1 dep	color:blue
+1	1470	1470	NUM	Mdc	NumForm=Digit|NumType=Card	9	dep	_	Dep=0|Rel=Root
+2	Ludvik	Ludvik	PROPN	Npmsn	Case=Nom|Gender=Masc|Number=Sing	9	nsubj	_	Dep=9|Rel=Sb
+3	XI.	XI.	NUM	Mro	NumForm=Roman|NumType=Ord	2	nummod	_	SpaceAfter=No|Dep=2|Rel=Atr
+4	(	(	PUNCT	Z	_	5	punct	_	SpaceAfter=No|Dep=0|Rel=Root
+5	142383	142383	NUM	Mdc	NumForm=Digit|NumType=Card	2	nummod	_	SpaceAfter=No|Dep=0|Rel=Root
+6	)	)	PUNCT	Z	_	5	punct	_	Dep=0|Rel=Root
+7	s	z	ADP	Si	Case=Ins	8	case	_	Dep=8|Rel=Atr
+8	Švicarji	Švicar	PROPN	Npmpi	Case=Ins|Gender=Masc|Number=Plur	9	nmod	_	Dep=9|Rel=Obj
+9	sklene	skleniti	VERB	Vmer3s	Aspect=Perf|Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	_	Dep=0|Rel=Root
+10	zavezništvo	zavezništvo	NOUN	Ncnsa	Case=Acc|Gender=Neut|Number=Sing	9	dobj	_	Dep=9|Rel=Obj
+11	proti	proti	ADP	Sd	Case=Dat	12	case	_	Dep=12|Rel=Atr
+12	Burgundcem	Burgundec	PROPN	Npmpd	Case=Dat|Gender=Masc|Number=Plur	10	nmod	_	SpaceAfter=No|Dep=10|Rel=Atr
+13	.	.	PUNCT	Z	_	9	punct	_	SpaceAfter=No|Dep=0|Rel=Root
+
+</code></pre>
+
+<pre><code class="language-conllu"># visual-style 1	bgColor:blue
+# visual-style 1	fgColor:white
+# visual-style 17	bgColor:blue
+# visual-style 17	fgColor:white
+# visual-style 17 1 dep	color:blue
+1	20	20	NUM	Mdc	NumForm=Digit|NumType=Card	17	dep	_	Dep=0|Rel=Root
+2	Predniki	prednik	NOUN	Ncmpn	Case=Nom|Gender=Masc|Number=Plur	17	nsubj	_	SpaceAfter=No|Dep=14|Rel=Sb
+3	,	,	PUNCT	Z	_	12	punct	_	Dep=0|Rel=Root
+4	ki	ki	SCONJ	Cs	_	12	mark	_	Dep=5|Rel=Conj
+5	so	biti	VERB	Va-r3p-n	Mood=Ind|Negative=Pos|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	12	cop	_	Dep=2|Rel=Atr
+6	za	za	ADP	Sa	Case=Acc	7	case	_	Dep=7|Rel=Atr
+7	Nuere	Nuer	PROPN	Npmpa	Case=Acc|Gender=Masc|Number=Plur	12	nmod	_	SpaceAfter=No|Dep=5|Rel=Obj
+8	v	v	ADP	Sl	Case=Loc	10	case	_	Dep=10|Rel=Atr
+9	nekem	nek	DET	Pi-msl	Case=Loc|Gender=Masc|Number=Sing|PronType=Ind	10	det	_	Dep=10|Rel=Atr
+10	smislu	smisel	NOUN	Ncmsl	Case=Loc|Gender=Masc|Number=Sing	12	nmod	_	Dep=5|Rel=AdvM
+11	ideološka	ideološki	ADJ	Agpfsn	Case=Nom|Degree=Pos|Gender=Fem|Number=Sing	12	amod	_	Dep=12|Rel=Atr
+12	opora	opora	NOUN	Ncfsn	Case=Nom|Gender=Fem|Number=Sing	2	acl	_	SpaceAfter=No|Dep=5|Rel=Atr
+13	,	,	PUNCT	Z	_	12	punct	_	Dep=0|Rel=Root
+14	so	biti	VERB	Va-r3p-n	Mood=Ind|Negative=Pos|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	17	cop	_	Dep=0|Rel=Root
+15	torej	torej	ADV	Rgp	Degree=Pos	17	advmod	_	Dep=0|Rel=Root
+16	tudi	tudi	PART	Q	_	17	advmod	_	Dep=0|Rel=Root
+17	institucija	institucija	NOUN	Ncfsn	Case=Nom|Gender=Fem|Number=Sing	0	root	_	Dep=14|Rel=Atr
+18	za	za	ADP	Sa	Case=Acc	19	case	_	Dep=19|Rel=Atr
+19	mišljenje	mišljenje	NOUN	Ncnsa	Case=Acc|Gender=Neut|Number=Sing	17	nmod	_	SpaceAfter=No|Dep=17|Rel=Atr
+20	,	,	PUNCT	Z	_	19	punct	_	Dep=22|Rel=Conj
+21	za	za	ADP	Sa	Case=Acc	22	case	_	Dep=22|Rel=Atr
+22	spominjanje	spominjanje	NOUN	Ncnsa	Case=Acc|Gender=Neut|Number=Sing	19	conj	_	Dep=19|Rel=Coord
+23	in	in	CONJ	Cc	_	19	cc	_	Dep=24|Rel=Conj
+24	pozabljanje	pozabljanje	NOUN	Ncnsa	Case=Acc|Gender=Neut|Number=Sing	19	conj	_	SpaceAfter=No|Dep=19|Rel=Coord
+25	.	.	PUNCT	Z	_	17	punct	_	Dep=0|Rel=Root
+
+</code></pre>
 
 
 
@@ -103,6 +175,7 @@ dep in other languages:
         root + 'lib/ext/jquery.min.js',
         root + 'lib/ext/jquery.svg.min.js',
         root + 'lib/ext/jquery.svgdom.min.js',
+        root + 'lib/ext/jquery.timeago.js',
         root + 'lib/ext/jquery-ui.min.js',
         root + 'lib/ext/waypoints.min.js',
         root + 'lib/ext/jquery.address.min.js',
@@ -134,11 +207,40 @@ dep in other languages:
     ];
 
     var setupAccordions = function() {
-        // standard jQuery UI "accordion" element initialization
+	// preserve state in URL hash, following in part
+	// http://www.boduch.ca/2011/05/remembering-jquery-ui-accordion.html
+	var accordionChange = function(event, ui) {
+	    var context = ui.newHeader ? ui.newHeader.context : null;
+	    if (context) {
+		var languageCode = context.getAttribute('data-lc');
+		if (languageCode !== null) {
+		    window.location.hash = languageCode;
+		}
+	    }
+	}
+        // jQuery UI "accordion" element initialization
 	$(".jquery-ui-accordion").accordion({
 	    collapsible: true,
-	    active: false
+	    active: false,
+	    change: accordionChange
 	});
+	if ($(".jquery-ui-accordion").length) {
+	    var matches = window.location.hash.match(/^\#(.*)$/);
+	    console.log(matches);
+	    if (matches !== null) {
+		var languageCode = matches[1];
+		var tab = $('[data-lc="'+languageCode+'"]');
+		// the following will only work after accordion is initialized
+		var index = $('.jquery-ui-accordion div.ui-accordion-header').index(tab);
+		if (index !== -1) {
+		    $(".jquery-ui-accordion").accordion({ active: index });
+		}
+	    }
+	}
+    };
+
+    var setupTimeago = function() {
+        jQuery("time.timeago").timeago();
     };
 
     var setupTabs = function() {
@@ -162,6 +264,7 @@ dep in other languages:
         // set up UI tabs on page
         setupTabs();
         setupAccordions();
+        setupTimeago();
 
         // mark current collection (filled in by Jekyll)
         Collections.listing['_current'] = 'sl-dep';
@@ -187,7 +290,7 @@ dep in other languages:
 
       <div id="footer">
 	  <p class="footer-text">&copy; 2014 
-	    <a href="http://universaldependencies.github.io/docs/introduction.html#contributors" style="color:gray">Universal Dependencies contributors</a>. 
+	    <a href="http://universaldependencies.org/introduction.html#contributors" style="color:gray">Universal Dependencies contributors</a>. 
 	    Site powered by <a href="http://spyysalo.github.io/annodoc" style="color:gray">Annodoc</a> and <a href="http://brat.nlplab.org/" style="color:gray">brat</a></p>.
       </div>
     </div>

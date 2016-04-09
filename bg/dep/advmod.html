@@ -11,6 +11,7 @@
     <link rel="stylesheet" type="text/css" href="../../css/style-vis.css"/>
     <link rel="stylesheet" type="text/css" href="../../css/hint.css"/>
     <script type="text/javascript" src="../../lib/ext/head.load.min.js"></script>
+    <script type="text/javascript" src="../../lib/ext/jquery.timeago.js.js"></script>
 <!--     <link rel="shortcut icon" href="favicon.ico"/> -->
 
 
@@ -20,8 +21,8 @@
 
       <div id="hp-header">
 	
-          <span class="header-text"><a href="http://universaldependencies.github.io/docs/#language-bg">home</a></span>
-          <span class="header-text"><a href="http://universaldependencies.github.io/docs/bg/dep">bg/dep</a></span>
+          <span class="header-text"><a href="http://universaldependencies.org/#language-bg">home</a></span>
+          <span class="header-text"><a href="http://universaldependencies.org/bg/dep">bg/dep</a></span>
           <span class="header-text"><a href="https://github.com/universaldependencies/docs/edit/pages-source/_bg-dep/advmod.md" target="#">edit page</a></span>
           <span class="header-text"><a href="https://github.com/universaldependencies/docs/issues">issue tracker</a></span>
       </div>
@@ -45,6 +46,69 @@ for <code>advmod</code>.</p>
 <!-- "automatic stats" -->
 
 
+
+
+
+
+
+<hr />
+
+<h2 id="treebank-statistics-udbulgarian">Treebank Statistics (UD_Bulgarian)</h2>
+
+<p>This relation is universal.</p>
+
+<p>5619 nodes (4%) are attached to their parents as <code>advmod</code>.</p>
+
+<p>4216 instances of <code>advmod</code> (75%) are right-to-left (child precedes parent).
+Average distance between parent and child is 2.06602598327104.</p>
+
+<p>The following 12 pairs of parts of speech are connected with <code>advmod</code>: <a href="">bg-pos/VERB</a>-<a href="">bg-pos/ADV</a> (3845; 68% instances), <a href="">bg-pos/NOUN</a>-<a href="">bg-pos/ADV</a> (771; 14% instances), <a href="">bg-pos/ADJ</a>-<a href="">bg-pos/ADV</a> (480; 9% instances), <a href="">bg-pos/ADV</a>-<a href="">bg-pos/ADV</a> (311; 6% instances), <a href="">bg-pos/ADP</a>-<a href="">bg-pos/ADV</a> (77; 1% instances), <a href="">bg-pos/DET</a>-<a href="">bg-pos/ADV</a> (38; 1% instances), <a href="">bg-pos/NUM</a>-<a href="">bg-pos/ADV</a> (35; 1% instances), <a href="">bg-pos/PRON</a>-<a href="">bg-pos/ADV</a> (29; 1% instances), <a href="">bg-pos/PROPN</a>-<a href="">bg-pos/ADV</a> (25; 0% instances), <a href="">bg-pos/CONJ</a>-<a href="">bg-pos/ADV</a> (5; 0% instances), <a href="">bg-pos/INTJ</a>-<a href="">bg-pos/ADV</a> (2; 0% instances), <a href="">bg-pos/PART</a>-<a href="">bg-pos/ADV</a> (1; 0% instances).</p>
+
+<pre><code class="language-conllu"># visual-style 1	bgColor:blue
+# visual-style 1	fgColor:white
+# visual-style 2	bgColor:blue
+# visual-style 2	fgColor:white
+# visual-style 2 1 advmod	color:blue
+1	Съвсем	съвсем	ADV	Dq	_	2	advmod	_	_
+2	загуби	загубя-(се)	VERB	Vpptf-o3s	Aspect=Perf|Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin|Voice=Act	0	root	_	_
+3	власт	власт	NOUN	Ncfsi	Definite=Ind|Gender=Fem|Number=Sing	2	dobj	_	_
+4	над	над	ADP	R	_	5	case	_	_
+5	себе	себе	PRON	Ppxla	Case=Acc|PronType=Prs|Reflex=Yes	3	nmod	_	_
+6	си	си	PART	T	_	5	mwe	_	_
+7	.	.	PUNCT	punct	_	2	punct	_	_
+
+</code></pre>
+
+<pre><code class="language-conllu"># visual-style 3	bgColor:blue
+# visual-style 3	fgColor:white
+# visual-style 2	bgColor:blue
+# visual-style 2	fgColor:white
+# visual-style 2 3 advmod	color:blue
+1	Огрените	огрея	ADJ	Vpptcv--p-d	Aspect=Perf|Definite=Def|Number=Plur|VerbForm=Part|Voice=Pass	2	amod	_	_
+2	скали	скала	NOUN	Ncfpi	Definite=Ind|Gender=Fem|Number=Plur	4	nsubj	_	_
+3	отсреща	отсреща	ADV	Dl	_	2	advmod	_	_
+4	немееха	немея	VERB	Vpiif-m3p	Aspect=Imp|Mood=Ind|Number=Plur|Person=3|Tense=Imp|VerbForm=Fin|Voice=Act	0	root	_	_
+5	.	.	PUNCT	punct	_	4	punct	_	_
+
+</code></pre>
+
+<pre><code class="language-conllu"># visual-style 4	bgColor:blue
+# visual-style 4	fgColor:white
+# visual-style 5	bgColor:blue
+# visual-style 5	fgColor:white
+# visual-style 5 4 advmod	color:blue
+1	В	в	ADP	R	_	6	case	_	_
+2	онова	този	DET	Pde-os-n	Gender=Neut|Number=Sing|PronType=Dem	6	det	_	_
+3	не	не	INTJ	Tn	_	4	neg	_	_
+4	толкова	толкова	ADV	Pdq	NumType=Card|PronType=Dem	5	advmod	_	_
+5	далечно	далечен	ADJ	Ansi	Definite=Ind|Degree=Pos|Gender=Neut|Number=Sing	6	amod	_	_
+6	време	време	NOUN	Ncnsi	Definite=Ind|Gender=Neut|Number=Sing	8	nmod	_	_
+7	всичко	всеки	PRON	Pce-os-n	Case=Nom|Gender=Neut|Number=Sing|PronType=Tot	8	nsubj	_	_
+8	свършва	свършвам-(се)	VERB	Vpitf-r3s	Aspect=Imp|Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	0	root	_	_
+9	дотук	там	ADV	Pdl	PronType=Dem	8	advmod	_	_
+10	.	.	PUNCT	punct	_	8	punct	_	_
+
+</code></pre>
 
 
 
@@ -103,6 +167,7 @@ advmod in other languages:
         root + 'lib/ext/jquery.min.js',
         root + 'lib/ext/jquery.svg.min.js',
         root + 'lib/ext/jquery.svgdom.min.js',
+        root + 'lib/ext/jquery.timeago.js',
         root + 'lib/ext/jquery-ui.min.js',
         root + 'lib/ext/waypoints.min.js',
         root + 'lib/ext/jquery.address.min.js',
@@ -134,11 +199,40 @@ advmod in other languages:
     ];
 
     var setupAccordions = function() {
-        // standard jQuery UI "accordion" element initialization
+	// preserve state in URL hash, following in part
+	// http://www.boduch.ca/2011/05/remembering-jquery-ui-accordion.html
+	var accordionChange = function(event, ui) {
+	    var context = ui.newHeader ? ui.newHeader.context : null;
+	    if (context) {
+		var languageCode = context.getAttribute('data-lc');
+		if (languageCode !== null) {
+		    window.location.hash = languageCode;
+		}
+	    }
+	}
+        // jQuery UI "accordion" element initialization
 	$(".jquery-ui-accordion").accordion({
 	    collapsible: true,
-	    active: false
+	    active: false,
+	    change: accordionChange
 	});
+	if ($(".jquery-ui-accordion").length) {
+	    var matches = window.location.hash.match(/^\#(.*)$/);
+	    console.log(matches);
+	    if (matches !== null) {
+		var languageCode = matches[1];
+		var tab = $('[data-lc="'+languageCode+'"]');
+		// the following will only work after accordion is initialized
+		var index = $('.jquery-ui-accordion div.ui-accordion-header').index(tab);
+		if (index !== -1) {
+		    $(".jquery-ui-accordion").accordion({ active: index });
+		}
+	    }
+	}
+    };
+
+    var setupTimeago = function() {
+        jQuery("time.timeago").timeago();
     };
 
     var setupTabs = function() {
@@ -162,6 +256,7 @@ advmod in other languages:
         // set up UI tabs on page
         setupTabs();
         setupAccordions();
+        setupTimeago();
 
         // mark current collection (filled in by Jekyll)
         Collections.listing['_current'] = 'bg-dep';
@@ -187,7 +282,7 @@ advmod in other languages:
 
       <div id="footer">
 	  <p class="footer-text">&copy; 2014 
-	    <a href="http://universaldependencies.github.io/docs/introduction.html#contributors" style="color:gray">Universal Dependencies contributors</a>. 
+	    <a href="http://universaldependencies.org/introduction.html#contributors" style="color:gray">Universal Dependencies contributors</a>. 
 	    Site powered by <a href="http://spyysalo.github.io/annodoc" style="color:gray">Annodoc</a> and <a href="http://brat.nlplab.org/" style="color:gray">brat</a></p>.
       </div>
     </div>

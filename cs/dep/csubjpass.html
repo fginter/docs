@@ -11,6 +11,7 @@
     <link rel="stylesheet" type="text/css" href="../../css/style-vis.css"/>
     <link rel="stylesheet" type="text/css" href="../../css/hint.css"/>
     <script type="text/javascript" src="../../lib/ext/head.load.min.js"></script>
+    <script type="text/javascript" src="../../lib/ext/jquery.timeago.js.js"></script>
 <!--     <link rel="shortcut icon" href="favicon.ico"/> -->
 
 
@@ -20,8 +21,8 @@
 
       <div id="hp-header">
 	
-          <span class="header-text"><a href="http://universaldependencies.github.io/docs/#language-cs">home</a></span>
-          <span class="header-text"><a href="http://universaldependencies.github.io/docs/cs/dep">cs/dep</a></span>
+          <span class="header-text"><a href="http://universaldependencies.org/#language-cs">home</a></span>
+          <span class="header-text"><a href="http://universaldependencies.org/cs/dep">cs/dep</a></span>
           <span class="header-text"><a href="https://github.com/universaldependencies/docs/edit/pages-source/_cs-dep/csubjpass.md" target="#">edit page</a></span>
           <span class="header-text"><a href="https://github.com/universaldependencies/docs/issues">issue tracker</a></span>
       </div>
@@ -56,6 +57,42 @@ csubjpass(It-does-not-expect, you-will-come)
 <!-- "automatic stats" -->
 
 
+
+
+
+
+
+<hr />
+
+<h2 id="treebank-statistics-udczech">Treebank Statistics (UD_Czech)</h2>
+
+<p>This relation is universal.</p>
+
+<p>17 nodes (0%) are attached to their parents as <code>csubjpass</code>.</p>
+
+<p>13 instances of <code>csubjpass</code> (76%) are left-to-right (parent precedes child).
+Average distance between parent and child is 5.29411764705882.</p>
+
+<p>The following 1 pairs of parts of speech are connected with <code>csubjpass</code>: <a href="">cs-pos/VERB</a>-<a href="">cs-pos/VERB</a> (17; 100% instances).</p>
+
+<pre><code class="language-conllu"># visual-style 8	bgColor:blue
+# visual-style 8	fgColor:white
+# visual-style 4	bgColor:blue
+# visual-style 4	fgColor:white
+# visual-style 4 8 csubjpass	color:blue
+1	Přitom	přitom	ADV	Db-------------	_	4	advmod	_	_
+2	však	však	CONJ	J^-------------	_	4	cc	_	_
+3	nebylo	být	AUX	VpNS---XR-NA---	Gender=Neut|Negative=Neg|Number=Sing|Tense=Past|VerbForm=Part|Voice=Act	4	auxpass	_	_
+4	uvedeno	uvést	VERB	VsNS---XX-AP---	Gender=Neut|Negative=Pos|Number=Sing|VerbForm=Part|Voice=Pass	0	root	_	SpaceAfter=No
+5	,	,	PUNCT	Z:-------------	_	8	punct	_	_
+6	jaké	jaký	PRON	P4IP1----------	Animacy=Inan|Case=Nom|Gender=Masc|Number=Plur|PronType=Int,Rel	8	dep	_	_
+7	jiné	jiný	ADJ	AAIP1----1A----	Animacy=Inan|Case=Nom|Degree=Pos|Gender=Masc|Negative=Pos|Number=Plur	8	dep	_	_
+8	mají	mít	VERB	VB-P---3P-AA---	Mood=Ind|Negative=Pos|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	4	csubjpass	_	_
+9	být	být	VERB	Vf--------A----	Negative=Pos|VerbForm=Inf	10	cop	_	_
+10	použity	použít	VERB	VsTP---XX-AP---	Animacy=Inan|Gender=Fem,Masc|Negative=Pos|Number=Plur|VerbForm=Part|Voice=Pass	8	xcomp	_	SpaceAfter=No
+11	.	.	PUNCT	Z:-------------	_	4	punct	_	_
+
+</code></pre>
 
 
 
@@ -112,6 +149,7 @@ csubjpass in other languages:
         root + 'lib/ext/jquery.min.js',
         root + 'lib/ext/jquery.svg.min.js',
         root + 'lib/ext/jquery.svgdom.min.js',
+        root + 'lib/ext/jquery.timeago.js',
         root + 'lib/ext/jquery-ui.min.js',
         root + 'lib/ext/waypoints.min.js',
         root + 'lib/ext/jquery.address.min.js',
@@ -143,11 +181,40 @@ csubjpass in other languages:
     ];
 
     var setupAccordions = function() {
-        // standard jQuery UI "accordion" element initialization
+	// preserve state in URL hash, following in part
+	// http://www.boduch.ca/2011/05/remembering-jquery-ui-accordion.html
+	var accordionChange = function(event, ui) {
+	    var context = ui.newHeader ? ui.newHeader.context : null;
+	    if (context) {
+		var languageCode = context.getAttribute('data-lc');
+		if (languageCode !== null) {
+		    window.location.hash = languageCode;
+		}
+	    }
+	}
+        // jQuery UI "accordion" element initialization
 	$(".jquery-ui-accordion").accordion({
 	    collapsible: true,
-	    active: false
+	    active: false,
+	    change: accordionChange
 	});
+	if ($(".jquery-ui-accordion").length) {
+	    var matches = window.location.hash.match(/^\#(.*)$/);
+	    console.log(matches);
+	    if (matches !== null) {
+		var languageCode = matches[1];
+		var tab = $('[data-lc="'+languageCode+'"]');
+		// the following will only work after accordion is initialized
+		var index = $('.jquery-ui-accordion div.ui-accordion-header').index(tab);
+		if (index !== -1) {
+		    $(".jquery-ui-accordion").accordion({ active: index });
+		}
+	    }
+	}
+    };
+
+    var setupTimeago = function() {
+        jQuery("time.timeago").timeago();
     };
 
     var setupTabs = function() {
@@ -171,6 +238,7 @@ csubjpass in other languages:
         // set up UI tabs on page
         setupTabs();
         setupAccordions();
+        setupTimeago();
 
         // mark current collection (filled in by Jekyll)
         Collections.listing['_current'] = 'cs-dep';
@@ -196,7 +264,7 @@ csubjpass in other languages:
 
       <div id="footer">
 	  <p class="footer-text">&copy; 2014 
-	    <a href="http://universaldependencies.github.io/docs/introduction.html#contributors" style="color:gray">Universal Dependencies contributors</a>. 
+	    <a href="http://universaldependencies.org/introduction.html#contributors" style="color:gray">Universal Dependencies contributors</a>. 
 	    Site powered by <a href="http://spyysalo.github.io/annodoc" style="color:gray">Annodoc</a> and <a href="http://brat.nlplab.org/" style="color:gray">brat</a></p>.
       </div>
     </div>

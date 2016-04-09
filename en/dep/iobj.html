@@ -11,6 +11,7 @@
     <link rel="stylesheet" type="text/css" href="../../css/style-vis.css"/>
     <link rel="stylesheet" type="text/css" href="../../css/hint.css"/>
     <script type="text/javascript" src="../../lib/ext/head.load.min.js"></script>
+    <script type="text/javascript" src="../../lib/ext/jquery.timeago.js.js"></script>
 <!--     <link rel="shortcut icon" href="favicon.ico"/> -->
 
 
@@ -20,8 +21,8 @@
 
       <div id="hp-header">
 	
-          <span class="header-text"><a href="http://universaldependencies.github.io/docs/#language-en">home</a></span>
-          <span class="header-text"><a href="http://universaldependencies.github.io/docs/en/dep">en/dep</a></span>
+          <span class="header-text"><a href="http://universaldependencies.org/#language-en">home</a></span>
+          <span class="header-text"><a href="http://universaldependencies.org/en/dep">en/dep</a></span>
           <span class="header-text"><a href="https://github.com/universaldependencies/docs/edit/pages-source/_en-dep/iobj.md" target="#">edit page</a></span>
           <span class="header-text"><a href="https://github.com/universaldependencies/docs/issues">issue tracker</a></span>
       </div>
@@ -49,6 +50,79 @@ iobj(gave, me)
 <!-- "automatic stats" -->
 
 
+
+
+
+
+
+<hr />
+
+<h2 id="treebank-statistics-udenglish">Treebank Statistics (UD_English)</h2>
+
+<p>This relation is universal.</p>
+
+<p>462 nodes (0%) are attached to their parents as <code>iobj</code>.</p>
+
+<p>462 instances of <code>iobj</code> (100%) are left-to-right (parent precedes child).
+Average distance between parent and child is 1.17532467532468.</p>
+
+<p>The following 6 pairs of parts of speech are connected with <code>iobj</code>: <a href="">en-pos/VERB</a>-<a href="">en-pos/PRON</a> (386; 84% instances), <a href="">en-pos/VERB</a>-<a href="">en-pos/NOUN</a> (49; 11% instances), <a href="">en-pos/VERB</a>-<a href="">en-pos/PROPN</a> (24; 5% instances), <a href="">en-pos/VERB</a>-<a href="">en-pos/ADJ</a> (1; 0% instances), <a href="">en-pos/VERB</a>-<a href="">en-pos/DET</a> (1; 0% instances), <a href="">en-pos/VERB</a>-<a href="">en-pos/NUM</a> (1; 0% instances).</p>
+
+<pre><code class="language-conllu"># visual-style 7	bgColor:blue
+# visual-style 7	fgColor:white
+# visual-style 6	bgColor:blue
+# visual-style 6	fgColor:white
+# visual-style 6 7 iobj	color:blue
+1	Catriona	Catriona	PROPN	NNP	Number=Sing	3	nsubj	_	_
+2	is	be	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	3	cop	_	_
+3	well	well	ADJ	JJ	Degree=Pos	0	root	_	_
+4	and	and	CONJ	CC	_	3	cc	_	_
+5	has	have	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	6	aux	_	_
+6	landed	land	VERB	VBN	Tense=Past|VerbForm=Part	3	conj	_	_
+7	herself	herself	PRON	PRP	Case=Acc|Gender=Fem|Number=Sing|Person=3|PronType=Prs|Reflex=Yes	6	iobj	_	_
+8	a	a	DET	DT	Definite=Ind|PronType=Art	11	det	_	_
+9	pretty	pretty	ADV	RB	_	10	advmod	_	_
+10	cool	cool	ADJ	JJ	Degree=Pos	11	amod	_	_
+11	job	job	NOUN	NN	Number=Sing	6	dobj	_	_
+12	in	in	ADP	IN	_	13	case	_	_
+13	PR	pr	NOUN	NN	Number=Sing	11	nmod	_	SpaceAfter=No
+14	.	.	PUNCT	.	_	3	punct	_	_
+
+</code></pre>
+
+<pre><code class="language-conllu"># visual-style 5	bgColor:blue
+# visual-style 5	fgColor:white
+# visual-style 3	bgColor:blue
+# visual-style 3	fgColor:white
+# visual-style 3 5 iobj	color:blue
+1	Do	do	AUX	VB	Mood=Imp|VerbForm=Fin	3	aux	_	SpaceAfter=No
+2	n't	not	PART	RB	_	3	neg	_	_
+3	give	give	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	_	_
+4	these	these	DET	DT	Number=Plur|PronType=Dem	5	det	_	_
+5	guys	guy	NOUN	NNS	Number=Plur	3	iobj	_	_
+6	a	a	DET	DT	Definite=Ind|PronType=Art	7	det	_	_
+7	penny	penny	NOUN	NN	Number=Sing	3	dobj	_	SpaceAfter=No
+8	.	.	PUNCT	.	_	3	punct	_	SpaceAfter=No
+
+</code></pre>
+
+<pre><code class="language-conllu"># visual-style 7	bgColor:blue
+# visual-style 7	fgColor:white
+# visual-style 6	bgColor:blue
+# visual-style 6	fgColor:white
+# visual-style 6 7 iobj	color:blue
+1	Is	be	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	9	cop	_	_
+2	that	that	DET	DT	Number=Sing|PronType=Dem	3	det	_	_
+3	Microwave	microwave	NOUN	NN	Number=Sing	9	nsubj	_	_
+4	that	that	DET	WDT	PronType=Rel	6	dobj	_	_
+5	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	6	nsubj	_	_
+6	gave	give	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	3	acl:relcl	_	_
+7	Dan	Dan	PROPN	NNP	Number=Sing	6	iobj	_	_
+8	really	really	ADV	RB	_	9	advmod	_	_
+9	expensive	expensive	ADJ	JJ	Degree=Pos	0	root	_	SpaceAfter=No
+10	?	?	PUNCT	.	_	9	punct	_	_
+
+</code></pre>
 
 
 
@@ -105,6 +179,7 @@ iobj in other languages:
         root + 'lib/ext/jquery.min.js',
         root + 'lib/ext/jquery.svg.min.js',
         root + 'lib/ext/jquery.svgdom.min.js',
+        root + 'lib/ext/jquery.timeago.js',
         root + 'lib/ext/jquery-ui.min.js',
         root + 'lib/ext/waypoints.min.js',
         root + 'lib/ext/jquery.address.min.js',
@@ -136,11 +211,40 @@ iobj in other languages:
     ];
 
     var setupAccordions = function() {
-        // standard jQuery UI "accordion" element initialization
+	// preserve state in URL hash, following in part
+	// http://www.boduch.ca/2011/05/remembering-jquery-ui-accordion.html
+	var accordionChange = function(event, ui) {
+	    var context = ui.newHeader ? ui.newHeader.context : null;
+	    if (context) {
+		var languageCode = context.getAttribute('data-lc');
+		if (languageCode !== null) {
+		    window.location.hash = languageCode;
+		}
+	    }
+	}
+        // jQuery UI "accordion" element initialization
 	$(".jquery-ui-accordion").accordion({
 	    collapsible: true,
-	    active: false
+	    active: false,
+	    change: accordionChange
 	});
+	if ($(".jquery-ui-accordion").length) {
+	    var matches = window.location.hash.match(/^\#(.*)$/);
+	    console.log(matches);
+	    if (matches !== null) {
+		var languageCode = matches[1];
+		var tab = $('[data-lc="'+languageCode+'"]');
+		// the following will only work after accordion is initialized
+		var index = $('.jquery-ui-accordion div.ui-accordion-header').index(tab);
+		if (index !== -1) {
+		    $(".jquery-ui-accordion").accordion({ active: index });
+		}
+	    }
+	}
+    };
+
+    var setupTimeago = function() {
+        jQuery("time.timeago").timeago();
     };
 
     var setupTabs = function() {
@@ -164,6 +268,7 @@ iobj in other languages:
         // set up UI tabs on page
         setupTabs();
         setupAccordions();
+        setupTimeago();
 
         // mark current collection (filled in by Jekyll)
         Collections.listing['_current'] = 'en-dep';
@@ -189,7 +294,7 @@ iobj in other languages:
 
       <div id="footer">
 	  <p class="footer-text">&copy; 2014 
-	    <a href="http://universaldependencies.github.io/docs/introduction.html#contributors" style="color:gray">Universal Dependencies contributors</a>. 
+	    <a href="http://universaldependencies.org/introduction.html#contributors" style="color:gray">Universal Dependencies contributors</a>. 
 	    Site powered by <a href="http://spyysalo.github.io/annodoc" style="color:gray">Annodoc</a> and <a href="http://brat.nlplab.org/" style="color:gray">brat</a></p>.
       </div>
     </div>

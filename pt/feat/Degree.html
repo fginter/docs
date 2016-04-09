@@ -11,6 +11,7 @@
     <link rel="stylesheet" type="text/css" href="../../css/style-vis.css"/>
     <link rel="stylesheet" type="text/css" href="../../css/hint.css"/>
     <script type="text/javascript" src="../../lib/ext/head.load.min.js"></script>
+    <script type="text/javascript" src="../../lib/ext/jquery.timeago.js.js"></script>
 <!--     <link rel="shortcut icon" href="favicon.ico"/> -->
 
 
@@ -20,8 +21,8 @@
 
       <div id="hp-header">
 	
-          <span class="header-text"><a href="http://universaldependencies.github.io/docs/#language-pt">home</a></span>
-          <span class="header-text"><a href="http://universaldependencies.github.io/docs/pt/feat">pt/feat</a></span>
+          <span class="header-text"><a href="http://universaldependencies.org/#language-pt">home</a></span>
+          <span class="header-text"><a href="http://universaldependencies.org/pt/feat">pt/feat</a></span>
           <span class="header-text"><a href="https://github.com/universaldependencies/docs/edit/pages-source/_pt-feat/Degree.md" target="#">edit page</a></span>
           <span class="header-text"><a href="https://github.com/universaldependencies/docs/issues">issue tracker</a></span>
       </div>
@@ -51,81 +52,90 @@ for <code>Degree</code>.</p>
 
 <hr />
 
-<h2 id="treebank-statistics">Treebank Statistics</h2>
+<h2 id="treebank-statistics-udportuguese">Treebank Statistics (UD_Portuguese)</h2>
 
 <p>This feature is universal.
 It occurs with 2 different values: <code>Cmp</code>, <code>Sup</code>.</p>
 
-<p>1376 tokens (1%) have a non-empty value of <code>Degree</code>.
-61 types (0%) occur at least once with a non-empty value of <code>Degree</code>.
-26 lemmas (0%) occur at least once with a non-empty value of <code>Degree</code>.
-The feature is used with 4 part-of-speech tags: <a href="">pt-pos/DET</a> (534; 0% instances), <a href="">pt-pos/ADV</a> (488; 0% instances), <a href="">pt-pos/ADJ</a> (353; 0% instances), <a href="">pt-pos/CONJ</a> (1; 0% instances).</p>
-
-<h3 id="det"><code>DET</code></h3>
-
-<p>534 <a href="">pt-pos/DET</a> tokens (2% of all <code>DET</code> tokens) have a non-empty value of <code>Degree</code>.</p>
-
-<p>The most frequent other feature values with which <code>DET</code> and <code>Degree</code> co-occurred: .</p>
-
-<p><code>DET</code> tokens may have the following values of <code>Degree</code>:</p>
-
-<ul>
-  <li><code>Cmp</code> (533; 100% of non-empty <code>Degree</code>): __</li>
-  <li><code>Sup</code> (1; 0% of non-empty <code>Degree</code>): __</li>
-</ul>
-
-<p><code>Degree</code> seems to be <strong>lexical feature</strong> of <code>DET</code>. 100% lemmas (10) occur only with one value of <code>Degree</code>.</p>
+<p>1377 tokens (1%) have a non-empty value of <code>Degree</code>.
+60 types (0%) occur at least once with a non-empty value of <code>Degree</code>.
+25 lemmas (0%) occur at least once with a non-empty value of <code>Degree</code>.
+The feature is used with 4 part-of-speech tags: <a href="">pt-pos/ADV</a> (489; 0% instances), <a href="">pt-pos/DET</a> (408; 0% instances), <a href="">pt-pos/ADJ</a> (353; 0% instances), <a href="">pt-pos/PRON</a> (127; 0% instances).</p>
 
 <h3 id="adv"><code>ADV</code></h3>
 
-<p>488 <a href="">pt-pos/ADV</a> tokens (5% of all <code>ADV</code> tokens) have a non-empty value of <code>Degree</code>.</p>
+<p>489 <a href="">pt-pos/ADV</a> tokens (5% of all <code>ADV</code> tokens) have a non-empty value of <code>Degree</code>.</p>
 
-<p>The most frequent other feature values with which <code>ADV</code> and <code>Degree</code> co-occurred: .</p>
+<p>The most frequent other feature values with which <code>ADV</code> and <code>Degree</code> co-occurred: <tt><a href="PronType.html">PronType</a>=Ind,Neg,Tot</tt> (466; 95%), <tt><a href="NumType.html">NumType</a>=Card</tt> (466; 95%).</p>
 
 <p><code>ADV</code> tokens may have the following values of <code>Degree</code>:</p>
 
 <ul>
-  <li><code>Cmp</code> (479; 98% of non-empty <code>Degree</code>): __</li>
-  <li><code>Sup</code> (9; 2% of non-empty <code>Degree</code>): __</li>
+  <li><code>Cmp</code> (480; 98% of non-empty <code>Degree</code>): <em>mais, menos, tão, tanto, melhor, assim, pior, superiormente</em></li>
+  <li><code>Sup</code> (9; 2% of non-empty <code>Degree</code>): <em>melhor, Pior</em></li>
+  <li><code>EMPTY</code> (8416): <em>não, como, já, também, ontem, mais, ainda, quando, só, depois</em></li>
 </ul>
 
 <table>
   <tr><th>Paradigm <i>melhor</i></th><th><tt>Cmp</tt></th><th><tt>Sup</tt></th></tr>
-  <tr><td><tt></tt></td><td><i>melhor</i></td><td><i>melhor</i></td></tr>
+  <tr><td><tt></tt></td><td><em>melhor</em></td><td><em>melhor</em></td></tr>
 </table>
 
-<p><code>Degree</code> seems to be <strong>lexical feature</strong> of <code>ADV</code>. 92% lemmas (12) occur only with one value of <code>Degree</code>.</p>
+<p><code>Degree</code> seems to be <strong>lexical feature</strong> of <code>ADV</code>. 92% lemmas (11) occur only with one value of <code>Degree</code>.</p>
+
+<h3 id="det"><code>DET</code></h3>
+
+<p>408 <a href="">pt-pos/DET</a> tokens (1% of all <code>DET</code> tokens) have a non-empty value of <code>Degree</code>.</p>
+
+<p>The most frequent other feature values with which <code>DET</code> and <code>Degree</code> co-occurred: <tt><a href="Definite.html">Definite</a>=EMPTY</tt> (408; 100%), <tt><a href="PronType.html">PronType</a>=EMPTY</tt> (319; 78%), <tt><a href="Number.html">Number</a>=Sing</tt> (220; 54%), <tt><a href="Gender.html">Gender</a>=Masc</tt> (219; 54%).</p>
+
+<p><code>DET</code> tokens may have the following values of <code>Degree</code>:</p>
+
+<ul>
+  <li><code>Cmp</code> (407; 100% of non-empty <code>Degree</code>): <em>outros, outras, outro, outra, mais, mesma, mesmo, menos, tal, tais</em></li>
+  <li><code>Sup</code> (1; 0% of non-empty <code>Degree</code>): <em>muitíssimo</em></li>
+  <li><code>EMPTY</code> (33036): <em>o, a, os, as, um, uma, sua, seu, este, esta</em></li>
+</ul>
 
 <h3 id="adj"><code>ADJ</code></h3>
 
 <p>353 <a href="">pt-pos/ADJ</a> tokens (3% of all <code>ADJ</code> tokens) have a non-empty value of <code>Degree</code>.</p>
 
-<p>The most frequent other feature values with which <code>ADJ</code> and <code>Degree</code> co-occurred: .</p>
+<p>The most frequent other feature values with which <code>ADJ</code> and <code>Degree</code> co-occurred: <tt><a href="Number.html">Number</a>=Sing</tt> (267; 76%), <tt><a href="Gender.html">Gender</a>=Masc</tt> (185; 52%).</p>
 
 <p><code>ADJ</code> tokens may have the following values of <code>Degree</code>:</p>
 
 <ul>
-  <li><code>Cmp</code> (203; 58% of non-empty <code>Degree</code>): __</li>
-  <li><code>Sup</code> (150; 42% of non-empty <code>Degree</code>): __</li>
+  <li><code>Cmp</code> (203; 58% of non-empty <code>Degree</code>): <em>maior, maiores, melhor, menor, menores, melhores, superiores, superior, inferior, inferiores</em></li>
+  <li><code>Sup</code> (150; 42% of non-empty <code>Degree</code>): <em>melhor, principal, principais, melhores, pior, mínimo, ótimo, superior, piores, péssimo</em></li>
+  <li><code>EMPTY</code> (10523): <em>grande, primeiro, novo, primeira, nova, grandes, último, nacional, última, segundo</em></li>
 </ul>
 
 <table>
   <tr><th>Paradigm <i>grande</i></th><th><tt>Cmp</tt></th><th><tt>Sup</tt></th></tr>
-  <tr><td><tt><a href="Gender.html">Gender</a>=Masc|<a href="Number.html">Number</a>=Sing</tt></td><td><i>maior</i></td><td><i>máximo</i></td></tr>
-  <tr><td><tt><a href="Gender.html">Gender</a>=Masc|<a href="Number.html">Number</a>=Plur</tt></td><td><i>maiores</i></td><td><i>máximos</i></td></tr>
-  <tr><td><tt><a href="Gender.html">Gender</a>=Fem|<a href="Number.html">Number</a>=Sing</tt></td><td><i>maior</i></td><td><i>máxima</i></td></tr>
-  <tr><td><tt><a href="Gender.html">Gender</a>=Fem|<a href="Number.html">Number</a>=Plur</tt></td><td><i>maiores</i></td><td></td></tr>
+  <tr><td><tt><a href="Gender.html">Gender</a>=Masc|<a href="Number.html">Number</a>=Sing</tt></td><td><em>maior</em></td><td><em>máximo</em></td></tr>
+  <tr><td><tt><a href="Gender.html">Gender</a>=Masc|<a href="Number.html">Number</a>=Plur</tt></td><td><em>maiores</em></td><td><em>máximos</em></td></tr>
+  <tr><td><tt><a href="Gender.html">Gender</a>=Fem|<a href="Number.html">Number</a>=Sing</tt></td><td><em>maior</em></td><td><em>máxima</em></td></tr>
+  <tr><td><tt><a href="Gender.html">Gender</a>=Fem|<a href="Number.html">Number</a>=Plur</tt></td><td><em>maiores</em></td><td></td></tr>
 </table>
 
-<h3 id="conj"><code>CONJ</code></h3>
+<h3 id="pron"><code>PRON</code></h3>
 
-<p>1 <a href="">pt-pos/CONJ</a> tokens (0% of all <code>CONJ</code> tokens) have a non-empty value of <code>Degree</code>.</p>
+<p>127 <a href="">pt-pos/PRON</a> tokens (2% of all <code>PRON</code> tokens) have a non-empty value of <code>Degree</code>.</p>
 
-<p><code>CONJ</code> tokens may have the following values of <code>Degree</code>:</p>
+<p>The most frequent other feature values with which <code>PRON</code> and <code>Degree</code> co-occurred: <tt><a href="Person.html">Person</a>=EMPTY</tt> (127; 100%), <tt><a href="Reflex.html">Reflex</a>=EMPTY</tt> (127; 100%), <tt><a href="Case.html">Case</a>=EMPTY</tt> (127; 100%), <tt><a href="PronType.html">PronType</a>=EMPTY</tt> (91; 72%), <tt><a href="Gender.html">Gender</a>=Masc</tt> (76; 60%).</p>
+
+<p><code>PRON</code> tokens may have the following values of <code>Degree</code>:</p>
 
 <ul>
-  <li><code>Cmp</code> (1; 100% of non-empty <code>Degree</code>): __</li>
+  <li><code>Cmp</code> (127; 100% of non-empty <code>Degree</code>): <em>mais, outros, mesmo, outras, outro, outra, mesma, menos, tal, tanto</em></li>
+  <li><code>EMPTY</code> (7501): <em>que, se, a, o, ele, o_que, os, isso, quem, lhe</em></li>
 </ul>
+
+<h2 id="relations-with-agreement-in-degree">Relations with Agreement in <code>Degree</code></h2>
+
+<p>The 10 most frequent relations where parent and child node agree in <code>Degree</code>:
+<tt>PRON –[<a href="../dep/conj.html">conj</a>]–&gt; ADJ</tt> (2; 67%).</p>
 
 
 
@@ -184,6 +194,7 @@ Degree in other languages:
         root + 'lib/ext/jquery.min.js',
         root + 'lib/ext/jquery.svg.min.js',
         root + 'lib/ext/jquery.svgdom.min.js',
+        root + 'lib/ext/jquery.timeago.js',
         root + 'lib/ext/jquery-ui.min.js',
         root + 'lib/ext/waypoints.min.js',
         root + 'lib/ext/jquery.address.min.js',
@@ -215,11 +226,40 @@ Degree in other languages:
     ];
 
     var setupAccordions = function() {
-        // standard jQuery UI "accordion" element initialization
+	// preserve state in URL hash, following in part
+	// http://www.boduch.ca/2011/05/remembering-jquery-ui-accordion.html
+	var accordionChange = function(event, ui) {
+	    var context = ui.newHeader ? ui.newHeader.context : null;
+	    if (context) {
+		var languageCode = context.getAttribute('data-lc');
+		if (languageCode !== null) {
+		    window.location.hash = languageCode;
+		}
+	    }
+	}
+        // jQuery UI "accordion" element initialization
 	$(".jquery-ui-accordion").accordion({
 	    collapsible: true,
-	    active: false
+	    active: false,
+	    change: accordionChange
 	});
+	if ($(".jquery-ui-accordion").length) {
+	    var matches = window.location.hash.match(/^\#(.*)$/);
+	    console.log(matches);
+	    if (matches !== null) {
+		var languageCode = matches[1];
+		var tab = $('[data-lc="'+languageCode+'"]');
+		// the following will only work after accordion is initialized
+		var index = $('.jquery-ui-accordion div.ui-accordion-header').index(tab);
+		if (index !== -1) {
+		    $(".jquery-ui-accordion").accordion({ active: index });
+		}
+	    }
+	}
+    };
+
+    var setupTimeago = function() {
+        jQuery("time.timeago").timeago();
     };
 
     var setupTabs = function() {
@@ -243,6 +283,7 @@ Degree in other languages:
         // set up UI tabs on page
         setupTabs();
         setupAccordions();
+        setupTimeago();
 
         // mark current collection (filled in by Jekyll)
         Collections.listing['_current'] = 'pt-feat';
@@ -268,7 +309,7 @@ Degree in other languages:
 
       <div id="footer">
 	  <p class="footer-text">&copy; 2014 
-	    <a href="http://universaldependencies.github.io/docs/introduction.html#contributors" style="color:gray">Universal Dependencies contributors</a>. 
+	    <a href="http://universaldependencies.org/introduction.html#contributors" style="color:gray">Universal Dependencies contributors</a>. 
 	    Site powered by <a href="http://spyysalo.github.io/annodoc" style="color:gray">Annodoc</a> and <a href="http://brat.nlplab.org/" style="color:gray">brat</a></p>.
       </div>
     </div>

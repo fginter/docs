@@ -11,6 +11,7 @@
     <link rel="stylesheet" type="text/css" href="../../css/style-vis.css"/>
     <link rel="stylesheet" type="text/css" href="../../css/hint.css"/>
     <script type="text/javascript" src="../../lib/ext/head.load.min.js"></script>
+    <script type="text/javascript" src="../../lib/ext/jquery.timeago.js.js"></script>
 <!--     <link rel="shortcut icon" href="favicon.ico"/> -->
 
 
@@ -20,8 +21,8 @@
 
       <div id="hp-header">
 	
-          <span class="header-text"><a href="http://universaldependencies.github.io/docs/#language-ro">home</a></span>
-          <span class="header-text"><a href="http://universaldependencies.github.io/docs/ro/dep">ro/dep</a></span>
+          <span class="header-text"><a href="http://universaldependencies.org/#language-ro">home</a></span>
+          <span class="header-text"><a href="http://universaldependencies.org/ro/dep">ro/dep</a></span>
           <span class="header-text"><a href="https://github.com/universaldependencies/docs/edit/pages-source/_ro-dep/aux_.md" target="#">edit page</a></span>
           <span class="header-text"><a href="https://github.com/universaldependencies/docs/issues">issue tracker</a></span>
       </div>
@@ -50,6 +51,85 @@ aux(vrea, Aș)
 <!-- "automatic stats" -->
 
 
+
+
+
+
+
+<hr />
+
+<h2 id="treebank-statistics-udromanian">Treebank Statistics (UD_Romanian)</h2>
+
+<p>This relation is universal.</p>
+
+<p>374 nodes (3%) are attached to their parents as <code>aux</code>.</p>
+
+<p>371 instances of <code>aux</code> (99%) are right-to-left (child precedes parent).
+Average distance between parent and child is 1.27807486631016.</p>
+
+<p>The following 9 pairs of parts of speech are connected with <code>aux</code>: <a href="">ro-pos/VERB</a>-<a href="">ro-pos/AUX</a> (297; 79% instances), <a href="">ro-pos/VERB</a>-<a href="">ro-pos/VERB</a> (50; 13% instances), <a href="">ro-pos/NOUN</a>-<a href="">ro-pos/AUX</a> (10; 3% instances), <a href="">ro-pos/ADJ</a>-<a href="">ro-pos/AUX</a> (6; 2% instances), <a href="">ro-pos/AUX</a>-<a href="">ro-pos/VERB</a> (4; 1% instances), <a href="">ro-pos/ADJ</a>-<a href="">ro-pos/VERB</a> (2; 1% instances), <a href="">ro-pos/AUX</a>-<a href="">ro-pos/AUX</a> (2; 1% instances), <a href="">ro-pos/VERB</a>-<a href="">ro-pos/PART</a> (2; 1% instances), <a href="">ro-pos/NOUN</a>-<a href="">ro-pos/VERB</a> (1; 0% instances).</p>
+
+<pre><code class="language-conllu"># visual-style 5	bgColor:blue
+# visual-style 5	fgColor:white
+# visual-style 6	bgColor:blue
+# visual-style 6	fgColor:white
+# visual-style 6 5 aux	color:blue
+1	Așa	așa	ADV	Rgp	Degree=Pos	2	advmod	_	_
+2	bine	bine	ADV	Rgp	Degree=Pos	11	advmod	_	_
+3	ce	ce	PRON	Pw3--r	Case=Nom|Person=3|PronType=Int,Rel	6	dobj	_	_
+4	v	v	PRON	Pp2-pa--------w	Case=Acc|Number=Plur|Person=2|PronType=Prs|Strength=Weak	6	iobj	_	_
+5	-am	avea	AUX	Vaip1p	Mood=Ind|Number=Plur|Person=1|Tense=Pres|VerbForm=Fin	6	aux	_	_
+6	tălmăcit	tălmăci	VERB	Vmp--sm	Gender=Masc|Number=Sing|VerbForm=Part	2	advcl	_	_
+7	,	,	PUNCT	COMMA	_	2	punct	_	_
+8	și	și	ADV	Rgp	Degree=Pos	10	advmod	_	_
+9	un	un	DET	Timsr	Case=Nom|Gender=Masc|Number=Sing|PronType=Ind	10	det	_	_
+10	copil	copil	NOUN	Ncmsrn	Case=Nom|Definite=Ind|Gender=Masc|Number=Sing	13	nsubj	_	_
+11	putea	putea	VERB	Vmii3s	Mood=Ind|Number=Sing|Person=3|Tense=Imp|VerbForm=Fin	0	root	_	_
+12	să	să	PART	Qs	Mood=Sub	13	mark	_	_
+13	înțeleagă	înțelege	VERB	Vmsp3	Mood=Sub|Person=3|Tense=Pres|VerbForm=Fin	11	csubj	_	_
+14	.	.	PUNCT	PERIOD	_	11	punct	_	_
+
+</code></pre>
+
+<pre><code class="language-conllu"># visual-style 3	bgColor:blue
+# visual-style 3	fgColor:white
+# visual-style 4	bgColor:blue
+# visual-style 4	fgColor:white
+# visual-style 4 3 aux	color:blue
+1	Nu	nu	PART	Qz	Negative=Neg	3	neg	_	_
+2	se	sine	PRON	Px3--a--------w	Case=Acc|Person=3|PronType=Prs|Reflex=Yes|Strength=Weak	4	expl:pv	_	_
+3	putea	putea	VERB	Vmii3s	Mood=Ind|Number=Sing|Person=3|Tense=Imp|VerbForm=Fin	4	aux	_	_
+4	hotărî	hotărî	VERB	Vmnp	Tense=Pres|VerbForm=Inf	0	root	_	_
+5	să	să	PART	Qs	Mood=Sub	7	mark	_	_
+6	-i	el	PRON	Pp3-sd--------w	Case=Dat|Number=Sing|Person=3|PronType=Prs|Strength=Weak	7	iobj	_	_
+7	cumpere	cumpăra	VERB	Vmsp3	Mood=Sub|Person=3|Tense=Pres|VerbForm=Fin	4	ccomp	_	_
+8	nimic	nimic	PRON	Pz3msr	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Neg	7	dobj	_	_
+9	.	.	PUNCT	PERIOD	_	4	punct	_	_
+
+</code></pre>
+
+<pre><code class="language-conllu"># visual-style 4	bgColor:blue
+# visual-style 4	fgColor:white
+# visual-style 3	bgColor:blue
+# visual-style 3	fgColor:white
+# visual-style 3 4 aux	color:blue
+1	O	O	DET	Tifsr	Case=Nom|Gender=Fem|Number=Sing|PronType=Ind	3	det	_	_
+2	altă	altă	DET	Di3fsr---e	Case=Nom|Gender=Fem|Number=Sing|Person=3|Position=Prenom|PronType=Ind	3	amod	_	_
+3	explicație	explicație	NOUN	Ncfsrn	Case=Nom|Definite=Ind|Gender=Fem|Number=Sing	0	root	_	_
+4	ar	ar	AUX	Va--3	Person=3	3	aux	_	_
+5	fi	fi	AUX	Vanp	Tense=Pres|VerbForm=Inf	3	auxpass	_	_
+6	că	că	SCONJ	Csssp	Negative=Pos	8	mark	_	_
+7	numele	numele	NOUN	Ncmsry	Case=Nom|Definite=Def|Gender=Masc|Number=Sing	8	nsubj	_	_
+8	are	are	VERB	Vmsp3	Mood=Sub|Person=3|Tense=Pres|VerbForm=Fin	3	nsubj	_	_
+9	originea	originea	NOUN	Ncfsry	Case=Nom|Definite=Def|Gender=Fem|Number=Sing	8	dobj	_	_
+10	în	în	ADP	Spsa	AdpType=Prep|Case=Acc	11	case	_	_
+11	tribul	tribul	NOUN	Ncmsry	Case=Nom|Definite=Def|Gender=Masc|Number=Sing	8	iobj	_	_
+12	alanic	alanic	ADJ	Afpms-n	Definite=Ind|Degree=Pos|Gender=Masc|Number=Sing	11	amod	_	_
+13	al	al	DET	Tsms	Gender=Masc|Number=Sing|Poss=Yes|PronType=Prs	14	det	_	_
+14	jassilor	jassilor	NOUN	Ncmpoy	Case=Gen|Definite=Def|Gender=Masc|Number=Plur	11	nmod	_	_
+15	.	.	PUNCT	PERIOD	_	3	punct	_	_
+
+</code></pre>
 
 
 
@@ -108,6 +188,7 @@ aux in other languages:
         root + 'lib/ext/jquery.min.js',
         root + 'lib/ext/jquery.svg.min.js',
         root + 'lib/ext/jquery.svgdom.min.js',
+        root + 'lib/ext/jquery.timeago.js',
         root + 'lib/ext/jquery-ui.min.js',
         root + 'lib/ext/waypoints.min.js',
         root + 'lib/ext/jquery.address.min.js',
@@ -139,11 +220,40 @@ aux in other languages:
     ];
 
     var setupAccordions = function() {
-        // standard jQuery UI "accordion" element initialization
+	// preserve state in URL hash, following in part
+	// http://www.boduch.ca/2011/05/remembering-jquery-ui-accordion.html
+	var accordionChange = function(event, ui) {
+	    var context = ui.newHeader ? ui.newHeader.context : null;
+	    if (context) {
+		var languageCode = context.getAttribute('data-lc');
+		if (languageCode !== null) {
+		    window.location.hash = languageCode;
+		}
+	    }
+	}
+        // jQuery UI "accordion" element initialization
 	$(".jquery-ui-accordion").accordion({
 	    collapsible: true,
-	    active: false
+	    active: false,
+	    change: accordionChange
 	});
+	if ($(".jquery-ui-accordion").length) {
+	    var matches = window.location.hash.match(/^\#(.*)$/);
+	    console.log(matches);
+	    if (matches !== null) {
+		var languageCode = matches[1];
+		var tab = $('[data-lc="'+languageCode+'"]');
+		// the following will only work after accordion is initialized
+		var index = $('.jquery-ui-accordion div.ui-accordion-header').index(tab);
+		if (index !== -1) {
+		    $(".jquery-ui-accordion").accordion({ active: index });
+		}
+	    }
+	}
+    };
+
+    var setupTimeago = function() {
+        jQuery("time.timeago").timeago();
     };
 
     var setupTabs = function() {
@@ -167,6 +277,7 @@ aux in other languages:
         // set up UI tabs on page
         setupTabs();
         setupAccordions();
+        setupTimeago();
 
         // mark current collection (filled in by Jekyll)
         Collections.listing['_current'] = 'ro-dep';
@@ -192,7 +303,7 @@ aux in other languages:
 
       <div id="footer">
 	  <p class="footer-text">&copy; 2014 
-	    <a href="http://universaldependencies.github.io/docs/introduction.html#contributors" style="color:gray">Universal Dependencies contributors</a>. 
+	    <a href="http://universaldependencies.org/introduction.html#contributors" style="color:gray">Universal Dependencies contributors</a>. 
 	    Site powered by <a href="http://spyysalo.github.io/annodoc" style="color:gray">Annodoc</a> and <a href="http://brat.nlplab.org/" style="color:gray">brat</a></p>.
       </div>
     </div>

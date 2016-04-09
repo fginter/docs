@@ -11,6 +11,7 @@
     <link rel="stylesheet" type="text/css" href="../../css/style-vis.css"/>
     <link rel="stylesheet" type="text/css" href="../../css/hint.css"/>
     <script type="text/javascript" src="../../lib/ext/head.load.min.js"></script>
+    <script type="text/javascript" src="../../lib/ext/jquery.timeago.js.js"></script>
 <!--     <link rel="shortcut icon" href="favicon.ico"/> -->
 
 
@@ -20,8 +21,8 @@
 
       <div id="hp-header">
 	
-          <span class="header-text"><a href="http://universaldependencies.github.io/docs/#language-de">home</a></span>
-          <span class="header-text"><a href="http://universaldependencies.github.io/docs/de/dep">de/dep</a></span>
+          <span class="header-text"><a href="http://universaldependencies.org/#language-de">home</a></span>
+          <span class="header-text"><a href="http://universaldependencies.org/de/dep">de/dep</a></span>
           <span class="header-text"><a href="https://github.com/universaldependencies/docs/edit/pages-source/_de-dep/ccomp.md" target="#">edit page</a></span>
           <span class="header-text"><a href="https://github.com/universaldependencies/docs/issues">issue tracker</a></span>
       </div>
@@ -57,6 +58,76 @@ ccomp(anschauen, gemacht)
 <!-- "automatic stats" -->
 
 
+
+
+
+
+
+<hr />
+
+<h2 id="treebank-statistics-udgerman">Treebank Statistics (UD_German)</h2>
+
+<p>This relation is universal.</p>
+
+<p>882 nodes (0%) are attached to their parents as <code>ccomp</code>.</p>
+
+<p>682 instances of <code>ccomp</code> (77%) are left-to-right (parent precedes child).
+Average distance between parent and child is 10.3174603174603.</p>
+
+<p>The following 25 pairs of parts of speech are connected with <code>ccomp</code>: <a href="">de-pos/VERB</a>-<a href="">de-pos/VERB</a> (587; 67% instances), <a href="">de-pos/VERB</a>-<a href="">de-pos/ADJ</a> (85; 10% instances), <a href="">de-pos/NOUN</a>-<a href="">de-pos/VERB</a> (70; 8% instances), <a href="">de-pos/VERB</a>-<a href="">de-pos/NOUN</a> (52; 6% instances), <a href="">de-pos/ADJ</a>-<a href="">de-pos/VERB</a> (38; 4% instances), <a href="">de-pos/NOUN</a>-<a href="">de-pos/ADJ</a> (14; 2% instances), <a href="">de-pos/VERB</a>-<a href="">de-pos/PRON</a> (5; 1% instances), <a href="">de-pos/ADV</a>-<a href="">de-pos/VERB</a> (4; 0% instances), <a href="">de-pos/PRON</a>-<a href="">de-pos/VERB</a> (4; 0% instances), <a href="">de-pos/VERB</a>-<a href="">de-pos/ADP</a> (4; 0% instances), <a href="">de-pos/ADJ</a>-<a href="">de-pos/ADJ</a> (3; 0% instances), <a href="">de-pos/NOUN</a>-<a href="">de-pos/NOUN</a> (2; 0% instances), <a href="">de-pos/PROPN</a>-<a href="">de-pos/VERB</a> (2; 0% instances), <a href="">de-pos/ADJ</a>-<a href="">de-pos/ADP</a> (1; 0% instances), <a href="">de-pos/ADJ</a>-<a href="">de-pos/ADV</a> (1; 0% instances), <a href="">de-pos/ADJ</a>-<a href="">de-pos/NOUN</a> (1; 0% instances), <a href="">de-pos/ADV</a>-<a href="">de-pos/ADJ</a> (1; 0% instances), <a href="">de-pos/NOUN</a>-<a href="">de-pos/ADP</a> (1; 0% instances), <a href="">de-pos/PART</a>-<a href="">de-pos/VERB</a> (1; 0% instances), <a href="">de-pos/PROPN</a>-<a href="">de-pos/PROPN</a> (1; 0% instances), <a href="">de-pos/VERB</a>-<a href="">de-pos/ADV</a> (1; 0% instances), <a href="">de-pos/VERB</a>-<a href="">de-pos/AUX</a> (1; 0% instances), <a href="">de-pos/VERB</a>-<a href="">de-pos/PROPN</a> (1; 0% instances), <a href="">de-pos/VERB</a>-<a href="">de-pos/X</a> (1; 0% instances), <a href="">de-pos/X</a>-<a href="">de-pos/VERB</a> (1; 0% instances).</p>
+
+<pre><code class="language-conllu"># visual-style 6	bgColor:blue
+# visual-style 6	fgColor:white
+# visual-style 3	bgColor:blue
+# visual-style 3	fgColor:white
+# visual-style 3 6 ccomp	color:blue
+1	Dieses	_	PRON	_	_	2	det	_	_
+2	Zentrum	_	NOUN	_	_	3	nsubj	_	_
+3	hält	_	VERB	_	_	0	root	_	_
+4	was	_	PRON	_	_	6	dobj	_	_
+5	es	_	PRON	_	_	6	nsubj	_	_
+6	verspricht	_	VERB	_	_	3	ccomp	_	_
+7	.	_	PUNCT	_	_	3	punct	_	_
+
+</code></pre>
+
+<pre><code class="language-conllu"># visual-style 8	bgColor:blue
+# visual-style 8	fgColor:white
+# visual-style 4	bgColor:blue
+# visual-style 4	fgColor:white
+# visual-style 4 8 ccomp	color:blue
+1	Für	_	ADP	_	_	3	case	_	_
+2	die	_	DET	_	_	3	det	_	_
+3	Werkstatt	_	NOUN	_	_	4	nmod	_	_
+4	spricht	_	VERB	_	_	0	root	_	_
+5	dass	_	SCONJ	_	_	8	mark	_	_
+6	sie	_	PRON	_	_	8	nsubj	_	_
+7	sehr	_	ADV	_	_	8	advmod	_	_
+8	günstig	_	ADJ	_	_	4	ccomp	_	_
+9	ist	_	VERB	_	_	8	cop	_	_
+10	.	_	PUNCT	_	_	4	punct	_	_
+
+</code></pre>
+
+<pre><code class="language-conllu"># visual-style 10	bgColor:blue
+# visual-style 10	fgColor:white
+# visual-style 4	bgColor:blue
+# visual-style 4	fgColor:white
+# visual-style 4 10 ccomp	color:blue
+1	Nur	_	ADV	_	_	4	advmod	_	_
+2	mit	_	ADP	_	_	4	case	_	_
+3	dem	_	DET	_	_	4	det	_	_
+4	Unterschied	_	NOUN	_	_	0	root	_	_
+5	,	_	PUNCT	_	_	4	punct	_	_
+6	dass	_	SCONJ	_	_	10	mark	_	_
+7	die	_	PRON	_	_	10	nsubj	_	_
+8	kaum	_	ADV	_	_	10	advmod	_	_
+9	zu	_	PART	_	_	10	aux	_	_
+10	nutzen	_	VERB	_	_	4	ccomp	_	_
+11	waren	_	AUX	_	_	10	aux	_	_
+12	.	_	PUNCT	_	_	4	punct	_	_
+
+</code></pre>
 
 
 
@@ -115,6 +186,7 @@ ccomp in other languages:
         root + 'lib/ext/jquery.min.js',
         root + 'lib/ext/jquery.svg.min.js',
         root + 'lib/ext/jquery.svgdom.min.js',
+        root + 'lib/ext/jquery.timeago.js',
         root + 'lib/ext/jquery-ui.min.js',
         root + 'lib/ext/waypoints.min.js',
         root + 'lib/ext/jquery.address.min.js',
@@ -146,11 +218,40 @@ ccomp in other languages:
     ];
 
     var setupAccordions = function() {
-        // standard jQuery UI "accordion" element initialization
+	// preserve state in URL hash, following in part
+	// http://www.boduch.ca/2011/05/remembering-jquery-ui-accordion.html
+	var accordionChange = function(event, ui) {
+	    var context = ui.newHeader ? ui.newHeader.context : null;
+	    if (context) {
+		var languageCode = context.getAttribute('data-lc');
+		if (languageCode !== null) {
+		    window.location.hash = languageCode;
+		}
+	    }
+	}
+        // jQuery UI "accordion" element initialization
 	$(".jquery-ui-accordion").accordion({
 	    collapsible: true,
-	    active: false
+	    active: false,
+	    change: accordionChange
 	});
+	if ($(".jquery-ui-accordion").length) {
+	    var matches = window.location.hash.match(/^\#(.*)$/);
+	    console.log(matches);
+	    if (matches !== null) {
+		var languageCode = matches[1];
+		var tab = $('[data-lc="'+languageCode+'"]');
+		// the following will only work after accordion is initialized
+		var index = $('.jquery-ui-accordion div.ui-accordion-header').index(tab);
+		if (index !== -1) {
+		    $(".jquery-ui-accordion").accordion({ active: index });
+		}
+	    }
+	}
+    };
+
+    var setupTimeago = function() {
+        jQuery("time.timeago").timeago();
     };
 
     var setupTabs = function() {
@@ -174,6 +275,7 @@ ccomp in other languages:
         // set up UI tabs on page
         setupTabs();
         setupAccordions();
+        setupTimeago();
 
         // mark current collection (filled in by Jekyll)
         Collections.listing['_current'] = 'de-dep';
@@ -199,7 +301,7 @@ ccomp in other languages:
 
       <div id="footer">
 	  <p class="footer-text">&copy; 2014 
-	    <a href="http://universaldependencies.github.io/docs/introduction.html#contributors" style="color:gray">Universal Dependencies contributors</a>. 
+	    <a href="http://universaldependencies.org/introduction.html#contributors" style="color:gray">Universal Dependencies contributors</a>. 
 	    Site powered by <a href="http://spyysalo.github.io/annodoc" style="color:gray">Annodoc</a> and <a href="http://brat.nlplab.org/" style="color:gray">brat</a></p>.
       </div>
     </div>

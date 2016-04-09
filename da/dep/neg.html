@@ -11,6 +11,7 @@
     <link rel="stylesheet" type="text/css" href="../../css/style-vis.css"/>
     <link rel="stylesheet" type="text/css" href="../../css/hint.css"/>
     <script type="text/javascript" src="../../lib/ext/head.load.min.js"></script>
+    <script type="text/javascript" src="../../lib/ext/jquery.timeago.js.js"></script>
 <!--     <link rel="shortcut icon" href="favicon.ico"/> -->
 
 
@@ -20,8 +21,8 @@
 
       <div id="hp-header">
 	
-          <span class="header-text"><a href="http://universaldependencies.github.io/docs/#language-da">home</a></span>
-          <span class="header-text"><a href="http://universaldependencies.github.io/docs/da/dep">da/dep</a></span>
+          <span class="header-text"><a href="http://universaldependencies.org/#language-da">home</a></span>
+          <span class="header-text"><a href="http://universaldependencies.org/da/dep">da/dep</a></span>
           <span class="header-text"><a href="https://github.com/universaldependencies/docs/edit/pages-source/_da-dep/neg.md" target="#">edit page</a></span>
           <span class="header-text"><a href="https://github.com/universaldependencies/docs/issues">issue tracker</a></span>
       </div>
@@ -45,6 +46,72 @@ for <code>neg</code>.</p>
 <!-- "automatic stats" -->
 
 
+
+
+
+
+
+<hr />
+
+<h2 id="treebank-statistics-uddanish">Treebank Statistics (UD_Danish)</h2>
+
+<p>This relation is universal.</p>
+
+<p>874 nodes (1%) are attached to their parents as <code>neg</code>.</p>
+
+<p>628 instances of <code>neg</code> (72%) are right-to-left (child precedes parent).
+Average distance between parent and child is 2.09153318077803.</p>
+
+<p>The following 10 pairs of parts of speech are connected with <code>neg</code>: <a href="">da-pos/VERB</a>-<a href="">da-pos/ADV</a> (626; 72% instances), <a href="">da-pos/ADJ</a>-<a href="">da-pos/ADV</a> (95; 11% instances), <a href="">da-pos/NOUN</a>-<a href="">da-pos/ADV</a> (57; 7% instances), <a href="">da-pos/ADV</a>-<a href="">da-pos/ADV</a> (43; 5% instances), <a href="">da-pos/PRON</a>-<a href="">da-pos/ADV</a> (17; 2% instances), <a href="">da-pos/CONJ</a>-<a href="">da-pos/ADV</a> (12; 1% instances), <a href="">da-pos/PART</a>-<a href="">da-pos/ADV</a> (11; 1% instances), <a href="">da-pos/PROPN</a>-<a href="">da-pos/ADV</a> (5; 1% instances), <a href="">da-pos/ADP</a>-<a href="">da-pos/ADV</a> (4; 0% instances), <a href="">da-pos/AUX</a>-<a href="">da-pos/ADV</a> (4; 0% instances).</p>
+
+<pre><code class="language-conllu"># visual-style 5	bgColor:blue
+# visual-style 5	fgColor:white
+# visual-style 6	bgColor:blue
+# visual-style 6	fgColor:white
+# visual-style 6 5 neg	color:blue
+1	Men	men	CONJ	_	_	6	discourse	_	_
+2	man	man	PRON	_	Case=Nom|Gender=Com|PronType=Ind	6	nsubj	_	_
+3	ka'	kunne	AUX	_	Mood=Ind|Tense=Pres|VerbForm=Fin|Voice=Act	6	aux	_	_
+4	sgu'	sgu'	ADV	_	_	6	advmod	_	_
+5	ikke	ikke	ADV	_	_	6	neg	_	_
+6	undvære	undvære	VERB	_	VerbForm=Inf|Voice=Act	0	root	_	_
+7	dem	de	PRON	_	Case=Acc|Number=Plur|Person=3|PronType=Prs	6	dobj	_	_
+8	.	.	PUNCT	_	_	6	punct	_	_
+
+</code></pre>
+
+<pre><code class="language-conllu"># visual-style 4	bgColor:blue
+# visual-style 4	fgColor:white
+# visual-style 5	bgColor:blue
+# visual-style 5	fgColor:white
+# visual-style 5 4 neg	color:blue
+1	Men	men	CONJ	_	_	5	discourse	_	_
+2	det	det	PRON	_	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Prs	5	nsubj	_	_
+3	var	være	AUX	_	Mood=Ind|Tense=Past|VerbForm=Fin|Voice=Act	5	cop	_	_
+4	ikke	ikke	ADV	_	_	5	neg	_	_
+5	muligt	mulig	ADJ	_	Definite=Ind|Degree=Pos|Gender=Neut|Number=Sing	0	root	_	_
+6	.	.	PUNCT	_	_	5	punct	_	_
+
+</code></pre>
+
+<pre><code class="language-conllu"># visual-style 1	bgColor:blue
+# visual-style 1	fgColor:white
+# visual-style 3	bgColor:blue
+# visual-style 3	fgColor:white
+# visual-style 3 1 neg	color:blue
+1	Ikke	ikke	ADV	_	_	3	neg	_	_
+2	en	en	DET	_	Gender=Com|Number=Sing|PronType=Ind	3	det	_	_
+3	frynse	frynse	NOUN	_	Definite=Ind|Gender=Com|Number=Sing	8	nsubjpass	_	_
+4	på	på	ADP	_	AdpType=Prep	6	case	_	_
+5	hendes	hendes	DET	_	Number[psor]=Sing|Person=3|Poss=Yes|PronType=Prs	6	det	_	_
+6	gulvtæppe	gulvtæppe	NOUN	_	Definite=Ind|Gender=Neut|Number=Sing	3	nmod	_	_
+7	var	være	AUX	_	Mood=Ind|Tense=Past|VerbForm=Fin|Voice=Act	8	aux	_	_
+8	kommet	komme	VERB	_	Definite=Ind|Number=Sing|Tense=Past|VerbForm=Part,Trans	0	root	_	_
+9	i	i	ADP	_	AdpType=Prep	10	case	_	_
+10	uorden	uorden	NOUN	_	Definite=Ind|Gender=Com|Number=Sing	8	nmod	_	_
+11	.	.	PUNCT	_	_	8	punct	_	_
+
+</code></pre>
 
 
 
@@ -103,6 +170,7 @@ neg in other languages:
         root + 'lib/ext/jquery.min.js',
         root + 'lib/ext/jquery.svg.min.js',
         root + 'lib/ext/jquery.svgdom.min.js',
+        root + 'lib/ext/jquery.timeago.js',
         root + 'lib/ext/jquery-ui.min.js',
         root + 'lib/ext/waypoints.min.js',
         root + 'lib/ext/jquery.address.min.js',
@@ -134,11 +202,40 @@ neg in other languages:
     ];
 
     var setupAccordions = function() {
-        // standard jQuery UI "accordion" element initialization
+	// preserve state in URL hash, following in part
+	// http://www.boduch.ca/2011/05/remembering-jquery-ui-accordion.html
+	var accordionChange = function(event, ui) {
+	    var context = ui.newHeader ? ui.newHeader.context : null;
+	    if (context) {
+		var languageCode = context.getAttribute('data-lc');
+		if (languageCode !== null) {
+		    window.location.hash = languageCode;
+		}
+	    }
+	}
+        // jQuery UI "accordion" element initialization
 	$(".jquery-ui-accordion").accordion({
 	    collapsible: true,
-	    active: false
+	    active: false,
+	    change: accordionChange
 	});
+	if ($(".jquery-ui-accordion").length) {
+	    var matches = window.location.hash.match(/^\#(.*)$/);
+	    console.log(matches);
+	    if (matches !== null) {
+		var languageCode = matches[1];
+		var tab = $('[data-lc="'+languageCode+'"]');
+		// the following will only work after accordion is initialized
+		var index = $('.jquery-ui-accordion div.ui-accordion-header').index(tab);
+		if (index !== -1) {
+		    $(".jquery-ui-accordion").accordion({ active: index });
+		}
+	    }
+	}
+    };
+
+    var setupTimeago = function() {
+        jQuery("time.timeago").timeago();
     };
 
     var setupTabs = function() {
@@ -162,6 +259,7 @@ neg in other languages:
         // set up UI tabs on page
         setupTabs();
         setupAccordions();
+        setupTimeago();
 
         // mark current collection (filled in by Jekyll)
         Collections.listing['_current'] = 'da-dep';
@@ -187,7 +285,7 @@ neg in other languages:
 
       <div id="footer">
 	  <p class="footer-text">&copy; 2014 
-	    <a href="http://universaldependencies.github.io/docs/introduction.html#contributors" style="color:gray">Universal Dependencies contributors</a>. 
+	    <a href="http://universaldependencies.org/introduction.html#contributors" style="color:gray">Universal Dependencies contributors</a>. 
 	    Site powered by <a href="http://spyysalo.github.io/annodoc" style="color:gray">Annodoc</a> and <a href="http://brat.nlplab.org/" style="color:gray">brat</a></p>.
       </div>
     </div>

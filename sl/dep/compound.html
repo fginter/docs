@@ -11,6 +11,7 @@
     <link rel="stylesheet" type="text/css" href="../../css/style-vis.css"/>
     <link rel="stylesheet" type="text/css" href="../../css/hint.css"/>
     <script type="text/javascript" src="../../lib/ext/head.load.min.js"></script>
+    <script type="text/javascript" src="../../lib/ext/jquery.timeago.js.js"></script>
 <!--     <link rel="shortcut icon" href="favicon.ico"/> -->
 
 
@@ -20,8 +21,8 @@
 
       <div id="hp-header">
 	
-          <span class="header-text"><a href="http://universaldependencies.github.io/docs/#language-sl">home</a></span>
-          <span class="header-text"><a href="http://universaldependencies.github.io/docs/sl/dep">sl/dep</a></span>
+          <span class="header-text"><a href="http://universaldependencies.org/#language-sl">home</a></span>
+          <span class="header-text"><a href="http://universaldependencies.org/sl/dep">sl/dep</a></span>
           <span class="header-text"><a href="https://github.com/universaldependencies/docs/edit/pages-source/_sl-dep/compound.md" target="#">edit page</a></span>
           <span class="header-text"><a href="https://github.com/universaldependencies/docs/issues">issue tracker</a></span>
       </div>
@@ -45,6 +46,59 @@ for <code>compound</code>.</p>
 <!-- "automatic stats" -->
 
 
+
+
+
+
+
+<hr />
+
+<h2 id="treebank-statistics-udslovenian">Treebank Statistics (UD_Slovenian)</h2>
+
+<p>This relation is universal.</p>
+
+<p>114 nodes (0%) are attached to their parents as <code>compound</code>.</p>
+
+<p>107 instances of <code>compound</code> (94%) are right-to-left (child precedes parent).
+Average distance between parent and child is 1.07894736842105.</p>
+
+<p>The following 2 pairs of parts of speech are connected with <code>compound</code>: <a href="">sl-pos/NOUN</a>-<a href="">sl-pos/NUM</a> (80; 70% instances), <a href="">sl-pos/NUM</a>-<a href="">sl-pos/NUM</a> (34; 30% instances).</p>
+
+<pre><code class="language-conllu"># visual-style 6	bgColor:blue
+# visual-style 6	fgColor:white
+# visual-style 8	bgColor:blue
+# visual-style 8	fgColor:white
+# visual-style 8 6 compound	color:blue
+1	Stala	stati	VERB	Vmpp-sf	Aspect=Imp|Gender=Fem|Number=Sing|VerbForm=Part	0	root	_	Dep=0|Rel=Root
+2	je	biti	AUX	Va-r3s-n	Mood=Ind|Negative=Pos|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	1	aux	_	Dep=1|Rel=PPart
+3	milijardo	milijarda	NOUN	Ncfsa	Case=Acc|Gender=Fem|Number=Sing	1	nmod	_	Dep=1|Rel=AdvM
+4	tolarjev	tolar	NOUN	Ncmpg	Case=Gen|Gender=Masc|Number=Plur	3	nmod	_	Dep=3|Rel=Atr
+5	in	in	CONJ	Cc	_	3	cc	_	Dep=8|Rel=Conj
+6	dvesto	dvesto	NUM	Mlc-pa	Case=Acc|Number=Plur|NumForm=Word|NumType=Card	8	compound	_	Dep=8|Rel=Atr
+7	petdeset	petdeset	NUM	Mlc-pa	Case=Acc|Number=Plur|NumForm=Word|NumType=Card	8	compound	_	Dep=8|Rel=Atr
+8	milijonov	milijon	NOUN	Ncmpg	Case=Gen|Gender=Masc|Number=Plur	3	conj	_	SpaceAfter=No|Dep=3|Rel=Coord
+9	.	.	PUNCT	Z	_	1	punct	_	SpaceAfter=No|Dep=0|Rel=Root
+
+</code></pre>
+
+<pre><code class="language-conllu"># visual-style 7	bgColor:blue
+# visual-style 7	fgColor:white
+# visual-style 8	bgColor:blue
+# visual-style 8	fgColor:white
+# visual-style 8 7 compound	color:blue
+1	Lastnik	lastnik	NOUN	Ncmsn	Case=Nom|Gender=Masc|Number=Sing	4	nsubj	_	Dep=4|Rel=Sb
+2	iz	iz	ADP	Sg	Case=Gen	3	case	_	Dep=3|Rel=Atr
+3	Ljubljane	Ljubljana	PROPN	Npfsg	Case=Gen|Gender=Fem|Number=Sing	1	nmod	_	Dep=1|Rel=Atr
+4	ima	imeti	VERB	Vmpr3s-n	Aspect=Imp|Mood=Ind|Negative=Pos|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	_	Dep=0|Rel=Root
+5	za	za	ADP	Sa	Case=Acc	9	case	_	Dep=9|Rel=Atr
+6	približno	približno	ADV	Rgp	Degree=Pos	7	advmod	_	Dep=7|Rel=Atr
+7	300	300	NUM	Mdc	NumForm=Digit|NumType=Card	8	compound	_	Dep=8|Rel=Atr
+8	tisoč	tisoč	NUM	Mlc-pa	Case=Acc|Number=Plur|NumForm=Word|NumType=Card	9	nummod	_	Dep=9|Rel=Atr
+9	tolarjev	tolar	NOUN	Ncmpg	Case=Gen|Gender=Masc|Number=Plur	4	xcomp	_	Dep=4|Rel=Obj
+10	škode	škoda	NOUN	Ncfsg	Case=Gen|Gender=Fem|Number=Sing	9	nmod	_	SpaceAfter=No|Dep=9|Rel=Atr
+11	.	.	PUNCT	Z	_	4	punct	_	SpaceAfter=No|Dep=0|Rel=Root
+
+</code></pre>
 
 
 
@@ -103,6 +157,7 @@ compound in other languages:
         root + 'lib/ext/jquery.min.js',
         root + 'lib/ext/jquery.svg.min.js',
         root + 'lib/ext/jquery.svgdom.min.js',
+        root + 'lib/ext/jquery.timeago.js',
         root + 'lib/ext/jquery-ui.min.js',
         root + 'lib/ext/waypoints.min.js',
         root + 'lib/ext/jquery.address.min.js',
@@ -134,11 +189,40 @@ compound in other languages:
     ];
 
     var setupAccordions = function() {
-        // standard jQuery UI "accordion" element initialization
+	// preserve state in URL hash, following in part
+	// http://www.boduch.ca/2011/05/remembering-jquery-ui-accordion.html
+	var accordionChange = function(event, ui) {
+	    var context = ui.newHeader ? ui.newHeader.context : null;
+	    if (context) {
+		var languageCode = context.getAttribute('data-lc');
+		if (languageCode !== null) {
+		    window.location.hash = languageCode;
+		}
+	    }
+	}
+        // jQuery UI "accordion" element initialization
 	$(".jquery-ui-accordion").accordion({
 	    collapsible: true,
-	    active: false
+	    active: false,
+	    change: accordionChange
 	});
+	if ($(".jquery-ui-accordion").length) {
+	    var matches = window.location.hash.match(/^\#(.*)$/);
+	    console.log(matches);
+	    if (matches !== null) {
+		var languageCode = matches[1];
+		var tab = $('[data-lc="'+languageCode+'"]');
+		// the following will only work after accordion is initialized
+		var index = $('.jquery-ui-accordion div.ui-accordion-header').index(tab);
+		if (index !== -1) {
+		    $(".jquery-ui-accordion").accordion({ active: index });
+		}
+	    }
+	}
+    };
+
+    var setupTimeago = function() {
+        jQuery("time.timeago").timeago();
     };
 
     var setupTabs = function() {
@@ -162,6 +246,7 @@ compound in other languages:
         // set up UI tabs on page
         setupTabs();
         setupAccordions();
+        setupTimeago();
 
         // mark current collection (filled in by Jekyll)
         Collections.listing['_current'] = 'sl-dep';
@@ -187,7 +272,7 @@ compound in other languages:
 
       <div id="footer">
 	  <p class="footer-text">&copy; 2014 
-	    <a href="http://universaldependencies.github.io/docs/introduction.html#contributors" style="color:gray">Universal Dependencies contributors</a>. 
+	    <a href="http://universaldependencies.org/introduction.html#contributors" style="color:gray">Universal Dependencies contributors</a>. 
 	    Site powered by <a href="http://spyysalo.github.io/annodoc" style="color:gray">Annodoc</a> and <a href="http://brat.nlplab.org/" style="color:gray">brat</a></p>.
       </div>
     </div>

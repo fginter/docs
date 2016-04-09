@@ -11,6 +11,7 @@
     <link rel="stylesheet" type="text/css" href="../../css/style-vis.css"/>
     <link rel="stylesheet" type="text/css" href="../../css/hint.css"/>
     <script type="text/javascript" src="../../lib/ext/head.load.min.js"></script>
+    <script type="text/javascript" src="../../lib/ext/jquery.timeago.js.js"></script>
 <!--     <link rel="shortcut icon" href="favicon.ico"/> -->
 
 
@@ -20,8 +21,8 @@
 
       <div id="hp-header">
 	
-          <span class="header-text"><a href="http://universaldependencies.github.io/docs/#language-et">home</a></span>
-          <span class="header-text"><a href="http://universaldependencies.github.io/docs/et/dep">et/dep</a></span>
+          <span class="header-text"><a href="http://universaldependencies.org/#language-et">home</a></span>
+          <span class="header-text"><a href="http://universaldependencies.org/et/dep">et/dep</a></span>
           <span class="header-text"><a href="https://github.com/universaldependencies/docs/edit/pages-source/_et-dep/nsubj.md" target="#">edit page</a></span>
           <span class="header-text"><a href="https://github.com/universaldependencies/docs/issues">issue tracker</a></span>
       </div>
@@ -45,6 +46,69 @@ for <code>nsubj</code>.</p>
 <!-- "automatic stats" -->
 
 
+
+
+
+
+
+<hr />
+
+<h2 id="treebank-statistics-udestonian">Treebank Statistics (UD_Estonian)</h2>
+
+<p>This relation is universal.</p>
+
+<p>1191 nodes (13%) are attached to their parents as <code>nsubj</code>.</p>
+
+<p>943 instances of <code>nsubj</code> (79%) are right-to-left (child precedes parent).
+Average distance between parent and child is 1.59697732997481.</p>
+
+<p>The following 16 pairs of parts of speech are connected with <code>nsubj</code>: <a href="">et-pos/VERB</a>-<a href="">et-pos/NOUN</a> (631; 53% instances), <a href="">et-pos/VERB</a>-<a href="">et-pos/PROPN</a> (316; 27% instances), <a href="">et-pos/VERB</a>-<a href="">et-pos/PRON</a> (193; 16% instances), <a href="">et-pos/VERB</a>-<a href="">et-pos/NUM</a> (13; 1% instances), <a href="">et-pos/ADJ</a>-<a href="">et-pos/NOUN</a> (10; 1% instances), <a href="">et-pos/NOUN</a>-<a href="">et-pos/PROPN</a> (6; 1% instances), <a href="">et-pos/ADJ</a>-<a href="">et-pos/PRON</a> (4; 0% instances), <a href="">et-pos/NOUN</a>-<a href="">et-pos/PRON</a> (4; 0% instances), <a href="">et-pos/ADJ</a>-<a href="">et-pos/PROPN</a> (3; 0% instances), <a href="">et-pos/NOUN</a>-<a href="">et-pos/NOUN</a> (3; 0% instances), <a href="">et-pos/NUM</a>-<a href="">et-pos/NOUN</a> (2; 0% instances), <a href="">et-pos/VERB</a>-<a href="">et-pos/ADJ</a> (2; 0% instances), <a href="">et-pos/ADV</a>-<a href="">et-pos/PROPN</a> (1; 0% instances), <a href="">et-pos/AUX</a>-<a href="">et-pos/NOUN</a> (1; 0% instances), <a href="">et-pos/PRON</a>-<a href="">et-pos/NUM</a> (1; 0% instances), <a href="">et-pos/PRON</a>-<a href="">et-pos/PRON</a> (1; 0% instances).</p>
+
+<pre><code class="language-conllu"># visual-style 1	bgColor:blue
+# visual-style 1	fgColor:white
+# visual-style 2	bgColor:blue
+# visual-style 2	fgColor:white
+# visual-style 2 1 nsubj	color:blue
+1	Lennarti-lood	Lennarti-lood	NOUN	n/com,pl,nom,%cap	Case=Nom|Number=Plur	2	nsubj	_	_
+2	on	ole+0	VERB	v/main,indic,pres,ps3,pl,ps,af	Mood=Ind|Negative=Pos|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	0	root	_	_
+3	aga	aga+0	CONJ	conj-s/crd	_	2	mark	_	_
+4	nagu	nagu+0	SCONJ	conj-s/sub	_	7	mark	_	_
+5	pikantne	pikantne+0	ADJ	adj/pos,sg,nom	Case=Nom|Degree=Pos|Number=Sing	7	amod	_	_
+6	prantsuse	prantsuse+0	ADJ	adj-nat/--	NameType=Nat	7	amod	_	_
+7	film	film+0	NOUN	n/com,sg,nom	Case=Nom|Number=Sing	2	nmod	_	_
+8	.	--	PUNCT	punc/--	_	2	punct	_	_
+
+</code></pre>
+
+<pre><code class="language-conllu"># visual-style 1	bgColor:blue
+# visual-style 1	fgColor:white
+# visual-style 5	bgColor:blue
+# visual-style 5	fgColor:white
+# visual-style 5 1 nsubj	color:blue
+1	Winston	Winston+0	PROPN	prop/prop,sg,nom,%cap	Case=Nom|Number=Sing	5	nsubj	_	_
+2	hakkas	hakka+s	AUX	v/main,indic,impf,ps3,sg,ps,af	Mood=Ind|Negative=Pos|Number=Sing|Person=3|Tense=Imp|VerbForm=Fin	5	aux	_	_
+3	trepist	trepp+st	NOUN	n/com,sg,el	Case=Ela|Number=Sing	5	nmod	_	_
+4	üles	üles+0	ADV	adv/--	_	5	compound:prt	_	_
+5	minema	mine+ma	VERB	v/main,sup,ps,ill	Case=Ill|VerbForm=Sup	0	root	_	_
+6	.	--	PUNCT	punc/--	_	5	punct	_	_
+
+</code></pre>
+
+<pre><code class="language-conllu"># visual-style 4	bgColor:blue
+# visual-style 4	fgColor:white
+# visual-style 3	bgColor:blue
+# visual-style 3	fgColor:white
+# visual-style 3 4 nsubj	color:blue
+1	Muist	muist+0	PRON	pron-def/indef,.cap	Poss=Yes|PronType=Ind,Neg	3	dobj	_	_
+2	piima	piim+0	NOUN	n/com,sg,part	Case=Par|Number=Sing	1	nmod	_	_
+3	valas	vala+s	VERB	v-fin/main,indic,impf,ps3,sg,ps,af,.FinV,.NGP-P	Mood=Ind|Negative=Pos|Number=Sing|Person=3|Tense=Imp|VerbForm=Fin	0	root	_	_
+4	ta	tema+0	PRON	pron-pers/pers,ps3,sg,nom	Case=Nom|Number=Sing|Person=3|PronType=Prs	3	nsubj	_	_
+5	lauda	laut+0	NOUN	n/com,sg,gen	Case=Gen|Number=Sing	3	nmod	_	_
+6	taha	taha+0	ADP	pst/post,.gen	AdpType=Post|Case=Gen	5	case	_	_
+7	maha	maha+0	ADV	adv/--	_	3	compound:prt	_	_
+8	.	.	PUNCT	punc/Fst	PunctType=Peri	3	punct	_	_
+
+</code></pre>
 
 
 
@@ -103,6 +167,7 @@ nsubj in other languages:
         root + 'lib/ext/jquery.min.js',
         root + 'lib/ext/jquery.svg.min.js',
         root + 'lib/ext/jquery.svgdom.min.js',
+        root + 'lib/ext/jquery.timeago.js',
         root + 'lib/ext/jquery-ui.min.js',
         root + 'lib/ext/waypoints.min.js',
         root + 'lib/ext/jquery.address.min.js',
@@ -134,11 +199,40 @@ nsubj in other languages:
     ];
 
     var setupAccordions = function() {
-        // standard jQuery UI "accordion" element initialization
+	// preserve state in URL hash, following in part
+	// http://www.boduch.ca/2011/05/remembering-jquery-ui-accordion.html
+	var accordionChange = function(event, ui) {
+	    var context = ui.newHeader ? ui.newHeader.context : null;
+	    if (context) {
+		var languageCode = context.getAttribute('data-lc');
+		if (languageCode !== null) {
+		    window.location.hash = languageCode;
+		}
+	    }
+	}
+        // jQuery UI "accordion" element initialization
 	$(".jquery-ui-accordion").accordion({
 	    collapsible: true,
-	    active: false
+	    active: false,
+	    change: accordionChange
 	});
+	if ($(".jquery-ui-accordion").length) {
+	    var matches = window.location.hash.match(/^\#(.*)$/);
+	    console.log(matches);
+	    if (matches !== null) {
+		var languageCode = matches[1];
+		var tab = $('[data-lc="'+languageCode+'"]');
+		// the following will only work after accordion is initialized
+		var index = $('.jquery-ui-accordion div.ui-accordion-header').index(tab);
+		if (index !== -1) {
+		    $(".jquery-ui-accordion").accordion({ active: index });
+		}
+	    }
+	}
+    };
+
+    var setupTimeago = function() {
+        jQuery("time.timeago").timeago();
     };
 
     var setupTabs = function() {
@@ -162,6 +256,7 @@ nsubj in other languages:
         // set up UI tabs on page
         setupTabs();
         setupAccordions();
+        setupTimeago();
 
         // mark current collection (filled in by Jekyll)
         Collections.listing['_current'] = 'et-dep';
@@ -187,7 +282,7 @@ nsubj in other languages:
 
       <div id="footer">
 	  <p class="footer-text">&copy; 2014 
-	    <a href="http://universaldependencies.github.io/docs/introduction.html#contributors" style="color:gray">Universal Dependencies contributors</a>. 
+	    <a href="http://universaldependencies.org/introduction.html#contributors" style="color:gray">Universal Dependencies contributors</a>. 
 	    Site powered by <a href="http://spyysalo.github.io/annodoc" style="color:gray">Annodoc</a> and <a href="http://brat.nlplab.org/" style="color:gray">brat</a></p>.
       </div>
     </div>

@@ -11,6 +11,7 @@
     <link rel="stylesheet" type="text/css" href="../../css/style-vis.css"/>
     <link rel="stylesheet" type="text/css" href="../../css/hint.css"/>
     <script type="text/javascript" src="../../lib/ext/head.load.min.js"></script>
+    <script type="text/javascript" src="../../lib/ext/jquery.timeago.js.js"></script>
 <!--     <link rel="shortcut icon" href="favicon.ico"/> -->
 
 
@@ -20,8 +21,8 @@
 
       <div id="hp-header">
 	
-          <span class="header-text"><a href="http://universaldependencies.github.io/docs/#language-he">home</a></span>
-          <span class="header-text"><a href="http://universaldependencies.github.io/docs/he/feat">he/feat</a></span>
+          <span class="header-text"><a href="http://universaldependencies.org/#language-he">home</a></span>
+          <span class="header-text"><a href="http://universaldependencies.org/he/feat">he/feat</a></span>
           <span class="header-text"><a href="https://github.com/universaldependencies/docs/edit/pages-source/_he-feat/Negative.md" target="#">edit page</a></span>
           <span class="header-text"><a href="https://github.com/universaldependencies/docs/issues">issue tracker</a></span>
       </div>
@@ -44,6 +45,47 @@ for <code>Negative</code>.</p>
 
 <!-- "automatic stats" -->
 
+
+
+
+
+
+<hr />
+
+<h2 id="treebank-statistics-udhebrew">Treebank Statistics (UD_Hebrew)</h2>
+
+<p>This feature is universal.
+It occurs with 2 different values: <code>Neg</code>, <code>Pos</code>.</p>
+
+<p>2798 tokens (2%) have a non-empty value of <code>Negative</code>.
+33 types (0%) occur at least once with a non-empty value of <code>Negative</code>.
+1 lemmas (0) occur at least once with a non-empty value of <code>Negative</code>.
+The feature is used with 2 part-of-speech tags: <a href="">he-pos/VERB</a> (1811; 1% instances), <a href="">he-pos/ADV</a> (987; 1% instances).</p>
+
+<h3 id="verb"><code>VERB</code></h3>
+
+<p>1811 <a href="">he-pos/VERB</a> tokens (11% of all <code>VERB</code> tokens) have a non-empty value of <code>Negative</code>.</p>
+
+<p>The most frequent other feature values with which <code>VERB</code> and <code>Negative</code> co-occurred: <tt><a href="VerbType.html">VerbType</a>=Cop</tt> (1811; 100%), <tt><a href="HebBinyan.html">HebBinyan</a>=EMPTY</tt> (1811; 100%), <tt><a href="Person.html">Person</a>=3</tt> (1664; 92%), <tt><a href="Number.html">Number</a>=Sing</tt> (1316; 73%), <tt><a href="VerbForm.html">VerbForm</a>=EMPTY</tt> (1006; 56%), <tt><a href="Gender.html">Gender</a>=Masc</tt> (949; 52%).</p>
+
+<p><code>VERB</code> tokens may have the following values of <code>Negative</code>:</p>
+
+<ul>
+  <li><code>Neg</code> (316; 17% of non-empty <code>Negative</code>): אינו, אינה, אינם, אינן, איננו, איננה, אינני, איני, אינך, אינכם</li>
+  <li><code>Pos</code> (1495; 83% of non-empty <code>Negative</code>): היה, היו, הוא, היא, היתה, יהיה, להיות, תהיה, הם, יהיו</li>
+  <li><code>EMPTY</code> (14109): יש, אין, אמר, אומר, עבר, מדובר, נראה, חולים, לעשות, כולל</li>
+</ul>
+
+<h3 id="adv"><code>ADV</code></h3>
+
+<p>987 <a href="">he-pos/ADV</a> tokens (16% of all <code>ADV</code> tokens) have a non-empty value of <code>Negative</code>.</p>
+
+<p><code>ADV</code> tokens may have the following values of <code>Negative</code>:</p>
+
+<ul>
+  <li><code>Neg</code> (987; 100% of non-empty <code>Negative</code>): לא</li>
+  <li><code>EMPTY</code> (5121): גם, רק, יותר, מה, עוד, כך, ביותר, אתמול, כבר, מי</li>
+</ul>
 
 
 
@@ -102,6 +144,7 @@ Negative in other languages:
         root + 'lib/ext/jquery.min.js',
         root + 'lib/ext/jquery.svg.min.js',
         root + 'lib/ext/jquery.svgdom.min.js',
+        root + 'lib/ext/jquery.timeago.js',
         root + 'lib/ext/jquery-ui.min.js',
         root + 'lib/ext/waypoints.min.js',
         root + 'lib/ext/jquery.address.min.js',
@@ -133,11 +176,40 @@ Negative in other languages:
     ];
 
     var setupAccordions = function() {
-        // standard jQuery UI "accordion" element initialization
+	// preserve state in URL hash, following in part
+	// http://www.boduch.ca/2011/05/remembering-jquery-ui-accordion.html
+	var accordionChange = function(event, ui) {
+	    var context = ui.newHeader ? ui.newHeader.context : null;
+	    if (context) {
+		var languageCode = context.getAttribute('data-lc');
+		if (languageCode !== null) {
+		    window.location.hash = languageCode;
+		}
+	    }
+	}
+        // jQuery UI "accordion" element initialization
 	$(".jquery-ui-accordion").accordion({
 	    collapsible: true,
-	    active: false
+	    active: false,
+	    change: accordionChange
 	});
+	if ($(".jquery-ui-accordion").length) {
+	    var matches = window.location.hash.match(/^\#(.*)$/);
+	    console.log(matches);
+	    if (matches !== null) {
+		var languageCode = matches[1];
+		var tab = $('[data-lc="'+languageCode+'"]');
+		// the following will only work after accordion is initialized
+		var index = $('.jquery-ui-accordion div.ui-accordion-header').index(tab);
+		if (index !== -1) {
+		    $(".jquery-ui-accordion").accordion({ active: index });
+		}
+	    }
+	}
+    };
+
+    var setupTimeago = function() {
+        jQuery("time.timeago").timeago();
     };
 
     var setupTabs = function() {
@@ -161,6 +233,7 @@ Negative in other languages:
         // set up UI tabs on page
         setupTabs();
         setupAccordions();
+        setupTimeago();
 
         // mark current collection (filled in by Jekyll)
         Collections.listing['_current'] = 'he-feat';
@@ -186,7 +259,7 @@ Negative in other languages:
 
       <div id="footer">
 	  <p class="footer-text">&copy; 2014 
-	    <a href="http://universaldependencies.github.io/docs/introduction.html#contributors" style="color:gray">Universal Dependencies contributors</a>. 
+	    <a href="http://universaldependencies.org/introduction.html#contributors" style="color:gray">Universal Dependencies contributors</a>. 
 	    Site powered by <a href="http://spyysalo.github.io/annodoc" style="color:gray">Annodoc</a> and <a href="http://brat.nlplab.org/" style="color:gray">brat</a></p>.
       </div>
     </div>

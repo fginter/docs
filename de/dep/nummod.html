@@ -11,6 +11,7 @@
     <link rel="stylesheet" type="text/css" href="../../css/style-vis.css"/>
     <link rel="stylesheet" type="text/css" href="../../css/hint.css"/>
     <script type="text/javascript" src="../../lib/ext/head.load.min.js"></script>
+    <script type="text/javascript" src="../../lib/ext/jquery.timeago.js.js"></script>
 <!--     <link rel="shortcut icon" href="favicon.ico"/> -->
 
 
@@ -20,8 +21,8 @@
 
       <div id="hp-header">
 	
-          <span class="header-text"><a href="http://universaldependencies.github.io/docs/#language-de">home</a></span>
-          <span class="header-text"><a href="http://universaldependencies.github.io/docs/de/dep">de/dep</a></span>
+          <span class="header-text"><a href="http://universaldependencies.org/#language-de">home</a></span>
+          <span class="header-text"><a href="http://universaldependencies.org/de/dep">de/dep</a></span>
           <span class="header-text"><a href="https://github.com/universaldependencies/docs/edit/pages-source/_de-dep/nummod.md" target="#">edit page</a></span>
           <span class="header-text"><a href="https://github.com/universaldependencies/docs/issues">issue tracker</a></span>
       </div>
@@ -52,6 +53,79 @@ nummod(Euro, 50)
 <!-- "automatic stats" -->
 
 
+
+
+
+
+
+<hr />
+
+<h2 id="treebank-statistics-udgerman">Treebank Statistics (UD_German)</h2>
+
+<p>This relation is universal.</p>
+
+<p>3223 nodes (1%) are attached to their parents as <code>nummod</code>.</p>
+
+<p>3114 instances of <code>nummod</code> (97%) are right-to-left (child precedes parent).
+Average distance between parent and child is 1.34284827800186.</p>
+
+<p>The following 17 pairs of parts of speech are connected with <code>nummod</code>: <a href="">de-pos/NOUN</a>-<a href="">de-pos/NUM</a> (2819; 87% instances), <a href="">de-pos/PROPN</a>-<a href="">de-pos/NUM</a> (102; 3% instances), <a href="">de-pos/NUM</a>-<a href="">de-pos/NUM</a> (59; 2% instances), <a href="">de-pos/PROPN</a>-<a href="">de-pos/PROPN</a> (54; 2% instances), <a href="">de-pos/NOUN</a>-<a href="">de-pos/NOUN</a> (51; 2% instances), <a href="">de-pos/ADJ</a>-<a href="">de-pos/NUM</a> (38; 1% instances), <a href="">de-pos/PROPN</a>-<a href="">de-pos/NOUN</a> (31; 1% instances), <a href="">de-pos/X</a>-<a href="">de-pos/NUM</a> (31; 1% instances), <a href="">de-pos/ADP</a>-<a href="">de-pos/NUM</a> (17; 1% instances), <a href="">de-pos/ADV</a>-<a href="">de-pos/NUM</a> (11; 0% instances), <a href="">de-pos/ADP</a>-<a href="">de-pos/NOUN</a> (3; 0% instances), <a href="">de-pos/NOUN</a>-<a href="">de-pos/DET</a> (2; 0% instances), <a href="">de-pos/ADV</a>-<a href="">de-pos/X</a> (1; 0% instances), <a href="">de-pos/NOUN</a>-<a href="">de-pos/PRON</a> (1; 0% instances), <a href="">de-pos/NOUN</a>-<a href="">de-pos/X</a> (1; 0% instances), <a href="">de-pos/PUNCT</a>-<a href="">de-pos/NUM</a> (1; 0% instances), <a href="">de-pos/X</a>-<a href="">de-pos/X</a> (1; 0% instances).</p>
+
+<pre><code class="language-conllu"># visual-style 1	bgColor:blue
+# visual-style 1	fgColor:white
+# visual-style 2	bgColor:blue
+# visual-style 2	fgColor:white
+# visual-style 2 1 nummod	color:blue
+1	5	_	NUM	_	_	2	nummod	_	_
+2	Sterne	_	NOUN	_	_	0	root	_	_
+3	und	_	CONJ	_	_	2	cc	_	_
+4	ein	_	DET	_	_	6	det	_	_
+5	großes	_	ADJ	_	_	6	amod	_	_
+6	Lob	_	NOUN	_	_	2	conj	_	_
+7	an	_	ADP	_	_	10	case	_	_
+8	die	_	DET	_	_	10	det	_	_
+9	gesamte	_	ADJ	_	_	10	amod	_	_
+10	Firma	_	NOUN	_	_	6	nmod	_	_
+11	Wintergartenbau	_	PROPN	_	_	10	appos	_	_
+12	.	_	PUNCT	_	_	2	punct	_	_
+
+</code></pre>
+
+<pre><code class="language-conllu"># visual-style 2	bgColor:blue
+# visual-style 2	fgColor:white
+# visual-style 3	bgColor:blue
+# visual-style 3	fgColor:white
+# visual-style 3 2 nummod	color:blue
+1	Knapp	_	ADV	_	_	2	advmod	_	_
+2	20	_	NUM	_	_	3	nummod	_	_
+3	Euro	_	PROPN	_	_	8	dobj	_	_
+4	hat	_	AUX	_	_	8	aux	_	_
+5	je	_	ADV	_	_	8	advmod	_	_
+6	ein	_	DET	_	_	7	det	_	_
+7	Teil	_	NOUN	_	_	8	nsubj	_	_
+8	gekostet	_	VERB	_	_	0	root	_	_
+9	.	_	PUNCT	_	_	8	punct	_	_
+
+</code></pre>
+
+<pre><code class="language-conllu"># visual-style 1	bgColor:blue
+# visual-style 1	fgColor:white
+# visual-style 2	bgColor:blue
+# visual-style 2	fgColor:white
+# visual-style 2 1 nummod	color:blue
+1	15	_	NUM	_	_	2	nummod	_	_
+2	000	_	NUM	_	_	3	nummod	_	_
+3	Einwohner	_	NOUN	_	_	4	nsubj	_	_
+4	flüchteten	_	VERB	_	_	0	root	_	_
+5	in	_	ADP	_	_	7	case	_	_
+6	das	_	DET	_	_	7	det	_	_
+7	Umland	_	NOUN	_	_	4	nmod	_	_
+8	oder	_	CONJ	_	_	4	cc	_	_
+9	wurden	_	AUX	_	_	10	auxpass	_	_
+10	evakuiert	_	VERB	_	_	4	conj	_	_
+11	.	_	PUNCT	_	_	4	punct	_	_
+
+</code></pre>
 
 
 
@@ -110,6 +184,7 @@ nummod in other languages:
         root + 'lib/ext/jquery.min.js',
         root + 'lib/ext/jquery.svg.min.js',
         root + 'lib/ext/jquery.svgdom.min.js',
+        root + 'lib/ext/jquery.timeago.js',
         root + 'lib/ext/jquery-ui.min.js',
         root + 'lib/ext/waypoints.min.js',
         root + 'lib/ext/jquery.address.min.js',
@@ -141,11 +216,40 @@ nummod in other languages:
     ];
 
     var setupAccordions = function() {
-        // standard jQuery UI "accordion" element initialization
+	// preserve state in URL hash, following in part
+	// http://www.boduch.ca/2011/05/remembering-jquery-ui-accordion.html
+	var accordionChange = function(event, ui) {
+	    var context = ui.newHeader ? ui.newHeader.context : null;
+	    if (context) {
+		var languageCode = context.getAttribute('data-lc');
+		if (languageCode !== null) {
+		    window.location.hash = languageCode;
+		}
+	    }
+	}
+        // jQuery UI "accordion" element initialization
 	$(".jquery-ui-accordion").accordion({
 	    collapsible: true,
-	    active: false
+	    active: false,
+	    change: accordionChange
 	});
+	if ($(".jquery-ui-accordion").length) {
+	    var matches = window.location.hash.match(/^\#(.*)$/);
+	    console.log(matches);
+	    if (matches !== null) {
+		var languageCode = matches[1];
+		var tab = $('[data-lc="'+languageCode+'"]');
+		// the following will only work after accordion is initialized
+		var index = $('.jquery-ui-accordion div.ui-accordion-header').index(tab);
+		if (index !== -1) {
+		    $(".jquery-ui-accordion").accordion({ active: index });
+		}
+	    }
+	}
+    };
+
+    var setupTimeago = function() {
+        jQuery("time.timeago").timeago();
     };
 
     var setupTabs = function() {
@@ -169,6 +273,7 @@ nummod in other languages:
         // set up UI tabs on page
         setupTabs();
         setupAccordions();
+        setupTimeago();
 
         // mark current collection (filled in by Jekyll)
         Collections.listing['_current'] = 'de-dep';
@@ -194,7 +299,7 @@ nummod in other languages:
 
       <div id="footer">
 	  <p class="footer-text">&copy; 2014 
-	    <a href="http://universaldependencies.github.io/docs/introduction.html#contributors" style="color:gray">Universal Dependencies contributors</a>. 
+	    <a href="http://universaldependencies.org/introduction.html#contributors" style="color:gray">Universal Dependencies contributors</a>. 
 	    Site powered by <a href="http://spyysalo.github.io/annodoc" style="color:gray">Annodoc</a> and <a href="http://brat.nlplab.org/" style="color:gray">brat</a></p>.
       </div>
     </div>

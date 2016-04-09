@@ -11,6 +11,7 @@
     <link rel="stylesheet" type="text/css" href="../../css/style-vis.css"/>
     <link rel="stylesheet" type="text/css" href="../../css/hint.css"/>
     <script type="text/javascript" src="../../lib/ext/head.load.min.js"></script>
+    <script type="text/javascript" src="../../lib/ext/jquery.timeago.js.js"></script>
 <!--     <link rel="shortcut icon" href="favicon.ico"/> -->
 
 
@@ -20,8 +21,8 @@
 
       <div id="hp-header">
 	
-          <span class="header-text"><a href="http://universaldependencies.github.io/docs/#language-el">home</a></span>
-          <span class="header-text"><a href="http://universaldependencies.github.io/docs/el/dep">el/dep</a></span>
+          <span class="header-text"><a href="http://universaldependencies.org/#language-el">home</a></span>
+          <span class="header-text"><a href="http://universaldependencies.org/el/dep">el/dep</a></span>
           <span class="header-text"><a href="https://github.com/universaldependencies/docs/edit/pages-source/_el-dep/cop.md" target="#">edit page</a></span>
           <span class="header-text"><a href="https://github.com/universaldependencies/docs/issues">issue tracker</a></span>
       </div>
@@ -85,6 +86,77 @@ nsubj(είναι, Αυτό)
 
 
 
+
+<hr />
+
+<h2 id="treebank-statistics-udgreek">Treebank Statistics (UD_Greek)</h2>
+
+<p>This relation is universal.</p>
+
+<p>855 nodes (1%) are attached to their parents as <code>cop</code>.</p>
+
+<p>786 instances of <code>cop</code> (92%) are right-to-left (child precedes parent).
+Average distance between parent and child is 2.18362573099415.</p>
+
+<p>The following 7 pairs of parts of speech are connected with <code>cop</code>: <a href="">el-pos/ADJ</a>-<a href="">el-pos/VERB</a> (377; 44% instances), <a href="">el-pos/NOUN</a>-<a href="">el-pos/VERB</a> (371; 43% instances), <a href="">el-pos/VERB</a>-<a href="">el-pos/VERB</a> (66; 8% instances), <a href="">el-pos/PRON</a>-<a href="">el-pos/VERB</a> (18; 2% instances), <a href="">el-pos/NUM</a>-<a href="">el-pos/VERB</a> (12; 1% instances), <a href="">el-pos/ADV</a>-<a href="">el-pos/VERB</a> (10; 1% instances), <a href="">el-pos/PUNCT</a>-<a href="">el-pos/VERB</a> (1; 0% instances).</p>
+
+<pre><code class="language-conllu"># visual-style 6	bgColor:blue
+# visual-style 6	fgColor:white
+# visual-style 7	bgColor:blue
+# visual-style 7	fgColor:white
+# visual-style 7 6 cop	color:blue
+1	Πολλοί	πολύς	ADJ	ADJ	Case=Nom|Gender=Masc|Number=Plur	4	nsubj	_	_
+2	από	από	ADP	ADP	_	3	case	_	_
+3	αυτούς	αυτός	PRON	PRON	Case=Acc|Gender=Masc|Number=Plur|Person=3|PronType=Dem	1	det	_	_
+4	κινδυνεύουν	κινδυνεύω	VERB	VERB	Mood=Ind|Number=Plur|Person=3|Tense=Pres|Voice=Act	0	root	_	_
+5	να	να	PART	PART	_	7	aux	_	_
+6	μείνουν	μένω	VERB	VERB	Mood=Ind|Number=Plur|Person=3|Voice=Act	7	cop	_	_
+7	άστεγοι	άστεγος	ADJ	ADJ	Case=Nom|Gender=Masc|Number=Plur	4	ccomp	_	_
+8	"	"	PUNCT	PUNCT	_	4	punct	_	_
+9	.	.	PUNCT	PUNCT	_	4	punct	_	_
+
+</code></pre>
+
+<pre><code class="language-conllu"># visual-style 1	bgColor:blue
+# visual-style 1	fgColor:white
+# visual-style 3	bgColor:blue
+# visual-style 3	fgColor:white
+# visual-style 3 1 cop	color:blue
+1	Είναι	είμαι	VERB	VERB	Mood=Ind|Number=Sing|Person=3|Tense=Pres|Voice=Pass	3	cop	_	_
+2	ένα	ένας	DET	DET	Case=Nom|Definite=Ind|Gender=Neut|Number=Sing	3	det	_	_
+3	πλέγμα	πλέγμα	NOUN	NOUN	Case=Nom|Gender=Neut|Number=Sing	0	root	_	_
+4	έργων	έργο	NOUN	NOUN	Case=Gen|Gender=Neut|Number=Plur	3	nmod	_	_
+5	το	ο	DET	DET	Case=Nom|Definite=Def|Gender=Neut|Number=Sing	6	det	_	_
+6	οποίο	οποίος	PRON	PRON	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Rel	9	nsubj	_	_
+7	μεταξύ	μεταξύ	ADP	ADP	_	8	case	_	_
+8	άλλων	άλλος	PRON	PRON	Case=Gen|Gender=Neut|Number=Plur|Person=3|PronType=Ind	9	nmod	_	_
+9	περιλαμβάνει	περιλαμβάνω	VERB	VERB	Mood=Ind|Number=Sing|Person=3|Tense=Pres|Voice=Act	3	acl:relcl	_	_
+10	:	:	PUNCT	PUNCT	_	3	punct	_	_
+
+</code></pre>
+
+<pre><code class="language-conllu"># visual-style 4	bgColor:blue
+# visual-style 4	fgColor:white
+# visual-style 8	bgColor:blue
+# visual-style 8	fgColor:white
+# visual-style 8 4 cop	color:blue
+1	η	ο	DET	DET	Case=Nom|Definite=Def|Gender=Fem|Number=Sing	2	det	_	_
+2	Ομάδα	ομάδα	NOUN	NOUN	Case=Nom|Gender=Fem|Number=Sing	8	nsubj	_	_
+3	μας	μου	PRON	PRON	Case=Gen|Gender=Masc|Number=Plur|Person=1|PronType=Prs	2	nmod	_	_
+4	είναι	είμαι	VERB	VERB	Mood=Ind|Number=Sing|Person=3|Tense=Pres|Voice=Pass	8	cop	_	_
+5	υπέρ	υπέρ	ADP	ADP	_	8	case	_	_
+6	του	ο	DET	DET	Case=Gen|Definite=Def|Gender=Neut|Number=Sing	8	det	_	_
+7	να	να	PART	PART	_	8	aux	_	_
+8	αποκτήσουμε	αποκτώ	VERB	VERB	Mood=Ind|Number=Plur|Person=1|Voice=Act	0	root	_	_
+9	καθεστώς	καθεστώς	NOUN	NOUN	Case=Acc|Gender=Neut|Number=Sing	8	dobj	_	_
+10	βουλευτών	βουλευτής	NOUN	NOUN	Case=Gen|Gender=Masc|Number=Plur	9	nmod	_	_
+11	.	.	PUNCT	PUNCT	_	8	punct	_	_
+
+</code></pre>
+
+
+
+
 <!-- "in other languages" links -->
 <hr/>
 
@@ -139,6 +211,7 @@ cop in other languages:
         root + 'lib/ext/jquery.min.js',
         root + 'lib/ext/jquery.svg.min.js',
         root + 'lib/ext/jquery.svgdom.min.js',
+        root + 'lib/ext/jquery.timeago.js',
         root + 'lib/ext/jquery-ui.min.js',
         root + 'lib/ext/waypoints.min.js',
         root + 'lib/ext/jquery.address.min.js',
@@ -170,11 +243,40 @@ cop in other languages:
     ];
 
     var setupAccordions = function() {
-        // standard jQuery UI "accordion" element initialization
+	// preserve state in URL hash, following in part
+	// http://www.boduch.ca/2011/05/remembering-jquery-ui-accordion.html
+	var accordionChange = function(event, ui) {
+	    var context = ui.newHeader ? ui.newHeader.context : null;
+	    if (context) {
+		var languageCode = context.getAttribute('data-lc');
+		if (languageCode !== null) {
+		    window.location.hash = languageCode;
+		}
+	    }
+	}
+        // jQuery UI "accordion" element initialization
 	$(".jquery-ui-accordion").accordion({
 	    collapsible: true,
-	    active: false
+	    active: false,
+	    change: accordionChange
 	});
+	if ($(".jquery-ui-accordion").length) {
+	    var matches = window.location.hash.match(/^\#(.*)$/);
+	    console.log(matches);
+	    if (matches !== null) {
+		var languageCode = matches[1];
+		var tab = $('[data-lc="'+languageCode+'"]');
+		// the following will only work after accordion is initialized
+		var index = $('.jquery-ui-accordion div.ui-accordion-header').index(tab);
+		if (index !== -1) {
+		    $(".jquery-ui-accordion").accordion({ active: index });
+		}
+	    }
+	}
+    };
+
+    var setupTimeago = function() {
+        jQuery("time.timeago").timeago();
     };
 
     var setupTabs = function() {
@@ -198,6 +300,7 @@ cop in other languages:
         // set up UI tabs on page
         setupTabs();
         setupAccordions();
+        setupTimeago();
 
         // mark current collection (filled in by Jekyll)
         Collections.listing['_current'] = 'el-dep';
@@ -223,7 +326,7 @@ cop in other languages:
 
       <div id="footer">
 	  <p class="footer-text">&copy; 2014 
-	    <a href="http://universaldependencies.github.io/docs/introduction.html#contributors" style="color:gray">Universal Dependencies contributors</a>. 
+	    <a href="http://universaldependencies.org/introduction.html#contributors" style="color:gray">Universal Dependencies contributors</a>. 
 	    Site powered by <a href="http://spyysalo.github.io/annodoc" style="color:gray">Annodoc</a> and <a href="http://brat.nlplab.org/" style="color:gray">brat</a></p>.
       </div>
     </div>

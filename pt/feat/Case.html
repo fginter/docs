@@ -11,6 +11,7 @@
     <link rel="stylesheet" type="text/css" href="../../css/style-vis.css"/>
     <link rel="stylesheet" type="text/css" href="../../css/hint.css"/>
     <script type="text/javascript" src="../../lib/ext/head.load.min.js"></script>
+    <script type="text/javascript" src="../../lib/ext/jquery.timeago.js.js"></script>
 <!--     <link rel="shortcut icon" href="favicon.ico"/> -->
 
 
@@ -20,8 +21,8 @@
 
       <div id="hp-header">
 	
-          <span class="header-text"><a href="http://universaldependencies.github.io/docs/#language-pt">home</a></span>
-          <span class="header-text"><a href="http://universaldependencies.github.io/docs/pt/feat">pt/feat</a></span>
+          <span class="header-text"><a href="http://universaldependencies.org/#language-pt">home</a></span>
+          <span class="header-text"><a href="http://universaldependencies.org/pt/feat">pt/feat</a></span>
           <span class="header-text"><a href="https://github.com/universaldependencies/docs/edit/pages-source/_pt-feat/Case.md" target="#">edit page</a></span>
           <span class="header-text"><a href="https://github.com/universaldependencies/docs/issues">issue tracker</a></span>
       </div>
@@ -51,7 +52,7 @@ for <code>Case</code>.</p>
 
 <hr />
 
-<h2 id="treebank-statistics">Treebank Statistics</h2>
+<h2 id="treebank-statistics-udportuguese">Treebank Statistics (UD_Portuguese)</h2>
 
 <p>This feature is universal.
 It occurs with 3 different values: <code>Acc</code>, <code>Dat</code>, <code>Nom</code>.
@@ -64,29 +65,35 @@ The feature is used with 1 part-of-speech tags: <a href="">pt-pos/PRON</a> (2726
 
 <h3 id="pron"><code>PRON</code></h3>
 
-<p>2726 <a href="">pt-pos/PRON</a> tokens (45% of all <code>PRON</code> tokens) have a non-empty value of <code>Case</code>.</p>
+<p>2726 <a href="">pt-pos/PRON</a> tokens (36% of all <code>PRON</code> tokens) have a non-empty value of <code>Case</code>.</p>
 
-<p>The most frequent other feature values with which <code>PRON</code> and <code>Case</code> co-occurred: .</p>
+<p>The most frequent other feature values with which <code>PRON</code> and <code>Case</code> co-occurred: <tt><a href="PronType.html">PronType</a>=Prs</tt> (2721; 100%), <tt><a href="Person.html">Person</a>=3</tt> (2400; 88%), <tt><a href="Reflex.html">Reflex</a>=EMPTY</tt> (1948; 71%), <tt><a href="Number.html">Number</a>=Sing</tt> (1730; 63%), <tt><a href="Gender.html">Gender</a>=Masc</tt> (1456; 53%).</p>
 
 <p><code>PRON</code> tokens may have the following values of <code>Case</code>:</p>
 
 <ul>
-  <li><code>Acc</code> (1894; 69% of non-empty <code>Case</code>): __</li>
-  <li><code>Acc,Dat</code> (4; 0% of non-empty <code>Case</code>): __</li>
-  <li><code>Acc,Nom</code> (71; 3% of non-empty <code>Case</code>): __</li>
-  <li><code>Dat</code> (227; 8% of non-empty <code>Case</code>): __</li>
-  <li><code>Nom</code> (530; 19% of non-empty <code>Case</code>): __</li>
+  <li><code>Acc</code> (1894; 69% of non-empty <code>Case</code>): <em>se, o, me, a, nos, lo, os, la, ele, eles</em></li>
+  <li><code>Acc,Dat</code> (4; 0% of non-empty <code>Case</code>): <em>nos, se</em></li>
+  <li><code>Acc,Nom</code> (71; 3% of non-empty <code>Case</code>): <em>ele, ela, eles, nós, elas, você</em></li>
+  <li><code>Dat</code> (227; 8% of non-empty <code>Case</code>): <em>lhe, me, lhes, nos, se, lhe-, nos*, Ihe, me-, no</em></li>
+  <li><code>Nom</code> (530; 19% of non-empty <code>Case</code>): <em>ele, eu, eles, ela, você, nós, elas, vocês, voce, vós</em></li>
+  <li><code>EMPTY</code> (4902): <em>que, a, o, o_que, isso, quem, os, tudo, de, nada</em></li>
 </ul>
 
 <table>
   <tr><th>Paradigm <i>nós</i></th><th><tt>Acc,Dat</tt></th><th><tt>Acc,Nom</tt></th><th><tt>Nom</tt></th><th><tt>Acc</tt></th><th><tt>Dat</tt></th></tr>
-  <tr><td><tt><a href="Gender.html">Gender</a>=Masc|<a href="Person.html">Person</a>=1</tt></td><td></td><td><i>nós</i></td><td><i>nós</i></td><td><i>nos</i></td><td><i>nos</i></td></tr>
-  <tr><td><tt><a href="Gender.html">Gender</a>=Masc|<a href="Person.html">Person</a>=1|<a href="Reflex.html">Reflex</a>=Yes</tt></td><td></td><td></td><td></td><td><i>nos</i></td><td><i>nos</i></td></tr>
-  <tr><td><tt><a href="Gender.html">Gender</a>=Masc|<a href="Person.html">Person</a>=3</tt></td><td></td><td></td><td></td><td><i>nos</i></td><td></td></tr>
-  <tr><td><tt><a href="Gender.html">Gender</a>=Fem|<a href="Person.html">Person</a>=1</tt></td><td></td><td><i>nós</i></td><td></td><td><i>nós</i></td><td></td></tr>
-  <tr><td><tt><a href="Person.html">Person</a>=1</tt></td><td></td><td><i>nós</i></td><td><i>nós</i></td><td><i>nos, nós</i></td><td><i>nos, nos*</i></td></tr>
-  <tr><td><tt><a href="Person.html">Person</a>=1|<a href="Reflex.html">Reflex</a>=Yes</tt></td><td><i>nos</i></td><td></td><td></td><td><i>nos</i></td><td><i>nos, no</i></td></tr>
+  <tr><td><tt><a href="Gender.html">Gender</a>=Masc|<a href="Person.html">Person</a>=1</tt></td><td></td><td><em>nós</em></td><td><em>nós</em></td><td><em>nos</em></td><td><em>nos</em></td></tr>
+  <tr><td><tt><a href="Gender.html">Gender</a>=Masc|<a href="Person.html">Person</a>=1|<a href="Reflex.html">Reflex</a>=Yes</tt></td><td></td><td></td><td></td><td><em>nos</em></td><td><em>nos</em></td></tr>
+  <tr><td><tt><a href="Gender.html">Gender</a>=Masc|<a href="Person.html">Person</a>=3</tt></td><td></td><td></td><td></td><td><em>nos</em></td><td></td></tr>
+  <tr><td><tt><a href="Gender.html">Gender</a>=Fem|<a href="Person.html">Person</a>=1</tt></td><td></td><td><em>nós</em></td><td></td><td><em>nós</em></td><td></td></tr>
+  <tr><td><tt><a href="Person.html">Person</a>=1</tt></td><td></td><td><em>nós</em></td><td><em>nós</em></td><td><em>nos, nós</em></td><td><em>nos, nos*</em></td></tr>
+  <tr><td><tt><a href="Person.html">Person</a>=1|<a href="Reflex.html">Reflex</a>=Yes</tt></td><td><em>nos</em></td><td></td><td></td><td><em>nos</em></td><td><em>nos, no</em></td></tr>
 </table>
+
+<h2 id="relations-with-agreement-in-case">Relations with Agreement in <code>Case</code></h2>
+
+<p>The 10 most frequent relations where parent and child node agree in <code>Case</code>:
+<tt>PRON –[<a href="../dep/conj.html">conj</a>]–&gt; PRON</tt> (5; 100%).</p>
 
 
 
@@ -145,6 +152,7 @@ Case in other languages:
         root + 'lib/ext/jquery.min.js',
         root + 'lib/ext/jquery.svg.min.js',
         root + 'lib/ext/jquery.svgdom.min.js',
+        root + 'lib/ext/jquery.timeago.js',
         root + 'lib/ext/jquery-ui.min.js',
         root + 'lib/ext/waypoints.min.js',
         root + 'lib/ext/jquery.address.min.js',
@@ -176,11 +184,40 @@ Case in other languages:
     ];
 
     var setupAccordions = function() {
-        // standard jQuery UI "accordion" element initialization
+	// preserve state in URL hash, following in part
+	// http://www.boduch.ca/2011/05/remembering-jquery-ui-accordion.html
+	var accordionChange = function(event, ui) {
+	    var context = ui.newHeader ? ui.newHeader.context : null;
+	    if (context) {
+		var languageCode = context.getAttribute('data-lc');
+		if (languageCode !== null) {
+		    window.location.hash = languageCode;
+		}
+	    }
+	}
+        // jQuery UI "accordion" element initialization
 	$(".jquery-ui-accordion").accordion({
 	    collapsible: true,
-	    active: false
+	    active: false,
+	    change: accordionChange
 	});
+	if ($(".jquery-ui-accordion").length) {
+	    var matches = window.location.hash.match(/^\#(.*)$/);
+	    console.log(matches);
+	    if (matches !== null) {
+		var languageCode = matches[1];
+		var tab = $('[data-lc="'+languageCode+'"]');
+		// the following will only work after accordion is initialized
+		var index = $('.jquery-ui-accordion div.ui-accordion-header').index(tab);
+		if (index !== -1) {
+		    $(".jquery-ui-accordion").accordion({ active: index });
+		}
+	    }
+	}
+    };
+
+    var setupTimeago = function() {
+        jQuery("time.timeago").timeago();
     };
 
     var setupTabs = function() {
@@ -204,6 +241,7 @@ Case in other languages:
         // set up UI tabs on page
         setupTabs();
         setupAccordions();
+        setupTimeago();
 
         // mark current collection (filled in by Jekyll)
         Collections.listing['_current'] = 'pt-feat';
@@ -229,7 +267,7 @@ Case in other languages:
 
       <div id="footer">
 	  <p class="footer-text">&copy; 2014 
-	    <a href="http://universaldependencies.github.io/docs/introduction.html#contributors" style="color:gray">Universal Dependencies contributors</a>. 
+	    <a href="http://universaldependencies.org/introduction.html#contributors" style="color:gray">Universal Dependencies contributors</a>. 
 	    Site powered by <a href="http://spyysalo.github.io/annodoc" style="color:gray">Annodoc</a> and <a href="http://brat.nlplab.org/" style="color:gray">brat</a></p>.
       </div>
     </div>

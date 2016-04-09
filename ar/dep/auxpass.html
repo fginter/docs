@@ -11,6 +11,7 @@
     <link rel="stylesheet" type="text/css" href="../../css/style-vis.css"/>
     <link rel="stylesheet" type="text/css" href="../../css/hint.css"/>
     <script type="text/javascript" src="../../lib/ext/head.load.min.js"></script>
+    <script type="text/javascript" src="../../lib/ext/jquery.timeago.js.js"></script>
 <!--     <link rel="shortcut icon" href="favicon.ico"/> -->
 
 
@@ -20,8 +21,8 @@
 
       <div id="hp-header">
 	
-          <span class="header-text"><a href="http://universaldependencies.github.io/docs/#language-ar">home</a></span>
-          <span class="header-text"><a href="http://universaldependencies.github.io/docs/ar/dep">ar/dep</a></span>
+          <span class="header-text"><a href="http://universaldependencies.org/#language-ar">home</a></span>
+          <span class="header-text"><a href="http://universaldependencies.org/ar/dep">ar/dep</a></span>
           <span class="header-text"><a href="https://github.com/universaldependencies/docs/edit/pages-source/_ar-dep/auxpass.md" target="#">edit page</a></span>
           <span class="header-text"><a href="https://github.com/universaldependencies/docs/issues">issue tracker</a></span>
       </div>
@@ -45,6 +46,42 @@ for <code>auxpass</code>.</p>
 <!-- "automatic stats" -->
 
 
+
+
+
+
+
+<hr />
+
+<h2 id="treebank-statistics-udarabic">Treebank Statistics (UD_Arabic)</h2>
+
+<p>This relation is universal.</p>
+
+<p>113 nodes (0%) are attached to their parents as <code>auxpass</code>.</p>
+
+<p>110 instances of <code>auxpass</code> (97%) are right-to-left (child precedes parent).
+Average distance between parent and child is 1.0353982300885.</p>
+
+<p>The following 1 pairs of parts of speech are connected with <code>auxpass</code>: <a href="">ar-pos/VERB</a>-<a href="">ar-pos/PART</a> (113; 100% instances).</p>
+
+<pre><code class="language-conllu"># visual-style 3	bgColor:blue
+# visual-style 3	fgColor:white
+# visual-style 4	bgColor:blue
+# visual-style 4	fgColor:white
+# visual-style 4 3 auxpass	color:blue
+1	قِمَّةُ	_	NOUN	N------S1R	Case=Nom|Definite=Red|Number=Sing	4	nsubjpass	_	Translit=qimmatu
+2	أُوبِك	_	X	X---------	Foreign=Foreign	1	nmod	_	Translit=ʾūbik
+3	سَ	_	PART	F---------	_	4	auxpass	_	Translit=sa
+4	تُعقَدُ	_	VERB	VIIP-3FS--	Aspect=Imp|Gender=Fem|Mood=Ind|Number=Sing|Person=3|VerbForm=Fin|Voice=Pass	0	root	_	Translit=tuʿqadu
+5	مِن	_	ADP	P---------	AdpType=Prep	6	case	_	Translit=min
+6	٢٦	_	NUM	Q---------	NumForm=Digit	4	advmod	_	Translit=26
+7	إِلَى	_	ADP	P---------	AdpType=Prep	8	case	_	Translit=ʾilā
+8	٢٨	_	NUM	Q---------	NumForm=Digit	4	advmod	_	Translit=28
+9	أَيلُولَ	_	NOUN	N------S2I	Case=Gen|Definite=Ind|Number=Sing	8	nmod	_	Translit=ʾaylūla
+10	/	_	PUNCT	G---------	_	11	punct	_	Translit=/
+11	سِبتَمبِرَ	_	NOUN	N------S2I	Case=Gen|Definite=Ind|Number=Sing	9	appos	_	Translit=sibtambira
+
+</code></pre>
 
 
 
@@ -103,6 +140,7 @@ auxpass in other languages:
         root + 'lib/ext/jquery.min.js',
         root + 'lib/ext/jquery.svg.min.js',
         root + 'lib/ext/jquery.svgdom.min.js',
+        root + 'lib/ext/jquery.timeago.js',
         root + 'lib/ext/jquery-ui.min.js',
         root + 'lib/ext/waypoints.min.js',
         root + 'lib/ext/jquery.address.min.js',
@@ -134,11 +172,40 @@ auxpass in other languages:
     ];
 
     var setupAccordions = function() {
-        // standard jQuery UI "accordion" element initialization
+	// preserve state in URL hash, following in part
+	// http://www.boduch.ca/2011/05/remembering-jquery-ui-accordion.html
+	var accordionChange = function(event, ui) {
+	    var context = ui.newHeader ? ui.newHeader.context : null;
+	    if (context) {
+		var languageCode = context.getAttribute('data-lc');
+		if (languageCode !== null) {
+		    window.location.hash = languageCode;
+		}
+	    }
+	}
+        // jQuery UI "accordion" element initialization
 	$(".jquery-ui-accordion").accordion({
 	    collapsible: true,
-	    active: false
+	    active: false,
+	    change: accordionChange
 	});
+	if ($(".jquery-ui-accordion").length) {
+	    var matches = window.location.hash.match(/^\#(.*)$/);
+	    console.log(matches);
+	    if (matches !== null) {
+		var languageCode = matches[1];
+		var tab = $('[data-lc="'+languageCode+'"]');
+		// the following will only work after accordion is initialized
+		var index = $('.jquery-ui-accordion div.ui-accordion-header').index(tab);
+		if (index !== -1) {
+		    $(".jquery-ui-accordion").accordion({ active: index });
+		}
+	    }
+	}
+    };
+
+    var setupTimeago = function() {
+        jQuery("time.timeago").timeago();
     };
 
     var setupTabs = function() {
@@ -162,6 +229,7 @@ auxpass in other languages:
         // set up UI tabs on page
         setupTabs();
         setupAccordions();
+        setupTimeago();
 
         // mark current collection (filled in by Jekyll)
         Collections.listing['_current'] = 'ar-dep';
@@ -187,7 +255,7 @@ auxpass in other languages:
 
       <div id="footer">
 	  <p class="footer-text">&copy; 2014 
-	    <a href="http://universaldependencies.github.io/docs/introduction.html#contributors" style="color:gray">Universal Dependencies contributors</a>. 
+	    <a href="http://universaldependencies.org/introduction.html#contributors" style="color:gray">Universal Dependencies contributors</a>. 
 	    Site powered by <a href="http://spyysalo.github.io/annodoc" style="color:gray">Annodoc</a> and <a href="http://brat.nlplab.org/" style="color:gray">brat</a></p>.
       </div>
     </div>

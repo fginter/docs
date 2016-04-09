@@ -11,6 +11,7 @@
     <link rel="stylesheet" type="text/css" href="../../css/style-vis.css"/>
     <link rel="stylesheet" type="text/css" href="../../css/hint.css"/>
     <script type="text/javascript" src="../../lib/ext/head.load.min.js"></script>
+    <script type="text/javascript" src="../../lib/ext/jquery.timeago.js.js"></script>
 <!--     <link rel="shortcut icon" href="favicon.ico"/> -->
 
 
@@ -20,8 +21,8 @@
 
       <div id="hp-header">
 	
-          <span class="header-text"><a href="http://universaldependencies.github.io/docs/#language-en">home</a></span>
-          <span class="header-text"><a href="http://universaldependencies.github.io/docs/en/feat">en/feat</a></span>
+          <span class="header-text"><a href="http://universaldependencies.org/#language-en">home</a></span>
+          <span class="header-text"><a href="http://universaldependencies.org/en/feat">en/feat</a></span>
           <span class="header-text"><a href="https://github.com/universaldependencies/docs/edit/pages-source/_en-feat/Reflex.md" target="#">edit page</a></span>
           <span class="header-text"><a href="https://github.com/universaldependencies/docs/issues">issue tracker</a></span>
       </div>
@@ -53,6 +54,35 @@
 
 <!-- "automatic stats" -->
 
+
+
+
+
+
+<hr />
+
+<h2 id="treebank-statistics-udenglish">Treebank Statistics (UD_English)</h2>
+
+<p>This feature is universal.
+It occurs with 1 different values: <code>Yes</code>.</p>
+
+<p>121 tokens (0%) have a non-empty value of <code>Reflex</code>.
+10 types (0%) occur at least once with a non-empty value of <code>Reflex</code>.
+8 lemmas (0%) occur at least once with a non-empty value of <code>Reflex</code>.
+The feature is used with 1 part-of-speech tags: <a href="">en-pos/PRON</a> (121; 0% instances).</p>
+
+<h3 id="pron"><code>PRON</code></h3>
+
+<p>121 <a href="">en-pos/PRON</a> tokens (1% of all <code>PRON</code> tokens) have a non-empty value of <code>Reflex</code>.</p>
+
+<p>The most frequent other feature values with which <code>PRON</code> and <code>Reflex</code> co-occurred: <tt><a href="Case.html">Case</a>=Acc</tt> (121; 100%), <tt><a href="PronType.html">PronType</a>=Prs</tt> (121; 100%), <tt><a href="Poss.html">Poss</a>=EMPTY</tt> (121; 100%), <tt><a href="Number.html">Number</a>=Sing</tt> (95; 79%), <tt><a href="Gender.html">Gender</a>=EMPTY</tt> (85; 70%).</p>
+
+<p><code>PRON</code> tokens may have the following values of <code>Reflex</code>:</p>
+
+<ul>
+  <li><code>Yes</code> (121; 100% of non-empty <code>Reflex</code>): <em>yourself, myself, themselves, itself, himself, ourselves, herself, yourselves</em></li>
+  <li><code>EMPTY</code> (21107): <em>i, you, it, they, my, we, he, your, me, this</em></li>
+</ul>
 
 
 
@@ -111,6 +141,7 @@ Reflex in other languages:
         root + 'lib/ext/jquery.min.js',
         root + 'lib/ext/jquery.svg.min.js',
         root + 'lib/ext/jquery.svgdom.min.js',
+        root + 'lib/ext/jquery.timeago.js',
         root + 'lib/ext/jquery-ui.min.js',
         root + 'lib/ext/waypoints.min.js',
         root + 'lib/ext/jquery.address.min.js',
@@ -142,11 +173,40 @@ Reflex in other languages:
     ];
 
     var setupAccordions = function() {
-        // standard jQuery UI "accordion" element initialization
+	// preserve state in URL hash, following in part
+	// http://www.boduch.ca/2011/05/remembering-jquery-ui-accordion.html
+	var accordionChange = function(event, ui) {
+	    var context = ui.newHeader ? ui.newHeader.context : null;
+	    if (context) {
+		var languageCode = context.getAttribute('data-lc');
+		if (languageCode !== null) {
+		    window.location.hash = languageCode;
+		}
+	    }
+	}
+        // jQuery UI "accordion" element initialization
 	$(".jquery-ui-accordion").accordion({
 	    collapsible: true,
-	    active: false
+	    active: false,
+	    change: accordionChange
 	});
+	if ($(".jquery-ui-accordion").length) {
+	    var matches = window.location.hash.match(/^\#(.*)$/);
+	    console.log(matches);
+	    if (matches !== null) {
+		var languageCode = matches[1];
+		var tab = $('[data-lc="'+languageCode+'"]');
+		// the following will only work after accordion is initialized
+		var index = $('.jquery-ui-accordion div.ui-accordion-header').index(tab);
+		if (index !== -1) {
+		    $(".jquery-ui-accordion").accordion({ active: index });
+		}
+	    }
+	}
+    };
+
+    var setupTimeago = function() {
+        jQuery("time.timeago").timeago();
     };
 
     var setupTabs = function() {
@@ -170,6 +230,7 @@ Reflex in other languages:
         // set up UI tabs on page
         setupTabs();
         setupAccordions();
+        setupTimeago();
 
         // mark current collection (filled in by Jekyll)
         Collections.listing['_current'] = 'en-feat';
@@ -195,7 +256,7 @@ Reflex in other languages:
 
       <div id="footer">
 	  <p class="footer-text">&copy; 2014 
-	    <a href="http://universaldependencies.github.io/docs/introduction.html#contributors" style="color:gray">Universal Dependencies contributors</a>. 
+	    <a href="http://universaldependencies.org/introduction.html#contributors" style="color:gray">Universal Dependencies contributors</a>. 
 	    Site powered by <a href="http://spyysalo.github.io/annodoc" style="color:gray">Annodoc</a> and <a href="http://brat.nlplab.org/" style="color:gray">brat</a></p>.
       </div>
     </div>

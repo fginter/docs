@@ -11,6 +11,7 @@
     <link rel="stylesheet" type="text/css" href="../../css/style-vis.css"/>
     <link rel="stylesheet" type="text/css" href="../../css/hint.css"/>
     <script type="text/javascript" src="../../lib/ext/head.load.min.js"></script>
+    <script type="text/javascript" src="../../lib/ext/jquery.timeago.js.js"></script>
 <!--     <link rel="shortcut icon" href="favicon.ico"/> -->
 
 
@@ -20,8 +21,8 @@
 
       <div id="hp-header">
 	
-          <span class="header-text"><a href="http://universaldependencies.github.io/docs/#language-hu">home</a></span>
-          <span class="header-text"><a href="http://universaldependencies.github.io/docs/hu/feat">hu/feat</a></span>
+          <span class="header-text"><a href="http://universaldependencies.org/#language-hu">home</a></span>
+          <span class="header-text"><a href="http://universaldependencies.org/hu/feat">hu/feat</a></span>
           <span class="header-text"><a href="https://github.com/universaldependencies/docs/edit/pages-source/_hu-feat/VerbForm.md" target="#">edit page</a></span>
           <span class="header-text"><a href="https://github.com/universaldependencies/docs/issues">issue tracker</a></span>
       </div>
@@ -49,6 +50,100 @@
 
 <!-- "automatic stats" -->
 
+
+
+
+
+
+<hr />
+
+<h2 id="treebank-statistics-udhungarian">Treebank Statistics (UD_Hungarian)</h2>
+
+<p>This feature is universal but the values <code>PartFut</code>, <code>PartPast</code>, <code>PartPres</code> are language-specific.
+It occurs with 6 different values: <code>Fin</code>, <code>Inf</code>, <code>PartFut</code>, <code>PartPast</code>, <code>PartPres</code>, <code>Trans</code>.</p>
+
+<p>3294 tokens (12%) have a non-empty value of <code>VerbForm</code>.
+2120 types (22%) occur at least once with a non-empty value of <code>VerbForm</code>.
+1320 lemmas (21%) occur at least once with a non-empty value of <code>VerbForm</code>.
+The feature is used with 3 part-of-speech tags: <a href="">hu-pos/VERB</a> (2593; 10% instances), <a href="">hu-pos/ADJ</a> (651; 2% instances), <a href="">hu-pos/ADV</a> (50; 0% instances).</p>
+
+<h3 id="verb"><code>VERB</code></h3>
+
+<p>2593 <a href="">hu-pos/VERB</a> tokens (100% of all <code>VERB</code> tokens) have a non-empty value of <code>VerbForm</code>.</p>
+
+<p>The most frequent other feature values with which <code>VERB</code> and <code>VerbForm</code> co-occurred: <tt><a href="Voice.html">Voice</a>=Act</tt> (2552; 98%), <tt><a href="Person.html">Person</a>=3</tt> (2213; 85%), <tt><a href="Mood.html">Mood</a>=Ind</tt> (2027; 78%), <tt><a href="Number.html">Number</a>=Sing</tt> (1755; 68%), <tt><a href="Definite.html">Definite</a>=Ind</tt> (1495; 58%).</p>
+
+<p><code>VERB</code> tokens may have the following values of <code>VerbForm</code>:</p>
+
+<ul>
+  <li><code>Fin</code> (2374; 92% of non-empty <code>VerbForm</code>): <em>volt, kell, van, lehet, mondta, elmondta, lesz, lenne, jelentette, kellene</em></li>
+  <li><code>Inf</code> (219; 8% of non-empty <code>VerbForm</code>): <em>tartani, tudni, látni, számítani, rendezni, tenni, beszélni, elfogadni, elindulni, elkerülni</em></li>
+</ul>
+
+<table>
+  <tr><th>Paradigm <i>lesz</i></th><th><tt>Fin</tt></th><th><tt>Inf</tt></th></tr>
+  <tr><td><tt><a href="Definite.html">Definite</a>=Ind|<a href="Mood.html">Mood</a>=Cnd,Pot|<a href="Number.html">Number</a>=Sing|<a href="Person.html">Person</a>=3|<a href="Tense.html">Tense</a>=Pres</tt></td><td><em>lehetne</em></td><td></td></tr>
+  <tr><td><tt><a href="Definite.html">Definite</a>=Ind|<a href="Mood.html">Mood</a>=Cnd|<a href="Number.html">Number</a>=Sing|<a href="Person.html">Person</a>=3|<a href="Tense.html">Tense</a>=Pres</tt></td><td><em>lenne</em></td><td></td></tr>
+  <tr><td><tt><a href="Definite.html">Definite</a>=Ind|<a href="Mood.html">Mood</a>=Cnd|<a href="Number.html">Number</a>=Plur|<a href="Person.html">Person</a>=3|<a href="Tense.html">Tense</a>=Pres</tt></td><td><em>lennének</em></td><td></td></tr>
+  <tr><td><tt><a href="Definite.html">Definite</a>=Ind|<a href="Mood.html">Mood</a>=Imp,Pot|<a href="Number.html">Number</a>=Sing|<a href="Person.html">Person</a>=3|<a href="Tense.html">Tense</a>=Pres</tt></td><td><em>lehessen</em></td><td></td></tr>
+  <tr><td><tt><a href="Definite.html">Definite</a>=Ind|<a href="Mood.html">Mood</a>=Imp|<a href="Number.html">Number</a>=Sing|<a href="Person.html">Person</a>=1|<a href="Tense.html">Tense</a>=Pres</tt></td><td><em>legyek</em></td><td></td></tr>
+  <tr><td><tt><a href="Definite.html">Definite</a>=Ind|<a href="Mood.html">Mood</a>=Imp|<a href="Number.html">Number</a>=Sing|<a href="Person.html">Person</a>=3|<a href="Tense.html">Tense</a>=Pres</tt></td><td><em>legyen</em></td><td></td></tr>
+  <tr><td><tt><a href="Definite.html">Definite</a>=Ind|<a href="Mood.html">Mood</a>=Imp|<a href="Number.html">Number</a>=Plur|<a href="Person.html">Person</a>=3|<a href="Tense.html">Tense</a>=Pres</tt></td><td><em>legyenek</em></td><td></td></tr>
+  <tr><td><tt><a href="Definite.html">Definite</a>=Ind|<a href="Mood.html">Mood</a>=Ind|<a href="Number.html">Number</a>=Sing|<a href="Person.html">Person</a>=1|<a href="Tense.html">Tense</a>=Past</tt></td><td><em>lettem</em></td><td></td></tr>
+  <tr><td><tt><a href="Definite.html">Definite</a>=Ind|<a href="Mood.html">Mood</a>=Ind|<a href="Number.html">Number</a>=Sing|<a href="Person.html">Person</a>=1|<a href="Tense.html">Tense</a>=Pres</tt></td><td><em>leszek</em></td><td></td></tr>
+  <tr><td><tt><a href="Definite.html">Definite</a>=Ind|<a href="Mood.html">Mood</a>=Ind|<a href="Number.html">Number</a>=Sing|<a href="Person.html">Person</a>=3|<a href="Tense.html">Tense</a>=Past</tt></td><td><em>lett</em></td><td></td></tr>
+  <tr><td><tt><a href="Definite.html">Definite</a>=Ind|<a href="Mood.html">Mood</a>=Ind|<a href="Number.html">Number</a>=Sing|<a href="Person.html">Person</a>=3|<a href="Tense.html">Tense</a>=Pres</tt></td><td><em>lesz</em></td><td></td></tr>
+  <tr><td><tt><a href="Definite.html">Definite</a>=Ind|<a href="Mood.html">Mood</a>=Ind|<a href="Number.html">Number</a>=Plur|<a href="Person.html">Person</a>=1|<a href="Tense.html">Tense</a>=Pres</tt></td><td><em>leszünk</em></td><td></td></tr>
+  <tr><td><tt><a href="Definite.html">Definite</a>=Ind|<a href="Mood.html">Mood</a>=Ind|<a href="Number.html">Number</a>=Plur|<a href="Person.html">Person</a>=3|<a href="Tense.html">Tense</a>=Pres</tt></td><td><em>lesznek</em></td><td></td></tr>
+  <tr><td><tt><a href="Definite.html">Definite</a>=Ind|<a href="Mood.html">Mood</a>=Pot|<a href="Number.html">Number</a>=Sing|<a href="Person.html">Person</a>=3|<a href="Tense.html">Tense</a>=Pres</tt></td><td><em>lehet</em></td><td></td></tr>
+  <tr><td><tt></tt></td><td></td><td><em>lenni</em></td></tr>
+</table>
+
+<h3 id="adj"><code>ADJ</code></h3>
+
+<p>651 <a href="">hu-pos/ADJ</a> tokens (20% of all <code>ADJ</code> tokens) have a non-empty value of <code>VerbForm</code>.</p>
+
+<p>The most frequent other feature values with which <code>ADJ</code> and <code>VerbForm</code> co-occurred: <tt><a href="Degree.html">Degree</a>=EMPTY</tt> (651; 100%), <tt><a href="Number[psed].html">Number[psed]</a>=None</tt> (651; 100%), <tt><a href="Number[psor].html">Number[psor]</a>=None</tt> (649; 100%), <tt><a href="Person[psor].html">Person[psor]</a>=None</tt> (649; 100%), <tt><a href="Number.html">Number</a>=Sing</tt> (630; 97%), <tt><a href="Case.html">Case</a>=Nom</tt> (580; 89%).</p>
+
+<p><code>ADJ</code> tokens may have the following values of <code>VerbForm</code>:</p>
+
+<ul>
+  <li><code>PartFut</code> (8; 1% of non-empty <code>VerbForm</code>): <em>adandó, befejezendő, benyújtandó, elkövetkezendő, letöltendő, nyújtandó, operálandó, tartandó</em></li>
+  <li><code>PartPast</code> (291; 45% of non-empty <code>VerbForm</code>): <em>elmúlt, készült, elkövetett, kiemelt, készített, megbízott, megjelent, tervezett, elakadt, elfogadott</em></li>
+  <li><code>PartPres</code> (352; 54% of non-empty <code>VerbForm</code>): <em>jövő, következő, követően, való, várható, várhatóan, lehetővé, látható, szóló, vezető</em></li>
+  <li><code>EMPTY</code> (2646): <em>magyar, első, új, című, orosz, nagy, olyan, egész, cseh, jó</em></li>
+</ul>
+
+<p><code>VerbForm</code> seems to be <strong>lexical feature</strong> of <code>ADJ</code>. 100% lemmas (400) occur only with one value of <code>VerbForm</code>.</p>
+
+<h3 id="adv"><code>ADV</code></h3>
+
+<p>50 <a href="">hu-pos/ADV</a> tokens (2% of all <code>ADV</code> tokens) have a non-empty value of <code>VerbForm</code>.</p>
+
+<p>The most frequent other feature values with which <code>ADV</code> and <code>VerbForm</code> co-occurred: <tt><a href="PronType.html">PronType</a>=EMPTY</tt> (50; 100%).</p>
+
+<p><code>ADV</code> tokens may have the following values of <code>VerbForm</code>:</p>
+
+<ul>
+  <li><code>Trans</code> (50; 100% of non-empty <code>VerbForm</code>): <em>hivatkozva, írva, mondván, nyilatkozva, zárva, biztosítva, csúszkálva, elfoglalva, elhatárolódva, emlékezve</em></li>
+  <li><code>EMPTY</code> (1974): <em>nem, már, még, csak, el, ki, is, úgy, fel, ma</em></li>
+</ul>
+
+<p><code>VerbForm</code> seems to be <strong>lexical feature</strong> of <code>ADV</code>. 100% lemmas (40) occur only with one value of <code>VerbForm</code>.</p>
+
+<h2 id="relations-with-agreement-in-verbform">Relations with Agreement in <code>VerbForm</code></h2>
+
+<p>The 10 most frequent relations where parent and child node agree in <code>VerbForm</code>:
+<tt>VERB –[<a href="../dep/conj.html">conj</a>]–&gt; VERB</tt> (381; 98%),
+<tt>VERB –[<a href="../dep/ccomp:obj.html">ccomp:obj</a>]–&gt; VERB</tt> (162; 98%),
+<tt>VERB –[<a href="../dep/advcl.html">advcl</a>]–&gt; VERB</tt> (152; 99%),
+<tt>VERB –[<a href="../dep/ccomp:obl.html">ccomp:obl</a>]–&gt; VERB</tt> (64; 94%),
+<tt>VERB –[<a href="../dep/parataxis.html">parataxis</a>]–&gt; VERB</tt> (43; 98%),
+<tt>VERB –[<a href="../dep/csubj.html">csubj</a>]–&gt; VERB</tt> (39; 100%),
+<tt>VERB –[<a href="../dep/acl.html">acl</a>]–&gt; VERB</tt> (4; 100%),
+<tt>VERB –[<a href="../dep/nmod.html">nmod</a>]–&gt; VERB</tt> (1; 100%),
+<tt>ADV –[<a href="../dep/conj.html">conj</a>]–&gt; ADV</tt> (1; 100%),
+<tt>VERB –[<a href="../dep/remnant.html">remnant</a>]–&gt; VERB</tt> (1; 100%).</p>
 
 
 
@@ -107,6 +202,7 @@ VerbForm in other languages:
         root + 'lib/ext/jquery.min.js',
         root + 'lib/ext/jquery.svg.min.js',
         root + 'lib/ext/jquery.svgdom.min.js',
+        root + 'lib/ext/jquery.timeago.js',
         root + 'lib/ext/jquery-ui.min.js',
         root + 'lib/ext/waypoints.min.js',
         root + 'lib/ext/jquery.address.min.js',
@@ -138,11 +234,40 @@ VerbForm in other languages:
     ];
 
     var setupAccordions = function() {
-        // standard jQuery UI "accordion" element initialization
+	// preserve state in URL hash, following in part
+	// http://www.boduch.ca/2011/05/remembering-jquery-ui-accordion.html
+	var accordionChange = function(event, ui) {
+	    var context = ui.newHeader ? ui.newHeader.context : null;
+	    if (context) {
+		var languageCode = context.getAttribute('data-lc');
+		if (languageCode !== null) {
+		    window.location.hash = languageCode;
+		}
+	    }
+	}
+        // jQuery UI "accordion" element initialization
 	$(".jquery-ui-accordion").accordion({
 	    collapsible: true,
-	    active: false
+	    active: false,
+	    change: accordionChange
 	});
+	if ($(".jquery-ui-accordion").length) {
+	    var matches = window.location.hash.match(/^\#(.*)$/);
+	    console.log(matches);
+	    if (matches !== null) {
+		var languageCode = matches[1];
+		var tab = $('[data-lc="'+languageCode+'"]');
+		// the following will only work after accordion is initialized
+		var index = $('.jquery-ui-accordion div.ui-accordion-header').index(tab);
+		if (index !== -1) {
+		    $(".jquery-ui-accordion").accordion({ active: index });
+		}
+	    }
+	}
+    };
+
+    var setupTimeago = function() {
+        jQuery("time.timeago").timeago();
     };
 
     var setupTabs = function() {
@@ -166,6 +291,7 @@ VerbForm in other languages:
         // set up UI tabs on page
         setupTabs();
         setupAccordions();
+        setupTimeago();
 
         // mark current collection (filled in by Jekyll)
         Collections.listing['_current'] = 'hu-feat';
@@ -191,7 +317,7 @@ VerbForm in other languages:
 
       <div id="footer">
 	  <p class="footer-text">&copy; 2014 
-	    <a href="http://universaldependencies.github.io/docs/introduction.html#contributors" style="color:gray">Universal Dependencies contributors</a>. 
+	    <a href="http://universaldependencies.org/introduction.html#contributors" style="color:gray">Universal Dependencies contributors</a>. 
 	    Site powered by <a href="http://spyysalo.github.io/annodoc" style="color:gray">Annodoc</a> and <a href="http://brat.nlplab.org/" style="color:gray">brat</a></p>.
       </div>
     </div>

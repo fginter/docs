@@ -11,6 +11,7 @@
     <link rel="stylesheet" type="text/css" href="../../css/style-vis.css"/>
     <link rel="stylesheet" type="text/css" href="../../css/hint.css"/>
     <script type="text/javascript" src="../../lib/ext/head.load.min.js"></script>
+    <script type="text/javascript" src="../../lib/ext/jquery.timeago.js.js"></script>
 <!--     <link rel="shortcut icon" href="favicon.ico"/> -->
 
 
@@ -20,8 +21,8 @@
 
       <div id="hp-header">
 	
-          <span class="header-text"><a href="http://universaldependencies.github.io/docs/#language-ta">home</a></span>
-          <span class="header-text"><a href="http://universaldependencies.github.io/docs/ta/dep">ta/dep</a></span>
+          <span class="header-text"><a href="http://universaldependencies.org/#language-ta">home</a></span>
+          <span class="header-text"><a href="http://universaldependencies.org/ta/dep">ta/dep</a></span>
           <span class="header-text"><a href="https://github.com/universaldependencies/docs/edit/pages-source/_ta-dep/nsubjpass.md" target="#">edit page</a></span>
           <span class="header-text"><a href="https://github.com/universaldependencies/docs/issues">issue tracker</a></span>
       </div>
@@ -45,6 +46,43 @@ for <code>nsubjpass</code>.</p>
 <!-- "automatic stats" -->
 
 
+
+
+
+
+
+<hr />
+
+<h2 id="treebank-statistics-udtamil">Treebank Statistics (UD_Tamil)</h2>
+
+<p>This relation is universal.</p>
+
+<p>1 nodes (0%) are attached to their parents as <code>nsubjpass</code>.</p>
+
+<p>1 instances of <code>nsubjpass</code> (100%) are right-to-left (child precedes parent).
+Average distance between parent and child is 2.</p>
+
+<p>The following 1 pairs of parts of speech are connected with <code>nsubjpass</code>: <a href="">ta-pos/AUX</a>-<a href="">ta-pos/NOUN</a> (1; 100% instances).</p>
+
+<pre><code class="language-conllu"># visual-style 9	bgColor:blue
+# visual-style 9	fgColor:white
+# visual-style 11	bgColor:blue
+# visual-style 11	fgColor:white
+# visual-style 11 9 nsubjpass	color:blue
+1	உருக்கு	உருக்கு	NOUN	NNN-3SN--	Case=Nom|Gender=Neut|Number=Sing|Person=3	3	nmod	_	Translit=urukku
+2	நிறுவன	நிறுவனம்	PROPN	NO--3SN--	Gender=Neut|Number=Sing|Person=3	3	nmod	_	Translit=niruvana
+3	வளர்ச்சி	வளர்ச்சி	NOUN	NNN-3SN--	Case=Nom|Gender=Neut|Number=Sing|Person=3	8	dobj	_	Translit=vaḷarcci
+4	மற்றும்	மற்றும்	CONJ	CC-------	_	3	cc	_	Translit=marrum
+5	இத்தொழிலில்	தொழில்	NOUN	NNL-3SN--	Case=Loc|Gender=Neut|Number=Sing|Person=3	7	nmod	_	Translit=ittolilil
+6	மிட்டலின்	மிட்டல்	PROPN	NEG-3SN--	Case=Gen|Gender=Neut|Number=Sing|Person=3	7	nmod	_	Translit=miṭṭalin
+7	பங்களிப்பைப்	பங்களிப்பு	NOUN	NNA-3SN--	Case=Acc|Gender=Neut|Number=Sing|Person=3	3	conj	_	Translit=paṅkaḷippaip
+8	பாராட்டி	பாராட்டு	VERB	Vt-T---AA	Negative=Pos|VerbForm=Part|Voice=Act	10	advcl	_	Translit=pārāṭṭi
+9	இவ்விருது	விருது	NOUN	NNN-3SN--	Case=Nom|Gender=Neut|Number=Sing|Person=3	11	nsubjpass	_	Translit=ivvirutu
+10	வழங்கப்	வழங்கு	VERB	Vu-T---AA	Negative=Pos|VerbForm=Inf|Voice=Act	11	advcl	_	Translit=valaṅkap
+11	பட்டது	படு	AUX	VZND3SNPA	Case=Nom|Gender=Neut|Negative=Pos|Number=Sing|Person=3|Tense=Past|VerbForm=Ger|Voice=Pass	0	root	_	SpaceAfter=No|Translit=paṭṭatu
+12	.	.	PUNCT	Z#-------	PunctType=Peri	11	punct	_	Translit=.
+
+</code></pre>
 
 
 
@@ -101,6 +139,7 @@ nsubjpass in other languages:
         root + 'lib/ext/jquery.min.js',
         root + 'lib/ext/jquery.svg.min.js',
         root + 'lib/ext/jquery.svgdom.min.js',
+        root + 'lib/ext/jquery.timeago.js',
         root + 'lib/ext/jquery-ui.min.js',
         root + 'lib/ext/waypoints.min.js',
         root + 'lib/ext/jquery.address.min.js',
@@ -132,11 +171,40 @@ nsubjpass in other languages:
     ];
 
     var setupAccordions = function() {
-        // standard jQuery UI "accordion" element initialization
+	// preserve state in URL hash, following in part
+	// http://www.boduch.ca/2011/05/remembering-jquery-ui-accordion.html
+	var accordionChange = function(event, ui) {
+	    var context = ui.newHeader ? ui.newHeader.context : null;
+	    if (context) {
+		var languageCode = context.getAttribute('data-lc');
+		if (languageCode !== null) {
+		    window.location.hash = languageCode;
+		}
+	    }
+	}
+        // jQuery UI "accordion" element initialization
 	$(".jquery-ui-accordion").accordion({
 	    collapsible: true,
-	    active: false
+	    active: false,
+	    change: accordionChange
 	});
+	if ($(".jquery-ui-accordion").length) {
+	    var matches = window.location.hash.match(/^\#(.*)$/);
+	    console.log(matches);
+	    if (matches !== null) {
+		var languageCode = matches[1];
+		var tab = $('[data-lc="'+languageCode+'"]');
+		// the following will only work after accordion is initialized
+		var index = $('.jquery-ui-accordion div.ui-accordion-header').index(tab);
+		if (index !== -1) {
+		    $(".jquery-ui-accordion").accordion({ active: index });
+		}
+	    }
+	}
+    };
+
+    var setupTimeago = function() {
+        jQuery("time.timeago").timeago();
     };
 
     var setupTabs = function() {
@@ -160,6 +228,7 @@ nsubjpass in other languages:
         // set up UI tabs on page
         setupTabs();
         setupAccordions();
+        setupTimeago();
 
         // mark current collection (filled in by Jekyll)
         Collections.listing['_current'] = 'ta-dep';
@@ -185,7 +254,7 @@ nsubjpass in other languages:
 
       <div id="footer">
 	  <p class="footer-text">&copy; 2014 
-	    <a href="http://universaldependencies.github.io/docs/introduction.html#contributors" style="color:gray">Universal Dependencies contributors</a>. 
+	    <a href="http://universaldependencies.org/introduction.html#contributors" style="color:gray">Universal Dependencies contributors</a>. 
 	    Site powered by <a href="http://spyysalo.github.io/annodoc" style="color:gray">Annodoc</a> and <a href="http://brat.nlplab.org/" style="color:gray">brat</a></p>.
       </div>
     </div>

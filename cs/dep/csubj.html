@@ -11,6 +11,7 @@
     <link rel="stylesheet" type="text/css" href="../../css/style-vis.css"/>
     <link rel="stylesheet" type="text/css" href="../../css/hint.css"/>
     <script type="text/javascript" src="../../lib/ext/head.load.min.js"></script>
+    <script type="text/javascript" src="../../lib/ext/jquery.timeago.js.js"></script>
 <!--     <link rel="shortcut icon" href="favicon.ico"/> -->
 
 
@@ -20,8 +21,8 @@
 
       <div id="hp-header">
 	
-          <span class="header-text"><a href="http://universaldependencies.github.io/docs/#language-cs">home</a></span>
-          <span class="header-text"><a href="http://universaldependencies.github.io/docs/cs/dep">cs/dep</a></span>
+          <span class="header-text"><a href="http://universaldependencies.org/#language-cs">home</a></span>
+          <span class="header-text"><a href="http://universaldependencies.org/cs/dep">cs/dep</a></span>
           <span class="header-text"><a href="https://github.com/universaldependencies/docs/edit/pages-source/_cs-dep/csubj.md" target="#">edit page</a></span>
           <span class="header-text"><a href="https://github.com/universaldependencies/docs/issues">issue tracker</a></span>
       </div>
@@ -60,6 +61,72 @@ cop(The-essence, is)
 <!-- "automatic stats" -->
 
 
+
+
+
+
+
+<hr />
+
+<h2 id="treebank-statistics-udczech">Treebank Statistics (UD_Czech)</h2>
+
+<p>This relation is universal.</p>
+
+<p>6217 nodes (0%) are attached to their parents as <code>csubj</code>.</p>
+
+<p>5643 instances of <code>csubj</code> (91%) are left-to-right (parent precedes child).
+Average distance between parent and child is 4.71529676692939.</p>
+
+<p>The following 25 pairs of parts of speech are connected with <code>csubj</code>: <a href="">cs-pos/VERB</a>-<a href="">cs-pos/VERB</a> (3133; 50% instances), <a href="">cs-pos/ADJ</a>-<a href="">cs-pos/VERB</a> (1962; 32% instances), <a href="">cs-pos/NOUN</a>-<a href="">cs-pos/VERB</a> (691; 11% instances), <a href="">cs-pos/VERB</a>-<a href="">cs-pos/ADJ</a> (99; 2% instances), <a href="">cs-pos/VERB</a>-<a href="">cs-pos/NOUN</a> (70; 1% instances), <a href="">cs-pos/ADV</a>-<a href="">cs-pos/VERB</a> (61; 1% instances), <a href="">cs-pos/ADJ</a>-<a href="">cs-pos/ADJ</a> (59; 1% instances), <a href="">cs-pos/NUM</a>-<a href="">cs-pos/VERB</a> (33; 1% instances), <a href="">cs-pos/ADJ</a>-<a href="">cs-pos/NOUN</a> (25; 0% instances), <a href="">cs-pos/NOUN</a>-<a href="">cs-pos/ADJ</a> (22; 0% instances), <a href="">cs-pos/PRON</a>-<a href="">cs-pos/VERB</a> (19; 0% instances), <a href="">cs-pos/NOUN</a>-<a href="">cs-pos/NOUN</a> (15; 0% instances), <a href="">cs-pos/VERB</a>-<a href="">cs-pos/PRON</a> (7; 0% instances), <a href="">cs-pos/PRON</a>-<a href="">cs-pos/NOUN</a> (3; 0% instances), <a href="">cs-pos/VERB</a>-<a href="">cs-pos/ADV</a> (3; 0% instances), <a href="">cs-pos/ADJ</a>-<a href="">cs-pos/ADV</a> (2; 0% instances), <a href="">cs-pos/ADJ</a>-<a href="">cs-pos/DET</a> (2; 0% instances), <a href="">cs-pos/ADV</a>-<a href="">cs-pos/NOUN</a> (2; 0% instances), <a href="">cs-pos/VERB</a>-<a href="">cs-pos/NUM</a> (2; 0% instances), <a href="">cs-pos/VERB</a>-<a href="">cs-pos/PROPN</a> (2; 0% instances), <a href="">cs-pos/ADJ</a>-<a href="">cs-pos/NUM</a> (1; 0% instances), <a href="">cs-pos/ADJ</a>-<a href="">cs-pos/PROPN</a> (1; 0% instances), <a href="">cs-pos/ADV</a>-<a href="">cs-pos/ADJ</a> (1; 0% instances), <a href="">cs-pos/NOUN</a>-<a href="">cs-pos/ADV</a> (1; 0% instances), <a href="">cs-pos/NOUN</a>-<a href="">cs-pos/PRON</a> (1; 0% instances).</p>
+
+<pre><code class="language-conllu"># visual-style 4	bgColor:blue
+# visual-style 4	fgColor:white
+# visual-style 3	bgColor:blue
+# visual-style 3	fgColor:white
+# visual-style 3 4 csubj	color:blue
+1	Přesto	přesto	ADV	Dg-------1A----	Degree=Pos|Negative=Pos	3	cc	_	_
+2	však	však	CONJ	J^-------------	_	3	cc	_	_
+3	lze	lze	VERB	VB-S---3P-AA---	Mood=Ind|Negative=Pos|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	0	root	_	_
+4	zaznamenat	zaznamenat	VERB	Vf--------A----	Aspect=Perf|Negative=Pos|VerbForm=Inf	3	csubj	_	_
+5	v	v	ADP	RR--6----------	AdpType=Prep|Case=Loc	6	case	_	LId=v-1
+6	podniku	podnik	NOUN	NNIS6-----A----	Animacy=Inan|Case=Loc|Gender=Masc|Negative=Pos|Number=Sing	3	nmod	_	_
+7	citelné	citelný	ADJ	AAFP4----1A----	Case=Acc|Degree=Pos|Gender=Fem|Negative=Pos|Number=Plur	8	amod	_	_
+8	změny	změna	NOUN	NNFP4-----A----	Case=Acc|Gender=Fem|Negative=Pos|Number=Plur	4	dobj	_	SpaceAfter=No
+9	.	.	PUNCT	Z:-------------	_	3	punct	_	_
+
+</code></pre>
+
+<pre><code class="language-conllu"># visual-style 9	bgColor:blue
+# visual-style 9	fgColor:white
+# visual-style 6	bgColor:blue
+# visual-style 6	fgColor:white
+# visual-style 6 9 csubj	color:blue
+1	Změny	změna	NOUN	NNFP1-----A----	Case=Nom|Gender=Fem|Negative=Pos|Number=Plur	3	nsubj	_	_
+2	jsou	být	VERB	VB-P---3P-AA---	Mood=Ind|Negative=Pos|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	3	cop	_	_
+3	citelné	citelný	ADJ	AAFP1----1A----	Case=Nom|Degree=Pos|Gender=Fem|Negative=Pos|Number=Plur	0	root	_	SpaceAfter=No
+4	,	,	PUNCT	Z:-------------	_	3	punct	_	_
+5	je	být	VERB	VB-S---3P-AA---	Mood=Ind|Negative=Pos|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	6	cop	_	_
+6	třeba	třeba	ADJ	ACNS------A----	Gender=Neut|Negative=Pos|Number=Sing|Variant=Short	3	conj	_	LId=třeba-1
+7	je	on	PRON	PPXP4--3-------	Case=Acc|Number=Plur|Person=3|PronType=Prs	9	dobj	_	LId=on-1|LGloss=(oni/ono)
+8	lépe	dobře	ADV	Dg-------2A----	Degree=Cmp|Negative=Pos	9	advmod	_	_
+9	prezentovat	prezentovat	VERB	Vf--------A----	Negative=Pos|VerbForm=Inf	6	csubj	_	_
+
+</code></pre>
+
+<pre><code class="language-conllu"># visual-style 1	bgColor:blue
+# visual-style 1	fgColor:white
+# visual-style 7	bgColor:blue
+# visual-style 7	fgColor:white
+# visual-style 7 1 csubj	color:blue
+1	Stavět	stavět	VERB	Vf--------A----	Aspect=Imp|Negative=Pos|VerbForm=Inf	7	csubj	_	_
+2	vlastní	vlastní	ADJ	AAFS4----1A----	Case=Acc|Degree=Pos|Gender=Fem|Negative=Pos|Number=Sing	3	amod	_	LId=vlastní-1|LGloss=(příslušný_k_něčemu)
+3	výtopnu	výtopna	NOUN	NNFS4-----A----	Case=Acc|Gender=Fem|Negative=Pos|Number=Sing	1	dobj	_	_
+4	je	být	VERB	VB-S---3P-AA---	Mood=Ind|Negative=Pos|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	7	cop	_	_
+5	prozatím	prozatím	ADV	Db-------------	_	7	advmod	_	_
+6	patrně	patrně	ADV	Dg-------1A----	Degree=Pos|Negative=Pos	7	cc	_	LDeriv=patrný
+7	risk	risk	NOUN	NNIS1-----A----	Animacy=Inan|Case=Nom|Gender=Masc|Negative=Pos|Number=Sing	0	root	_	_
+
+</code></pre>
 
 
 
@@ -118,6 +185,7 @@ csubj in other languages:
         root + 'lib/ext/jquery.min.js',
         root + 'lib/ext/jquery.svg.min.js',
         root + 'lib/ext/jquery.svgdom.min.js',
+        root + 'lib/ext/jquery.timeago.js',
         root + 'lib/ext/jquery-ui.min.js',
         root + 'lib/ext/waypoints.min.js',
         root + 'lib/ext/jquery.address.min.js',
@@ -149,11 +217,40 @@ csubj in other languages:
     ];
 
     var setupAccordions = function() {
-        // standard jQuery UI "accordion" element initialization
+	// preserve state in URL hash, following in part
+	// http://www.boduch.ca/2011/05/remembering-jquery-ui-accordion.html
+	var accordionChange = function(event, ui) {
+	    var context = ui.newHeader ? ui.newHeader.context : null;
+	    if (context) {
+		var languageCode = context.getAttribute('data-lc');
+		if (languageCode !== null) {
+		    window.location.hash = languageCode;
+		}
+	    }
+	}
+        // jQuery UI "accordion" element initialization
 	$(".jquery-ui-accordion").accordion({
 	    collapsible: true,
-	    active: false
+	    active: false,
+	    change: accordionChange
 	});
+	if ($(".jquery-ui-accordion").length) {
+	    var matches = window.location.hash.match(/^\#(.*)$/);
+	    console.log(matches);
+	    if (matches !== null) {
+		var languageCode = matches[1];
+		var tab = $('[data-lc="'+languageCode+'"]');
+		// the following will only work after accordion is initialized
+		var index = $('.jquery-ui-accordion div.ui-accordion-header').index(tab);
+		if (index !== -1) {
+		    $(".jquery-ui-accordion").accordion({ active: index });
+		}
+	    }
+	}
+    };
+
+    var setupTimeago = function() {
+        jQuery("time.timeago").timeago();
     };
 
     var setupTabs = function() {
@@ -177,6 +274,7 @@ csubj in other languages:
         // set up UI tabs on page
         setupTabs();
         setupAccordions();
+        setupTimeago();
 
         // mark current collection (filled in by Jekyll)
         Collections.listing['_current'] = 'cs-dep';
@@ -202,7 +300,7 @@ csubj in other languages:
 
       <div id="footer">
 	  <p class="footer-text">&copy; 2014 
-	    <a href="http://universaldependencies.github.io/docs/introduction.html#contributors" style="color:gray">Universal Dependencies contributors</a>. 
+	    <a href="http://universaldependencies.org/introduction.html#contributors" style="color:gray">Universal Dependencies contributors</a>. 
 	    Site powered by <a href="http://spyysalo.github.io/annodoc" style="color:gray">Annodoc</a> and <a href="http://brat.nlplab.org/" style="color:gray">brat</a></p>.
       </div>
     </div>

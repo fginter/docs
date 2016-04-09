@@ -11,6 +11,7 @@
     <link rel="stylesheet" type="text/css" href="../../css/style-vis.css"/>
     <link rel="stylesheet" type="text/css" href="../../css/hint.css"/>
     <script type="text/javascript" src="../../lib/ext/head.load.min.js"></script>
+    <script type="text/javascript" src="../../lib/ext/jquery.timeago.js.js"></script>
 <!--     <link rel="shortcut icon" href="favicon.ico"/> -->
 
 
@@ -20,8 +21,8 @@
 
       <div id="hp-header">
 	
-          <span class="header-text"><a href="http://universaldependencies.github.io/docs/#language-bg">home</a></span>
-          <span class="header-text"><a href="http://universaldependencies.github.io/docs/bg/dep">bg/dep</a></span>
+          <span class="header-text"><a href="http://universaldependencies.org/#language-bg">home</a></span>
+          <span class="header-text"><a href="http://universaldependencies.org/bg/dep">bg/dep</a></span>
           <span class="header-text"><a href="https://github.com/universaldependencies/docs/edit/pages-source/_bg-dep/nummod.md" target="#">edit page</a></span>
           <span class="header-text"><a href="https://github.com/universaldependencies/docs/issues">issue tracker</a></span>
       </div>
@@ -69,6 +70,75 @@ det(poems, many)
 <!-- "automatic stats" -->
 
 
+
+
+
+
+
+<hr />
+
+<h2 id="treebank-statistics-udbulgarian">Treebank Statistics (UD_Bulgarian)</h2>
+
+<p>This relation is universal.</p>
+
+<p>1723 nodes (1%) are attached to their parents as <code>nummod</code>.</p>
+
+<p>1578 instances of <code>nummod</code> (92%) are right-to-left (child precedes parent).
+Average distance between parent and child is 1.18165989553105.</p>
+
+<p>The following 3 pairs of parts of speech are connected with <code>nummod</code>: <a href="">bg-pos/NOUN</a>-<a href="">bg-pos/NUM</a> (1679; 97% instances), <a href="">bg-pos/PROPN</a>-<a href="">bg-pos/NUM</a> (41; 2% instances), <a href="">bg-pos/PRON</a>-<a href="">bg-pos/NUM</a> (3; 0% instances).</p>
+
+<pre><code class="language-conllu"># visual-style 1	bgColor:blue
+# visual-style 1	fgColor:white
+# visual-style 2	bgColor:blue
+# visual-style 2	fgColor:white
+# visual-style 2 1 nummod	color:blue
+1	Двете	два	NUM	Mcfpd	Definite=Def|Gender=Fem|Number=Plur|NumType=Card	2	nummod	_	_
+2	сестри	сестра	NOUN	Ncfpi	Definite=Ind|Gender=Fem|Number=Plur	3	nsubj	_	_
+3	започнаха	започна	VERB	Vpptf-o3p	Aspect=Perf|Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin|Voice=Act	0	root	_	_
+4	да	да	PART	Tx	_	6	aux	_	_
+5	си	се	PRON	Ppxtd	Case=Dat|PronType=Prs|Reflex=Yes	6	expl	_	_
+6	шепнат	шепна	VERB	Vpitf-r3p	Aspect=Imp|Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	3	ccomp	_	_
+7	още	още	ADV	Dq	_	8	advmod	_	_
+8	по-ниско	ниско	ADV	Dm	Degree=Cmp	6	advmod	_	_
+9	.	.	PUNCT	punct	_	3	punct	_	_
+
+</code></pre>
+
+<pre><code class="language-conllu"># visual-style 10	bgColor:blue
+# visual-style 10	fgColor:white
+# visual-style 7	bgColor:blue
+# visual-style 7	fgColor:white
+# visual-style 7 10 nummod	color:blue
+1	Вземаме	вземам	VERB	Vpitf-r1p	Aspect=Imp|Mood=Ind|Number=Plur|Person=1|Tense=Pres|VerbForm=Fin|Voice=Act	0	root	_	_
+2	94	94	NUM	Mc-pi	Definite=Ind|Number=Plur|NumType=Card	3	nummod	_	_
+3	млн.	милион	NOUN	Ncmt	Gender=Masc|Number=Count	1	dobj	_	_
+4	евро	евро	NOUN	Ncnsi	Definite=Ind|Gender=Neut|Number=Sing	3	nmod	_	_
+5	заеми	заем	NOUN	Ncmpi	Definite=Ind|Gender=Masc|Number=Plur	3	nmod	_	_
+6	за	за	ADP	R	_	7	case	_	_
+7	Дунав	дунав	PROPN	Npmsi	Definite=Ind|Gender=Masc|Number=Sing	1	nmod	_	_
+8	мост	мост	NOUN	Ncmsi	Definite=Ind|Gender=Masc|Number=Sing	7	nmod	_	_
+9	-	-	PUNCT	punct	_	10	punct	_	_
+10	2	два	NUM	Mc-pi	Definite=Ind|Number=Plur|NumType=Card	7	nummod	_	_
+
+</code></pre>
+
+<pre><code class="language-conllu"># visual-style 3	bgColor:blue
+# visual-style 3	fgColor:white
+# visual-style 2	bgColor:blue
+# visual-style 2	fgColor:white
+# visual-style 2 3 nummod	color:blue
+1	-	-	PUNCT	punct	_	5	punct	_	_
+2	Ние	аз	PRON	Ppe-op1	Case=Nom|Number=Plur|Person=1|PronType=Prs	5	nsubj	_	_
+3	четиримата	четирима	NUM	Mc--d	_	2	nummod	_	_
+4	бихме	съм	AUX	Vxitu-o1p	Aspect=Imp|Mood=Cnd|Number=Plur|Person=1|VerbForm=Fin	5	aux	_	_
+5	могли	мога	VERB	Vpiicao-p-i	Aspect=Imp|Definite=Ind|Number=Plur|Tense=Past|VerbForm=Fin|Voice=Act	0	root	_	_
+6	да	да	PART	Tx	_	7	aux	_	_
+7	бъдем	бъда	VERB	Vyptf-r1p	Aspect=Perf|Mood=Ind|Number=Plur|Person=1|Tense=Pres|VerbForm=Fin|Voice=Act	5	ccomp	_	_
+8	чудесен	чудесен	ADJ	Amsi	Definite=Ind|Degree=Pos|Gender=Masc|Number=Sing	9	amod	_	_
+9	екип	екип	NOUN	Ncmsi	Definite=Ind|Gender=Masc|Number=Sing	7	dobj	_	_
+
+</code></pre>
 
 
 
@@ -127,6 +197,7 @@ nummod in other languages:
         root + 'lib/ext/jquery.min.js',
         root + 'lib/ext/jquery.svg.min.js',
         root + 'lib/ext/jquery.svgdom.min.js',
+        root + 'lib/ext/jquery.timeago.js',
         root + 'lib/ext/jquery-ui.min.js',
         root + 'lib/ext/waypoints.min.js',
         root + 'lib/ext/jquery.address.min.js',
@@ -158,11 +229,40 @@ nummod in other languages:
     ];
 
     var setupAccordions = function() {
-        // standard jQuery UI "accordion" element initialization
+	// preserve state in URL hash, following in part
+	// http://www.boduch.ca/2011/05/remembering-jquery-ui-accordion.html
+	var accordionChange = function(event, ui) {
+	    var context = ui.newHeader ? ui.newHeader.context : null;
+	    if (context) {
+		var languageCode = context.getAttribute('data-lc');
+		if (languageCode !== null) {
+		    window.location.hash = languageCode;
+		}
+	    }
+	}
+        // jQuery UI "accordion" element initialization
 	$(".jquery-ui-accordion").accordion({
 	    collapsible: true,
-	    active: false
+	    active: false,
+	    change: accordionChange
 	});
+	if ($(".jquery-ui-accordion").length) {
+	    var matches = window.location.hash.match(/^\#(.*)$/);
+	    console.log(matches);
+	    if (matches !== null) {
+		var languageCode = matches[1];
+		var tab = $('[data-lc="'+languageCode+'"]');
+		// the following will only work after accordion is initialized
+		var index = $('.jquery-ui-accordion div.ui-accordion-header').index(tab);
+		if (index !== -1) {
+		    $(".jquery-ui-accordion").accordion({ active: index });
+		}
+	    }
+	}
+    };
+
+    var setupTimeago = function() {
+        jQuery("time.timeago").timeago();
     };
 
     var setupTabs = function() {
@@ -186,6 +286,7 @@ nummod in other languages:
         // set up UI tabs on page
         setupTabs();
         setupAccordions();
+        setupTimeago();
 
         // mark current collection (filled in by Jekyll)
         Collections.listing['_current'] = 'bg-dep';
@@ -211,7 +312,7 @@ nummod in other languages:
 
       <div id="footer">
 	  <p class="footer-text">&copy; 2014 
-	    <a href="http://universaldependencies.github.io/docs/introduction.html#contributors" style="color:gray">Universal Dependencies contributors</a>. 
+	    <a href="http://universaldependencies.org/introduction.html#contributors" style="color:gray">Universal Dependencies contributors</a>. 
 	    Site powered by <a href="http://spyysalo.github.io/annodoc" style="color:gray">Annodoc</a> and <a href="http://brat.nlplab.org/" style="color:gray">brat</a></p>.
       </div>
     </div>

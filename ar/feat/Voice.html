@@ -11,6 +11,7 @@
     <link rel="stylesheet" type="text/css" href="../../css/style-vis.css"/>
     <link rel="stylesheet" type="text/css" href="../../css/hint.css"/>
     <script type="text/javascript" src="../../lib/ext/head.load.min.js"></script>
+    <script type="text/javascript" src="../../lib/ext/jquery.timeago.js.js"></script>
 <!--     <link rel="shortcut icon" href="favicon.ico"/> -->
 
 
@@ -20,8 +21,8 @@
 
       <div id="hp-header">
 	
-          <span class="header-text"><a href="http://universaldependencies.github.io/docs/#language-ar">home</a></span>
-          <span class="header-text"><a href="http://universaldependencies.github.io/docs/ar/feat">ar/feat</a></span>
+          <span class="header-text"><a href="http://universaldependencies.org/#language-ar">home</a></span>
+          <span class="header-text"><a href="http://universaldependencies.org/ar/feat">ar/feat</a></span>
           <span class="header-text"><a href="https://github.com/universaldependencies/docs/edit/pages-source/_ar-feat/Voice.md" target="#">edit page</a></span>
           <span class="header-text"><a href="https://github.com/universaldependencies/docs/issues">issue tracker</a></span>
       </div>
@@ -44,6 +45,62 @@ for <code>Voice</code>.</p>
 
 <!-- "automatic stats" -->
 
+
+
+
+
+
+<hr />
+
+<h2 id="treebank-statistics-udarabic">Treebank Statistics (UD_Arabic)</h2>
+
+<p>This feature is universal.
+It occurs with 2 different values: <code>Act</code>, <code>Pass</code>.</p>
+
+<p>21530 tokens (8%) have a non-empty value of <code>Voice</code>.
+4855 types (14%) occur at least once with a non-empty value of <code>Voice</code>.
+1 lemmas (0) occur at least once with a non-empty value of <code>Voice</code>.
+The feature is used with 2 part-of-speech tags: <a href="">ar-pos/VERB</a> (21490; 8% instances), <a href="">ar-pos/AUX</a> (40; 0% instances).</p>
+
+<h3 id="verb"><code>VERB</code></h3>
+
+<p>21490 <a href="">ar-pos/VERB</a> tokens (100% of all <code>VERB</code> tokens) have a non-empty value of <code>Voice</code>.</p>
+
+<p>The most frequent other feature values with which <code>VERB</code> and <code>Voice</code> co-occurred: <tt><a href="Person.html">Person</a>=3</tt> (21259; 99%), <tt><a href="Number.html">Number</a>=Sing</tt> (20125; 94%), <tt><a href="Gender.html">Gender</a>=Masc</tt> (13515; 63%), <tt><a href="VerbForm.html">VerbForm</a>=EMPTY</tt> (11441; 53%), <tt><a href="Aspect.html">Aspect</a>=Perf</tt> (11441; 53%), <tt><a href="Mood.html">Mood</a>=EMPTY</tt> (11441; 53%).</p>
+
+<p><code>VERB</code> tokens may have the following values of <code>Voice</code>:</p>
+
+<ul>
+  <li><code>Act</code> (20271; 94% of non-empty <code>Voice</code>): قَالَ، كَانَ، كَانَت، أَكَّدَ، أَضَافَ، تَمَّ، أَعلَنَ، أَشَارَ، يَتِمُّ، يُمكِنُ</li>
+  <li><code>Pass</code> (1219; 6% of non-empty <code>Voice</code>): يُذكَرُ، يُوجَدُ، يُتَوَقَّعُ، قُتِلَ، أُصِيبَ، تُعَدُّ، تُعتَبَرُ، يُعَدُّ، يُعتَبَرُ، تُوجَدُ</li>
+  <li><code>EMPTY</code> (52): حَاوِل، دِ، دَعُوا، أَرخِص، اُخدُمُوا، اُكسُونَ، اِبحَث، اِحرَص، اِفتَحُوا، اِنتَبِه</li>
+</ul>
+
+<h3 id="aux"><code>AUX</code></h3>
+
+<p>40 <a href="">ar-pos/AUX</a> tokens (100% of all <code>AUX</code> tokens) have a non-empty value of <code>Voice</code>.</p>
+
+<p>The most frequent other feature values with which <code>AUX</code> and <code>Voice</code> co-occurred: <tt><a href="Person.html">Person</a>=3</tt> (40; 100%), <tt><a href="Number.html">Number</a>=Sing</tt> (40; 100%), <tt><a href="Aspect.html">Aspect</a>=Perf</tt> (39; 98%), <tt><a href="Gender.html">Gender</a>=Masc</tt> (36; 90%).</p>
+
+<p><code>AUX</code> tokens may have the following values of <code>Voice</code>:</p>
+
+<ul>
+  <li><code>Act</code> (40; 100% of non-empty <code>Voice</code>): لَيسَ، لَيسَت، أَلَا، تَعُد</li>
+</ul>
+
+<h2 id="relations-with-agreement-in-voice">Relations with Agreement in <code>Voice</code></h2>
+
+<p>The 10 most frequent relations where parent and child node agree in <code>Voice</code>:
+<tt>VERB –[<a href="../dep/ccomp.html">ccomp</a>]–&gt; VERB</tt> (2345; 92%),
+<tt>VERB –[<a href="../dep/conj.html">conj</a>]–&gt; VERB</tt> (2311; 93%),
+<tt>VERB –[<a href="../dep/advcl.html">advcl</a>]–&gt; VERB</tt> (1013; 91%),
+<tt>VERB –[<a href="../dep/xcomp.html">xcomp</a>]–&gt; VERB</tt> (611; 96%),
+<tt>VERB –[<a href="../dep/parataxis.html">parataxis</a>]–&gt; VERB</tt> (230; 95%),
+<tt>VERB –[<a href="../dep/csubj.html">csubj</a>]–&gt; VERB</tt> (213; 71%),
+<tt>VERB –[<a href="../dep/acl.html">acl</a>]–&gt; VERB</tt> (28; 97%),
+<tt>VERB –[<a href="../dep/appos.html">appos</a>]–&gt; VERB</tt> (9; 100%),
+<tt>VERB –[<a href="../dep/aux.html">aux</a>]–&gt; AUX</tt> (8; 100%),
+<tt>VERB –[<a href="../dep/cc.html">cc</a>]–&gt; VERB</tt> (5; 71%).</p>
 
 
 
@@ -102,6 +159,7 @@ Voice in other languages:
         root + 'lib/ext/jquery.min.js',
         root + 'lib/ext/jquery.svg.min.js',
         root + 'lib/ext/jquery.svgdom.min.js',
+        root + 'lib/ext/jquery.timeago.js',
         root + 'lib/ext/jquery-ui.min.js',
         root + 'lib/ext/waypoints.min.js',
         root + 'lib/ext/jquery.address.min.js',
@@ -133,11 +191,40 @@ Voice in other languages:
     ];
 
     var setupAccordions = function() {
-        // standard jQuery UI "accordion" element initialization
+	// preserve state in URL hash, following in part
+	// http://www.boduch.ca/2011/05/remembering-jquery-ui-accordion.html
+	var accordionChange = function(event, ui) {
+	    var context = ui.newHeader ? ui.newHeader.context : null;
+	    if (context) {
+		var languageCode = context.getAttribute('data-lc');
+		if (languageCode !== null) {
+		    window.location.hash = languageCode;
+		}
+	    }
+	}
+        // jQuery UI "accordion" element initialization
 	$(".jquery-ui-accordion").accordion({
 	    collapsible: true,
-	    active: false
+	    active: false,
+	    change: accordionChange
 	});
+	if ($(".jquery-ui-accordion").length) {
+	    var matches = window.location.hash.match(/^\#(.*)$/);
+	    console.log(matches);
+	    if (matches !== null) {
+		var languageCode = matches[1];
+		var tab = $('[data-lc="'+languageCode+'"]');
+		// the following will only work after accordion is initialized
+		var index = $('.jquery-ui-accordion div.ui-accordion-header').index(tab);
+		if (index !== -1) {
+		    $(".jquery-ui-accordion").accordion({ active: index });
+		}
+	    }
+	}
+    };
+
+    var setupTimeago = function() {
+        jQuery("time.timeago").timeago();
     };
 
     var setupTabs = function() {
@@ -161,6 +248,7 @@ Voice in other languages:
         // set up UI tabs on page
         setupTabs();
         setupAccordions();
+        setupTimeago();
 
         // mark current collection (filled in by Jekyll)
         Collections.listing['_current'] = 'ar-feat';
@@ -186,7 +274,7 @@ Voice in other languages:
 
       <div id="footer">
 	  <p class="footer-text">&copy; 2014 
-	    <a href="http://universaldependencies.github.io/docs/introduction.html#contributors" style="color:gray">Universal Dependencies contributors</a>. 
+	    <a href="http://universaldependencies.org/introduction.html#contributors" style="color:gray">Universal Dependencies contributors</a>. 
 	    Site powered by <a href="http://spyysalo.github.io/annodoc" style="color:gray">Annodoc</a> and <a href="http://brat.nlplab.org/" style="color:gray">brat</a></p>.
       </div>
     </div>

@@ -11,6 +11,7 @@
     <link rel="stylesheet" type="text/css" href="../../css/style-vis.css"/>
     <link rel="stylesheet" type="text/css" href="../../css/hint.css"/>
     <script type="text/javascript" src="../../lib/ext/head.load.min.js"></script>
+    <script type="text/javascript" src="../../lib/ext/jquery.timeago.js.js"></script>
 <!--     <link rel="shortcut icon" href="favicon.ico"/> -->
 
 
@@ -20,8 +21,8 @@
 
       <div id="hp-header">
 	
-          <span class="header-text"><a href="http://universaldependencies.github.io/docs/#language-de">home</a></span>
-          <span class="header-text"><a href="http://universaldependencies.github.io/docs/de/dep">de/dep</a></span>
+          <span class="header-text"><a href="http://universaldependencies.org/#language-de">home</a></span>
+          <span class="header-text"><a href="http://universaldependencies.org/de/dep">de/dep</a></span>
           <span class="header-text"><a href="https://github.com/universaldependencies/docs/edit/pages-source/_de-dep/case.md" target="#">edit page</a></span>
           <span class="header-text"><a href="https://github.com/universaldependencies/docs/issues">issue tracker</a></span>
       </div>
@@ -62,6 +63,80 @@ case(einfach, als)
 <!-- "automatic stats" -->
 
 
+
+
+
+
+
+<hr />
+
+<h2 id="treebank-statistics-udgerman">Treebank Statistics (UD_German)</h2>
+
+<p>This relation is universal.</p>
+
+<p>31693 nodes (11%) are attached to their parents as <code>case</code>.</p>
+
+<p>31216 instances of <code>case</code> (98%) are right-to-left (child precedes parent).
+Average distance between parent and child is 2.05581674186729.</p>
+
+<p>The following 31 pairs of parts of speech are connected with <code>case</code>: <a href="">de-pos/NOUN</a>-<a href="">de-pos/ADP</a> (21079; 67% instances), <a href="">de-pos/PROPN</a>-<a href="">de-pos/ADP</a> (6750; 21% instances), <a href="">de-pos/NUM</a>-<a href="">de-pos/ADP</a> (1245; 4% instances), <a href="">de-pos/PRON</a>-<a href="">de-pos/ADP</a> (1001; 3% instances), <a href="">de-pos/PROPN</a>-<a href="">de-pos/PROPN</a> (733; 2% instances), <a href="">de-pos/VERB</a>-<a href="">de-pos/ADP</a> (324; 1% instances), <a href="">de-pos/ADJ</a>-<a href="">de-pos/ADP</a> (188; 1% instances), <a href="">de-pos/ADV</a>-<a href="">de-pos/ADP</a> (171; 1% instances), <a href="">de-pos/NOUN</a>-<a href="">de-pos/CONJ</a> (55; 0% instances), <a href="">de-pos/PROPN</a>-<a href="">de-pos/PUNCT</a> (20; 0% instances), <a href="">de-pos/X</a>-<a href="">de-pos/ADP</a> (18; 0% instances), <a href="">de-pos/ADP</a>-<a href="">de-pos/ADP</a> (16; 0% instances), <a href="">de-pos/PROPN</a>-<a href="">de-pos/CONJ</a> (13; 0% instances), <a href="">de-pos/DET</a>-<a href="">de-pos/ADP</a> (12; 0% instances), <a href="">de-pos/X</a>-<a href="">de-pos/X</a> (12; 0% instances), <a href="">de-pos/PRON</a>-<a href="">de-pos/CONJ</a> (10; 0% instances), <a href="">de-pos/ADJ</a>-<a href="">de-pos/CONJ</a> (7; 0% instances), <a href="">de-pos/ADV</a>-<a href="">de-pos/CONJ</a> (7; 0% instances), <a href="">de-pos/AUX</a>-<a href="">de-pos/ADP</a> (6; 0% instances), <a href="">de-pos/CONJ</a>-<a href="">de-pos/ADP</a> (5; 0% instances), <a href="">de-pos/PROPN</a>-<a href="">de-pos/NOUN</a> (4; 0% instances), <a href="">de-pos/PART</a>-<a href="">de-pos/ADP</a> (3; 0% instances), <a href="">de-pos/PROPN</a>-<a href="">de-pos/PART</a> (3; 0% instances), <a href="">de-pos/NOUN</a>-<a href="">de-pos/PROPN</a> (2; 0% instances), <a href="">de-pos/NOUN</a>-<a href="">de-pos/PUNCT</a> (2; 0% instances), <a href="">de-pos/VERB</a>-<a href="">de-pos/CONJ</a> (2; 0% instances), <a href="">de-pos/ADV</a>-<a href="">de-pos/PRON</a> (1; 0% instances), <a href="">de-pos/NOUN</a>-<a href="">de-pos/PART</a> (1; 0% instances), <a href="">de-pos/NOUN</a>-<a href="">de-pos/X</a> (1; 0% instances), <a href="">de-pos/NUM</a>-<a href="">de-pos/CONJ</a> (1; 0% instances), <a href="">de-pos/X</a>-<a href="">de-pos/PROPN</a> (1; 0% instances).</p>
+
+<pre><code class="language-conllu"># visual-style 6	bgColor:blue
+# visual-style 6	fgColor:white
+# visual-style 8	bgColor:blue
+# visual-style 8	fgColor:white
+# visual-style 8 6 case	color:blue
+1	Es	_	PRON	_	_	5	nsubj	_	_
+2	war	_	VERB	_	_	5	cop	_	_
+3	für	_	ADP	_	_	4	case	_	_
+4	mich	_	PRON	_	_	5	nmod	_	_
+5	Ausgangspunkt	_	NOUN	_	_	0	root	_	_
+6	zu	_	ADP	_	_	8	case	_	_
+7	einer	_	DET	_	_	8	det	_	_
+8	Parfümkreation	_	NOUN	_	_	5	nmod	_	_
+9	.	_	PUNCT	_	_	5	punct	_	_
+
+</code></pre>
+
+<pre><code class="language-conllu"># visual-style 7	bgColor:blue
+# visual-style 7	fgColor:white
+# visual-style 8	bgColor:blue
+# visual-style 8	fgColor:white
+# visual-style 8 7 case	color:blue
+1	Für	_	ADP	_	_	2	case	_	_
+2	mich	_	PRON	_	_	6	nmod	_	_
+3	die	_	DET	_	_	6	det	_	_
+4	Anwaltskanzlei	_	NOUN	_	_	6	cop	_	_
+5	Nummer	_	NOUN	_	_	6	compound	_	_
+6	EINS	_	NOUN	_	_	0	root	_	_
+7	in	_	ADP	_	_	8	case	_	_
+8	Dresden	_	PROPN	_	_	6	nmod	_	_
+9	.	_	PUNCT	_	_	6	punct	_	_
+
+</code></pre>
+
+<pre><code class="language-conllu"># visual-style 1	bgColor:blue
+# visual-style 1	fgColor:white
+# visual-style 2	bgColor:blue
+# visual-style 2	fgColor:white
+# visual-style 2 1 case	color:blue
+1	Seit	_	ADP	_	_	2	case	_	_
+2	1964	_	NUM	_	_	11	nmod	_	_
+3	ist	_	VERB	_	_	11	cop	_	_
+4	mein	_	PRON	_	_	5	det	_	_
+5	Mann	_	NOUN	_	_	11	nsubj	_	_
+6	rund	_	ADV	_	_	7	advmod	_	_
+7	1	_	NUM	_	_	8	nummod	_	_
+8	mal	_	ADV	_	_	11	advmod	_	_
+9	pro	_	ADP	_	_	10	case	_	_
+10	Jahr	_	NOUN	_	_	8	nmod	_	_
+11	Gast	_	NOUN	_	_	0	root	_	_
+12	in	_	ADP	_	_	14	case	_	_
+13	diesem	_	PRON	_	_	14	det	_	_
+14	Hotel	_	NOUN	_	_	11	nmod	_	_
+15	.	_	PUNCT	_	_	11	punct	_	_
+
+</code></pre>
 
 
 
@@ -120,6 +195,7 @@ case in other languages:
         root + 'lib/ext/jquery.min.js',
         root + 'lib/ext/jquery.svg.min.js',
         root + 'lib/ext/jquery.svgdom.min.js',
+        root + 'lib/ext/jquery.timeago.js',
         root + 'lib/ext/jquery-ui.min.js',
         root + 'lib/ext/waypoints.min.js',
         root + 'lib/ext/jquery.address.min.js',
@@ -151,11 +227,40 @@ case in other languages:
     ];
 
     var setupAccordions = function() {
-        // standard jQuery UI "accordion" element initialization
+	// preserve state in URL hash, following in part
+	// http://www.boduch.ca/2011/05/remembering-jquery-ui-accordion.html
+	var accordionChange = function(event, ui) {
+	    var context = ui.newHeader ? ui.newHeader.context : null;
+	    if (context) {
+		var languageCode = context.getAttribute('data-lc');
+		if (languageCode !== null) {
+		    window.location.hash = languageCode;
+		}
+	    }
+	}
+        // jQuery UI "accordion" element initialization
 	$(".jquery-ui-accordion").accordion({
 	    collapsible: true,
-	    active: false
+	    active: false,
+	    change: accordionChange
 	});
+	if ($(".jquery-ui-accordion").length) {
+	    var matches = window.location.hash.match(/^\#(.*)$/);
+	    console.log(matches);
+	    if (matches !== null) {
+		var languageCode = matches[1];
+		var tab = $('[data-lc="'+languageCode+'"]');
+		// the following will only work after accordion is initialized
+		var index = $('.jquery-ui-accordion div.ui-accordion-header').index(tab);
+		if (index !== -1) {
+		    $(".jquery-ui-accordion").accordion({ active: index });
+		}
+	    }
+	}
+    };
+
+    var setupTimeago = function() {
+        jQuery("time.timeago").timeago();
     };
 
     var setupTabs = function() {
@@ -179,6 +284,7 @@ case in other languages:
         // set up UI tabs on page
         setupTabs();
         setupAccordions();
+        setupTimeago();
 
         // mark current collection (filled in by Jekyll)
         Collections.listing['_current'] = 'de-dep';
@@ -204,7 +310,7 @@ case in other languages:
 
       <div id="footer">
 	  <p class="footer-text">&copy; 2014 
-	    <a href="http://universaldependencies.github.io/docs/introduction.html#contributors" style="color:gray">Universal Dependencies contributors</a>. 
+	    <a href="http://universaldependencies.org/introduction.html#contributors" style="color:gray">Universal Dependencies contributors</a>. 
 	    Site powered by <a href="http://spyysalo.github.io/annodoc" style="color:gray">Annodoc</a> and <a href="http://brat.nlplab.org/" style="color:gray">brat</a></p>.
       </div>
     </div>

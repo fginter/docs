@@ -11,6 +11,7 @@
     <link rel="stylesheet" type="text/css" href="../../css/style-vis.css"/>
     <link rel="stylesheet" type="text/css" href="../../css/hint.css"/>
     <script type="text/javascript" src="../../lib/ext/head.load.min.js"></script>
+    <script type="text/javascript" src="../../lib/ext/jquery.timeago.js.js"></script>
 <!--     <link rel="shortcut icon" href="favicon.ico"/> -->
 
 
@@ -20,8 +21,8 @@
 
       <div id="hp-header">
 	
-          <span class="header-text"><a href="http://universaldependencies.github.io/docs/#language-he">home</a></span>
-          <span class="header-text"><a href="http://universaldependencies.github.io/docs/he/feat">he/feat</a></span>
+          <span class="header-text"><a href="http://universaldependencies.org/#language-he">home</a></span>
+          <span class="header-text"><a href="http://universaldependencies.org/he/feat">he/feat</a></span>
           <span class="header-text"><a href="https://github.com/universaldependencies/docs/edit/pages-source/_he-feat/Case.md" target="#">edit page</a></span>
           <span class="header-text"><a href="https://github.com/universaldependencies/docs/issues">issue tracker</a></span>
       </div>
@@ -44,6 +45,61 @@ for <code>Case</code>.</p>
 
 <!-- "automatic stats" -->
 
+
+
+
+
+
+<hr />
+
+<h2 id="treebank-statistics-udhebrew">Treebank Statistics (UD_Hebrew)</h2>
+
+<p>This feature is universal.
+It occurs with 3 different values: <code>Acc</code>, <code>Gen</code>, <code>Tem</code>.</p>
+
+<p>7154 tokens (5%) have a non-empty value of <code>Case</code>.
+55 types (0%) occur at least once with a non-empty value of <code>Case</code>.
+1 lemmas (0) occur at least once with a non-empty value of <code>Case</code>.
+The feature is used with 3 part-of-speech tags: <a href="">he-pos/PART</a> (4440; 3% instances), <a href="">he-pos/PRON</a> (2688; 2% instances), <a href="">he-pos/NUM</a> (26; 0% instances).</p>
+
+<h3 id="part"><code>PART</code></h3>
+
+<p>4440 <a href="">he-pos/PART</a> tokens (100% of all <code>PART</code> tokens) have a non-empty value of <code>Case</code>.</p>
+
+<p><code>PART</code> tokens may have the following values of <code>Case</code>:</p>
+
+<ul>
+  <li><code>Acc</code> (1973; 44% of non-empty <code>Case</code>): את, אותו, אותה, אותם, אותנו, אותי, אותן, אותך, אתכם, אתו</li>
+  <li><code>Gen</code> (2348; 53% of non-empty <code>Case</code>): של, שלו, שלהם, שלה, שלנו, שלי, שלך, שלהן, שלכם</li>
+  <li><code>Tem</code> (119; 3% of non-empty <code>Case</code>): כש, מש, מ</li>
+</ul>
+
+<h3 id="pron"><code>PRON</code></h3>
+
+<p>2688 <a href="">he-pos/PRON</a> tokens (36% of all <code>PRON</code> tokens) have a non-empty value of <code>Case</code>.</p>
+
+<p>The most frequent other feature values with which <code>PRON</code> and <code>Case</code> co-occurred: <tt><a href="PronType.html">PronType</a>=Prs</tt> (2688; 100%), <tt><a href="Person.html">Person</a>=3</tt> (2563; 95%), <tt><a href="Number.html">Number</a>=Sing</tt> (2025; 75%), <tt><a href="Gender.html">Gender</a>=Masc</tt> (1934; 72%).</p>
+
+<p><code>PRON</code> tokens may have the following values of <code>Case</code>:</p>
+
+<ul>
+  <li><code>Acc</code> (131; 5% of non-empty <code>Case</code>): אותו, אותה, הוא_, הם_, אותם, אותן, היא_, הן_, אני_, אתה_</li>
+  <li><code>Gen</code> (2557; 95% of non-empty <code>Case</code>): הוא_, היא_, הם_, הן_, אני_, אנחנו_, אתה_, אתם_, את_</li>
+  <li><code>EMPTY</code> (4693): הוא_, הוא, זה, הם_, היא_, זו, הם, כך, אלה, היא</li>
+</ul>
+
+<h3 id="num"><code>NUM</code></h3>
+
+<p>26 <a href="">he-pos/NUM</a> tokens (1% of all <code>NUM</code> tokens) have a non-empty value of <code>Case</code>.</p>
+
+<p>The most frequent other feature values with which <code>NUM</code> and <code>Case</code> co-occurred: <tt><a href="Gender.html">Gender</a>=EMPTY</tt> (26; 100%), <tt><a href="Definite.html">Definite</a>=EMPTY</tt> (26; 100%), <tt><a href="Number.html">Number</a>=EMPTY</tt> (26; 100%).</p>
+
+<p><code>NUM</code> tokens may have the following values of <code>Case</code>:</p>
+
+<ul>
+  <li><code>Tem</code> (26; 100% of non-empty <code>Case</code>): 20.30, 20.00, 01.00, 1.2.19, 1.6.90, 13.11, 14.3.89, 15.459.00, 16.11, 2.3.3</li>
+  <li><code>EMPTY</code> (3283): אחד, שני, אחת, שתי, 1, 0, מיליון, אלף, 2, שלושה</li>
+</ul>
 
 
 
@@ -102,6 +158,7 @@ Case in other languages:
         root + 'lib/ext/jquery.min.js',
         root + 'lib/ext/jquery.svg.min.js',
         root + 'lib/ext/jquery.svgdom.min.js',
+        root + 'lib/ext/jquery.timeago.js',
         root + 'lib/ext/jquery-ui.min.js',
         root + 'lib/ext/waypoints.min.js',
         root + 'lib/ext/jquery.address.min.js',
@@ -133,11 +190,40 @@ Case in other languages:
     ];
 
     var setupAccordions = function() {
-        // standard jQuery UI "accordion" element initialization
+	// preserve state in URL hash, following in part
+	// http://www.boduch.ca/2011/05/remembering-jquery-ui-accordion.html
+	var accordionChange = function(event, ui) {
+	    var context = ui.newHeader ? ui.newHeader.context : null;
+	    if (context) {
+		var languageCode = context.getAttribute('data-lc');
+		if (languageCode !== null) {
+		    window.location.hash = languageCode;
+		}
+	    }
+	}
+        // jQuery UI "accordion" element initialization
 	$(".jquery-ui-accordion").accordion({
 	    collapsible: true,
-	    active: false
+	    active: false,
+	    change: accordionChange
 	});
+	if ($(".jquery-ui-accordion").length) {
+	    var matches = window.location.hash.match(/^\#(.*)$/);
+	    console.log(matches);
+	    if (matches !== null) {
+		var languageCode = matches[1];
+		var tab = $('[data-lc="'+languageCode+'"]');
+		// the following will only work after accordion is initialized
+		var index = $('.jquery-ui-accordion div.ui-accordion-header').index(tab);
+		if (index !== -1) {
+		    $(".jquery-ui-accordion").accordion({ active: index });
+		}
+	    }
+	}
+    };
+
+    var setupTimeago = function() {
+        jQuery("time.timeago").timeago();
     };
 
     var setupTabs = function() {
@@ -161,6 +247,7 @@ Case in other languages:
         // set up UI tabs on page
         setupTabs();
         setupAccordions();
+        setupTimeago();
 
         // mark current collection (filled in by Jekyll)
         Collections.listing['_current'] = 'he-feat';
@@ -186,7 +273,7 @@ Case in other languages:
 
       <div id="footer">
 	  <p class="footer-text">&copy; 2014 
-	    <a href="http://universaldependencies.github.io/docs/introduction.html#contributors" style="color:gray">Universal Dependencies contributors</a>. 
+	    <a href="http://universaldependencies.org/introduction.html#contributors" style="color:gray">Universal Dependencies contributors</a>. 
 	    Site powered by <a href="http://spyysalo.github.io/annodoc" style="color:gray">Annodoc</a> and <a href="http://brat.nlplab.org/" style="color:gray">brat</a></p>.
       </div>
     </div>

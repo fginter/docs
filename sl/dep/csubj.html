@@ -11,6 +11,7 @@
     <link rel="stylesheet" type="text/css" href="../../css/style-vis.css"/>
     <link rel="stylesheet" type="text/css" href="../../css/hint.css"/>
     <script type="text/javascript" src="../../lib/ext/head.load.min.js"></script>
+    <script type="text/javascript" src="../../lib/ext/jquery.timeago.js.js"></script>
 <!--     <link rel="shortcut icon" href="favicon.ico"/> -->
 
 
@@ -20,8 +21,8 @@
 
       <div id="hp-header">
 	
-          <span class="header-text"><a href="http://universaldependencies.github.io/docs/#language-sl">home</a></span>
-          <span class="header-text"><a href="http://universaldependencies.github.io/docs/sl/dep">sl/dep</a></span>
+          <span class="header-text"><a href="http://universaldependencies.org/#language-sl">home</a></span>
+          <span class="header-text"><a href="http://universaldependencies.org/sl/dep">sl/dep</a></span>
           <span class="header-text"><a href="https://github.com/universaldependencies/docs/edit/pages-source/_sl-dep/csubj.md" target="#">edit page</a></span>
           <span class="header-text"><a href="https://github.com/universaldependencies/docs/issues">issue tracker</a></span>
       </div>
@@ -45,6 +46,79 @@ for <code>csubj</code>.</p>
 <!-- "automatic stats" -->
 
 
+
+
+
+
+
+<hr />
+
+<h2 id="treebank-statistics-udslovenian">Treebank Statistics (UD_Slovenian)</h2>
+
+<p>This relation is universal.</p>
+
+<p>560 nodes (0%) are attached to their parents as <code>csubj</code>.</p>
+
+<p>523 instances of <code>csubj</code> (93%) are left-to-right (parent precedes child).
+Average distance between parent and child is 4.7625.</p>
+
+<p>The following 11 pairs of parts of speech are connected with <code>csubj</code>: <a href="">sl-pos/VERB</a>-<a href="">sl-pos/VERB</a> (254; 45% instances), <a href="">sl-pos/ADJ</a>-<a href="">sl-pos/VERB</a> (207; 37% instances), <a href="">sl-pos/NOUN</a>-<a href="">sl-pos/VERB</a> (50; 9% instances), <a href="">sl-pos/VERB</a>-<a href="">sl-pos/ADJ</a> (24; 4% instances), <a href="">sl-pos/ADJ</a>-<a href="">sl-pos/ADJ</a> (13; 2% instances), <a href="">sl-pos/PRON</a>-<a href="">sl-pos/VERB</a> (4; 1% instances), <a href="">sl-pos/NOUN</a>-<a href="">sl-pos/ADJ</a> (3; 1% instances), <a href="">sl-pos/ADJ</a>-<a href="">sl-pos/NOUN</a> (2; 0% instances), <a href="">sl-pos/NOUN</a>-<a href="">sl-pos/NOUN</a> (1; 0% instances), <a href="">sl-pos/VERB</a>-<a href="">sl-pos/NOUN</a> (1; 0% instances), <a href="">sl-pos/VERB</a>-<a href="">sl-pos/PRON</a> (1; 0% instances).</p>
+
+<pre><code class="language-conllu"># visual-style 9	bgColor:blue
+# visual-style 9	fgColor:white
+# visual-style 7	bgColor:blue
+# visual-style 7	fgColor:white
+# visual-style 7 9 csubj	color:blue
+1	Prvo	prvi	ADJ	Mlonsn	Case=Nom|Gender=Neut|Number=Sing|NumType=Ord	2	amod	_	Dep=2|Rel=Atr
+2	pravilo	pravilo	NOUN	Ncnsn	Case=Nom|Gender=Neut|Number=Sing	7	parataxis	_	SpaceAfter=No|Dep=0|Rel=Root
+3	:	:	PUNCT	Z	_	2	punct	_	Dep=0|Rel=Root
+4	Za	za	ADP	Sa	Case=Acc	5	case	_	Dep=5|Rel=Atr
+5	nakup	nakup	NOUN	Ncmsan	Animacy=Inan|Case=Acc|Gender=Masc|Number=Sing	9	nmod	_	Dep=9|Rel=AdvO
+6	si	se	PRON	Px---d--y	Case=Dat|PronType=Prs|Variant=Short	9	expl	_	Dep=9|Rel=PPart
+7	je	biti	VERB	Va-r3s-n	Mood=Ind|Negative=Pos|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	_	Dep=0|Rel=Root
+8	treba	treba	ADV	Rgp	Degree=Pos	7	advmod	_	Dep=7|Rel=AdvM
+9	vzeti	vzeti	VERB	Vmen	Aspect=Perf|VerbForm=Inf	7	csubj	_	Dep=7|Rel=Sb
+10	čas	čas	NOUN	Ncmsan	Animacy=Inan|Case=Acc|Gender=Masc|Number=Sing	9	dobj	_	SpaceAfter=No|Dep=9|Rel=Obj
+11	.	.	PUNCT	Z	_	7	punct	_	Dep=0|Rel=Root
+
+</code></pre>
+
+<pre><code class="language-conllu"># visual-style 5	bgColor:blue
+# visual-style 5	fgColor:white
+# visual-style 1	bgColor:blue
+# visual-style 1	fgColor:white
+# visual-style 1 5 csubj	color:blue
+1	Pomembno	pomemben	ADJ	Agpnsn	Case=Nom|Degree=Pos|Gender=Neut|Number=Sing	0	root	_	Dep=2|Rel=Atr
+2	je	biti	VERB	Va-r3s-n	Mood=Ind|Negative=Pos|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	1	cop	_	SpaceAfter=No|Dep=0|Rel=Root
+3	,	,	PUNCT	Z	_	5	punct	_	Dep=0|Rel=Root
+4	da	da	SCONJ	Cs	_	5	mark	_	Dep=5|Rel=Conj
+5	zaužijete	zaužiti	VERB	Vmer2p	Aspect=Perf|Mood=Ind|Number=Plur|Person=2|Tense=Pres|VerbForm=Fin	1	csubj	_	Dep=2|Rel=Sb
+6	tri	trije	NUM	Mlcmpa	Case=Acc|Gender=Masc|Number=Plur|NumForm=Word|NumType=Card	10	nummod	_	Dep=10|Rel=Atr
+7	do	do	ADP	Sg	Case=Gen	8	case	_	Dep=8|Rel=Conj
+8	štiri	štirje	NUM	Mlcmpa	Case=Acc|Gender=Masc|Number=Plur|NumForm=Word|NumType=Card	6	conj	_	Dep=6|Rel=Coord
+9	manjše	majhen	ADJ	Agcmpa	Case=Acc|Degree=Cmp|Gender=Masc|Number=Plur	10	amod	_	Dep=10|Rel=Atr
+10	obroke	obrok	NOUN	Ncmpa	Case=Acc|Gender=Masc|Number=Plur	5	dobj	_	Dep=5|Rel=Obj
+11	na	na	ADP	Sa	Case=Acc	12	case	_	Dep=12|Rel=Atr
+12	dan	dan	NOUN	Ncmsan	Animacy=Inan|Case=Acc|Gender=Masc|Number=Sing	5	nmod	_	SpaceAfter=No|Dep=5|Rel=AdvO
+13	.	.	PUNCT	Z	_	1	punct	_	Dep=0|Rel=Root
+
+</code></pre>
+
+<pre><code class="language-conllu"># visual-style 3	bgColor:blue
+# visual-style 3	fgColor:white
+# visual-style 7	bgColor:blue
+# visual-style 7	fgColor:white
+# visual-style 7 3 csubj	color:blue
+1	Seveda	seveda	PART	Q	_	3	advmod	_	Dep=0|Rel=Root
+2	pa	pa	CONJ	Cc	_	3	advmod	_	Dep=0|Rel=Root
+3	dobiti	dobiti	VERB	Vmen	Aspect=Perf|VerbForm=Inf	7	csubj	_	Dep=5|Rel=Sb
+4	podpis	podpis	NOUN	Ncmsan	Animacy=Inan|Case=Acc|Gender=Masc|Number=Sing	3	dobj	_	Dep=3|Rel=Obj
+5	ni	biti	VERB	Va-r3s-y	Mood=Ind|Negative=Neg|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	7	cop	_	Dep=0|Rel=Root
+6	lahka	lahek	ADJ	Agpfsn	Case=Nom|Degree=Pos|Gender=Fem|Number=Sing	7	amod	_	Dep=7|Rel=Atr
+7	stvar	stvar	NOUN	Ncfsn	Case=Nom|Gender=Fem|Number=Sing	0	root	_	SpaceAfter=No|Dep=5|Rel=Atr
+8	.	.	PUNCT	Z	_	7	punct	_	Dep=0|Rel=Root
+
+</code></pre>
 
 
 
@@ -103,6 +177,7 @@ csubj in other languages:
         root + 'lib/ext/jquery.min.js',
         root + 'lib/ext/jquery.svg.min.js',
         root + 'lib/ext/jquery.svgdom.min.js',
+        root + 'lib/ext/jquery.timeago.js',
         root + 'lib/ext/jquery-ui.min.js',
         root + 'lib/ext/waypoints.min.js',
         root + 'lib/ext/jquery.address.min.js',
@@ -134,11 +209,40 @@ csubj in other languages:
     ];
 
     var setupAccordions = function() {
-        // standard jQuery UI "accordion" element initialization
+	// preserve state in URL hash, following in part
+	// http://www.boduch.ca/2011/05/remembering-jquery-ui-accordion.html
+	var accordionChange = function(event, ui) {
+	    var context = ui.newHeader ? ui.newHeader.context : null;
+	    if (context) {
+		var languageCode = context.getAttribute('data-lc');
+		if (languageCode !== null) {
+		    window.location.hash = languageCode;
+		}
+	    }
+	}
+        // jQuery UI "accordion" element initialization
 	$(".jquery-ui-accordion").accordion({
 	    collapsible: true,
-	    active: false
+	    active: false,
+	    change: accordionChange
 	});
+	if ($(".jquery-ui-accordion").length) {
+	    var matches = window.location.hash.match(/^\#(.*)$/);
+	    console.log(matches);
+	    if (matches !== null) {
+		var languageCode = matches[1];
+		var tab = $('[data-lc="'+languageCode+'"]');
+		// the following will only work after accordion is initialized
+		var index = $('.jquery-ui-accordion div.ui-accordion-header').index(tab);
+		if (index !== -1) {
+		    $(".jquery-ui-accordion").accordion({ active: index });
+		}
+	    }
+	}
+    };
+
+    var setupTimeago = function() {
+        jQuery("time.timeago").timeago();
     };
 
     var setupTabs = function() {
@@ -162,6 +266,7 @@ csubj in other languages:
         // set up UI tabs on page
         setupTabs();
         setupAccordions();
+        setupTimeago();
 
         // mark current collection (filled in by Jekyll)
         Collections.listing['_current'] = 'sl-dep';
@@ -187,7 +292,7 @@ csubj in other languages:
 
       <div id="footer">
 	  <p class="footer-text">&copy; 2014 
-	    <a href="http://universaldependencies.github.io/docs/introduction.html#contributors" style="color:gray">Universal Dependencies contributors</a>. 
+	    <a href="http://universaldependencies.org/introduction.html#contributors" style="color:gray">Universal Dependencies contributors</a>. 
 	    Site powered by <a href="http://spyysalo.github.io/annodoc" style="color:gray">Annodoc</a> and <a href="http://brat.nlplab.org/" style="color:gray">brat</a></p>.
       </div>
     </div>

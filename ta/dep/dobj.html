@@ -11,6 +11,7 @@
     <link rel="stylesheet" type="text/css" href="../../css/style-vis.css"/>
     <link rel="stylesheet" type="text/css" href="../../css/hint.css"/>
     <script type="text/javascript" src="../../lib/ext/head.load.min.js"></script>
+    <script type="text/javascript" src="../../lib/ext/jquery.timeago.js.js"></script>
 <!--     <link rel="shortcut icon" href="favicon.ico"/> -->
 
 
@@ -20,8 +21,8 @@
 
       <div id="hp-header">
 	
-          <span class="header-text"><a href="http://universaldependencies.github.io/docs/#language-ta">home</a></span>
-          <span class="header-text"><a href="http://universaldependencies.github.io/docs/ta/dep">ta/dep</a></span>
+          <span class="header-text"><a href="http://universaldependencies.org/#language-ta">home</a></span>
+          <span class="header-text"><a href="http://universaldependencies.org/ta/dep">ta/dep</a></span>
           <span class="header-text"><a href="https://github.com/universaldependencies/docs/edit/pages-source/_ta-dep/dobj.md" target="#">edit page</a></span>
           <span class="header-text"><a href="https://github.com/universaldependencies/docs/issues">issue tracker</a></span>
       </div>
@@ -45,6 +46,71 @@ for <code>dobj</code>.</p>
 <!-- "automatic stats" -->
 
 
+
+
+
+
+
+<hr />
+
+<h2 id="treebank-statistics-udtamil">Treebank Statistics (UD_Tamil)</h2>
+
+<p>This relation is universal.</p>
+
+<p>663 nodes (7%) are attached to their parents as <code>dobj</code>.</p>
+
+<p>650 instances of <code>dobj</code> (98%) are right-to-left (child precedes parent).
+Average distance between parent and child is 2.23378582202112.</p>
+
+<p>The following 23 pairs of parts of speech are connected with <code>dobj</code>: <a href="">ta-pos/VERB</a>-<a href="">ta-pos/NOUN</a> (418; 63% instances), <a href="">ta-pos/ADJ</a>-<a href="">ta-pos/NOUN</a> (76; 11% instances), <a href="">ta-pos/VERB</a>-<a href="">ta-pos/PRON</a> (40; 6% instances), <a href="">ta-pos/VERB</a>-<a href="">ta-pos/PROPN</a> (39; 6% instances), <a href="">ta-pos/NOUN</a>-<a href="">ta-pos/NOUN</a> (31; 5% instances), <a href="">ta-pos/ADJ</a>-<a href="">ta-pos/PROPN</a> (12; 2% instances), <a href="">ta-pos/VERB</a>-<a href="">ta-pos/PART</a> (11; 2% instances), <a href="">ta-pos/NOUN</a>-<a href="">ta-pos/PROPN</a> (6; 1% instances), <a href="">ta-pos/PART</a>-<a href="">ta-pos/NOUN</a> (6; 1% instances), <a href="">ta-pos/AUX</a>-<a href="">ta-pos/NOUN</a> (4; 1% instances), <a href="">ta-pos/VERB</a>-<a href="">ta-pos/NUM</a> (4; 1% instances), <a href="">ta-pos/NOUN</a>-<a href="">ta-pos/PRON</a> (3; 0% instances), <a href="">ta-pos/ADJ</a>-<a href="">ta-pos/NUM</a> (2; 0% instances), <a href="">ta-pos/ADJ</a>-<a href="">ta-pos/PRON</a> (2; 0% instances), <a href="">ta-pos/ADJ</a>-<a href="">ta-pos/ADJ</a> (1; 0% instances), <a href="">ta-pos/ADJ</a>-<a href="">ta-pos/ADP</a> (1; 0% instances), <a href="">ta-pos/ADV</a>-<a href="">ta-pos/NOUN</a> (1; 0% instances), <a href="">ta-pos/ADV</a>-<a href="">ta-pos/PROPN</a> (1; 0% instances), <a href="">ta-pos/AUX</a>-<a href="">ta-pos/PROPN</a> (1; 0% instances), <a href="">ta-pos/NOUN</a>-<a href="">ta-pos/NUM</a> (1; 0% instances), <a href="">ta-pos/NOUN</a>-<a href="">ta-pos/PART</a> (1; 0% instances), <a href="">ta-pos/PROPN</a>-<a href="">ta-pos/PROPN</a> (1; 0% instances), <a href="">ta-pos/VERB</a>-<a href="">ta-pos/DET</a> (1; 0% instances).</p>
+
+<pre><code class="language-conllu"># visual-style 3	bgColor:blue
+# visual-style 3	fgColor:white
+# visual-style 6	bgColor:blue
+# visual-style 6	fgColor:white
+# visual-style 6 3 dobj	color:blue
+1	இது	இது	PRON	RpN-3SN--	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	2	nmod	_	Translit=itu
+2	தொடர்பான	தொடர்பு	ADJ	JJ-------	_	3	amod	_	Translit=toṭarpāna
+3	ஆலோசனைகளைய்	ஆலோசனை	NOUN	NNA-3PN--	Case=Acc|Gender=Neut|Number=Plur|Person=3	6	dobj	_	Translit=ālōcanaikaḷaiy
+4	உம்	உம்	PART	Tv-------	_	3	advmod:emph	_	Translit=um
+5	இந்தியா	இந்தியா	PROPN	NEN-3SN--	Case=Nom|Gender=Neut|Number=Sing|Person=3	6	nsubj	_	Translit=intiyā
+6	வழங்கி	வழங்கு	VERB	Vt-T---AA	Negative=Pos|VerbForm=Part|Voice=Act	0	root	_	Translit=valaṅki
+7	வருகிறது	வரு	AUX	VR-P3SNAA	Gender=Neut|Mood=Ind|Negative=Pos|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	6	aux	_	SpaceAfter=No|Translit=varukiratu
+8	.	.	PUNCT	Z#-------	PunctType=Peri	6	punct	_	Translit=.
+
+</code></pre>
+
+<pre><code class="language-conllu"># visual-style 1	bgColor:blue
+# visual-style 1	fgColor:white
+# visual-style 2	bgColor:blue
+# visual-style 2	fgColor:white
+# visual-style 2 1 dobj	color:blue
+1	ஓய்வு	ஓய்வு	NOUN	NNN-3SN--	Case=Nom|Gender=Neut|Number=Sing|Person=3	2	dobj	_	Translit=ōyvu
+2	பெற்ற	பெறு	ADJ	Jd-D----A	Negative=Pos|Tense=Past|VerbForm=Part	6	amod	_	Translit=perra
+3	பின்னர்	பின்னர்	ADV	AA-------	_	2	mark	_	Translit=pinnar
+4	செய்தியாளர்களிடம்	செய்தியாளர்	NOUN	NNL-3PA--	Animacy=Anim|Case=Loc|Gender=Com|Number=Plur|Person=3	6	nmod	_	Translit=ceytiyāḷarkaḷiṭam
+5	அவர்	அவர்	PRON	RpN-3SH--	Case=Nom|Gender=Com|Number=Sing|Person=3|Polite=Pol|PronType=Prs	6	nsubj	_	Translit=avar
+6	கூறியத்	கூறு	VERB	VzND3SNAA	Case=Nom|Gender=Neut|Negative=Pos|Number=Sing|Person=3|Tense=Past|VerbForm=Ger|Voice=Act	0	root	_	Translit=kūriyat
+7	ஆவது	ஆவது	PART	Tl-------	_	6	advmod:emph	_	SpaceAfter=No|Translit=āvatu
+8	:	:	PUNCT	Z:-------	PunctType=Comm	6	punct	_	SpaceAfter=No|Translit=:
+9	.	.	PUNCT	Z#-------	PunctType=Peri	6	punct	_	Translit=.
+
+</code></pre>
+
+<pre><code class="language-conllu"># visual-style 3	bgColor:blue
+# visual-style 3	fgColor:white
+# visual-style 4	bgColor:blue
+# visual-style 4	fgColor:white
+# visual-style 4 3 dobj	color:blue
+1	ஆனால்	ஆனால்	ADV	AA-------	_	4	advmod	_	Translit=ānāl
+2	அப்போது	அப்போது	ADV	AA-------	_	4	advmod	_	Translit=appōtu
+3	அதை	அது	PRON	RpA-3SN--	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Prs	4	dobj	_	Translit=atai
+4	நிறைவேற்ற	நிறைவேற்று	VERB	Vu-T---AA	Negative=Pos|VerbForm=Inf|Voice=Act	5	advcl	_	Translit=niraivērra
+5	முடியாமல்	முடி	VERB	Vt-T----N	Negative=Neg|VerbForm=Part	6	advcl	_	Translit=muṭiyāmal
+6	போனது	போ	VERB	Vr-D3SNAA	Gender=Neut|Mood=Ind|Negative=Pos|Number=Sing|Person=3|Tense=Past|VerbForm=Fin|Voice=Act	0	root	_	SpaceAfter=No|Translit=pōnatu
+7	.	.	PUNCT	Z#-------	PunctType=Peri	6	punct	_	Translit=.
+
+</code></pre>
 
 
 
@@ -103,6 +169,7 @@ dobj in other languages:
         root + 'lib/ext/jquery.min.js',
         root + 'lib/ext/jquery.svg.min.js',
         root + 'lib/ext/jquery.svgdom.min.js',
+        root + 'lib/ext/jquery.timeago.js',
         root + 'lib/ext/jquery-ui.min.js',
         root + 'lib/ext/waypoints.min.js',
         root + 'lib/ext/jquery.address.min.js',
@@ -134,11 +201,40 @@ dobj in other languages:
     ];
 
     var setupAccordions = function() {
-        // standard jQuery UI "accordion" element initialization
+	// preserve state in URL hash, following in part
+	// http://www.boduch.ca/2011/05/remembering-jquery-ui-accordion.html
+	var accordionChange = function(event, ui) {
+	    var context = ui.newHeader ? ui.newHeader.context : null;
+	    if (context) {
+		var languageCode = context.getAttribute('data-lc');
+		if (languageCode !== null) {
+		    window.location.hash = languageCode;
+		}
+	    }
+	}
+        // jQuery UI "accordion" element initialization
 	$(".jquery-ui-accordion").accordion({
 	    collapsible: true,
-	    active: false
+	    active: false,
+	    change: accordionChange
 	});
+	if ($(".jquery-ui-accordion").length) {
+	    var matches = window.location.hash.match(/^\#(.*)$/);
+	    console.log(matches);
+	    if (matches !== null) {
+		var languageCode = matches[1];
+		var tab = $('[data-lc="'+languageCode+'"]');
+		// the following will only work after accordion is initialized
+		var index = $('.jquery-ui-accordion div.ui-accordion-header').index(tab);
+		if (index !== -1) {
+		    $(".jquery-ui-accordion").accordion({ active: index });
+		}
+	    }
+	}
+    };
+
+    var setupTimeago = function() {
+        jQuery("time.timeago").timeago();
     };
 
     var setupTabs = function() {
@@ -162,6 +258,7 @@ dobj in other languages:
         // set up UI tabs on page
         setupTabs();
         setupAccordions();
+        setupTimeago();
 
         // mark current collection (filled in by Jekyll)
         Collections.listing['_current'] = 'ta-dep';
@@ -187,7 +284,7 @@ dobj in other languages:
 
       <div id="footer">
 	  <p class="footer-text">&copy; 2014 
-	    <a href="http://universaldependencies.github.io/docs/introduction.html#contributors" style="color:gray">Universal Dependencies contributors</a>. 
+	    <a href="http://universaldependencies.org/introduction.html#contributors" style="color:gray">Universal Dependencies contributors</a>. 
 	    Site powered by <a href="http://spyysalo.github.io/annodoc" style="color:gray">Annodoc</a> and <a href="http://brat.nlplab.org/" style="color:gray">brat</a></p>.
       </div>
     </div>

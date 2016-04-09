@@ -11,6 +11,7 @@
     <link rel="stylesheet" type="text/css" href="../../css/style-vis.css"/>
     <link rel="stylesheet" type="text/css" href="../../css/hint.css"/>
     <script type="text/javascript" src="../../lib/ext/head.load.min.js"></script>
+    <script type="text/javascript" src="../../lib/ext/jquery.timeago.js.js"></script>
 <!--     <link rel="shortcut icon" href="favicon.ico"/> -->
 
 
@@ -20,8 +21,8 @@
 
       <div id="hp-header">
 	
-          <span class="header-text"><a href="http://universaldependencies.github.io/docs/#language-da">home</a></span>
-          <span class="header-text"><a href="http://universaldependencies.github.io/docs/da/dep">da/dep</a></span>
+          <span class="header-text"><a href="http://universaldependencies.org/#language-da">home</a></span>
+          <span class="header-text"><a href="http://universaldependencies.org/da/dep">da/dep</a></span>
           <span class="header-text"><a href="https://github.com/universaldependencies/docs/edit/pages-source/_da-dep/auxpass.md" target="#">edit page</a></span>
           <span class="header-text"><a href="https://github.com/universaldependencies/docs/issues">issue tracker</a></span>
       </div>
@@ -45,6 +46,75 @@ for <code>auxpass</code>.</p>
 <!-- "automatic stats" -->
 
 
+
+
+
+
+
+<hr />
+
+<h2 id="treebank-statistics-uddanish">Treebank Statistics (UD_Danish)</h2>
+
+<p>This relation is universal.</p>
+
+<p>606 nodes (1%) are attached to their parents as <code>auxpass</code>.</p>
+
+<p>604 instances of <code>auxpass</code> (100%) are right-to-left (child precedes parent).
+Average distance between parent and child is 2.88778877887789.</p>
+
+<p>The following 5 pairs of parts of speech are connected with <code>auxpass</code>: <a href="">da-pos/VERB</a>-<a href="">da-pos/AUX</a> (573; 95% instances), <a href="">da-pos/ADJ</a>-<a href="">da-pos/AUX</a> (16; 3% instances), <a href="">da-pos/NOUN</a>-<a href="">da-pos/AUX</a> (14; 2% instances), <a href="">da-pos/ADV</a>-<a href="">da-pos/AUX</a> (2; 0% instances), <a href="">da-pos/PROPN</a>-<a href="">da-pos/AUX</a> (1; 0% instances).</p>
+
+<pre><code class="language-conllu"># visual-style 3	bgColor:blue
+# visual-style 3	fgColor:white
+# visual-style 4	bgColor:blue
+# visual-style 4	fgColor:white
+# visual-style 4 3 auxpass	color:blue
+1	Kelds	Keld	PROPN	_	Case=Gen	2	nmod:poss	_	_
+2	oplæg	oplæg	NOUN	_	Definite=Ind|Gender=Neut|Number=Sing	4	nsubjpass	_	_
+3	blev	blive	AUX	_	Mood=Ind|Tense=Past|VerbForm=Fin|Voice=Act	4	auxpass	_	_
+4	fulgt	følge	VERB	_	Definite=Ind|Number=Sing|Tense=Past|VerbForm=Part,Trans	9	ccomp	_	_
+5	100	100	NUM	_	NumType=Card	6	nummod	_	_
+6	procent	procent	NOUN	_	Definite=Ind|Gender=Com|Number=Plur	4	nmod	_	_
+7	,	,	PUNCT	_	_	4	punct	_	_
+8	"	"	PUNCT	_	_	4	punct	_	_
+9	pointerer	pointere	VERB	_	Mood=Ind|Tense=Pres|VerbForm=Fin|Voice=Act	0	root	_	_
+10	Susan	Susan	PROPN	_	_	9	nsubj	_	_
+11	Mackensie	Mackensie	PROPN	_	_	10	name	_	_
+12	.	.	PUNCT	_	_	9	punct	_	_
+
+</code></pre>
+
+<pre><code class="language-conllu"># visual-style 2	bgColor:blue
+# visual-style 2	fgColor:white
+# visual-style 7	bgColor:blue
+# visual-style 7	fgColor:white
+# visual-style 7 2 auxpass	color:blue
+1	-	-	PUNCT	_	_	7	punct	_	_
+2	Er	være	AUX	_	Mood=Ind|Tense=Pres|VerbForm=Fin|Voice=Act	7	auxpass	_	_
+3	du	du	PRON	_	Case=Nom|Gender=Com|Number=Sing|Person=2|PronType=Prs	7	nsubjpass	_	_
+4	da	da	ADV	_	_	7	advmod	_	_
+5	blevet	blive	AUX	_	Definite=Ind|Number=Sing|Tense=Past|VerbForm=Part,Trans	7	cop	_	_
+6	helt	helt	ADV	_	Degree=Pos	7	advmod	_	_
+7	forrykt	forrykt	ADJ	_	Definite=Ind|Degree=Pos|Number=Sing	0	root	_	_
+8	?	?	PUNCT	_	_	7	punct	_	_
+
+</code></pre>
+
+<pre><code class="language-conllu"># visual-style 2	bgColor:blue
+# visual-style 2	fgColor:white
+# visual-style 7	bgColor:blue
+# visual-style 7	fgColor:white
+# visual-style 7 2 auxpass	color:blue
+1	Internt	internt	ADV	_	Degree=Pos	7	advmod	_	_
+2	er	være	AUX	_	Mood=Ind|Tense=Pres|VerbForm=Fin|Voice=Act	7	auxpass	_	_
+3	bryllups-reportagen	bryllups-reportage	NOUN	_	Definite=Def|Gender=Com|Number=Sing	7	nsubjpass	_	_
+4	blevet	blive	AUX	_	Definite=Ind|Number=Sing|Tense=Past|VerbForm=Part,Trans	7	cop	_	_
+5	en	en	DET	_	Gender=Com|Number=Sing|PronType=Ind	7	det	_	_
+6	varm	varm	ADJ	_	Definite=Ind|Degree=Pos|Gender=Com|Number=Sing	7	amod	_	_
+7	kartoffel	kartoffel	NOUN	_	Definite=Ind|Gender=Com|Number=Sing	0	root	_	_
+8	.	.	PUNCT	_	_	7	punct	_	_
+
+</code></pre>
 
 
 
@@ -103,6 +173,7 @@ auxpass in other languages:
         root + 'lib/ext/jquery.min.js',
         root + 'lib/ext/jquery.svg.min.js',
         root + 'lib/ext/jquery.svgdom.min.js',
+        root + 'lib/ext/jquery.timeago.js',
         root + 'lib/ext/jquery-ui.min.js',
         root + 'lib/ext/waypoints.min.js',
         root + 'lib/ext/jquery.address.min.js',
@@ -134,11 +205,40 @@ auxpass in other languages:
     ];
 
     var setupAccordions = function() {
-        // standard jQuery UI "accordion" element initialization
+	// preserve state in URL hash, following in part
+	// http://www.boduch.ca/2011/05/remembering-jquery-ui-accordion.html
+	var accordionChange = function(event, ui) {
+	    var context = ui.newHeader ? ui.newHeader.context : null;
+	    if (context) {
+		var languageCode = context.getAttribute('data-lc');
+		if (languageCode !== null) {
+		    window.location.hash = languageCode;
+		}
+	    }
+	}
+        // jQuery UI "accordion" element initialization
 	$(".jquery-ui-accordion").accordion({
 	    collapsible: true,
-	    active: false
+	    active: false,
+	    change: accordionChange
 	});
+	if ($(".jquery-ui-accordion").length) {
+	    var matches = window.location.hash.match(/^\#(.*)$/);
+	    console.log(matches);
+	    if (matches !== null) {
+		var languageCode = matches[1];
+		var tab = $('[data-lc="'+languageCode+'"]');
+		// the following will only work after accordion is initialized
+		var index = $('.jquery-ui-accordion div.ui-accordion-header').index(tab);
+		if (index !== -1) {
+		    $(".jquery-ui-accordion").accordion({ active: index });
+		}
+	    }
+	}
+    };
+
+    var setupTimeago = function() {
+        jQuery("time.timeago").timeago();
     };
 
     var setupTabs = function() {
@@ -162,6 +262,7 @@ auxpass in other languages:
         // set up UI tabs on page
         setupTabs();
         setupAccordions();
+        setupTimeago();
 
         // mark current collection (filled in by Jekyll)
         Collections.listing['_current'] = 'da-dep';
@@ -187,7 +288,7 @@ auxpass in other languages:
 
       <div id="footer">
 	  <p class="footer-text">&copy; 2014 
-	    <a href="http://universaldependencies.github.io/docs/introduction.html#contributors" style="color:gray">Universal Dependencies contributors</a>. 
+	    <a href="http://universaldependencies.org/introduction.html#contributors" style="color:gray">Universal Dependencies contributors</a>. 
 	    Site powered by <a href="http://spyysalo.github.io/annodoc" style="color:gray">Annodoc</a> and <a href="http://brat.nlplab.org/" style="color:gray">brat</a></p>.
       </div>
     </div>

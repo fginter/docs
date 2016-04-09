@@ -11,6 +11,7 @@
     <link rel="stylesheet" type="text/css" href="../../css/style-vis.css"/>
     <link rel="stylesheet" type="text/css" href="../../css/hint.css"/>
     <script type="text/javascript" src="../../lib/ext/head.load.min.js"></script>
+    <script type="text/javascript" src="../../lib/ext/jquery.timeago.js.js"></script>
 <!--     <link rel="shortcut icon" href="favicon.ico"/> -->
 
 
@@ -20,8 +21,8 @@
 
       <div id="hp-header">
 	
-          <span class="header-text"><a href="http://universaldependencies.github.io/docs/#language-id">home</a></span>
-          <span class="header-text"><a href="http://universaldependencies.github.io/docs/id/dep">id/dep</a></span>
+          <span class="header-text"><a href="http://universaldependencies.org/#language-id">home</a></span>
+          <span class="header-text"><a href="http://universaldependencies.org/id/dep">id/dep</a></span>
           <span class="header-text"><a href="https://github.com/universaldependencies/docs/edit/pages-source/_id-dep/parataxis.md" target="#">edit page</a></span>
           <span class="header-text"><a href="https://github.com/universaldependencies/docs/issues">issue tracker</a></span>
       </div>
@@ -45,6 +46,81 @@ for <code>parataxis</code>.</p>
 <!-- "automatic stats" -->
 
 
+
+
+
+
+
+<hr />
+
+<h2 id="treebank-statistics-udindonesian">Treebank Statistics (UD_Indonesian)</h2>
+
+<p>This relation is universal.</p>
+
+<p>404 nodes (0%) are attached to their parents as <code>parataxis</code>.</p>
+
+<p>356 instances of <code>parataxis</code> (88%) are left-to-right (parent precedes child).
+Average distance between parent and child is 12.9554455445545.</p>
+
+<p>The following 22 pairs of parts of speech are connected with <code>parataxis</code>: <a href="">id-pos/VERB</a>-<a href="">id-pos/VERB</a> (254; 63% instances), <a href="">id-pos/NOUN</a>-<a href="">id-pos/VERB</a> (41; 10% instances), <a href="">id-pos/VERB</a>-<a href="">id-pos/NOUN</a> (39; 10% instances), <a href="">id-pos/PROPN</a>-<a href="">id-pos/VERB</a> (14; 3% instances), <a href="">id-pos/VERB</a>-<a href="">id-pos/PROPN</a> (12; 3% instances), <a href="">id-pos/NOUN</a>-<a href="">id-pos/NOUN</a> (10; 2% instances), <a href="">id-pos/PROPN</a>-<a href="">id-pos/NOUN</a> (5; 1% instances), <a href="">id-pos/NOUN</a>-<a href="">id-pos/PROPN</a> (4; 1% instances), <a href="">id-pos/VERB</a>-<a href="">id-pos/ADJ</a> (4; 1% instances), <a href="">id-pos/VERB</a>-<a href="">id-pos/PRON</a> (4; 1% instances), <a href="">id-pos/PROPN</a>-<a href="">id-pos/PROPN</a> (3; 1% instances), <a href="">id-pos/ADJ</a>-<a href="">id-pos/VERB</a> (2; 0% instances), <a href="">id-pos/PRON</a>-<a href="">id-pos/VERB</a> (2; 0% instances), <a href="">id-pos/PROPN</a>-<a href="">id-pos/ADJ</a> (2; 0% instances), <a href="">id-pos/NOUN</a>-<a href="">id-pos/ADJ</a> (1; 0% instances), <a href="">id-pos/NOUN</a>-<a href="">id-pos/ADV</a> (1; 0% instances), <a href="">id-pos/NOUN</a>-<a href="">id-pos/CONJ</a> (1; 0% instances), <a href="">id-pos/NOUN</a>-<a href="">id-pos/PRON</a> (1; 0% instances), <a href="">id-pos/NUM</a>-<a href="">id-pos/VERB</a> (1; 0% instances), <a href="">id-pos/PROPN</a>-<a href="">id-pos/PRON</a> (1; 0% instances), <a href="">id-pos/VERB</a>-<a href="">id-pos/NUM</a> (1; 0% instances), <a href="">id-pos/VERB</a>-<a href="">id-pos/PART</a> (1; 0% instances).</p>
+
+<pre><code class="language-conllu"># visual-style 9	bgColor:blue
+# visual-style 9	fgColor:white
+# visual-style 4	bgColor:blue
+# visual-style 4	fgColor:white
+# visual-style 4 9 parataxis	color:blue
+1	Tuh	_	PART	_	_	4	advmod	_	_
+2	,	_	PUNCT	_	_	4	punct	_	_
+3	kamu	_	PRON	_	_	4	nsubj	_	_
+4	lupa	_	VERB	_	_	0	root	_	_
+5	lagi	_	ADV	_	_	4	advmod	_	_
+6	kan	_	PART	_	_	4	amod	_	_
+7	?	_	PUNCT	_	_	4	punct	_	_
+8	-	_	PUNCT	_	_	4	punct	_	_
+9	Lihat	_	VERB	_	_	4	parataxis	_	_
+10	,	_	PUNCT	_	_	4	punct	_	_
+11	kamu	_	PRON	_	_	12	nsubj	_	_
+12	lupa	_	VERB	_	_	4	parataxis	_	_
+13	lagi	_	ADV	_	_	12	advmod	_	_
+14	bukan	_	PART	_	_	12	neg	_	_
+15	?	_	PUNCT	_	_	4	punct	_	_
+
+</code></pre>
+
+<pre><code class="language-conllu"># visual-style 4	bgColor:blue
+# visual-style 4	fgColor:white
+# visual-style 2	bgColor:blue
+# visual-style 2	fgColor:white
+# visual-style 2 4 parataxis	color:blue
+1	apakah	_	ADV	_	_	0	root	_	_
+2	artinya	_	NOUN	_	_	1	acl	_	_
+3	tidak	_	PART	_	_	4	neg	_	_
+4	beroperasi	_	VERB	_	_	2	parataxis	_	_
+5	hari	_	NOUN	_	_	4	dobj	_	_
+6	sabtu	_	PROPN	_	_	5	name	_	_
+7	,	_	PUNCT	_	_	5	punct	_	_
+8	minggu	_	PROPN	_	_	5	conj	_	_
+9	/	_	SYM	_	_	5	punct	_	_
+10	libur	_	NOUN	_	_	5	conj	_	_
+11	?	_	PUNCT	_	_	5	punct	_	_
+
+</code></pre>
+
+<pre><code class="language-conllu"># visual-style 2	bgColor:blue
+# visual-style 2	fgColor:white
+# visual-style 5	bgColor:blue
+# visual-style 5	fgColor:white
+# visual-style 5 2 parataxis	color:blue
+1	Sebuah	_	DET	_	_	2	det	_	_
+2	pertanyaan	_	NOUN	_	_	5	parataxis	_	_
+3	,	_	PUNCT	_	_	2	punct	_	_
+4	mengapa	_	ADV	_	_	5	advmod	_	_
+5	dipahatkan	_	VERB	_	_	0	root	_	_
+6	relief	_	NOUN	_	_	5	dobj	_	_
+7	Garudeya	_	PROPN	_	_	6	name	_	_
+8	?	_	PUNCT	_	_	5	punct	_	_
+
+</code></pre>
 
 
 
@@ -103,6 +179,7 @@ parataxis in other languages:
         root + 'lib/ext/jquery.min.js',
         root + 'lib/ext/jquery.svg.min.js',
         root + 'lib/ext/jquery.svgdom.min.js',
+        root + 'lib/ext/jquery.timeago.js',
         root + 'lib/ext/jquery-ui.min.js',
         root + 'lib/ext/waypoints.min.js',
         root + 'lib/ext/jquery.address.min.js',
@@ -134,11 +211,40 @@ parataxis in other languages:
     ];
 
     var setupAccordions = function() {
-        // standard jQuery UI "accordion" element initialization
+	// preserve state in URL hash, following in part
+	// http://www.boduch.ca/2011/05/remembering-jquery-ui-accordion.html
+	var accordionChange = function(event, ui) {
+	    var context = ui.newHeader ? ui.newHeader.context : null;
+	    if (context) {
+		var languageCode = context.getAttribute('data-lc');
+		if (languageCode !== null) {
+		    window.location.hash = languageCode;
+		}
+	    }
+	}
+        // jQuery UI "accordion" element initialization
 	$(".jquery-ui-accordion").accordion({
 	    collapsible: true,
-	    active: false
+	    active: false,
+	    change: accordionChange
 	});
+	if ($(".jquery-ui-accordion").length) {
+	    var matches = window.location.hash.match(/^\#(.*)$/);
+	    console.log(matches);
+	    if (matches !== null) {
+		var languageCode = matches[1];
+		var tab = $('[data-lc="'+languageCode+'"]');
+		// the following will only work after accordion is initialized
+		var index = $('.jquery-ui-accordion div.ui-accordion-header').index(tab);
+		if (index !== -1) {
+		    $(".jquery-ui-accordion").accordion({ active: index });
+		}
+	    }
+	}
+    };
+
+    var setupTimeago = function() {
+        jQuery("time.timeago").timeago();
     };
 
     var setupTabs = function() {
@@ -162,6 +268,7 @@ parataxis in other languages:
         // set up UI tabs on page
         setupTabs();
         setupAccordions();
+        setupTimeago();
 
         // mark current collection (filled in by Jekyll)
         Collections.listing['_current'] = 'id-dep';
@@ -187,7 +294,7 @@ parataxis in other languages:
 
       <div id="footer">
 	  <p class="footer-text">&copy; 2014 
-	    <a href="http://universaldependencies.github.io/docs/introduction.html#contributors" style="color:gray">Universal Dependencies contributors</a>. 
+	    <a href="http://universaldependencies.org/introduction.html#contributors" style="color:gray">Universal Dependencies contributors</a>. 
 	    Site powered by <a href="http://spyysalo.github.io/annodoc" style="color:gray">Annodoc</a> and <a href="http://brat.nlplab.org/" style="color:gray">brat</a></p>.
       </div>
     </div>

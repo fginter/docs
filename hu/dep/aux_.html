@@ -11,6 +11,7 @@
     <link rel="stylesheet" type="text/css" href="../../css/style-vis.css"/>
     <link rel="stylesheet" type="text/css" href="../../css/hint.css"/>
     <script type="text/javascript" src="../../lib/ext/head.load.min.js"></script>
+    <script type="text/javascript" src="../../lib/ext/jquery.timeago.js.js"></script>
 <!--     <link rel="shortcut icon" href="favicon.ico"/> -->
 
 
@@ -20,8 +21,8 @@
 
       <div id="hp-header">
 	
-          <span class="header-text"><a href="http://universaldependencies.github.io/docs/#language-hu">home</a></span>
-          <span class="header-text"><a href="http://universaldependencies.github.io/docs/hu/dep">hu/dep</a></span>
+          <span class="header-text"><a href="http://universaldependencies.org/#language-hu">home</a></span>
+          <span class="header-text"><a href="http://universaldependencies.org/hu/dep">hu/dep</a></span>
           <span class="header-text"><a href="https://github.com/universaldependencies/docs/edit/pages-source/_hu-dep/aux_.md" target="#">edit page</a></span>
           <span class="header-text"><a href="https://github.com/universaldependencies/docs/issues">issue tracker</a></span>
       </div>
@@ -45,6 +46,67 @@ for <code>aux</code>.</p>
 <!-- "automatic stats" -->
 
 
+
+
+
+
+
+<hr />
+
+<h2 id="treebank-statistics-udhungarian">Treebank Statistics (UD_Hungarian)</h2>
+
+<p>This relation is universal.</p>
+
+<p>28 nodes (0%) are attached to their parents as <code>aux</code>.</p>
+
+<p>18 instances of <code>aux</code> (64%) are left-to-right (parent precedes child).
+Average distance between parent and child is 1.10714285714286.</p>
+
+<p>The following 2 pairs of parts of speech are connected with <code>aux</code>: <a href="">hu-pos/VERB</a>-<a href="">hu-pos/AUX</a> (27; 96% instances), <a href="">hu-pos/NOUN</a>-<a href="">hu-pos/AUX</a> (1; 4% instances).</p>
+
+<pre><code class="language-conllu"># visual-style 5	bgColor:blue
+# visual-style 5	fgColor:white
+# visual-style 4	bgColor:blue
+# visual-style 4	fgColor:white
+# visual-style 4 5 aux	color:blue
+1	A	a	DET	_	Definite=Def|PronType=Art	3	det	_	_
+2	nettó	nettó	ADJ	_	Case=Nom|Degree=Pos|Number=Sing|Number[psed]=None|Number[psor]=None|Person[psor]=None	3	amod:att	_	_
+3	adósságállomány	adósságállomány	NOUN	_	Case=Nom|Number=Sing|Number[psed]=None|Number[psor]=None|Person[psor]=None	4	nsubj	_	_
+4	növekedni	növekedik	VERB	_	VerbForm=Inf|Voice=Act	0	root	_	_
+5	fog	fog	AUX	_	Definite=Ind|Mood=Ind|Number=Sing|Person=3|Tense=Pres|Voice=Act	4	aux	_	_
+6	.	.	PUNCT	_	_	4	punct	_	_
+
+</code></pre>
+
+<pre><code class="language-conllu"># visual-style 16	bgColor:blue
+# visual-style 16	fgColor:white
+# visual-style 14	bgColor:blue
+# visual-style 14	fgColor:white
+# visual-style 14 16 aux	color:blue
+1	Jorge	Jorge	PROPN	_	Case=Nom|Number=Sing|Number[psed]=None|Number[psor]=None|Person[psor]=None	2	name	_	_
+2	Faliba	Faliba	PROPN	_	Case=Nom|Number=Sing|Number[psed]=None|Number[psor]=None|Person[psor]=None	3	appos	_	_
+3	atya	atya	NOUN	_	Case=Nom|Number=Sing|Number[psed]=None|Number[psor]=None|Person[psor]=None	6	nsubj	_	_
+4	a	a	DET	_	Definite=Def|PronType=Art	5	det	_	_
+5	rendőrségen	rendőrség	NOUN	_	Case=Sup|Number=Sing|Number[psed]=None|Number[psor]=None|Person[psor]=None	6	nmod:obl	_	_
+6	bevallotta	be+vall	VERB	_	Definite=Def|Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin|Voice=Act	0	root	_	_
+7	,	,	PUNCT	_	_	6	punct	_	_
+8	hogy	hogy	SCONJ	_	_	14	mark	_	_
+9	ez	ez	PRON	_	Case=Nom|Number=Sing|Number[psed]=None|Number[psor]=None|Person=3|Person[psor]=None|PronType=Dem	14	nsubj	_	_
+10	már	már	ADV	_	_	14	advmod:tlocy	_	_
+11	az	az	DET	_	Definite=Def|PronType=Art	14	det	_	_
+12	ötödik	ötödik	ADJ	_	Case=Nom|Number=Sing|Number[psed]=None|Number[psor]=None|NumType=Ord|Person[psor]=None	14	amod:att	_	_
+13	nemzetközi	nemzetközi	ADJ	_	Case=Nom|Degree=Pos|Number=Sing|Number[psed]=None|Number[psor]=None|Person[psor]=None	14	amod:att	_	_
+14	csempészútja	csempészút	NOUN	_	Case=Nom|Number=Sing|Number[psed]=None|Number[psor]=Sing|Person[psor]=3	6	ccomp:obj	_	_
+15	lett	lesz	VERB	_	Definite=Ind|Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin|Voice=Act	14	cop	_	_
+16	volna	volna	AUX	_	Definite=Ind|Mood=Cnd|Number=Sing|Person=3|Tense=Pres|Voice=Act	14	aux	_	_
+17	,	,	PUNCT	_	_	14	punct	_	_
+18	ám	ám	CONJ	_	_	14	cc	_	_
+19	jó	jó	ADJ	_	Case=Nom|Degree=Pos|Number=Sing|Number[psed]=None|Number[psor]=None|Person[psor]=None	20	amod:att	_	_
+20	ügyet	ügy	NOUN	_	Case=Acc|Number=Sing|Number[psed]=None|Number[psor]=None|Person[psor]=None	21	dobj	_	_
+21	szolgál	szolgál	VERB	_	Definite=Ind|Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	14	conj	_	_
+22	.	.	PUNCT	_	_	6	punct	_	_
+
+</code></pre>
 
 
 
@@ -103,6 +165,7 @@ aux in other languages:
         root + 'lib/ext/jquery.min.js',
         root + 'lib/ext/jquery.svg.min.js',
         root + 'lib/ext/jquery.svgdom.min.js',
+        root + 'lib/ext/jquery.timeago.js',
         root + 'lib/ext/jquery-ui.min.js',
         root + 'lib/ext/waypoints.min.js',
         root + 'lib/ext/jquery.address.min.js',
@@ -134,11 +197,40 @@ aux in other languages:
     ];
 
     var setupAccordions = function() {
-        // standard jQuery UI "accordion" element initialization
+	// preserve state in URL hash, following in part
+	// http://www.boduch.ca/2011/05/remembering-jquery-ui-accordion.html
+	var accordionChange = function(event, ui) {
+	    var context = ui.newHeader ? ui.newHeader.context : null;
+	    if (context) {
+		var languageCode = context.getAttribute('data-lc');
+		if (languageCode !== null) {
+		    window.location.hash = languageCode;
+		}
+	    }
+	}
+        // jQuery UI "accordion" element initialization
 	$(".jquery-ui-accordion").accordion({
 	    collapsible: true,
-	    active: false
+	    active: false,
+	    change: accordionChange
 	});
+	if ($(".jquery-ui-accordion").length) {
+	    var matches = window.location.hash.match(/^\#(.*)$/);
+	    console.log(matches);
+	    if (matches !== null) {
+		var languageCode = matches[1];
+		var tab = $('[data-lc="'+languageCode+'"]');
+		// the following will only work after accordion is initialized
+		var index = $('.jquery-ui-accordion div.ui-accordion-header').index(tab);
+		if (index !== -1) {
+		    $(".jquery-ui-accordion").accordion({ active: index });
+		}
+	    }
+	}
+    };
+
+    var setupTimeago = function() {
+        jQuery("time.timeago").timeago();
     };
 
     var setupTabs = function() {
@@ -162,6 +254,7 @@ aux in other languages:
         // set up UI tabs on page
         setupTabs();
         setupAccordions();
+        setupTimeago();
 
         // mark current collection (filled in by Jekyll)
         Collections.listing['_current'] = 'hu-dep';
@@ -187,7 +280,7 @@ aux in other languages:
 
       <div id="footer">
 	  <p class="footer-text">&copy; 2014 
-	    <a href="http://universaldependencies.github.io/docs/introduction.html#contributors" style="color:gray">Universal Dependencies contributors</a>. 
+	    <a href="http://universaldependencies.org/introduction.html#contributors" style="color:gray">Universal Dependencies contributors</a>. 
 	    Site powered by <a href="http://spyysalo.github.io/annodoc" style="color:gray">Annodoc</a> and <a href="http://brat.nlplab.org/" style="color:gray">brat</a></p>.
       </div>
     </div>

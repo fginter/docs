@@ -11,6 +11,7 @@
     <link rel="stylesheet" type="text/css" href="../../css/style-vis.css"/>
     <link rel="stylesheet" type="text/css" href="../../css/hint.css"/>
     <script type="text/javascript" src="../../lib/ext/head.load.min.js"></script>
+    <script type="text/javascript" src="../../lib/ext/jquery.timeago.js.js"></script>
 <!--     <link rel="shortcut icon" href="favicon.ico"/> -->
 
 
@@ -20,8 +21,8 @@
 
       <div id="hp-header">
 	
-          <span class="header-text"><a href="http://universaldependencies.github.io/docs/#language-he">home</a></span>
-          <span class="header-text"><a href="http://universaldependencies.github.io/docs/he/dep">he/dep</a></span>
+          <span class="header-text"><a href="http://universaldependencies.org/#language-he">home</a></span>
+          <span class="header-text"><a href="http://universaldependencies.org/he/dep">he/dep</a></span>
           <span class="header-text"><a href="https://github.com/universaldependencies/docs/edit/pages-source/_he-dep/goeswith.md" target="#">edit page</a></span>
           <span class="header-text"><a href="https://github.com/universaldependencies/docs/issues">issue tracker</a></span>
       </div>
@@ -45,6 +46,54 @@ for <code>goeswith</code>.</p>
 <!-- "automatic stats" -->
 
 
+
+
+
+
+
+<hr />
+
+<h2 id="treebank-statistics-udhebrew">Treebank Statistics (UD_Hebrew)</h2>
+
+<p>This relation is universal.</p>
+
+<p>3 nodes (0%) are attached to their parents as <code>goeswith</code>.</p>
+
+<p>3 instances of <code>goeswith</code> (100%) are left-to-right (parent precedes child).
+Average distance between parent and child is 2.</p>
+
+<p>The following 1 pairs of parts of speech are connected with <code>goeswith</code>: <a href="">he-pos/NOUN</a>-<a href="">he-pos/NOUN</a> (3; 100% instances).</p>
+
+<pre><code class="language-conllu"># visual-style 3	bgColor:blue
+# visual-style 3	fgColor:white
+# visual-style 1	bgColor:blue
+# visual-style 1	fgColor:white
+# visual-style 1 3 goeswith	color:blue
+1	ח	_	NOUN	NOUN	_	5	nsubj	_	_
+2	"	_	PUNCT	PUNCT	_	1	punct	_	_
+3	כ	_	NOUN	NOUN	_	1	goeswith	_	_
+4	ויינשטיין	_	PROPN	PROPN	_	1	appos	_	_
+5	אמר	_	VERB	VERB	Gender=Masc|HebBinyan=PAAL|Number=Sing|Person=3|Tense=Past	0	root	_	_
+6	ב	_	ADP	ADP	_	7	case	_	_
+7	תגובה	_	NOUN	NOUN	Gender=Fem|Number=Sing	5	nmod	_	_
+8	כי	_	SCONJ	SCONJ	_	21	mark	_	_
+9	"	_	PUNCT	PUNCT	_	21	punct	_	_
+10	עובדת	_	NOUN	NOUN	Definite=Red|Gender=Fem|Number=Sing	21	nsubj	_	_
+11	ה	_	DET	DET	PronType=Art	12	det:def	_	_
+12	התנגדות	_	NOUN	NOUN	Gender=Fem|Number=Sing	10	nmod:smixut	_	_
+13	ב	_	ADP	ADP	_	15	case	_	_
+14	ה_	_	DET	DET	PronType=Art	15	det:def	_	_
+15	ליכוד	_	NOUN	NOUN	Gender=Masc|Number=Sing	12	nmod	_	_
+16	ו	_	CONJ	CONJ	_	15	cc	_	_
+17	בין	_	ADP	ADP	_	18	case	_	_
+18	שרי	_	NOUN	NOUN	Definite=Red|Gender=Masc|Number=Plur	15	conj	_	_
+19	ה	_	DET	DET	PronType=Art	20	det:def	_	_
+20	ליכוד	_	NOUN	NOUN	Gender=Masc|Number=Sing	18	nmod:smixut	_	_
+21	ידועה	_	VERB	VERB	Gender=Fem|HebBinyan=PAAL|Number=Sing|Person=1,2,3|VerbForm=Part	5	ccomp	_	_
+22	היטב	_	ADV	ADV	_	21	advmod	_	_
+23	.	_	PUNCT	PUNCT	_	5	punct	_	_
+
+</code></pre>
 
 
 
@@ -103,6 +152,7 @@ goeswith in other languages:
         root + 'lib/ext/jquery.min.js',
         root + 'lib/ext/jquery.svg.min.js',
         root + 'lib/ext/jquery.svgdom.min.js',
+        root + 'lib/ext/jquery.timeago.js',
         root + 'lib/ext/jquery-ui.min.js',
         root + 'lib/ext/waypoints.min.js',
         root + 'lib/ext/jquery.address.min.js',
@@ -134,11 +184,40 @@ goeswith in other languages:
     ];
 
     var setupAccordions = function() {
-        // standard jQuery UI "accordion" element initialization
+	// preserve state in URL hash, following in part
+	// http://www.boduch.ca/2011/05/remembering-jquery-ui-accordion.html
+	var accordionChange = function(event, ui) {
+	    var context = ui.newHeader ? ui.newHeader.context : null;
+	    if (context) {
+		var languageCode = context.getAttribute('data-lc');
+		if (languageCode !== null) {
+		    window.location.hash = languageCode;
+		}
+	    }
+	}
+        // jQuery UI "accordion" element initialization
 	$(".jquery-ui-accordion").accordion({
 	    collapsible: true,
-	    active: false
+	    active: false,
+	    change: accordionChange
 	});
+	if ($(".jquery-ui-accordion").length) {
+	    var matches = window.location.hash.match(/^\#(.*)$/);
+	    console.log(matches);
+	    if (matches !== null) {
+		var languageCode = matches[1];
+		var tab = $('[data-lc="'+languageCode+'"]');
+		// the following will only work after accordion is initialized
+		var index = $('.jquery-ui-accordion div.ui-accordion-header').index(tab);
+		if (index !== -1) {
+		    $(".jquery-ui-accordion").accordion({ active: index });
+		}
+	    }
+	}
+    };
+
+    var setupTimeago = function() {
+        jQuery("time.timeago").timeago();
     };
 
     var setupTabs = function() {
@@ -162,6 +241,7 @@ goeswith in other languages:
         // set up UI tabs on page
         setupTabs();
         setupAccordions();
+        setupTimeago();
 
         // mark current collection (filled in by Jekyll)
         Collections.listing['_current'] = 'he-dep';
@@ -187,7 +267,7 @@ goeswith in other languages:
 
       <div id="footer">
 	  <p class="footer-text">&copy; 2014 
-	    <a href="http://universaldependencies.github.io/docs/introduction.html#contributors" style="color:gray">Universal Dependencies contributors</a>. 
+	    <a href="http://universaldependencies.org/introduction.html#contributors" style="color:gray">Universal Dependencies contributors</a>. 
 	    Site powered by <a href="http://spyysalo.github.io/annodoc" style="color:gray">Annodoc</a> and <a href="http://brat.nlplab.org/" style="color:gray">brat</a></p>.
       </div>
     </div>

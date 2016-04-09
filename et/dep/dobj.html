@@ -11,6 +11,7 @@
     <link rel="stylesheet" type="text/css" href="../../css/style-vis.css"/>
     <link rel="stylesheet" type="text/css" href="../../css/hint.css"/>
     <script type="text/javascript" src="../../lib/ext/head.load.min.js"></script>
+    <script type="text/javascript" src="../../lib/ext/jquery.timeago.js.js"></script>
 <!--     <link rel="shortcut icon" href="favicon.ico"/> -->
 
 
@@ -20,8 +21,8 @@
 
       <div id="hp-header">
 	
-          <span class="header-text"><a href="http://universaldependencies.github.io/docs/#language-et">home</a></span>
-          <span class="header-text"><a href="http://universaldependencies.github.io/docs/et/dep">et/dep</a></span>
+          <span class="header-text"><a href="http://universaldependencies.org/#language-et">home</a></span>
+          <span class="header-text"><a href="http://universaldependencies.org/et/dep">et/dep</a></span>
           <span class="header-text"><a href="https://github.com/universaldependencies/docs/edit/pages-source/_et-dep/dobj.md" target="#">edit page</a></span>
           <span class="header-text"><a href="https://github.com/universaldependencies/docs/issues">issue tracker</a></span>
       </div>
@@ -45,6 +46,65 @@ for <code>dobj</code>.</p>
 <!-- "automatic stats" -->
 
 
+
+
+
+
+
+<hr />
+
+<h2 id="treebank-statistics-udestonian">Treebank Statistics (UD_Estonian)</h2>
+
+<p>This relation is universal.</p>
+
+<p>572 nodes (6%) are attached to their parents as <code>dobj</code>.</p>
+
+<p>453 instances of <code>dobj</code> (79%) are left-to-right (parent precedes child).
+Average distance between parent and child is 1.79195804195804.</p>
+
+<p>The following 8 pairs of parts of speech are connected with <code>dobj</code>: <a href="">et-pos/VERB</a>-<a href="">et-pos/NOUN</a> (459; 80% instances), <a href="">et-pos/VERB</a>-<a href="">et-pos/PRON</a> (79; 14% instances), <a href="">et-pos/VERB</a>-<a href="">et-pos/PROPN</a> (21; 4% instances), <a href="">et-pos/VERB</a>-<a href="">et-pos/NUM</a> (6; 1% instances), <a href="">et-pos/VERB</a>-<a href="">et-pos/SCONJ</a> (3; 1% instances), <a href="">et-pos/ADV</a>-<a href="">et-pos/NOUN</a> (2; 0% instances), <a href="">et-pos/NOUN</a>-<a href="">et-pos/NOUN</a> (1; 0% instances), <a href="">et-pos/VERB</a>-<a href="">et-pos/ADV</a> (1; 0% instances).</p>
+
+<pre><code class="language-conllu"># visual-style 5	bgColor:blue
+# visual-style 5	fgColor:white
+# visual-style 3	bgColor:blue
+# visual-style 3	fgColor:white
+# visual-style 3 5 dobj	color:blue
+1	Suur	suur+0	ADJ	adj/pos,sg,nom,%cap	Case=Nom|Degree=Pos|Number=Sing	2	amod	_	_
+2	keskmees	kesk_mees+0	NOUN	n/com,sg,nom	Case=Nom|Number=Sing	3	nsubj	_	_
+3	kaevab	kaeva+b	VERB	v/main,indic,pres,ps3,sg,ps,af	Mood=Ind|Negative=Pos|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	_	_
+4	riigikogule	riigi_kogu+le	NOUN	n/com,sg,all	Case=All|Number=Sing	3	nmod	_	_
+5	auku	auk+0	NOUN	n/com,sg,part	Case=Par|Number=Sing	3	dobj	_	_
+
+</code></pre>
+
+<pre><code class="language-conllu"># visual-style 4	bgColor:blue
+# visual-style 4	fgColor:white
+# visual-style 3	bgColor:blue
+# visual-style 3	fgColor:white
+# visual-style 3 4 dobj	color:blue
+1	Jalgade	jalg+de	NOUN	n/com,pl,gen,.cap	Case=Gen|Number=Plur	3	nmod	_	_
+2	vahel	vahel+0	ADP	pst/post,.gen	AdpType=Post|Case=Gen	1	case	_	_
+3	liigutas	liiguta+s	VERB	v-fin/main,indic,impf,ps3,sg,ps,af,.FinV,.Part	Mood=Ind|Negative=Pos|Number=Sing|Person=3|Tense=Imp|VerbForm=Fin	0	root	_	_
+4	ennast	ise+t	PRON	pron-poss/pos,det,refl,sg,part	Case=Par|Number=Sing|Poss=Yes|PronType=Prs|Reflex=Yes	3	dobj	_	_
+5	mingi	mingi+0	PRON	pron-def/indef,sg,nom	Case=Nom|Number=Sing|Poss=Yes|PronType=Ind,Neg	7	nmod	_	_
+6	ligane	ligane+0	ADJ	adj/pos,sg,nom	Case=Nom|Degree=Pos|Number=Sing	7	amod	_	_
+7	olend	olend+0	NOUN	n/com,sg,nom	Case=Nom|Number=Sing	3	nsubj	_	_
+8	.	.	PUNCT	punc/Fst	PunctType=Peri	3	punct	_	_
+
+</code></pre>
+
+<pre><code class="language-conllu"># visual-style 2	bgColor:blue
+# visual-style 2	fgColor:white
+# visual-style 1	bgColor:blue
+# visual-style 1	fgColor:white
+# visual-style 1 2 dobj	color:blue
+1	Tõukan	tõuka+n	VERB	v-fin/main,indic,pres,ps1,sg,ps,af,.cap,.FinV,.NGP-P	Mood=Ind|Negative=Pos|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	0	root	_	_
+2	Donaldi	Donald+0	PROPN	prop/prop,sg,gen,.cap,.?	Case=Gen|Number=Sing	1	dobj	_	_
+3	ukse	uks+0	NOUN	n/com,sg,gen	Case=Gen|Number=Sing	1	nmod	_	_
+4	taha	taha+0	ADP	pst/post,.gen	AdpType=Post|Case=Gen	3	case	_	_
+5	.	.	PUNCT	punc/Fst	PunctType=Peri	1	punct	_	_
+
+</code></pre>
 
 
 
@@ -103,6 +163,7 @@ dobj in other languages:
         root + 'lib/ext/jquery.min.js',
         root + 'lib/ext/jquery.svg.min.js',
         root + 'lib/ext/jquery.svgdom.min.js',
+        root + 'lib/ext/jquery.timeago.js',
         root + 'lib/ext/jquery-ui.min.js',
         root + 'lib/ext/waypoints.min.js',
         root + 'lib/ext/jquery.address.min.js',
@@ -134,11 +195,40 @@ dobj in other languages:
     ];
 
     var setupAccordions = function() {
-        // standard jQuery UI "accordion" element initialization
+	// preserve state in URL hash, following in part
+	// http://www.boduch.ca/2011/05/remembering-jquery-ui-accordion.html
+	var accordionChange = function(event, ui) {
+	    var context = ui.newHeader ? ui.newHeader.context : null;
+	    if (context) {
+		var languageCode = context.getAttribute('data-lc');
+		if (languageCode !== null) {
+		    window.location.hash = languageCode;
+		}
+	    }
+	}
+        // jQuery UI "accordion" element initialization
 	$(".jquery-ui-accordion").accordion({
 	    collapsible: true,
-	    active: false
+	    active: false,
+	    change: accordionChange
 	});
+	if ($(".jquery-ui-accordion").length) {
+	    var matches = window.location.hash.match(/^\#(.*)$/);
+	    console.log(matches);
+	    if (matches !== null) {
+		var languageCode = matches[1];
+		var tab = $('[data-lc="'+languageCode+'"]');
+		// the following will only work after accordion is initialized
+		var index = $('.jquery-ui-accordion div.ui-accordion-header').index(tab);
+		if (index !== -1) {
+		    $(".jquery-ui-accordion").accordion({ active: index });
+		}
+	    }
+	}
+    };
+
+    var setupTimeago = function() {
+        jQuery("time.timeago").timeago();
     };
 
     var setupTabs = function() {
@@ -162,6 +252,7 @@ dobj in other languages:
         // set up UI tabs on page
         setupTabs();
         setupAccordions();
+        setupTimeago();
 
         // mark current collection (filled in by Jekyll)
         Collections.listing['_current'] = 'et-dep';
@@ -187,7 +278,7 @@ dobj in other languages:
 
       <div id="footer">
 	  <p class="footer-text">&copy; 2014 
-	    <a href="http://universaldependencies.github.io/docs/introduction.html#contributors" style="color:gray">Universal Dependencies contributors</a>. 
+	    <a href="http://universaldependencies.org/introduction.html#contributors" style="color:gray">Universal Dependencies contributors</a>. 
 	    Site powered by <a href="http://spyysalo.github.io/annodoc" style="color:gray">Annodoc</a> and <a href="http://brat.nlplab.org/" style="color:gray">brat</a></p>.
       </div>
     </div>

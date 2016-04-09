@@ -11,6 +11,7 @@
     <link rel="stylesheet" type="text/css" href="../../css/style-vis.css"/>
     <link rel="stylesheet" type="text/css" href="../../css/hint.css"/>
     <script type="text/javascript" src="../../lib/ext/head.load.min.js"></script>
+    <script type="text/javascript" src="../../lib/ext/jquery.timeago.js.js"></script>
 <!--     <link rel="shortcut icon" href="favicon.ico"/> -->
 
 
@@ -20,8 +21,8 @@
 
       <div id="hp-header">
 	
-          <span class="header-text"><a href="http://universaldependencies.github.io/docs/#language-cs">home</a></span>
-          <span class="header-text"><a href="http://universaldependencies.github.io/docs/cs/dep">cs/dep</a></span>
+          <span class="header-text"><a href="http://universaldependencies.org/#language-cs">home</a></span>
+          <span class="header-text"><a href="http://universaldependencies.org/cs/dep">cs/dep</a></span>
           <span class="header-text"><a href="https://github.com/universaldependencies/docs/edit/pages-source/_cs-dep/compound.md" target="#">edit page</a></span>
           <span class="header-text"><a href="https://github.com/universaldependencies/docs/issues">issue tracker</a></span>
       </div>
@@ -62,6 +63,46 @@ compound(thousand, five)
 <!-- "automatic stats" -->
 
 
+
+
+
+
+
+<hr />
+
+<h2 id="treebank-statistics-udczech">Treebank Statistics (UD_Czech)</h2>
+
+<p>This relation is universal.</p>
+
+<p>2797 nodes (0%) are attached to their parents as <code>compound</code>.</p>
+
+<p>2090 instances of <code>compound</code> (75%) are left-to-right (parent precedes child).
+Average distance between parent and child is 1.97890597068287.</p>
+
+<p>The following 1 pairs of parts of speech are connected with <code>compound</code>: <a href="">cs-pos/NUM</a>-<a href="">cs-pos/NUM</a> (2797; 100% instances).</p>
+
+<pre><code class="language-conllu"># visual-style 10	bgColor:blue
+# visual-style 10	fgColor:white
+# visual-style 12	bgColor:blue
+# visual-style 12	fgColor:white
+# visual-style 12 10 compound	color:blue
+1	Prodej	prodej	NOUN	NNIS1-----A----	Animacy=Inan|Case=Nom|Gender=Masc|Negative=Pos|Number=Sing	6	nsubj	_	LGloss=(akt_prodeje_zboží)
+2	či	či	CONJ	J^-------------	_	1	cc	_	_
+3	pronájem	pronájem	NOUN	NNIS1-----A----	Animacy=Inan|Case=Nom|Gender=Masc|Negative=Pos|Number=Sing	1	conj	_	_
+4	se	se	PRON	P7-X4----------	Case=Acc|PronType=Prs|Reflex=Yes|Variant=Short	6	auxpass:reflex	_	LGloss=(zvr._zájmeno/částice)
+5	tedy	tedy	ADV	Db-------------	_	6	cc	_	_
+6	uskuteční	uskutečnit	VERB	VB-S---3P-AA---	Aspect=Perf|Mood=Ind|Negative=Pos|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	0	root	_	_
+7	dejme	dát	VERB	Vi-P---1--A----	Mood=Imp|Negative=Pos|Number=Plur|Person=1|VerbForm=Fin	6	dep	_	_
+8	tomu	ten	PRON	PDZS3----------	Case=Dat|Gender=Masc,Neut|Number=Sing|PronType=Dem	7	dobj	_	_
+9	k	k	ADP	RR--3----------	AdpType=Prep|Case=Dat	12	case	_	LId=k-1
+10	1	1	NUM	C=-------------	NumForm=Digit|NumType=Card	12	compound	_	SpaceAfter=No
+11	.	.	PUNCT	Z:-------------	_	10	punct	_	_
+12	3	3	NUM	C=-------------	NumForm=Digit|NumType=Card	6	advmod	_	SpaceAfter=No
+13	.	.	PUNCT	Z:-------------	_	12	punct	_	_
+14	1994	1994	NUM	C=-------------	NumForm=Digit|NumType=Card	12	compound	_	SpaceAfter=No
+15	.	.	PUNCT	Z:-------------	_	6	punct	_	_
+
+</code></pre>
 
 
 
@@ -120,6 +161,7 @@ compound in other languages:
         root + 'lib/ext/jquery.min.js',
         root + 'lib/ext/jquery.svg.min.js',
         root + 'lib/ext/jquery.svgdom.min.js',
+        root + 'lib/ext/jquery.timeago.js',
         root + 'lib/ext/jquery-ui.min.js',
         root + 'lib/ext/waypoints.min.js',
         root + 'lib/ext/jquery.address.min.js',
@@ -151,11 +193,40 @@ compound in other languages:
     ];
 
     var setupAccordions = function() {
-        // standard jQuery UI "accordion" element initialization
+	// preserve state in URL hash, following in part
+	// http://www.boduch.ca/2011/05/remembering-jquery-ui-accordion.html
+	var accordionChange = function(event, ui) {
+	    var context = ui.newHeader ? ui.newHeader.context : null;
+	    if (context) {
+		var languageCode = context.getAttribute('data-lc');
+		if (languageCode !== null) {
+		    window.location.hash = languageCode;
+		}
+	    }
+	}
+        // jQuery UI "accordion" element initialization
 	$(".jquery-ui-accordion").accordion({
 	    collapsible: true,
-	    active: false
+	    active: false,
+	    change: accordionChange
 	});
+	if ($(".jquery-ui-accordion").length) {
+	    var matches = window.location.hash.match(/^\#(.*)$/);
+	    console.log(matches);
+	    if (matches !== null) {
+		var languageCode = matches[1];
+		var tab = $('[data-lc="'+languageCode+'"]');
+		// the following will only work after accordion is initialized
+		var index = $('.jquery-ui-accordion div.ui-accordion-header').index(tab);
+		if (index !== -1) {
+		    $(".jquery-ui-accordion").accordion({ active: index });
+		}
+	    }
+	}
+    };
+
+    var setupTimeago = function() {
+        jQuery("time.timeago").timeago();
     };
 
     var setupTabs = function() {
@@ -179,6 +250,7 @@ compound in other languages:
         // set up UI tabs on page
         setupTabs();
         setupAccordions();
+        setupTimeago();
 
         // mark current collection (filled in by Jekyll)
         Collections.listing['_current'] = 'cs-dep';
@@ -204,7 +276,7 @@ compound in other languages:
 
       <div id="footer">
 	  <p class="footer-text">&copy; 2014 
-	    <a href="http://universaldependencies.github.io/docs/introduction.html#contributors" style="color:gray">Universal Dependencies contributors</a>. 
+	    <a href="http://universaldependencies.org/introduction.html#contributors" style="color:gray">Universal Dependencies contributors</a>. 
 	    Site powered by <a href="http://spyysalo.github.io/annodoc" style="color:gray">Annodoc</a> and <a href="http://brat.nlplab.org/" style="color:gray">brat</a></p>.
       </div>
     </div>

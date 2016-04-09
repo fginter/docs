@@ -11,6 +11,7 @@
     <link rel="stylesheet" type="text/css" href="../../css/style-vis.css"/>
     <link rel="stylesheet" type="text/css" href="../../css/hint.css"/>
     <script type="text/javascript" src="../../lib/ext/head.load.min.js"></script>
+    <script type="text/javascript" src="../../lib/ext/jquery.timeago.js.js"></script>
 <!--     <link rel="shortcut icon" href="favicon.ico"/> -->
 
 
@@ -20,8 +21,8 @@
 
       <div id="hp-header">
 	
-          <span class="header-text"><a href="http://universaldependencies.github.io/docs/#language-eu">home</a></span>
-          <span class="header-text"><a href="http://universaldependencies.github.io/docs/eu/feat">eu/feat</a></span>
+          <span class="header-text"><a href="http://universaldependencies.org/#language-eu">home</a></span>
+          <span class="header-text"><a href="http://universaldependencies.org/eu/feat">eu/feat</a></span>
           <span class="header-text"><a href="https://github.com/universaldependencies/docs/edit/pages-source/_eu-feat/NumType.md" target="#">edit page</a></span>
           <span class="header-text"><a href="https://github.com/universaldependencies/docs/issues">issue tracker</a></span>
       </div>
@@ -44,6 +45,44 @@ for <code>NumType</code>.</p>
 
 <!-- "automatic stats" -->
 
+
+
+
+
+
+<hr />
+
+<h2 id="treebank-statistics-udbasque">Treebank Statistics (UD_Basque)</h2>
+
+<p>This feature is universal.
+It occurs with 2 different values: <code>Card</code>, <code>Ord</code>.</p>
+
+<p>3055 tokens (3%) have a non-empty value of <code>NumType</code>.
+741 types (3%) occur at least once with a non-empty value of <code>NumType</code>.
+484 lemmas (4%) occur at least once with a non-empty value of <code>NumType</code>.
+The feature is used with 1 part-of-speech tags: <a href="">eu-pos/NUM</a> (3055; 3% instances).</p>
+
+<h3 id="num"><code>NUM</code></h3>
+
+<p>3055 <a href="">eu-pos/NUM</a> tokens (66% of all <code>NUM</code> tokens) have a non-empty value of <code>NumType</code>.</p>
+
+<p><code>NUM</code> tokens may have the following values of <code>NumType</code>:</p>
+
+<ul>
+  <li><code>Card</code> (2007; 66% of non-empty <code>NumType</code>): <em>bat, batean, baten, batek, batez, batekin, batera, bateko, baterako, bi</em></li>
+  <li><code>Ord</code> (1048; 34% of non-empty <code>NumType</code>): <em>azken, lehen, bigarren, hirugarren, lehenengo, laugarren, bosgarren, seigarren, II.a, lehena</em></li>
+  <li><code>EMPTY</code> (1558): <em>bi, hiru, lau, bost, sei, bat, hamar, zazpi, 20, bederatzi</em></li>
+</ul>
+
+<p><code>NumType</code> seems to be <strong>lexical feature</strong> of <code>NUM</code>. 100% lemmas (484) occur only with one value of <code>NumType</code>.</p>
+
+<h2 id="relations-with-agreement-in-numtype">Relations with Agreement in <code>NumType</code></h2>
+
+<p>The 10 most frequent relations where parent and child node agree in <code>NumType</code>:
+<tt>NUM –[<a href="../dep/conj.html">conj</a>]–&gt; NUM</tt> (30; 71%),
+<tt>NUM –[<a href="../dep/mwe.html">mwe</a>]–&gt; NUM</tt> (14; 100%),
+<tt>NUM –[<a href="../dep/nmod.html">nmod</a>]–&gt; NUM</tt> (5; 71%),
+<tt>NUM –[<a href="../dep/appos.html">appos</a>]–&gt; NUM</tt> (2; 100%).</p>
 
 
 
@@ -102,6 +141,7 @@ NumType in other languages:
         root + 'lib/ext/jquery.min.js',
         root + 'lib/ext/jquery.svg.min.js',
         root + 'lib/ext/jquery.svgdom.min.js',
+        root + 'lib/ext/jquery.timeago.js',
         root + 'lib/ext/jquery-ui.min.js',
         root + 'lib/ext/waypoints.min.js',
         root + 'lib/ext/jquery.address.min.js',
@@ -133,11 +173,40 @@ NumType in other languages:
     ];
 
     var setupAccordions = function() {
-        // standard jQuery UI "accordion" element initialization
+	// preserve state in URL hash, following in part
+	// http://www.boduch.ca/2011/05/remembering-jquery-ui-accordion.html
+	var accordionChange = function(event, ui) {
+	    var context = ui.newHeader ? ui.newHeader.context : null;
+	    if (context) {
+		var languageCode = context.getAttribute('data-lc');
+		if (languageCode !== null) {
+		    window.location.hash = languageCode;
+		}
+	    }
+	}
+        // jQuery UI "accordion" element initialization
 	$(".jquery-ui-accordion").accordion({
 	    collapsible: true,
-	    active: false
+	    active: false,
+	    change: accordionChange
 	});
+	if ($(".jquery-ui-accordion").length) {
+	    var matches = window.location.hash.match(/^\#(.*)$/);
+	    console.log(matches);
+	    if (matches !== null) {
+		var languageCode = matches[1];
+		var tab = $('[data-lc="'+languageCode+'"]');
+		// the following will only work after accordion is initialized
+		var index = $('.jquery-ui-accordion div.ui-accordion-header').index(tab);
+		if (index !== -1) {
+		    $(".jquery-ui-accordion").accordion({ active: index });
+		}
+	    }
+	}
+    };
+
+    var setupTimeago = function() {
+        jQuery("time.timeago").timeago();
     };
 
     var setupTabs = function() {
@@ -161,6 +230,7 @@ NumType in other languages:
         // set up UI tabs on page
         setupTabs();
         setupAccordions();
+        setupTimeago();
 
         // mark current collection (filled in by Jekyll)
         Collections.listing['_current'] = 'eu-feat';
@@ -186,7 +256,7 @@ NumType in other languages:
 
       <div id="footer">
 	  <p class="footer-text">&copy; 2014 
-	    <a href="http://universaldependencies.github.io/docs/introduction.html#contributors" style="color:gray">Universal Dependencies contributors</a>. 
+	    <a href="http://universaldependencies.org/introduction.html#contributors" style="color:gray">Universal Dependencies contributors</a>. 
 	    Site powered by <a href="http://spyysalo.github.io/annodoc" style="color:gray">Annodoc</a> and <a href="http://brat.nlplab.org/" style="color:gray">brat</a></p>.
       </div>
     </div>

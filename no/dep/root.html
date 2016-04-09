@@ -11,6 +11,7 @@
     <link rel="stylesheet" type="text/css" href="../../css/style-vis.css"/>
     <link rel="stylesheet" type="text/css" href="../../css/hint.css"/>
     <script type="text/javascript" src="../../lib/ext/head.load.min.js"></script>
+    <script type="text/javascript" src="../../lib/ext/jquery.timeago.js.js"></script>
 <!--     <link rel="shortcut icon" href="favicon.ico"/> -->
 
 
@@ -20,8 +21,8 @@
 
       <div id="hp-header">
 	
-          <span class="header-text"><a href="http://universaldependencies.github.io/docs/#language-no">home</a></span>
-          <span class="header-text"><a href="http://universaldependencies.github.io/docs/no/dep">no/dep</a></span>
+          <span class="header-text"><a href="http://universaldependencies.org/#language-no">home</a></span>
+          <span class="header-text"><a href="http://universaldependencies.org/no/dep">no/dep</a></span>
           <span class="header-text"><a href="https://github.com/universaldependencies/docs/edit/pages-source/_no-dep/root.md" target="#">edit page</a></span>
           <span class="header-text"><a href="https://github.com/universaldependencies/docs/issues">issue tracker</a></span>
       </div>
@@ -48,6 +49,69 @@ root(ROOT, smalt)
 <!-- "automatic stats" -->
 
 
+
+
+
+
+
+<hr />
+
+<h2 id="treebank-statistics-udnorwegian">Treebank Statistics (UD_Norwegian)</h2>
+
+<p>This relation is universal.</p>
+
+<p>20045 nodes (6%) are attached to their parents as <code>root</code>.</p>
+
+<p>20045 instances of <code>root</code> (100%) are left-to-right (parent precedes child).
+Average distance between parent and child is 4.72821152407084.</p>
+
+<p>The following 14 pairs of parts of speech are connected with <code>root</code>: <a href="">no-pos/ROOT</a>-<a href="">no-pos/VERB</a> (13779; 69% instances), <a href="">no-pos/ROOT</a>-<a href="">no-pos/NOUN</a> (2919; 15% instances), <a href="">no-pos/ROOT</a>-<a href="">no-pos/ADJ</a> (2071; 10% instances), <a href="">no-pos/ROOT</a>-<a href="">no-pos/PROPN</a> (520; 3% instances), <a href="">no-pos/ROOT</a>-<a href="">no-pos/PRON</a> (242; 1% instances), <a href="">no-pos/ROOT</a>-<a href="">no-pos/ADV</a> (169; 1% instances), <a href="">no-pos/ROOT</a>-<a href="">no-pos/ADP</a> (79; 0% instances), <a href="">no-pos/ROOT</a>-<a href="">no-pos/DET</a> (76; 0% instances), <a href="">no-pos/ROOT</a>-<a href="">no-pos/INTJ</a> (75; 0% instances), <a href="">no-pos/ROOT</a>-<a href="">no-pos/NUM</a> (54; 0% instances), <a href="">no-pos/ROOT</a>-<a href="">no-pos/X</a> (51; 0% instances), <a href="">no-pos/ROOT</a>-<a href="">no-pos/CONJ</a> (5; 0% instances), <a href="">no-pos/ROOT</a>-<a href="">no-pos/SYM</a> (4; 0% instances), <a href="">no-pos/ROOT</a>-<a href="">no-pos/PUNCT</a> (1; 0% instances).</p>
+
+<pre><code class="language-conllu"># visual-style 2	bgColor:blue
+# visual-style 2	fgColor:white
+# visual-style 0	bgColor:blue
+# visual-style 0	fgColor:white
+# visual-style 0 2 root	color:blue
+1	Det	det	PRON	_	Gender=Neut|Number=Sing|Person=3|PronType=Prs	2	nsubj	_	_
+2	ble	bli	VERB	_	Mood=Ind|Tense=Past|VerbForm=Fin	0	root	_	_
+3	rene	ren	ADJ	_	Degree=Pos|Number=Plur	4	amod	_	_
+4	ord	ord	NOUN	_	Definite=Ind|Gender=Neut|Number=Plur	2	xcomp	_	_
+5	:	$:	PUNCT	_	_	2	punct	_	_
+
+</code></pre>
+
+<pre><code class="language-conllu"># visual-style 4	bgColor:blue
+# visual-style 4	fgColor:white
+# visual-style 0	bgColor:blue
+# visual-style 0	fgColor:white
+# visual-style 0 4 root	color:blue
+1	Thomassen	Thomassen	PROPN	_	_	4	nsubj	_	_
+2	er	være	VERB	_	Mood=Ind|Tense=Pres|VerbForm=Fin	4	cop	_	_
+3	på	på	ADP	_	_	4	case	_	_
+4	vei	vei	NOUN	_	Definite=Ind|Gender=Masc|Number=Sing	0	root	_	_
+5	til	til	ADP	_	_	8	case	_	_
+6	sin	sin	DET	_	Gender=Masc|Number=Sing|Poss=Yes	8	nmod	_	_
+7	neste	neste	DET	_	Definite=Def|PronType=Dem	8	det	_	_
+8	gjerning	gjerning	NOUN	_	Definite=Ind|Gender=Masc|Number=Sing	4	nmod	_	_
+9	.	$.	PUNCT	_	_	4	punct	_	_
+
+</code></pre>
+
+<pre><code class="language-conllu"># visual-style 3	bgColor:blue
+# visual-style 3	fgColor:white
+# visual-style 0	bgColor:blue
+# visual-style 0	fgColor:white
+# visual-style 0 3 root	color:blue
+1	Det	det	PRON	_	Gender=Neut|Number=Sing|Person=3|PronType=Prs	3	nsubj	_	_
+2	var	være	VERB	_	Mood=Ind|Tense=Past|VerbForm=Fin	3	cop	_	_
+3	grusomt	grusom	ADJ	_	Definite=Ind|Degree=Pos|Gender=Neut|Number=Sing	0	root	_	_
+4	å	å	PART	_	_	5	mark	_	_
+5	høre	høre	VERB	_	VerbForm=Inf	3	advcl	_	_
+6	på	på	ADP	_	_	5	compound:prt	_	_
+7	.	$.	PUNCT	_	_	3	punct	_	_
+8	»	$"	PUNCT	_	_	3	punct	_	_
+
+</code></pre>
 
 
 
@@ -106,6 +170,7 @@ root in other languages:
         root + 'lib/ext/jquery.min.js',
         root + 'lib/ext/jquery.svg.min.js',
         root + 'lib/ext/jquery.svgdom.min.js',
+        root + 'lib/ext/jquery.timeago.js',
         root + 'lib/ext/jquery-ui.min.js',
         root + 'lib/ext/waypoints.min.js',
         root + 'lib/ext/jquery.address.min.js',
@@ -137,11 +202,40 @@ root in other languages:
     ];
 
     var setupAccordions = function() {
-        // standard jQuery UI "accordion" element initialization
+	// preserve state in URL hash, following in part
+	// http://www.boduch.ca/2011/05/remembering-jquery-ui-accordion.html
+	var accordionChange = function(event, ui) {
+	    var context = ui.newHeader ? ui.newHeader.context : null;
+	    if (context) {
+		var languageCode = context.getAttribute('data-lc');
+		if (languageCode !== null) {
+		    window.location.hash = languageCode;
+		}
+	    }
+	}
+        // jQuery UI "accordion" element initialization
 	$(".jquery-ui-accordion").accordion({
 	    collapsible: true,
-	    active: false
+	    active: false,
+	    change: accordionChange
 	});
+	if ($(".jquery-ui-accordion").length) {
+	    var matches = window.location.hash.match(/^\#(.*)$/);
+	    console.log(matches);
+	    if (matches !== null) {
+		var languageCode = matches[1];
+		var tab = $('[data-lc="'+languageCode+'"]');
+		// the following will only work after accordion is initialized
+		var index = $('.jquery-ui-accordion div.ui-accordion-header').index(tab);
+		if (index !== -1) {
+		    $(".jquery-ui-accordion").accordion({ active: index });
+		}
+	    }
+	}
+    };
+
+    var setupTimeago = function() {
+        jQuery("time.timeago").timeago();
     };
 
     var setupTabs = function() {
@@ -165,6 +259,7 @@ root in other languages:
         // set up UI tabs on page
         setupTabs();
         setupAccordions();
+        setupTimeago();
 
         // mark current collection (filled in by Jekyll)
         Collections.listing['_current'] = 'no-dep';
@@ -190,7 +285,7 @@ root in other languages:
 
       <div id="footer">
 	  <p class="footer-text">&copy; 2014 
-	    <a href="http://universaldependencies.github.io/docs/introduction.html#contributors" style="color:gray">Universal Dependencies contributors</a>. 
+	    <a href="http://universaldependencies.org/introduction.html#contributors" style="color:gray">Universal Dependencies contributors</a>. 
 	    Site powered by <a href="http://spyysalo.github.io/annodoc" style="color:gray">Annodoc</a> and <a href="http://brat.nlplab.org/" style="color:gray">brat</a></p>.
       </div>
     </div>

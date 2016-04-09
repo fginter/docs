@@ -11,6 +11,7 @@
     <link rel="stylesheet" type="text/css" href="../../css/style-vis.css"/>
     <link rel="stylesheet" type="text/css" href="../../css/hint.css"/>
     <script type="text/javascript" src="../../lib/ext/head.load.min.js"></script>
+    <script type="text/javascript" src="../../lib/ext/jquery.timeago.js.js"></script>
 <!--     <link rel="shortcut icon" href="favicon.ico"/> -->
 
 
@@ -20,8 +21,8 @@
 
       <div id="hp-header">
 	
-          <span class="header-text"><a href="http://universaldependencies.github.io/docs/#language-no">home</a></span>
-          <span class="header-text"><a href="http://universaldependencies.github.io/docs/no/dep">no/dep</a></span>
+          <span class="header-text"><a href="http://universaldependencies.org/#language-no">home</a></span>
+          <span class="header-text"><a href="http://universaldependencies.org/no/dep">no/dep</a></span>
           <span class="header-text"><a href="https://github.com/universaldependencies/docs/edit/pages-source/_no-dep/nummod.md" target="#">edit page</a></span>
           <span class="header-text"><a href="https://github.com/universaldependencies/docs/issues">issue tracker</a></span>
       </div>
@@ -52,6 +53,73 @@ nummod(partiene,tre)
 <!-- "automatic stats" -->
 
 
+
+
+
+
+
+<hr />
+
+<h2 id="treebank-statistics-udnorwegian">Treebank Statistics (UD_Norwegian)</h2>
+
+<p>This relation is universal.</p>
+
+<p>2071 nodes (1%) are attached to their parents as <code>nummod</code>.</p>
+
+<p>2065 instances of <code>nummod</code> (100%) are right-to-left (child precedes parent).
+Average distance between parent and child is 1.14485755673588.</p>
+
+<p>The following 5 pairs of parts of speech are connected with <code>nummod</code>: <a href="">no-pos/NOUN</a>-<a href="">no-pos/NUM</a> (2009; 97% instances), <a href="">no-pos/ADJ</a>-<a href="">no-pos/NUM</a> (54; 3% instances), <a href="">no-pos/DET</a>-<a href="">no-pos/NUM</a> (4; 0% instances), <a href="">no-pos/PROPN</a>-<a href="">no-pos/NUM</a> (3; 0% instances), <a href="">no-pos/PRON</a>-<a href="">no-pos/NUM</a> (1; 0% instances).</p>
+
+<pre><code class="language-conllu"># visual-style 4	bgColor:blue
+# visual-style 4	fgColor:white
+# visual-style 6	bgColor:blue
+# visual-style 6	fgColor:white
+# visual-style 6 4 nummod	color:blue
+1	NATO	NATO	NOUN	_	_	3	nsubj	_	_
+2	har	ha	AUX	_	Mood=Ind|Tense=Pres|VerbForm=Fin	3	aux	_	_
+3	fått	få	VERB	_	VerbForm=Part	0	root	_	_
+4	to	to	NUM	_	Number=Plur	6	nummod	_	_
+5	nye	ny	ADJ	_	Degree=Pos|Number=Plur	6	amod	_	_
+6	medlemsland	medlemsland	NOUN	_	Definite=Ind|Gender=Neut|Number=Plur	3	dobj	_	_
+7	|	$|	SYM	_	_	3	punct	_	_
+
+</code></pre>
+
+<pre><code class="language-conllu"># visual-style 1	bgColor:blue
+# visual-style 1	fgColor:white
+# visual-style 2	bgColor:blue
+# visual-style 2	fgColor:white
+# visual-style 2 1 nummod	color:blue
+1	To	to	NUM	_	Number=Plur	2	nummod	_	_
+2	kontoransatte	kontoransatt	ADJ	_	Degree=Pos|Number=Plur	6	nsubj	_	_
+3	var	være	VERB	_	Mood=Ind|Tense=Past|VerbForm=Fin	6	cop	_	_
+4	også	også	ADV	_	_	6	advmod	_	_
+5	til	til	ADP	_	_	6	case	_	_
+6	stede	stede	NOUN	_	_	0	root	_	_
+7	.	$.	PUNCT	_	_	6	punct	_	_
+
+</code></pre>
+
+<pre><code class="language-conllu"># visual-style 2	bgColor:blue
+# visual-style 2	fgColor:white
+# visual-style 3	bgColor:blue
+# visual-style 3	fgColor:white
+# visual-style 3 2 nummod	color:blue
+1	Også	også	ADV	_	_	3	nmod	_	_
+2	to	to	NUM	_	Number=Plur	3	nummod	_	_
+3	andre	annen	DET	_	Number=Plur|PronType=Dem	8	nsubjpass	_	_
+4	av	av	ADP	_	_	6	case	_	_
+5	LOs	LO	PROPN	_	Case=Gen	6	det	_	_
+6	krav	krav	NOUN	_	Definite=Ind|Gender=Neut|Number=Plur	3	nmod	_	_
+7	ble	bli	AUX	_	Mood=Ind|Tense=Past|VerbForm=Fin	8	auxpass	_	_
+8	innfridd	innfri	VERB	_	VerbForm=Part	0	root	_	_
+9	på	på	ADP	_	_	10	case	_	_
+10	bystyremøtet	bystyremøte	NOUN	_	Definite=Def|Gender=Neut|Number=Sing	8	nmod	_	_
+11	fredag	fredag	NOUN	_	Definite=Ind|Gender=Masc|Number=Sing	10	nmod	_	_
+12	:	$:	PUNCT	_	_	8	punct	_	_
+
+</code></pre>
 
 
 
@@ -110,6 +178,7 @@ nummod in other languages:
         root + 'lib/ext/jquery.min.js',
         root + 'lib/ext/jquery.svg.min.js',
         root + 'lib/ext/jquery.svgdom.min.js',
+        root + 'lib/ext/jquery.timeago.js',
         root + 'lib/ext/jquery-ui.min.js',
         root + 'lib/ext/waypoints.min.js',
         root + 'lib/ext/jquery.address.min.js',
@@ -141,11 +210,40 @@ nummod in other languages:
     ];
 
     var setupAccordions = function() {
-        // standard jQuery UI "accordion" element initialization
+	// preserve state in URL hash, following in part
+	// http://www.boduch.ca/2011/05/remembering-jquery-ui-accordion.html
+	var accordionChange = function(event, ui) {
+	    var context = ui.newHeader ? ui.newHeader.context : null;
+	    if (context) {
+		var languageCode = context.getAttribute('data-lc');
+		if (languageCode !== null) {
+		    window.location.hash = languageCode;
+		}
+	    }
+	}
+        // jQuery UI "accordion" element initialization
 	$(".jquery-ui-accordion").accordion({
 	    collapsible: true,
-	    active: false
+	    active: false,
+	    change: accordionChange
 	});
+	if ($(".jquery-ui-accordion").length) {
+	    var matches = window.location.hash.match(/^\#(.*)$/);
+	    console.log(matches);
+	    if (matches !== null) {
+		var languageCode = matches[1];
+		var tab = $('[data-lc="'+languageCode+'"]');
+		// the following will only work after accordion is initialized
+		var index = $('.jquery-ui-accordion div.ui-accordion-header').index(tab);
+		if (index !== -1) {
+		    $(".jquery-ui-accordion").accordion({ active: index });
+		}
+	    }
+	}
+    };
+
+    var setupTimeago = function() {
+        jQuery("time.timeago").timeago();
     };
 
     var setupTabs = function() {
@@ -169,6 +267,7 @@ nummod in other languages:
         // set up UI tabs on page
         setupTabs();
         setupAccordions();
+        setupTimeago();
 
         // mark current collection (filled in by Jekyll)
         Collections.listing['_current'] = 'no-dep';
@@ -194,7 +293,7 @@ nummod in other languages:
 
       <div id="footer">
 	  <p class="footer-text">&copy; 2014 
-	    <a href="http://universaldependencies.github.io/docs/introduction.html#contributors" style="color:gray">Universal Dependencies contributors</a>. 
+	    <a href="http://universaldependencies.org/introduction.html#contributors" style="color:gray">Universal Dependencies contributors</a>. 
 	    Site powered by <a href="http://spyysalo.github.io/annodoc" style="color:gray">Annodoc</a> and <a href="http://brat.nlplab.org/" style="color:gray">brat</a></p>.
       </div>
     </div>

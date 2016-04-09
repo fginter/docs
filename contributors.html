@@ -11,6 +11,7 @@
     <link rel="stylesheet" type="text/css" href="css/style-vis.css"/>
     <link rel="stylesheet" type="text/css" href="css/hint.css"/>
     <script type="text/javascript" src="lib/ext/head.load.min.js"></script>
+    <script type="text/javascript" src="lib/ext/jquery.timeago.js.js"></script>
 <!--     <link rel="shortcut icon" href="favicon.ico"/> -->
 
 
@@ -20,7 +21,7 @@
 
       <div id="hp-header">
 	
-          <span class="header-text"><a href="http://universaldependencies.github.io/docs/#language-">home</a></span>
+          <span class="header-text"><a href="http://universaldependencies.org/#language-">home</a></span>
 
           <span class="header-text"><a href="https://github.com/universaldependencies/docs/edit/pages-source/contributors.md" target="#">edit page</a></span>
           <span class="header-text"><a href="https://github.com/universaldependencies/docs/issues">issue tracker</a></span>
@@ -60,7 +61,7 @@
     <p><strong>Bulgarian</strong>: Petya Osenova, Kiril Simov</p>
   </li>
   <li>
-    <p><strong>Catalan</strong>: Elena Pascual</p>
+    <p><strong>Catalan</strong>: Héctor Martínez Alonso, Elena Pascual, Daniel Zeman</p>
   </li>
   <li>
     <p><strong>Croatian</strong>: Željko Agić, Nikola Ljubešić</p>
@@ -93,6 +94,9 @@
     <p><strong>French</strong>: Marie-Catherine de Marneffe, Bruno Guillaume, Ryan McDonald, Alane Suhr, Joakim Nivre</p>
   </li>
   <li>
+    <p><strong>Galician</strong>: Xavier Gómez Guinovart</p>
+  </li>
+  <li>
     <p><strong>German</strong>: Slav Petrov, Wolfgang Seeker, Ryan McDonald, Joakim Nivre</p>
   </li>
   <li>
@@ -123,7 +127,7 @@
     <p><strong>Japanese-KTC</strong>: Masayuki Asahara, Hiroshi Kanayama, Yuji Matsumoto, Yusuke Miyao, Shunsuke Mori, Takaaki Tanaka, Sumire Uematsu</p>
   </li>
   <li>
-    <p><strong>Kazakh</strong>:</p>
+    <p><strong>Kazakh</strong>: Aibek Makazhanov, Jonathan North Washington, Francis Tyers</p>
   </li>
   <li>
     <p><strong>Korean</strong>:</p>
@@ -132,7 +136,7 @@
     <p><strong>Latin</strong>: Giuseppe G. A. Celano, Daniel Zeman</p>
   </li>
   <li>
-    <p><strong>Latin-ITT</strong>: Marco Passarotti, Daniel Zeman, Berta Gonzales</p>
+    <p><strong>Latin-ITT</strong>: Marco Passarotti, Daniel Zeman, Berta Gonzáles Saavedra</p>
   </li>
   <li>
     <p><strong>Latin-PROIEL</strong>: Dag Haug</p>
@@ -156,10 +160,16 @@
     <p><strong>Romanian</strong>: Verginica Mititelu, Elena Irimia, Cenel-Augusto Perez, Radu Ion, Radu Simionescu, Cătălina Mărănduc</p>
   </li>
   <li>
+    <p><strong>Russian</strong>: Olga Lyashevskaya, Andrey Kutuzov, Svetlana Toldova, Kira Droganova, Nina Mustafina, Maria Alexeeva, Elena Shakurova</p>
+  </li>
+  <li>
     <p><strong>Slovenian</strong>: Kaja Dobrovoljc, Tomaž Erjavec, Simon Krek</p>
   </li>
   <li>
     <p><strong>Spanish</strong>: Miguel Ballesteros, Héctor Martínez Alonso, Ryan McDonald, Elena Pascual, Natalia Silveira, Daniel Zeman, Joakim Nivre</p>
+  </li>
+  <li>
+    <p><strong>Spanish-AnCora</strong>: Héctor Martínez Alonso, Daniel Zeman</p>
   </li>
   <li>
     <p><strong>Swedish</strong>: Joakim Nivre, Aaron Smith</p>
@@ -168,7 +178,7 @@
     <p><strong>Tamil</strong>: Loganathan Ramasamy, Daniel Zeman</p>
   </li>
   <li>
-    <p><strong>Turkish</strong>: Çağrı Çöltekin</p>
+    <p><strong>Turkish</strong>: Çağrı Çöltekin, Gülşen Cebiroğlu Eryiğit, Memduh Gokirmak, Hüner Kaşıkara, Umut Sulubacak, Francis Tyers</p>
   </li>
   <li>
     <p><strong>Ukrainian</strong>:</p>
@@ -187,6 +197,7 @@
         root + 'lib/ext/jquery.min.js',
         root + 'lib/ext/jquery.svg.min.js',
         root + 'lib/ext/jquery.svgdom.min.js',
+        root + 'lib/ext/jquery.timeago.js',
         root + 'lib/ext/jquery-ui.min.js',
         root + 'lib/ext/waypoints.min.js',
         root + 'lib/ext/jquery.address.min.js',
@@ -218,11 +229,40 @@
     ];
 
     var setupAccordions = function() {
-        // standard jQuery UI "accordion" element initialization
+	// preserve state in URL hash, following in part
+	// http://www.boduch.ca/2011/05/remembering-jquery-ui-accordion.html
+	var accordionChange = function(event, ui) {
+	    var context = ui.newHeader ? ui.newHeader.context : null;
+	    if (context) {
+		var languageCode = context.getAttribute('data-lc');
+		if (languageCode !== null) {
+		    window.location.hash = languageCode;
+		}
+	    }
+	}
+        // jQuery UI "accordion" element initialization
 	$(".jquery-ui-accordion").accordion({
 	    collapsible: true,
-	    active: false
+	    active: false,
+	    change: accordionChange
 	});
+	if ($(".jquery-ui-accordion").length) {
+	    var matches = window.location.hash.match(/^\#(.*)$/);
+	    console.log(matches);
+	    if (matches !== null) {
+		var languageCode = matches[1];
+		var tab = $('[data-lc="'+languageCode+'"]');
+		// the following will only work after accordion is initialized
+		var index = $('.jquery-ui-accordion div.ui-accordion-header').index(tab);
+		if (index !== -1) {
+		    $(".jquery-ui-accordion").accordion({ active: index });
+		}
+	    }
+	}
+    };
+
+    var setupTimeago = function() {
+        jQuery("time.timeago").timeago();
     };
 
     var setupTabs = function() {
@@ -246,6 +286,7 @@
         // set up UI tabs on page
         setupTabs();
         setupAccordions();
+        setupTimeago();
 
         // mark current collection (filled in by Jekyll)
         Collections.listing['_current'] = '';
@@ -271,7 +312,7 @@
 
       <div id="footer">
 	  <p class="footer-text">&copy; 2014 
-	    <a href="http://universaldependencies.github.io/docs/introduction.html#contributors" style="color:gray">Universal Dependencies contributors</a>. 
+	    <a href="http://universaldependencies.org/introduction.html#contributors" style="color:gray">Universal Dependencies contributors</a>. 
 	    Site powered by <a href="http://spyysalo.github.io/annodoc" style="color:gray">Annodoc</a> and <a href="http://brat.nlplab.org/" style="color:gray">brat</a></p>.
       </div>
     </div>

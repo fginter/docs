@@ -11,6 +11,7 @@
     <link rel="stylesheet" type="text/css" href="../../css/style-vis.css"/>
     <link rel="stylesheet" type="text/css" href="../../css/hint.css"/>
     <script type="text/javascript" src="../../lib/ext/head.load.min.js"></script>
+    <script type="text/javascript" src="../../lib/ext/jquery.timeago.js.js"></script>
 <!--     <link rel="shortcut icon" href="favicon.ico"/> -->
 
 
@@ -20,8 +21,8 @@
 
       <div id="hp-header">
 	
-          <span class="header-text"><a href="http://universaldependencies.github.io/docs/#language-eu">home</a></span>
-          <span class="header-text"><a href="http://universaldependencies.github.io/docs/eu/feat">eu/feat</a></span>
+          <span class="header-text"><a href="http://universaldependencies.org/#language-eu">home</a></span>
+          <span class="header-text"><a href="http://universaldependencies.org/eu/feat">eu/feat</a></span>
           <span class="header-text"><a href="https://github.com/universaldependencies/docs/edit/pages-source/_eu-feat/VerbForm.md" target="#">edit page</a></span>
           <span class="header-text"><a href="https://github.com/universaldependencies/docs/issues">issue tracker</a></span>
       </div>
@@ -44,6 +45,72 @@ for <code>VerbForm</code>.</p>
 
 <!-- "automatic stats" -->
 
+
+
+
+
+
+<hr />
+
+<h2 id="treebank-statistics-udbasque">Treebank Statistics (UD_Basque)</h2>
+
+<p>This feature is universal.
+It occurs with 2 different values: <code>Inf</code>, <code>Part</code>.</p>
+
+<p>13429 tokens (11%) have a non-empty value of <code>VerbForm</code>.
+2462 types (10%) occur at least once with a non-empty value of <code>VerbForm</code>.
+884 lemmas (8%) occur at least once with a non-empty value of <code>VerbForm</code>.
+The feature is used with 2 part-of-speech tags: <a href="">eu-pos/VERB</a> (13428; 11% instances), <a href="">eu-pos/ADV</a> (1; 0% instances).</p>
+
+<h3 id="verb"><code>VERB</code></h3>
+
+<p>13428 <a href="">eu-pos/VERB</a> tokens (62% of all <code>VERB</code> tokens) have a non-empty value of <code>VerbForm</code>.</p>
+
+<p>The most frequent other feature values with which <code>VERB</code> and <code>VerbForm</code> co-occurred: <tt><a href="Number[abs].html">Number[abs]</a>=EMPTY</tt> (13428; 100%), <tt><a href="Person[abs].html">Person[abs]</a>=EMPTY</tt> (13428; 100%), <tt><a href="Mood.html">Mood</a>=EMPTY</tt> (13428; 100%), <tt><a href="Case.html">Case</a>=EMPTY</tt> (12051; 90%).</p>
+
+<p><code>VERB</code> tokens may have the following values of <code>VerbForm</code>:</p>
+
+<ul>
+  <li><code>Inf</code> (2212; 16% of non-empty <code>VerbForm</code>): <em>egiten, izan, ematen, egin, izaten, erabiltzen, ikus, ikusten, agertzen, esaten</em></li>
+  <li><code>Part</code> (11216; 84% of non-empty <code>VerbForm</code>): <em>izan, egin, izango, esan, eman, hartu, hasi, jokatu, joan, irabazi</em></li>
+  <li><code>EMPTY</code> (8115): <em>da, dira, du, dago, dela, zen, dute, beharko, zegoen, adierazi</em></li>
+</ul>
+
+<table>
+  <tr><th>Paradigm <i>izan</i></th><th><tt>Inf</tt></th><th><tt>Part</tt></th></tr>
+  <tr><td><tt>_</tt></td><td><em>izan, izaki</em></td><td><em>izan, izanda, arizan</em></td></tr>
+  <tr><td><tt><a href="Aspect.html">Aspect</a>=Imp</tt></td><td><em>izaten</em></td><td></td></tr>
+  <tr><td><tt><a href="Aspect.html">Aspect</a>=Perf</tt></td><td></td><td><em>izan</em></td></tr>
+  <tr><td><tt><a href="Aspect.html">Aspect</a>=Pro</tt></td><td></td><td><em>izango, izanen</em></td></tr>
+  <tr><td><tt><a href="Case.html">Case</a>=Abs|<a href="Definite.html">Definite</a>=Def|<a href="Number.html">Number</a>=Sing</tt></td><td></td><td><em>izana, izandakoa</em></td></tr>
+  <tr><td><tt><a href="Case.html">Case</a>=Abs|<a href="Definite.html">Definite</a>=Def|<a href="Number.html">Number</a>=Plur</tt></td><td></td><td><em>izanak</em></td></tr>
+  <tr><td><tt><a href="Case.html">Case</a>=Abs|<a href="Definite.html">Definite</a>=Ind</tt></td><td></td><td><em>izan</em></td></tr>
+  <tr><td><tt><a href="Case.html">Case</a>=Cau|<a href="Definite.html">Definite</a>=Def|<a href="Number.html">Number</a>=Sing</tt></td><td></td><td><em>izanagatik</em></td></tr>
+  <tr><td><tt><a href="Case.html">Case</a>=Erg|<a href="Definite.html">Definite</a>=Def|<a href="Number.html">Number</a>=Sing</tt></td><td></td><td><em>izanak, izandakoak</em></td></tr>
+  <tr><td><tt><a href="Case.html">Case</a>=Gen|<a href="Definite.html">Definite</a>=Def|<a href="Number.html">Number</a>=Sing</tt></td><td></td><td><em>izanaren</em></td></tr>
+  <tr><td><tt><a href="Case.html">Case</a>=Ins|<a href="Definite.html">Definite</a>=Def|<a href="Number.html">Number</a>=Sing</tt></td><td></td><td><em>izanaz</em></td></tr>
+  <tr><td><tt><a href="Case.html">Case</a>=Ins|<a href="Definite.html">Definite</a>=Ind</tt></td><td></td><td><em>izanez</em></td></tr>
+  <tr><td><tt><a href="Case.html">Case</a>=Loc</tt></td><td></td><td><em>izandako</em></td></tr>
+  <tr><td><tt><a href="Case.html">Case</a>=Par|<a href="Definite.html">Definite</a>=Ind</tt></td><td></td><td><em>izanik</em></td></tr>
+</table>
+
+<h3 id="adv"><code>ADV</code></h3>
+
+<p>1 <a href="">eu-pos/ADV</a> tokens (0% of all <code>ADV</code> tokens) have a non-empty value of <code>VerbForm</code>.</p>
+
+<p><code>ADV</code> tokens may have the following values of <code>VerbForm</code>:</p>
+
+<ul>
+  <li><code>Part</code> (1; 100% of non-empty <code>VerbForm</code>): <em>Desesperatuki</em></li>
+  <li><code>EMPTY</code> (5177): <em>atzo, oso, gaur, orain, ondoren, gero, hala, bertan, beti, ondo</em></li>
+</ul>
+
+<h2 id="relations-with-agreement-in-verbform">Relations with Agreement in <code>VerbForm</code></h2>
+
+<p>The 10 most frequent relations where parent and child node agree in <code>VerbForm</code>:
+<tt>VERB –[<a href="../dep/conj.html">conj</a>]–&gt; VERB</tt> (1154; 58%),
+<tt>VERB –[<a href="../dep/aux.html">aux</a>]–&gt; VERB</tt> (264; 77%),
+<tt>VERB –[<a href="../dep/advmod.html">advmod</a>]–&gt; VERB</tt> (4; 67%).</p>
 
 
 
@@ -102,6 +169,7 @@ VerbForm in other languages:
         root + 'lib/ext/jquery.min.js',
         root + 'lib/ext/jquery.svg.min.js',
         root + 'lib/ext/jquery.svgdom.min.js',
+        root + 'lib/ext/jquery.timeago.js',
         root + 'lib/ext/jquery-ui.min.js',
         root + 'lib/ext/waypoints.min.js',
         root + 'lib/ext/jquery.address.min.js',
@@ -133,11 +201,40 @@ VerbForm in other languages:
     ];
 
     var setupAccordions = function() {
-        // standard jQuery UI "accordion" element initialization
+	// preserve state in URL hash, following in part
+	// http://www.boduch.ca/2011/05/remembering-jquery-ui-accordion.html
+	var accordionChange = function(event, ui) {
+	    var context = ui.newHeader ? ui.newHeader.context : null;
+	    if (context) {
+		var languageCode = context.getAttribute('data-lc');
+		if (languageCode !== null) {
+		    window.location.hash = languageCode;
+		}
+	    }
+	}
+        // jQuery UI "accordion" element initialization
 	$(".jquery-ui-accordion").accordion({
 	    collapsible: true,
-	    active: false
+	    active: false,
+	    change: accordionChange
 	});
+	if ($(".jquery-ui-accordion").length) {
+	    var matches = window.location.hash.match(/^\#(.*)$/);
+	    console.log(matches);
+	    if (matches !== null) {
+		var languageCode = matches[1];
+		var tab = $('[data-lc="'+languageCode+'"]');
+		// the following will only work after accordion is initialized
+		var index = $('.jquery-ui-accordion div.ui-accordion-header').index(tab);
+		if (index !== -1) {
+		    $(".jquery-ui-accordion").accordion({ active: index });
+		}
+	    }
+	}
+    };
+
+    var setupTimeago = function() {
+        jQuery("time.timeago").timeago();
     };
 
     var setupTabs = function() {
@@ -161,6 +258,7 @@ VerbForm in other languages:
         // set up UI tabs on page
         setupTabs();
         setupAccordions();
+        setupTimeago();
 
         // mark current collection (filled in by Jekyll)
         Collections.listing['_current'] = 'eu-feat';
@@ -186,7 +284,7 @@ VerbForm in other languages:
 
       <div id="footer">
 	  <p class="footer-text">&copy; 2014 
-	    <a href="http://universaldependencies.github.io/docs/introduction.html#contributors" style="color:gray">Universal Dependencies contributors</a>. 
+	    <a href="http://universaldependencies.org/introduction.html#contributors" style="color:gray">Universal Dependencies contributors</a>. 
 	    Site powered by <a href="http://spyysalo.github.io/annodoc" style="color:gray">Annodoc</a> and <a href="http://brat.nlplab.org/" style="color:gray">brat</a></p>.
       </div>
     </div>

@@ -11,6 +11,7 @@
     <link rel="stylesheet" type="text/css" href="../../css/style-vis.css"/>
     <link rel="stylesheet" type="text/css" href="../../css/hint.css"/>
     <script type="text/javascript" src="../../lib/ext/head.load.min.js"></script>
+    <script type="text/javascript" src="../../lib/ext/jquery.timeago.js.js"></script>
 <!--     <link rel="shortcut icon" href="favicon.ico"/> -->
 
 
@@ -20,8 +21,8 @@
 
       <div id="hp-header">
 	
-          <span class="header-text"><a href="http://universaldependencies.github.io/docs/#language-ro">home</a></span>
-          <span class="header-text"><a href="http://universaldependencies.github.io/docs/ro/feat">ro/feat</a></span>
+          <span class="header-text"><a href="http://universaldependencies.org/#language-ro">home</a></span>
+          <span class="header-text"><a href="http://universaldependencies.org/ro/feat">ro/feat</a></span>
           <span class="header-text"><a href="https://github.com/universaldependencies/docs/edit/pages-source/_ro-feat/NumType.md" target="#">edit page</a></span>
           <span class="header-text"><a href="https://github.com/universaldependencies/docs/issues">issue tracker</a></span>
       </div>
@@ -44,6 +45,61 @@ for <code>NumType</code>.</p>
 
 <!-- "automatic stats" -->
 
+
+
+
+
+
+<hr />
+
+<h2 id="treebank-statistics-udromanian">Treebank Statistics (UD_Romanian)</h2>
+
+<p>This feature is universal.
+It occurs with 1 different values: <code>Card</code>.</p>
+
+<p>398 tokens (3%) have a non-empty value of <code>NumType</code>.
+128 types (3%) occur at least once with a non-empty value of <code>NumType</code>.
+128 lemmas (3%) occur at least once with a non-empty value of <code>NumType</code>.
+The feature is used with 2 part-of-speech tags: <a href="">ro-pos/NUM</a> (395; 3% instances), <a href="">ro-pos/DET</a> (3; 0% instances).</p>
+
+<h3 id="num"><code>NUM</code></h3>
+
+<p>395 <a href="">ro-pos/NUM</a> tokens (100% of all <code>NUM</code> tokens) have a non-empty value of <code>NumType</code>.</p>
+
+<p>The most frequent other feature values with which <code>NUM</code> and <code>NumType</code> co-occurred: <tt><a href="Case.html">Case</a>=EMPTY</tt> (346; 88%), <tt><a href="Definite.html">Definite</a>=EMPTY</tt> (339; 86%), <tt><a href="Gender.html">Gender</a>=EMPTY</tt> (314; 79%), <tt><a href="NumForm.html">NumForm</a>=EMPTY</tt> (260; 66%), <tt><a href="Number.html">Number</a>=EMPTY</tt> (260; 66%).</p>
+
+<p><code>NUM</code> tokens may have the following values of <code>NumType</code>:</p>
+
+<ul>
+  <li><code>Card</code> (395; 100% of non-empty <code>NumType</code>): <em>1938, 1, 3, 2, două, primul, prima, trei, 4, 15</em></li>
+</ul>
+
+<p><code>NumType</code> seems to be <strong>lexical feature</strong> of <code>NUM</code>. 100% lemmas (126) occur only with one value of <code>NumType</code>.</p>
+
+<h3 id="det"><code>DET</code></h3>
+
+<p>3 <a href="">ro-pos/DET</a> tokens (0% of all <code>DET</code> tokens) have a non-empty value of <code>NumType</code>.</p>
+
+<p>The most frequent other feature values with which <code>DET</code> and <code>NumType</code> co-occurred: <tt><a href="Position.html">Position</a>=EMPTY</tt> (3; 100%), <tt><a href="Case.html">Case</a>=Nom</tt> (3; 100%), <tt><a href="Poss.html">Poss</a>=EMPTY</tt> (3; 100%), <tt><a href="PronType.html">PronType</a>=Tot</tt> (3; 100%), <tt><a href="Number.html">Number</a>=Plur</tt> (3; 100%), <tt><a href="Person.html">Person</a>=EMPTY</tt> (3; 100%), <tt><a href="Gender.html">Gender</a>=Fem</tt> (2; 67%).</p>
+
+<p><code>DET</code> tokens may have the following values of <code>NumType</code>:</p>
+
+<ul>
+  <li><code>Card</code> (3; 100% of non-empty <code>NumType</code>): <em>ambele, Amândoi</em></li>
+  <li><code>EMPTY</code> (605): <em>o, un, a, al, ale, lui, cele, unui, toate, -lea</em></li>
+</ul>
+
+<h2 id="relations-with-agreement-in-numtype">Relations with Agreement in <code>NumType</code></h2>
+
+<p>The 10 most frequent relations where parent and child node agree in <code>NumType</code>:
+<tt>NUM –[<a href="../dep/conj.html">conj</a>]–&gt; NUM</tt> (16; 100%),
+<tt>NUM –[<a href="../dep/goeswith.html">goeswith</a>]–&gt; NUM</tt> (5; 100%),
+<tt>NUM –[<a href="../dep/compound.html">compound</a>]–&gt; NUM</tt> (5; 100%),
+<tt>NUM –[<a href="../dep/nummod.html">nummod</a>]–&gt; NUM</tt> (3; 100%),
+<tt>NUM –[<a href="../dep/remnant.html">remnant</a>]–&gt; NUM</tt> (2; 100%),
+<tt>NUM –[<a href="../dep/nmod.html">nmod</a>]–&gt; NUM</tt> (2; 100%),
+<tt>NUM –[<a href="../dep/parataxis.html">parataxis</a>]–&gt; NUM</tt> (2; 100%),
+<tt>NUM –[<a href="../dep/amod.html">amod</a>]–&gt; NUM</tt> (1; 100%).</p>
 
 
 
@@ -102,6 +158,7 @@ NumType in other languages:
         root + 'lib/ext/jquery.min.js',
         root + 'lib/ext/jquery.svg.min.js',
         root + 'lib/ext/jquery.svgdom.min.js',
+        root + 'lib/ext/jquery.timeago.js',
         root + 'lib/ext/jquery-ui.min.js',
         root + 'lib/ext/waypoints.min.js',
         root + 'lib/ext/jquery.address.min.js',
@@ -133,11 +190,40 @@ NumType in other languages:
     ];
 
     var setupAccordions = function() {
-        // standard jQuery UI "accordion" element initialization
+	// preserve state in URL hash, following in part
+	// http://www.boduch.ca/2011/05/remembering-jquery-ui-accordion.html
+	var accordionChange = function(event, ui) {
+	    var context = ui.newHeader ? ui.newHeader.context : null;
+	    if (context) {
+		var languageCode = context.getAttribute('data-lc');
+		if (languageCode !== null) {
+		    window.location.hash = languageCode;
+		}
+	    }
+	}
+        // jQuery UI "accordion" element initialization
 	$(".jquery-ui-accordion").accordion({
 	    collapsible: true,
-	    active: false
+	    active: false,
+	    change: accordionChange
 	});
+	if ($(".jquery-ui-accordion").length) {
+	    var matches = window.location.hash.match(/^\#(.*)$/);
+	    console.log(matches);
+	    if (matches !== null) {
+		var languageCode = matches[1];
+		var tab = $('[data-lc="'+languageCode+'"]');
+		// the following will only work after accordion is initialized
+		var index = $('.jquery-ui-accordion div.ui-accordion-header').index(tab);
+		if (index !== -1) {
+		    $(".jquery-ui-accordion").accordion({ active: index });
+		}
+	    }
+	}
+    };
+
+    var setupTimeago = function() {
+        jQuery("time.timeago").timeago();
     };
 
     var setupTabs = function() {
@@ -161,6 +247,7 @@ NumType in other languages:
         // set up UI tabs on page
         setupTabs();
         setupAccordions();
+        setupTimeago();
 
         // mark current collection (filled in by Jekyll)
         Collections.listing['_current'] = 'ro-feat';
@@ -186,7 +273,7 @@ NumType in other languages:
 
       <div id="footer">
 	  <p class="footer-text">&copy; 2014 
-	    <a href="http://universaldependencies.github.io/docs/introduction.html#contributors" style="color:gray">Universal Dependencies contributors</a>. 
+	    <a href="http://universaldependencies.org/introduction.html#contributors" style="color:gray">Universal Dependencies contributors</a>. 
 	    Site powered by <a href="http://spyysalo.github.io/annodoc" style="color:gray">Annodoc</a> and <a href="http://brat.nlplab.org/" style="color:gray">brat</a></p>.
       </div>
     </div>

@@ -11,6 +11,7 @@
     <link rel="stylesheet" type="text/css" href="../../css/style-vis.css"/>
     <link rel="stylesheet" type="text/css" href="../../css/hint.css"/>
     <script type="text/javascript" src="../../lib/ext/head.load.min.js"></script>
+    <script type="text/javascript" src="../../lib/ext/jquery.timeago.js.js"></script>
 <!--     <link rel="shortcut icon" href="favicon.ico"/> -->
 
 
@@ -20,7 +21,7 @@
 
       <div id="hp-header">
 	
-          <span class="header-text"><a href="http://universaldependencies.github.io/docs/#language-eu">home</a></span>
+          <span class="header-text"><a href="http://universaldependencies.org/#language-eu">home</a></span>
 
 
           <span class="header-text"><a href="https://github.com/universaldependencies/docs/issues">issue tracker</a></span>
@@ -174,14 +175,14 @@ for <code>NumType</code>.</p>
 <p><a id="al-eu-feat/Number" class="al-dest"></a></p>
 <h2><code>Number</code>: number</h2>
 
-<p>The <code>Number</code> feature for Basque follows the standard UD guidelines for nouns, adjectives, determiners and adverbs. However, finite verbs contain agreement features on number for the subject, object and indirect object, so the Basque treebank follows the UD description for <a href="http://universaldependencies.github.io/docs/ext-feat-index.html"> language-specific features</a>, defining <a href="http://universaldependencies.github.io/docs/u/ext-feat/AbsErgDatNumber.html">Number[erg]=Sing,Plur</a>, <a href="http://universaldependencies.github.io/docs/u/ext-feat/AbsErgDatNumber.html">Number[abs]=Sing,Plur</a>, and <a href="http://universaldependencies.github.io/docs/u/ext-feat/AbsErgDatNumber.html">Number[dat]=Sing,Plur</a>.</p>
+<p>The <code>Number</code> feature for Basque follows the standard UD guidelines for nouns, adjectives, determiners and adverbs. However, finite verbs contain agreement features on number for the subject, object and indirect object, so the Basque treebank follows the UD description for <a href="http://universaldependencies.org/ext-feat-index.html"> language-specific features</a>, defining <a href="http://universaldependencies.org/u/ext-feat/AbsErgDatNumber.html">Number[erg]=Sing,Plur</a>, <a href="http://universaldependencies.org/u/ext-feat/AbsErgDatNumber.html">Number[abs]=Sing,Plur</a>, and <a href="http://universaldependencies.org/u/ext-feat/AbsErgDatNumber.html">Number[dat]=Sing,Plur</a>.</p>
 
 <p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_eu-feat/Number.md" target="#">edit Number</a></p>
 
 <p><a id="al-eu-feat/Person" class="al-dest"></a></p>
 <h2><code>Person</code>: person</h2>
 
-<p>The <code>Person</code> feature for Basque follows the standard UD guidelines for nouns, adjectives, determiners and adverbs. However, finite verbs contain agreement features on person for the subject, object and indirect object, so the Basque treebank follows the UD description for <a href="http://universaldependencies.github.io/docs/ext-feat-index.html"> language-specific features</a>, defining <a href="http://universaldependencies.github.io/docs/u/ext-feat/AbsErgDatPerson.html">Person[erg]=1,2,3</a>, <a href="http://universaldependencies.github.io/docs/u/ext-feat/AbsErgDatPerson.html">Person[abs]=1,2,3</a>, and <a href="http://universaldependencies.github.io/docs/u/ext-feat/AbsErgDatPerson.html">Person[dat]=1,2,3</a>.</p>
+<p>The <code>Person</code> feature for Basque follows the standard UD guidelines for nouns, adjectives, determiners and adverbs. However, finite verbs contain agreement features on person for the subject, object and indirect object, so the Basque treebank follows the UD description for <a href="http://universaldependencies.org/ext-feat-index.html"> language-specific features</a>, defining <a href="http://universaldependencies.org/u/ext-feat/AbsErgDatPerson.html">Person[erg]=1,2,3</a>, <a href="http://universaldependencies.org/u/ext-feat/AbsErgDatPerson.html">Person[abs]=1,2,3</a>, and <a href="http://universaldependencies.org/u/ext-feat/AbsErgDatPerson.html">Person[dat]=1,2,3</a>.</p>
 
 <p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_eu-feat/Person.md" target="#">edit Person</a></p>
 
@@ -245,6 +246,7 @@ for <code>Voice</code>.</p>
         root + 'lib/ext/jquery.min.js',
         root + 'lib/ext/jquery.svg.min.js',
         root + 'lib/ext/jquery.svgdom.min.js',
+        root + 'lib/ext/jquery.timeago.js',
         root + 'lib/ext/jquery-ui.min.js',
         root + 'lib/ext/waypoints.min.js',
         root + 'lib/ext/jquery.address.min.js',
@@ -276,11 +278,40 @@ for <code>Voice</code>.</p>
     ];
 
     var setupAccordions = function() {
-        // standard jQuery UI "accordion" element initialization
+	// preserve state in URL hash, following in part
+	// http://www.boduch.ca/2011/05/remembering-jquery-ui-accordion.html
+	var accordionChange = function(event, ui) {
+	    var context = ui.newHeader ? ui.newHeader.context : null;
+	    if (context) {
+		var languageCode = context.getAttribute('data-lc');
+		if (languageCode !== null) {
+		    window.location.hash = languageCode;
+		}
+	    }
+	}
+        // jQuery UI "accordion" element initialization
 	$(".jquery-ui-accordion").accordion({
 	    collapsible: true,
-	    active: false
+	    active: false,
+	    change: accordionChange
 	});
+	if ($(".jquery-ui-accordion").length) {
+	    var matches = window.location.hash.match(/^\#(.*)$/);
+	    console.log(matches);
+	    if (matches !== null) {
+		var languageCode = matches[1];
+		var tab = $('[data-lc="'+languageCode+'"]');
+		// the following will only work after accordion is initialized
+		var index = $('.jquery-ui-accordion div.ui-accordion-header').index(tab);
+		if (index !== -1) {
+		    $(".jquery-ui-accordion").accordion({ active: index });
+		}
+	    }
+	}
+    };
+
+    var setupTimeago = function() {
+        jQuery("time.timeago").timeago();
     };
 
     var setupTabs = function() {
@@ -304,6 +335,7 @@ for <code>Voice</code>.</p>
         // set up UI tabs on page
         setupTabs();
         setupAccordions();
+        setupTimeago();
 
         // mark current collection (filled in by Jekyll)
         Collections.listing['_current'] = 'eu-overview';
@@ -329,7 +361,7 @@ for <code>Voice</code>.</p>
 
       <div id="footer">
 	  <p class="footer-text">&copy; 2014 
-	    <a href="http://universaldependencies.github.io/docs/introduction.html#contributors" style="color:gray">Universal Dependencies contributors</a>. 
+	    <a href="http://universaldependencies.org/introduction.html#contributors" style="color:gray">Universal Dependencies contributors</a>. 
 	    Site powered by <a href="http://spyysalo.github.io/annodoc" style="color:gray">Annodoc</a> and <a href="http://brat.nlplab.org/" style="color:gray">brat</a></p>.
       </div>
     </div>

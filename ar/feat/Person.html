@@ -11,6 +11,7 @@
     <link rel="stylesheet" type="text/css" href="../../css/style-vis.css"/>
     <link rel="stylesheet" type="text/css" href="../../css/hint.css"/>
     <script type="text/javascript" src="../../lib/ext/head.load.min.js"></script>
+    <script type="text/javascript" src="../../lib/ext/jquery.timeago.js.js"></script>
 <!--     <link rel="shortcut icon" href="favicon.ico"/> -->
 
 
@@ -20,8 +21,8 @@
 
       <div id="hp-header">
 	
-          <span class="header-text"><a href="http://universaldependencies.github.io/docs/#language-ar">home</a></span>
-          <span class="header-text"><a href="http://universaldependencies.github.io/docs/ar/feat">ar/feat</a></span>
+          <span class="header-text"><a href="http://universaldependencies.org/#language-ar">home</a></span>
+          <span class="header-text"><a href="http://universaldependencies.org/ar/feat">ar/feat</a></span>
           <span class="header-text"><a href="https://github.com/universaldependencies/docs/edit/pages-source/_ar-feat/Person.md" target="#">edit page</a></span>
           <span class="header-text"><a href="https://github.com/universaldependencies/docs/issues">issue tracker</a></span>
       </div>
@@ -44,6 +45,78 @@ for <code>Person</code>.</p>
 
 <!-- "automatic stats" -->
 
+
+
+
+
+
+<hr />
+
+<h2 id="treebank-statistics-udarabic">Treebank Statistics (UD_Arabic)</h2>
+
+<p>This feature is universal.
+It occurs with 3 different values: <code>1</code>, <code>2</code>, <code>3</code>.</p>
+
+<p>31521 tokens (11%) have a non-empty value of <code>Person</code>.
+4877 types (14%) occur at least once with a non-empty value of <code>Person</code>.
+1 lemmas (0) occur at least once with a non-empty value of <code>Person</code>.
+The feature is used with 3 part-of-speech tags: <a href="">ar-pos/VERB</a> (21490; 8% instances), <a href="">ar-pos/PRON</a> (9991; 4% instances), <a href="">ar-pos/AUX</a> (40; 0% instances).</p>
+
+<h3 id="verb"><code>VERB</code></h3>
+
+<p>21490 <a href="">ar-pos/VERB</a> tokens (100% of all <code>VERB</code> tokens) have a non-empty value of <code>Person</code>.</p>
+
+<p>The most frequent other feature values with which <code>VERB</code> and <code>Person</code> co-occurred: <tt><a href="Voice.html">Voice</a>=Act</tt> (20271; 94%), <tt><a href="Number.html">Number</a>=Sing</tt> (20125; 94%), <tt><a href="Gender.html">Gender</a>=Masc</tt> (13515; 63%), <tt><a href="VerbForm.html">VerbForm</a>=EMPTY</tt> (11441; 53%), <tt><a href="Aspect.html">Aspect</a>=Perf</tt> (11441; 53%), <tt><a href="Mood.html">Mood</a>=EMPTY</tt> (11441; 53%).</p>
+
+<p><code>VERB</code> tokens may have the following values of <code>Person</code>:</p>
+
+<ul>
+  <li><code>1</code> (114; 1% of non-empty <code>Person</code>): أَعتَقِدُ، نُرِيدُ، كُنتُ، نَستَورِدُ، نَقُولُ، أُؤَيِّدُ، كُنَّا، نَبدَأُ، نَزرَعَ، نَسعَى</li>
+  <li><code>2</code> (117; 1% of non-empty <code>Person</code>): تُحِبُّ، تَتَجَنَّبَ، تَتَعَرَّضُ، تَجِدُ، تَحصُلُ، تَخَلَّيتُم، تُوَاجِهُ، تَدَع، تَرغَبُ، تَكُونُونَ</li>
+  <li><code>3</code> (21259; 99% of non-empty <code>Person</code>): قَالَ، كَانَ، كَانَت، أَكَّدَ، أَضَافَ، تَمَّ، أَعلَنَ، أَشَارَ، يَتِمُّ، يُمكِنُ</li>
+  <li><code>EMPTY</code> (52): حَاوِل، دِ، دَعُوا، أَرخِص، اُخدُمُوا، اُكسُونَ، اِبحَث، اِحرَص، اِفتَحُوا، اِنتَبِه</li>
+</ul>
+
+<h3 id="pron"><code>PRON</code></h3>
+
+<p>9991 <a href="">ar-pos/PRON</a> tokens (72% of all <code>PRON</code> tokens) have a non-empty value of <code>Person</code>.</p>
+
+<p>The most frequent other feature values with which <code>PRON</code> and <code>Person</code> co-occurred: <tt><a href="PronType.html">PronType</a>=Prs</tt> (9991; 100%), <tt><a href="Number.html">Number</a>=Sing</tt> (8642; 86%), <tt><a href="Case.html">Case</a>=Gen</tt> (6743; 67%), <tt><a href="Gender.html">Gender</a>=Masc</tt> (5866; 59%).</p>
+
+<p><code>PRON</code> tokens may have the following values of <code>Person</code>:</p>
+
+<ul>
+  <li><code>1</code> (122; 1% of non-empty <code>Person</code>): نَا، ِي، نَحنُ، نِي، أَنَا، يَ</li>
+  <li><code>2</code> (176; 2% of non-empty <code>Person</code>): كَ، كُم، أَنتَ، أَنتُم، كِ</li>
+  <li><code>3</code> (9693; 97% of non-empty <code>Person</code>): هَا، هُ، هِ، هُم، هِم، هُوَ، هِيَ، هُمَا، هِمَا، هِنَّ</li>
+  <li><code>EMPTY</code> (3876): اَلَّتِي، اَلَّذِي، مَا، ذٰلِكَ، اَلَّذِينَ، مَن، هٰذَا، هٰذِهِ، كَيفَ، هٰؤُلَاءِ</li>
+</ul>
+
+<h3 id="aux"><code>AUX</code></h3>
+
+<p>40 <a href="">ar-pos/AUX</a> tokens (100% of all <code>AUX</code> tokens) have a non-empty value of <code>Person</code>.</p>
+
+<p>The most frequent other feature values with which <code>AUX</code> and <code>Person</code> co-occurred: <tt><a href="Number.html">Number</a>=Sing</tt> (40; 100%), <tt><a href="Voice.html">Voice</a>=Act</tt> (40; 100%), <tt><a href="Aspect.html">Aspect</a>=Perf</tt> (39; 98%), <tt><a href="Gender.html">Gender</a>=Masc</tt> (36; 90%).</p>
+
+<p><code>AUX</code> tokens may have the following values of <code>Person</code>:</p>
+
+<ul>
+  <li><code>3</code> (40; 100% of non-empty <code>Person</code>): لَيسَ، لَيسَت، أَلَا، تَعُد</li>
+</ul>
+
+<h2 id="relations-with-agreement-in-person">Relations with Agreement in <code>Person</code></h2>
+
+<p>The 10 most frequent relations where parent and child node agree in <code>Person</code>:
+<tt>VERB –[<a href="../dep/ccomp.html">ccomp</a>]–&gt; VERB</tt> (2482; 98%),
+<tt>VERB –[<a href="../dep/conj.html">conj</a>]–&gt; VERB</tt> (2474; 99%),
+<tt>VERB –[<a href="../dep/dobj.html">dobj</a>]–&gt; PRON</tt> (1739; 87%),
+<tt>VERB –[<a href="../dep/advcl.html">advcl</a>]–&gt; VERB</tt> (1088; 98%),
+<tt>VERB –[<a href="../dep/xcomp.html">xcomp</a>]–&gt; VERB</tt> (636; 100%),
+<tt>VERB –[<a href="../dep/nsubj.html">nsubj</a>]–&gt; PRON</tt> (620; 86%),
+<tt>VERB –[<a href="../dep/nmod.html">nmod</a>]–&gt; PRON</tt> (362; 58%),
+<tt>VERB –[<a href="../dep/csubj.html">csubj</a>]–&gt; VERB</tt> (292; 97%),
+<tt>VERB –[<a href="../dep/cc.html">cc</a>]–&gt; PRON</tt> (282; 63%),
+<tt>VERB –[<a href="../dep/parataxis.html">parataxis</a>]–&gt; VERB</tt> (238; 98%).</p>
 
 
 
@@ -102,6 +175,7 @@ Person in other languages:
         root + 'lib/ext/jquery.min.js',
         root + 'lib/ext/jquery.svg.min.js',
         root + 'lib/ext/jquery.svgdom.min.js',
+        root + 'lib/ext/jquery.timeago.js',
         root + 'lib/ext/jquery-ui.min.js',
         root + 'lib/ext/waypoints.min.js',
         root + 'lib/ext/jquery.address.min.js',
@@ -133,11 +207,40 @@ Person in other languages:
     ];
 
     var setupAccordions = function() {
-        // standard jQuery UI "accordion" element initialization
+	// preserve state in URL hash, following in part
+	// http://www.boduch.ca/2011/05/remembering-jquery-ui-accordion.html
+	var accordionChange = function(event, ui) {
+	    var context = ui.newHeader ? ui.newHeader.context : null;
+	    if (context) {
+		var languageCode = context.getAttribute('data-lc');
+		if (languageCode !== null) {
+		    window.location.hash = languageCode;
+		}
+	    }
+	}
+        // jQuery UI "accordion" element initialization
 	$(".jquery-ui-accordion").accordion({
 	    collapsible: true,
-	    active: false
+	    active: false,
+	    change: accordionChange
 	});
+	if ($(".jquery-ui-accordion").length) {
+	    var matches = window.location.hash.match(/^\#(.*)$/);
+	    console.log(matches);
+	    if (matches !== null) {
+		var languageCode = matches[1];
+		var tab = $('[data-lc="'+languageCode+'"]');
+		// the following will only work after accordion is initialized
+		var index = $('.jquery-ui-accordion div.ui-accordion-header').index(tab);
+		if (index !== -1) {
+		    $(".jquery-ui-accordion").accordion({ active: index });
+		}
+	    }
+	}
+    };
+
+    var setupTimeago = function() {
+        jQuery("time.timeago").timeago();
     };
 
     var setupTabs = function() {
@@ -161,6 +264,7 @@ Person in other languages:
         // set up UI tabs on page
         setupTabs();
         setupAccordions();
+        setupTimeago();
 
         // mark current collection (filled in by Jekyll)
         Collections.listing['_current'] = 'ar-feat';
@@ -186,7 +290,7 @@ Person in other languages:
 
       <div id="footer">
 	  <p class="footer-text">&copy; 2014 
-	    <a href="http://universaldependencies.github.io/docs/introduction.html#contributors" style="color:gray">Universal Dependencies contributors</a>. 
+	    <a href="http://universaldependencies.org/introduction.html#contributors" style="color:gray">Universal Dependencies contributors</a>. 
 	    Site powered by <a href="http://spyysalo.github.io/annodoc" style="color:gray">Annodoc</a> and <a href="http://brat.nlplab.org/" style="color:gray">brat</a></p>.
       </div>
     </div>

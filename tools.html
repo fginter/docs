@@ -1,0 +1,291 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en-GB" xml:lang="en-GB" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <title>UD tools</title>
+    <link rel="root" href=""/> <!-- for JS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/jquery-ui-redmond.css"/>
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+    <link rel="stylesheet" type="text/css" href="css/style-vis.css"/>
+    <link rel="stylesheet" type="text/css" href="css/hint.css"/>
+    <script type="text/javascript" src="lib/ext/head.load.min.js"></script>
+    <script type="text/javascript" src="lib/ext/jquery.timeago.js.js"></script>
+<!--     <link rel="shortcut icon" href="favicon.ico"/> -->
+
+
+  </head>
+  <body>
+    <div id="main" class="center">
+
+      <div id="hp-header">
+	
+          <span class="header-text"><a href="http://universaldependencies.org/#language-">home</a></span>
+
+          <span class="header-text"><a href="https://github.com/universaldependencies/docs/edit/pages-source/tools.md" target="#">edit page</a></span>
+          <span class="header-text"><a href="https://github.com/universaldependencies/docs/issues">issue tracker</a></span>
+      </div>
+
+      <hr/>
+
+      <div id="content">
+	<noscript>
+	  <div id="noscript">
+	    It appears that you have Javascript disabled.
+	    Please consider enabling Javascript for this page to see the visualizations.
+	  </div>
+	</noscript>
+
+          <h1 id="universal-dependencies-tools">Universal Dependencies tools</h1>
+
+<p>This page collects links to and minimal instructions for tools related to Universal Dependencies.</p>
+
+<p>If you would like to have your tool added to this page, please write the
+<a href="http://stp.lingfil.uu.se/mailman/listinfo/ud">UD mailing list</a>.</p>
+
+<p><strong>Listing</strong></p>
+
+<ul>
+  <li><a href="#ud-maintained-tools">Tools maintained by the UD project</a>
+    <ul>
+      <li>Annotation statistics</li>
+      <li>Consistency checking</li>
+      <li>Data validation</li>
+      <li>Format conversion</li>
+    </ul>
+  </li>
+  <li><a href="#third-party-tools">Third-party tools</a>
+    <ul>
+      <li><a href="#brat-rapid-annotation-tool">brat rapid annotation tool</a></li>
+      <li><a href="#treex">Treex</a></li>
+      <li><a href="#tred">Tred</a></li>
+      <li><a href="#udpipe">UDPipe</a></li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="ud-maintained-tools">UD-maintained tools</h2>
+
+<p>The Universal Dependencies project maintains a number of core tools for working with UD data.
+These tools are available from <a href="https://github.com/universaldependencies/tools">https://github.com/universaldependencies/tools</a> and briefly
+described below.</p>
+
+<h3 id="annotation-statistics">Annotation statistics</h3>
+
+<p>(Description TODO)</p>
+
+<h3 id="consistency-checking">Consistency checking</h3>
+
+<p>(Description TODO)</p>
+
+<h3 id="data-validation">Data validation</h3>
+
+<p>(Description TODO)</p>
+
+<h3 id="format-conversion">Format conversion</h3>
+
+<p>(Description TODO)</p>
+
+<h2 id="third-party-tools">Third-party tools</h2>
+
+<h3 id="brat-rapid-annotation-tool">brat rapid annotation tool</h3>
+
+<p><img style="width: 40%; float:right" src="http://universaldependencies.org/img/brat.png" />
+<strong>brat</strong> is a browser-based tool for text annotation. The brat visualization component is used in the <a href="https://spyysalo.github.io/annodoc/">UD documentation system</a> and the tool can be easily configured for UD annotation (TODO: link instructions).</p>
+
+<ul>
+  <li>Category: manual annotation tool</li>
+  <li>Platform: any (browser-based)</li>
+  <li>Implementation: Python (server), JavaScript (client)</li>
+  <li>License: MIT (open source)</li>
+  <li>Homepage: <a href="http://brat.nlplab.org/">http://brat.nlplab.org/</a></li>
+  <li>References: <a href="http://anthology.aclweb.org/E/E12/E12-2021.pdf">Stenetorp et al. (2012)</a></li>
+</ul>
+
+<h3 id="treex">Treex</h3>
+
+<p><strong>Treex</strong> is a modular natural language processing framework. It reads and writes data in many formats (including CoNLL-U) and provides API for dependency tree manipulation. Many treebanks have been harmonized in <a href="http://ufal.mff.cuni.cz/hamledt">HamleDT</a> and then converted to UD using Treex.</p>
+
+<ul>
+  <li>Category: treebank processing framework</li>
+  <li>Platform: tested mainly on Linux</li>
+  <li>Implementation: Perl</li>
+  <li>License: Perl</li>
+  <li>Homepage: <a href="http://ufal.mff.cuni.cz/treex">http://ufal.mff.cuni.cz/treex</a></li>
+  <li>References: <a href="http://ufal.mff.cuni.cz/~popel/papers/2010_icetal.pdf">Popel and Žabokrtský (2010)</a></li>
+</ul>
+
+<h3 id="tred">Tred</h3>
+
+<p><img style="float:right" src="http://universaldependencies.org/img/tred.png" />
+<strong>Tred</strong> (Tree Editor) is a graph visualization and manipulation program written in Perl. It was the main tool used to annotate the Prague treebanks. It supports macros (in Perl) to automate frequently repeated operations. There are extensions for various annotation layers such as MWEs or coreference. It cannot read directly the CoNLL-U format. However, it is quite powerful in combination with <a href="#treex">Treex</a>, which can also convert the files from and to CoNLL-U.</p>
+
+<ul>
+  <li>Category: manual annotation tool</li>
+  <li>Platform: Windows, Linux, OS X</li>
+  <li>Implementation: Perl</li>
+  <li>License: GPL (open source)</li>
+  <li>Homepage: <a href="http://ufal.mff.cuni.cz/tred/">http://ufal.mff.cuni.cz/tred/</a></li>
+  <li>References: Petr Pajas, Peter Fabian</li>
+</ul>
+
+<h3 id="udpipe">UDPipe</h3>
+
+<p><strong>UDPipe</strong> is an upcoming trainable pipeline for tokenization, tagging, lemmatization and parsing of CoNLL-U files. UDPipe is language-agnostic and can be trained given only annotated data in CoNLL-U format. (Nevertheless, to train the tokenizer, either the <code>SpaceAfter</code> feature must be present, or at least some plain text must be available; also morphological analyzer and lemmatizer can be improved if morphological dictionary is provided.) Trained models will be provided for all UD treebanks (maybe except for Japanese where there are licencing issues). UDPipe will be available as a binary, as a library for C++, Python, Perl, Java, C#, and as a web service.</p>
+
+<ul>
+  <li>Category: trainable tokenizer, tagger, lemmatizer and parser</li>
+  <li>Platform: Linux, Windows, OS X</li>
+  <li>Implementation: C++; language bindings for Python, Perl, Java and C#</li>
+  <li>License: MPL 2.0 (open source)</li>
+  <li>Homepage: <a href="http://ufal.mff.cuni.cz/udpipe">http://ufal.mff.cuni.cz/udpipe</a></li>
+  <li>References: Milan Straka, Jan Hajič and Jana Straková 2016. UDPipe: Trainable Pipeline for Processing CoNLL-U Files Performing Tokenization, Morphological Analysis, POS Tagging and Parsing. To appear at LREC 2016.</li>
+</ul>
+
+<h3 id="dgannotator">DgAnnotator</h3>
+
+<p><img style="float:right" src="http://universaldependencies.org/img/dga.png" />
+<strong>DgAnnotator</strong> (Dependency Graph Annotator) is a visual tool for annotating text with syntactic information, in particular creating a dependency tree. The tool reads and produces annotated documents in both XML, CoNLL-X and CoNLL-U tab separated format. Additional features: shows the differences, highlighted in red, between two different dependency trees on the same corpus; generates PNG snapshots of trees; performs PoS tagging and parsing connecting to a network service; panning and zooming.</p>
+
+<ul>
+  <li>Category: manual annotation tool</li>
+  <li>Platform: Windows, Linux, OS X</li>
+  <li>Implementation: Java</li>
+  <li>License: GPL (open source)</li>
+  <li>Homepage: <a href="http://medialab.di.unipi.it/Project/QA/Parser/DgAnnotator/">http://medialab.di.unipi.it/Project/QA/Parser/DgAnnotator/</a></li>
+  <li>References: Giuseppe Attardi</li>
+</ul>
+
+
+      </div>
+
+<!-- support for embedded visualizations -->
+<script type="text/javascript">
+    var root = ''; // filled in by jekyll
+    head.js(
+        // External libraries
+        root + 'lib/ext/jquery.min.js',
+        root + 'lib/ext/jquery.svg.min.js',
+        root + 'lib/ext/jquery.svgdom.min.js',
+        root + 'lib/ext/jquery.timeago.js',
+        root + 'lib/ext/jquery-ui.min.js',
+        root + 'lib/ext/waypoints.min.js',
+        root + 'lib/ext/jquery.address.min.js',
+
+        // brat helper modules
+        root + 'lib/brat/configuration.js',
+        root + 'lib/brat/util.js',
+        root + 'lib/brat/annotation_log.js',
+        root + 'lib/ext/webfont.js',
+        // brat modules
+        root + 'lib/brat/dispatcher.js',
+        root + 'lib/brat/url_monitor.js',
+        root + 'lib/brat/visualizer.js',
+
+        // embedding configuration
+        root + 'lib/local/config.js',
+        // project-specific collection data
+        root + 'lib/local/collections.js',
+
+        // NOTE: non-local libraries
+        'https://spyysalo.github.io/annodoc/lib/local/annodoc.js',
+        'https://spyysalo.github.io/conllu.js/conllu.js'
+    );
+
+    var webFontURLs = [
+//        root + 'static/fonts/Astloch-Bold.ttf',
+        root + 'static/fonts/PT_Sans-Caption-Web-Regular.ttf',
+        root + 'static/fonts/Liberation_Sans-Regular.ttf'
+    ];
+
+    var setupAccordions = function() {
+	// preserve state in URL hash, following in part
+	// http://www.boduch.ca/2011/05/remembering-jquery-ui-accordion.html
+	var accordionChange = function(event, ui) {
+	    var context = ui.newHeader ? ui.newHeader.context : null;
+	    if (context) {
+		var languageCode = context.getAttribute('data-lc');
+		if (languageCode !== null) {
+		    window.location.hash = languageCode;
+		}
+	    }
+	}
+        // jQuery UI "accordion" element initialization
+	$(".jquery-ui-accordion").accordion({
+	    collapsible: true,
+	    active: false,
+	    change: accordionChange
+	});
+	if ($(".jquery-ui-accordion").length) {
+	    var matches = window.location.hash.match(/^\#(.*)$/);
+	    console.log(matches);
+	    if (matches !== null) {
+		var languageCode = matches[1];
+		var tab = $('[data-lc="'+languageCode+'"]');
+		// the following will only work after accordion is initialized
+		var index = $('.jquery-ui-accordion div.ui-accordion-header').index(tab);
+		if (index !== -1) {
+		    $(".jquery-ui-accordion").accordion({ active: index });
+		}
+	    }
+	}
+    };
+
+    var setupTimeago = function() {
+        jQuery("time.timeago").timeago();
+    };
+
+    var setupTabs = function() {
+        // standard jQuery UI "tabs" element initialization
+        $(".jquery-ui-tabs").tabs({ heightStyle: "auto" });
+
+        // use jQuery address to preserve tab state
+        // (see https://github.com/UniversalDependencies/docs/issues/65,
+        // http://stackoverflow.com/a/3330919)
+        if ($(".jquery-ui-tabs").length > 0) {
+            $.address.change(function(event){
+	        $(".jquery-ui-tabs").tabs("select", window.location.hash)
+	    });
+	    $(".jquery-ui-tabs").bind("tabsselect", function(event, ui) { 
+	        window.location.hash = ui.tab.hash;
+	    });
+        }
+    };
+
+    head.ready(function() {
+        // set up UI tabs on page
+        setupTabs();
+        setupAccordions();
+        setupTimeago();
+
+        // mark current collection (filled in by Jekyll)
+        Collections.listing['_current'] = '';
+
+	// perform all embedding and support functions
+	Annodoc.activate(Config.bratCollData, Collections.listing);
+    });
+</script>
+
+
+<!-- google analytics -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-55233688-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+
+      <div id="footer">
+	  <p class="footer-text">&copy; 2014 
+	    <a href="http://universaldependencies.org/introduction.html#contributors" style="color:gray">Universal Dependencies contributors</a>. 
+	    Site powered by <a href="http://spyysalo.github.io/annodoc" style="color:gray">Annodoc</a> and <a href="http://brat.nlplab.org/" style="color:gray">brat</a></p>.
+      </div>
+    </div>
+  </body>
+</html>

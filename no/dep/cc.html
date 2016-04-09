@@ -11,6 +11,7 @@
     <link rel="stylesheet" type="text/css" href="../../css/style-vis.css"/>
     <link rel="stylesheet" type="text/css" href="../../css/hint.css"/>
     <script type="text/javascript" src="../../lib/ext/head.load.min.js"></script>
+    <script type="text/javascript" src="../../lib/ext/jquery.timeago.js.js"></script>
 <!--     <link rel="shortcut icon" href="favicon.ico"/> -->
 
 
@@ -20,8 +21,8 @@
 
       <div id="hp-header">
 	
-          <span class="header-text"><a href="http://universaldependencies.github.io/docs/#language-no">home</a></span>
-          <span class="header-text"><a href="http://universaldependencies.github.io/docs/no/dep">no/dep</a></span>
+          <span class="header-text"><a href="http://universaldependencies.org/#language-no">home</a></span>
+          <span class="header-text"><a href="http://universaldependencies.org/no/dep">no/dep</a></span>
           <span class="header-text"><a href="https://github.com/universaldependencies/docs/edit/pages-source/_no-dep/cc.md" target="#">edit page</a></span>
           <span class="header-text"><a href="https://github.com/universaldependencies/docs/issues">issue tracker</a></span>
       </div>
@@ -54,6 +55,77 @@ cc(gjorde,Og)
 <!-- "automatic stats" -->
 
 
+
+
+
+
+
+<hr />
+
+<h2 id="treebank-statistics-udnorwegian">Treebank Statistics (UD_Norwegian)</h2>
+
+<p>This relation is universal.</p>
+
+<p>10720 nodes (3%) are attached to their parents as <code>cc</code>.</p>
+
+<p>8943 instances of <code>cc</code> (83%) are left-to-right (parent precedes child).
+Average distance between parent and child is 3.84608208955224.</p>
+
+<p>The following 19 pairs of parts of speech are connected with <code>cc</code>: <a href="">no-pos/VERB</a>-<a href="">no-pos/CONJ</a> (3916; 37% instances), <a href="">no-pos/NOUN</a>-<a href="">no-pos/CONJ</a> (3799; 35% instances), <a href="">no-pos/ADJ</a>-<a href="">no-pos/CONJ</a> (1470; 14% instances), <a href="">no-pos/PROPN</a>-<a href="">no-pos/CONJ</a> (945; 9% instances), <a href="">no-pos/PRON</a>-<a href="">no-pos/CONJ</a> (185; 2% instances), <a href="">no-pos/ADP</a>-<a href="">no-pos/CONJ</a> (141; 1% instances), <a href="">no-pos/ADV</a>-<a href="">no-pos/CONJ</a> (107; 1% instances), <a href="">no-pos/NUM</a>-<a href="">no-pos/CONJ</a> (80; 1% instances), <a href="">no-pos/DET</a>-<a href="">no-pos/CONJ</a> (54; 1% instances), <a href="">no-pos/AUX</a>-<a href="">no-pos/CONJ</a> (5; 0% instances), <a href="">no-pos/INTJ</a>-<a href="">no-pos/CONJ</a> (5; 0% instances), <a href="">no-pos/SYM</a>-<a href="">no-pos/CONJ</a> (4; 0% instances), <a href="">no-pos/NOUN</a>-<a href="">no-pos/ADV</a> (2; 0% instances), <a href="">no-pos/X</a>-<a href="">no-pos/CONJ</a> (2; 0% instances), <a href="">no-pos/ADJ</a>-<a href="">no-pos/ADP</a> (1; 0% instances), <a href="">no-pos/ADJ</a>-<a href="">no-pos/ADV</a> (1; 0% instances), <a href="">no-pos/NOUN</a>-<a href="">no-pos/ADP</a> (1; 0% instances), <a href="">no-pos/PROPN</a>-<a href="">no-pos/ADV</a> (1; 0% instances), <a href="">no-pos/SCONJ</a>-<a href="">no-pos/CONJ</a> (1; 0% instances).</p>
+
+<pre><code class="language-conllu"># visual-style 1	bgColor:blue
+# visual-style 1	fgColor:white
+# visual-style 3	bgColor:blue
+# visual-style 3	fgColor:white
+# visual-style 3 1 cc	color:blue
+1	Og	og	CONJ	_	_	3	cc	_	_
+2	Aftenposten	Aftenposten	PROPN	_	Gender=Masc	3	nsubj	_	_
+3	leverer	levere	VERB	_	Mood=Ind|Tense=Pres|VerbForm=Fin	0	root	_	_
+4	,	$,	PUNCT	_	_	3	punct	_	_
+5	også	også	ADV	_	_	6	advmod	_	_
+6	her	her	ADV	_	_	3	advmod	_	_
+7	.	$.	PUNCT	_	_	3	punct	_	_
+
+</code></pre>
+
+<pre><code class="language-conllu"># visual-style 7	bgColor:blue
+# visual-style 7	fgColor:white
+# visual-style 6	bgColor:blue
+# visual-style 6	fgColor:white
+# visual-style 6 7 cc	color:blue
+1	Dette	dette	PRON	_	Gender=Neut|Number=Sing|Person=3|PronType=Prs	2	nsubj	_	_
+2	rører	røre	VERB	_	Mood=Ind|Tense=Pres|VerbForm=Fin	0	root	_	_
+3	ved	ved	ADP	_	_	6	case	_	_
+4	de	de	DET	_	Number=Plur|PronType=Dem	6	det	_	_
+5	dypeste	dyp	ADJ	_	Definite=Def|Degree=Sup	6	amod	_	_
+6	verdiene	verdi	NOUN	_	Definite=Def|Gender=Masc|Number=Plur	2	nmod	_	_
+7	og	og	CONJ	_	_	6	cc	_	_
+8	holdningene	holdning	NOUN	_	Definite=Def|Gender=Fem|Number=Plur	6	conj	_	_
+9	vi	vi	PRON	_	Animacy=Anim|Case=Nom|Number=Plur|Person=1|PronType=Prs	10	nsubj	_	_
+10	har	ha	VERB	_	Mood=Ind|Tense=Pres|VerbForm=Fin	8	acl:relcl	_	_
+11	.	$.	PUNCT	_	_	2	punct	_	_
+12	»	$"	PUNCT	_	_	2	punct	_	_
+
+</code></pre>
+
+<pre><code class="language-conllu"># visual-style 6	bgColor:blue
+# visual-style 6	fgColor:white
+# visual-style 7	bgColor:blue
+# visual-style 7	fgColor:white
+# visual-style 7 6 cc	color:blue
+1	Berntsen	Berntsen	PROPN	_	_	3	nsubj	_	_
+2	har	ha	AUX	_	Mood=Ind|Tense=Pres|VerbForm=Fin	3	aux	_	_
+3	påtatt	påta	VERB	_	VerbForm=Part	0	root	_	_
+4	seg	seg	PRON	_	Case=Acc|Reflex=Yes	3	iobj	_	_
+5	en	en	DET	_	Gender=Masc|Number=Sing	10	det	_	_
+6	både	både	CONJ	_	_	7	cc	_	_
+7	viktig	viktig	ADJ	_	Definite=Ind|Degree=Pos|Number=Sing	10	amod	_	_
+8	og	og	CONJ	_	_	7	cc	_	_
+9	vanskelig	vanskelig	ADJ	_	Definite=Ind|Degree=Pos|Number=Sing	7	conj	_	_
+10	oppgave	oppgave	NOUN	_	Definite=Ind|Gender=Masc|Number=Sing	3	dobj	_	_
+11	.	$.	PUNCT	_	_	3	punct	_	_
+
+</code></pre>
 
 
 
@@ -112,6 +184,7 @@ cc in other languages:
         root + 'lib/ext/jquery.min.js',
         root + 'lib/ext/jquery.svg.min.js',
         root + 'lib/ext/jquery.svgdom.min.js',
+        root + 'lib/ext/jquery.timeago.js',
         root + 'lib/ext/jquery-ui.min.js',
         root + 'lib/ext/waypoints.min.js',
         root + 'lib/ext/jquery.address.min.js',
@@ -143,11 +216,40 @@ cc in other languages:
     ];
 
     var setupAccordions = function() {
-        // standard jQuery UI "accordion" element initialization
+	// preserve state in URL hash, following in part
+	// http://www.boduch.ca/2011/05/remembering-jquery-ui-accordion.html
+	var accordionChange = function(event, ui) {
+	    var context = ui.newHeader ? ui.newHeader.context : null;
+	    if (context) {
+		var languageCode = context.getAttribute('data-lc');
+		if (languageCode !== null) {
+		    window.location.hash = languageCode;
+		}
+	    }
+	}
+        // jQuery UI "accordion" element initialization
 	$(".jquery-ui-accordion").accordion({
 	    collapsible: true,
-	    active: false
+	    active: false,
+	    change: accordionChange
 	});
+	if ($(".jquery-ui-accordion").length) {
+	    var matches = window.location.hash.match(/^\#(.*)$/);
+	    console.log(matches);
+	    if (matches !== null) {
+		var languageCode = matches[1];
+		var tab = $('[data-lc="'+languageCode+'"]');
+		// the following will only work after accordion is initialized
+		var index = $('.jquery-ui-accordion div.ui-accordion-header').index(tab);
+		if (index !== -1) {
+		    $(".jquery-ui-accordion").accordion({ active: index });
+		}
+	    }
+	}
+    };
+
+    var setupTimeago = function() {
+        jQuery("time.timeago").timeago();
     };
 
     var setupTabs = function() {
@@ -171,6 +273,7 @@ cc in other languages:
         // set up UI tabs on page
         setupTabs();
         setupAccordions();
+        setupTimeago();
 
         // mark current collection (filled in by Jekyll)
         Collections.listing['_current'] = 'no-dep';
@@ -196,7 +299,7 @@ cc in other languages:
 
       <div id="footer">
 	  <p class="footer-text">&copy; 2014 
-	    <a href="http://universaldependencies.github.io/docs/introduction.html#contributors" style="color:gray">Universal Dependencies contributors</a>. 
+	    <a href="http://universaldependencies.org/introduction.html#contributors" style="color:gray">Universal Dependencies contributors</a>. 
 	    Site powered by <a href="http://spyysalo.github.io/annodoc" style="color:gray">Annodoc</a> and <a href="http://brat.nlplab.org/" style="color:gray">brat</a></p>.
       </div>
     </div>

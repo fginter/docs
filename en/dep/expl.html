@@ -11,6 +11,7 @@
     <link rel="stylesheet" type="text/css" href="../../css/style-vis.css"/>
     <link rel="stylesheet" type="text/css" href="../../css/hint.css"/>
     <script type="text/javascript" src="../../lib/ext/head.load.min.js"></script>
+    <script type="text/javascript" src="../../lib/ext/jquery.timeago.js.js"></script>
 <!--     <link rel="shortcut icon" href="favicon.ico"/> -->
 
 
@@ -20,8 +21,8 @@
 
       <div id="hp-header">
 	
-          <span class="header-text"><a href="http://universaldependencies.github.io/docs/#language-en">home</a></span>
-          <span class="header-text"><a href="http://universaldependencies.github.io/docs/en/dep">en/dep</a></span>
+          <span class="header-text"><a href="http://universaldependencies.org/#language-en">home</a></span>
+          <span class="header-text"><a href="http://universaldependencies.org/en/dep">en/dep</a></span>
           <span class="header-text"><a href="https://github.com/universaldependencies/docs/edit/pages-source/_en-dep/expl.md" target="#">edit page</a></span>
           <span class="header-text"><a href="https://github.com/universaldependencies/docs/issues">issue tracker</a></span>
       </div>
@@ -48,6 +49,80 @@ expl(is, There)
 <!-- "automatic stats" -->
 
 
+
+
+
+
+
+<hr />
+
+<h2 id="treebank-statistics-udenglish">Treebank Statistics (UD_English)</h2>
+
+<p>This relation is universal.</p>
+
+<p>731 nodes (0%) are attached to their parents as <code>expl</code>.</p>
+
+<p>658 instances of <code>expl</code> (90%) are right-to-left (child precedes parent).
+Average distance between parent and child is 1.51025991792066.</p>
+
+<p>The following 7 pairs of parts of speech are connected with <code>expl</code>: <a href="">en-pos/VERB</a>-<a href="">en-pos/PRON</a> (550; 75% instances), <a href="">en-pos/ADJ</a>-<a href="">en-pos/PRON</a> (134; 18% instances), <a href="">en-pos/NOUN</a>-<a href="">en-pos/PRON</a> (34; 5% instances), <a href="">en-pos/VERB</a>-<a href="">en-pos/ADV</a> (6; 1% instances), <a href="">en-pos/PROPN</a>-<a href="">en-pos/PRON</a> (4; 1% instances), <a href="">en-pos/AUX</a>-<a href="">en-pos/PRON</a> (2; 0% instances), <a href="">en-pos/NOUN</a>-<a href="">en-pos/ADV</a> (1; 0% instances).</p>
+
+<pre><code class="language-conllu"># visual-style 6	bgColor:blue
+# visual-style 6	fgColor:white
+# visual-style 7	bgColor:blue
+# visual-style 7	fgColor:white
+# visual-style 7 6 expl	color:blue
+1	Read	read	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	_	_
+2	the	the	DET	DT	Definite=Def|PronType=Art	4	det	_	_
+3	entire	entire	ADJ	JJ	Degree=Pos	4	amod	_	_
+4	article	article	NOUN	NN	Number=Sing	1	dobj	_	SpaceAfter=No
+5	;	;	PUNCT	,	_	1	punct	_	_
+6	there	there	PRON	EX	_	7	expl	_	SpaceAfter=No
+7	's	be	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	1	parataxis	_	_
+8	a	a	DET	DT	Definite=Ind|PronType=Art	9	det	_	_
+9	punchline	punchline	NOUN	NN	Number=Sing	7	nsubj	_	SpaceAfter=No
+10	,	,	PUNCT	,	_	7	punct	_	_
+11	too	too	ADV	RB	_	7	advmod	_	SpaceAfter=No
+12	.	.	PUNCT	.	_	1	punct	_	_
+
+</code></pre>
+
+<pre><code class="language-conllu"># visual-style 1	bgColor:blue
+# visual-style 1	fgColor:white
+# visual-style 3	bgColor:blue
+# visual-style 3	fgColor:white
+# visual-style 3 1 expl	color:blue
+1	It	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	3	expl	_	_
+2	is	be	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	3	cop	_	_
+3	true	true	ADJ	JJ	Degree=Pos	0	root	_	_
+4	that	that	SCONJ	IN	_	10	mark	_	_
+5	Google	Google	PROPN	NNP	Number=Sing	10	nsubj	_	_
+6	has	have	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	10	aux	_	_
+7	been	be	VERB	VBN	Tense=Past|VerbForm=Part	10	cop	_	_
+8	in	in	ADP	IN	_	10	case	_	_
+9	acquisition	acquisition	NOUN	NN	Number=Sing	10	compound	_	_
+10	mode	mode	NOUN	NN	Number=Sing	3	csubj	_	SpaceAfter=No
+11	.	.	PUNCT	.	_	3	punct	_	_
+
+</code></pre>
+
+<pre><code class="language-conllu"># visual-style 1	bgColor:blue
+# visual-style 1	fgColor:white
+# visual-style 7	bgColor:blue
+# visual-style 7	fgColor:white
+# visual-style 7 1 expl	color:blue
+1	There	there	PRON	EX	_	7	expl	_	_
+2	must	must	AUX	MD	VerbForm=Fin	7	aux	_	_
+3	be	be	VERB	VB	VerbForm=Inf	7	cop	_	_
+4	a	a	DET	DT	Definite=Ind|PronType=Art	7	det	_	_
+5	better	better	ADJ	JJR	Degree=Cmp	7	amod	_	_
+6	mexican	mexican	ADJ	JJ	Degree=Pos	7	amod	_	_
+7	place	place	NOUN	NN	Number=Sing	0	root	_	_
+8	in	in	ADP	IN	_	9	case	_	_
+9	Rockland	Rockland	PROPN	NNP	Number=Sing	7	nmod	_	SpaceAfter=No
+10	.	.	PUNCT	.	_	7	punct	_	_
+
+</code></pre>
 
 
 
@@ -106,6 +181,7 @@ expl in other languages:
         root + 'lib/ext/jquery.min.js',
         root + 'lib/ext/jquery.svg.min.js',
         root + 'lib/ext/jquery.svgdom.min.js',
+        root + 'lib/ext/jquery.timeago.js',
         root + 'lib/ext/jquery-ui.min.js',
         root + 'lib/ext/waypoints.min.js',
         root + 'lib/ext/jquery.address.min.js',
@@ -137,11 +213,40 @@ expl in other languages:
     ];
 
     var setupAccordions = function() {
-        // standard jQuery UI "accordion" element initialization
+	// preserve state in URL hash, following in part
+	// http://www.boduch.ca/2011/05/remembering-jquery-ui-accordion.html
+	var accordionChange = function(event, ui) {
+	    var context = ui.newHeader ? ui.newHeader.context : null;
+	    if (context) {
+		var languageCode = context.getAttribute('data-lc');
+		if (languageCode !== null) {
+		    window.location.hash = languageCode;
+		}
+	    }
+	}
+        // jQuery UI "accordion" element initialization
 	$(".jquery-ui-accordion").accordion({
 	    collapsible: true,
-	    active: false
+	    active: false,
+	    change: accordionChange
 	});
+	if ($(".jquery-ui-accordion").length) {
+	    var matches = window.location.hash.match(/^\#(.*)$/);
+	    console.log(matches);
+	    if (matches !== null) {
+		var languageCode = matches[1];
+		var tab = $('[data-lc="'+languageCode+'"]');
+		// the following will only work after accordion is initialized
+		var index = $('.jquery-ui-accordion div.ui-accordion-header').index(tab);
+		if (index !== -1) {
+		    $(".jquery-ui-accordion").accordion({ active: index });
+		}
+	    }
+	}
+    };
+
+    var setupTimeago = function() {
+        jQuery("time.timeago").timeago();
     };
 
     var setupTabs = function() {
@@ -165,6 +270,7 @@ expl in other languages:
         // set up UI tabs on page
         setupTabs();
         setupAccordions();
+        setupTimeago();
 
         // mark current collection (filled in by Jekyll)
         Collections.listing['_current'] = 'en-dep';
@@ -190,7 +296,7 @@ expl in other languages:
 
       <div id="footer">
 	  <p class="footer-text">&copy; 2014 
-	    <a href="http://universaldependencies.github.io/docs/introduction.html#contributors" style="color:gray">Universal Dependencies contributors</a>. 
+	    <a href="http://universaldependencies.org/introduction.html#contributors" style="color:gray">Universal Dependencies contributors</a>. 
 	    Site powered by <a href="http://spyysalo.github.io/annodoc" style="color:gray">Annodoc</a> and <a href="http://brat.nlplab.org/" style="color:gray">brat</a></p>.
       </div>
     </div>

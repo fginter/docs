@@ -11,6 +11,7 @@
     <link rel="stylesheet" type="text/css" href="../../css/style-vis.css"/>
     <link rel="stylesheet" type="text/css" href="../../css/hint.css"/>
     <script type="text/javascript" src="../../lib/ext/head.load.min.js"></script>
+    <script type="text/javascript" src="../../lib/ext/jquery.timeago.js.js"></script>
 <!--     <link rel="shortcut icon" href="favicon.ico"/> -->
 
 
@@ -20,8 +21,8 @@
 
       <div id="hp-header">
 	
-          <span class="header-text"><a href="http://universaldependencies.github.io/docs/#language-fa">home</a></span>
-          <span class="header-text"><a href="http://universaldependencies.github.io/docs/fa/dep">fa/dep</a></span>
+          <span class="header-text"><a href="http://universaldependencies.org/#language-fa">home</a></span>
+          <span class="header-text"><a href="http://universaldependencies.org/fa/dep">fa/dep</a></span>
           <span class="header-text"><a href="https://github.com/universaldependencies/docs/edit/pages-source/_fa-dep/nummod.md" target="#">edit page</a></span>
           <span class="header-text"><a href="https://github.com/universaldependencies/docs/issues">issue tracker</a></span>
       </div>
@@ -45,6 +46,90 @@ for <code>nummod</code>.</p>
 <!-- "automatic stats" -->
 
 
+
+
+
+
+
+<hr />
+
+<h2 id="treebank-statistics-udpersian">Treebank Statistics (UD_Persian)</h2>
+
+<p>This relation is universal.</p>
+
+<p>2873 nodes (2%) are attached to their parents as <code>nummod</code>.</p>
+
+<p>2520 instances of <code>nummod</code> (88%) are right-to-left (child precedes parent).
+Average distance between parent and child is 1.33136094674556.</p>
+
+<p>The following 15 pairs of parts of speech are connected with <code>nummod</code>: <a href="">fa-pos/NOUN</a>-<a href="">fa-pos/NUM</a> (2369; 82% instances), <a href="">fa-pos/NUM</a>-<a href="">fa-pos/NUM</a> (214; 7% instances), <a href="">fa-pos/ADJ</a>-<a href="">fa-pos/NUM</a> (113; 4% instances), <a href="">fa-pos/NOUN</a>-<a href="">fa-pos/ADJ</a> (78; 3% instances), <a href="">fa-pos/VERB</a>-<a href="">fa-pos/NUM</a> (36; 1% instances), <a href="">fa-pos/NOUN</a>-<a href="">fa-pos/NOUN</a> (24; 1% instances), <a href="">fa-pos/ADP</a>-<a href="">fa-pos/NUM</a> (16; 1% instances), <a href="">fa-pos/DET</a>-<a href="">fa-pos/NUM</a> (13; 0% instances), <a href="">fa-pos/ADV</a>-<a href="">fa-pos/NUM</a> (4; 0% instances), <a href="">fa-pos/ADJ</a>-<a href="">fa-pos/ADJ</a> (1; 0% instances), <a href="">fa-pos/NOUN</a>-<a href="">fa-pos/PRON</a> (1; 0% instances), <a href="">fa-pos/NUM</a>-<a href="">fa-pos/NOUN</a> (1; 0% instances), <a href="">fa-pos/PRON</a>-<a href="">fa-pos/NUM</a> (1; 0% instances), <a href="">fa-pos/VERB</a>-<a href="">fa-pos/NOUN</a> (1; 0% instances), <a href="">fa-pos/X</a>-<a href="">fa-pos/NUM</a> (1; 0% instances).</p>
+
+<pre><code class="language-conllu"># visual-style 5	bgColor:blue
+# visual-style 5	fgColor:white
+# visual-style 6	bgColor:blue
+# visual-style 6	fgColor:white
+# visual-style 6 5 nummod	color:blue
+1	از	_	ADP	P	_	2	case	_	_
+2	بنی‌هاشم	_	NOUN	N_SING	Number=Sing	7	nmod	_	_
+3	هم	_	SCONJ	CON	_	7	advmod	_	_
+4	حتی	_	ADV	ADV	_	7	advmod	_	_
+5	یک	_	NUM	NUM	NumType=Card	6	nummod	_	_
+6	نفر	_	NOUN	N_SING	Number=Sing	7	nsubj	_	_
+7	حاضر	_	ADJ	ADJ	Degree=Pos	0	root	_	_
+8	به	_	ADP	P	_	9	case	_	_
+9	بیعت	_	NOUN	N_SING	Number=Sing	7	nmod	_	_
+10	با	_	ADP	P	_	11	case	_	_
+11	یزید	_	NOUN	N_SING	Number=Sing	9	nmod	_	_
+12	نشده	_	VERB	V_PP	Negative=Neg|Number=Sing|Person=3|VerbForm=Part	7	cop	_	_
+13	است	_	VERB	V_PRS	Number=Sing|Person=3|Tense=Pres	12	aux	_	_
+14	.	_	PUNCT	DELM	_	7	punct	_	_
+
+</code></pre>
+
+<pre><code class="language-conllu"># visual-style 10	bgColor:blue
+# visual-style 10	fgColor:white
+# visual-style 11	bgColor:blue
+# visual-style 11	fgColor:white
+# visual-style 11 10 nummod	color:blue
+1	مزرعه‌ای	_	NOUN	N_SING	Number=Sing	0	root	_	_
+2	که	_	SCONJ	CON	_	5	mark	_	_
+3	در	_	ADP	P	_	4	case	_	_
+4	عقیق	_	NOUN	N_SING	Number=Sing	5	nmod	_	_
+5	بود	_	VERB	V_PA	Number=Sing|Person=3|Tense=Past	1	acl:relcl	_	_
+6	و	_	CONJ	CON	_	5	cc	_	_
+7	درآمد	_	NOUN	N_SING	Number=Sing	12	nsubj	_	_
+8	آن	_	PRON	PRO	Number=Sing|PronType=Dem	7	nmod:poss	_	_
+9	سالی	_	NOUN	N_SING	Number=Sing	12	dobj	_	_
+10	هشت	_	NUM	NUM	NumType=Card	11	nummod	_	_
+11	هزار	_	NUM	NUM	NumType=Card	12	compound	_	_
+12	دینار	_	NOUN	N_SING	Number=Sing	5	conj	_	_
+13	بود	_	VERB	V_PA	Number=Sing|Person=3|Tense=Past	12	cop	_	_
+14	.	_	PUNCT	DELM	_	1	punct	_	_
+
+</code></pre>
+
+<pre><code class="language-conllu"># visual-style 3	bgColor:blue
+# visual-style 3	fgColor:white
+# visual-style 4	bgColor:blue
+# visual-style 4	fgColor:white
+# visual-style 4 3 nummod	color:blue
+1	در	_	ADP	P	_	2	case	_	_
+2	لایحه	_	NOUN	N_SING	Number=Sing	6	nmod	_	_
+3	۵	_	NUM	NUM	NumType=Card	4	nummod	_	_
+4	ساله	_	ADJ	ADJ	Degree=Pos	2	amod	_	_
+5	سوم	_	ADJ	ADJ	Degree=Pos	2	amod	_	_
+6	می‌بینیم	_	VERB	V_PRS	Number=Plur|Person=1|Tense=Pres	0	root	_	_
+7	که	_	SCONJ	CON	_	13	mark	_	_
+8	این	_	DET	DET	_	9	det	_	_
+9	اتکا	_	NOUN	N_SING	Number=Sing	13	nsubj	_	_
+10	به	_	ADP	P	_	12	case	_	_
+11	۸۵	_	NUM	NUM	NumType=Card	12	nummod	_	_
+12	درصد	_	NOUN	N_SING	Number=Sing	13	nmod	_	_
+13	رسیده	_	VERB	V_PP	Number=Sing|Person=3|VerbForm=Part	6	ccomp	_	_
+14	است	_	VERB	V_PRS	Number=Sing|Person=3|Tense=Pres	13	aux	_	_
+15	.	_	PUNCT	DELM	_	6	punct	_	_
+
+</code></pre>
 
 
 
@@ -103,6 +188,7 @@ nummod in other languages:
         root + 'lib/ext/jquery.min.js',
         root + 'lib/ext/jquery.svg.min.js',
         root + 'lib/ext/jquery.svgdom.min.js',
+        root + 'lib/ext/jquery.timeago.js',
         root + 'lib/ext/jquery-ui.min.js',
         root + 'lib/ext/waypoints.min.js',
         root + 'lib/ext/jquery.address.min.js',
@@ -134,11 +220,40 @@ nummod in other languages:
     ];
 
     var setupAccordions = function() {
-        // standard jQuery UI "accordion" element initialization
+	// preserve state in URL hash, following in part
+	// http://www.boduch.ca/2011/05/remembering-jquery-ui-accordion.html
+	var accordionChange = function(event, ui) {
+	    var context = ui.newHeader ? ui.newHeader.context : null;
+	    if (context) {
+		var languageCode = context.getAttribute('data-lc');
+		if (languageCode !== null) {
+		    window.location.hash = languageCode;
+		}
+	    }
+	}
+        // jQuery UI "accordion" element initialization
 	$(".jquery-ui-accordion").accordion({
 	    collapsible: true,
-	    active: false
+	    active: false,
+	    change: accordionChange
 	});
+	if ($(".jquery-ui-accordion").length) {
+	    var matches = window.location.hash.match(/^\#(.*)$/);
+	    console.log(matches);
+	    if (matches !== null) {
+		var languageCode = matches[1];
+		var tab = $('[data-lc="'+languageCode+'"]');
+		// the following will only work after accordion is initialized
+		var index = $('.jquery-ui-accordion div.ui-accordion-header').index(tab);
+		if (index !== -1) {
+		    $(".jquery-ui-accordion").accordion({ active: index });
+		}
+	    }
+	}
+    };
+
+    var setupTimeago = function() {
+        jQuery("time.timeago").timeago();
     };
 
     var setupTabs = function() {
@@ -162,6 +277,7 @@ nummod in other languages:
         // set up UI tabs on page
         setupTabs();
         setupAccordions();
+        setupTimeago();
 
         // mark current collection (filled in by Jekyll)
         Collections.listing['_current'] = 'fa-dep';
@@ -187,7 +303,7 @@ nummod in other languages:
 
       <div id="footer">
 	  <p class="footer-text">&copy; 2014 
-	    <a href="http://universaldependencies.github.io/docs/introduction.html#contributors" style="color:gray">Universal Dependencies contributors</a>. 
+	    <a href="http://universaldependencies.org/introduction.html#contributors" style="color:gray">Universal Dependencies contributors</a>. 
 	    Site powered by <a href="http://spyysalo.github.io/annodoc" style="color:gray">Annodoc</a> and <a href="http://brat.nlplab.org/" style="color:gray">brat</a></p>.
       </div>
     </div>

@@ -11,6 +11,7 @@
     <link rel="stylesheet" type="text/css" href="../../css/style-vis.css"/>
     <link rel="stylesheet" type="text/css" href="../../css/hint.css"/>
     <script type="text/javascript" src="../../lib/ext/head.load.min.js"></script>
+    <script type="text/javascript" src="../../lib/ext/jquery.timeago.js.js"></script>
 <!--     <link rel="shortcut icon" href="favicon.ico"/> -->
 
 
@@ -20,8 +21,8 @@
 
       <div id="hp-header">
 	
-          <span class="header-text"><a href="http://universaldependencies.github.io/docs/#language-sl">home</a></span>
-          <span class="header-text"><a href="http://universaldependencies.github.io/docs/sl/pos">sl/pos</a></span>
+          <span class="header-text"><a href="http://universaldependencies.org/#language-sl">home</a></span>
+          <span class="header-text"><a href="http://universaldependencies.org/sl/pos">sl/pos</a></span>
           <span class="header-text"><a href="https://github.com/universaldependencies/docs/edit/pages-source/_sl-pos/PUNCT.md" target="#">edit page</a></span>
           <span class="header-text"><a href="https://github.com/universaldependencies/docs/issues">issue tracker</a></span>
       </div>
@@ -61,6 +62,53 @@
 <!-- "automatic stats" -->
 
 
+
+
+
+
+
+<hr />
+
+<h2 id="treebank-statistics-udslovenian">Treebank Statistics (UD_Slovenian)</h2>
+
+<p>There are 21 <code>PUNCT</code> lemmas (0%), 21 <code>PUNCT</code> types (0%) and 18555 <code>PUNCT</code> tokens (13%).
+Out of 16 observed tags, the rank of <code>PUNCT</code> is: 14 in number of lemmas, 15 in number of types and 2 in number of tokens.</p>
+
+<p>The 10 most frequent <code>PUNCT</code> lemmas: <em>,, ., “, -, (, ), ?, », :, «</em></p>
+
+<p>The 10 most frequent <code>PUNCT</code> types:  <em>,, ., “, -, (, ), ?, », :, «</em></p>
+
+<p>The 10 most frequent ambiguous lemmas:</p>
+
+<p>The 10 most frequent ambiguous types:</p>
+
+<h2 id="morphology">Morphology</h2>
+
+<p>The form / lemma ratio of <code>PUNCT</code> is 1.000000 (the average of all parts of speech is 1.894262).</p>
+
+<p>The 1st highest number of forms (1) was observed with the lemma “!”: <em>!</em>.</p>
+
+<p>The 2nd highest number of forms (1) was observed with the lemma “””: <em>”</em>.</p>
+
+<p>The 3rd highest number of forms (1) was observed with the lemma “’”: <em>’</em>.</p>
+
+<p><code>PUNCT</code> does not occur with any features.</p>
+
+<h2 id="relations">Relations</h2>
+
+<p><code>PUNCT</code> nodes are attached to their parents using 3 different relations: <a href="">sl-dep/punct</a> (18552; 100% instances), <a href="">sl-dep/root</a> (2; 0% instances), <a href="">sl-dep/conj</a> (1; 0% instances)</p>
+
+<p>Parents of <code>PUNCT</code> nodes belong to 14 different parts of speech: <a href="">VERB</a> (12888; 69% instances), <a href="">ADJ</a> (2354; 13% instances), <a href="">NOUN</a> (2348; 13% instances), <a href="">PROPN</a> (381; 2% instances), <a href="">NUM</a> (178; 1% instances), <a href="">ADV</a> (120; 1% instances), <a href="">X</a> (114; 1% instances), <a href="">PART</a> (71; 0% instances), <a href="">PRON</a> (68; 0% instances), <a href="">INTJ</a> (20; 0% instances), <a href="">CONJ</a> (7; 0% instances), <a href="">ADP</a> (3; 0% instances), <a href="">ROOT</a> (2; 0% instances), <a href="">PUNCT</a> (1; 0% instances)</p>
+
+<p>18551 (100%) <code>PUNCT</code> nodes are leaves.</p>
+
+<p>4 (0%) <code>PUNCT</code> nodes have one child.</p>
+
+<p>The highest child degree of a <code>PUNCT</code> node is 1.</p>
+
+<p>Children of <code>PUNCT</code> nodes are attached using 3 different relations: <a href="">sl-dep/case</a> (2; 50% instances), <a href="">sl-dep/nmod</a> (1; 25% instances), <a href="">sl-dep/punct</a> (1; 25% instances)</p>
+
+<p>Children of <code>PUNCT</code> nodes belong to 3 different parts of speech: <a href="">ADP</a> (2; 50% instances), <a href="">PUNCT</a> (1; 25% instances), <a href="">X</a> (1; 25% instances)</p>
 
 
 
@@ -119,6 +167,7 @@ PUNCT in other languages:
         root + 'lib/ext/jquery.min.js',
         root + 'lib/ext/jquery.svg.min.js',
         root + 'lib/ext/jquery.svgdom.min.js',
+        root + 'lib/ext/jquery.timeago.js',
         root + 'lib/ext/jquery-ui.min.js',
         root + 'lib/ext/waypoints.min.js',
         root + 'lib/ext/jquery.address.min.js',
@@ -150,11 +199,40 @@ PUNCT in other languages:
     ];
 
     var setupAccordions = function() {
-        // standard jQuery UI "accordion" element initialization
+	// preserve state in URL hash, following in part
+	// http://www.boduch.ca/2011/05/remembering-jquery-ui-accordion.html
+	var accordionChange = function(event, ui) {
+	    var context = ui.newHeader ? ui.newHeader.context : null;
+	    if (context) {
+		var languageCode = context.getAttribute('data-lc');
+		if (languageCode !== null) {
+		    window.location.hash = languageCode;
+		}
+	    }
+	}
+        // jQuery UI "accordion" element initialization
 	$(".jquery-ui-accordion").accordion({
 	    collapsible: true,
-	    active: false
+	    active: false,
+	    change: accordionChange
 	});
+	if ($(".jquery-ui-accordion").length) {
+	    var matches = window.location.hash.match(/^\#(.*)$/);
+	    console.log(matches);
+	    if (matches !== null) {
+		var languageCode = matches[1];
+		var tab = $('[data-lc="'+languageCode+'"]');
+		// the following will only work after accordion is initialized
+		var index = $('.jquery-ui-accordion div.ui-accordion-header').index(tab);
+		if (index !== -1) {
+		    $(".jquery-ui-accordion").accordion({ active: index });
+		}
+	    }
+	}
+    };
+
+    var setupTimeago = function() {
+        jQuery("time.timeago").timeago();
     };
 
     var setupTabs = function() {
@@ -178,6 +256,7 @@ PUNCT in other languages:
         // set up UI tabs on page
         setupTabs();
         setupAccordions();
+        setupTimeago();
 
         // mark current collection (filled in by Jekyll)
         Collections.listing['_current'] = 'sl-pos';
@@ -203,7 +282,7 @@ PUNCT in other languages:
 
       <div id="footer">
 	  <p class="footer-text">&copy; 2014 
-	    <a href="http://universaldependencies.github.io/docs/introduction.html#contributors" style="color:gray">Universal Dependencies contributors</a>. 
+	    <a href="http://universaldependencies.org/introduction.html#contributors" style="color:gray">Universal Dependencies contributors</a>. 
 	    Site powered by <a href="http://spyysalo.github.io/annodoc" style="color:gray">Annodoc</a> and <a href="http://brat.nlplab.org/" style="color:gray">brat</a></p>.
       </div>
     </div>

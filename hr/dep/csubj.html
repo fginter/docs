@@ -11,6 +11,7 @@
     <link rel="stylesheet" type="text/css" href="../../css/style-vis.css"/>
     <link rel="stylesheet" type="text/css" href="../../css/hint.css"/>
     <script type="text/javascript" src="../../lib/ext/head.load.min.js"></script>
+    <script type="text/javascript" src="../../lib/ext/jquery.timeago.js.js"></script>
 <!--     <link rel="shortcut icon" href="favicon.ico"/> -->
 
 
@@ -20,8 +21,8 @@
 
       <div id="hp-header">
 	
-          <span class="header-text"><a href="http://universaldependencies.github.io/docs/#language-hr">home</a></span>
-          <span class="header-text"><a href="http://universaldependencies.github.io/docs/hr/dep">hr/dep</a></span>
+          <span class="header-text"><a href="http://universaldependencies.org/#language-hr">home</a></span>
+          <span class="header-text"><a href="http://universaldependencies.org/hr/dep">hr/dep</a></span>
           <span class="header-text"><a href="https://github.com/universaldependencies/docs/edit/pages-source/_hr-dep/csubj.md" target="#">edit page</a></span>
           <span class="header-text"><a href="https://github.com/universaldependencies/docs/issues">issue tracker</a></span>
       </div>
@@ -45,6 +46,78 @@ for <code>csubj</code>.</p>
 <!-- "automatic stats" -->
 
 
+
+
+
+
+
+<hr />
+
+<h2 id="treebank-statistics-udcroatian">Treebank Statistics (UD_Croatian)</h2>
+
+<p>This relation is universal.</p>
+
+<p>104 nodes (0%) are attached to their parents as <code>csubj</code>.</p>
+
+<p>99 instances of <code>csubj</code> (95%) are left-to-right (parent precedes child).
+Average distance between parent and child is 5.72115384615385.</p>
+
+<p>The following 17 pairs of parts of speech are connected with <code>csubj</code>: <a href="">hr-pos/VERB</a>-<a href="">hr-pos/VERB</a> (35; 34% instances), <a href="">hr-pos/ADV</a>-<a href="">hr-pos/VERB</a> (21; 20% instances), <a href="">hr-pos/ADJ</a>-<a href="">hr-pos/VERB</a> (15; 14% instances), <a href="">hr-pos/NOUN</a>-<a href="">hr-pos/VERB</a> (9; 9% instances), <a href="">hr-pos/VERB</a>-<a href="">hr-pos/ADJ</a> (7; 7% instances), <a href="">hr-pos/ADV</a>-<a href="">hr-pos/NOUN</a> (3; 3% instances), <a href="">hr-pos/ADJ</a>-<a href="">hr-pos/ADJ</a> (2; 2% instances), <a href="">hr-pos/NOUN</a>-<a href="">hr-pos/ADJ</a> (2; 2% instances), <a href="">hr-pos/VERB</a>-<a href="">hr-pos/NOUN</a> (2; 2% instances), <a href="">hr-pos/ADJ</a>-<a href="">hr-pos/AUX</a> (1; 1% instances), <a href="">hr-pos/ADJ</a>-<a href="">hr-pos/NOUN</a> (1; 1% instances), <a href="">hr-pos/ADV</a>-<a href="">hr-pos/ADJ</a> (1; 1% instances), <a href="">hr-pos/AUX</a>-<a href="">hr-pos/NOUN</a> (1; 1% instances), <a href="">hr-pos/NOUN</a>-<a href="">hr-pos/ADV</a> (1; 1% instances), <a href="">hr-pos/NOUN</a>-<a href="">hr-pos/AUX</a> (1; 1% instances), <a href="">hr-pos/PRON</a>-<a href="">hr-pos/AUX</a> (1; 1% instances), <a href="">hr-pos/PRON</a>-<a href="">hr-pos/VERB</a> (1; 1% instances).</p>
+
+<pre><code class="language-conllu"># visual-style 7	bgColor:blue
+# visual-style 7	fgColor:white
+# visual-style 1	bgColor:blue
+# visual-style 1	fgColor:white
+# visual-style 1 7 csubj	color:blue
+1	Očekuje	očekivati	VERB	_	Number=Sing|Person=3|Tense=Pres	0	root	_	_
+2	se	sebe	PRON	_	Case=Acc|Number=Sing|Reflex=Yes	1	compound	_	_
+3	kako	kako	SCONJ	_	_	7	mark	_	_
+4	će	htjeti	AUX	_	Number=Plur|Person=3|Tense=Pres	7	aux	_	_
+5	suđenja	suđenje	NOUN	_	Case=Nom|Gender=Neut|Number=Plur	7	nsubj	_	_
+6	osumnjičenima	osumnjičen	ADJ	_	Case=Dat|Degree=Pos|Gender=Masc|Number=Plur	5	nmod	_	_
+7	započeti	započeti	VERB	_	VerbForm=Inf	1	csubj	_	_
+8	sredinom	sredina	NOUN	_	Case=Ins|Gender=Fem|Number=Sing	7	nmod	_	_
+9	rujna	rujan	NOUN	_	Case=Gen|Gender=Masc|Number=Sing	8	nmod	_	_
+10	.	.	PUNCT	_	_	7	punct	_	_
+
+</code></pre>
+
+<pre><code class="language-conllu"># visual-style 3	bgColor:blue
+# visual-style 3	fgColor:white
+# visual-style 1	bgColor:blue
+# visual-style 1	fgColor:white
+# visual-style 1 3 csubj	color:blue
+1	Bolje	dobro	ADV	_	Degree=Cmp	0	root	_	_
+2	je	biti	AUX	_	Number=Sing|Person=3|Tense=Pres	1	cop	_	_
+3	zaustaviti	zaustaviti	VERB	_	VerbForm=Inf	1	csubj	_	_
+4	sukobe	sukob	NOUN	_	Case=Acc|Gender=Masc|Number=Plur	3	dobj	_	_
+5	i	i	CONJ	_	_	3	cc	_	_
+6	razviti	razviti	VERB	_	VerbForm=Inf	3	conj	_	_
+7	poslovanje	poslovanje	NOUN	_	Case=Acc|Gender=Neut|Number=Sing	6	dobj	_	_
+8	"	"	PUNCT	_	_	1	punct	_	_
+9	.	.	PUNCT	_	_	1	punct	_	_
+
+</code></pre>
+
+<pre><code class="language-conllu"># visual-style 2	bgColor:blue
+# visual-style 2	fgColor:white
+# visual-style 7	bgColor:blue
+# visual-style 7	fgColor:white
+# visual-style 7 2 csubj	color:blue
+1	"	"	PUNCT	_	_	7	punct	_	_
+2	Povlačiti	povlačiti	VERB	_	VerbForm=Inf	7	csubj	_	_
+3	paralele	paralela	NOUN	_	Case=Acc|Gender=Fem|Number=Plur	2	dobj	_	_
+4	među	među	ADP	_	Case=Ins	5	case	_	_
+5	njima	oni	PRON	_	Case=Ins|Number=Plur|Person=3|PronType=Prs	3	nmod	_	_
+6	je	biti	AUX	_	Number=Sing|Person=3|Tense=Pres	7	cop	_	_
+7	pogrešno	pogrešan	ADJ	_	Case=Nom|Degree=Pos|Gender=Neut|Number=Sing	0	root	_	_
+8	"	"	PUNCT	_	_	7	punct	_	_
+9	,	,	PUNCT	_	_	10	punct	_	_
+10	rekao	reći	VERB	_	Gender=Masc|Number=Sing|VerbForm=Part	7	parataxis	_	_
+11	je	biti	AUX	_	Number=Sing|Person=3|Tense=Pres	10	aux	_	_
+12	.	.	PUNCT	_	_	7	punct	_	_
+
+</code></pre>
 
 
 
@@ -103,6 +176,7 @@ csubj in other languages:
         root + 'lib/ext/jquery.min.js',
         root + 'lib/ext/jquery.svg.min.js',
         root + 'lib/ext/jquery.svgdom.min.js',
+        root + 'lib/ext/jquery.timeago.js',
         root + 'lib/ext/jquery-ui.min.js',
         root + 'lib/ext/waypoints.min.js',
         root + 'lib/ext/jquery.address.min.js',
@@ -134,11 +208,40 @@ csubj in other languages:
     ];
 
     var setupAccordions = function() {
-        // standard jQuery UI "accordion" element initialization
+	// preserve state in URL hash, following in part
+	// http://www.boduch.ca/2011/05/remembering-jquery-ui-accordion.html
+	var accordionChange = function(event, ui) {
+	    var context = ui.newHeader ? ui.newHeader.context : null;
+	    if (context) {
+		var languageCode = context.getAttribute('data-lc');
+		if (languageCode !== null) {
+		    window.location.hash = languageCode;
+		}
+	    }
+	}
+        // jQuery UI "accordion" element initialization
 	$(".jquery-ui-accordion").accordion({
 	    collapsible: true,
-	    active: false
+	    active: false,
+	    change: accordionChange
 	});
+	if ($(".jquery-ui-accordion").length) {
+	    var matches = window.location.hash.match(/^\#(.*)$/);
+	    console.log(matches);
+	    if (matches !== null) {
+		var languageCode = matches[1];
+		var tab = $('[data-lc="'+languageCode+'"]');
+		// the following will only work after accordion is initialized
+		var index = $('.jquery-ui-accordion div.ui-accordion-header').index(tab);
+		if (index !== -1) {
+		    $(".jquery-ui-accordion").accordion({ active: index });
+		}
+	    }
+	}
+    };
+
+    var setupTimeago = function() {
+        jQuery("time.timeago").timeago();
     };
 
     var setupTabs = function() {
@@ -162,6 +265,7 @@ csubj in other languages:
         // set up UI tabs on page
         setupTabs();
         setupAccordions();
+        setupTimeago();
 
         // mark current collection (filled in by Jekyll)
         Collections.listing['_current'] = 'hr-dep';
@@ -187,7 +291,7 @@ csubj in other languages:
 
       <div id="footer">
 	  <p class="footer-text">&copy; 2014 
-	    <a href="http://universaldependencies.github.io/docs/introduction.html#contributors" style="color:gray">Universal Dependencies contributors</a>. 
+	    <a href="http://universaldependencies.org/introduction.html#contributors" style="color:gray">Universal Dependencies contributors</a>. 
 	    Site powered by <a href="http://spyysalo.github.io/annodoc" style="color:gray">Annodoc</a> and <a href="http://brat.nlplab.org/" style="color:gray">brat</a></p>.
       </div>
     </div>

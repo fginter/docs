@@ -11,6 +11,7 @@
     <link rel="stylesheet" type="text/css" href="../../css/style-vis.css"/>
     <link rel="stylesheet" type="text/css" href="../../css/hint.css"/>
     <script type="text/javascript" src="../../lib/ext/head.load.min.js"></script>
+    <script type="text/javascript" src="../../lib/ext/jquery.timeago.js.js"></script>
 <!--     <link rel="shortcut icon" href="favicon.ico"/> -->
 
 
@@ -20,8 +21,8 @@
 
       <div id="hp-header">
 	
-          <span class="header-text"><a href="http://universaldependencies.github.io/docs/#language-sv">home</a></span>
-          <span class="header-text"><a href="http://universaldependencies.github.io/docs/sv/dep">sv/dep</a></span>
+          <span class="header-text"><a href="http://universaldependencies.org/#language-sv">home</a></span>
+          <span class="header-text"><a href="http://universaldependencies.org/sv/dep">sv/dep</a></span>
           <span class="header-text"><a href="https://github.com/universaldependencies/docs/edit/pages-source/_sv-dep/root.md" target="#">edit page</a></span>
           <span class="header-text"><a href="https://github.com/universaldependencies/docs/issues">issue tracker</a></span>
       </div>
@@ -52,6 +53,75 @@ root(ROOT, man-6)
 <!-- "automatic stats" -->
 
 
+
+
+
+
+
+<hr />
+
+<h2 id="treebank-statistics-udswedish">Treebank Statistics (UD_Swedish)</h2>
+
+<p>This relation is universal.</p>
+
+<p>6026 nodes (6%) are attached to their parents as <code>root</code>.</p>
+
+<p>6026 instances of <code>root</code> (100%) are left-to-right (parent precedes child).
+Average distance between parent and child is 5.13076667772984.</p>
+
+<p>The following 9 pairs of parts of speech are connected with <code>root</code>: <a href="">sv-pos/ROOT</a>-<a href="">sv-pos/VERB</a> (4509; 75% instances), <a href="">sv-pos/ROOT</a>-<a href="">sv-pos/NOUN</a> (864; 14% instances), <a href="">sv-pos/ROOT</a>-<a href="">sv-pos/ADJ</a> (530; 9% instances), <a href="">sv-pos/ROOT</a>-<a href="">sv-pos/PRON</a> (43; 1% instances), <a href="">sv-pos/ROOT</a>-<a href="">sv-pos/PROPN</a> (31; 1% instances), <a href="">sv-pos/ROOT</a>-<a href="">sv-pos/ADV</a> (25; 0% instances), <a href="">sv-pos/ROOT</a>-<a href="">sv-pos/NUM</a> (16; 0% instances), <a href="">sv-pos/ROOT</a>-<a href="">sv-pos/ADP</a> (6; 0% instances), <a href="">sv-pos/ROOT</a>-<a href="">sv-pos/INTJ</a> (2; 0% instances).</p>
+
+<pre><code class="language-conllu"># visual-style 4	bgColor:blue
+# visual-style 4	fgColor:white
+# visual-style 0	bgColor:blue
+# visual-style 0	fgColor:white
+# visual-style 0 4 root	color:blue
+1	'	'	PUNCT	PAD	_	4	punct	_	_
+2	Du	du	PRON	PN|UTR|SIN|DEF|SUB	Case=Nom|Definite=Def|Gender=Com|Number=Sing	4	nsubj	_	_
+3	skall	skola	AUX	VB|PRS|AKT	Mood=Ind|Tense=Pres|VerbForm=Fin|Voice=Act	4	aux	_	_
+4	lyda	lyda	VERB	VB|INF|AKT	VerbForm=Inf|Voice=Act	0	root	_	_
+5	din	du	DET	PS|UTR|SIN|DEF	Definite=Def|Gender=Com|Number=Sing|Poss=Yes	6	nmod:poss	_	_
+6	fader	far	NOUN	NN|UTR|SIN|IND|NOM	Case=Nom|Definite=Ind|Gender=Com|Number=Sing	4	dobj	_	_
+7	.	.	PUNCT	MAD	_	4	punct	_	_
+8	'	'	PUNCT	PAD	_	4	punct	_	_
+
+</code></pre>
+
+<pre><code class="language-conllu"># visual-style 2	bgColor:blue
+# visual-style 2	fgColor:white
+# visual-style 0	bgColor:blue
+# visual-style 0	fgColor:white
+# visual-style 0 2 root	color:blue
+1	En	en	DET	DT|UTR|SIN|IND	Definite=Ind|Gender=Com|Number=Sing	2	det	_	_
+2	huvudtes	huvudtes	NOUN	NN|UTR|SIN|IND|NOM	Case=Nom|Definite=Ind|Gender=Com|Number=Sing	0	root	_	_
+3	i	i	ADP	PP	_	4	case	_	_
+4	kibbutzideologin	kibbutzideologi	NOUN	NN|UTR|SIN|DEF|NOM	Case=Nom|Definite=Def|Gender=Com|Number=Sing	2	nmod	_	_
+5	är	vara	AUX	VB|PRS|AKT	Mood=Ind|Tense=Pres|VerbForm=Fin|Voice=Act	2	cop	_	_
+6	fullständig	fullständig	ADJ	JJ|POS|UTR|SIN|IND|NOM	Case=Nom|Definite=Ind|Degree=Pos|Gender=Com|Number=Sing	7	amod	_	_
+7	jämställdhet	jämställdhet	NOUN	NN|UTR|SIN|IND|NOM	Case=Nom|Definite=Ind|Gender=Com|Number=Sing	2	nsubj	_	_
+8	mellan	mellan	ADP	PP	_	9	case	_	_
+9	könen	kön	NOUN	NN|NEU|PLU|DEF|NOM	Case=Nom|Definite=Def|Gender=Neut|Number=Plur	7	nmod	_	_
+10	.	.	PUNCT	MAD	_	2	punct	_	_
+
+</code></pre>
+
+<pre><code class="language-conllu"># visual-style 1	bgColor:blue
+# visual-style 1	fgColor:white
+# visual-style 0	bgColor:blue
+# visual-style 0	fgColor:white
+# visual-style 0 1 root	color:blue
+1	Publicerad	publicera	ADJ	PC|PRF|UTR|SIN|IND|NOM	Case=Nom|Definite=Ind|Gender=Com|Number=Sing|Tense=Past|VerbForm=Part	0	root	_	_
+2	i	i	ADP	PP	_	3	case	_	_
+3	Children	Children	PROPN	PM|NOM	Case=Nom	1	nmod	_	_
+4	1958	1958	NUM	RG|NOM	Case=Nom	3	nmod	_	_
+5	,	,	PUNCT	MID	_	4	punct	_	_
+6	Vol.	Vol.	NOUN	NN|AN	_	7	nmod	_	_
+7	5	5	NUM	RG|NOM	Case=Nom	4	nmod	_	_
+8	,	,	PUNCT	MID	_	7	punct	_	_
+9	179-184	179-184	NUM	RG|NOM	Case=Nom	7	nummod	_	_
+10	.	.	PUNCT	MAD	_	1	punct	_	_
+
+</code></pre>
 
 
 
@@ -110,6 +180,7 @@ root in other languages:
         root + 'lib/ext/jquery.min.js',
         root + 'lib/ext/jquery.svg.min.js',
         root + 'lib/ext/jquery.svgdom.min.js',
+        root + 'lib/ext/jquery.timeago.js',
         root + 'lib/ext/jquery-ui.min.js',
         root + 'lib/ext/waypoints.min.js',
         root + 'lib/ext/jquery.address.min.js',
@@ -141,11 +212,40 @@ root in other languages:
     ];
 
     var setupAccordions = function() {
-        // standard jQuery UI "accordion" element initialization
+	// preserve state in URL hash, following in part
+	// http://www.boduch.ca/2011/05/remembering-jquery-ui-accordion.html
+	var accordionChange = function(event, ui) {
+	    var context = ui.newHeader ? ui.newHeader.context : null;
+	    if (context) {
+		var languageCode = context.getAttribute('data-lc');
+		if (languageCode !== null) {
+		    window.location.hash = languageCode;
+		}
+	    }
+	}
+        // jQuery UI "accordion" element initialization
 	$(".jquery-ui-accordion").accordion({
 	    collapsible: true,
-	    active: false
+	    active: false,
+	    change: accordionChange
 	});
+	if ($(".jquery-ui-accordion").length) {
+	    var matches = window.location.hash.match(/^\#(.*)$/);
+	    console.log(matches);
+	    if (matches !== null) {
+		var languageCode = matches[1];
+		var tab = $('[data-lc="'+languageCode+'"]');
+		// the following will only work after accordion is initialized
+		var index = $('.jquery-ui-accordion div.ui-accordion-header').index(tab);
+		if (index !== -1) {
+		    $(".jquery-ui-accordion").accordion({ active: index });
+		}
+	    }
+	}
+    };
+
+    var setupTimeago = function() {
+        jQuery("time.timeago").timeago();
     };
 
     var setupTabs = function() {
@@ -169,6 +269,7 @@ root in other languages:
         // set up UI tabs on page
         setupTabs();
         setupAccordions();
+        setupTimeago();
 
         // mark current collection (filled in by Jekyll)
         Collections.listing['_current'] = 'sv-dep';
@@ -194,7 +295,7 @@ root in other languages:
 
       <div id="footer">
 	  <p class="footer-text">&copy; 2014 
-	    <a href="http://universaldependencies.github.io/docs/introduction.html#contributors" style="color:gray">Universal Dependencies contributors</a>. 
+	    <a href="http://universaldependencies.org/introduction.html#contributors" style="color:gray">Universal Dependencies contributors</a>. 
 	    Site powered by <a href="http://spyysalo.github.io/annodoc" style="color:gray">Annodoc</a> and <a href="http://brat.nlplab.org/" style="color:gray">brat</a></p>.
       </div>
     </div>
