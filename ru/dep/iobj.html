@@ -44,17 +44,17 @@ argument of the verb but is not its subject or <a href="dobj">direct object</a>.
 The prototypical example is the recipient of ditransitive verbs of
 exchange:</p>
 
-<pre><code class="language-sdparse">Павел дал Петру две груши \n Pavel gave Petr two pears .
+<pre><code class="language-sdparse">Павел дал Петру две груши . \n Pavel gave Peter two pears .
 iobj(дал, Петру)
-iobj(gave, Petr)
+iobj(gave, Peter)
 </code></pre>
 
 <p>However, Russian allows other semantic roles as additional objects.
-The morphological <a href="">cs-feat/Case</a> of the objects is dictated by verb valency.</p>
+The morphological <a href="">ru-feat/Case</a> of the objects is dictated by verb valency.</p>
 
-<p>In the following Russian example, the verb takes two argumentse. One of them is direct object (patient), the other is indirect (addressee). It is parallel to how the English translation would be annotated (where there is no morphological case marking) and also to verbs of giving (consider a similar sentence, <em>he gave my daughter a class of maths</em>).</p>
+<p>In the following Russian example, the verb takes two arguments. One of them is direct object (patient), the other is indirect (addressee). It is parallel to how the English translation would be annotated (where there is no morphological case marking) and also to verbs of giving (cf. a similar sentence, <em>he gave my daughter a class of maths</em>).</p>
 
-<pre><code class="language-sdparse">Он преподает моей дочери математику. \n He teaches my daughter.Dat maths.Acc .
+<pre><code class="language-sdparse">Он преподает моей дочери математику . \n He teaches my daughter.Dat maths.Acc .
 dobj(преподает, математику)
 iobj(преподает, дочери)
 dobj(teaches, maths.Acc)
@@ -71,7 +71,7 @@ dobj(преподает, математику)
 dobj(teaches, maths)
 </code></pre>
 
-<pre><code class="language-sdparse">Он преподает студентам . \n He teaches students.
+<pre><code class="language-sdparse">Он преподает студентам . \n He teaches students .
 dobj(преподает, студентам)
 dobj(teaches, students)
 </code></pre>
@@ -80,9 +80,9 @@ dobj(teaches, students)
 Then the clausal complement is regarded as a “clausal direct object” and an object nominal will be an iobj, parallel to
 the simple ditransitive case:</p>
 
-<pre><code class="language-sdparse">Она сказала студентам, что сегодня вечером нужно учиться . \n She told students , that today evening they-needed to-study .
-iobj(говорит, студентам)
-ccomp(говорит, нужно)
+<pre><code class="language-sdparse">Она сказала студентам , что сегодня вечером нужно учиться . \n She told students , that today evening they-needed to-study .
+iobj(сказала, студентам)
+ccomp(сказала, нужно)
 iobj(told, students)
 ccomp(told, they-needed)
 </code></pre>
@@ -94,16 +94,154 @@ iobj(told, students)
 dobj(told, plan)
 </code></pre>
 
-<p>If there are two or
-more objects, one of them should be <a href="">dobj</a> and the others should be
-<code>iobj</code>. In such cases it is necessary to decide what is the
-most directly affected object <em>(patient).</em></p>
+<p>If there are two or more objects, one of them should be <a href="">dobj</a> and the others should be <code>iobj</code>. In such cases it is necessary to decide what is the most directly affected object <em>(patient)</em>, and the Accusative <a href="">ru-feat/Case</a> has priority over the Dative, Instrumental, and Genitive cases.</p>
 
 
 
 <!-- "automatic stats" -->
 
 
+
+
+
+
+
+<hr />
+
+<h2 id="treebank-statistics-udrussian">Treebank Statistics (UD_Russian)</h2>
+
+<p>This relation is universal.</p>
+
+<p>1079 nodes (1%) are attached to their parents as <code>iobj</code>.</p>
+
+<p>896 instances of <code>iobj</code> (83%) are left-to-right (parent precedes child).
+Average distance between parent and child is 2.04263206672845.</p>
+
+<p>The following 25 pairs of parts of speech are connected with <code>iobj</code>: <a href="">ru-pos/VERB</a>-<a href="">ru-pos/NOUN</a> (640; 59% instances), <a href="">ru-pos/VERB</a>-<a href="">ru-pos/PRON</a> (132; 12% instances), <a href="">ru-pos/VERB</a>-<a href="">ru-pos/PROPN</a> (98; 9% instances), <a href="">ru-pos/NOUN</a>-<a href="">ru-pos/NOUN</a> (81; 8% instances), <a href="">ru-pos/VERB</a>-<a href="">ru-pos/DET</a> (39; 4% instances), <a href="">ru-pos/ADJ</a>-<a href="">ru-pos/NOUN</a> (36; 3% instances), <a href="">ru-pos/NOUN</a>-<a href="">ru-pos/PROPN</a> (11; 1% instances), <a href="">ru-pos/VERB</a>-<a href="">ru-pos/ADJ</a> (7; 1% instances), <a href="">ru-pos/ADJ</a>-<a href="">ru-pos/DET</a> (5; 0% instances), <a href="">ru-pos/ADJ</a>-<a href="">ru-pos/PRON</a> (5; 0% instances), <a href="">ru-pos/NOUN</a>-<a href="">ru-pos/DET</a> (3; 0% instances), <a href="">ru-pos/NOUN</a>-<a href="">ru-pos/PRON</a> (3; 0% instances), <a href="">ru-pos/VERB</a>-<a href="">ru-pos/NUM</a> (3; 0% instances), <a href="">ru-pos/ADJ</a>-<a href="">ru-pos/PROPN</a> (2; 0% instances), <a href="">ru-pos/ADV</a>-<a href="">ru-pos/NOUN</a> (2; 0% instances), <a href="">ru-pos/PROPN</a>-<a href="">ru-pos/PROPN</a> (2; 0% instances), <a href="">ru-pos/VERB</a>-<a href="">ru-pos/VERB</a> (2; 0% instances), <a href="">ru-pos/ADJ</a>-<a href="">ru-pos/ADV</a> (1; 0% instances), <a href="">ru-pos/ADJ</a>-<a href="">ru-pos/NUM</a> (1; 0% instances), <a href="">ru-pos/ADJ</a>-<a href="">ru-pos/X</a> (1; 0% instances), <a href="">ru-pos/ADP</a>-<a href="">ru-pos/PRON</a> (1; 0% instances), <a href="">ru-pos/ADV</a>-<a href="">ru-pos/PROPN</a> (1; 0% instances), <a href="">ru-pos/NOUN</a>-<a href="">ru-pos/X</a> (1; 0% instances), <a href="">ru-pos/NUM</a>-<a href="">ru-pos/DET</a> (1; 0% instances), <a href="">ru-pos/VERB</a>-<a href="">ru-pos/ADP</a> (1; 0% instances).</p>
+
+<pre><code class="language-conllu"># visual-style 3	bgColor:blue
+# visual-style 3	fgColor:white
+# visual-style 5	bgColor:blue
+# visual-style 5	fgColor:white
+# visual-style 5 3 iobj	color:blue
+1	Новое	_	ADJ	JJL	Animacy=Inan|Case=Nom|Gender=Neut|Number=Sing	2	amod	_	_
+2	название	_	NOUN	NN	Animacy=Inan|Case=Nom|Gender=Neut|Number=Sing	5	nsubjpass	_	_
+3	поселению	_	NOUN	NN	Animacy=Inan|Case=Dat|Gender=Neut|Number=Sing	5	iobj	_	_
+4	было	_	VERB	VBC	Aspect=Imp|Gender=Neut|Mood=Ind|Number=Sing|Tense=Past	5	auxpass	_	_
+5	дано	_	VERB	VBNH	Animacy=Inan|Aspect=Perf|Case=Nom|Gender=Neut|Number=Sing|Tense=Past|Voice=Pass	0	root	_	_
+6	по	_	ADP	IN	_	7	case	_	_
+7	речке	_	NOUN	NN	Animacy=Inan|Case=Dat|Gender=Fem|Number=Sing	5	nmod	_	_
+8	Пивка	_	PROPN	NNP	Animacy=Inan|Case=Nom|Gender=Fem|Number=Sing	7	appos	_	_
+9	.	_	PUNCT	.	_	5	punct	_	_
+
+</code></pre>
+
+<pre><code class="language-conllu"># visual-style 3	bgColor:blue
+# visual-style 3	fgColor:white
+# visual-style 2	bgColor:blue
+# visual-style 2	fgColor:white
+# visual-style 2 3 iobj	color:blue
+1	Они	_	PRON	PRP	Case=Nom|Number=Plur|Person=3	2	nsubj	_	_
+2	сказали	_	VERB	VBC	Aspect=Perf|Mood=Ind|Number=Plur|Tense=Past	0	root	_	_
+3	мне	_	PRON	PRP	Case=Dat|Number=Sing|Person=1	2	iobj	_	_
+4	,	_	PUNCT	,	_	8	punct	_	_
+5	что	_	SCONJ	IN	_	8	mark	_	_
+6	им	_	PRON	PRP	Case=Dat|Number=Plur|Person=3	8	iobj	_	_
+7	очень	_	ADV	RB	_	8	advmod	_	_
+8	понравилось	_	VERB	VBC	Aspect=Perf|Gender=Neut|Mood=Ind|Number=Sing|Tense=Past	2	ccomp	_	_
+9	мое	_	PRON	PRP$	Case=Nom|Number=Sing|Person=1	10	det	_	_
+10	выступление	_	NOUN	NN	Animacy=Inan|Case=Nom|Gender=Neut|Number=Sing	8	nsubj	_	_
+11	.	_	PUNCT	.	_	2	punct	_	_
+
+</code></pre>
+
+<pre><code class="language-conllu"># visual-style 7	bgColor:blue
+# visual-style 7	fgColor:white
+# visual-style 6	bgColor:blue
+# visual-style 6	fgColor:white
+# visual-style 6 7 iobj	color:blue
+1	Наиболее	_	ADV	RBS	_	2	advmod	_	_
+2	известный	_	ADJ	JJL	Animacy=Inan|Case=Nom|Gender=Masc|Number=Sing	4	amod	_	_
+3	русский	_	ADJ	JJL	Animacy=Inan|Case=Nom|Gender=Masc|Number=Sing	4	amod	_	_
+4	перевод	_	NOUN	NN	Animacy=Inan|Case=Nom|Gender=Masc|Number=Sing	6	nsubjpass	_	_
+5	был	_	VERB	VBC	Aspect=Imp|Gender=Masc|Mood=Ind|Number=Sing|Tense=Past	6	auxpass	_	_
+6	сделан	_	VERB	VBNH	Animacy=Inan|Aspect=Perf|Case=Nom|Gender=Masc|Number=Sing|Tense=Past|Voice=Pass	0	root	_	_
+7	Даниилом	_	PROPN	NNP	Animacy=Anim|Case=Ins|Gender=Masc|Number=Sing	6	iobj	_	_
+8	Хармсом	_	PROPN	NNP	Animacy=Anim|Case=Ins|Gender=Masc|Number=Sing	7	name	_	_
+9	.	_	PUNCT	.	_	6	punct	_	_
+
+</code></pre>
+
+<hr />
+
+<h2 id="treebank-statistics-udrussian-syntagrus">Treebank Statistics (UD_Russian-SynTagRus)</h2>
+
+<p>This relation is universal.</p>
+
+<p>2948 nodes (0%) are attached to their parents as <code>iobj</code>.</p>
+
+<p>2474 instances of <code>iobj</code> (84%) are left-to-right (parent precedes child).
+Average distance between parent and child is 3.2432157394844.</p>
+
+<p>The following 10 pairs of parts of speech are connected with <code>iobj</code>: <a href="">ru-pos/VERB</a>-<a href="">ru-pos/NOUN</a> (2129; 72% instances), <a href="">ru-pos/NOUN</a>-<a href="">ru-pos/NOUN</a> (468; 16% instances), <a href="">ru-pos/VERB</a>-<a href="">ru-pos/PRON</a> (254; 9% instances), <a href="">ru-pos/VERB</a>-<a href="">ru-pos/SYM</a> (31; 1% instances), <a href="">ru-pos/ADJ</a>-<a href="">ru-pos/NOUN</a> (27; 1% instances), <a href="">ru-pos/ADV</a>-<a href="">ru-pos/NOUN</a> (23; 1% instances), <a href="">ru-pos/NOUN</a>-<a href="">ru-pos/PRON</a> (9; 0% instances), <a href="">ru-pos/NOUN</a>-<a href="">ru-pos/SYM</a> (5; 0% instances), <a href="">ru-pos/ADJ</a>-<a href="">ru-pos/PRON</a> (1; 0% instances), <a href="">ru-pos/ADV</a>-<a href="">ru-pos/SYM</a> (1; 0% instances).</p>
+
+<pre><code class="language-conllu"># visual-style 4	bgColor:blue
+# visual-style 4	fgColor:white
+# visual-style 6	bgColor:blue
+# visual-style 6	fgColor:white
+# visual-style 6 4 iobj	color:blue
+1	Например	НАПРИМЕР	ADV	_	Degree=Pos	6	parataxis	_	_
+2	,	,	PUNCT	,	_	1	punct	_	_
+3	для	ДЛЯ	ADP	_	_	4	case	_	_
+4	описания	ОПИСАНИЕ	NOUN	_	Animacy=Inan|Case=Gen|Gender=Neut|Number=Sing	6	iobj	_	_
+5	алгоритма	АЛГОРИТМ	NOUN	_	Animacy=Inan|Case=Gen|Gender=Masc|Number=Sing	4	dobj	_	_
+6	применяются	ПРИМЕНЯТЬ	VERB	_	Aspect=Imp|Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin|Voice=Pass	0	root	_	_
+7	блок-схемы	БЛОК-СХЕМА	NOUN	_	Animacy=Inan|Case=Nom|Gender=Fem|Number=Plur	6	nsubjpass	_	_
+8	.	.	PUNCT	.	_	6	punct	_	_
+
+</code></pre>
+
+<pre><code class="language-conllu"># visual-style 9	bgColor:blue
+# visual-style 9	fgColor:white
+# visual-style 6	bgColor:blue
+# visual-style 6	fgColor:white
+# visual-style 6 9 iobj	color:blue
+1	-	-	PUNCT	-	_	2	punct	_	_
+2	серьезных	СЕРЬЕЗНЫЙ	ADJ	_	Case=Gen|Degree=Pos|Number=Plur	3	amod	_	_
+3	задач	ЗАДАЧА	NOUN	_	Animacy=Inan|Case=Gen|Gender=Fem|Number=Plur	12	nsubj	_	_
+4	,	,	PUNCT	,	_	3	punct	_	_
+5	требующих	ТРЕБОВАТЬ	VERB	_	Aspect=Imp|Case=Gen|Number=Plur|Tense=Pres|VerbForm=Part|Voice=Act	3	amod	_	_
+6	возврата	ВОЗВРАТ	NOUN	_	Animacy=Inan|Case=Gen|Gender=Masc|Number=Sing	5	dobj	_	_
+7	грузов	ГРУЗ	NOUN	_	Animacy=Inan|Case=Gen|Gender=Masc|Number=Plur	6	dobj	_	_
+8	с	С	ADP	_	_	9	case	_	_
+9	орбиты	ОРБИТА	NOUN	_	Animacy=Inan|Case=Gen|Gender=Fem|Number=Sing	6	iobj	_	_
+10	,	,	PUNCT	,	_	9	punct	_	_
+11	-	-	PUNCT	-	_	9	punct	_	_
+12	нет	НЕТ	VERB	_	Aspect=Imp|Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	0	root	_	_
+13	;	;	PUNCT	;	_	12	punct	_	_
+
+</code></pre>
+
+<pre><code class="language-conllu"># visual-style 4	bgColor:blue
+# visual-style 4	fgColor:white
+# visual-style 5	bgColor:blue
+# visual-style 5	fgColor:white
+# visual-style 5 4 iobj	color:blue
+1	-	-	PUNCT	-	_	2	punct	_	_
+2	Что	ЧТО	PRON	_	_	5	dobj	_	_
+3	для	ДЛЯ	ADP	_	_	4	case	_	_
+4	вас	ВЫ	PRON	_	_	5	iobj	_	_
+5	значит	ЗНАЧИТЬ	VERB	_	Aspect=Imp|Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	0	root	_	_
+6	название	НАЗВАНИЕ	NOUN	_	Animacy=Inan|Case=Nom|Gender=Neut|Number=Sing	5	nsubj	_	_
+7	картины	КАРТИНА	NOUN	_	Animacy=Inan|Case=Gen|Gender=Fem|Number=Sing	6	nmod	_	_
+8	-	-	PUNCT	-	_	10	punct	_	_
+9	"	"	PUNCT	"	_	10	punct	_	_
+10	Социальная	СОЦИАЛЬНЫЙ	ADJ	_	Case=Nom|Degree=Pos|Gender=Fem|Number=Sing	11	amod	_	_
+11	сеть	СЕТЬ	NOUN	_	Animacy=Inan|Case=Nom|Gender=Fem|Number=Sing	6	parataxis	_	_
+12	"	"	PUNCT	"	_	11	punct	_	_
+13	?	?	PUNCT	?	_	5	punct	_	_
+
+</code></pre>
 
 
 

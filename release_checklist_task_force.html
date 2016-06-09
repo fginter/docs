@@ -1,0 +1,272 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en-GB" xml:lang="en-GB" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <title>UD release checklist</title>
+    <link rel="root" href=""/> <!-- for JS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/jquery-ui-redmond.css"/>
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+    <link rel="stylesheet" type="text/css" href="css/style-vis.css"/>
+    <link rel="stylesheet" type="text/css" href="css/hint.css"/>
+    <script type="text/javascript" src="lib/ext/head.load.min.js"></script>
+    <script type="text/javascript" src="lib/ext/jquery.timeago.js.js"></script>
+<!--     <link rel="shortcut icon" href="favicon.ico"/> -->
+
+
+  </head>
+  <body>
+    <div id="main" class="center">
+
+      <div id="hp-header">
+	
+          <span class="header-text"><a href="http://universaldependencies.org/#language-">home</a></span>
+
+          <span class="header-text"><a href="https://github.com/universaldependencies/docs/edit/pages-source/release_checklist_task_force.md" target="#">edit page</a></span>
+          <span class="header-text"><a href="https://github.com/universaldependencies/docs/issues">issue tracker</a></span>
+      </div>
+
+      <hr/>
+
+      <div id="content">
+	<noscript>
+	  <div id="noscript">
+	    It appears that you have Javascript disabled.
+	    Please consider enabling Javascript for this page to see the visualizations.
+	  </div>
+	</noscript>
+
+          <h1 id="ud-release-checklist-for-the-task-force">UD release checklist for the task force</h1>
+
+<p>This checklist describes the steps needed in order to release a new version of the UD data.
+It is meant for the maintenance task force rather than individual treebank teams.
+See <a href="release_checklist.html">here</a> for the checklist for data contributors.</p>
+
+<ul>
+  <li>Make sure that you have local clones of all UD_* repositories that should be released.
+This step cannot be automated (unless you write a script that queries Github about all repositories belonging to the UniversalDependencies organization).</li>
+  <li>Make sure you have the most current content of all the repositories (note that this command assumes you have not modified your local copy of the data without pushing it back; if this is the case, you will see lists of modified files in the output and you will have to resolve it):<br />
+<code>for i in UD_* ; do pushd $i ; git pull --no-edit ; popd ; echo ; done</code></li>
+  <li>NEW in UD 1.3: some languages have the new data in <code>dev</code> branch. After this release, all languages will have to use the
+<code>dev</code> branch. So we should create the branch in repositories that do not have it.<br />
+<code>for i in UD_* ; do pushd $i ; git pull --no-edit ; git checkout -b dev ; git checkout dev ; git push --set-upstream origin dev ; popd ; echo ; done</code></li>
+  <li>For all repositories we should make sure that the <code>dev</code> branch is checked out:<br />
+<code>for i in UD_* ; do pushd $i ; git checkout dev ; git pull --no-edit ; popd ; echo ; done</code></li>
+  <li>Make sure that all CoNLL-U files are formally valid (results of the validator are <a href="validation.html">available on-line</a> but make sure that no repository is missing there).<br />
+<code>for i in UD_* ; do pushd $i ; if [ -f *-test.conllu ] ; then for j in *.conllu ; do echo $j ; x=$(echo $j | perl -pe 'chomp; s/-ud.*//') ; ../tools/validate.py --lang $x $j ; done ; fi ; popd ; done</code></li>
+  <li>Run <code>tools/check_files.pl</code> (if there are new languages, you may need to add their codes in the source code first).
+It will visit all UD_* repositories and report any missing files, unexpected or unexpectedly named files.
+It will also collect information such as the list of contributors (we need this metadata for Lindat).</li>
+  <li>Update the list of licenses for Lindat. See the <a href="https://github.com/UniversalDependencies/LICENSE">LICENSE repository</a>.
+Send the new list to Lindat so they add it to their menu (they like to get it as a diff file against the previous license;
+they can be reached at lindat-help@ufal.mff.cuni.cz).</li>
+  <li>Update statistics in the <code>stats.xml</code> file in each repository:<br />
+<code>for i in UD_* ; do pushd $i ; ( cat *.conllu | ../tools/conllu-stats.pl &gt; stats.xml ) ; git add stats.xml ; git commit -m 'Updated statistics.' ; git push ; popd ; echo ; done</code></li>
+  <li>Run the same script again (but with different settings) and generate the long statistics that are displayed in the docs:
+This time the script is run for every language (not every treebank):<br />
+<code>for l in grc ar eu bg ca zh hr cs da nl en et fi fr gl de got el he hi hu id ga it kk la lv no cu fa pl pt ro ru sl es sv ta tr ; do perl tools/conllu-stats.pl --detailed --data . --docs docs --lang $l ; done</code></li>
+  <li>Merge the <code>dev</code> branch into <code>master</code> in every UD_* repository.
+The <code>master</code> branch should not be touched the next six months and it should have exactly the contents that was officially
+released. In fact, the individual data providers should never commit anything to the <code>master</code> branch, only to <code>dev</code> branch.
+(But we currently do not have means to enforce it. If someone commits to <code>master</code>, we will have to remove the commits from the history manually, using <code>git revert</code>.)<br />
+<code>for i in UD_* ; do pushd $i ; git checkout master ; git pull --no-edit ; git merge dev ; git push ; git checkout dev ; popd ; echo ; done</code></li>
+  <li>Create the release folder, copy there the repositories that contain .conllu data (skip empty repositories!) and erase files
+that should not be released (<code>.gitignore</code>, <code>.git</code>, <code>not-to-release</code>). The training data in UD_Czech is split to four files
+because it is too large for Github. However, it can be one file in our release, so join the files again in the release
+copy.<br />
+<code>mkdir release-1.3<br />
+cd release-1.3<br />
+mkdir ud-treebanks-v1.3<br />
+cd ud-treebanks-v1.3<br />
+for i in ../../UD_* ; do if [ -f $i/*-ud-train.conllu ] ; then echo $i ; cp -r $i . ; fi ; done<br />
+cp -r ../../UD_Czech .<br />
+cat UD_Czech/cs-ud-train-*.conllu &gt; UD_Czech/cs-ud-train.conllu<br />
+rm UD_Czech/cs-ud-train-*.conllu<br />
+rm -rf UD_*/.git* UD_*/not-to-release<br />
+cd ..<br />
+tar czf ud-treebanks-v1.3.tgz ud-treebanks-v1.3<br />
+cd ..</code></li>
+  <li>Prepare the current content of the tools repository as a separate package, also without <code>.git</code> and <code>.gitignore</code>.<br />
+<code>pushd tools ; git pull --no-edit ; popd<br />
+cd release-1.3<br />
+mkdir ud-tools-v1.3<br />
+cp -r ../tools/* ud-tools-v1.3<br />
+rm -rf ud-tools-v1.3/.git* ud-tools-v1.3/not-to-release<br />
+tar czf ud-tools-v1.3.tgz ud-tools-v1.3<br />
+cd ..</code></li>
+  <li>Prepare the current content of the docs repository as a separate package, also without <code>.git</code> and <code>.gitignore</code>. Note that this is archiving the MarkDown <em>source code</em> of the documentation. See below for archiving the corresponding HTML.<br />
+<code>pushd docs ; git checkout pages-source ; git pull --no-edit ; popd<br />
+cd release-1.3<br />
+mkdir -p ud-documentation-v1.3/markdown-source<br />
+cp -r ../docs/* ud-documentation-v1.3/markdown-source<br />
+rm -rf ud-documentation-v1.3/markdown-source/.git* ud-documentation-v1.3/markdown-source/not-to-release<br />
+cd ..</code></li>
+  <li>The surface form of documentation (i.e. the web content visible to the reader) is automatically generated in a separate Github repository. WARNING! Many folders contain generated files <code>AUX.html</code> and <code>aux.html</code> (besides <code>AUX_.html</code> and <code>aux_.html</code>). These should <em>not</em> be included in the package because that might prevent people from unpacking it in MS Windows (although some unpacking programs, like 7zip, will be able to overcome this by simply renaming the file to <code>_aux.html</code> before unpacking it). Note furthermore that we currently cannot force Jekyll (the page generator) to make all hyperlinks relative in order for the pages to work well offline. Many hyperlinks will be broken when viewing the pages, and the user will have to open individual pages from the file manager instead. However, it may still be useful to provide the HTML rendering, especially because of the embedded tree visualizations.<br />
+<code>git clone git@github.com:UniversalDependencies/universaldependencies.github.io.git<br />
+cd release-1.3<br />
+mkdir -p ud-documentation-v1.3/html<br />
+cp -r ../universaldependencies.github.io/* ud-documentation-v1.3/html<br />
+rm -rf ud-documentation-v1.3/html/.git* ud-documentation-v1.3/html/not-to-release<br />
+rm -f ud-documentation-v1.3/html/*/*/{AUX,aux}.html<br />
+tar czf ud-documentation-v1.3.tgz ud-documentation-v1.3<br />
+cd ..</code></li>
+  <li>Tag the current commit in all repositories with the tag of the current release (<code>git tag r1.3</code> for UD 1.3).
+Push the tag to Github: <code>git push origin --tags</code>.
+You may even tag a particular commit retroactively: <code>git tag -a r1.3 9fceb02</code>.
+If the repository is updated after you assigned the tag and you need to re-assign the tag to a newer commit,
+this is how you remove the tag from where it is now: <code>git tag -d r1.3</code>.
+And this is how you remove it from Github: <code>git push origin :refs/tags/r1.3</code>.<br />
+<code>for i in UD_* docs tools ; do pushd $i ; git tag r1.3 ; git push --tags ; popd ; echo ; done</code></li>
+  <li>Once the Lindat staff make the new license list available in their system, we can <a href="https://lindat.mff.cuni.cz/repository/xmlui/submit">create a new Lindat item</a> for the new version of UD.
+Note that the Lindat staff may help to automate other tasks as well.
+For example, we have an extraordinarily long list of authors. Instead of typing them on the Lindat website one-by-one, they can batch-upload the list we send them.
+Once everything is ready and we submit the item, they will review it and assign the persistent URL (handle.net) to the item;
+that is the URL that we want to publish on the UD website.
+At that moment the release is officially out and no changes to the data files are permitted (changes to metadata are possible if necessary,
+but this is done on demand only).</li>
+  <li>Update the title page of Universal Dependencies. Send out announcement to corpora@uib.no, ACL list etc.</li>
+  <li>Upload the data to the search engines (SETS, PML-TQ, Kontext etc.)</li>
+</ul>
+
+<p><small><code style="color:lightgrey">
+path=$(pwd) ;
+cd /net/data ;
+tar xzf $path/release-1.3/ud-treebanks-v1.3.tgz ;
+mv ud-treebanks-v1.3 universal-dependencies-1.3 ;
+cd $HAMLEDT ;
+perl ./populate_ud13.pl
+</code></small></p>
+
+
+      </div>
+
+<!-- support for embedded visualizations -->
+<script type="text/javascript">
+    var root = ''; // filled in by jekyll
+    head.js(
+        // External libraries
+        root + 'lib/ext/jquery.min.js',
+        root + 'lib/ext/jquery.svg.min.js',
+        root + 'lib/ext/jquery.svgdom.min.js',
+        root + 'lib/ext/jquery.timeago.js',
+        root + 'lib/ext/jquery-ui.min.js',
+        root + 'lib/ext/waypoints.min.js',
+        root + 'lib/ext/jquery.address.min.js',
+
+        // brat helper modules
+        root + 'lib/brat/configuration.js',
+        root + 'lib/brat/util.js',
+        root + 'lib/brat/annotation_log.js',
+        root + 'lib/ext/webfont.js',
+        // brat modules
+        root + 'lib/brat/dispatcher.js',
+        root + 'lib/brat/url_monitor.js',
+        root + 'lib/brat/visualizer.js',
+
+        // embedding configuration
+        root + 'lib/local/config.js',
+        // project-specific collection data
+        root + 'lib/local/collections.js',
+
+        // NOTE: non-local libraries
+        'https://spyysalo.github.io/annodoc/lib/local/annodoc.js',
+        'https://spyysalo.github.io/conllu.js/conllu.js'
+    );
+
+    var webFontURLs = [
+//        root + 'static/fonts/Astloch-Bold.ttf',
+        root + 'static/fonts/PT_Sans-Caption-Web-Regular.ttf',
+        root + 'static/fonts/Liberation_Sans-Regular.ttf'
+    ];
+
+    var setupAccordions = function() {
+	// preserve state in URL hash, following in part
+	// http://www.boduch.ca/2011/05/remembering-jquery-ui-accordion.html
+	var accordionChange = function(event, ui) {
+	    var context = ui.newHeader ? ui.newHeader.context : null;
+	    if (context) {
+		var languageCode = context.getAttribute('data-lc');
+		if (languageCode !== null) {
+		    window.location.hash = languageCode;
+		}
+	    }
+	}
+        // jQuery UI "accordion" element initialization
+	$(".jquery-ui-accordion").accordion({
+	    collapsible: true,
+	    active: false,
+	    change: accordionChange
+	});
+	if ($(".jquery-ui-accordion").length) {
+	    var matches = window.location.hash.match(/^\#(.*)$/);
+	    console.log(matches);
+	    if (matches !== null) {
+		var languageCode = matches[1];
+		var tab = $('[data-lc="'+languageCode+'"]');
+		// the following will only work after accordion is initialized
+		var index = $('.jquery-ui-accordion div.ui-accordion-header').index(tab);
+		if (index !== -1) {
+		    $(".jquery-ui-accordion").accordion({ active: index });
+		}
+	    }
+	}
+    };
+
+    var setupTimeago = function() {
+        jQuery("time.timeago").timeago();
+    };
+
+    var setupTabs = function() {
+        // standard jQuery UI "tabs" element initialization
+        $(".jquery-ui-tabs").tabs({ heightStyle: "auto" });
+
+        // use jQuery address to preserve tab state
+        // (see https://github.com/UniversalDependencies/docs/issues/65,
+        // http://stackoverflow.com/a/3330919)
+        if ($(".jquery-ui-tabs").length > 0) {
+            $.address.change(function(event){
+	        $(".jquery-ui-tabs").tabs("select", window.location.hash)
+	    });
+	    $(".jquery-ui-tabs").bind("tabsselect", function(event, ui) { 
+	        window.location.hash = ui.tab.hash;
+	    });
+        }
+    };
+
+    head.ready(function() {
+        // set up UI tabs on page
+        setupTabs();
+        setupAccordions();
+        setupTimeago();
+
+        // mark current collection (filled in by Jekyll)
+        Collections.listing['_current'] = '';
+
+	// perform all embedding and support functions
+	Annodoc.activate(Config.bratCollData, Collections.listing);
+    });
+</script>
+
+
+<!-- google analytics -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-55233688-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+
+      <div id="footer">
+	  <p class="footer-text">&copy; 2014 
+	    <a href="http://universaldependencies.org/introduction.html#contributors" style="color:gray">Universal Dependencies contributors</a>. 
+	    Site powered by <a href="http://spyysalo.github.io/annodoc" style="color:gray">Annodoc</a> and <a href="http://brat.nlplab.org/" style="color:gray">brat</a></p>.
+      </div>
+    </div>
+  </body>
+</html>

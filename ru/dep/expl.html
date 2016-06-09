@@ -1,0 +1,423 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en-GB" xml:lang="en-GB" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <title>expl</title>
+    <link rel="root" href=""/> <!-- for JS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="../../css/jquery-ui-redmond.css"/>
+    <link rel="stylesheet" type="text/css" href="../../css/style.css"/>
+    <link rel="stylesheet" type="text/css" href="../../css/style-vis.css"/>
+    <link rel="stylesheet" type="text/css" href="../../css/hint.css"/>
+    <script type="text/javascript" src="../../lib/ext/head.load.min.js"></script>
+    <script type="text/javascript" src="../../lib/ext/jquery.timeago.js.js"></script>
+<!--     <link rel="shortcut icon" href="favicon.ico"/> -->
+
+
+  </head>
+  <body>
+    <div id="main" class="center">
+
+      <div id="hp-header">
+	
+          <span class="header-text"><a href="http://universaldependencies.org/#language-ru">home</a></span>
+          <span class="header-text"><a href="http://universaldependencies.org/ru/dep">ru/dep</a></span>
+          <span class="header-text"><a href="https://github.com/universaldependencies/docs/edit/pages-source/_ru-dep/expl.md" target="#">edit page</a></span>
+          <span class="header-text"><a href="https://github.com/universaldependencies/docs/issues">issue tracker</a></span>
+      </div>
+
+      <hr/>
+
+      <div id="content">
+	<noscript>
+	  <div id="noscript">
+	    It appears that you have Javascript disabled.
+	    Please consider enabling Javascript for this page to see the visualizations.
+	  </div>
+	</noscript>
+
+          <h2><code>expl</code>: expletive: reflexive pronoun with an inherently reflexive verb</h2>
+
+<p>Reflexive pronouns (see the feature <a href="">cs-feat/Reflex</a>) usually replace objects of verbs.
+However, some verbs are inherently reflexive, i.e. the verb always occurs with a reflexive
+prounoun, and the pronoun cannot be replaced by a non-reflexive pronoun.</p>
+
+<p>With these verbs, the reflexive pronoun is attached as <code>expl</code> instead of <a href="">dobj</a>.
+(Note that the <code>expl</code> relation is first used for this purpose in the UD release 1.2,
+to increase parallelism with other languages. In the previous releases this usage of
+reflexive <em>se/si</em> was labeled <code>compound:reflex</code>.)</p>
+
+<pre><code class="language-sdparse">Martin se bojí zvířat . \n Martin REFLEX fears animals .
+expl(bojí, se)
+expl(fears, REFLEX)
+</code></pre>
+
+
+<!-- "automatic stats" -->
+
+
+
+
+
+
+
+<hr />
+
+<h2 id="treebank-statistics-udrussian">Treebank Statistics (UD_Russian)</h2>
+
+<p>This relation is universal.</p>
+
+<p>29 nodes (0%) are attached to their parents as <code>expl</code>.</p>
+
+<p>19 instances of <code>expl</code> (66%) are right-to-left (child precedes parent).
+Average distance between parent and child is 2.86206896551724.</p>
+
+<p>The following 6 pairs of parts of speech are connected with <code>expl</code>: <a href="">ru-pos/NOUN</a>-<a href="">ru-pos/DET</a> (22; 76% instances), <a href="">ru-pos/PROPN</a>-<a href="">ru-pos/DET</a> (3; 10% instances), <a href="">ru-pos/ADJ</a>-<a href="">ru-pos/DET</a> (1; 3% instances), <a href="">ru-pos/ADV</a>-<a href="">ru-pos/DET</a> (1; 3% instances), <a href="">ru-pos/NOUN</a>-<a href="">ru-pos/PRON</a> (1; 3% instances), <a href="">ru-pos/VERB</a>-<a href="">ru-pos/DET</a> (1; 3% instances).</p>
+
+<pre><code class="language-conllu"># visual-style 5	bgColor:blue
+# visual-style 5	fgColor:white
+# visual-style 3	bgColor:blue
+# visual-style 3	fgColor:white
+# visual-style 3 5 expl	color:blue
+1	Рэгги	_	X	AFX	_	3	goeswith	_	_
+2	-	_	PUNCT	-	_	3	goeswith	_	_
+3	метал	_	NOUN	NN	Animacy=Inan|Case=Nom|Gender=Masc|Number=Sing	7	nsubj	_	_
+4	--	_	PUNCT	-	_	7	punct	_	_
+5	это	_	DET	DT	Animacy=Inan|Case=Nom|Gender=Neut|Number=Sing	3	expl	_	_
+6	музыкальный	_	ADJ	JJL	Animacy=Inan|Case=Nom|Gender=Masc|Number=Sing	7	amod	_	_
+7	жанр	_	NOUN	NN	Animacy=Inan|Case=Nom|Gender=Masc|Number=Sing	0	root	_	_
+8	,	_	PUNCT	,	_	7	punct	_	_
+9	сплав	_	NOUN	NN	Animacy=Inan|Case=Nom|Gender=Masc|Number=Sing	7	conj	_	_
+10	рэгги	_	NOUN	NN	Animacy=Inan|Case=Gen|Gender=Masc|Number=Sing	9	nmod	_	_
+11	и	_	CONJ	CC	_	10	cc	_	_
+12	метала	_	NOUN	NN	Animacy=Inan|Case=Gen|Gender=Masc|Number=Sing	10	conj	_	_
+13	.	_	PUNCT	.	_	7	punct	_	_
+
+</code></pre>
+
+<pre><code class="language-conllu"># visual-style 8	bgColor:blue
+# visual-style 8	fgColor:white
+# visual-style 4	bgColor:blue
+# visual-style 4	fgColor:white
+# visual-style 4 8 expl	color:blue
+1	Пример	_	NOUN	NN	Animacy=Inan|Case=Nom|Gender=Masc|Number=Sing	9	parataxis	_	_
+2	:	_	PUNCT	:	_	1	punct	_	_
+3	VMware	_	PROPN	NNP	Animacy=Inan|Case=Nom|Gender=Masc|Number=Sing	4	nmod	_	_
+4	ESX	_	PROPN	NNP	Animacy=Inan|Case=Nom|Gender=Masc|Number=Sing	9	nsubj	_	_
+5	,	_	PUNCT	,	_	4	punct	_	_
+6	Citrix	_	PROPN	NNP	Animacy=Inan|Case=Nom|Gender=Masc|Number=Sing	4	conj	_	_
+7	XenServer	_	PROPN	NNP	Animacy=Inan|Case=Nom|Gender=Masc|Number=Sing	6	nmod	_	_
+8	Это	_	DET	DT	Animacy=Inan|Case=Nom|Gender=Neut|Number=Sing	4	expl	_	_
+9	компонент	_	NOUN	NN	Animacy=Inan|Case=Nom|Gender=Masc|Number=Sing	0	root	_	_
+10	,	_	PUNCT	,	_	11	punct	_	_
+11	работающий	_	VERB	VBNL	Animacy=Inan|Aspect=Imp|Case=Nom|Gender=Masc|Number=Sing|Tense=Pres|Voice=Act	9	acl	_	_
+12	в	_	ADP	IN	_	14	case	_	_
+13	одном	_	NUM	CD	Animacy=Inan|Case=Loc|Gender=Neut|Number=Sing	14	nummod	_	_
+14	кольце	_	NOUN	NN	Animacy=Inan|Case=Loc|Gender=Neut|Number=Sing	11	nmod	_	_
+15	с	_	ADP	IN	_	16	case	_	_
+16	ядром	_	NOUN	NN	Animacy=Inan|Case=Ins|Gender=Neut|Number=Sing	11	nmod	_	_
+17	основной	_	ADJ	JJL	Animacy=Inan|Case=Gen|Gender=Fem|Number=Sing	18	amod	_	_
+18	ОС	_	NOUN	NN	Animacy=Inan|Case=Gen|Gender=Fem|Number=Sing	16	nmod	_	_
+19	(	_	PUNCT	(	_	20	punct	_	_
+20	кольцо	_	NOUN	NN	Animacy=Inan|Case=Nom|Gender=Neut|Number=Sing	14	appos	_	_
+21	0	_	NUM	CD	Case=Nom	20	nummod	_	_
+22	)	_	PUNCT	)	_	20	punct	_	_
+23	.	_	PUNCT	.	_	9	punct	_	_
+
+</code></pre>
+
+<pre><code class="language-conllu"># visual-style 14	bgColor:blue
+# visual-style 14	fgColor:white
+# visual-style 15	bgColor:blue
+# visual-style 15	fgColor:white
+# visual-style 15 14 expl	color:blue
+1	Я	_	PRON	PRP	Case=Nom|Number=Sing|Person=1	2	nsubj	_	_
+2	за	_	ADP	IN	_	0	root	_	_
+3	возрождение	_	NOUN	NN	Animacy=Inan|Case=Acc|Gender=Neut|Number=Sing	2	nmod	_	_
+4	религиозной	_	ADJ	JJL	Animacy=Inan|Case=Gen|Gender=Fem|Number=Sing	5	amod	_	_
+5	веры	_	NOUN	NN	Animacy=Inan|Case=Gen|Gender=Fem|Number=Sing	3	nmod	_	_
+6	,	_	PUNCT	,	_	11	punct	_	_
+7	потому	_	SCONJ	IN	_	11	mark	_	_
+8	что	_	ADP	IN	_	7	mwe	_	_
+9	это	_	DET	DT	Animacy=Inan|Case=Nom|Gender=Neut|Number=Sing	11	nsubj	_	_
+10	не	_	PART	NEG	_	11	neg	_	_
+11	привнесенное	_	VERB	VBNL	Animacy=Inan|Aspect=Perf|Case=Nom|Gender=Neut|Number=Sing|Tense=Past|Voice=Pass	2	advcl	_	_
+12	извне	_	ADV	RB	_	11	advmod	_	_
+13	,	_	PUNCT	,	_	11	punct	_	_
+14	это	_	DET	DT	Animacy=Inan|Case=Nom|Gender=Neut|Number=Sing	15	expl	_	_
+15	органичное	_	ADJ	JJL	Animacy=Inan|Case=Nom|Gender=Neut|Number=Sing	11	parataxis	_	_
+16	состояние	_	NOUN	NN	Animacy=Inan|Case=Nom|Gender=Neut|Number=Sing	15	nsubj	_	_
+17	человека	_	NOUN	NN	Animacy=Anim|Case=Gen|Gender=Masc|Number=Sing	16	nmod	_	_
+18	,	_	PUNCT	,	_	20	punct	_	_
+19	которое	_	DET	WDT	Animacy=Inan|Case=Nom|Gender=Neut|Number=Sing	20	nsubj	_	_
+20	сформировано	_	VERB	VBNH	Animacy=Inan|Aspect=Perf|Case=Nom|Gender=Neut|Number=Sing|Tense=Past|Voice=Pass	16	acl:relcl	_	_
+21	в	_	ADP	IN	_	25	case	_	_
+22	течение	_	NOUN	NN	Animacy=Inan|Case=Acc|Gender=Neut|Number=Sing	25	mwe	_	_
+23	сотен	_	NOUN	NN	Animacy=Inan|Case=Gen|Number=Plur	25	nummod	_	_
+24	тысяч	_	NOUN	NN	Animacy=Inan|Case=Gen|Number=Plur	23	nummod	_	_
+25	лет	_	NOUN	NN	Animacy=Inan|Case=Gen|Number=Plur	20	nmod	_	_
+26	.	_	PUNCT	.	_	2	punct	_	_
+
+</code></pre>
+
+<hr />
+
+<h2 id="treebank-statistics-udrussian-syntagrus">Treebank Statistics (UD_Russian-SynTagRus)</h2>
+
+<p>This relation is universal.</p>
+
+<p>33 nodes (0%) are attached to their parents as <code>expl</code>.</p>
+
+<p>33 instances of <code>expl</code> (100%) are right-to-left (child precedes parent).
+Average distance between parent and child is 3.66666666666667.</p>
+
+<p>The following 5 pairs of parts of speech are connected with <code>expl</code>: <a href="">ru-pos/VERB</a>-<a href="">ru-pos/NOUN</a> (28; 85% instances), <a href="">ru-pos/ADJ</a>-<a href="">ru-pos/NOUN</a> (2; 6% instances), <a href="">ru-pos/NOUN</a>-<a href="">ru-pos/NOUN</a> (1; 3% instances), <a href="">ru-pos/SCONJ</a>-<a href="">ru-pos/NOUN</a> (1; 3% instances), <a href="">ru-pos/VERB</a>-<a href="">ru-pos/PART</a> (1; 3% instances).</p>
+
+<pre><code class="language-conllu"># visual-style 1	bgColor:blue
+# visual-style 1	fgColor:white
+# visual-style 4	bgColor:blue
+# visual-style 4	fgColor:white
+# visual-style 4 1 expl	color:blue
+1	Это	ЭТО	NOUN	_	Animacy=Inan|Case=Nom|Gender=Neut|Number=Sing	4	expl	_	_
+2	как	КАК	ADV	_	Degree=Pos	4	advmod	_	_
+3	кто	КТО	PRON	_	_	4	nsubj	_	_
+4	решит	РЕШАТЬ	VERB	_	Aspect=Perf|Mood=Ind|Number=Sing|Person=3|Tense=Fut|VerbForm=Fin|Voice=Act	0	root	_	_
+5	для	ДЛЯ	ADP	_	_	6	case	_	_
+6	себя	СЕБЯ	PRON	_	_	4	nmod	_	_
+7	,	,	PUNCT	,	_	6	punct	_	_
+8	посмотрев	СМОТРЕТЬ	VERB	_	Aspect=Perf|Tense=Past|VerbForm=Trans|Voice=Act	4	advcl	_	_
+9	фильм	ФИЛЬМ	NOUN	_	Animacy=Inan|Case=Acc|Gender=Masc|Number=Sing	8	dobj	_	_
+10	.	.	PUNCT	.	_	4	punct	_	_
+
+</code></pre>
+
+<pre><code class="language-conllu"># visual-style 9	bgColor:blue
+# visual-style 9	fgColor:white
+# visual-style 13	bgColor:blue
+# visual-style 13	fgColor:white
+# visual-style 13 9 expl	color:blue
+1	А	А	NOUN	_	Animacy=Anim|Case=Nom|Gender=Masc|Number=Sing	5	nsubj	_	_
+2	.	.	PUNCT	.	_	1	punct	_	_
+3	Улюкаев	УЛЮКАЕВ	NOUN	_	Animacy=Anim|Case=Nom|Gender=Masc|Number=Sing	1	name	_	_
+4	как-то	КАК-ТО	ADV	_	Degree=Pos	5	advmod	_	_
+5	заметил	ЗАМЕЧАТЬ	VERB	_	Aspect=Perf|Gender=Masc|Mood=Ind|Number=Sing|Tense=Past|VerbForm=Fin|Voice=Act	0	root	_	_
+6	:	:	PUNCT	:	_	5	punct	_	_
+7	"	"	PUNCT	"	_	9	punct	_	_
+8	…	…	PUNCT	…	_	9	punct	_	_
+9	это	ЭТО	NOUN	_	Animacy=Inan|Case=Nom|Gender=Neut|Number=Sing	13	expl	_	_
+10	не	НЕ	PART	_	_	11	neg	_	_
+11	мы	МЫ	PRON	_	_	13	nsubj	_	_
+12	такие	ТАКОЙ	ADJ	_	Case=Nom|Degree=Pos|Number=Plur	13	amod	_	_
+13	выдающиеся	ВЫДАЮЩИЙСЯ	ADJ	_	Case=Nom|Degree=Pos|Number=Plur	5	dobj	_	_
+14	и	И	CONJ	_	_	13	cc	_	_
+15	умные	УМНЫЙ	ADJ	_	Case=Nom|Degree=Pos|Number=Plur	13	conj	_	_
+16	.	.	PUNCT	.	_	5	punct	_	_
+
+</code></pre>
+
+<pre><code class="language-conllu"># visual-style 7	bgColor:blue
+# visual-style 7	fgColor:white
+# visual-style 8	bgColor:blue
+# visual-style 8	fgColor:white
+# visual-style 8 7 expl	color:blue
+1	Волосы	ВОЛОС	NOUN	_	Animacy=Inan|Case=Nom|Gender=Masc|Number=Plur	2	nsubj	_	_
+2	встают	ВСТАВАТЬ	VERB	_	Aspect=Imp|Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	0	root	_	_
+3	дыбом	ДЫБОМ	ADV	_	Degree=Pos	2	advmod	_	_
+4	!	!	PUNCT	!	_	3	punct	_	_
+5	"	"	PUNCT	"	_	3	punct	_	_
+6	-	-	PUNCT	-	_	3	punct	_	_
+7	это	ЭТО	NOUN	_	Animacy=Inan|Case=Nom|Gender=Neut|Number=Sing	8	expl	_	_
+8	когда	КОГДА	SCONJ	_	_	12	mark	_	_
+9	Каспаров	КАСПАРОВ	NOUN	_	Animacy=Anim|Case=Nom|Gender=Masc|Number=Sing	12	nsubj	_	_
+10	или	ИЛИ	CONJ	_	_	9	cc	_	_
+11	Карпов	КАРПОВ	NOUN	_	Animacy=Anim|Case=Nom|Gender=Masc|Number=Sing	9	conj	_	_
+12	ходили	ХОДИТЬ	VERB	_	Aspect=Imp|Mood=Ind|Number=Plur|Tense=Past|VerbForm=Fin|Voice=Act	2	advcl	_	_
+13	не	НЕ	PART	_	_	14	neg	_	_
+14	так	ТАК	ADV	_	Degree=Pos	12	advmod	_	_
+15	,	,	PUNCT	,	_	14	punct	_	_
+16	как	КАК	SCONJ	_	_	17	mark	_	_
+17	предсказывал	ПРЕДСКАЗЫВАТЬ	VERB	_	Aspect=Imp|Gender=Masc|Mood=Ind|Number=Sing|Tense=Past|VerbForm=Fin|Voice=Act	14	acl	_	_
+18	диктор	ДИКТОР	NOUN	_	Animacy=Anim|Case=Nom|Gender=Masc|Number=Sing	17	nsubj	_	_
+19	.	.	PUNCT	.	_	2	punct	_	_
+
+</code></pre>
+
+
+
+
+<!-- "in other languages" links -->
+<hr/>
+
+expl in other languages:
+
+[<a href="../../bg/dep/expl.html">bg</a>]
+
+[<a href="../../cs/dep/expl.html">cs</a>]
+
+[<a href="../../de/dep/expl.html">de</a>]
+
+[<a href="../../el/dep/expl.html">el</a>]
+
+[<a href="../../en/dep/expl.html">en</a>]
+
+[<a href="../../es/dep/expl.html">es</a>]
+
+[<a href="../../eu/dep/expl.html">eu</a>]
+
+[<a href="../../fa/dep/expl.html">fa</a>]
+
+[<a href="../../fi/dep/expl.html">fi</a>]
+
+[<a href="../../fr/dep/expl.html">fr</a>]
+
+[<a href="../../ga/dep/expl.html">ga</a>]
+
+[<a href="../../he/dep/expl.html">he</a>]
+
+[<a href="../../hu/dep/expl.html">hu</a>]
+
+[<a href="../../it/dep/expl.html">it</a>]
+
+[<a href="../../ja/dep/expl.html">ja</a>]
+
+[<a href="../../ko/dep/expl.html">ko</a>]
+
+[<a href="../../sv/dep/expl.html">sv</a>]
+
+[<a href="../../u/dep/expl.html">u</a>]
+
+
+
+
+      </div>
+
+<!-- support for embedded visualizations -->
+<script type="text/javascript">
+    var root = '../../'; // filled in by jekyll
+    head.js(
+        // External libraries
+        root + 'lib/ext/jquery.min.js',
+        root + 'lib/ext/jquery.svg.min.js',
+        root + 'lib/ext/jquery.svgdom.min.js',
+        root + 'lib/ext/jquery.timeago.js',
+        root + 'lib/ext/jquery-ui.min.js',
+        root + 'lib/ext/waypoints.min.js',
+        root + 'lib/ext/jquery.address.min.js',
+
+        // brat helper modules
+        root + 'lib/brat/configuration.js',
+        root + 'lib/brat/util.js',
+        root + 'lib/brat/annotation_log.js',
+        root + 'lib/ext/webfont.js',
+        // brat modules
+        root + 'lib/brat/dispatcher.js',
+        root + 'lib/brat/url_monitor.js',
+        root + 'lib/brat/visualizer.js',
+
+        // embedding configuration
+        root + 'lib/local/config.js',
+        // project-specific collection data
+        root + 'lib/local/collections.js',
+
+        // NOTE: non-local libraries
+        'https://spyysalo.github.io/annodoc/lib/local/annodoc.js',
+        'https://spyysalo.github.io/conllu.js/conllu.js'
+    );
+
+    var webFontURLs = [
+//        root + 'static/fonts/Astloch-Bold.ttf',
+        root + 'static/fonts/PT_Sans-Caption-Web-Regular.ttf',
+        root + 'static/fonts/Liberation_Sans-Regular.ttf'
+    ];
+
+    var setupAccordions = function() {
+	// preserve state in URL hash, following in part
+	// http://www.boduch.ca/2011/05/remembering-jquery-ui-accordion.html
+	var accordionChange = function(event, ui) {
+	    var context = ui.newHeader ? ui.newHeader.context : null;
+	    if (context) {
+		var languageCode = context.getAttribute('data-lc');
+		if (languageCode !== null) {
+		    window.location.hash = languageCode;
+		}
+	    }
+	}
+        // jQuery UI "accordion" element initialization
+	$(".jquery-ui-accordion").accordion({
+	    collapsible: true,
+	    active: false,
+	    change: accordionChange
+	});
+	if ($(".jquery-ui-accordion").length) {
+	    var matches = window.location.hash.match(/^\#(.*)$/);
+	    console.log(matches);
+	    if (matches !== null) {
+		var languageCode = matches[1];
+		var tab = $('[data-lc="'+languageCode+'"]');
+		// the following will only work after accordion is initialized
+		var index = $('.jquery-ui-accordion div.ui-accordion-header').index(tab);
+		if (index !== -1) {
+		    $(".jquery-ui-accordion").accordion({ active: index });
+		}
+	    }
+	}
+    };
+
+    var setupTimeago = function() {
+        jQuery("time.timeago").timeago();
+    };
+
+    var setupTabs = function() {
+        // standard jQuery UI "tabs" element initialization
+        $(".jquery-ui-tabs").tabs({ heightStyle: "auto" });
+
+        // use jQuery address to preserve tab state
+        // (see https://github.com/UniversalDependencies/docs/issues/65,
+        // http://stackoverflow.com/a/3330919)
+        if ($(".jquery-ui-tabs").length > 0) {
+            $.address.change(function(event){
+	        $(".jquery-ui-tabs").tabs("select", window.location.hash)
+	    });
+	    $(".jquery-ui-tabs").bind("tabsselect", function(event, ui) { 
+	        window.location.hash = ui.tab.hash;
+	    });
+        }
+    };
+
+    head.ready(function() {
+        // set up UI tabs on page
+        setupTabs();
+        setupAccordions();
+        setupTimeago();
+
+        // mark current collection (filled in by Jekyll)
+        Collections.listing['_current'] = 'ru-dep';
+
+	// perform all embedding and support functions
+	Annodoc.activate(Config.bratCollData, Collections.listing);
+    });
+</script>
+
+
+<!-- google analytics -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-55233688-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+
+      <div id="footer">
+	  <p class="footer-text">&copy; 2014 
+	    <a href="http://universaldependencies.org/introduction.html#contributors" style="color:gray">Universal Dependencies contributors</a>. 
+	    Site powered by <a href="http://spyysalo.github.io/annodoc" style="color:gray">Annodoc</a> and <a href="http://brat.nlplab.org/" style="color:gray">brat</a></p>.
+      </div>
+    </div>
+  </body>
+</html>

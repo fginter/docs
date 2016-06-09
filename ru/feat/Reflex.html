@@ -39,12 +39,81 @@
 
           <h2><code>Reflex</code>: reflexive</h2>
 
-<p>This document is a placeholder for the language-specific documentation
-for <code>Reflex</code>.</p>
+<p>Boolean feature of <a href="ru-pos/PRON">pronouns</a> or
+<a href="ru-pos/DET">determiners</a>. It tells whether the word is reflexive,
+i.e. refers to the subject of its clause.</p>
+
+<p>In Russian, reflexive pronouns do not have various functions:</p>
+
+<p>Reflexive object of a verb means that the object is the same entity as the subject:
+<em>Ян купил <b>себе</b> машину </em> = “Jan bought <b>himself</b> a car” vs.
+<em>Ян купил ему машину </em> = “Jan bought him [someone else] a car”</p>
+
+<p>Reflexive possessives indicate that the subject of the clause is the possessor:</p>
+
+<ul>
+  <li><em>Ян продал <b>свою</b> машину. </em> “Jan sold <b>his</b> [own] car.”</li>
+  <li><em>Ян продал его машину. </em> “Jan sold his [someone else’s] car.”</li>
+</ul>
+
+<h3 id="yes-it-is-reflexive"><code>Yes</code>: it is reflexive</h3>
+
+<p>Note that there is no <code>No</code> value. If the word is not reflexive, the
+<code>Reflex</code> feature will just not be mentioned in the <code>FEAT</code>
+column. (Which means that empty value has the <code>No</code> meaning.)</p>
+
+<h4 id="examples">Examples</h4>
+
+<ul>
+  <li>reflexive personal pronouns: <em>себя, себе, себя, собой, себе</em> (occurs in various cases but not in nominative; does not distinguish <a href="">Number</a>)</li>
+  <li>reflexive possessive pronoun: <em>свой</em></li>
+</ul>
 
 
 <!-- "automatic stats" -->
 
+
+
+
+
+
+<hr />
+
+<h2 id="treebank-statistics-udrussian">Treebank Statistics (UD_Russian)</h2>
+
+<p>This feature is universal.
+It occurs with 1 different values: <code>Yes</code>.</p>
+
+<p>340 tokens (0%) have a non-empty value of <code>Reflex</code>.
+24 types (0%) occur at least once with a non-empty value of <code>Reflex</code>.
+1 lemmas (0) occur at least once with a non-empty value of <code>Reflex</code>.
+The feature is used with 2 part-of-speech tags: <a href="">ru-pos/PRON</a> (338; 0% instances), <a href="">ru-pos/VERB</a> (2; 0% instances).</p>
+
+<h3 id="pron"><code>PRON</code></h3>
+
+<p>338 <a href="">ru-pos/PRON</a> tokens (19% of all <code>PRON</code> tokens) have a non-empty value of <code>Reflex</code>.</p>
+
+<p>The most frequent other feature values with which <code>PRON</code> and <code>Reflex</code> co-occurred: <tt><a href="Person.html">Person</a>=EMPTY</tt> (338; 100%), <tt><a href="Gender.html">Gender</a>=EMPTY</tt> (336; 99%), <tt><a href="Number.html">Number</a>=EMPTY</tt> (327; 97%).</p>
+
+<p><code>PRON</code> tokens may have the following values of <code>Reflex</code>:</p>
+
+<ul>
+  <li><code>Yes</code> (338; 100% of non-empty <code>Reflex</code>): <em>своей, себя, собой, свою, свой, своего, своих, свои, своё, своим</em></li>
+  <li><code>EMPTY</code> (1425): <em>его, он, их, её, она, они, что, ему, им, них</em></li>
+</ul>
+
+<h3 id="verb"><code>VERB</code></h3>
+
+<p>2 <a href="">ru-pos/VERB</a> tokens (0% of all <code>VERB</code> tokens) have a non-empty value of <code>Reflex</code>.</p>
+
+<p>The most frequent other feature values with which <code>VERB</code> and <code>Reflex</code> co-occurred: <tt><a href="Mood.html">Mood</a>=Ind</tt> (2; 100%), <tt><a href="Case.html">Case</a>=EMPTY</tt> (2; 100%), <tt><a href="Animacy.html">Animacy</a>=EMPTY</tt> (2; 100%), <tt><a href="Tense.html">Tense</a>=Past</tt> (2; 100%), <tt><a href="Person.html">Person</a>=EMPTY</tt> (2; 100%), <tt><a href="Voice.html">Voice</a>=EMPTY</tt> (2; 100%), <tt><a href="Number.html">Number</a>=Sing</tt> (2; 100%), <tt><a href="Aspect.html">Aspect</a>=Imp</tt> (2; 100%).</p>
+
+<p><code>VERB</code> tokens may have the following values of <code>Reflex</code>:</p>
+
+<ul>
+  <li><code>Yes</code> (2; 100% of non-empty <code>Reflex</code>): <em>было, отстаивал</em></li>
+  <li><code>EMPTY</code> (9434): <em>был, было, были, была, является, стал, составляет, может, находится, быть</em></li>
+</ul>
 
 
 
