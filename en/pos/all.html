@@ -1,11 +1,19 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html lang="en-GB" xml:lang="en-GB" xmlns="http://www.w3.org/1999/xhtml">
+<html lang="en-GB" xml:lang="en-GB" xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" 
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" 
+	xmlns:oliasystem="http://purl.org/olia/system.owl#"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+>
+	<!-- added xmlns attributes to /html -->
+
   <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
-    <title>POS tags</title>
+    <title about="#Concept" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" property="rdfs:label">POS tags</title>
+	    <!-- every page introduces some concepts, we introduce the concept "concept" as top-level concepts and use the title as its label -->
     <link rel="root" href=""/> <!-- for JS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"/>
     <link rel="stylesheet" type="text/css" href="../../css/jquery-ui-redmond.css"/>
     <link rel="stylesheet" type="text/css" href="../../css/style.css"/>
     <link rel="stylesheet" type="text/css" href="../../css/style-vis.css"/>
@@ -38,6 +46,8 @@
 	</noscript>
 
           <h1 id="pos-tags">POS tags</h1>
+
+<div about="#Concept" property="http://purl.org/dc/terms/language" style="visibility: hidden"></div>
 
 <table class="typeindex">
   <thead>
@@ -93,71 +103,158 @@
 
 <hr />
 
-<p><a id="al-en-pos/ADJ" class="al-dest"></a></p>
-<h2><code>ADJ</code>: adjective</h2>
+<div about="#ADJ" property="rdf:type" resource="#Concept">
+	<div property="rdf:type" resource="../../u/pos/all.html#ADJ">
+	   <div about="../../u/pos/all.html#ADJ" property="rdf:type" resource="../../u/pos/all.html#Concept" />
+	</div>
+<a id="al-en-pos/ADJ" class="al-dest" />
+
+<h2><code property="oliasystem:hasTag" lang="">ADJ</code>: <div property="rdfs:label">adjective</div></h2>
+<div property="rdfs:comment">
 
 <p>The English <code>ADJ</code> is currently precisely the union of PTB JJ, JJR, and JJS.</p>
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_en-pos/ADJ.md" target="#">edit ADJ</a></p>
 
-<p><a id="al-en-pos/ADP" class="al-dest"></a></p>
-<h2><code>ADP</code>: adposition</h2>
+</div>
+<a href="https://github.com/universaldependencies/docs/edit/pages-source/_en-pos/ADJ.md" target="#">edit ADJ</a>
+</div>
+
+<div about="#ADP" property="rdf:type" resource="#Concept">
+	<div property="rdf:type" resource="../../u/pos/all.html#ADP">
+	   <div about="../../u/pos/all.html#ADP" property="rdf:type" resource="../../u/pos/all.html#Concept" />
+	</div>
+<a id="al-en-pos/ADP" class="al-dest" />
+
+<h2><code property="oliasystem:hasTag" lang="">ADP</code>: <div property="rdfs:label">adposition</div></h2>
+<div property="rdfs:comment">
 
 <p>The English <code>ADP</code> covers the Penn Treebank RP, and a subset of uses of IN (when not a complementizer or subordinating conjunction) and TO (in old treebanks which used this for <em>to</em> even when used as a preposition).</p>
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_en-pos/ADP.md" target="#">edit ADP</a></p>
 
-<p><a id="al-en-pos/ADV" class="al-dest"></a></p>
-<h2><code>ADV</code>: adverb</h2>
+</div>
+<a href="https://github.com/universaldependencies/docs/edit/pages-source/_en-pos/ADP.md" target="#">edit ADP</a>
+</div>
+
+<div about="#ADV" property="rdf:type" resource="#Concept">
+	<div property="rdf:type" resource="../../u/pos/all.html#ADV">
+	   <div about="../../u/pos/all.html#ADV" property="rdf:type" resource="../../u/pos/all.html#Concept" />
+	</div>
+<a id="al-en-pos/ADV" class="al-dest" />
+
+<h2><code property="oliasystem:hasTag" lang="">ADV</code>: <div property="rdfs:label">adverb</div></h2>
+<div property="rdfs:comment">
 
 <p>The English <code>ADV</code> covers all uses of PTB tags RB, RBR, RBS, and WRB except the clausal negation <em>not</em> and reduced forms of it, which become <a href="">PART</a>.</p>
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_en-pos/ADV.md" target="#">edit ADV</a></p>
 
-<p><a id="al-en-pos/AUX" class="al-dest"></a></p>
-<h2><code>AUX</code>: auxiliary verb</h2>
+</div>
+<a href="https://github.com/universaldependencies/docs/edit/pages-source/_en-pos/ADV.md" target="#">edit ADV</a>
+</div>
+
+<div about="#AUX" property="rdf:type" resource="#Concept">
+	<div property="rdf:type" resource="../../u/pos/all.html#AUX">
+	   <div about="../../u/pos/all.html#AUX" property="rdf:type" resource="../../u/pos/all.html#Concept" />
+	</div>
+<a id="al-en-pos/AUX" class="al-dest" />
+
+<h2><code property="oliasystem:hasTag" lang="">AUX</code>: <div property="rdfs:label">auxiliary verb</div></h2>
+<div property="rdfs:comment">
 
 <p>The English <code>AUX</code> covers PTB MD and uses of the various verbal tags (VB, VBP, VBG, VBN, VBD, VBZ) when they are forms of <em>be</em>, <em>have</em>, <em>do</em>, and <em>get</em> when used as an auxiliary (we count passive <em>get</em> as an auxiliary).</p>
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_en-pos/AUX_.md" target="#">edit AUX</a></p>
 
-<p><a id="al-en-pos/CONJ" class="al-dest"></a></p>
-<h2><code>CONJ</code>: coordinating conjunction</h2>
+</div>
+<a href="https://github.com/universaldependencies/docs/edit/pages-source/_en-pos/AUX_.md" target="#">edit AUX</a>
+</div>
+
+<div about="#CONJ" property="rdf:type" resource="#Concept">
+	<div property="rdf:type" resource="../../u/pos/all.html#CONJ">
+	   <div about="../../u/pos/all.html#CONJ" property="rdf:type" resource="../../u/pos/all.html#Concept" />
+	</div>
+<a id="al-en-pos/CONJ" class="al-dest" />
+
+<h2><code property="oliasystem:hasTag" lang="">CONJ</code>: <div property="rdfs:label">coordinating conjunction</div></h2>
+<div property="rdfs:comment">
 
 <p>The English <code>CONJ</code> corresponds to PTB CC.</p>
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_en-pos/CONJ.md" target="#">edit CONJ</a></p>
 
-<p><a id="al-en-pos/DET" class="al-dest"></a></p>
-<h2><code>DET</code>: determiner</h2>
+</div>
+<a href="https://github.com/universaldependencies/docs/edit/pages-source/_en-pos/CONJ.md" target="#">edit CONJ</a>
+</div>
+
+<div about="#DET" property="rdf:type" resource="#Concept">
+	<div property="rdf:type" resource="../../u/pos/all.html#DET">
+	   <div about="../../u/pos/all.html#DET" property="rdf:type" resource="../../u/pos/all.html#Concept" />
+	</div>
+<a id="al-en-pos/DET" class="al-dest" />
+
+<h2><code property="oliasystem:hasTag" lang="">DET</code>: <div property="rdfs:label">determiner</div></h2>
+<div property="rdfs:comment">
 
 <p>The English <code>DET</code> covers most cases of Penn Treebank DT, PDT, WDT. However, when a Penn Treebank word with one of these tags stands alone as a noun phrase rather than modifying another word, then it becomes <code>PRON</code>.</p>
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_en-pos/DET.md" target="#">edit DET</a></p>
 
-<p><a id="al-en-pos/INTJ" class="al-dest"></a></p>
-<h2><code>INTJ</code>: interjection</h2>
+</div>
+<a href="https://github.com/universaldependencies/docs/edit/pages-source/_en-pos/DET.md" target="#">edit DET</a>
+</div>
+
+<div about="#INTJ" property="rdf:type" resource="#Concept">
+	<div property="rdf:type" resource="../../u/pos/all.html#INTJ">
+	   <div about="../../u/pos/all.html#INTJ" property="rdf:type" resource="../../u/pos/all.html#Concept" />
+	</div>
+<a id="al-en-pos/INTJ" class="al-dest" />
+
+<h2><code property="oliasystem:hasTag" lang="">INTJ</code>: <div property="rdfs:label">interjection</div></h2>
+<div property="rdfs:comment">
 
 <p>The English <code>INTJ</code> corresponds to the PTB UH.</p>
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_en-pos/INTJ.md" target="#">edit INTJ</a></p>
 
-<p><a id="al-en-pos/NOUN" class="al-dest"></a></p>
-<h2><code>NOUN</code>: noun</h2>
+</div>
+<a href="https://github.com/universaldependencies/docs/edit/pages-source/_en-pos/INTJ.md" target="#">edit INTJ</a>
+</div>
+
+<div about="#NOUN" property="rdf:type" resource="#Concept">
+	<div property="rdf:type" resource="../../u/pos/all.html#NOUN">
+	   <div about="../../u/pos/all.html#NOUN" property="rdf:type" resource="../../u/pos/all.html#Concept" />
+	</div>
+<a id="al-en-pos/NOUN" class="al-dest" />
+
+<h2><code property="oliasystem:hasTag" lang="">NOUN</code>: <div property="rdfs:label">noun</div></h2>
+<div property="rdfs:comment">
 
 <p>The English <code>NOUN</code> corresponds to all cases of PTB NN and NNS, except for %, which we retag as SYM.</p>
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_en-pos/NOUN.md" target="#">edit NOUN</a></p>
 
-<p><a id="al-en-pos/NUM" class="al-dest"></a></p>
-<h2><code>NUM</code>: numeral</h2>
+</div>
+<a href="https://github.com/universaldependencies/docs/edit/pages-source/_en-pos/NOUN.md" target="#">edit NOUN</a>
+</div>
+
+<div about="#NUM" property="rdf:type" resource="#Concept">
+	<div property="rdf:type" resource="../../u/pos/all.html#NUM">
+	   <div about="../../u/pos/all.html#NUM" property="rdf:type" resource="../../u/pos/all.html#Concept" />
+	</div>
+<a id="al-en-pos/NUM" class="al-dest" />
+
+<h2><code property="oliasystem:hasTag" lang="">NUM</code>: <div property="rdfs:label">numeral</div></h2>
+<div property="rdfs:comment">
 
 <p>The English <code>NUM</code> corresponds exactly to the PTB CD.</p>
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_en-pos/NUM.md" target="#">edit NUM</a></p>
 
-<p><a id="al-en-pos/PART" class="al-dest"></a></p>
-<h2><code>PART</code>: particle</h2>
+</div>
+<a href="https://github.com/universaldependencies/docs/edit/pages-source/_en-pos/NUM.md" target="#">edit NUM</a>
+</div>
+
+<div about="#PART" property="rdf:type" resource="#Concept">
+	<div property="rdf:type" resource="../../u/pos/all.html#PART">
+	   <div about="../../u/pos/all.html#PART" property="rdf:type" resource="../../u/pos/all.html#Concept" />
+	</div>
+<a id="al-en-pos/PART" class="al-dest" />
+
+<h2><code property="oliasystem:hasTag" lang="">PART</code>: <div property="rdfs:label">particle</div></h2>
+<div property="rdfs:comment">
 
 <p>The following English words (only) are currently being treated as <code>PART</code> in English:</p>
 
@@ -171,26 +268,53 @@
 
 <p>This covers PTB tags POS and some (old PTB style) or all uses of TO, and the subset of RB that is negation.</p>
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_en-pos/PART.md" target="#">edit PART</a></p>
 
-<p><a id="al-en-pos/PRON" class="al-dest"></a></p>
-<h2><code>PRON</code>: pronoun</h2>
+</div>
+<a href="https://github.com/universaldependencies/docs/edit/pages-source/_en-pos/PART.md" target="#">edit PART</a>
+</div>
+
+<div about="#PRON" property="rdf:type" resource="#Concept">
+	<div property="rdf:type" resource="../../u/pos/all.html#PRON">
+	   <div about="../../u/pos/all.html#PRON" property="rdf:type" resource="../../u/pos/all.html#Concept" />
+	</div>
+<a id="al-en-pos/PRON" class="al-dest" />
+
+<h2><code property="oliasystem:hasTag" lang="">PRON</code>: <div property="rdfs:label">pronoun</div></h2>
+<div property="rdfs:comment">
 
 <p><code>PRON</code> is used for English pronouns, such as <em>we</em>, <em>her</em>, <em>it</em>, <em>who</em>, and <em>that</em> when used as a relative pronoun.</p>
 
 <p>The English <code>PRON</code> corresponds to the PTB PRP, PRP$, WP, WP$, EX, and certain things that are tagged DT (question and <em>Wh</em> pronouns, such as <em>who</em>, <em>this</em>, and <em>that</em>), when they comprise a nominal by themselves rather than functioning as the determiner of a nominal head (usually a noun). (The assignment of PRP$ and WP$ to PRON might be subject to revision - they could also become DET.)</p>
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_en-pos/PRON.md" target="#">edit PRON</a></p>
 
-<p><a id="al-en-pos/PROPN" class="al-dest"></a></p>
-<h2><code>PROPN</code>: proper noun</h2>
+</div>
+<a href="https://github.com/universaldependencies/docs/edit/pages-source/_en-pos/PRON.md" target="#">edit PRON</a>
+</div>
+
+<div about="#PROPN" property="rdf:type" resource="#Concept">
+	<div property="rdf:type" resource="../../u/pos/all.html#PROPN">
+	   <div about="../../u/pos/all.html#PROPN" property="rdf:type" resource="../../u/pos/all.html#Concept" />
+	</div>
+<a id="al-en-pos/PROPN" class="al-dest" />
+
+<h2><code property="oliasystem:hasTag" lang="">PROPN</code>: <div property="rdfs:label">proper noun</div></h2>
+<div property="rdfs:comment">
 
 <p>The English <code>PROPN</code> corresponds to everything tagged NNP or NNPS in the PTB tag set. (Note that at present we make no attempt to exclude words arguably of other parts of speech which appear in proper noun phrases that the PTB tag set would tag with NNP(S). So, <em>United States</em> is United/PROPN States/PROPN.)</p>
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_en-pos/PROPN.md" target="#">edit PROPN</a></p>
 
-<p><a id="al-en-pos/PUNCT" class="al-dest"></a></p>
-<h2><code>PUNCT</code>: punctuation</h2>
+</div>
+<a href="https://github.com/universaldependencies/docs/edit/pages-source/_en-pos/PROPN.md" target="#">edit PROPN</a>
+</div>
+
+<div about="#PUNCT" property="rdf:type" resource="#Concept">
+	<div property="rdf:type" resource="../../u/pos/all.html#PUNCT">
+	   <div about="../../u/pos/all.html#PUNCT" property="rdf:type" resource="../../u/pos/all.html#Concept" />
+	</div>
+<a id="al-en-pos/PUNCT" class="al-dest" />
+
+<h2><code property="oliasystem:hasTag" lang="">PUNCT</code>: <div property="rdfs:label">punctuation</div></h2>
+<div property="rdfs:comment">
 
 <p>The English <code>PUNCT</code> covers PTB tags:</p>
 
@@ -206,10 +330,19 @@
   <li>Some uses of NFP (for lines of hyphens, asterisks or tildes)</li>
 </ul>
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_en-pos/PUNCT.md" target="#">edit PUNCT</a></p>
 
-<p><a id="al-en-pos/SCONJ" class="al-dest"></a></p>
-<h2><code>SCONJ</code>: subordinating conjunction</h2>
+</div>
+<a href="https://github.com/universaldependencies/docs/edit/pages-source/_en-pos/PUNCT.md" target="#">edit PUNCT</a>
+</div>
+
+<div about="#SCONJ" property="rdf:type" resource="#Concept">
+	<div property="rdf:type" resource="../../u/pos/all.html#SCONJ">
+	   <div about="../../u/pos/all.html#SCONJ" property="rdf:type" resource="../../u/pos/all.html#Concept" />
+	</div>
+<a id="al-en-pos/SCONJ" class="al-dest" />
+
+<h2><code property="oliasystem:hasTag" lang="">SCONJ</code>: <div property="rdfs:label">subordinating conjunction</div></h2>
+<div property="rdfs:comment">
 
 <p><code>SCONJ</code> is used for these two subclasses of subordinating conjunctions:</p>
 
@@ -222,30 +355,60 @@
 
 <p>We treat the putative relativizer use of <em>that</em> (e.g., Jespersen 1924) as a relative pronoun in modern English, so that it gets the POS tag <a href="">PRON</a>.</p>
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_en-pos/SCONJ.md" target="#">edit SCONJ</a></p>
 
-<p><a id="al-en-pos/SYM" class="al-dest"></a></p>
-<h2><code>SYM</code>: symbol</h2>
+</div>
+<a href="https://github.com/universaldependencies/docs/edit/pages-source/_en-pos/SCONJ.md" target="#">edit SCONJ</a>
+</div>
+
+<div about="#SYM" property="rdf:type" resource="#Concept">
+	<div property="rdf:type" resource="../../u/pos/all.html#SYM">
+	   <div about="../../u/pos/all.html#SYM" property="rdf:type" resource="../../u/pos/all.html#Concept" />
+	</div>
+<a id="al-en-pos/SYM" class="al-dest" />
+
+<h2><code property="oliasystem:hasTag" lang="">SYM</code>: <div property="rdfs:label">symbol</div></h2>
+<div property="rdfs:comment">
 
 <p>The English <code>SYM</code> covers PTB tags NFP (except for lines of separators, which become PUNCT), #, $, SYM, and for the percent sign (%).</p>
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_en-pos/SYM.md" target="#">edit SYM</a></p>
 
-<p><a id="al-en-pos/VERB" class="al-dest"></a></p>
-<h2><code>VERB</code>: verb</h2>
+</div>
+<a href="https://github.com/universaldependencies/docs/edit/pages-source/_en-pos/SYM.md" target="#">edit SYM</a>
+</div>
+
+<div about="#VERB" property="rdf:type" resource="#Concept">
+	<div property="rdf:type" resource="../../u/pos/all.html#VERB">
+	   <div about="../../u/pos/all.html#VERB" property="rdf:type" resource="../../u/pos/all.html#Concept" />
+	</div>
+<a id="al-en-pos/VERB" class="al-dest" />
+
+<h2><code property="oliasystem:hasTag" lang="">VERB</code>: <div property="rdfs:label">verb</div></h2>
+<div property="rdfs:comment">
 
 <p>The tag <code>VERB</code> covers PTB tags VB, VBP, VBZ, VBD, VBG, VBN, except for auxiliary verb uses of <em>be</em>, <em>have</em>, <em>do</em>, and <em>get</em>.</p>
 
 <p>(Auxiliary verbs and modals are <code>AUX</code> and the infinitive <em>to</em> is <code>PART</code>.)</p>
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_en-pos/VERB.md" target="#">edit VERB</a></p>
 
-<p><a id="al-en-pos/X" class="al-dest"></a></p>
-<h2><code>X</code>: other</h2>
+</div>
+<a href="https://github.com/universaldependencies/docs/edit/pages-source/_en-pos/VERB.md" target="#">edit VERB</a>
+</div>
+
+<div about="#X" property="rdf:type" resource="#Concept">
+	<div property="rdf:type" resource="../../u/pos/all.html#X">
+	   <div about="../../u/pos/all.html#X" property="rdf:type" resource="../../u/pos/all.html#Concept" />
+	</div>
+<a id="al-en-pos/X" class="al-dest" />
+
+<h2><code property="oliasystem:hasTag" lang="">X</code>: <div property="rdfs:label">other</div></h2>
+<div property="rdfs:comment">
 
 <p>The English tag <code>X</code> is used for the PTB tags FW, LS, XX, ADD, AFX, and GW. Some things tagged AFX would be candidates for retagging with other tags, but that has not been attempted.</p>
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_en-pos/X.md" target="#">edit X</a></p>
+
+</div>
+<a href="https://github.com/universaldependencies/docs/edit/pages-source/_en-pos/X.md" target="#">edit X</a>
+</div>
 
 
 

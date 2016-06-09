@@ -1,11 +1,19 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html lang="en-GB" xml:lang="en-GB" xmlns="http://www.w3.org/1999/xhtml">
+<html lang="en-GB" xml:lang="en-GB" xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" 
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" 
+	xmlns:oliasystem="http://purl.org/olia/system.owl#"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+>
+	<!-- added xmlns attributes to /html -->
+
   <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
-    <title>Universal POS tags</title>
+    <title about="#Concept" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" property="rdfs:label">Universal POS tags</title>
+	    <!-- every page introduces some concepts, we introduce the concept "concept" as top-level concepts and use the title as its label -->
     <link rel="root" href=""/> <!-- for JS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"/>
     <link rel="stylesheet" type="text/css" href="../../css/jquery-ui-redmond.css"/>
     <link rel="stylesheet" type="text/css" href="../../css/style.css"/>
     <link rel="stylesheet" type="text/css" href="../../css/style-vis.css"/>
@@ -97,8 +105,10 @@ use the <a href="../feat/index.html">universal features</a>.</p>
 
 <hr />
 
-<p><a id="al-u-pos/ADJ" class="al-dest"></a></p>
-<h2><code>ADJ</code>: adjective</h2>
+<div about="#ADJ" property="rdfs:subClassOf" resource="#Concept">
+<a id="al-u-pos/ADJ" class="al-dest" />
+<h2><code property="rdfs:label" lang="">ADJ</code>: <div property="rdfs:label">adjective</div></h2>
+<div property="rdfs:comment">
 
 <h3 id="definition">Definition</h3>
 
@@ -138,10 +148,15 @@ may be classified as either <a href="">VERB</a> or <code>ADJ</code>.</p>
   <li><a href="http://en.wikipedia.org/wiki/Adjective">Wikipedia</a></li>
 </ul>
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_u-pos/ADJ.md" target="#">edit ADJ</a></p>
 
-<p><a id="al-u-pos/ADP" class="al-dest"></a></p>
-<h2><code>ADP</code>: adposition</h2>
+</div>
+<a href="https://github.com/universaldependencies/docs/edit/pages-source/_u-pos/ADJ.md" target="#">edit ADJ</a>
+</div>
+
+<div about="#ADP" property="rdfs:subClassOf" resource="#Concept">
+<a id="al-u-pos/ADP" class="al-dest" />
+<h2><code property="rdfs:label" lang="">ADP</code>: <div property="rdfs:label">adposition</div></h2>
+<div property="rdfs:comment">
 
 <h3 id="definition">Definition</h3>
 
@@ -177,10 +192,15 @@ are still tagged <code>ADP</code> and not <a href="">PART</a>.</p>
   <li><a href="http://en.wikipedia.org/wiki/Preposition_and_postposition">Wikipedia</a></li>
 </ul>
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_u-pos/ADP.md" target="#">edit ADP</a></p>
 
-<p><a id="al-u-pos/ADV" class="al-dest"></a></p>
-<h2><code>ADV</code>: adverb</h2>
+</div>
+<a href="https://github.com/universaldependencies/docs/edit/pages-source/_u-pos/ADP.md" target="#">edit ADP</a>
+</div>
+
+<div about="#ADV" property="rdfs:subClassOf" resource="#Concept">
+<a id="al-u-pos/ADV" class="al-dest" />
+<h2><code property="rdfs:label" lang="">ADV</code>: <div property="rdfs:label">adverb</div></h2>
+<div property="rdfs:comment">
 
 <h3 id="definition">Definition</h3>
 
@@ -233,10 +253,15 @@ either <a href="">VERB</a> or <code>ADV</code>.</p>
   <li><a href="http://en.wikipedia.org/wiki/Adverb">Wikipedia</a></li>
 </ul>
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_u-pos/ADV.md" target="#">edit ADV</a></p>
 
-<p><a id="al-u-pos/AUX" class="al-dest"></a></p>
-<h2><code>AUX</code>: auxiliary verb</h2>
+</div>
+<a href="https://github.com/universaldependencies/docs/edit/pages-source/_u-pos/ADV.md" target="#">edit ADV</a>
+</div>
+
+<div about="#AUX" property="rdfs:subClassOf" resource="#Concept">
+<a id="al-u-pos/AUX" class="al-dest" />
+<h2><code property="rdfs:label" lang="">AUX</code>: <div property="rdfs:label">auxiliary verb</div></h2>
+<div property="rdfs:comment">
 
 <h3 id="definition">Definition</h3>
 
@@ -270,10 +295,15 @@ language-specific documentation.</p>
   <li><a href="http://en.wikipedia.org/wiki/Auxiliary_verb">Wikipedia</a></li>
 </ul>
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_u-pos/AUX_.md" target="#">edit AUX</a></p>
 
-<p><a id="al-u-pos/CONJ" class="al-dest"></a></p>
-<h2><code>CONJ</code>: coordinating conjunction</h2>
+</div>
+<a href="https://github.com/universaldependencies/docs/edit/pages-source/_u-pos/AUX_.md" target="#">edit AUX</a>
+</div>
+
+<div about="#CONJ" property="rdfs:subClassOf" resource="#Concept">
+<a id="al-u-pos/CONJ" class="al-dest" />
+<h2><code property="rdfs:label" lang="">CONJ</code>: <div property="rdfs:label">coordinating conjunction</div></h2>
+<div property="rdfs:comment">
 
 <h3 id="definition">Definition</h3>
 
@@ -298,10 +328,15 @@ expresses a semantic relationship between them.</p>
   <li><a href="http://en.wikipedia.org/wiki/Conjunction_(grammar)">Wikipedia</a></li>
 </ul>
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_u-pos/CONJ.md" target="#">edit CONJ</a></p>
 
-<p><a id="al-u-pos/DET" class="al-dest"></a></p>
-<h2><code>DET</code>: determiner</h2>
+</div>
+<a href="https://github.com/universaldependencies/docs/edit/pages-source/_u-pos/CONJ.md" target="#">edit CONJ</a>
+</div>
+
+<div about="#DET" property="rdfs:subClassOf" resource="#Concept">
+<a id="al-u-pos/DET" class="al-dest" />
+<h2><code property="rdfs:label" lang="">DET</code>: <div property="rdfs:label">determiner</div></h2>
+<div property="rdfs:comment">
 
 <h3 id="definition">Definition</h3>
 
@@ -353,10 +388,15 @@ jsem viděl včera.</em> and <code>DET</code> in <em><b>Tohle</b> auto jsem vid�
   <li><a href="http://en.wikipedia.org/wiki/Determiner">Wikipedia</a></li>
 </ul>
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_u-pos/DET.md" target="#">edit DET</a></p>
 
-<p><a id="al-u-pos/INTJ" class="al-dest"></a></p>
-<h2><code>INTJ</code>: interjection</h2>
+</div>
+<a href="https://github.com/universaldependencies/docs/edit/pages-source/_u-pos/DET.md" target="#">edit DET</a>
+</div>
+
+<div about="#INTJ" property="rdfs:subClassOf" resource="#Concept">
+<a id="al-u-pos/INTJ" class="al-dest" />
+<h2><code property="rdfs:label" lang="">INTJ</code>: <div property="rdfs:label">interjection</div></h2>
+<div property="rdfs:comment">
 
 <h3 id="definition">Definition</h3>
 
@@ -389,10 +429,15 @@ such as <em>yes</em>, <em>no</em>, <em>uhuh</em>, etc.</p>
   <li><a href="http://en.wikipedia.org/wiki/Interjection">Wikipedia</a></li>
 </ul>
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_u-pos/INTJ.md" target="#">edit INTJ</a></p>
 
-<p><a id="al-u-pos/NOUN" class="al-dest"></a></p>
-<h2><code>NOUN</code>: noun</h2>
+</div>
+<a href="https://github.com/universaldependencies/docs/edit/pages-source/_u-pos/INTJ.md" target="#">edit INTJ</a>
+</div>
+
+<div about="#NOUN" property="rdfs:subClassOf" resource="#Concept">
+<a id="al-u-pos/NOUN" class="al-dest" />
+<h2><code property="rdfs:label" lang="">NOUN</code>: <div property="rdfs:label">noun</div></h2>
+<div property="rdfs:comment">
 
 <h3 id="definition">Definition</h3>
 
@@ -423,10 +468,15 @@ and context, they may be classified as either <a href="">VERB</a> or <code>NOUN<
   <li><a href="http://en.wikipedia.org/wiki/Noun">Wikipedia</a></li>
 </ul>
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_u-pos/NOUN.md" target="#">edit NOUN</a></p>
 
-<p><a id="al-u-pos/NUM" class="al-dest"></a></p>
-<h2><code>NUM</code>: numeral</h2>
+</div>
+<a href="https://github.com/universaldependencies/docs/edit/pages-source/_u-pos/NOUN.md" target="#">edit NOUN</a>
+</div>
+
+<div about="#NUM" property="rdfs:subClassOf" resource="#Concept">
+<a id="al-u-pos/NUM" class="al-dest" />
+<h2><code property="rdfs:label" lang="">NUM</code>: <div property="rdfs:label">numeral</div></h2>
+<div property="rdfs:comment">
 
 <h3 id="definition">Definition</h3>
 
@@ -463,10 +513,15 @@ are <a href="ADJ">adjectives</a> <em>(first, second, third)</em> or <a href="ADV
   <li><a href="http://en.wikipedia.org/wiki/Numeral_%28linguistics%29">Wikipedia: Numeral</a></li>
 </ul>
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_u-pos/NUM.md" target="#">edit NUM</a></p>
 
-<p><a id="al-u-pos/PART" class="al-dest"></a></p>
-<h2><code>PART</code>: particle</h2>
+</div>
+<a href="https://github.com/universaldependencies/docs/edit/pages-source/_u-pos/NUM.md" target="#">edit NUM</a>
+</div>
+
+<div about="#PART" property="rdfs:subClassOf" resource="#Concept">
+<a id="al-u-pos/PART" class="al-dest" />
+<h2><code property="rdfs:label" lang="">PART</code>: <div property="rdfs:label">particle</div></h2>
+<div property="rdfs:comment">
 
 <h3 id="definition">Definition</h3>
 
@@ -507,10 +562,15 @@ should thus be tagged <a href="">ADP</a>.</p>
   <li><a href="http://en.wikipedia.org/wiki/Grammatical_particle">Wikipedia</a></li>
 </ul>
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_u-pos/PART.md" target="#">edit PART</a></p>
 
-<p><a id="al-u-pos/PRON" class="al-dest"></a></p>
-<h2><code>PRON</code>: pronoun</h2>
+</div>
+<a href="https://github.com/universaldependencies/docs/edit/pages-source/_u-pos/PART.md" target="#">edit PART</a>
+</div>
+
+<div about="#PRON" property="rdfs:subClassOf" resource="#Concept">
+<a id="al-u-pos/PRON" class="al-dest" />
+<h2><code property="rdfs:label" lang="">PRON</code>: <div property="rdfs:label">pronoun</div></h2>
+<div property="rdfs:comment">
 
 <h3 id="definition">Definition</h3>
 
@@ -552,10 +612,15 @@ včera.</em> and <code>DET</code> in <em><b>Tohle</b> auto jsem viděl včera.</
   <li><a href="http://en.wikipedia.org/wiki/Pronoun">Wikipedia</a></li>
 </ul>
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_u-pos/PRON.md" target="#">edit PRON</a></p>
 
-<p><a id="al-u-pos/PROPN" class="al-dest"></a></p>
-<h2><code>PROPN</code>: proper noun</h2>
+</div>
+<a href="https://github.com/universaldependencies/docs/edit/pages-source/_u-pos/PRON.md" target="#">edit PRON</a>
+</div>
+
+<div about="#PROPN" property="rdfs:subClassOf" resource="#Concept">
+<a id="al-u-pos/PROPN" class="al-dest" />
+<h2><code property="rdfs:label" lang="">PROPN</code>: <div property="rdfs:label">proper noun</div></h2>
+<div property="rdfs:comment">
 
 <h3 id="definition">Definition</h3>
 
@@ -596,10 +661,15 @@ However, if the token consists entirely of digits (like <em>7</em> in <em>Window
   <li><a href="http://en.wikipedia.org/wiki/Proper_noun">Wikipedia</a></li>
 </ul>
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_u-pos/PROPN.md" target="#">edit PROPN</a></p>
 
-<p><a id="al-u-pos/PUNCT" class="al-dest"></a></p>
-<h2><code>PUNCT</code>: punctuation</h2>
+</div>
+<a href="https://github.com/universaldependencies/docs/edit/pages-source/_u-pos/PROPN.md" target="#">edit PROPN</a>
+</div>
+
+<div about="#PUNCT" property="rdfs:subClassOf" resource="#Concept">
+<a id="al-u-pos/PUNCT" class="al-dest" />
+<h2><code property="rdfs:label" lang="">PUNCT</code>: <div property="rdfs:label">punctuation</div></h2>
+<div property="rdfs:comment">
 
 <h3 id="definition">Definition</h3>
 
@@ -623,10 +693,15 @@ used in many languages to delimit linguistic units in printed text.</p>
   <li><a href="http://en.wikipedia.org/wiki/Punctuation">Wikipedia</a></li>
 </ul>
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_u-pos/PUNCT.md" target="#">edit PUNCT</a></p>
 
-<p><a id="al-u-pos/SCONJ" class="al-dest"></a></p>
-<h2><code>SCONJ</code>: subordinating conjunction</h2>
+</div>
+<a href="https://github.com/universaldependencies/docs/edit/pages-source/_u-pos/PUNCT.md" target="#">edit PUNCT</a>
+</div>
+
+<div about="#SCONJ" property="rdfs:subClassOf" resource="#Concept">
+<a id="al-u-pos/SCONJ" class="al-dest" />
+<h2><code property="rdfs:label" lang="">SCONJ</code>: <div property="rdfs:label">subordinating conjunction</div></h2>
+<div property="rdfs:comment">
 
 <h3 id="definition">Definition</h3>
 
@@ -660,10 +735,15 @@ status of a (subordinate) clause.</p>
   <li><a href="http://en.wikipedia.org/wiki/Conjunction_(grammar)">Wikipedia</a></li>
 </ul>
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_u-pos/SCONJ.md" target="#">edit SCONJ</a></p>
 
-<p><a id="al-u-pos/SYM" class="al-dest"></a></p>
-<h2><code>SYM</code>: symbol</h2>
+</div>
+<a href="https://github.com/universaldependencies/docs/edit/pages-source/_u-pos/SCONJ.md" target="#">edit SCONJ</a>
+</div>
+
+<div about="#SYM" property="rdfs:subClassOf" resource="#Concept">
+<a id="al-u-pos/SYM" class="al-dest" />
+<h2><code property="rdfs:label" lang="">SYM</code>: <div property="rdfs:label">symbol</div></h2>
+<div property="rdfs:comment">
 
 <h3 id="definition">Definition</h3>
 
@@ -697,10 +777,15 @@ they are punctuation.</p>
   <li><em>john.doe@universal.org, http://universaldependencies.org/, 1-800-COMPANY</em></li>
 </ul>
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_u-pos/SYM.md" target="#">edit SYM</a></p>
 
-<p><a id="al-u-pos/VERB" class="al-dest"></a></p>
-<h2><code>VERB</code>: verb</h2>
+</div>
+<a href="https://github.com/universaldependencies/docs/edit/pages-source/_u-pos/SYM.md" target="#">edit SYM</a>
+</div>
+
+<div about="#VERB" property="rdfs:subClassOf" resource="#Concept">
+<a id="al-u-pos/VERB" class="al-dest" />
+<h2><code property="rdfs:label" lang="">VERB</code>: <div property="rdfs:label">verb</div></h2>
+<div property="rdfs:comment">
 
 <h3 id="definition">Definition</h3>
 
@@ -746,10 +831,15 @@ either <code>VERB</code> or <a href="">ADV</a>.</p>
   <li><a href="http://en.wikipedia.org/wiki/Verb">Wikipedia</a></li>
 </ul>
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_u-pos/VERB.md" target="#">edit VERB</a></p>
 
-<p><a id="al-u-pos/X" class="al-dest"></a></p>
-<h2><code>X</code>: other</h2>
+</div>
+<a href="https://github.com/universaldependencies/docs/edit/pages-source/_u-pos/VERB.md" target="#">edit VERB</a>
+</div>
+
+<div about="#X" property="rdfs:subClassOf" resource="#Concept">
+<a id="al-u-pos/X" class="al-dest" />
+<h2><code property="rdfs:label" lang="">X</code>: <div property="rdfs:label">other</div></h2>
+<div property="rdfs:comment">
 
 <h3 id="definition">Definition</h3>
 
@@ -770,7 +860,10 @@ part-of-speech. For example, in <em>he put on a large sombrero</em>,
   <li><em>And then he just <b>xfgh pdl jklw</b></em></li>
 </ul>
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_u-pos/X.md" target="#">edit X</a></p>
+
+</div>
+<a href="https://github.com/universaldependencies/docs/edit/pages-source/_u-pos/X.md" target="#">edit X</a>
+</div>
 
 
 
