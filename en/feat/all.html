@@ -123,7 +123,7 @@
 	</h2>
 	<div about="#Animacy" property="rdfs:comment">	
 
-This feature is not being used in English.
+<p>This feature is not being used in English.</p>
 
 
 	</div>
@@ -145,10 +145,10 @@ This feature is not being used in English.
 	</h2>
 	<div about="#Aspect" property="rdfs:comment">	
 
-This feature is not being used in English.
+<p>This feature is not being used in English.</p>
 
-In English, some [tenses](Tense) are a combination of tense and aspect. But as the aspect always depends on the tense we mark (verbs)[en-pos/VERB] only with the [tense](Tense) feature.
- 
+<p>In English, some <a href="Tense">tenses</a> are a combination of tense and aspect. But as the aspect always depends on the tense we mark (verbs)[en-pos/VERB] only with the <a href="Tense">tense</a> feature.</p>
+
 
 
 	</div>
@@ -208,31 +208,30 @@ In English, some [tenses](Tense) are a combination of tense and aspect. But as t
 	</h2>
 	<div about="#Case" property="rdfs:comment">	
 
-In English, the `Case` feature is only used for some personal [pronouns](en-pos/PRON). Pronouns can be either in the direct or oblique case.
- 
-### `Nom`: direct
+<p>In English, the <code>Case</code> feature is only used for some personal <a href="en-pos/PRON">pronouns</a>. Pronouns can be either in the direct or oblique case.</p>
 
-The following pronouns are in the direct case:
+<h3 id="nom-direct"><code>Nom</code>: direct</h3>
 
-* _I, you, he, she, it, we, they_
-  
+<p>The following pronouns are in the direct case:</p>
 
-### `Acc`: oblique
+<ul>
+  <li><em>I, you, he, she, it, we, they</em></li>
+</ul>
 
-The following pronouns are in the oblique case:
+<h3 id="acc-oblique"><code>Acc</code>: oblique</h3>
 
-* _me, you, him, her, it, us, them, myself, yourself, himself, herself, itself, ourselves, yourselves, themselves_
+<p>The following pronouns are in the oblique case:</p>
 
-Note that _you_ and _it_ can be either in the direct or oblique case. If they appear in subject 
-position, they are marked as `Nom`, while if they appear in object position or if they have a prepositional
-[case](en-dep/case) marker, they are marked as `Acc`. 
+<ul>
+  <li><em>me, you, him, her, it, us, them, myself, yourself, himself, herself, itself, ourselves, yourselves, themselves</em></li>
+</ul>
 
-Reflexive pronouns only have this feature if they are used in object position and not if they are used as intensive pronouns.
+<p>Note that <em>you</em> and <em>it</em> can be either in the direct or oblique case. If they appear in subject 
+position, they are marked as <code>Nom</code>, while if they appear in object position or if they have a prepositional
+<a href="en-dep/case">case</a> marker, they are marked as <code>Acc</code>.</p>
 
+<p>Reflexive pronouns only have this feature if they are used in object position and not if they are used as intensive pronouns.</p>
 
-
- 
- 
 
 
 	</div>
@@ -286,16 +285,19 @@ Reflexive pronouns only have this feature if they are used in object position an
 	</h2>
 	<div about="#Definite" property="rdfs:comment">	
 
-In English, the `Definite` feature is marked only on the [determiners](en-pos/DET) _the_, _a_, and _an_. 
+<p>In English, the <code>Definite</code> feature is marked only on the <a href="en-pos/DET">determiners</a> <em>the</em>, <em>a</em>, and <em>an</em>.</p>
 
-### `Ind`: indefinite
+<h3 id="ind-indefinite"><code>Ind</code>: indefinite</h3>
 
-* _a, an_
+<ul>
+  <li><em>a, an</em></li>
+</ul>
 
-### `Def`: definite
+<h3 id="def-definite"><code>Def</code>: definite</h3>
 
-* _the_
- 
+<ul>
+  <li><em>the</em></li>
+</ul>
 
 
 
@@ -400,53 +402,64 @@ In English, the `Definite` feature is marked only on the [determiners](en-pos/DE
 	</h2>
 	<div about="#Degree" property="rdfs:comment">	
 
-In English,  `Degree` is a feature of (adjectives)[en-pos/ADJ] and some (adverbs)[en-pos/ADV]. 
+<p>In English,  <code>Degree</code> is a feature of (adjectives)[en-pos/ADJ] and some (adverbs)[en-pos/ADV].</p>
 
-### `Pos`: positive, first degree
+<h3 id="pos-positive-first-degree"><code>Pos</code>: positive, first degree</h3>
 
-This is the base form that merely states a quality of something,
+<p>This is the base form that merely states a quality of something,
 without comparing it to qualities of others. Note that although this
-degree is traditionally called "positive", negative properties can be
-compared, too. All words with PTB tags `JJ` have this feature.
+degree is traditionally called “positive”, negative properties can be
+compared, too. All words with PTB tags <code>JJ</code> have this feature.</p>
 
-#### Examples
+<h4 id="examples">Examples</h4>
 
-*  _<b>young</b> woman_
+<ul>
+  <li><em><b>young</b> woman</em></li>
+</ul>
 
-Additionally, the following adverbs with PTB tag `RB` also have this feature:
+<p>Additionally, the following adverbs with PTB tag <code>RB</code> also have this feature:</p>
 
-* _hard, fast, late, long, high, easy, early, far, soon, low, close, well, badly, little_
+<ul>
+  <li><em>hard, fast, late, long, high, easy, early, far, soon, low, close, well, badly, little</em></li>
+</ul>
 
-### `Cmp`: comparative, second degree
+<h3 id="cmp-comparative-second-degree"><code>Cmp</code>: comparative, second degree</h3>
 
-The quality of one object is compared to the same quality of another
-object. All words with PTB tags `JJR` are marked with this
-feature.
+<p>The quality of one object is compared to the same quality of another
+object. All words with PTB tags <code>JJR</code> are marked with this
+feature.</p>
 
-#### Examples
+<h4 id="examples-1">Examples</h4>
 
-* _The man is <b>younger</b> than me._
+<ul>
+  <li><em>The man is <b>younger</b> than me.</em></li>
+</ul>
 
-The following adverbs with PTB tag `RBR` also have this feature:
+<p>The following adverbs with PTB tag <code>RBR</code> also have this feature:</p>
 
-* _harder, faster, later, longer, higher, easier, earlier, further, farther, sooner, lower, closer, better, worse, less, quicker, slower_
+<ul>
+  <li><em>harder, faster, later, longer, higher, easier, earlier, further, farther, sooner, lower, closer, better, worse, less, quicker, slower</em></li>
+</ul>
 
-### `Sup`: superlative, third degree
+<h3 id="sup-superlative-third-degree"><code>Sup</code>: superlative, third degree</h3>
 
-The quality of one object is compared to the same quality of all other
-objects within a set. All words with PTB tags `JJS` are marked with this
-feature.
+<p>The quality of one object is compared to the same quality of all other
+objects within a set. All words with PTB tags <code>JJS</code> are marked with this
+feature.</p>
 
-#### Examples
+<h4 id="examples-2">Examples</h4>
 
-* _This is the <b>youngest</b> woman in our team._
+<ul>
+  <li><em>This is the <b>youngest</b> woman in our team.</em></li>
+</ul>
 
-The following adverbs with PTB tag `RBS` also have this feature:
+<p>The following adverbs with PTB tag <code>RBS</code> also have this feature:</p>
 
-* _hardest, fastest, latest, longest, highest, easiest, earliest, furthest, farthest, soonest, lowest, closest, best, worst, least, quickest, slowest_
+<ul>
+  <li><em>hardest, fastest, latest, longest, highest, easiest, earliest, furthest, farthest, soonest, lowest, closest, best, worst, least, quickest, slowest</em></li>
+</ul>
 
-
-Note that most adverbs in English don't have a `Degree` feature because their sencond and third degree are constructed periphrastically using the adverbs _more_ and _most_, e.g. _more quietly_, _most seriously_. 
+<p>Note that most adverbs in English don’t have a <code>Degree</code> feature because their sencond and third degree are constructed periphrastically using the adverbs <em>more</em> and <em>most</em>, e.g. <em>more quietly</em>, <em>most seriously</em>.</p>
 
 
 	</div>
@@ -515,19 +528,25 @@ Note that most adverbs in English don't have a `Degree` feature because their se
 	</h2>
 	<div about="#Gender" property="rdfs:comment">	
 
-In English, `Gender` is marked only on 3rd-person personal [pronouns](en-pos/PRON).
+<p>In English, <code>Gender</code> is marked only on 3rd-person personal <a href="en-pos/PRON">pronouns</a>.</p>
 
-### `Masc`: masculine gender
+<h3 id="masc-masculine-gender"><code>Masc</code>: masculine gender</h3>
 
-* _he, his, him, himself_
+<ul>
+  <li><em>he, his, him, himself</em></li>
+</ul>
 
-### `Fem`: feminine gender
+<h3 id="fem-feminine-gender"><code>Fem</code>: feminine gender</h3>
 
-* _she, her, hers, herself_
+<ul>
+  <li><em>she, her, hers, herself</em></li>
+</ul>
 
-### `Neut`: neuter gender
+<h3 id="neut-neuter-gender"><code>Neut</code>: neuter gender</h3>
 
-* _it, its, itself_
+<ul>
+  <li><em>it, its, itself</em></li>
+</ul>
 
 
 	</div>
@@ -606,37 +625,43 @@ In English, `Gender` is marked only on 3rd-person personal [pronouns](en-pos/PRO
 	</h2>
 	<div about="#Mood" property="rdfs:comment">	
 
-In English, `Mood` is a feature of [finite](VerbForm) [verbs](en-pos/Verb). It is used to express modality and further subclassify finite verb forms.
+<p>In English, <code>Mood</code> is a feature of <a href="VerbForm">finite</a> <a href="en-pos/Verb">verbs</a>. It is used to express modality and further subclassify finite verb forms.</p>
 
-### `Ind`: indicative
+<h3 id="ind-indicative"><code>Ind</code>: indicative</h3>
 
-The indicative can be considered the default mood. A verb in
+<p>The indicative can be considered the default mood. A verb in
 indicative merely states that something happens, has happened or will
-happen, without adding any attitude of the speaker.
+happen, without adding any attitude of the speaker.</p>
 
-#### Examples
+<h4 id="examples">Examples</h4>
 
-* _He <b>makes</b> a sandwich._
+<ul>
+  <li><em>He <b>makes</b> a sandwich.</em></li>
+</ul>
 
-### `Imp`: imperative
+<h3 id="imp-imperative"><code>Imp</code>: imperative</h3>
 
-The speaker uses imperative to order or ask the addressee to do the
-action of the verb.
+<p>The speaker uses imperative to order or ask the addressee to do the
+action of the verb.</p>
 
-#### Examples
+<h4 id="examples-1">Examples</h4>
 
-* _<b>Make</b> a sandwich!_
+<ul>
+  <li><em><b>Make</b> a sandwich!</em></li>
+</ul>
 
-### `Sub`: subjunctive
+<h3 id="sub-subjunctive"><code>Sub</code>: subjunctive</h3>
 
-The subjunctive mood is used under certain circumstances in
+<p>The subjunctive mood is used under certain circumstances in
 subordinate clauses, typically for actions that are subjective or
-otherwise uncertain such as expressing an opinion or describing one's state of mind. It is also used to make statements contrary to fact.
+otherwise uncertain such as expressing an opinion or describing one’s state of mind. It is also used to make statements contrary to fact.</p>
 
-* _I suggest that he <b>see</b> a doctor._
-* _If I <b>were</b> rich..._
+<ul>
+  <li><em>I suggest that he <b>see</b> a doctor.</em></li>
+  <li><em>If I <b>were</b> rich…</em></li>
+</ul>
 
-(Note that there is currently no reliable way of identifying subjunctive verbs in an automatic way and therefore we currently also mark present subjunctive verbs as [infinitives](VerbForm) and past subjunctive verbs as past indicative verbs.)
+<p>(Note that there is currently no reliable way of identifying subjunctive verbs in an automatic way and therefore we currently also mark present subjunctive verbs as <a href="VerbForm">infinitives</a> and past subjunctive verbs as past indicative verbs.)</p>
 
 
 
@@ -659,7 +684,7 @@ otherwise uncertain such as expressing an opinion or describing one's state of m
 	</h2>
 	<div about="#Negative" property="rdfs:comment">	
 
-We currently don't use this feature in English.
+<p>We currently don’t use this feature in English.</p>
 
 
 	</div>
@@ -741,32 +766,37 @@ We currently don't use this feature in English.
 	</h2>
 	<div about="#NumType" property="rdfs:comment">	
 
-In English, numerical expressions such as cardinal and ordinal numbers have a `NumType` feature. 
+<p>In English, numerical expressions such as cardinal and ordinal numbers have a <code>NumType</code> feature.</p>
 
-### `Card`: cardinal number
+<h3 id="card-cardinal-number"><code>Card</code>: cardinal number</h3>
 
-Cardinal numbers with the PTB tag `CD`.
+<p>Cardinal numbers with the PTB tag <code>CD</code>.</p>
 
-#### Examples
+<h4 id="examples">Examples</h4>
 
-* _one, 11, ..._
+<ul>
+  <li><em>one, 11, …</em></li>
+</ul>
 
-### `Ord`: ordinal number
+<h3 id="ord-ordinal-number"><code>Ord</code>: ordinal number</h3>
 
-Ordinal numbers with the PTB tag `JJ`.
+<p>Ordinal numbers with the PTB tag <code>JJ</code>.</p>
 
-####Examples
+<h4 id="examples-1">Examples</h4>
 
-* _second, 23rd, ..._
+<ul>
+  <li><em>second, 23rd, …</em></li>
+</ul>
 
-(Note that our automatic feature extractor only marks written-out ordinal numbers up to _tenth_ as ordinal numbers. Ordinals expressed with digits such as _42nd_ can be arbitrarily large.)
+<p>(Note that our automatic feature extractor only marks written-out ordinal numbers up to <em>tenth</em> as ordinal numbers. Ordinals expressed with digits such as <em>42nd</em> can be arbitrarily large.)</p>
 
-### `Mult`: multiplicative numbers
+<h3 id="mult-multiplicative-numbers"><code>Mult</code>: multiplicative numbers</h3>
 
-The following adverbs with the PTB tag `RB`:
+<p>The following adverbs with the PTB tag <code>RB</code>:</p>
 
-* _once, twice_
-
+<ul>
+  <li><em>once, twice</em></li>
+</ul>
 
 
 
@@ -850,53 +880,68 @@ The following adverbs with the PTB tag `RB`:
 	</h2>
 	<div about="#Number" property="rdfs:comment">	
 
-In English, `Number` is a feature of [nouns](en-pos/NOUN) and other parts of speech that mark agreement with nouns, i.e. personal [pronouns](en-pos/PRON), [verbs](en-pos/VERB), and some [determiners](en-pos/DET). 
+<p>In English, <code>Number</code> is a feature of <a href="en-pos/NOUN">nouns</a> and other parts of speech that mark agreement with nouns, i.e. personal <a href="en-pos/PRON">pronouns</a>, <a href="en-pos/VERB">verbs</a>, and some <a href="en-pos/DET">determiners</a>.</p>
 
-### `Sing`: singular
+<h3 id="sing-singular"><code>Sing</code>: singular</h3>
 
-A singular noun denotes one person, animal or thing. Every noun with the PTB tag `NN` or `NNP` is marked with this feature.
+<p>A singular noun denotes one person, animal or thing. Every noun with the PTB tag <code>NN</code> or <code>NNP</code> is marked with this feature.</p>
 
-#### Examples:
+<h4 id="examples">Examples:</h4>
 
-* _an <b>apple</b>, a <b>train</b>_
+<ul>
+  <li><em>an <b>apple</b>, a <b>train</b></em></li>
+</ul>
 
-Pronouns that refer to a single person, an animal or a thing are also marked with this feature.
+<p>Pronouns that refer to a single person, an animal or a thing are also marked with this feature.</p>
 
-* _I, me, my, myself, he, his, him, himself, she, her, hers, herself, it, its, itself_
+<ul>
+  <li><em>I, me, my, myself, he, his, him, himself, she, her, hers, herself, it, its, itself</em></li>
+</ul>
 
-We also mark all verbs with the PTB tag `VBZ` with this feature.
+<p>We also mark all verbs with the PTB tag <code>VBZ</code> with this feature.</p>
 
-#### Examples:
+<h4 id="examples-1">Examples:</h4>
 
-* _she <b>does</b>_
-* _he <b>walks</b>_
+<ul>
+  <li><em>she <b>does</b></em></li>
+  <li><em>he <b>walks</b></em></li>
+</ul>
 
-Further, we mark inflections of `be` that can only have a singular noun or pronoun in subject position with this feature.
+<p>Further, we mark inflections of <code>be</code> that can only have a singular noun or pronoun in subject position with this feature.</p>
 
-* _am, is, was_
+<ul>
+  <li><em>am, is, was</em></li>
+</ul>
 
-Demonstrative determiners of singular nouns and demonstrative pronouns that refer to singular nouns are also marked with this feature.
+<p>Demonstrative determiners of singular nouns and demonstrative pronouns that refer to singular nouns are also marked with this feature.</p>
 
-* _this, that_
+<ul>
+  <li><em>this, that</em></li>
+</ul>
 
-### `Plur`: plural
+<h3 id="plur-plural"><code>Plur</code>: plural</h3>
 
-A plural noun denotes several persons, animals or things. Every noun with the PTB tag `NNS` or `NNPS` is marked with this feature.
+<p>A plural noun denotes several persons, animals or things. Every noun with the PTB tag <code>NNS</code> or <code>NNPS</code> is marked with this feature.</p>
 
-#### Examples:
+<h4 id="examples-2">Examples:</h4>
 
-* _several <b>apples</b>, two <b>trains</b>_
+<ul>
+  <li><em>several <b>apples</b>, two <b>trains</b></em></li>
+</ul>
 
-Pronouns that refer to a single person, an animal or a thing are also marked with this feature.
+<p>Pronouns that refer to a single person, an animal or a thing are also marked with this feature.</p>
 
-* _we, us, our, ours, ourselves, yourselves, they, them, their, theirs, themselves_
+<ul>
+  <li><em>we, us, our, ours, ourselves, yourselves, they, them, their, theirs, themselves</em></li>
+</ul>
 
-Demonstrative determiners of plural nouns and demonstrative pronouns that refer to plural nouns are also marked with this feature.
+<p>Demonstrative determiners of plural nouns and demonstrative pronouns that refer to plural nouns are also marked with this feature.</p>
 
-* _these, those_
+<ul>
+  <li><em>these, those</em></li>
+</ul>
 
-
-We currently don't mark plurale tantum or collective/mass nouns.
+<p>We currently don’t mark plurale tantum or collective/mass nouns.</p>
 
 
 	</div>
@@ -975,42 +1020,46 @@ We currently don't mark plurale tantum or collective/mass nouns.
 	</h2>
 	<div about="#Person" property="rdfs:comment">	
 
-In English, `Person` is a feature of personal and possessive [pronouns](en-pos/PRON), and of some [verbs](en-pos/VERB) to mark agreement with its subject.
+<p>In English, <code>Person</code> is a feature of personal and possessive <a href="en-pos/PRON">pronouns</a>, and of some <a href="en-pos/VERB">verbs</a> to mark agreement with its subject.</p>
 
-### `1`: first person
+<h3 id="first-person"><code>1</code>: first person</h3>
 
-In singular, the first person refers just to the speaker / author. In plural, it must include the speaker and one or more additional persons. 
+<p>In singular, the first person refers just to the speaker / author. In plural, it must include the speaker and one or more additional persons.</p>
 
-This feature is only used for pronouns and two inflections of _be_:
+<p>This feature is only used for pronouns and two inflections of <em>be</em>:</p>
 
-* _am, was_ (if _I_ is its subject)_, I, we, me, us, my, mine, our, ours, myself, ourselves_
+<ul>
+  <li><em>am, was</em> (if <em>I</em> is its subject)<em>, I, we, me, us, my, mine, our, ours, myself, ourselves</em></li>
+</ul>
 
-### `2`: second person
+<h3 id="second-person"><code>2</code>: second person</h3>
 
-In singular, the second person refers to the addressee of the utterance / text. In plural, it may mean several addressees and optionally some third persons too.
+<p>In singular, the second person refers to the addressee of the utterance / text. In plural, it may mean several addressees and optionally some third persons too.</p>
 
-This feature is only used for pronouns:
+<p>This feature is only used for pronouns:</p>
 
-* _you, your, yours, yourself, yourselves_
+<ul>
+  <li><em>you, your, yours, yourself, yourselves</em></li>
+</ul>
 
-### `3`: second person
+<h3 id="second-person-1"><code>3</code>: second person</h3>
 
-The third person refers to one or more persons that are neither speakers nor addressees.
+<p>The third person refers to one or more persons that are neither speakers nor addressees.</p>
 
-It is used for the following pronouns:
+<p>It is used for the following pronouns:</p>
 
-* _he, she, it, they, him, her, them, his, hers, their, theirs, himself, herself, itself, themselves_
+<ul>
+  <li><em>he, she, it, they, him, her, them, his, hers, their, theirs, himself, herself, itself, themselves</em></li>
+</ul>
 
-Additionally, it is used for verbs that require a third person singular subject which have the PTB tag `VBZ`.
+<p>Additionally, it is used for verbs that require a third person singular subject which have the PTB tag <code>VBZ</code>.</p>
 
-####Examples:
+<h4 id="examples">Examples:</h4>
 
-* _he <b>walks</b>_
-* _she <b>is</b>_
-
-
-
-
+<ul>
+  <li><em>he <b>walks</b></em></li>
+  <li><em>she <b>is</b></em></li>
+</ul>
 
 
 
@@ -1054,15 +1103,17 @@ Additionally, it is used for verbs that require a third person singular subject 
 	</h2>
 	<div about="#Poss" property="rdfs:comment">	
 
-In English, `Poss` is a Boolean feature of [pronouns](en-pos/PRON). It tells whether the word is possessive.
+<p>In English, <code>Poss</code> is a Boolean feature of <a href="en-pos/PRON">pronouns</a>. It tells whether the word is possessive.</p>
 
-### `Yes`: it is possesive
+<h3 id="yes-it-is-possesive"><code>Yes</code>: it is possesive</h3>
 
-The following English pronouns have this feature:
+<p>The following English pronouns have this feature:</p>
 
-* _my, mine, your, yours, his, her_ (if it has the PTB tag `PRP$`)_, hers, its, our, ours, their, theirs, whose_
+<ul>
+  <li><em>my, mine, your, yours, his, her</em> (if it has the PTB tag <code>PRP$</code>)<em>, hers, its, our, ours, their, theirs, whose</em></li>
+</ul>
 
-Note that there is no `No` value. If the word is not possessive, the `Poss` feature will just not be mentioned in the `FEAT` column.
+<p>Note that there is no <code>No</code> value. If the word is not possessive, the <code>Poss</code> feature will just not be mentioned in the <code>FEAT</code> column.</p>
 
 
 	</div>
@@ -1189,62 +1240,72 @@ Note that there is no `No` value. If the word is not possessive, the `Poss` feat
 	</h2>
 	<div about="#PronType" property="rdfs:comment">	
 
-In English, this feature applies to [pronouns](en-pos/PRON),
-[determiners](en-pos/DET) and pronominal [adverbs](u-pos/ADV).
+<p>In English, this feature applies to <a href="en-pos/PRON">pronouns</a>,
+<a href="en-pos/DET">determiners</a> and pronominal <a href="u-pos/ADV">adverbs</a>.</p>
 
-### `Prs`: personal or possessive personal pronoun or determiner
+<h3 id="prs-personal-or-possessive-personal-pronoun-or-determiner"><code>Prs</code>: personal or possessive personal pronoun or determiner</h3>
 
-See also the [Poss]() feature that distinguishes normal personal
-pronouns from possessives. Note that `Prs` also includes reflexive
-personal/possessive pronouns.
+<p>See also the <a href="">Poss</a> feature that distinguishes normal personal
+pronouns from possessives. Note that <code>Prs</code> also includes reflexive
+personal/possessive pronouns.</p>
 
-The following pronouns have this feature:
+<p>The following pronouns have this feature:</p>
 
-* _I, you, he, she, it, we, they, my, your, his, her, its, our,
-  their, mine, yours, hers, ours, theirs, me, him, us, them, 
-  myself, yourself, himself, herself, itself, ourselves, youselves,
-  theirselves_
+<ul>
+  <li><em>I, you, he, she, it, we, they, my, your, his, her, its, our,
+their, mine, yours, hers, ours, theirs, me, him, us, them, 
+myself, yourself, himself, herself, itself, ourselves, youselves,
+theirselves</em></li>
+</ul>
 
-### `Art`: article
+<h3 id="art-article"><code>Art</code>: article</h3>
 
-Article is a special case of determiner that bears the feature of
-[definiteness](Definite).
+<p>Article is a special case of determiner that bears the feature of
+<a href="Definite">definiteness</a>.</p>
 
-In English, the following three determiners have this feature:
+<p>In English, the following three determiners have this feature:</p>
 
-* _a, an, the_ 
+<ul>
+  <li><em>a, an, the</em></li>
+</ul>
 
-### `Int`: interrogative pronoun, determiner or adverb
+<h3 id="int-interrogative-pronoun-determiner-or-adverb"><code>Int</code>: interrogative pronoun, determiner or adverb</h3>
 
-Note that the possessive interrogative determiner (_whose_) can be
-distinguished by the [Poss]() feature.
+<p>Note that the possessive interrogative determiner (<em>whose</em>) can be
+distinguished by the <a href="">Poss</a> feature.</p>
 
-In English, all words with the PTB tag `WDT`, `WP`, `WP$` or `WRB` have this feature unless
-they mark the beginning of a [relative clause](en-dep/acl:relcl).
+<p>In English, all words with the PTB tag <code>WDT</code>, <code>WP</code>, <code>WP$</code> or <code>WRB</code> have this feature unless
+they mark the beginning of a <a href="en-dep/acl:relcl">relative clause</a>.</p>
 
-#### Examples:
-* _<b>Which</b> one should I get?_
-* _<b>Who</b> was elected president?_
-* _<b>Whose</b> car is this?_
-* _<b>How</b> old is he?_
+<h4 id="examples">Examples:</h4>
+<ul>
+  <li><em><b>Which</b> one should I get?</em></li>
+  <li><em><b>Who</b> was elected president?</em></li>
+  <li><em><b>Whose</b> car is this?</em></li>
+  <li><em><b>How</b> old is he?</em></li>
+</ul>
 
-### `Rel`: relative pronoun or determiner
+<h3 id="rel-relative-pronoun-or-determiner"><code>Rel</code>: relative pronoun or determiner</h3>
 
-All pronouns and determiners that mark the beginning of a [relative clause](en-dep/acl:relcl) have this feature.
+<p>All pronouns and determiners that mark the beginning of a <a href="en-dep/acl:relcl">relative clause</a> have this feature.</p>
 
-#### Examples: 
+<h4 id="examples-1">Examples:</h4>
 
-* _The book <b>that</b> I read_
-* _The book <b>which</b> she bought_
-* _The book <b>whose</b> author was arrested_
+<ul>
+  <li><em>The book <b>that</b> I read</em></li>
+  <li><em>The book <b>which</b> she bought</em></li>
+  <li><em>The book <b>whose</b> author was arrested</em></li>
+</ul>
 
-### `Dem`: demonstrative determiner or adverb
+<h3 id="dem-demonstrative-determiner-or-adverb"><code>Dem</code>: demonstrative determiner or adverb</h3>
 
-The following determiners and adverbs have this feature:
+<p>The following determiners and adverbs have this feature:</p>
 
-* _this, that, those, these, here, there_
+<ul>
+  <li><em>this, that, those, these, here, there</em></li>
+</ul>
 
-Note that _that_ only has this feature when it is being used as a demonstrative determiner. If it is used to mark the beginning of a [clausal complement](en-dep/ccomp) or a [relative clause](en-dep/acl:relcl) it does not have this feature.
+<p>Note that <em>that</em> only has this feature when it is being used as a demonstrative determiner. If it is used to mark the beginning of a <a href="en-dep/ccomp">clausal complement</a> or a <a href="en-dep/acl:relcl">relative clause</a> it does not have this feature.</p>
 
 
 	</div>
@@ -1285,15 +1346,17 @@ Note that _that_ only has this feature when it is being used as a demonstrative 
 	</h2>
 	<div about="#Reflex" property="rdfs:comment">	
 
-In English,  `Reflex` is a feature of [pronouns](en-pos/PRON).  It tells whether the word is reflexive, i.e. refers to the subject of its clause.
+<p>In English,  <code>Reflex</code> is a feature of <a href="en-pos/PRON">pronouns</a>.  It tells whether the word is reflexive, i.e. refers to the subject of its clause.</p>
 
-### `Yes`: it is reflexive
+<h3 id="yes-it-is-reflexive"><code>Yes</code>: it is reflexive</h3>
 
-The following English pronouns have this feature:
+<p>The following English pronouns have this feature:</p>
 
-* _myself, yourself, himself, herself, itself, ourselves, yourselves, themselves_
+<ul>
+  <li><em>myself, yourself, himself, herself, itself, ourselves, yourselves, themselves</em></li>
+</ul>
 
-Note that English reflexive pronouns can also be used as intensive pronouns, e.g. _She <b>herself</b> bought a book_. The above mentioned pronouns only have this feature if they are used as reflexive pronouns.
+<p>Note that English reflexive pronouns can also be used as intensive pronouns, e.g. <em>She <b>herself</b> bought a book</em>. The above mentioned pronouns only have this feature if they are used as reflexive pronouns.</p>
 
 
 	</div>
@@ -1367,27 +1430,30 @@ Note that English reflexive pronouns can also be used as intensive pronouns, e.g
 	</h2>
 	<div about="#Tense" property="rdfs:comment">	
 
-In English, `Tense` is a feature of [verbs](en-pos/VERB) that specifies the time when the action took / takes / will take place, in relation to the current moment or to another action in the utterance. 
+<p>In English, <code>Tense</code> is a feature of <a href="en-pos/VERB">verbs</a> that specifies the time when the action took / takes / will take place, in relation to the current moment or to another action in the utterance.</p>
 
+<h3 id="pres-present-tense"><code>Pres</code>: present tense</h3>
 
-### `Pres`: present tense
+<p>The present tense denotes actions that are happening right now or that usually happen. All verbs with the PTB tag <code>VBP</code> or <code>VBZ</code> have this feature. <a href="Mood">Subjunctives</a> with the PTB tag <code>VB</code> also have this feature.</p>
 
-The present tense denotes actions that are happening right now or that usually happen. All verbs with the PTB tag `VBP` or `VBZ` have this feature. [Subjunctives](Mood) with the PTB tag `VB` also have this feature.
+<h4 id="examples">Examples:</h4>
 
-#### Examples:
+<ul>
+  <li><em>She <b>goes</b> home.</em></li>
+  <li><em>I suggest that he <b>see</b> a doctor.</em></li>
+</ul>
 
-* _She <b>goes</b> home._
-* _I suggest that he <b>see</b> a doctor._
+<h3 id="past-past-tense"><code>Past</code>: past tense</h3>
 
-### `Past`: past tense
+<p>The past tense denotes actions that happened before the current moment. All verbs with the PTB tag <code>VBD</code> and <code>VBN</code> have this feature.</p>
 
-The past tense denotes actions that happened before the current moment. All verbs with the PTB tag `VBD` and `VBN` have this feature.
+<h4 id="examples-1">Examples:</h4>
 
-#### Examples:
+<ul>
+  <li><em>She <b>went</b> home.</em></li>
+</ul>
 
-* _She <b>went</b> home._
-
-Note that the pluperfect and future tenses in English are constructed periphrastically. For example, _I <b>had been</b> there_ is past perfect (pluperfect) tense, formed periphrastically by the simple past tense of the auxiliary _to have_ and the past participle of the main verb _to be_. The auxiliary will be tagged `VerbForm=Fin|Mood=Ind|Tense=Past` and the participle will have `VerbForm=Part|Tense=Past`; none of the two will have `Tense=Pqp`.
+<p>Note that the pluperfect and future tenses in English are constructed periphrastically. For example, <em>I <b>had been</b> there</em> is past perfect (pluperfect) tense, formed periphrastically by the simple past tense of the auxiliary <em>to have</em> and the past participle of the main verb <em>to be</em>. The auxiliary will be tagged <code>VerbForm=Fin|Mood=Ind|Tense=Past</code> and the participle will have <code>VerbForm=Part|Tense=Past</code>; none of the two will have <code>Tense=Pqp</code>.</p>
 
 
 	</div>
@@ -1501,43 +1567,50 @@ Note that the pluperfect and future tenses in English are constructed periphrast
 	</h2>
 	<div about="#VerbForm" property="rdfs:comment">	
 
-In English, `VerbForm` is a feature of [verbs](en-pos/VERB).
+<p>In English, <code>VerbForm</code> is a feature of <a href="en-pos/VERB">verbs</a>.</p>
 
-### `Fin`: finite verb
+<h3 id="fin-finite-verb"><code>Fin</code>: finite verb</h3>
 
-Rule of thumb: if it has non-empty [Mood](Mood), it is finite. English verbs with the PTB tag `VBZ`, `VBD` or `VBP` and modals with the PTB tag `MD` have this feature. Further, verbs with the PTB tag `VB` have this feature if they don't have an auxiliary or modal verb attached to it. 
+<p>Rule of thumb: if it has non-empty <a href="Mood">Mood</a>, it is finite. English verbs with the PTB tag <code>VBZ</code>, <code>VBD</code> or <code>VBP</code> and modals with the PTB tag <code>MD</code> have this feature. Further, verbs with the PTB tag <code>VB</code> have this feature if they don’t have an auxiliary or modal verb attached to it.</p>
 
-#### Examples:
+<h4 id="examples">Examples:</h4>
 
-* _I <b>do</b>, she <b>has</b>_
-* _<b>Read</b> the book!_
+<ul>
+  <li><em>I <b>do</b>, she <b>has</b></em></li>
+  <li><em><b>Read</b> the book!</em></li>
+</ul>
 
-### `Inf`: infinitive
+<h3 id="inf-infinitive"><code>Inf</code>: infinitive</h3>
 
-Infinitive is the citation form of verbs in many languages. Infinitives may be used together with auxiliaries to form periphrastic [tenses](Tense) (e.g. future tense _I will <b>sit</b> in a plane_), they appear as arguments of modal verbs etc. English verbs with the PTB tag `VB` have this feature if they have an auxiliary or modal verb or the inifinitval _to_ attached to it. 
+<p>Infinitive is the citation form of verbs in many languages. Infinitives may be used together with auxiliaries to form periphrastic <a href="Tense">tenses</a> (e.g. future tense <em>I will <b>sit</b> in a plane</em>), they appear as arguments of modal verbs etc. English verbs with the PTB tag <code>VB</code> have this feature if they have an auxiliary or modal verb or the inifinitval <em>to</em> attached to it.</p>
 
-#### Examples:
+<h4 id="examples-1">Examples:</h4>
 
-* _I have to <b>leave</b>_.
+<ul>
+  <li><em>I have to <b>leave</b></em>.</li>
+</ul>
 
-### `Part`: participle
+<h3 id="part-participle"><code>Part</code>: participle</h3>
 
-Participle is a non-finite verb form that shares properties of verbs and adjectives. It is used to form various periphrastic verb forms such as complex tenses and passives. In English, all words with the PTB tag `VBD` have this feature. Further, words with the PTB tag `VBG` can also have this feature if they are preceded by an inflection of _to be_.
+<p>Participle is a non-finite verb form that shares properties of verbs and adjectives. It is used to form various periphrastic verb forms such as complex tenses and passives. In English, all words with the PTB tag <code>VBD</code> have this feature. Further, words with the PTB tag <code>VBG</code> can also have this feature if they are preceded by an inflection of <em>to be</em>.</p>
 
-#### Examples:
+<h4 id="examples-2">Examples:</h4>
 
-* _He could have <b>been prepared</b> if he had forseen it_.
-* _I will be <b>driving</b> home_.
+<ul>
+  <li><em>He could have <b>been prepared</b> if he had forseen it</em>.</li>
+  <li><em>I will be <b>driving</b> home</em>.</li>
+</ul>
 
+<h3 id="ger-gerund">Ger: gerund</h3>
 
-### Ger: gerund
+<p>Gerund is a non-finite verb form that shares properties of verbs and nouns. In English, all words with the PTB tag <code>VBG</code> have this feature if they are not preceded by an inflection of <em>to be</em>.</p>
 
-Gerund is a non-finite verb form that shares properties of verbs and nouns. In English, all words with the PTB tag `VBG` have this feature if they are not preceded by an inflection of _to be_.
+<h4 id="examples-3">Examples:</h4>
 
-#### Examples:
-
-* _I look forward to <b>seeing</b> you._ 
-* _She turns a blind eye to my <b>being</b> late._
+<ul>
+  <li><em>I look forward to <b>seeing</b> you.</em></li>
+  <li><em>She turns a blind eye to my <b>being</b> late.</em></li>
+</ul>
 
 
 
@@ -1586,16 +1659,18 @@ Gerund is a non-finite verb form that shares properties of verbs and nouns. In E
 	</h2>
 	<div about="#Voice" property="rdfs:comment">	
 
-In English, `Voice` is a feature of some [verbs](en-pos/VERB). It is only used to distinguish past participles from passive verbs which both have the PTB tag `VBN`.
+<p>In English, <code>Voice</code> is a feature of some <a href="en-pos/VERB">verbs</a>. It is only used to distinguish past participles from passive verbs which both have the PTB tag <code>VBN</code>.</p>
 
-### `Pass`: passsive
+<h3 id="pass-passsive"><code>Pass</code>: passsive</h3>
 
-All verbs with the PTB tag `VBN` that have a [passive auxiliary](en-dep/auxpass) have this feature.
+<p>All verbs with the PTB tag <code>VBN</code> that have a <a href="en-dep/auxpass">passive auxiliary</a> have this feature.</p>
 
-#### Examples:
+<h4 id="examples">Examples:</h4>
 
-* _Kennedy was <b>killed</b>._
-* _He got <b>shot</b>._
+<ul>
+  <li><em>Kennedy was <b>killed</b>.</em></li>
+  <li><em>He got <b>shot</b>.</em></li>
+</ul>
 
 
 	</div>
