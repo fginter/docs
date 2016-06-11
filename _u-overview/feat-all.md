@@ -29,7 +29,7 @@ permalink: u/feat/all.html
 				{% if cand_feat contains " " %}{% else %}
 					{% assign feat = cand_feat | replace: "`","" %}
 					<div about="#{{ feat }}" property="rdf:type" resource="#{{ p.title }}" style="visibility: hidden">
-						<div property="oliasystem:hasTagContaining">{{ p.title }}={{ $feat }}</div>
+						<div property="oliasystem:hasTagContaining">{{ p.title }}={{ feat }}</div>
 					</div>
 				{% endif %}
 			{% endif %}
