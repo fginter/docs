@@ -25,10 +25,10 @@ permalink: en/feat/all.html
 			{% if cand_feat contains "`" %}
 				{% if cand_feat contains " " %}{% else %}
 					{% assign feat = cand_feat | replace: "`","" %}
-					<div about="#{{ p.title }}{{ feat }}" property="rdf:type" resource="#{{ p.title }}">
-						<div property="rdf:type" resource="../../u/feat/all.html#{{ p.title }}{{ feat }}"/>
+					<span about="#{{ p.title }}{{ feat }}" property="rdf:type" resource="#{{ p.title }}">
+						<span property="rdf:type" resource="../../u/feat/all.html#{{ p.title }}{{ feat }}"/>
 						<code property="oliasystem:hasTagContaining">{{ p.title }}={{ feat }}</code><br/>
-					</div>
+					</span>
 				{% endif %}
 			{% endif %}
 		{% endfor %}
