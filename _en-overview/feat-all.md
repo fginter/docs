@@ -32,7 +32,7 @@ permalink: en/feat/all.html
 		{% endfor %}
 	{% endfor %}
 	
-	<div property="rdfs:comment">	
+	<div about="#{{ p.title }}" property="rdfs:comment">	
 {% if p.content contains "<!--details-->" %}    
 {{ p.content | split:"<!--details-->" | first }}
 		<a property="rdfs:seeAlso" href="{{ p.title }}" class="al-doc">See details</a>

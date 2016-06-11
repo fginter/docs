@@ -39,7 +39,7 @@ permalink: u/feat/all.html
 			{% endif %}
 		{% endfor %}
 	{% endfor %}
-	<div property="rdfs:comment">
+	<div about="#{{ p.title }}" property="rdfs:comment">
 
 {% if p.content contains "<!--details-->" %}    
 {{ p.content | split:"<!--details-->" | first }}
