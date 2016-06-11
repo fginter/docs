@@ -17,15 +17,16 @@ A cross-linguistic typology*](http://nlp.stanford.edu/pubs/USD_LREC14_paper_came
 {% assign sorted = site.u-dep | sort: 'title' %}
 {% for p in sorted %}
 <div about="#{{ p.title }}" property="rdfs:subClassOf" resource="#Concept">
-<a id="al-u-dep/{{ p.title }}" class="al-dest"/>
-<h2><code property="rdfs:label" lang="">{{ p.title }}</code>: <div property="rdfs:label">{{ p.shortdef }}</div></h2>
-<div property="rdfs:comment">
+	<a id="al-u-dep/{{ p.title }}" class="al-dest"/>
+	<h2><code property="rdfs:label" lang="">{{ p.title }}</code>: <div property="rdfs:label">{{ p.shortdef }}</div></h2>
+	<div property="rdfs:comment">
 {% if p.content contains "<!--details-->" %}    
 {{ p.content | split:"<!--details-->" | first }}
-<a property="rdfs:seeAlso" href="{{ p.title }}" class="al-doc">See details</a>
+		<a property="rdfs:seeAlso" href="{{ p.title }}" class="al-doc">See details</a>
 {% else %}
 {{ p.content }}
 {% endif %}
-<a href="{{ site.git_edit }}/{% if p.collection %}{{ p.relative_path }}{% else %}{{ p.path }}{% endif %}" target="#">edit {{ p.title }}</a>
+	</div>
+	<a href="{{ site.git_edit }}/{% if p.collection %}{{ p.relative_path }}{% else %}{{ p.path }}{% endif %}" target="#">edit {{ p.title }}</a>
 </div>
 {% endfor %}
