@@ -7,13 +7,17 @@ permalink: en/feat/all.html
 
 # Features
 
+<span about="." property="rdf:type" resource="owl:Ontology">
+	<span property="owl:imports" resource="
+https://www.w3.org/2012/pyRdfa/extract?uri=http://universaldependencies.org/docs/u/feat/all.html&format=xml&rdfagraph=output&vocab_expansion=false&rdfa_lite=false&embedded_rdf=true&space_preserve=false&vocab_cache=true&vocab_cache_report=false&vocab_cache_refresh=false"/>
+</span>
+
+# not working yet:
+<div about="#Concept" property="http://purl.org/dc/terms/language" style="visibility: hidden">{{ permalink | replace: '/.*', '' }}</div>
+
 {% include en-feat-table.html %}
 
 ----------
-
-<span about="." property="rdf:type" resource="owl:Ontology">
-	<span property="owl:imports" resource="https://www.w3.org/2012/pyRdfa/extract?uri=http://fginter.github.io/docs/u/feat/all.html&format=xml&rdfagraph=output&vocab_expansion=false&rdfa_lite=false&embedded_rdf=true&space_preserve=false&vocab_cache=true&vocab_cache_report=false&vocab_cache_refresh=false"/>
-</span>
 
 {% assign sorted = site.en-feat | sort: 'title' %}
 {% for p in sorted %}
