@@ -23,7 +23,7 @@ permalink: en/feat/all.html
 			{% if cand_feat contains "`" %}
 				{% if cand_feat contains " " %}{% else %}
 					{% assign feat = cand_feat | replace: "`","" %}
-					<div about="#{{ p.title }}{{ feat }}" property="rdf:type" resource="#{{ p.title }}" style="visibility: hidden">
+					<div about="#{{ p.title }}{{ feat }}" property="rdf:type" resource="#{{ p.title }}" style="display: none">
 						<div property="rdf:type" resource="../../u/feat/all.html#{{ p.title }}{{ feat }}"/>
 						<div property="oliasystem:hasTagContaining">{{ p.title }}={{ feat }}</div>
 					</div>
@@ -31,7 +31,6 @@ permalink: en/feat/all.html
 			{% endif %}
 		{% endfor %}
 	{% endfor %}
-	
 	<div about="#{{ p.title }}" property="rdfs:comment">	
 {% if p.content contains "<!--details-->" %}    
 {{ p.content | split:"<!--details-->" | first }}

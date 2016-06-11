@@ -26,7 +26,7 @@ permalink: u/feat/all.html
 			{% if cand_feat contains "`" %}
 				{% if cand_feat contains " " %}{% else %}
 					{% assign feat = cand_feat | replace: "`","" %}
-					<div about="#{{ p.title }}{{ feat }}" property="rdfs:subClassOf" resource="#{{ p.title }}" style="visibility: hidden">
+					<div about="#{{ p.title }}{{ feat }}" property="rdfs:subClassOf" resource="#{{ p.title }}" style="display: none">
 						<div property="rdfs:label">{{ feat }}</div>
 						<div property="rdfs:subClassOf" resource="_:{{ p.title }}{{ feat }}Def">
 							<div about="_:{{ p.title }}{{ feat }}Def" property="rdf:type" resource="owl:Restriction">
