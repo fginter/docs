@@ -20,7 +20,7 @@ permalink: u/feat/all.html
 	<a id="al-u-feat/{{ p.title }}" class="al-dest"/>
 	<h2><code property="rdfs:label" lang="">{{ p.title }}</code>: <div property="rdfs:label">{{ p.shortdef }}</div></h2>
 	
-	<p>values:<br/>
+	<p>values: [
 	{% assign pars = p.content | split: "### " %}
 	{% for par in pars %}
 		{% assign cand_feats = par | split: ":" %}
@@ -29,7 +29,7 @@ permalink: u/feat/all.html
 				{% if cand_feat contains " " %}{% else %}
 					{% assign feat = cand_feat | replace: "`","" %}
 					<div about="#{{ p.title }}{{ feat }}" property="rdfs:subClassOf" resource="#{{ p.title }}">
-						<code property="rdfs:label">{{ feat }}</code><br/>
+						<code property="rdfs:label">{{ feat }}</code>
 						<div property="rdfs:subClassOf" resource="_:{{ p.title }}{{ feat }}Def">
 							<div about="_:{{ p.title }}{{ feat }}Def" property="rdf:type" resource="owl:Restriction">
 								<div property="owl:onProperty" resource="#has{{ p.title }}"/>
@@ -41,6 +41,7 @@ permalink: u/feat/all.html
 			{% endif %}
 		{% endfor %}
 	{% endfor %}
+	]
 	</p>
 	<div about="#{{ p.title }}" property="rdfs:comment">
 
