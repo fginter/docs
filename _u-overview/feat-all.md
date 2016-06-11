@@ -21,7 +21,7 @@ permalink: u/feat/all.html
 	<a id="al-u-feat/{{ p.title }}" class="al-dest"/>
 	<h2><code>{{ p.title }}</code>: {{ p.shortdef }}</h2>
 	<div property="rdfs:comment">
-	{% assign feats = p.content | split:"`[^`]*### `" %}
+	{% assign feats = p.content | split: "`[^`]*### `" | replace: "^[^`]*`","" | replace: "`[^`]*$","" %}
 	{% for f in feats %}
 		<div style="visibility: hidden">{{ f }}</div>
 	{% endfor %}
