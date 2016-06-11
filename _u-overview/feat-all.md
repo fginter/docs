@@ -18,9 +18,8 @@ permalink: u/feat/all.html
 </span>
 <div about="#{{ p.title }}" property="rdfs:subClassOf" resource="#Concept">
 	<a id="al-u-feat/{{ p.title }}" class="al-dest"/>
-	<h2><code property="rdfs:label" lang="">{{ p.title }}</code>: <span property="rdfs:label">{{ p.shortdef }}</span></h2>
-	
-	<!--p>values:
+	<h2><code property="rdfs:label" lang="">{{ p.title }}</code>: <span property="rdfs:label">{{ p.shortdef }}</span>
+		<code>[</code>
 	{% assign pars = p.content | split: "### " %}
 	{% for par in pars %}
 		{% assign cand_feats = par | split: ":" %}
@@ -41,7 +40,8 @@ permalink: u/feat/all.html
 			{% endif %}
 		{% endfor %}
 	{% endfor %}
-	</p-->
+		<code>]</code>
+	</h2>
 
 	<div about="#{{ p.title }}" property="rdfs:comment">
 

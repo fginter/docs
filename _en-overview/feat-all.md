@@ -15,9 +15,8 @@ permalink: en/feat/all.html
 {% for p in sorted %}
 <div about="#{{ p.title }}" property="rdfs:subClassOf" resource="#Concept">
 	<a id="al-en-feat/{{ p.title }}" class="al-dest"/>
-	<h2><code property="rdfs:label" lang="">{{ p.title }}</code>: <span property="rdfs:label">{{ p.shortdef }}</span></h2>
-	
-	<p>values:<br/>
+	<h2><code property="rdfs:label" lang="">{{ p.title }}</code>: <span property="rdfs:label">{{ p.shortdef }}</span>
+	<code>[</code> 
 	{% assign pars = p.content | split: "### " %}
 	{% for par in pars %}
 		{% assign cand_feats = par | split: ":" %}
@@ -27,13 +26,14 @@ permalink: en/feat/all.html
 					{% assign feat = cand_feat | replace: "`","" %}
 					<span about="#{{ p.title }}{{ feat }}" property="rdf:type" resource="#{{ p.title }}">
 						<span property="rdf:type" resource="../../u/feat/all.html#{{ p.title }}{{ feat }}"/>
-						<code property="oliasystem:hasTagContaining">{{ p.title }}={{ feat }}</code><br/>
+						<code property="oliasystem:hasTagContaining">{{ p.title }}={{ feat }}</code>
 					</span>
 				{% endif %}
 			{% endif %}
 		{% endfor %}
 	{% endfor %}
-	</p>
+	<code>]</code>
+	</h2>
 	<div about="#{{ p.title }}" property="rdfs:comment">	
 {% if p.content contains "<!--details-->" %}    
 {{ p.content | split:"<!--details-->" | first }}
