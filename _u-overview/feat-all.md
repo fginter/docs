@@ -11,14 +11,19 @@ permalink: u/feat/all.html
 
 ----------
 
-{% assign sorted = site.u-feat | sort: 'title' %}{% for p in sorted %}
-<a id="al-u-feat/{{ p.title }}" class="al-dest"/>
-<h2><code>{{ p.title }}</code>: {{ p.shortdef }}</h2>
+{% assign sorted = site.u-feat | sort: 'title' %}
+{% for p in sorted %}
+<div about="#{{ p.title }}" property="rdfs:subClassOf" resource="#Concept">
+	<a id="al-u-feat/{{ p.title }}" class="al-dest"/>
+	<h2><code>{{ p.title }}</code>: {{ p.shortdef }}</h2>
+	<div property="rdfs:comment">
 {% if p.content contains "<!--details-->" %}    
 {{ p.content | split:"<!--details-->" | first }}
-<a href="{{ p.title }}" class="al-doc">See details</a>
+		<a property="rdfs:seeAlso" href="{{ p.title }}" class="al-doc">See details</a>
 {% else %}
 {{ p.content }}
 {% endif %}
-<a href="{{ site.git_edit }}/{% if p.collection %}{{ p.relative_path }}{% else %}{{ p.path }}{% endif %}" target="#">edit {{ p.title }}</a>
+	</div>
+	<a href="{{ site.git_edit }}/{% if p.collection %}{{ p.relative_path }}{% else %}{{ p.path }}{% endif %}" target="#">edit {{ p.title }}</a>
+</div>
 {% endfor %}
