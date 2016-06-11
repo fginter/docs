@@ -15,7 +15,7 @@ permalink: en/feat/all.html
 {% for p in sorted %}
 <div about="#{{ p.title }}" property="rdfs:subClassOf" resource="#Concept">
 	<a id="al-en-feat/{{ p.title }}" class="al-dest"/>
-	<h2><code property="rdfs:label" lang="">{{ p.title }}</code>: <div property="rdfs:label">{{ p.shortdef }}</div></h2>
+	<h2><code property="rdfs:label" lang="">{{ p.title }}</code>: <span property="rdfs:label">{{ p.shortdef }}</span></h2>
 	
 	<p>values:<br/>
 	{% assign pars = p.content | split: "### " %}
