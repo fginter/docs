@@ -112,12 +112,9 @@ not covered by the POS tags.</p>
 
 <hr />
 
-<div about="#hasAnimacy" property="rdf:type" resource="owl:ObjectProperty">
-	<div property="rdfs:range" resource="#Animacy" />
-</div>
 <div about="#Animacy" property="rdfs:subClassOf" resource="#Concept">
 	<a id="al-u-feat/Animacy" class="al-dest" />
-	<h2><code>Animacy</code>: animacy</h2>
+	<h2><code property="rdfs:label" lang="">Animacy</code>: <div property="rdfs:label">animacy</div></h2>
 	<div property="rdfs:comment">
 	
 	
@@ -137,8 +134,14 @@ not covered by the POS tags.</p>
 			
 				
 					
-					<div about="#Anim" property="rdf:type" resource="#Animacy" style="visibility: hidden">
-						<div property="oliasystem:hasTagContaining">Animacy=Anim</div>
+					<div about="#AnimacyAnim" property="rdfs:subClassOf" resource="#Animacy" style="visibility: hidden">
+						<div property="rdfs:label">Anim</div>
+						<div property="rdfs:subClassOf" resource="_:AnimacyAnimDef">
+							<div about="_:AnimacyAnimDef" property="rdf:type" resource="owl:Restriction">
+								<div property="owl:onProperty" resource="#AnimacyAnim" />
+								<div property="owl:hasSelf" datatype="xsd:boolean">true</div>
+							</div>
+						</div>
 					</div>
 				
 			
@@ -151,8 +154,14 @@ not covered by the POS tags.</p>
 			
 				
 					
-					<div about="#Nhum" property="rdf:type" resource="#Animacy" style="visibility: hidden">
-						<div property="oliasystem:hasTagContaining">Animacy=Nhum</div>
+					<div about="#AnimacyNhum" property="rdfs:subClassOf" resource="#Animacy" style="visibility: hidden">
+						<div property="rdfs:label">Nhum</div>
+						<div property="rdfs:subClassOf" resource="_:AnimacyNhumDef">
+							<div about="_:AnimacyNhumDef" property="rdf:type" resource="owl:Restriction">
+								<div property="owl:onProperty" resource="#AnimacyNhum" />
+								<div property="owl:hasSelf" datatype="xsd:boolean">true</div>
+							</div>
+						</div>
 					</div>
 				
 			
@@ -167,8 +176,14 @@ not covered by the POS tags.</p>
 			
 				
 					
-					<div about="#Inan" property="rdf:type" resource="#Animacy" style="visibility: hidden">
-						<div property="oliasystem:hasTagContaining">Animacy=Inan</div>
+					<div about="#AnimacyInan" property="rdfs:subClassOf" resource="#Animacy" style="visibility: hidden">
+						<div property="rdfs:label">Inan</div>
+						<div property="rdfs:subClassOf" resource="_:AnimacyInanDef">
+							<div about="_:AnimacyInanDef" property="rdf:type" resource="owl:Restriction">
+								<div property="owl:onProperty" resource="#AnimacyInan" />
+								<div property="owl:hasSelf" datatype="xsd:boolean">true</div>
+							</div>
+						</div>
 					</div>
 				
 			
@@ -178,7 +193,6 @@ not covered by the POS tags.</p>
 			
 		
 	
-
 
 Similarly to [Gender]() (and to the African noun classes), animacy is
 usually a lexical feature of [nouns](u-pos/NOUN) and inflectional feature
@@ -232,12 +246,9 @@ that are neither `Anim` nor `Nhum` are `Inan`.)
 	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_u-feat/Animacy.md" target="#">edit Animacy</a>
 </div>
 
-<div about="#hasAspect" property="rdf:type" resource="owl:ObjectProperty">
-	<div property="rdfs:range" resource="#Aspect" />
-</div>
 <div about="#Aspect" property="rdfs:subClassOf" resource="#Concept">
 	<a id="al-u-feat/Aspect" class="al-dest" />
-	<h2><code>Aspect</code>: aspect</h2>
+	<h2><code property="rdfs:label" lang="">Aspect</code>: <div property="rdfs:label">aspect</div></h2>
 	<div property="rdfs:comment">
 	
 	
@@ -253,8 +264,14 @@ that are neither `Anim` nor `Nhum` are `Inan`.)
 			
 				
 					
-					<div about="#Imp" property="rdf:type" resource="#Aspect" style="visibility: hidden">
-						<div property="oliasystem:hasTagContaining">Aspect=Imp</div>
+					<div about="#AspectImp" property="rdfs:subClassOf" resource="#Aspect" style="visibility: hidden">
+						<div property="rdfs:label">Imp</div>
+						<div property="rdfs:subClassOf" resource="_:AspectImpDef">
+							<div about="_:AspectImpDef" property="rdf:type" resource="owl:Restriction">
+								<div property="owl:onProperty" resource="#AspectImp" />
+								<div property="owl:hasSelf" datatype="xsd:boolean">true</div>
+							</div>
+						</div>
 					</div>
 				
 			
@@ -272,8 +289,14 @@ that are neither `Anim` nor `Nhum` are `Inan`.)
 			
 				
 					
-					<div about="#Perf" property="rdf:type" resource="#Aspect" style="visibility: hidden">
-						<div property="oliasystem:hasTagContaining">Aspect=Perf</div>
+					<div about="#AspectPerf" property="rdfs:subClassOf" resource="#Aspect" style="visibility: hidden">
+						<div property="rdfs:label">Perf</div>
+						<div property="rdfs:subClassOf" resource="_:AspectPerfDef">
+							<div about="_:AspectPerfDef" property="rdf:type" resource="owl:Restriction">
+								<div property="owl:onProperty" resource="#AspectPerf" />
+								<div property="owl:hasSelf" datatype="xsd:boolean">true</div>
+							</div>
+						</div>
 					</div>
 				
 			
@@ -291,8 +314,14 @@ that are neither `Anim` nor `Nhum` are `Inan`.)
 			
 				
 					
-					<div about="#Pro" property="rdf:type" resource="#Aspect" style="visibility: hidden">
-						<div property="oliasystem:hasTagContaining">Aspect=Pro</div>
+					<div about="#AspectPro" property="rdfs:subClassOf" resource="#Aspect" style="visibility: hidden">
+						<div property="rdfs:label">Pro</div>
+						<div property="rdfs:subClassOf" resource="_:AspectProDef">
+							<div about="_:AspectProDef" property="rdf:type" resource="owl:Restriction">
+								<div property="owl:onProperty" resource="#AspectPro" />
+								<div property="owl:hasSelf" datatype="xsd:boolean">true</div>
+							</div>
+						</div>
 					</div>
 				
 			
@@ -305,8 +334,14 @@ that are neither `Anim` nor `Nhum` are `Inan`.)
 			
 				
 					
-					<div about="#Prog" property="rdf:type" resource="#Aspect" style="visibility: hidden">
-						<div property="oliasystem:hasTagContaining">Aspect=Prog</div>
+					<div about="#AspectProg" property="rdfs:subClassOf" resource="#Aspect" style="visibility: hidden">
+						<div property="rdfs:label">Prog</div>
+						<div property="rdfs:subClassOf" resource="_:AspectProgDef">
+							<div about="_:AspectProgDef" property="rdf:type" resource="owl:Restriction">
+								<div property="owl:onProperty" resource="#AspectProg" />
+								<div property="owl:hasSelf" datatype="xsd:boolean">true</div>
+							</div>
+						</div>
 					</div>
 				
 			
@@ -314,7 +349,6 @@ that are neither `Anim` nor `Nhum` are `Inan`.)
 			
 		
 	
-
 
 Aspect is typically a feature of [verbs](u-pos/VERB).
 It may also occur with other parts of speech
@@ -384,12 +418,9 @@ even more justified. Example is Turkish.
 	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_u-feat/Aspect.md" target="#">edit Aspect</a>
 </div>
 
-<div about="#hasCase" property="rdf:type" resource="owl:ObjectProperty">
-	<div property="rdfs:range" resource="#Case" />
-</div>
 <div about="#Case" property="rdfs:subClassOf" resource="#Concept">
 	<a id="al-u-feat/Case" class="al-dest" />
-	<h2><code>Case</code>: case</h2>
+	<h2><code property="rdfs:label" lang="">Case</code>: <div property="rdfs:label">case</div></h2>
 	<div property="rdfs:comment">
 	
 	
@@ -420,8 +451,14 @@ even more justified. Example is Turkish.
 			
 				
 					
-					<div about="#Nom" property="rdf:type" resource="#Case" style="visibility: hidden">
-						<div property="oliasystem:hasTagContaining">Case=Nom</div>
+					<div about="#CaseNom" property="rdfs:subClassOf" resource="#Case" style="visibility: hidden">
+						<div property="rdfs:label">Nom</div>
+						<div property="rdfs:subClassOf" resource="_:CaseNomDef">
+							<div about="_:CaseNomDef" property="rdf:type" resource="owl:Restriction">
+								<div property="owl:onProperty" resource="#CaseNom" />
+								<div property="owl:hasSelf" datatype="xsd:boolean">true</div>
+							</div>
+						</div>
 					</div>
 				
 			
@@ -434,8 +471,14 @@ even more justified. Example is Turkish.
 			
 				
 					
-					<div about="#Acc" property="rdf:type" resource="#Case" style="visibility: hidden">
-						<div property="oliasystem:hasTagContaining">Case=Acc</div>
+					<div about="#CaseAcc" property="rdfs:subClassOf" resource="#Case" style="visibility: hidden">
+						<div property="rdfs:label">Acc</div>
+						<div property="rdfs:subClassOf" resource="_:CaseAccDef">
+							<div about="_:CaseAccDef" property="rdf:type" resource="owl:Restriction">
+								<div property="owl:onProperty" resource="#CaseAcc" />
+								<div property="owl:hasSelf" datatype="xsd:boolean">true</div>
+							</div>
+						</div>
 					</div>
 				
 			
@@ -448,8 +491,14 @@ even more justified. Example is Turkish.
 			
 				
 					
-					<div about="#Abs" property="rdf:type" resource="#Case" style="visibility: hidden">
-						<div property="oliasystem:hasTagContaining">Case=Abs</div>
+					<div about="#CaseAbs" property="rdfs:subClassOf" resource="#Case" style="visibility: hidden">
+						<div property="rdfs:label">Abs</div>
+						<div property="rdfs:subClassOf" resource="_:CaseAbsDef">
+							<div about="_:CaseAbsDef" property="rdf:type" resource="owl:Restriction">
+								<div property="owl:onProperty" resource="#CaseAbs" />
+								<div property="owl:hasSelf" datatype="xsd:boolean">true</div>
+							</div>
+						</div>
 					</div>
 				
 			
@@ -462,8 +511,14 @@ even more justified. Example is Turkish.
 			
 				
 					
-					<div about="#Erg" property="rdf:type" resource="#Case" style="visibility: hidden">
-						<div property="oliasystem:hasTagContaining">Case=Erg</div>
+					<div about="#CaseErg" property="rdfs:subClassOf" resource="#Case" style="visibility: hidden">
+						<div property="rdfs:label">Erg</div>
+						<div property="rdfs:subClassOf" resource="_:CaseErgDef">
+							<div about="_:CaseErgDef" property="rdf:type" resource="owl:Restriction">
+								<div property="owl:onProperty" resource="#CaseErg" />
+								<div property="owl:hasSelf" datatype="xsd:boolean">true</div>
+							</div>
+						</div>
 					</div>
 				
 			
@@ -476,48 +531,14 @@ even more justified. Example is Turkish.
 			
 				
 					
-					<div about="#Dat" property="rdf:type" resource="#Case" style="visibility: hidden">
-						<div property="oliasystem:hasTagContaining">Case=Dat</div>
-					</div>
-				
-			
-		
-			
-		
-	
-		
-		
-			
-		
-	
-		
-		
-			
-				
-					
-					<div about="#Gen" property="rdf:type" resource="#Case" style="visibility: hidden">
-						<div property="oliasystem:hasTagContaining">Case=Gen</div>
-					</div>
-				
-			
-		
-			
-		
-	
-		
-		
-			
-		
-			
-		
-	
-		
-		
-			
-				
-					
-					<div about="#Voc" property="rdf:type" resource="#Case" style="visibility: hidden">
-						<div property="oliasystem:hasTagContaining">Case=Voc</div>
+					<div about="#CaseDat" property="rdfs:subClassOf" resource="#Case" style="visibility: hidden">
+						<div property="rdfs:label">Dat</div>
+						<div property="rdfs:subClassOf" resource="_:CaseDatDef">
+							<div about="_:CaseDatDef" property="rdf:type" resource="owl:Restriction">
+								<div property="owl:onProperty" resource="#CaseDat" />
+								<div property="owl:hasSelf" datatype="xsd:boolean">true</div>
+							</div>
+						</div>
 					</div>
 				
 			
@@ -535,8 +556,41 @@ even more justified. Example is Turkish.
 			
 				
 					
-					<div about="#Loc" property="rdf:type" resource="#Case" style="visibility: hidden">
-						<div property="oliasystem:hasTagContaining">Case=Loc</div>
+					<div about="#CaseGen" property="rdfs:subClassOf" resource="#Case" style="visibility: hidden">
+						<div property="rdfs:label">Gen</div>
+						<div property="rdfs:subClassOf" resource="_:CaseGenDef">
+							<div about="_:CaseGenDef" property="rdf:type" resource="owl:Restriction">
+								<div property="owl:onProperty" resource="#CaseGen" />
+								<div property="owl:hasSelf" datatype="xsd:boolean">true</div>
+							</div>
+						</div>
+					</div>
+				
+			
+		
+			
+		
+	
+		
+		
+			
+		
+			
+		
+	
+		
+		
+			
+				
+					
+					<div about="#CaseVoc" property="rdfs:subClassOf" resource="#Case" style="visibility: hidden">
+						<div property="rdfs:label">Voc</div>
+						<div property="rdfs:subClassOf" resource="_:CaseVocDef">
+							<div about="_:CaseVocDef" property="rdf:type" resource="owl:Restriction">
+								<div property="owl:onProperty" resource="#CaseVoc" />
+								<div property="owl:hasSelf" datatype="xsd:boolean">true</div>
+							</div>
+						</div>
 					</div>
 				
 			
@@ -554,8 +608,39 @@ even more justified. Example is Turkish.
 			
 				
 					
-					<div about="#Ins" property="rdf:type" resource="#Case" style="visibility: hidden">
-						<div property="oliasystem:hasTagContaining">Case=Ins</div>
+					<div about="#CaseLoc" property="rdfs:subClassOf" resource="#Case" style="visibility: hidden">
+						<div property="rdfs:label">Loc</div>
+						<div property="rdfs:subClassOf" resource="_:CaseLocDef">
+							<div about="_:CaseLocDef" property="rdf:type" resource="owl:Restriction">
+								<div property="owl:onProperty" resource="#CaseLoc" />
+								<div property="owl:hasSelf" datatype="xsd:boolean">true</div>
+							</div>
+						</div>
+					</div>
+				
+			
+		
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+				
+					
+					<div about="#CaseIns" property="rdfs:subClassOf" resource="#Case" style="visibility: hidden">
+						<div property="rdfs:label">Ins</div>
+						<div property="rdfs:subClassOf" resource="_:CaseInsDef">
+							<div about="_:CaseInsDef" property="rdf:type" resource="owl:Restriction">
+								<div property="owl:onProperty" resource="#CaseIns" />
+								<div property="owl:hasSelf" datatype="xsd:boolean">true</div>
+							</div>
+						</div>
 					</div>
 				
 			
@@ -578,8 +663,14 @@ even more justified. Example is Turkish.
 			
 				
 					
-					<div about="#Par" property="rdf:type" resource="#Case" style="visibility: hidden">
-						<div property="oliasystem:hasTagContaining">Case=Par</div>
+					<div about="#CasePar" property="rdfs:subClassOf" resource="#Case" style="visibility: hidden">
+						<div property="rdfs:label">Par</div>
+						<div property="rdfs:subClassOf" resource="_:CaseParDef">
+							<div about="_:CaseParDef" property="rdf:type" resource="owl:Restriction">
+								<div property="owl:onProperty" resource="#CasePar" />
+								<div property="owl:hasSelf" datatype="xsd:boolean">true</div>
+							</div>
+						</div>
 					</div>
 				
 			
@@ -601,8 +692,14 @@ even more justified. Example is Turkish.
 			
 				
 					
-					<div about="#Dis" property="rdf:type" resource="#Case" style="visibility: hidden">
-						<div property="oliasystem:hasTagContaining">Case=Dis</div>
+					<div about="#CaseDis" property="rdfs:subClassOf" resource="#Case" style="visibility: hidden">
+						<div property="rdfs:label">Dis</div>
+						<div property="rdfs:subClassOf" resource="_:CaseDisDef">
+							<div about="_:CaseDisDef" property="rdf:type" resource="owl:Restriction">
+								<div property="owl:onProperty" resource="#CaseDis" />
+								<div property="owl:hasSelf" datatype="xsd:boolean">true</div>
+							</div>
+						</div>
 					</div>
 				
 			
@@ -620,8 +717,14 @@ even more justified. Example is Turkish.
 			
 				
 					
-					<div about="#Ess" property="rdf:type" resource="#Case" style="visibility: hidden">
-						<div property="oliasystem:hasTagContaining">Case=Ess</div>
+					<div about="#CaseEss" property="rdfs:subClassOf" resource="#Case" style="visibility: hidden">
+						<div property="rdfs:label">Ess</div>
+						<div property="rdfs:subClassOf" resource="_:CaseEssDef">
+							<div about="_:CaseEssDef" property="rdf:type" resource="owl:Restriction">
+								<div property="owl:onProperty" resource="#CaseEss" />
+								<div property="owl:hasSelf" datatype="xsd:boolean">true</div>
+							</div>
+						</div>
 					</div>
 				
 			
@@ -641,8 +744,14 @@ even more justified. Example is Turkish.
 			
 				
 					
-					<div about="#Tra" property="rdf:type" resource="#Case" style="visibility: hidden">
-						<div property="oliasystem:hasTagContaining">Case=Tra</div>
+					<div about="#CaseTra" property="rdfs:subClassOf" resource="#Case" style="visibility: hidden">
+						<div property="rdfs:label">Tra</div>
+						<div property="rdfs:subClassOf" resource="_:CaseTraDef">
+							<div about="_:CaseTraDef" property="rdf:type" resource="owl:Restriction">
+								<div property="owl:onProperty" resource="#CaseTra" />
+								<div property="owl:hasSelf" datatype="xsd:boolean">true</div>
+							</div>
+						</div>
 					</div>
 				
 			
@@ -660,8 +769,14 @@ even more justified. Example is Turkish.
 			
 				
 					
-					<div about="#Com" property="rdf:type" resource="#Case" style="visibility: hidden">
-						<div property="oliasystem:hasTagContaining">Case=Com</div>
+					<div about="#CaseCom" property="rdfs:subClassOf" resource="#Case" style="visibility: hidden">
+						<div property="rdfs:label">Com</div>
+						<div property="rdfs:subClassOf" resource="_:CaseComDef">
+							<div about="_:CaseComDef" property="rdf:type" resource="owl:Restriction">
+								<div property="owl:onProperty" resource="#CaseCom" />
+								<div property="owl:hasSelf" datatype="xsd:boolean">true</div>
+							</div>
+						</div>
 					</div>
 				
 			
@@ -679,8 +794,14 @@ even more justified. Example is Turkish.
 			
 				
 					
-					<div about="#Abe" property="rdf:type" resource="#Case" style="visibility: hidden">
-						<div property="oliasystem:hasTagContaining">Case=Abe</div>
+					<div about="#CaseAbe" property="rdfs:subClassOf" resource="#Case" style="visibility: hidden">
+						<div property="rdfs:label">Abe</div>
+						<div property="rdfs:subClassOf" resource="_:CaseAbeDef">
+							<div about="_:CaseAbeDef" property="rdf:type" resource="owl:Restriction">
+								<div property="owl:onProperty" resource="#CaseAbe" />
+								<div property="owl:hasSelf" datatype="xsd:boolean">true</div>
+							</div>
+						</div>
 					</div>
 				
 			
@@ -698,8 +819,14 @@ even more justified. Example is Turkish.
 			
 				
 					
-					<div about="#Ine" property="rdf:type" resource="#Case" style="visibility: hidden">
-						<div property="oliasystem:hasTagContaining">Case=Ine</div>
+					<div about="#CaseIne" property="rdfs:subClassOf" resource="#Case" style="visibility: hidden">
+						<div property="rdfs:label">Ine</div>
+						<div property="rdfs:subClassOf" resource="_:CaseIneDef">
+							<div about="_:CaseIneDef" property="rdf:type" resource="owl:Restriction">
+								<div property="owl:onProperty" resource="#CaseIne" />
+								<div property="owl:hasSelf" datatype="xsd:boolean">true</div>
+							</div>
+						</div>
 					</div>
 				
 			
@@ -717,8 +844,14 @@ even more justified. Example is Turkish.
 			
 				
 					
-					<div about="#Ill" property="rdf:type" resource="#Case" style="visibility: hidden">
-						<div property="oliasystem:hasTagContaining">Case=Ill</div>
+					<div about="#CaseIll" property="rdfs:subClassOf" resource="#Case" style="visibility: hidden">
+						<div property="rdfs:label">Ill</div>
+						<div property="rdfs:subClassOf" resource="_:CaseIllDef">
+							<div about="_:CaseIllDef" property="rdf:type" resource="owl:Restriction">
+								<div property="owl:onProperty" resource="#CaseIll" />
+								<div property="owl:hasSelf" datatype="xsd:boolean">true</div>
+							</div>
+						</div>
 					</div>
 				
 			
@@ -736,8 +869,14 @@ even more justified. Example is Turkish.
 			
 				
 					
-					<div about="#Ela" property="rdf:type" resource="#Case" style="visibility: hidden">
-						<div property="oliasystem:hasTagContaining">Case=Ela</div>
+					<div about="#CaseEla" property="rdfs:subClassOf" resource="#Case" style="visibility: hidden">
+						<div property="rdfs:label">Ela</div>
+						<div property="rdfs:subClassOf" resource="_:CaseElaDef">
+							<div about="_:CaseElaDef" property="rdf:type" resource="owl:Restriction">
+								<div property="owl:onProperty" resource="#CaseEla" />
+								<div property="owl:hasSelf" datatype="xsd:boolean">true</div>
+							</div>
+						</div>
 					</div>
 				
 			
@@ -755,8 +894,14 @@ even more justified. Example is Turkish.
 			
 				
 					
-					<div about="#Add" property="rdf:type" resource="#Case" style="visibility: hidden">
-						<div property="oliasystem:hasTagContaining">Case=Add</div>
+					<div about="#CaseAdd" property="rdfs:subClassOf" resource="#Case" style="visibility: hidden">
+						<div property="rdfs:label">Add</div>
+						<div property="rdfs:subClassOf" resource="_:CaseAddDef">
+							<div about="_:CaseAddDef" property="rdf:type" resource="owl:Restriction">
+								<div property="owl:onProperty" resource="#CaseAdd" />
+								<div property="owl:hasSelf" datatype="xsd:boolean">true</div>
+							</div>
+						</div>
 					</div>
 				
 			
@@ -769,88 +914,14 @@ even more justified. Example is Turkish.
 			
 				
 					
-					<div about="#Ade" property="rdf:type" resource="#Case" style="visibility: hidden">
-						<div property="oliasystem:hasTagContaining">Case=Ade</div>
-					</div>
-				
-			
-		
-			
-		
-	
-		
-		
-			
-		
-	
-		
-		
-			
-				
-					
-					<div about="#All" property="rdf:type" resource="#Case" style="visibility: hidden">
-						<div property="oliasystem:hasTagContaining">Case=All</div>
-					</div>
-				
-			
-		
-			
-		
-	
-		
-		
-			
-		
-	
-		
-		
-			
-				
-					
-					<div about="#Abl" property="rdf:type" resource="#Case" style="visibility: hidden">
-						<div property="oliasystem:hasTagContaining">Case=Abl</div>
-					</div>
-				
-			
-		
-			
-		
-			
-		
-	
-		
-		
-			
-		
-	
-		
-		
-			
-				
-					
-					<div about="#Sup" property="rdf:type" resource="#Case" style="visibility: hidden">
-						<div property="oliasystem:hasTagContaining">Case=Sup</div>
-					</div>
-				
-			
-		
-			
-		
-			
-		
-	
-		
-		
-			
-		
-	
-		
-		
-			
-				
-					
-					<div about="#Sub" property="rdf:type" resource="#Case" style="visibility: hidden">
-						<div property="oliasystem:hasTagContaining">Case=Sub</div>
+					<div about="#CaseAde" property="rdfs:subClassOf" resource="#Case" style="visibility: hidden">
+						<div property="rdfs:label">Ade</div>
+						<div property="rdfs:subClassOf" resource="_:CaseAdeDef">
+							<div about="_:CaseAdeDef" property="rdf:type" resource="owl:Restriction">
+								<div property="owl:onProperty" resource="#CaseAde" />
+								<div property="owl:hasSelf" datatype="xsd:boolean">true</div>
+							</div>
+						</div>
 					</div>
 				
 			
@@ -868,8 +939,39 @@ even more justified. Example is Turkish.
 			
 				
 					
-					<div about="#Del" property="rdf:type" resource="#Case" style="visibility: hidden">
-						<div property="oliasystem:hasTagContaining">Case=Del</div>
+					<div about="#CaseAll" property="rdfs:subClassOf" resource="#Case" style="visibility: hidden">
+						<div property="rdfs:label">All</div>
+						<div property="rdfs:subClassOf" resource="_:CaseAllDef">
+							<div about="_:CaseAllDef" property="rdf:type" resource="owl:Restriction">
+								<div property="owl:onProperty" resource="#CaseAll" />
+								<div property="owl:hasSelf" datatype="xsd:boolean">true</div>
+							</div>
+						</div>
+					</div>
+				
+			
+		
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+				
+					
+					<div about="#CaseAbl" property="rdfs:subClassOf" resource="#Case" style="visibility: hidden">
+						<div property="rdfs:label">Abl</div>
+						<div property="rdfs:subClassOf" resource="_:CaseAblDef">
+							<div about="_:CaseAblDef" property="rdf:type" resource="owl:Restriction">
+								<div property="owl:onProperty" resource="#CaseAbl" />
+								<div property="owl:hasSelf" datatype="xsd:boolean">true</div>
+							</div>
+						</div>
 					</div>
 				
 			
@@ -889,8 +991,41 @@ even more justified. Example is Turkish.
 			
 				
 					
-					<div about="#Lat" property="rdf:type" resource="#Case" style="visibility: hidden">
-						<div property="oliasystem:hasTagContaining">Case=Lat</div>
+					<div about="#CaseSup" property="rdfs:subClassOf" resource="#Case" style="visibility: hidden">
+						<div property="rdfs:label">Sup</div>
+						<div property="rdfs:subClassOf" resource="_:CaseSupDef">
+							<div about="_:CaseSupDef" property="rdf:type" resource="owl:Restriction">
+								<div property="owl:onProperty" resource="#CaseSup" />
+								<div property="owl:hasSelf" datatype="xsd:boolean">true</div>
+							</div>
+						</div>
+					</div>
+				
+			
+		
+			
+		
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+				
+					
+					<div about="#CaseSub" property="rdfs:subClassOf" resource="#Case" style="visibility: hidden">
+						<div property="rdfs:label">Sub</div>
+						<div property="rdfs:subClassOf" resource="_:CaseSubDef">
+							<div about="_:CaseSubDef" property="rdf:type" resource="owl:Restriction">
+								<div property="owl:onProperty" resource="#CaseSub" />
+								<div property="owl:hasSelf" datatype="xsd:boolean">true</div>
+							</div>
+						</div>
 					</div>
 				
 			
@@ -908,8 +1043,41 @@ even more justified. Example is Turkish.
 			
 				
 					
-					<div about="#Tem" property="rdf:type" resource="#Case" style="visibility: hidden">
-						<div property="oliasystem:hasTagContaining">Case=Tem</div>
+					<div about="#CaseDel" property="rdfs:subClassOf" resource="#Case" style="visibility: hidden">
+						<div property="rdfs:label">Del</div>
+						<div property="rdfs:subClassOf" resource="_:CaseDelDef">
+							<div about="_:CaseDelDef" property="rdf:type" resource="owl:Restriction">
+								<div property="owl:onProperty" resource="#CaseDel" />
+								<div property="owl:hasSelf" datatype="xsd:boolean">true</div>
+							</div>
+						</div>
+					</div>
+				
+			
+		
+			
+		
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+				
+					
+					<div about="#CaseLat" property="rdfs:subClassOf" resource="#Case" style="visibility: hidden">
+						<div property="rdfs:label">Lat</div>
+						<div property="rdfs:subClassOf" resource="_:CaseLatDef">
+							<div about="_:CaseLatDef" property="rdf:type" resource="owl:Restriction">
+								<div property="owl:onProperty" resource="#CaseLat" />
+								<div property="owl:hasSelf" datatype="xsd:boolean">true</div>
+							</div>
+						</div>
 					</div>
 				
 			
@@ -927,8 +1095,14 @@ even more justified. Example is Turkish.
 			
 				
 					
-					<div about="#Ter" property="rdf:type" resource="#Case" style="visibility: hidden">
-						<div property="oliasystem:hasTagContaining">Case=Ter</div>
+					<div about="#CaseTem" property="rdfs:subClassOf" resource="#Case" style="visibility: hidden">
+						<div property="rdfs:label">Tem</div>
+						<div property="rdfs:subClassOf" resource="_:CaseTemDef">
+							<div about="_:CaseTemDef" property="rdf:type" resource="owl:Restriction">
+								<div property="owl:onProperty" resource="#CaseTem" />
+								<div property="owl:hasSelf" datatype="xsd:boolean">true</div>
+							</div>
+						</div>
 					</div>
 				
 			
@@ -946,8 +1120,14 @@ even more justified. Example is Turkish.
 			
 				
 					
-					<div about="#Cau" property="rdf:type" resource="#Case" style="visibility: hidden">
-						<div property="oliasystem:hasTagContaining">Case=Cau</div>
+					<div about="#CaseTer" property="rdfs:subClassOf" resource="#Case" style="visibility: hidden">
+						<div property="rdfs:label">Ter</div>
+						<div property="rdfs:subClassOf" resource="_:CaseTerDef">
+							<div about="_:CaseTerDef" property="rdf:type" resource="owl:Restriction">
+								<div property="owl:onProperty" resource="#CaseTer" />
+								<div property="owl:hasSelf" datatype="xsd:boolean">true</div>
+							</div>
+						</div>
 					</div>
 				
 			
@@ -965,8 +1145,14 @@ even more justified. Example is Turkish.
 			
 				
 					
-					<div about="#Ben" property="rdf:type" resource="#Case" style="visibility: hidden">
-						<div property="oliasystem:hasTagContaining">Case=Ben</div>
+					<div about="#CaseCau" property="rdfs:subClassOf" resource="#Case" style="visibility: hidden">
+						<div property="rdfs:label">Cau</div>
+						<div property="rdfs:subClassOf" resource="_:CaseCauDef">
+							<div about="_:CaseCauDef" property="rdf:type" resource="owl:Restriction">
+								<div property="owl:onProperty" resource="#CaseCau" />
+								<div property="owl:hasSelf" datatype="xsd:boolean">true</div>
+							</div>
+						</div>
 					</div>
 				
 			
@@ -979,7 +1165,31 @@ even more justified. Example is Turkish.
 			
 		
 	
-
+		
+		
+			
+				
+					
+					<div about="#CaseBen" property="rdfs:subClassOf" resource="#Case" style="visibility: hidden">
+						<div property="rdfs:label">Ben</div>
+						<div property="rdfs:subClassOf" resource="_:CaseBenDef">
+							<div about="_:CaseBenDef" property="rdf:type" resource="owl:Restriction">
+								<div property="owl:onProperty" resource="#CaseBen" />
+								<div property="owl:hasSelf" datatype="xsd:boolean">true</div>
+							</div>
+						</div>
+					</div>
+				
+			
+		
+			
+		
+	
+		
+		
+			
+		
+	
 
 `Case` is usually an inflectional feature of [nouns](u-pos/NOUN) and,
 depending on language, other parts of speech ([pronouns](u-pos/PRON),
@@ -1438,12 +1648,9 @@ The benefactive case corresponds to the English preposition _for_.
 	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_u-feat/Case.md" target="#">edit Case</a>
 </div>
 
-<div about="#hasDefinite" property="rdf:type" resource="owl:ObjectProperty">
-	<div property="rdfs:range" resource="#Definite" />
-</div>
 <div about="#Definite" property="rdfs:subClassOf" resource="#Concept">
 	<a id="al-u-feat/Definite" class="al-dest" />
-	<h2><code>Definite</code>: definiteness or state</h2>
+	<h2><code property="rdfs:label" lang="">Definite</code>: <div property="rdfs:label">definiteness or state</div></h2>
 	<div property="rdfs:comment">
 	
 	
@@ -1457,8 +1664,14 @@ The benefactive case corresponds to the English preposition _for_.
 			
 				
 					
-					<div about="#Ind" property="rdf:type" resource="#Definite" style="visibility: hidden">
-						<div property="oliasystem:hasTagContaining">Definite=Ind</div>
+					<div about="#DefiniteInd" property="rdfs:subClassOf" resource="#Definite" style="visibility: hidden">
+						<div property="rdfs:label">Ind</div>
+						<div property="rdfs:subClassOf" resource="_:DefiniteIndDef">
+							<div about="_:DefiniteIndDef" property="rdf:type" resource="owl:Restriction">
+								<div property="owl:onProperty" resource="#DefiniteInd" />
+								<div property="owl:hasSelf" datatype="xsd:boolean">true</div>
+							</div>
+						</div>
 					</div>
 				
 			
@@ -1476,8 +1689,14 @@ The benefactive case corresponds to the English preposition _for_.
 			
 				
 					
-					<div about="#Def" property="rdf:type" resource="#Definite" style="visibility: hidden">
-						<div property="oliasystem:hasTagContaining">Definite=Def</div>
+					<div about="#DefiniteDef" property="rdfs:subClassOf" resource="#Definite" style="visibility: hidden">
+						<div property="rdfs:label">Def</div>
+						<div property="rdfs:subClassOf" resource="_:DefiniteDefDef">
+							<div about="_:DefiniteDefDef" property="rdf:type" resource="owl:Restriction">
+								<div property="owl:onProperty" resource="#DefiniteDef" />
+								<div property="owl:hasSelf" datatype="xsd:boolean">true</div>
+							</div>
+						</div>
 					</div>
 				
 			
@@ -1495,8 +1714,14 @@ The benefactive case corresponds to the English preposition _for_.
 			
 				
 					
-					<div about="#Red" property="rdf:type" resource="#Definite" style="visibility: hidden">
-						<div property="oliasystem:hasTagContaining">Definite=Red</div>
+					<div about="#DefiniteRed" property="rdfs:subClassOf" resource="#Definite" style="visibility: hidden">
+						<div property="rdfs:label">Red</div>
+						<div property="rdfs:subClassOf" resource="_:DefiniteRedDef">
+							<div about="_:DefiniteRedDef" property="rdf:type" resource="owl:Restriction">
+								<div property="owl:onProperty" resource="#DefiniteRed" />
+								<div property="owl:hasSelf" datatype="xsd:boolean">true</div>
+							</div>
+						</div>
 					</div>
 				
 			
@@ -1520,8 +1745,14 @@ The benefactive case corresponds to the English preposition _for_.
 			
 				
 					
-					<div about="#Com" property="rdf:type" resource="#Definite" style="visibility: hidden">
-						<div property="oliasystem:hasTagContaining">Definite=Com</div>
+					<div about="#DefiniteCom" property="rdfs:subClassOf" resource="#Definite" style="visibility: hidden">
+						<div property="rdfs:label">Com</div>
+						<div property="rdfs:subClassOf" resource="_:DefiniteComDef">
+							<div about="_:DefiniteComDef" property="rdf:type" resource="owl:Restriction">
+								<div property="owl:onProperty" resource="#DefiniteCom" />
+								<div property="owl:hasSelf" datatype="xsd:boolean">true</div>
+							</div>
+						</div>
 					</div>
 				
 			
@@ -1540,7 +1771,6 @@ The benefactive case corresponds to the English preposition _for_.
 			
 		
 	
-
 
 Definiteness is typically a feature of nouns, adjectives and
 articles. Its value distinguishes whether we are talking about
@@ -1607,12 +1837,9 @@ et al.</a> page 3.
 	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_u-feat/Definite.md" target="#">edit Definite</a>
 </div>
 
-<div about="#hasDegree" property="rdf:type" resource="owl:ObjectProperty">
-	<div property="rdfs:range" resource="#Degree" />
-</div>
 <div about="#Degree" property="rdfs:subClassOf" resource="#Concept">
 	<a id="al-u-feat/Degree" class="al-dest" />
-	<h2><code>Degree</code>: degree of comparison</h2>
+	<h2><code property="rdfs:label" lang="">Degree</code>: <div property="rdfs:label">degree of comparison</div></h2>
 	<div property="rdfs:comment">
 	
 	
@@ -1626,8 +1853,14 @@ et al.</a> page 3.
 			
 				
 					
-					<div about="#Pos" property="rdf:type" resource="#Degree" style="visibility: hidden">
-						<div property="oliasystem:hasTagContaining">Degree=Pos</div>
+					<div about="#DegreePos" property="rdfs:subClassOf" resource="#Degree" style="visibility: hidden">
+						<div property="rdfs:label">Pos</div>
+						<div property="rdfs:subClassOf" resource="_:DegreePosDef">
+							<div about="_:DegreePosDef" property="rdf:type" resource="owl:Restriction">
+								<div property="owl:onProperty" resource="#DegreePos" />
+								<div property="owl:hasSelf" datatype="xsd:boolean">true</div>
+							</div>
+						</div>
 					</div>
 				
 			
@@ -1645,8 +1878,14 @@ et al.</a> page 3.
 			
 				
 					
-					<div about="#Cmp" property="rdf:type" resource="#Degree" style="visibility: hidden">
-						<div property="oliasystem:hasTagContaining">Degree=Cmp</div>
+					<div about="#DegreeCmp" property="rdfs:subClassOf" resource="#Degree" style="visibility: hidden">
+						<div property="rdfs:label">Cmp</div>
+						<div property="rdfs:subClassOf" resource="_:DegreeCmpDef">
+							<div about="_:DegreeCmpDef" property="rdf:type" resource="owl:Restriction">
+								<div property="owl:onProperty" resource="#DegreeCmp" />
+								<div property="owl:hasSelf" datatype="xsd:boolean">true</div>
+							</div>
+						</div>
 					</div>
 				
 			
@@ -1664,8 +1903,14 @@ et al.</a> page 3.
 			
 				
 					
-					<div about="#Sup" property="rdf:type" resource="#Degree" style="visibility: hidden">
-						<div property="oliasystem:hasTagContaining">Degree=Sup</div>
+					<div about="#DegreeSup" property="rdfs:subClassOf" resource="#Degree" style="visibility: hidden">
+						<div property="rdfs:label">Sup</div>
+						<div property="rdfs:subClassOf" resource="_:DegreeSupDef">
+							<div about="_:DegreeSupDef" property="rdf:type" resource="owl:Restriction">
+								<div property="owl:onProperty" resource="#DegreeSup" />
+								<div property="owl:hasSelf" datatype="xsd:boolean">true</div>
+							</div>
+						</div>
 					</div>
 				
 			
@@ -1683,8 +1928,14 @@ et al.</a> page 3.
 			
 				
 					
-					<div about="#Abs" property="rdf:type" resource="#Degree" style="visibility: hidden">
-						<div property="oliasystem:hasTagContaining">Degree=Abs</div>
+					<div about="#DegreeAbs" property="rdfs:subClassOf" resource="#Degree" style="visibility: hidden">
+						<div property="rdfs:label">Abs</div>
+						<div property="rdfs:subClassOf" resource="_:DegreeAbsDef">
+							<div about="_:DegreeAbsDef" property="rdf:type" resource="owl:Restriction">
+								<div property="owl:onProperty" resource="#DegreeAbs" />
+								<div property="owl:hasSelf" datatype="xsd:boolean">true</div>
+							</div>
+						</div>
 					</div>
 				
 			
@@ -1697,7 +1948,6 @@ et al.</a> page 3.
 			
 		
 	
-
 
 Degree of comparison is typically an inflectional feature of some
 [adjectives](u-pos/ADJ) and [adverbs](u-pos/ADV).
@@ -1751,12 +2001,9 @@ set of objects.
 	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_u-feat/Degree.md" target="#">edit Degree</a>
 </div>
 
-<div about="#hasGender" property="rdf:type" resource="owl:ObjectProperty">
-	<div property="rdfs:range" resource="#Gender" />
-</div>
 <div about="#Gender" property="rdfs:subClassOf" resource="#Concept">
 	<a id="al-u-feat/Gender" class="al-dest" />
-	<h2><code>Gender</code>: gender</h2>
+	<h2><code property="rdfs:label" lang="">Gender</code>: <div property="rdfs:label">gender</div></h2>
 	<div property="rdfs:comment">
 	
 	
@@ -1774,8 +2021,14 @@ set of objects.
 			
 				
 					
-					<div about="#Masc" property="rdf:type" resource="#Gender" style="visibility: hidden">
-						<div property="oliasystem:hasTagContaining">Gender=Masc</div>
+					<div about="#GenderMasc" property="rdfs:subClassOf" resource="#Gender" style="visibility: hidden">
+						<div property="rdfs:label">Masc</div>
+						<div property="rdfs:subClassOf" resource="_:GenderMascDef">
+							<div about="_:GenderMascDef" property="rdf:type" resource="owl:Restriction">
+								<div property="owl:onProperty" resource="#GenderMasc" />
+								<div property="owl:hasSelf" datatype="xsd:boolean">true</div>
+							</div>
+						</div>
 					</div>
 				
 			
@@ -1793,8 +2046,14 @@ set of objects.
 			
 				
 					
-					<div about="#Fem" property="rdf:type" resource="#Gender" style="visibility: hidden">
-						<div property="oliasystem:hasTagContaining">Gender=Fem</div>
+					<div about="#GenderFem" property="rdfs:subClassOf" resource="#Gender" style="visibility: hidden">
+						<div property="rdfs:label">Fem</div>
+						<div property="rdfs:subClassOf" resource="_:GenderFemDef">
+							<div about="_:GenderFemDef" property="rdf:type" resource="owl:Restriction">
+								<div property="owl:onProperty" resource="#GenderFem" />
+								<div property="owl:hasSelf" datatype="xsd:boolean">true</div>
+							</div>
+						</div>
 					</div>
 				
 			
@@ -1812,8 +2071,14 @@ set of objects.
 			
 				
 					
-					<div about="#Neut" property="rdf:type" resource="#Gender" style="visibility: hidden">
-						<div property="oliasystem:hasTagContaining">Gender=Neut</div>
+					<div about="#GenderNeut" property="rdfs:subClassOf" resource="#Gender" style="visibility: hidden">
+						<div property="rdfs:label">Neut</div>
+						<div property="rdfs:subClassOf" resource="_:GenderNeutDef">
+							<div about="_:GenderNeutDef" property="rdf:type" resource="owl:Restriction">
+								<div property="owl:onProperty" resource="#GenderNeut" />
+								<div property="owl:hasSelf" datatype="xsd:boolean">true</div>
+							</div>
+						</div>
 					</div>
 				
 			
@@ -1831,8 +2096,14 @@ set of objects.
 			
 				
 					
-					<div about="#Com" property="rdf:type" resource="#Gender" style="visibility: hidden">
-						<div property="oliasystem:hasTagContaining">Gender=Com</div>
+					<div about="#GenderCom" property="rdfs:subClassOf" resource="#Gender" style="visibility: hidden">
+						<div property="rdfs:label">Com</div>
+						<div property="rdfs:subClassOf" resource="_:GenderComDef">
+							<div about="_:GenderComDef" property="rdf:type" resource="owl:Restriction">
+								<div property="owl:onProperty" resource="#GenderCom" />
+								<div property="owl:hasSelf" datatype="xsd:boolean">true</div>
+							</div>
+						</div>
 					</div>
 				
 			
@@ -1842,7 +2113,6 @@ set of objects.
 			
 		
 	
-
 
 `Gender` is usually a lexical feature of [nouns](u-pos/NOUN) and inflectional feature
 of other parts of speech ([pronouns](u-pos/PRON),
@@ -1921,12 +2191,9 @@ or tag individual instances of _grande_ as either masculine or feminine, dependi
 	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_u-feat/Gender.md" target="#">edit Gender</a>
 </div>
 
-<div about="#hasMood" property="rdf:type" resource="owl:ObjectProperty">
-	<div property="rdfs:range" resource="#Mood" />
-</div>
 <div about="#Mood" property="rdfs:subClassOf" resource="#Concept">
 	<a id="al-u-feat/Mood" class="al-dest" />
-	<h2><code>Mood</code>: mood</h2>
+	<h2><code property="rdfs:label" lang="">Mood</code>: <div property="rdfs:label">mood</div></h2>
 	<div property="rdfs:comment">
 	
 	
@@ -1940,8 +2207,14 @@ or tag individual instances of _grande_ as either masculine or feminine, dependi
 			
 				
 					
-					<div about="#Ind" property="rdf:type" resource="#Mood" style="visibility: hidden">
-						<div property="oliasystem:hasTagContaining">Mood=Ind</div>
+					<div about="#MoodInd" property="rdfs:subClassOf" resource="#Mood" style="visibility: hidden">
+						<div property="rdfs:label">Ind</div>
+						<div property="rdfs:subClassOf" resource="_:MoodIndDef">
+							<div about="_:MoodIndDef" property="rdf:type" resource="owl:Restriction">
+								<div property="owl:onProperty" resource="#MoodInd" />
+								<div property="owl:hasSelf" datatype="xsd:boolean">true</div>
+							</div>
+						</div>
 					</div>
 				
 			
@@ -1959,8 +2232,14 @@ or tag individual instances of _grande_ as either masculine or feminine, dependi
 			
 				
 					
-					<div about="#Imp" property="rdf:type" resource="#Mood" style="visibility: hidden">
-						<div property="oliasystem:hasTagContaining">Mood=Imp</div>
+					<div about="#MoodImp" property="rdfs:subClassOf" resource="#Mood" style="visibility: hidden">
+						<div property="rdfs:label">Imp</div>
+						<div property="rdfs:subClassOf" resource="_:MoodImpDef">
+							<div about="_:MoodImpDef" property="rdf:type" resource="owl:Restriction">
+								<div property="owl:onProperty" resource="#MoodImp" />
+								<div property="owl:hasSelf" datatype="xsd:boolean">true</div>
+							</div>
+						</div>
 					</div>
 				
 			
@@ -1978,8 +2257,14 @@ or tag individual instances of _grande_ as either masculine or feminine, dependi
 			
 				
 					
-					<div about="#Cnd" property="rdf:type" resource="#Mood" style="visibility: hidden">
-						<div property="oliasystem:hasTagContaining">Mood=Cnd</div>
+					<div about="#MoodCnd" property="rdfs:subClassOf" resource="#Mood" style="visibility: hidden">
+						<div property="rdfs:label">Cnd</div>
+						<div property="rdfs:subClassOf" resource="_:MoodCndDef">
+							<div about="_:MoodCndDef" property="rdf:type" resource="owl:Restriction">
+								<div property="owl:onProperty" resource="#MoodCnd" />
+								<div property="owl:hasSelf" datatype="xsd:boolean">true</div>
+							</div>
+						</div>
 					</div>
 				
 			
@@ -1997,8 +2282,14 @@ or tag individual instances of _grande_ as either masculine or feminine, dependi
 			
 				
 					
-					<div about="#Pot" property="rdf:type" resource="#Mood" style="visibility: hidden">
-						<div property="oliasystem:hasTagContaining">Mood=Pot</div>
+					<div about="#MoodPot" property="rdfs:subClassOf" resource="#Mood" style="visibility: hidden">
+						<div property="rdfs:label">Pot</div>
+						<div property="rdfs:subClassOf" resource="_:MoodPotDef">
+							<div about="_:MoodPotDef" property="rdf:type" resource="owl:Restriction">
+								<div property="owl:onProperty" resource="#MoodPot" />
+								<div property="owl:hasSelf" datatype="xsd:boolean">true</div>
+							</div>
+						</div>
 					</div>
 				
 			
@@ -2011,8 +2302,14 @@ or tag individual instances of _grande_ as either masculine or feminine, dependi
 			
 				
 					
-					<div about="#Sub" property="rdf:type" resource="#Mood" style="visibility: hidden">
-						<div property="oliasystem:hasTagContaining">Mood=Sub</div>
+					<div about="#MoodSub" property="rdfs:subClassOf" resource="#Mood" style="visibility: hidden">
+						<div property="rdfs:label">Sub</div>
+						<div property="rdfs:subClassOf" resource="_:MoodSubDef">
+							<div about="_:MoodSubDef" property="rdf:type" resource="owl:Restriction">
+								<div property="owl:onProperty" resource="#MoodSub" />
+								<div property="owl:hasSelf" datatype="xsd:boolean">true</div>
+							</div>
+						</div>
 					</div>
 				
 			
@@ -2030,8 +2327,14 @@ or tag individual instances of _grande_ as either masculine or feminine, dependi
 			
 				
 					
-					<div about="#Jus" property="rdf:type" resource="#Mood" style="visibility: hidden">
-						<div property="oliasystem:hasTagContaining">Mood=Jus</div>
+					<div about="#MoodJus" property="rdfs:subClassOf" resource="#Mood" style="visibility: hidden">
+						<div property="rdfs:label">Jus</div>
+						<div property="rdfs:subClassOf" resource="_:MoodJusDef">
+							<div about="_:MoodJusDef" property="rdf:type" resource="owl:Restriction">
+								<div property="owl:onProperty" resource="#MoodJus" />
+								<div property="owl:hasSelf" datatype="xsd:boolean">true</div>
+							</div>
+						</div>
 					</div>
 				
 			
@@ -2044,8 +2347,14 @@ or tag individual instances of _grande_ as either masculine or feminine, dependi
 			
 				
 					
-					<div about="#Qot" property="rdf:type" resource="#Mood" style="visibility: hidden">
-						<div property="oliasystem:hasTagContaining">Mood=Qot</div>
+					<div about="#MoodQot" property="rdfs:subClassOf" resource="#Mood" style="visibility: hidden">
+						<div property="rdfs:label">Qot</div>
+						<div property="rdfs:subClassOf" resource="_:MoodQotDef">
+							<div about="_:MoodQotDef" property="rdf:type" resource="owl:Restriction">
+								<div property="owl:onProperty" resource="#MoodQot" />
+								<div property="owl:hasSelf" datatype="xsd:boolean">true</div>
+							</div>
+						</div>
 					</div>
 				
 			
@@ -2058,8 +2367,14 @@ or tag individual instances of _grande_ as either masculine or feminine, dependi
 			
 				
 					
-					<div about="#Opt" property="rdf:type" resource="#Mood" style="visibility: hidden">
-						<div property="oliasystem:hasTagContaining">Mood=Opt</div>
+					<div about="#MoodOpt" property="rdfs:subClassOf" resource="#Mood" style="visibility: hidden">
+						<div property="rdfs:label">Opt</div>
+						<div property="rdfs:subClassOf" resource="_:MoodOptDef">
+							<div about="_:MoodOptDef" property="rdf:type" resource="owl:Restriction">
+								<div property="owl:onProperty" resource="#MoodOpt" />
+								<div property="owl:hasSelf" datatype="xsd:boolean">true</div>
+							</div>
+						</div>
 					</div>
 				
 			
@@ -2072,8 +2387,14 @@ or tag individual instances of _grande_ as either masculine or feminine, dependi
 			
 				
 					
-					<div about="#Des" property="rdf:type" resource="#Mood" style="visibility: hidden">
-						<div property="oliasystem:hasTagContaining">Mood=Des</div>
+					<div about="#MoodDes" property="rdfs:subClassOf" resource="#Mood" style="visibility: hidden">
+						<div property="rdfs:label">Des</div>
+						<div property="rdfs:subClassOf" resource="_:MoodDesDef">
+							<div about="_:MoodDesDef" property="rdf:type" resource="owl:Restriction">
+								<div property="owl:onProperty" resource="#MoodDes" />
+								<div property="owl:hasSelf" datatype="xsd:boolean">true</div>
+							</div>
+						</div>
 					</div>
 				
 			
@@ -2088,8 +2409,14 @@ or tag individual instances of _grande_ as either masculine or feminine, dependi
 			
 				
 					
-					<div about="#Nec" property="rdf:type" resource="#Mood" style="visibility: hidden">
-						<div property="oliasystem:hasTagContaining">Mood=Nec</div>
+					<div about="#MoodNec" property="rdfs:subClassOf" resource="#Mood" style="visibility: hidden">
+						<div property="rdfs:label">Nec</div>
+						<div property="rdfs:subClassOf" resource="_:MoodNecDef">
+							<div about="_:MoodNecDef" property="rdf:type" resource="owl:Restriction">
+								<div property="owl:onProperty" resource="#MoodNec" />
+								<div property="owl:hasSelf" datatype="xsd:boolean">true</div>
+							</div>
+						</div>
 					</div>
 				
 			
@@ -2099,7 +2426,6 @@ or tag individual instances of _grande_ as either masculine or feminine, dependi
 			
 		
 	
-
 
 Mood is a feature that expresses modality and subclassifies finite
 verb forms.
@@ -2191,12 +2517,9 @@ have to": "He <b>must</b><b> come</b>." Used e.g. in Turkish.
 	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_u-feat/Mood.md" target="#">edit Mood</a>
 </div>
 
-<div about="#hasNegative" property="rdf:type" resource="owl:ObjectProperty">
-	<div property="rdfs:range" resource="#Negative" />
-</div>
 <div about="#Negative" property="rdfs:subClassOf" resource="#Concept">
 	<a id="al-u-feat/Negative" class="al-dest" />
-	<h2><code>Negative</code>: whether the word can be or is negated</h2>
+	<h2><code property="rdfs:label" lang="">Negative</code>: <div property="rdfs:label">whether the word can be or is negated</div></h2>
 	<div property="rdfs:comment">
 	
 	
@@ -2212,8 +2535,14 @@ have to": "He <b>must</b><b> come</b>." Used e.g. in Turkish.
 			
 				
 					
-					<div about="#Pos" property="rdf:type" resource="#Negative" style="visibility: hidden">
-						<div property="oliasystem:hasTagContaining">Negative=Pos</div>
+					<div about="#NegativePos" property="rdfs:subClassOf" resource="#Negative" style="visibility: hidden">
+						<div property="rdfs:label">Pos</div>
+						<div property="rdfs:subClassOf" resource="_:NegativePosDef">
+							<div about="_:NegativePosDef" property="rdf:type" resource="owl:Restriction">
+								<div property="owl:onProperty" resource="#NegativePos" />
+								<div property="owl:hasSelf" datatype="xsd:boolean">true</div>
+							</div>
+						</div>
 					</div>
 				
 			
@@ -2238,7 +2567,6 @@ have to": "He <b>must</b><b> come</b>." Used e.g. in Turkish.
 			
 		
 	
-
 
 Negativeness is typically a feature of [verbs](u-pos/VERB),
 [adjectives](u-pos/ADJ), sometimes also [adverbs](u-pos/ADV) and
@@ -2274,12 +2602,9 @@ The negativeness feature could be also used to distinguish response
 	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_u-feat/Negative.md" target="#">edit Negative</a>
 </div>
 
-<div about="#hasNumType" property="rdf:type" resource="owl:ObjectProperty">
-	<div property="rdfs:range" resource="#NumType" />
-</div>
 <div about="#NumType" property="rdfs:subClassOf" resource="#Concept">
 	<a id="al-u-feat/NumType" class="al-dest" />
-	<h2><code>NumType</code>: numeral type</h2>
+	<h2><code property="rdfs:label" lang="">NumType</code>: <div property="rdfs:label">numeral type</div></h2>
 	<div property="rdfs:comment">
 	
 	
@@ -2305,8 +2630,14 @@ The negativeness feature could be also used to distinguish response
 			
 				
 					
-					<div about="#Card" property="rdf:type" resource="#NumType" style="visibility: hidden">
-						<div property="oliasystem:hasTagContaining">NumType=Card</div>
+					<div about="#NumTypeCard" property="rdfs:subClassOf" resource="#NumType" style="visibility: hidden">
+						<div property="rdfs:label">Card</div>
+						<div property="rdfs:subClassOf" resource="_:NumTypeCardDef">
+							<div about="_:NumTypeCardDef" property="rdf:type" resource="owl:Restriction">
+								<div property="owl:onProperty" resource="#NumTypeCard" />
+								<div property="owl:hasSelf" datatype="xsd:boolean">true</div>
+							</div>
+						</div>
 					</div>
 				
 			
@@ -2324,8 +2655,14 @@ The negativeness feature could be also used to distinguish response
 			
 				
 					
-					<div about="#Ord" property="rdf:type" resource="#NumType" style="visibility: hidden">
-						<div property="oliasystem:hasTagContaining">NumType=Ord</div>
+					<div about="#NumTypeOrd" property="rdfs:subClassOf" resource="#NumType" style="visibility: hidden">
+						<div property="rdfs:label">Ord</div>
+						<div property="rdfs:subClassOf" resource="_:NumTypeOrdDef">
+							<div about="_:NumTypeOrdDef" property="rdf:type" resource="owl:Restriction">
+								<div property="owl:onProperty" resource="#NumTypeOrd" />
+								<div property="owl:hasSelf" datatype="xsd:boolean">true</div>
+							</div>
+						</div>
 					</div>
 				
 			
@@ -2347,8 +2684,14 @@ The negativeness feature could be also used to distinguish response
 			
 				
 					
-					<div about="#Mult" property="rdf:type" resource="#NumType" style="visibility: hidden">
-						<div property="oliasystem:hasTagContaining">NumType=Mult</div>
+					<div about="#NumTypeMult" property="rdfs:subClassOf" resource="#NumType" style="visibility: hidden">
+						<div property="rdfs:label">Mult</div>
+						<div property="rdfs:subClassOf" resource="_:NumTypeMultDef">
+							<div about="_:NumTypeMultDef" property="rdf:type" resource="owl:Restriction">
+								<div property="owl:onProperty" resource="#NumTypeMult" />
+								<div property="owl:hasSelf" datatype="xsd:boolean">true</div>
+							</div>
+						</div>
 					</div>
 				
 			
@@ -2366,8 +2709,14 @@ The negativeness feature could be also used to distinguish response
 			
 				
 					
-					<div about="#Frac" property="rdf:type" resource="#NumType" style="visibility: hidden">
-						<div property="oliasystem:hasTagContaining">NumType=Frac</div>
+					<div about="#NumTypeFrac" property="rdfs:subClassOf" resource="#NumType" style="visibility: hidden">
+						<div property="rdfs:label">Frac</div>
+						<div property="rdfs:subClassOf" resource="_:NumTypeFracDef">
+							<div about="_:NumTypeFracDef" property="rdf:type" resource="owl:Restriction">
+								<div property="owl:onProperty" resource="#NumTypeFrac" />
+								<div property="owl:hasSelf" datatype="xsd:boolean">true</div>
+							</div>
+						</div>
 					</div>
 				
 			
@@ -2385,8 +2734,14 @@ The negativeness feature could be also used to distinguish response
 			
 				
 					
-					<div about="#Sets" property="rdf:type" resource="#NumType" style="visibility: hidden">
-						<div property="oliasystem:hasTagContaining">NumType=Sets</div>
+					<div about="#NumTypeSets" property="rdfs:subClassOf" resource="#NumType" style="visibility: hidden">
+						<div property="rdfs:label">Sets</div>
+						<div property="rdfs:subClassOf" resource="_:NumTypeSetsDef">
+							<div about="_:NumTypeSetsDef" property="rdf:type" resource="owl:Restriction">
+								<div property="owl:onProperty" resource="#NumTypeSets" />
+								<div property="owl:hasSelf" datatype="xsd:boolean">true</div>
+							</div>
+						</div>
 					</div>
 				
 			
@@ -2406,8 +2761,14 @@ The negativeness feature could be also used to distinguish response
 			
 				
 					
-					<div about="#Dist" property="rdf:type" resource="#NumType" style="visibility: hidden">
-						<div property="oliasystem:hasTagContaining">NumType=Dist</div>
+					<div about="#NumTypeDist" property="rdfs:subClassOf" resource="#NumType" style="visibility: hidden">
+						<div property="rdfs:label">Dist</div>
+						<div property="rdfs:subClassOf" resource="_:NumTypeDistDef">
+							<div about="_:NumTypeDistDef" property="rdf:type" resource="owl:Restriction">
+								<div property="owl:onProperty" resource="#NumTypeDist" />
+								<div property="owl:hasSelf" datatype="xsd:boolean">true</div>
+							</div>
+						</div>
 					</div>
 				
 			
@@ -2425,8 +2786,14 @@ The negativeness feature could be also used to distinguish response
 			
 				
 					
-					<div about="#Range" property="rdf:type" resource="#NumType" style="visibility: hidden">
-						<div property="oliasystem:hasTagContaining">NumType=Range</div>
+					<div about="#NumTypeRange" property="rdfs:subClassOf" resource="#NumType" style="visibility: hidden">
+						<div property="rdfs:label">Range</div>
+						<div property="rdfs:subClassOf" resource="_:NumTypeRangeDef">
+							<div about="_:NumTypeRangeDef" property="rdf:type" resource="owl:Restriction">
+								<div property="owl:onProperty" resource="#NumTypeRange" />
+								<div property="owl:hasSelf" datatype="xsd:boolean">true</div>
+							</div>
+						</div>
 					</div>
 				
 			
@@ -2444,8 +2811,14 @@ The negativeness feature could be also used to distinguish response
 			
 				
 					
-					<div about="#Gen" property="rdf:type" resource="#NumType" style="visibility: hidden">
-						<div property="oliasystem:hasTagContaining">NumType=Gen</div>
+					<div about="#NumTypeGen" property="rdfs:subClassOf" resource="#NumType" style="visibility: hidden">
+						<div property="rdfs:label">Gen</div>
+						<div property="rdfs:subClassOf" resource="_:NumTypeGenDef">
+							<div about="_:NumTypeGenDef" property="rdf:type" resource="owl:Restriction">
+								<div property="owl:onProperty" resource="#NumTypeGen" />
+								<div property="owl:hasSelf" datatype="xsd:boolean">true</div>
+							</div>
+						</div>
 					</div>
 				
 			
@@ -2460,7 +2833,6 @@ The negativeness feature could be also used to distinguish response
 			
 		
 	
-
 
 Some languages (especially Slavic) have a complex system of
 [numerals](u-pos/NUM). For example, in the school grammar of Czech,
@@ -2583,12 +2955,9 @@ mentioned above.)
 	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_u-feat/NumType.md" target="#">edit NumType</a>
 </div>
 
-<div about="#hasNumber" property="rdf:type" resource="owl:ObjectProperty">
-	<div property="rdfs:range" resource="#Number" />
-</div>
 <div about="#Number" property="rdfs:subClassOf" resource="#Concept">
 	<a id="al-u-feat/Number" class="al-dest" />
-	<h2><code>Number</code>: number</h2>
+	<h2><code property="rdfs:label" lang="">Number</code>: <div property="rdfs:label">number</div></h2>
 	<div property="rdfs:comment">
 	
 	
@@ -2604,8 +2973,14 @@ mentioned above.)
 			
 				
 					
-					<div about="#Sing" property="rdf:type" resource="#Number" style="visibility: hidden">
-						<div property="oliasystem:hasTagContaining">Number=Sing</div>
+					<div about="#NumberSing" property="rdfs:subClassOf" resource="#Number" style="visibility: hidden">
+						<div property="rdfs:label">Sing</div>
+						<div property="rdfs:subClassOf" resource="_:NumberSingDef">
+							<div about="_:NumberSingDef" property="rdf:type" resource="owl:Restriction">
+								<div property="owl:onProperty" resource="#NumberSing" />
+								<div property="owl:hasSelf" datatype="xsd:boolean">true</div>
+							</div>
+						</div>
 					</div>
 				
 			
@@ -2623,8 +2998,14 @@ mentioned above.)
 			
 				
 					
-					<div about="#Plur" property="rdf:type" resource="#Number" style="visibility: hidden">
-						<div property="oliasystem:hasTagContaining">Number=Plur</div>
+					<div about="#NumberPlur" property="rdfs:subClassOf" resource="#Number" style="visibility: hidden">
+						<div property="rdfs:label">Plur</div>
+						<div property="rdfs:subClassOf" resource="_:NumberPlurDef">
+							<div about="_:NumberPlurDef" property="rdf:type" resource="owl:Restriction">
+								<div property="owl:onProperty" resource="#NumberPlur" />
+								<div property="owl:hasSelf" datatype="xsd:boolean">true</div>
+							</div>
+						</div>
 					</div>
 				
 			
@@ -2642,8 +3023,14 @@ mentioned above.)
 			
 				
 					
-					<div about="#Dual" property="rdf:type" resource="#Number" style="visibility: hidden">
-						<div property="oliasystem:hasTagContaining">Number=Dual</div>
+					<div about="#NumberDual" property="rdfs:subClassOf" resource="#Number" style="visibility: hidden">
+						<div property="rdfs:label">Dual</div>
+						<div property="rdfs:subClassOf" resource="_:NumberDualDef">
+							<div about="_:NumberDualDef" property="rdf:type" resource="owl:Restriction">
+								<div property="owl:onProperty" resource="#NumberDual" />
+								<div property="owl:hasSelf" datatype="xsd:boolean">true</div>
+							</div>
+						</div>
 					</div>
 				
 			
@@ -2661,8 +3048,14 @@ mentioned above.)
 			
 				
 					
-					<div about="#Ptan" property="rdf:type" resource="#Number" style="visibility: hidden">
-						<div property="oliasystem:hasTagContaining">Number=Ptan</div>
+					<div about="#NumberPtan" property="rdfs:subClassOf" resource="#Number" style="visibility: hidden">
+						<div property="rdfs:label">Ptan</div>
+						<div property="rdfs:subClassOf" resource="_:NumberPtanDef">
+							<div about="_:NumberPtanDef" property="rdf:type" resource="owl:Restriction">
+								<div property="owl:onProperty" resource="#NumberPtan" />
+								<div property="owl:hasSelf" datatype="xsd:boolean">true</div>
+							</div>
+						</div>
 					</div>
 				
 			
@@ -2682,8 +3075,14 @@ mentioned above.)
 			
 				
 					
-					<div about="#Coll" property="rdf:type" resource="#Number" style="visibility: hidden">
-						<div property="oliasystem:hasTagContaining">Number=Coll</div>
+					<div about="#NumberColl" property="rdfs:subClassOf" resource="#Number" style="visibility: hidden">
+						<div property="rdfs:label">Coll</div>
+						<div property="rdfs:subClassOf" resource="_:NumberCollDef">
+							<div about="_:NumberCollDef" property="rdf:type" resource="owl:Restriction">
+								<div property="owl:onProperty" resource="#NumberColl" />
+								<div property="owl:hasSelf" datatype="xsd:boolean">true</div>
+							</div>
+						</div>
 					</div>
 				
 			
@@ -2696,7 +3095,6 @@ mentioned above.)
 			
 		
 	
-
 
 `Number` is usually an inflectional feature of [nouns](u-pos/NOUN) and,
 depending on language, other parts of speech ([pronouns](u-pos/PRON),
@@ -2763,12 +3161,9 @@ semantically plausible. Sometimes, the plural form exists and means
 	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_u-feat/Number.md" target="#">edit Number</a>
 </div>
 
-<div about="#hasPerson" property="rdf:type" resource="owl:ObjectProperty">
-	<div property="rdfs:range" resource="#Person" />
-</div>
 <div about="#Person" property="rdfs:subClassOf" resource="#Concept">
 	<a id="al-u-feat/Person" class="al-dest" />
-	<h2><code>Person</code>: person</h2>
+	<h2><code property="rdfs:label" lang="">Person</code>: <div property="rdfs:label">person</div></h2>
 	<div property="rdfs:comment">
 	
 	
@@ -2782,8 +3177,14 @@ semantically plausible. Sometimes, the plural form exists and means
 			
 				
 					
-					<div about="#1" property="rdf:type" resource="#Person" style="visibility: hidden">
-						<div property="oliasystem:hasTagContaining">Person=1</div>
+					<div about="#Person1" property="rdfs:subClassOf" resource="#Person" style="visibility: hidden">
+						<div property="rdfs:label">1</div>
+						<div property="rdfs:subClassOf" resource="_:Person1Def">
+							<div about="_:Person1Def" property="rdf:type" resource="owl:Restriction">
+								<div property="owl:onProperty" resource="#Person1" />
+								<div property="owl:hasSelf" datatype="xsd:boolean">true</div>
+							</div>
+						</div>
 					</div>
 				
 			
@@ -2803,8 +3204,14 @@ semantically plausible. Sometimes, the plural form exists and means
 			
 				
 					
-					<div about="#2" property="rdf:type" resource="#Person" style="visibility: hidden">
-						<div property="oliasystem:hasTagContaining">Person=2</div>
+					<div about="#Person2" property="rdfs:subClassOf" resource="#Person" style="visibility: hidden">
+						<div property="rdfs:label">2</div>
+						<div property="rdfs:subClassOf" resource="_:Person2Def">
+							<div about="_:Person2Def" property="rdf:type" resource="owl:Restriction">
+								<div property="owl:onProperty" resource="#Person2" />
+								<div property="owl:hasSelf" datatype="xsd:boolean">true</div>
+							</div>
+						</div>
 					</div>
 				
 			
@@ -2822,8 +3229,14 @@ semantically plausible. Sometimes, the plural form exists and means
 			
 				
 					
-					<div about="#3" property="rdf:type" resource="#Person" style="visibility: hidden">
-						<div property="oliasystem:hasTagContaining">Person=3</div>
+					<div about="#Person3" property="rdfs:subClassOf" resource="#Person" style="visibility: hidden">
+						<div property="rdfs:label">3</div>
+						<div property="rdfs:subClassOf" resource="_:Person3Def">
+							<div about="_:Person3Def" property="rdf:type" resource="owl:Restriction">
+								<div property="owl:onProperty" resource="#Person3" />
+								<div property="owl:hasSelf" datatype="xsd:boolean">true</div>
+							</div>
+						</div>
 					</div>
 				
 			
@@ -2836,7 +3249,6 @@ semantically plausible. Sometimes, the plural form exists and means
 			
 		
 	
-
 
 Person is typically feature of personal and possessive
 [pronouns](u-pos/PRON) / [determiners](u-pos/DET), and of [verbs](u-pos/VERB). On verbs it is in
@@ -2886,12 +3298,9 @@ speakers nor addressees.
 	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_u-feat/Person.md" target="#">edit Person</a>
 </div>
 
-<div about="#hasPoss" property="rdf:type" resource="owl:ObjectProperty">
-	<div property="rdfs:range" resource="#Poss" />
-</div>
 <div about="#Poss" property="rdfs:subClassOf" resource="#Concept">
 	<a id="al-u-feat/Poss" class="al-dest" />
-	<h2><code>Poss</code>: possessive</h2>
+	<h2><code property="rdfs:label" lang="">Poss</code>: <div property="rdfs:label">possessive</div></h2>
 	<div property="rdfs:comment">
 	
 	
@@ -2905,8 +3314,14 @@ speakers nor addressees.
 			
 				
 					
-					<div about="#Yes" property="rdf:type" resource="#Poss" style="visibility: hidden">
-						<div property="oliasystem:hasTagContaining">Poss=Yes</div>
+					<div about="#PossYes" property="rdfs:subClassOf" resource="#Poss" style="visibility: hidden">
+						<div property="rdfs:label">Yes</div>
+						<div property="rdfs:subClassOf" resource="_:PossYesDef">
+							<div about="_:PossYesDef" property="rdf:type" resource="owl:Restriction">
+								<div property="owl:onProperty" resource="#PossYes" />
+								<div property="owl:hasSelf" datatype="xsd:boolean">true</div>
+							</div>
+						</div>
 					</div>
 				
 			
@@ -2923,7 +3338,6 @@ speakers nor addressees.
 			
 		
 	
-
 
 Boolean feature of pronouns, determiners or adjectives.  It tells
 whether the word is possessive.
@@ -2949,12 +3363,9 @@ means that empty value has the `No` meaning.)
 	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_u-feat/Poss.md" target="#">edit Poss</a>
 </div>
 
-<div about="#hasPronType" property="rdf:type" resource="owl:ObjectProperty">
-	<div property="rdfs:range" resource="#PronType" />
-</div>
 <div about="#PronType" property="rdfs:subClassOf" resource="#Concept">
 	<a id="al-u-feat/PronType" class="al-dest" />
-	<h2><code>PronType</code>: pronominal type</h2>
+	<h2><code property="rdfs:label" lang="">PronType</code>: <div property="rdfs:label">pronominal type</div></h2>
 	<div property="rdfs:comment">
 	
 	
@@ -2968,8 +3379,14 @@ means that empty value has the `No` meaning.)
 			
 				
 					
-					<div about="#Prs" property="rdf:type" resource="#PronType" style="visibility: hidden">
-						<div property="oliasystem:hasTagContaining">PronType=Prs</div>
+					<div about="#PronTypePrs" property="rdfs:subClassOf" resource="#PronType" style="visibility: hidden">
+						<div property="rdfs:label">Prs</div>
+						<div property="rdfs:subClassOf" resource="_:PronTypePrsDef">
+							<div about="_:PronTypePrsDef" property="rdf:type" resource="owl:Restriction">
+								<div property="owl:onProperty" resource="#PronTypePrs" />
+								<div property="owl:hasSelf" datatype="xsd:boolean">true</div>
+							</div>
+						</div>
 					</div>
 				
 			
@@ -2989,8 +3406,14 @@ means that empty value has the `No` meaning.)
 			
 				
 					
-					<div about="#Rcp" property="rdf:type" resource="#PronType" style="visibility: hidden">
-						<div property="oliasystem:hasTagContaining">PronType=Rcp</div>
+					<div about="#PronTypeRcp" property="rdfs:subClassOf" resource="#PronType" style="visibility: hidden">
+						<div property="rdfs:label">Rcp</div>
+						<div property="rdfs:subClassOf" resource="_:PronTypeRcpDef">
+							<div about="_:PronTypeRcpDef" property="rdf:type" resource="owl:Restriction">
+								<div property="owl:onProperty" resource="#PronTypeRcp" />
+								<div property="owl:hasSelf" datatype="xsd:boolean">true</div>
+							</div>
+						</div>
 					</div>
 				
 			
@@ -3008,8 +3431,14 @@ means that empty value has the `No` meaning.)
 			
 				
 					
-					<div about="#Art" property="rdf:type" resource="#PronType" style="visibility: hidden">
-						<div property="oliasystem:hasTagContaining">PronType=Art</div>
+					<div about="#PronTypeArt" property="rdfs:subClassOf" resource="#PronType" style="visibility: hidden">
+						<div property="rdfs:label">Art</div>
+						<div property="rdfs:subClassOf" resource="_:PronTypeArtDef">
+							<div about="_:PronTypeArtDef" property="rdf:type" resource="owl:Restriction">
+								<div property="owl:onProperty" resource="#PronTypeArt" />
+								<div property="owl:hasSelf" datatype="xsd:boolean">true</div>
+							</div>
+						</div>
 					</div>
 				
 			
@@ -3027,29 +3456,14 @@ means that empty value has the `No` meaning.)
 			
 				
 					
-					<div about="#Int" property="rdf:type" resource="#PronType" style="visibility: hidden">
-						<div property="oliasystem:hasTagContaining">PronType=Int</div>
-					</div>
-				
-			
-		
-			
-		
-	
-		
-		
-			
-		
-			
-		
-	
-		
-		
-			
-				
-					
-					<div about="#Rel" property="rdf:type" resource="#PronType" style="visibility: hidden">
-						<div property="oliasystem:hasTagContaining">PronType=Rel</div>
+					<div about="#PronTypeInt" property="rdfs:subClassOf" resource="#PronType" style="visibility: hidden">
+						<div property="rdfs:label">Int</div>
+						<div property="rdfs:subClassOf" resource="_:PronTypeIntDef">
+							<div about="_:PronTypeIntDef" property="rdf:type" resource="owl:Restriction">
+								<div property="owl:onProperty" resource="#PronTypeInt" />
+								<div property="owl:hasSelf" datatype="xsd:boolean">true</div>
+							</div>
+						</div>
 					</div>
 				
 			
@@ -3069,8 +3483,41 @@ means that empty value has the `No` meaning.)
 			
 				
 					
-					<div about="#Dem" property="rdf:type" resource="#PronType" style="visibility: hidden">
-						<div property="oliasystem:hasTagContaining">PronType=Dem</div>
+					<div about="#PronTypeRel" property="rdfs:subClassOf" resource="#PronType" style="visibility: hidden">
+						<div property="rdfs:label">Rel</div>
+						<div property="rdfs:subClassOf" resource="_:PronTypeRelDef">
+							<div about="_:PronTypeRelDef" property="rdf:type" resource="owl:Restriction">
+								<div property="owl:onProperty" resource="#PronTypeRel" />
+								<div property="owl:hasSelf" datatype="xsd:boolean">true</div>
+							</div>
+						</div>
+					</div>
+				
+			
+		
+			
+		
+	
+		
+		
+			
+		
+			
+		
+	
+		
+		
+			
+				
+					
+					<div about="#PronTypeDem" property="rdfs:subClassOf" resource="#PronType" style="visibility: hidden">
+						<div property="rdfs:label">Dem</div>
+						<div property="rdfs:subClassOf" resource="_:PronTypeDemDef">
+							<div about="_:PronTypeDemDef" property="rdf:type" resource="owl:Restriction">
+								<div property="owl:onProperty" resource="#PronTypeDem" />
+								<div property="owl:hasSelf" datatype="xsd:boolean">true</div>
+							</div>
+						</div>
 					</div>
 				
 			
@@ -3088,8 +3535,14 @@ means that empty value has the `No` meaning.)
 			
 				
 					
-					<div about="#Tot" property="rdf:type" resource="#PronType" style="visibility: hidden">
-						<div property="oliasystem:hasTagContaining">PronType=Tot</div>
+					<div about="#PronTypeTot" property="rdfs:subClassOf" resource="#PronType" style="visibility: hidden">
+						<div property="rdfs:label">Tot</div>
+						<div property="rdfs:subClassOf" resource="_:PronTypeTotDef">
+							<div about="_:PronTypeTotDef" property="rdf:type" resource="owl:Restriction">
+								<div property="owl:onProperty" resource="#PronTypeTot" />
+								<div property="owl:hasSelf" datatype="xsd:boolean">true</div>
+							</div>
+						</div>
 					</div>
 				
 			
@@ -3107,8 +3560,14 @@ means that empty value has the `No` meaning.)
 			
 				
 					
-					<div about="#Neg" property="rdf:type" resource="#PronType" style="visibility: hidden">
-						<div property="oliasystem:hasTagContaining">PronType=Neg</div>
+					<div about="#PronTypeNeg" property="rdfs:subClassOf" resource="#PronType" style="visibility: hidden">
+						<div property="rdfs:label">Neg</div>
+						<div property="rdfs:subClassOf" resource="_:PronTypeNegDef">
+							<div about="_:PronTypeNegDef" property="rdf:type" resource="owl:Restriction">
+								<div property="owl:onProperty" resource="#PronTypeNeg" />
+								<div property="owl:hasSelf" datatype="xsd:boolean">true</div>
+							</div>
+						</div>
 					</div>
 				
 			
@@ -3123,8 +3582,14 @@ means that empty value has the `No` meaning.)
 			
 				
 					
-					<div about="#Ind" property="rdf:type" resource="#PronType" style="visibility: hidden">
-						<div property="oliasystem:hasTagContaining">PronType=Ind</div>
+					<div about="#PronTypeInd" property="rdfs:subClassOf" resource="#PronType" style="visibility: hidden">
+						<div property="rdfs:label">Ind</div>
+						<div property="rdfs:subClassOf" resource="_:PronTypeIndDef">
+							<div about="_:PronTypeIndDef" property="rdf:type" resource="owl:Restriction">
+								<div property="owl:onProperty" resource="#PronTypeInd" />
+								<div property="owl:hasSelf" datatype="xsd:boolean">true</div>
+							</div>
+						</div>
 					</div>
 				
 			
@@ -3137,7 +3602,6 @@ means that empty value has the `No` meaning.)
 			
 		
 	
-
 
 This feature typically applies to [pronouns](u-pos/PRON),
 [determiners](u-pos/DET), pronominal [numerals](u-pos/NUM)
@@ -3250,12 +3714,9 @@ universal features but may be added in language-specific extensions.
 	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_u-feat/PronType.md" target="#">edit PronType</a>
 </div>
 
-<div about="#hasReflex" property="rdf:type" resource="owl:ObjectProperty">
-	<div property="rdfs:range" resource="#Reflex" />
-</div>
 <div about="#Reflex" property="rdfs:subClassOf" resource="#Concept">
 	<a id="al-u-feat/Reflex" class="al-dest" />
-	<h2><code>Reflex</code>: reflexive</h2>
+	<h2><code property="rdfs:label" lang="">Reflex</code>: <div property="rdfs:label">reflexive</div></h2>
 	<div property="rdfs:comment">
 	
 	
@@ -3269,8 +3730,14 @@ universal features but may be added in language-specific extensions.
 			
 				
 					
-					<div about="#Yes" property="rdf:type" resource="#Reflex" style="visibility: hidden">
-						<div property="oliasystem:hasTagContaining">Reflex=Yes</div>
+					<div about="#ReflexYes" property="rdfs:subClassOf" resource="#Reflex" style="visibility: hidden">
+						<div property="rdfs:label">Yes</div>
+						<div property="rdfs:subClassOf" resource="_:ReflexYesDef">
+							<div about="_:ReflexYesDef" property="rdf:type" resource="owl:Restriction">
+								<div property="owl:onProperty" resource="#ReflexYes" />
+								<div property="owl:hasSelf" datatype="xsd:boolean">true</div>
+							</div>
+						</div>
 					</div>
 				
 			
@@ -3289,7 +3756,6 @@ universal features but may be added in language-specific extensions.
 			
 		
 	
-
 
 Boolean feature, typically of [pronouns](u-pos/PRON) or
 [determiners](u-pos/DET). It tells whether the word is reflexive,
@@ -3321,12 +3787,9 @@ column. (Which means that empty value has the `No` meaning.)
 	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_u-feat/Reflex.md" target="#">edit Reflex</a>
 </div>
 
-<div about="#hasTense" property="rdf:type" resource="owl:ObjectProperty">
-	<div property="rdfs:range" resource="#Tense" />
-</div>
 <div about="#Tense" property="rdfs:subClassOf" resource="#Concept">
 	<a id="al-u-feat/Tense" class="al-dest" />
-	<h2><code>Tense</code>: tense</h2>
+	<h2><code property="rdfs:label" lang="">Tense</code>: <div property="rdfs:label">tense</div></h2>
 	<div property="rdfs:comment">
 	
 	
@@ -3342,8 +3805,14 @@ column. (Which means that empty value has the `No` meaning.)
 			
 				
 					
-					<div about="#Past" property="rdf:type" resource="#Tense" style="visibility: hidden">
-						<div property="oliasystem:hasTagContaining">Tense=Past</div>
+					<div about="#TensePast" property="rdfs:subClassOf" resource="#Tense" style="visibility: hidden">
+						<div property="rdfs:label">Past</div>
+						<div property="rdfs:subClassOf" resource="_:TensePastDef">
+							<div about="_:TensePastDef" property="rdf:type" resource="owl:Restriction">
+								<div property="owl:onProperty" resource="#TensePast" />
+								<div property="owl:hasSelf" datatype="xsd:boolean">true</div>
+							</div>
+						</div>
 					</div>
 				
 			
@@ -3361,8 +3830,14 @@ column. (Which means that empty value has the `No` meaning.)
 			
 				
 					
-					<div about="#Pres" property="rdf:type" resource="#Tense" style="visibility: hidden">
-						<div property="oliasystem:hasTagContaining">Tense=Pres</div>
+					<div about="#TensePres" property="rdfs:subClassOf" resource="#Tense" style="visibility: hidden">
+						<div property="rdfs:label">Pres</div>
+						<div property="rdfs:subClassOf" resource="_:TensePresDef">
+							<div about="_:TensePresDef" property="rdf:type" resource="owl:Restriction">
+								<div property="owl:onProperty" resource="#TensePres" />
+								<div property="owl:hasSelf" datatype="xsd:boolean">true</div>
+							</div>
+						</div>
 					</div>
 				
 			
@@ -3380,8 +3855,14 @@ column. (Which means that empty value has the `No` meaning.)
 			
 				
 					
-					<div about="#Fut" property="rdf:type" resource="#Tense" style="visibility: hidden">
-						<div property="oliasystem:hasTagContaining">Tense=Fut</div>
+					<div about="#TenseFut" property="rdfs:subClassOf" resource="#Tense" style="visibility: hidden">
+						<div property="rdfs:label">Fut</div>
+						<div property="rdfs:subClassOf" resource="_:TenseFutDef">
+							<div about="_:TenseFutDef" property="rdf:type" resource="owl:Restriction">
+								<div property="owl:onProperty" resource="#TenseFut" />
+								<div property="owl:hasSelf" datatype="xsd:boolean">true</div>
+							</div>
+						</div>
 					</div>
 				
 			
@@ -3399,8 +3880,14 @@ column. (Which means that empty value has the `No` meaning.)
 			
 				
 					
-					<div about="#Imp" property="rdf:type" resource="#Tense" style="visibility: hidden">
-						<div property="oliasystem:hasTagContaining">Tense=Imp</div>
+					<div about="#TenseImp" property="rdfs:subClassOf" resource="#Tense" style="visibility: hidden">
+						<div property="rdfs:label">Imp</div>
+						<div property="rdfs:subClassOf" resource="_:TenseImpDef">
+							<div about="_:TenseImpDef" property="rdf:type" resource="owl:Restriction">
+								<div property="owl:onProperty" resource="#TenseImp" />
+								<div property="owl:hasSelf" datatype="xsd:boolean">true</div>
+							</div>
+						</div>
 					</div>
 				
 			
@@ -3413,8 +3900,14 @@ column. (Which means that empty value has the `No` meaning.)
 			
 				
 					
-					<div about="#Nar" property="rdf:type" resource="#Tense" style="visibility: hidden">
-						<div property="oliasystem:hasTagContaining">Tense=Nar</div>
+					<div about="#TenseNar" property="rdfs:subClassOf" resource="#Tense" style="visibility: hidden">
+						<div property="rdfs:label">Nar</div>
+						<div property="rdfs:subClassOf" resource="_:TenseNarDef">
+							<div about="_:TenseNarDef" property="rdf:type" resource="owl:Restriction">
+								<div property="owl:onProperty" resource="#TenseNar" />
+								<div property="owl:hasSelf" datatype="xsd:boolean">true</div>
+							</div>
+						</div>
 					</div>
 				
 			
@@ -3427,8 +3920,14 @@ column. (Which means that empty value has the `No` meaning.)
 			
 				
 					
-					<div about="#Pqp" property="rdf:type" resource="#Tense" style="visibility: hidden">
-						<div property="oliasystem:hasTagContaining">Tense=Pqp</div>
+					<div about="#TensePqp" property="rdfs:subClassOf" resource="#Tense" style="visibility: hidden">
+						<div property="rdfs:label">Pqp</div>
+						<div property="rdfs:subClassOf" resource="_:TensePqpDef">
+							<div about="_:TensePqpDef" property="rdf:type" resource="owl:Restriction">
+								<div property="owl:onProperty" resource="#TensePqp" />
+								<div property="owl:hasSelf" datatype="xsd:boolean">true</div>
+							</div>
+						</div>
 					</div>
 				
 			
@@ -3436,7 +3935,6 @@ column. (Which means that empty value has the `No` meaning.)
 			
 		
 	
-
 
 Tense is typically a feature of [verbs](u-pos/VERB).
 It may also occur with other parts of speech
@@ -3524,12 +4022,9 @@ perfect) is constructed analytically. It applies e.g. to Portuguese.
 	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_u-feat/Tense.md" target="#">edit Tense</a>
 </div>
 
-<div about="#hasVerbForm" property="rdf:type" resource="owl:ObjectProperty">
-	<div property="rdfs:range" resource="#VerbForm" />
-</div>
 <div about="#VerbForm" property="rdfs:subClassOf" resource="#Concept">
 	<a id="al-u-feat/VerbForm" class="al-dest" />
-	<h2><code>VerbForm</code>: form of verb or deverbative</h2>
+	<h2><code property="rdfs:label" lang="">VerbForm</code>: <div property="rdfs:label">form of verb or deverbative</div></h2>
 	<div property="rdfs:comment">
 	
 	
@@ -3545,8 +4040,14 @@ perfect) is constructed analytically. It applies e.g. to Portuguese.
 			
 				
 					
-					<div about="#Fin" property="rdf:type" resource="#VerbForm" style="visibility: hidden">
-						<div property="oliasystem:hasTagContaining">VerbForm=Fin</div>
+					<div about="#VerbFormFin" property="rdfs:subClassOf" resource="#VerbForm" style="visibility: hidden">
+						<div property="rdfs:label">Fin</div>
+						<div property="rdfs:subClassOf" resource="_:VerbFormFinDef">
+							<div about="_:VerbFormFinDef" property="rdf:type" resource="owl:Restriction">
+								<div property="owl:onProperty" resource="#VerbFormFin" />
+								<div property="owl:hasSelf" datatype="xsd:boolean">true</div>
+							</div>
+						</div>
 					</div>
 				
 			
@@ -3566,8 +4067,14 @@ perfect) is constructed analytically. It applies e.g. to Portuguese.
 			
 				
 					
-					<div about="#Inf" property="rdf:type" resource="#VerbForm" style="visibility: hidden">
-						<div property="oliasystem:hasTagContaining">VerbForm=Inf</div>
+					<div about="#VerbFormInf" property="rdfs:subClassOf" resource="#VerbForm" style="visibility: hidden">
+						<div property="rdfs:label">Inf</div>
+						<div property="rdfs:subClassOf" resource="_:VerbFormInfDef">
+							<div about="_:VerbFormInfDef" property="rdf:type" resource="owl:Restriction">
+								<div property="owl:onProperty" resource="#VerbFormInf" />
+								<div property="owl:hasSelf" datatype="xsd:boolean">true</div>
+							</div>
+						</div>
 					</div>
 				
 			
@@ -3585,8 +4092,14 @@ perfect) is constructed analytically. It applies e.g. to Portuguese.
 			
 				
 					
-					<div about="#Sup" property="rdf:type" resource="#VerbForm" style="visibility: hidden">
-						<div property="oliasystem:hasTagContaining">VerbForm=Sup</div>
+					<div about="#VerbFormSup" property="rdfs:subClassOf" resource="#VerbForm" style="visibility: hidden">
+						<div property="rdfs:label">Sup</div>
+						<div property="rdfs:subClassOf" resource="_:VerbFormSupDef">
+							<div about="_:VerbFormSupDef" property="rdf:type" resource="owl:Restriction">
+								<div property="owl:onProperty" resource="#VerbFormSup" />
+								<div property="owl:hasSelf" datatype="xsd:boolean">true</div>
+							</div>
+						</div>
 					</div>
 				
 			
@@ -3611,8 +4124,14 @@ perfect) is constructed analytically. It applies e.g. to Portuguese.
 			
 				
 					
-					<div about="#Part" property="rdf:type" resource="#VerbForm" style="visibility: hidden">
-						<div property="oliasystem:hasTagContaining">VerbForm=Part</div>
+					<div about="#VerbFormPart" property="rdfs:subClassOf" resource="#VerbForm" style="visibility: hidden">
+						<div property="rdfs:label">Part</div>
+						<div property="rdfs:subClassOf" resource="_:VerbFormPartDef">
+							<div about="_:VerbFormPartDef" property="rdf:type" resource="owl:Restriction">
+								<div property="owl:onProperty" resource="#VerbFormPart" />
+								<div property="owl:hasSelf" datatype="xsd:boolean">true</div>
+							</div>
+						</div>
 					</div>
 				
 			
@@ -3630,8 +4149,14 @@ perfect) is constructed analytically. It applies e.g. to Portuguese.
 			
 				
 					
-					<div about="#Trans" property="rdf:type" resource="#VerbForm" style="visibility: hidden">
-						<div property="oliasystem:hasTagContaining">VerbForm=Trans</div>
+					<div about="#VerbFormTrans" property="rdfs:subClassOf" resource="#VerbForm" style="visibility: hidden">
+						<div property="rdfs:label">Trans</div>
+						<div property="rdfs:subClassOf" resource="_:VerbFormTransDef">
+							<div about="_:VerbFormTransDef" property="rdf:type" resource="owl:Restriction">
+								<div property="owl:onProperty" resource="#VerbFormTrans" />
+								<div property="owl:hasSelf" datatype="xsd:boolean">true</div>
+							</div>
+						</div>
 					</div>
 				
 			
@@ -3649,8 +4174,14 @@ perfect) is constructed analytically. It applies e.g. to Portuguese.
 			
 				
 					
-					<div about="#Ger" property="rdf:type" resource="#VerbForm" style="visibility: hidden">
-						<div property="oliasystem:hasTagContaining">VerbForm=Ger</div>
+					<div about="#VerbFormGer" property="rdfs:subClassOf" resource="#VerbForm" style="visibility: hidden">
+						<div property="rdfs:label">Ger</div>
+						<div property="rdfs:subClassOf" resource="_:VerbFormGerDef">
+							<div about="_:VerbFormGerDef" property="rdf:type" resource="owl:Restriction">
+								<div property="owl:onProperty" resource="#VerbFormGer" />
+								<div property="owl:hasSelf" datatype="xsd:boolean">true</div>
+							</div>
+						</div>
 					</div>
 				
 			
@@ -3663,7 +4194,6 @@ perfect) is constructed analytically. It applies e.g. to Portuguese.
 			
 		
 	
-
 
 Even though the name of the feature seems to suggest that it is used
 exclusively with [verbs](u-pos/VERB), it is not the case. Some verb
@@ -3760,12 +4290,9 @@ from the participle.
 	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_u-feat/VerbForm.md" target="#">edit VerbForm</a>
 </div>
 
-<div about="#hasVoice" property="rdf:type" resource="owl:ObjectProperty">
-	<div property="rdfs:range" resource="#Voice" />
-</div>
 <div about="#Voice" property="rdfs:subClassOf" resource="#Concept">
 	<a id="al-u-feat/Voice" class="al-dest" />
-	<h2><code>Voice</code>: voice</h2>
+	<h2><code property="rdfs:label" lang="">Voice</code>: <div property="rdfs:label">voice</div></h2>
 	<div property="rdfs:comment">
 	
 	
@@ -3779,8 +4306,14 @@ from the participle.
 			
 				
 					
-					<div about="#Act" property="rdf:type" resource="#Voice" style="visibility: hidden">
-						<div property="oliasystem:hasTagContaining">Voice=Act</div>
+					<div about="#VoiceAct" property="rdfs:subClassOf" resource="#Voice" style="visibility: hidden">
+						<div property="rdfs:label">Act</div>
+						<div property="rdfs:subClassOf" resource="_:VoiceActDef">
+							<div about="_:VoiceActDef" property="rdf:type" resource="owl:Restriction">
+								<div property="owl:onProperty" resource="#VoiceAct" />
+								<div property="owl:hasSelf" datatype="xsd:boolean">true</div>
+							</div>
+						</div>
 					</div>
 				
 			
@@ -3798,8 +4331,14 @@ from the participle.
 			
 				
 					
-					<div about="#Pass" property="rdf:type" resource="#Voice" style="visibility: hidden">
-						<div property="oliasystem:hasTagContaining">Voice=Pass</div>
+					<div about="#VoicePass" property="rdfs:subClassOf" resource="#Voice" style="visibility: hidden">
+						<div property="rdfs:label">Pass</div>
+						<div property="rdfs:subClassOf" resource="_:VoicePassDef">
+							<div about="_:VoicePassDef" property="rdf:type" resource="owl:Restriction">
+								<div property="owl:onProperty" resource="#VoicePass" />
+								<div property="owl:hasSelf" datatype="xsd:boolean">true</div>
+							</div>
+						</div>
 					</div>
 				
 			
@@ -3817,8 +4356,14 @@ from the participle.
 			
 				
 					
-					<div about="#Rcp" property="rdf:type" resource="#Voice" style="visibility: hidden">
-						<div property="oliasystem:hasTagContaining">Voice=Rcp</div>
+					<div about="#VoiceRcp" property="rdfs:subClassOf" resource="#Voice" style="visibility: hidden">
+						<div property="rdfs:label">Rcp</div>
+						<div property="rdfs:subClassOf" resource="_:VoiceRcpDef">
+							<div about="_:VoiceRcpDef" property="rdf:type" resource="owl:Restriction">
+								<div property="owl:onProperty" resource="#VoiceRcp" />
+								<div property="owl:hasSelf" datatype="xsd:boolean">true</div>
+							</div>
+						</div>
 					</div>
 				
 			
@@ -3836,8 +4381,14 @@ from the participle.
 			
 				
 					
-					<div about="#Cau" property="rdf:type" resource="#Voice" style="visibility: hidden">
-						<div property="oliasystem:hasTagContaining">Voice=Cau</div>
+					<div about="#VoiceCau" property="rdfs:subClassOf" resource="#Voice" style="visibility: hidden">
+						<div property="rdfs:label">Cau</div>
+						<div property="rdfs:subClassOf" resource="_:VoiceCauDef">
+							<div about="_:VoiceCauDef" property="rdf:type" resource="owl:Restriction">
+								<div property="owl:onProperty" resource="#VoiceCau" />
+								<div property="owl:hasSelf" datatype="xsd:boolean">true</div>
+							</div>
+						</div>
 					</div>
 				
 			
@@ -3858,7 +4409,6 @@ from the participle.
 			
 		
 	
-
 
 Voice is typically a feature of [verbs](u-pos/VERB).
 It may also occur with other parts of speech
