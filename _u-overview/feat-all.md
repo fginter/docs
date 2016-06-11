@@ -46,7 +46,7 @@ permalink: u/feat/all.html
 	<div about="#{{ p.title }}" property="rdfs:comment">
 
 {% if p.content contains "<!--details-->" %}    
-{{ p.content | split:"<!--details-->" | first }}
+{{ p.content | split:"<!--details-->" | first | markdownify }}
 		<a property="rdfs:seeAlso" href="{{ p.title }}" class="al-doc">See details</a>
 {% else %}
 {{ p.content | markdownify }}
