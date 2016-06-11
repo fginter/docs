@@ -26,7 +26,7 @@ permalink: en/feat/all.html
 					{% assign feat = cand_feat | replace: "`","" %}
 					<span about="#{{ p.title }}{{ feat }}" property="rdf:type" resource="#{{ p.title }}">
 						<span property="rdf:type" resource="../../u/feat/all.html#{{ p.title }}{{ feat }}"/>
-						<code property="oliasystem:hasTagContaining">{{ p.title }}={{ feat }}</code>
+						<code property="oliasystem:hasTagContaining" lang="">{{ p.title }}={{ feat }}</code>
 					</span>
 				{% endif %}
 			{% endif %}
