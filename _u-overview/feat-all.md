@@ -25,7 +25,12 @@ permalink: u/feat/all.html
 	{% for par in pars %}
 		{% assign cand_feats = par | split: ":" %}
 		{% for cand_feat in cand_feats %}
-			<div style="visibility: hidden">{{ cand_feat }}</div>
+			{% if cand_feat contains "`" %}
+				{% if cand_feat contains " " %}
+				{% else %}
+					<div style="visibility: hidden">cf:{{ cand_feat }}</div>
+				{% endif %}
+			{% endif %}
 		{% endfor %}
 	{% endfor %}
 
