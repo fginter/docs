@@ -1,16 +1,15 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html lang="en-GB" xml:lang="en-GB" xmlns="http://www.w3.org/1999/xhtml"
-	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" 
-	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" 
-	xmlns:oliasystem="http://purl.org/olia/system.owl#"
-	xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+	prefix:rdfs="http://www.w3.org/2000/01/rdf-schema#" 
+	prefix:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" 
+	prefix:oliasystem="http://purl.org/olia/system.owl#"
+	prefix:xsd="http://www.w3.org/2001/XMLSchema#"
 >
-	<!-- added xmlns attributes to /html -->
 
   <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
-    <title about="#Concept" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" property="rdfs:label">POS tags</title>
+    <title about="#Concept" property="rdfs:label">POS tags</title>
 	    <!-- every page introduces some concepts, we introduce the concept "concept" as top-level concepts and use the title as its label -->
     <link rel="root" href=""/> <!-- for JS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"/>
@@ -113,7 +112,7 @@
 	<h2><code property="oliasystem:hasTag" lang="">ADJ</code>: <div property="rdfs:label">adjective</div></h2>
 	<div property="rdfs:comment">
 
-The English `ADJ` is currently precisely the union of PTB JJ, JJR, and JJS.
+<p>The English <code>ADJ</code> is currently precisely the union of PTB JJ, JJR, and JJS.</p>
 
 
 	</div>
@@ -129,7 +128,7 @@ The English `ADJ` is currently precisely the union of PTB JJ, JJR, and JJS.
 	<h2><code property="oliasystem:hasTag" lang="">ADP</code>: <div property="rdfs:label">adposition</div></h2>
 	<div property="rdfs:comment">
 
-The English `ADP` covers the Penn Treebank RP, and a subset of uses of IN (when not a complementizer or subordinating conjunction) and TO (in old treebanks which used this for _to_ even when used as a preposition).
+<p>The English <code>ADP</code> covers the Penn Treebank RP, and a subset of uses of IN (when not a complementizer or subordinating conjunction) and TO (in old treebanks which used this for <em>to</em> even when used as a preposition).</p>
 
 
 	</div>
@@ -145,7 +144,7 @@ The English `ADP` covers the Penn Treebank RP, and a subset of uses of IN (when 
 	<h2><code property="oliasystem:hasTag" lang="">ADV</code>: <div property="rdfs:label">adverb</div></h2>
 	<div property="rdfs:comment">
 
-The English `ADV` covers all uses of PTB tags RB, RBR, RBS, and WRB except the clausal negation _not_ and reduced forms of it, which become [PART]().
+<p>The English <code>ADV</code> covers all uses of PTB tags RB, RBR, RBS, and WRB except the clausal negation <em>not</em> and reduced forms of it, which become <a href="">PART</a>.</p>
 
 
 	</div>
@@ -161,7 +160,7 @@ The English `ADV` covers all uses of PTB tags RB, RBR, RBS, and WRB except the c
 	<h2><code property="oliasystem:hasTag" lang="">AUX</code>: <div property="rdfs:label">auxiliary verb</div></h2>
 	<div property="rdfs:comment">
 
-The English `AUX` covers PTB MD and uses of the various verbal tags (VB, VBP, VBG, VBN, VBD, VBZ) when they are forms of _be_, _have_, _do_, and _get_ when used as an auxiliary (we count passive _get_ as an auxiliary).
+<p>The English <code>AUX</code> covers PTB MD and uses of the various verbal tags (VB, VBP, VBG, VBN, VBD, VBZ) when they are forms of <em>be</em>, <em>have</em>, <em>do</em>, and <em>get</em> when used as an auxiliary (we count passive <em>get</em> as an auxiliary).</p>
 
 
 	</div>
@@ -177,7 +176,7 @@ The English `AUX` covers PTB MD and uses of the various verbal tags (VB, VBP, VB
 	<h2><code property="oliasystem:hasTag" lang="">CONJ</code>: <div property="rdfs:label">coordinating conjunction</div></h2>
 	<div property="rdfs:comment">
 
-The English `CONJ` corresponds to PTB CC.
+<p>The English <code>CONJ</code> corresponds to PTB CC.</p>
 
 
 	</div>
@@ -193,7 +192,7 @@ The English `CONJ` corresponds to PTB CC.
 	<h2><code property="oliasystem:hasTag" lang="">DET</code>: <div property="rdfs:label">determiner</div></h2>
 	<div property="rdfs:comment">
 
-The English `DET` covers most cases of Penn Treebank DT, PDT, WDT. However, when a Penn Treebank word with one of these tags stands alone as a noun phrase rather than modifying another word, then it becomes `PRON`.
+<p>The English <code>DET</code> covers most cases of Penn Treebank DT, PDT, WDT. However, when a Penn Treebank word with one of these tags stands alone as a noun phrase rather than modifying another word, then it becomes <code>PRON</code>.</p>
 
 
 	</div>
@@ -209,7 +208,7 @@ The English `DET` covers most cases of Penn Treebank DT, PDT, WDT. However, when
 	<h2><code property="oliasystem:hasTag" lang="">INTJ</code>: <div property="rdfs:label">interjection</div></h2>
 	<div property="rdfs:comment">
 
-The English `INTJ` corresponds to the PTB UH.
+<p>The English <code>INTJ</code> corresponds to the PTB UH.</p>
 
 
 	</div>
@@ -225,7 +224,7 @@ The English `INTJ` corresponds to the PTB UH.
 	<h2><code property="oliasystem:hasTag" lang="">NOUN</code>: <div property="rdfs:label">noun</div></h2>
 	<div property="rdfs:comment">
 
-The English `NOUN` corresponds to all cases of PTB NN and NNS, except for %, which we retag as SYM.
+<p>The English <code>NOUN</code> corresponds to all cases of PTB NN and NNS, except for %, which we retag as SYM.</p>
 
 
 	</div>
@@ -241,7 +240,7 @@ The English `NOUN` corresponds to all cases of PTB NN and NNS, except for %, whi
 	<h2><code property="oliasystem:hasTag" lang="">NUM</code>: <div property="rdfs:label">numeral</div></h2>
 	<div property="rdfs:comment">
 
-The English `NUM` corresponds exactly to the PTB CD.
+<p>The English <code>NUM</code> corresponds exactly to the PTB CD.</p>
 
 
 	</div>
@@ -257,15 +256,17 @@ The English `NUM` corresponds exactly to the PTB CD.
 	<h2><code property="oliasystem:hasTag" lang="">PART</code>: <div property="rdfs:label">particle</div></h2>
 	<div property="rdfs:comment">
 
-The following English words (only) are currently being treated as `PART` in English:
+<p>The following English words (only) are currently being treated as <code>PART</code> in English:</p>
 
-* Possessive marker: _’s_ or _’_ (and non-standard forms _s_, _-s_)
-* Predicate negation: _not_, _n’t_, _nt_
-* Infinitive marker: _to_ (and non-standard forms _ta_, _na_, _too_, _ot_, _2_, _a_)
+<ul>
+  <li>Possessive marker: <em>’s</em> or <em>’</em> (and non-standard forms <em>s</em>, <em>-s</em>)</li>
+  <li>Predicate negation: <em>not</em>, <em>n’t</em>, <em>nt</em></li>
+  <li>Infinitive marker: <em>to</em> (and non-standard forms <em>ta</em>, <em>na</em>, <em>too</em>, <em>ot</em>, <em>2</em>, <em>a</em>)</li>
+</ul>
 
-(This is a slightly motley list and we may still want to rethink this category for English....)
+<p>(This is a slightly motley list and we may still want to rethink this category for English….)</p>
 
-This covers PTB tags POS and some (old PTB style) or all uses of TO, and the subset of RB that is negation.
+<p>This covers PTB tags POS and some (old PTB style) or all uses of TO, and the subset of RB that is negation.</p>
 
 
 	</div>
@@ -281,9 +282,9 @@ This covers PTB tags POS and some (old PTB style) or all uses of TO, and the sub
 	<h2><code property="oliasystem:hasTag" lang="">PRON</code>: <div property="rdfs:label">pronoun</div></h2>
 	<div property="rdfs:comment">
 
-`PRON` is used for English pronouns, such as _we_, _her_, _it_, _who_, and _that_ when used as a relative pronoun.
+<p><code>PRON</code> is used for English pronouns, such as <em>we</em>, <em>her</em>, <em>it</em>, <em>who</em>, and <em>that</em> when used as a relative pronoun.</p>
 
-The English `PRON` corresponds to the PTB PRP, PRP$, WP, WP$, EX, and certain things that are tagged DT (question and *Wh* pronouns, such as *who*, *this*, and *that*), when they comprise a nominal by themselves rather than functioning as the determiner of a nominal head (usually a noun). (The assignment of PRP$ and WP$ to PRON might be subject to revision - they could also become DET.)
+<p>The English <code>PRON</code> corresponds to the PTB PRP, PRP$, WP, WP$, EX, and certain things that are tagged DT (question and <em>Wh</em> pronouns, such as <em>who</em>, <em>this</em>, and <em>that</em>), when they comprise a nominal by themselves rather than functioning as the determiner of a nominal head (usually a noun). (The assignment of PRP$ and WP$ to PRON might be subject to revision - they could also become DET.)</p>
 
 
 	</div>
@@ -299,7 +300,7 @@ The English `PRON` corresponds to the PTB PRP, PRP$, WP, WP$, EX, and certain th
 	<h2><code property="oliasystem:hasTag" lang="">PROPN</code>: <div property="rdfs:label">proper noun</div></h2>
 	<div property="rdfs:comment">
 
-The English `PROPN` corresponds to everything tagged NNP or NNPS in the PTB tag set. (Note that at present we make no attempt to exclude words arguably of other parts of speech which appear in proper noun phrases that the PTB tag set would tag with NNP(S). So, _United States_ is United/PROPN States/PROPN.)
+<p>The English <code>PROPN</code> corresponds to everything tagged NNP or NNPS in the PTB tag set. (Note that at present we make no attempt to exclude words arguably of other parts of speech which appear in proper noun phrases that the PTB tag set would tag with NNP(S). So, <em>United States</em> is United/PROPN States/PROPN.)</p>
 
 
 	</div>
@@ -315,17 +316,19 @@ The English `PROPN` corresponds to everything tagged NNP or NNPS in the PTB tag 
 	<h2><code property="oliasystem:hasTag" lang="">PUNCT</code>: <div property="rdfs:label">punctuation</div></h2>
 	<div property="rdfs:comment">
 
-The English `PUNCT` covers PTB tags:
+<p>The English <code>PUNCT</code> covers PTB tags:</p>
 
-* ``
-* ''
-* -LRB-
-* -RRB-
-* ,
-* .
-* :
-* HYPH
-* Some uses of NFP (for lines of hyphens, asterisks or tildes)
+<ul>
+  <li>``</li>
+  <li>’’</li>
+  <li>-LRB-</li>
+  <li>-RRB-</li>
+  <li>,</li>
+  <li>.</li>
+  <li>:</li>
+  <li>HYPH</li>
+  <li>Some uses of NFP (for lines of hyphens, asterisks or tildes)</li>
+</ul>
 
 
 	</div>
@@ -341,14 +344,16 @@ The English `PUNCT` covers PTB tags:
 	<h2><code property="oliasystem:hasTag" lang="">SCONJ</code>: <div property="rdfs:label">subordinating conjunction</div></h2>
 	<div property="rdfs:comment">
 
-`SCONJ` is used for these two subclasses of subordinating conjunctions:
+<p><code>SCONJ</code> is used for these two subclasses of subordinating conjunctions:</p>
 
-* Complementizers: _that_, _whether_, _if_, etc.
-* Adverbial clause introducers: _when_, _since_, _before_, etc. (when introducing a clause not a nominal)
+<ul>
+  <li>Complementizers: <em>that</em>, <em>whether</em>, <em>if</em>, etc.</li>
+  <li>Adverbial clause introducers: <em>when</em>, <em>since</em>, <em>before</em>, etc. (when introducing a clause not a nominal)</li>
+</ul>
 
-These are a subset of the things that the IN tag is used for in the PTB.
+<p>These are a subset of the things that the IN tag is used for in the PTB.</p>
 
-We treat the putative relativizer use of _that_ (e.g., Jespersen 1924) as a relative pronoun in modern English, so that it gets the POS tag [PRON]().
+<p>We treat the putative relativizer use of <em>that</em> (e.g., Jespersen 1924) as a relative pronoun in modern English, so that it gets the POS tag <a href="">PRON</a>.</p>
 
 
 	</div>
@@ -364,7 +369,7 @@ We treat the putative relativizer use of _that_ (e.g., Jespersen 1924) as a rela
 	<h2><code property="oliasystem:hasTag" lang="">SYM</code>: <div property="rdfs:label">symbol</div></h2>
 	<div property="rdfs:comment">
 
-The English `SYM` covers PTB tags NFP (except for lines of separators, which become PUNCT), #, $, SYM, and for the percent sign (%).
+<p>The English <code>SYM</code> covers PTB tags NFP (except for lines of separators, which become PUNCT), #, $, SYM, and for the percent sign (%).</p>
 
 
 	</div>
@@ -380,9 +385,9 @@ The English `SYM` covers PTB tags NFP (except for lines of separators, which bec
 	<h2><code property="oliasystem:hasTag" lang="">VERB</code>: <div property="rdfs:label">verb</div></h2>
 	<div property="rdfs:comment">
 
-The tag `VERB` covers PTB tags VB, VBP, VBZ, VBD, VBG, VBN, except for auxiliary verb uses of _be_, _have_, _do_, and _get_. 
+<p>The tag <code>VERB</code> covers PTB tags VB, VBP, VBZ, VBD, VBG, VBN, except for auxiliary verb uses of <em>be</em>, <em>have</em>, <em>do</em>, and <em>get</em>.</p>
 
-(Auxiliary verbs and modals are `AUX` and the infinitive _to_ is `PART`.)
+<p>(Auxiliary verbs and modals are <code>AUX</code> and the infinitive <em>to</em> is <code>PART</code>.)</p>
 
 
 	</div>
@@ -398,7 +403,7 @@ The tag `VERB` covers PTB tags VB, VBP, VBZ, VBD, VBG, VBN, except for auxiliary
 	<h2><code property="oliasystem:hasTag" lang="">X</code>: <div property="rdfs:label">other</div></h2>
 	<div property="rdfs:comment">
 
-The English tag `X` is used for the PTB tags FW, LS, XX, ADD, AFX, and GW. Some things tagged AFX would be candidates for retagging with other tags, but that has not been attempted.
+<p>The English tag <code>X</code> is used for the PTB tags FW, LS, XX, ADD, AFX, and GW. Some things tagged AFX would be candidates for retagging with other tags, but that has not been attempted.</p>
 
 
 	</div>

@@ -1,16 +1,15 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html lang="en-GB" xml:lang="en-GB" xmlns="http://www.w3.org/1999/xhtml"
-	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" 
-	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" 
-	xmlns:oliasystem="http://purl.org/olia/system.owl#"
-	xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+	prefix:rdfs="http://www.w3.org/2000/01/rdf-schema#" 
+	prefix:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" 
+	prefix:oliasystem="http://purl.org/olia/system.owl#"
+	prefix:xsd="http://www.w3.org/2001/XMLSchema#"
 >
-	<!-- added xmlns attributes to /html -->
 
   <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
-    <title about="#Concept" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" property="rdfs:label">Features</title>
+    <title about="#Concept" property="rdfs:label">Features</title>
 	    <!-- every page introduces some concepts, we introduce the concept "concept" as top-level concepts and use the title as its label -->
     <link rel="root" href=""/> <!-- for JS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"/>
@@ -107,6 +106,10 @@
 </table>
 
 <hr />
+
+<p><span about="." property="rdf:type" resource="owl:Ontology">
+	<span property="owl:imports" resource="https://www.w3.org/2012/pyRdfa/extract?uri=http://fginter.github.io/docs/u/feat/all.html&amp;format=xml&amp;rdfagraph=output&amp;vocab_expansion=false&amp;rdfa_lite=false&amp;embedded_rdf=true&amp;space_preserve=false&amp;vocab_cache=true&amp;vocab_cache_report=false&amp;vocab_cache_refresh=false"></span>
+</span></p>
 
 <div about="#Animacy" property="rdfs:subClassOf" resource="#Concept">
 	<a id="al-en-feat/Animacy" class="al-dest" />
