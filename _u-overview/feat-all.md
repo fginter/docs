@@ -49,7 +49,7 @@ permalink: u/feat/all.html
 {{ p.content | split:"<!--details-->" | first }}
 		<a property="rdfs:seeAlso" href="{{ p.title }}" class="al-doc">See details</a>
 {% else %}
-{{ p.content }}
+{{ p.content | markdownify }}
 {% endif %}
 	</div>
 	<a href="{{ site.git_edit }}/{% if p.collection %}{{ p.relative_path }}{% else %}{{ p.path }}{% endif %}" target="#">edit {{ p.title }}</a>
