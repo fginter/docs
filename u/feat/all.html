@@ -121,7 +121,9 @@ not covered by the POS tags.</p>
 	<div property="rdfs:comment">
 	
 	
-		<div style="visibility: hidden">Similarly to [Gender]() (and to the African noun classes), animacy is
+		
+		
+			<div style="visibility: hidden">Similarly to [Gender]() (and to the African noun classes), animacy is
 usually a lexical feature of [nouns](u-pos/NOUN) and inflectional feature
 of other parts of speech ([pronouns](u-pos/PRON),
 [adjectives](u-pos/ADJ), [determiners](u-pos/DET), [numerals](u-pos/NUM),
@@ -131,7 +133,9 @@ independent of gender, therefore it is encoded separately in some
 tagsets (e.g. all the Multext-East tagsets). On the other hand, in
 Czech the (almost) only grammatical implications occur within the
 masculine gender, which is why the PDT tagset does not have
-animateness as separate feature and instead defines four genders:
+animateness as separate feature and instead defines four genders</div>
+		
+			<div style="visibility: hidden">
 masculine animate, masculine inanimate, feminine and neuter.  We
 follow the two-feature approach used in Multext-East (many languages)
 because it is safer.
@@ -139,7 +143,9 @@ because it is safer.
 Polish is special in that it also distinguishes grammatically human
 vs. non-human animates. It can be demonstrated by inflection of the
 example word _który_ "which" (boldface forms differ from the middle
-row):
+row)</div>
+		
+			<div style="visibility: hidden">
 
 |------------------------------------------------------------------------------------------------------------------------------------------------|
 | gender            | sg-nom | sg-gen  | sg-dat  | sg-acc    | sg-ins | sg-loc | pl-nom     | pl-gen  | pl-dat | pl-acc      | pl-ins  | pl-loc  | 
@@ -148,11 +154,18 @@ row):
 | animate non-human | który  | którego | któremu | którego   | którym | którym | które      | których | którym | które       | którymi | których | 
 | in-animate        | który  | którego | któremu | **który** | którym | którym | które      | których | którym | które       | którymi | których | 
 |------------------------------------------------------------------------------------------------------------------------------------------------|
-{: cellpadding="2" cellspacing="0" }
+{</div>
+		
+			<div style="visibility: hidden"> cellpadding="2" cellspacing="0" }
 
 </div>
+		
 	
-		<div style="visibility: hidden">`Anim`: animate
+		
+		
+			<div style="visibility: hidden">`Anim`</div>
+		
+			<div style="visibility: hidden"> animate
 
 Human beings, animals, fictional characters, names of professions
 etc. are all animate. Even nouns that are normally inanimate can be
@@ -161,19 +174,30 @@ children's story about cars where cars live and talk as people; then
 the cars may become and be inflected as animates.
 
 </div>
+		
 	
-		<div style="visibility: hidden">`Nhum`: animate but non-human
+		
+		
+			<div style="visibility: hidden">`Nhum`</div>
+		
+			<div style="visibility: hidden"> animate but non-human
 
 Attested in Polish. In languages where Nhum is used, `Anim` is
 restricted to human beings (complement of `Nhum`).
 
 </div>
+		
 	
-		<div style="visibility: hidden">`Inan`: inanimate
+		
+		
+			<div style="visibility: hidden">`Inan`</div>
+		
+			<div style="visibility: hidden"> inanimate
 
 Nouns that are not animate are inanimate. (If `Nhum` is used, nouns
 that are neither `Anim` nor `Nhum` are `Inan`.)
 </div>
+		
 	
 
 
@@ -238,7 +262,9 @@ that are neither `Anim` nor `Nhum` are `Inan`.)
 	<div property="rdfs:comment">
 	
 	
-		<div style="visibility: hidden">Aspect is typically a feature of [verbs](u-pos/VERB).
+		
+		
+			<div style="visibility: hidden">Aspect is typically a feature of [verbs](u-pos/VERB).
 It may also occur with other parts of speech
 ([nouns](u-pos/NOUN), [adjectives](u-pos/ADJ), [adverbs](u-pos/ADV)),
 depending on whether borderline word forms such as gerunds and participles
@@ -257,26 +283,41 @@ verbs are considered to belong to separate lemmas.
 
 Since we proceed bottom-up, the current standard covers only a few
 aspect values found in corpora.  See Wikipedia
-(&lt;http://en.wikipedia.org/wiki/Grammatical_aspect&gt;) for a long list of
+(&lt;http</div>
+		
+			<div style="visibility: hidden">//en.wikipedia.org/wiki/Grammatical_aspect&gt;) for a long list of
 other possible aspects.
 
 </div>
+		
 	
-		<div style="visibility: hidden">`Imp`: imperfect aspect
+		
+		
+			<div style="visibility: hidden">`Imp`</div>
+		
+			<div style="visibility: hidden"> imperfect aspect
 
 The action took / takes / will take some time span and there is no
 information whether and when it was / will be completed.
 
 #</div>
+		
 	
-		<div style="visibility: hidden">Examples
+		
+		
+			<div style="visibility: hidden">Examples
 
 * [cs] _péci_ "to bake" (Imp); _<b>pekl</b> chleba_ "he baked / was
   baking a bread"
 
 </div>
+		
 	
-		<div style="visibility: hidden">`Perf`: perfect aspect
+		
+		
+			<div style="visibility: hidden">`Perf`</div>
+		
+			<div style="visibility: hidden"> perfect aspect
 
 The action has been / will have been completed. Since there is
 emphasis on one point on the time scale (the point of completion),
@@ -285,22 +326,35 @@ Czech morphology can create present forms of perfective verbs but
 these actually have a future meaning.
 
 #</div>
+		
 	
-		<div style="visibility: hidden">Examples
+		
+		
+			<div style="visibility: hidden">Examples
 
 * [cs] _upéci_ "to bake" (Perf); _<b>upekl</b> chleba_ "he baked / has
   baked a bread"
 
 </div>
+		
 	
-		<div style="visibility: hidden">`Pro`: prospective aspect
+		
+		
+			<div style="visibility: hidden">`Pro`</div>
+		
+			<div style="visibility: hidden"> prospective aspect
 
 Used in Basque. A combination of tense and aspect that indicates the
 action is in preparation to take place.
 
 </div>
+		
 	
-		<div style="visibility: hidden">`Prog`: progressive aspect
+		
+		
+			<div style="visibility: hidden">`Prog`</div>
+		
+			<div style="visibility: hidden"> progressive aspect
 
 English progressive tenses (_I am eating, I have been doing &hellip;_)
 have this aspect. They are constructed analytically (auxiliary +
@@ -313,6 +367,7 @@ In languages other than English, the progressive meaning may be
 expressed by morphemes bound to the main verb, which makes this value
 even more justified. Example is Turkish.
 </div>
+		
 	
 
 
@@ -393,7 +448,9 @@ even more justified. Example is Turkish.
 	<div property="rdfs:comment">
 	
 	
-		<div style="visibility: hidden">`Case` is usually an inflectional feature of [nouns](u-pos/NOUN) and,
+		
+		
+			<div style="visibility: hidden">`Case` is usually an inflectional feature of [nouns](u-pos/NOUN) and,
 depending on language, other parts of speech ([pronouns](u-pos/PRON),
 [adjectives](u-pos/ADJ), [determiners](u-pos/DET), [numerals](u-pos/NUM),
 [verbs](u-pos/VERB)) that mark agreement with nouns. In some tagsets
@@ -415,8 +472,11 @@ using adpositions in another language. Cf. the [u-dep/case]()
 dependency label.
 
 #</div>
+		
 	
-		<div style="visibility: hidden">Examples
+		
+		
+			<div style="visibility: hidden">Examples
 
 * [cs] nominative _matka_ "mother", genitive _matky_, dative _matce_,
   accusative _matku_, vocative _matko_, locative _matce_,
@@ -433,9 +493,13 @@ unrelated to the meaning mentioned here.  Valency of verbs,
 adpositions and other words will determine that the noun phrase must
 be in a particular grammatical case to fill a particular valency slot
 (semantic role). It is much the same as trying to explain the meaning
-of prepositions: most people would agree that the central meaning of
+of prepositions</div>
+		
+			<div style="visibility: hidden"> most people would agree that the central meaning of
 English _in_ is location in space or time but there are phrases where
-the meaning is less locational: _In God we trust._ _Say it in
+the meaning is less locational</div>
+		
+			<div style="visibility: hidden"> _In God we trust._ _Say it in
 English._
 
 Note that Indian corpora based on the so-called Paninian model use a
@@ -451,12 +515,19 @@ suffix has been split off the noun and it is now written as a separate
 word &ndash; the postposition _kā/kī/ke_ (का/की/के).  Even if the
 postpositional phrase can be understood as a genitive noun phrase, the
 noun is not in genitive. Instead, the postposition requires that it
-takes one of three case forms that are marked directly on the noun:
+takes one of three case forms that are marked directly on the noun</div>
+		
+			<div style="visibility: hidden">
 the oblique case (`Acc`).
 
 </div>
+		
 	
-		<div style="visibility: hidden">`Nom`: nominative / direct
+		
+		
+			<div style="visibility: hidden">`Nom`</div>
+		
+			<div style="visibility: hidden"> nominative / direct
 
 The base form of the noun, typically used as citation form (lemma).
 In many languages this is the word form used for subjects of clauses.
@@ -464,8 +535,13 @@ If the language has only two cases, which are called "direct" and
 "oblique", the direct case will be marked Nom.
 
 </div>
+		
 	
-		<div style="visibility: hidden">`Acc`: accusative / oblique
+		
+		
+			<div style="visibility: hidden">`Acc`</div>
+		
+			<div style="visibility: hidden"> accusative / oblique
 
 Perhaps the second most widely spread morphological case. In many
 languages this is the word form used for direct objects of verbs.  If
@@ -473,8 +549,13 @@ the language has only two cases, which are called "direct" and
 "oblique", the oblique case will be marked Acc.
 
 </div>
+		
 	
-		<div style="visibility: hidden">`Abs`: absolutive
+		
+		
+			<div style="visibility: hidden">`Abs`</div>
+		
+			<div style="visibility: hidden"> absolutive
 
 Some languages (e.g. Basque) do not use nominative-accusative to
 distinguish subjects and objects.  Instead, they use the contrast of
@@ -484,8 +565,13 @@ The absolutive case marks subject of intransitive verb and direct
 object of transitive verb.
 
 </div>
+		
 	
-		<div style="visibility: hidden">`Erg`: ergative
+		
+		
+			<div style="visibility: hidden">`Erg`</div>
+		
+			<div style="visibility: hidden"> ergative
 
 Some languages (e.g. Basque) do not use nominative-accusative to
 distinguish subjects and objects.  Instead, they use the contrast of
@@ -494,22 +580,35 @@ absolutive-ergative.
 The ergative case marks subject of transitive verb.
 
 </div>
+		
 	
-		<div style="visibility: hidden">`Dat`: dative
+		
+		
+			<div style="visibility: hidden">`Dat`</div>
+		
+			<div style="visibility: hidden"> dative
 
 In many languages this is the word form used for indirect objects of verbs.
 
 #</div>
+		
 	
-		<div style="visibility: hidden">Examples
+		
+		
+			<div style="visibility: hidden">Examples
 
 * [de] _Ich gebe <b>meinem Bruder</b> ein Geschenk._ "I give my
   brother a present." (_meinem Bruder_ "my brother" is dative and _ein
   Geschenk_ "a present" is accusative.)
 
 </div>
+		
 	
-		<div style="visibility: hidden">`Gen`: genitive
+		
+		
+			<div style="visibility: hidden">`Gen`</div>
+		
+			<div style="visibility: hidden"> genitive
 
 Prototypical meaning of genitive is that the noun phrase somehow
 belongs to its governor; it would often be translated by the English
@@ -536,19 +635,29 @@ this particular occurrence of the genitive. It is there because the
 preposition _bez_ always requires its argument to be in genitive.
 
 #</div>
+		
 	
-		<div style="visibility: hidden">Examples
+		
+		
+			<div style="visibility: hidden">Examples
 
 * [cs] _Praha je hlavní město <b>České republiky</b>._ "Prague is the
   capital <b>of the Czech Republic</b>."
 
 Note that in Basque, Gen should be used for possessive genitive (as
-opposed to locative genitive): _<b>diktadorearen</b> erregimena_
+opposed to locative genitive)</div>
+		
+			<div style="visibility: hidden"> _<b>diktadorearen</b> erregimena_
 "dictator's regime"; _diktadore_ "dictator".
 
 </div>
+		
 	
-		<div style="visibility: hidden">`Voc`: vocative
+		
+		
+			<div style="visibility: hidden">`Voc`</div>
+		
+			<div style="visibility: hidden"> vocative
 
 The vocative case is a special form of noun used to address
 someone. Thus it predominantly appears with animate nouns (see the
@@ -556,15 +665,23 @@ feature of [Animacy]()). Nevertheless this is not a grammatical
 restriction and inanimate things can be addressed as well.
 
 #</div>
+		
 	
-		<div style="visibility: hidden">Examples
+		
+		
+			<div style="visibility: hidden">Examples
 
 * [cs] _Co myslíš, <b>Filip</b><b>e</b>?_ "What do you think,
   <b>Filip</b>?"
 
 </div>
+		
 	
-		<div style="visibility: hidden">`Loc`: locative
+		
+		
+			<div style="visibility: hidden">`Loc`</div>
+		
+			<div style="visibility: hidden"> locative
 
 The locative case often expresses location in space or time, which
 gave it its name. As elsewhere, non-locational meanings also exist and
@@ -579,8 +696,11 @@ combination with prepositions (but such a restriction may not hold in
 other languages that have locative).
 
 #</div>
+		
 	
-		<div style="visibility: hidden">Examples
+		
+		
+			<div style="visibility: hidden">Examples
 
 * [cs] _V <b>červenci</b> jsem byl ve <b>Švédsku</b>._ "In <b>July</b>
   I was in <b>Sweden</b>."
@@ -588,8 +708,13 @@ other languages that have locative).
   <b>morphology</b>." (Non-locational non-temporal example)
 
 </div>
+		
 	
-		<div style="visibility: hidden">`Ins`: instrumental / instructive
+		
+		
+			<div style="visibility: hidden">`Ins`</div>
+		
+			<div style="visibility: hidden"> instrumental / instructive
 
 The role from which the name of the instrumental case is derived is
 that the noun is used as instrument to do something (as in [cs] _psát
@@ -602,8 +727,11 @@ In Czech the instrumental is also used for the agent-object in passive
 constructions (cf. the English preposition _by_).
 
 #</div>
+		
 	
-		<div style="visibility: hidden">Examples
+		
+		
+			<div style="visibility: hidden">Examples
 
 * [cs] _Tento zákon byl schválen <b>vládou</b>._ "This bill has been
   approved <b>by the government</b>." (Passive example)
@@ -615,8 +743,11 @@ label for both instrumental and instructive (instrumental is not
 defined in Finnish).
 
 #</div>
+		
 	
-		<div style="visibility: hidden">Examples
+		
+		
+			<div style="visibility: hidden">Examples
 
 * [fi] _lähteä_ "to leave"; _2003 <b>lähtien</b>_ "since 2003" (second
   infinitive in the instructive case)
@@ -625,15 +756,23 @@ defined in Finnish).
   power-struggle.Ill._
 
 </div>
+		
 	
-		<div style="visibility: hidden">`Par`: partitive
+		
+		
+			<div style="visibility: hidden">`Par`</div>
+		
+			<div style="visibility: hidden"> partitive
 
 In Finnish the partitive case expresses indefinite identity and
 unfinished actions without result.
 
 #</div>
+		
 	
-		<div style="visibility: hidden">Examples
+		
+		
+			<div style="visibility: hidden">Examples
 
 * [fi] _kolme <b>taloa</b>_ "three <b>houses</b>"; (the _-a_ suffix of
   _talo_)
@@ -643,24 +782,36 @@ unfinished actions without result.
 * [fi]_lasissa on <b>maitoa</b>_ "there is (some) <b>milk</b> in the
   glass"
 
-Examples comparing partitive with accusative: _ammuin karhun_ "I shot
+Examples comparing partitive with accusative</div>
+		
+			<div style="visibility: hidden"> _ammuin karhun_ "I shot
 a bear.Acc" (and I know that it is dead); _ammuin karhua_ "I shot at a
 bear.Par" (but I may have missed).
 
 Using accusative instead of partitive may also substitute the missing
-future tense: _luen kirjan_ "I will read the book.Acc"; _luen kirjaa_
+future tense</div>
+		
+			<div style="visibility: hidden"> _luen kirjan_ "I will read the book.Acc"; _luen kirjaa_
 "I am reading the book.Par".
 
 </div>
+		
 	
-		<div style="visibility: hidden">`Dis`: distributive
+		
+		
+			<div style="visibility: hidden">`Dis`</div>
+		
+			<div style="visibility: hidden"> distributive
 
 The distributive case conveys that something happened to every member
 of a set, one in a time. Or it may express frequency.
 
 #</div>
+		
 	
-		<div style="visibility: hidden">Examples
+		
+		
+			<div style="visibility: hidden">Examples
 
 * [hu] _<b>fejenként</b>_ "per capita"
 * [hu] _<b>esetenként</b>_ "in some cases"
@@ -668,32 +819,48 @@ of a set, one in a time. Or it may express frequency.
 * [hu] _<b>tízpercenként</b>_ "every ten minutes"
 
 </div>
+		
 	
-		<div style="visibility: hidden">`Ess`: essive / prolative
+		
+		
+			<div style="visibility: hidden">`Ess`</div>
+		
+			<div style="visibility: hidden"> essive / prolative
 
 The essive case expresses a temporary state, often it corresponds to
 English "as a &hellip;" A similar case in Basque is called prolative
 and it should be tagged `Ess` too.
 
 #</div>
+		
 	
-		<div style="visibility: hidden">Examples
+		
+		
+			<div style="visibility: hidden">Examples
 
 * [fi] _lapsi_ "child"; _<b>lapsena</b>_ "as a child / when he/she was child"
 * [et] _laps_ "child"; _<b>lapsena</b>_ "as a child"
 * [eu] _erreformista_ "reformer"; _<b>erreformistatzat</b>_ "as a reformer"
 
 </div>
+		
 	
-		<div style="visibility: hidden">`Tra`: translative / factive
+		
+		
+			<div style="visibility: hidden">`Tra`</div>
+		
+			<div style="visibility: hidden"> translative / factive
 
 The translative case expresses a change of state ("it becomes X", "it
 changes to X").  Also used for the phrase "in language X". In the
 Szeged Treebank, this case is called factive.
 
 #</div>
+		
 	
-		<div style="visibility: hidden">Examples
+		
+		
+			<div style="visibility: hidden">Examples
 
 * [fi] _pitkä_ "long"; _kasvoi <b>pitkäksi</b>_ "grew long"
 * [fi] _englanti_ "English language"; _<b>englanniksi</b>_ "in/into English"
@@ -703,75 +870,120 @@ Szeged Treebank, this case is called factive.
   could-become._ "Oroszlány could become a dead city."
 
 </div>
+		
 	
-		<div style="visibility: hidden">`Com`: comitative / associative
+		
+		
+			<div style="visibility: hidden">`Com`</div>
+		
+			<div style="visibility: hidden"> comitative / associative
 
 The comitative (also called associative) case corresponds to English
 "together with &hellip;"
 
 #</div>
+		
 	
-		<div style="visibility: hidden">Examples
+		
+		
+			<div style="visibility: hidden">Examples
 
 * [et] _koer_ "dog"; _<b>koeraga</b>_ "with dog"
 
 </div>
+		
 	
-		<div style="visibility: hidden">`Abe`: abessive
+		
+		
+			<div style="visibility: hidden">`Abe`</div>
+		
+			<div style="visibility: hidden"> abessive
 
 The abessive case corresponds to the English preposition _without_.
 
 #</div>
+		
 	
-		<div style="visibility: hidden">Examples
+		
+		
+			<div style="visibility: hidden">Examples
 
 * [fi] _raha_ "money"; _<b>rahatta</b>_ "without money"
 
 </div>
+		
 	
-		<div style="visibility: hidden">`Ine`: inessive
+		
+		
+			<div style="visibility: hidden">`Ine`</div>
+		
+			<div style="visibility: hidden"> inessive
 
 The inessive case expresses location inside of something.
 
 #</div>
+		
 	
-		<div style="visibility: hidden">Examples
+		
+		
+			<div style="visibility: hidden">Examples
 
 * [hu] _ház_ "house"; _<b>házban</b>_ "in the house"
 * [fi] _talo_ "house"; _<b>talossa</b>_ "in the house"
 * [et] _maja_ "house"; _<b>majas</b>_ "in the house"
 
 </div>
+		
 	
-		<div style="visibility: hidden">`Ill`: illative
+		
+		
+			<div style="visibility: hidden">`Ill`</div>
+		
+			<div style="visibility: hidden"> illative
 
 The illative case expresses direction into something.
 
 #</div>
+		
 	
-		<div style="visibility: hidden">Examples
+		
+		
+			<div style="visibility: hidden">Examples
 
 * [hu]_ház_ "house"; _<b>házb</b><b>a</b>_ "into the house"
 * [fi] _talo_ "house"; _<b>talo</b><b>on</b>_ "into the house"
 * [et] _maja_ "house"; _<b>majas</b><b>se / majja</b>_ "into the house"
 
 </div>
+		
 	
-		<div style="visibility: hidden">`Ela`: elative
+		
+		
+			<div style="visibility: hidden">`Ela`</div>
+		
+			<div style="visibility: hidden"> elative
 
 The elative case expresses direction out of something.
 
 #</div>
+		
 	
-		<div style="visibility: hidden">Examples
+		
+		
+			<div style="visibility: hidden">Examples
 
 * [hu]_ház_ "house"; _<b>házból</b>_ "from the house"
 * [fi] _talo_ "house"; _<b>talos</b><b>t</b><b>a</b>_ "from the house"
 * [et] _maja_ "house"; _<b>majas</b><b>t</b>_ "from the house"
 
 </div>
+		
 	
-		<div style="visibility: hidden">`Add`: additive
+		
+		
+			<div style="visibility: hidden">`Add`</div>
+		
+			<div style="visibility: hidden"> additive
 
 Distinguished by some scholars in Estonian, not recognized by
 traditional grammar, exists in the Multext-East Estonian tagset and in
@@ -780,16 +992,24 @@ illative. Forms of this case exist only in singular and not for all
 nouns.
 
 </div>
+		
 	
-		<div style="visibility: hidden">`Ade`: adessive
+		
+		
+			<div style="visibility: hidden">`Ade`</div>
+		
+			<div style="visibility: hidden"> adessive
 
 The adessive case expresses location at or on something.  The
 corresponding directional cases are allative (towards something) and
 ablative (from something).
 
 #</div>
+		
 	
-		<div style="visibility: hidden">Examples
+		
+		
+			<div style="visibility: hidden">Examples
 
 * [hu] _pénztár_ "cash desk"; _<b>pénztárnál</b>_ "at the cash desk"
 * [fi] _pöytä_ "table"; _<b>pöydällä</b>_ "on the table"
@@ -800,52 +1020,85 @@ something in Finnish and Estonian, but does not carry this meaning in
 Hungarian.
 
 </div>
+		
 	
-		<div style="visibility: hidden">`All`: allative
+		
+		
+			<div style="visibility: hidden">`All`</div>
+		
+			<div style="visibility: hidden"> allative
 
 The allative case expresses direction to something (destination is
 adessive, i.e. at or on that something).
 
 #</div>
+		
 	
-		<div style="visibility: hidden">Examples
+		
+		
+			<div style="visibility: hidden">Examples
 
 * [hu] _pénztár_ "cash desk"; _<b>pénztár</b><b>hoz</b>_ "to the cash desk"
 * [fi] _pöytä_ "table"; _<b>pöydäll</b><b>e</b>_ "onto the table"
 
 </div>
+		
 	
-		<div style="visibility: hidden">`Abl`: ablative
+		
+		
+			<div style="visibility: hidden">`Abl`</div>
+		
+			<div style="visibility: hidden"> ablative
 
-Prototypical meaning: direction from some point.
+Prototypical meaning</div>
+		
+			<div style="visibility: hidden"> direction from some point.
 
 #</div>
+		
 	
-		<div style="visibility: hidden">Examples
+		
+		
+			<div style="visibility: hidden">Examples
 
 * [hu] _a <b>barátomtól</b> jövök_ "I'm coming <b>from my friend</b>"
 * [fi] _pöydältä_ "from the table"; _katolta_ "from the roof";
   _rannalta_ "from the beach"
 
 </div>
+		
 	
-		<div style="visibility: hidden">`Sup`: superessive
+		
+		
+			<div style="visibility: hidden">`Sup`</div>
+		
+			<div style="visibility: hidden"> superessive
 
 Used, chiefly [in
-Hungarian](http://www.hungarianreference.com/Nouns/-n-superessive.aspx),
+Hungarian](http</div>
+		
+			<div style="visibility: hidden">//www.hungarianreference.com/Nouns/-n-superessive.aspx),
 to indicate location on top of something or on the surface of
 something.
 
 #</div>
+		
 	
-		<div style="visibility: hidden">Examples
+		
+		
+			<div style="visibility: hidden">Examples
 
 * [hu] _asztal_ "table"; _<b>asztalon</b>_ "on the table"
 * [hu] _könyvek_ "books"; _<b>könyveken</b>_ "on books"
 
 </div>
+		
 	
-		<div style="visibility: hidden">`Sub`: sublative
+		
+		
+			<div style="visibility: hidden">`Sub`</div>
+		
+			<div style="visibility: hidden"> sublative
 
 The sublative case is used in Finno-Ugric languages to express the
 destination of movement, originally to the surface of something
@@ -853,8 +1106,11 @@ destination of movement, originally to the surface of something
 meanings as well (e.g. "to university").
 
 #</div>
+		
 	
-		<div style="visibility: hidden">Examples
+		
+		
+			<div style="visibility: hidden">Examples
 
 * [hu] _Belgrádtól 150 <b>kilométerre délnyugatra</b>_ lit.
   _Belgrade.Abl 150 kilometer.Sub southwest.Sub_ "150 kilometers
@@ -863,25 +1119,40 @@ meanings as well (e.g. "to university").
 * [hu] _<b>bokorra</b>_ "on the shrub"
 
 </div>
+		
 	
-		<div style="visibility: hidden">`Del`: delative
+		
+		
+			<div style="visibility: hidden">`Del`</div>
+		
+			<div style="visibility: hidden"> delative
 
 Used, chiefly [in
-Hungarian](http://www.hungarianreference.com/Nouns/ról-rol-delative.aspx),
+Hungarian](http</div>
+		
+			<div style="visibility: hidden">//www.hungarianreference.com/Nouns/ról-rol-delative.aspx),
 to express the movement from the surface of something (like "moved off
 the table"). Other meanings are possible as well, e.g. "about
 something".
 
 #</div>
+		
 	
-		<div style="visibility: hidden">Examples
+		
+		
+			<div style="visibility: hidden">Examples
 
 * [hu] _asztal_ "table"; _az <b>asztal</b><b>ról</b>_ "off the table"
 * [hu]_<b>Budapestről</b> jövök_ "I am coming from Budapest"
 
 </div>
+		
 	
-		<div style="visibility: hidden">`Lat`: lative / directional allative
+		
+		
+			<div style="visibility: hidden">`Lat`</div>
+		
+			<div style="visibility: hidden"> lative / directional allative
 
 The lative case denotes movement towards/to/into/onto
 something. Similar case in Basque is called directional allative
@@ -890,35 +1161,54 @@ thought of as a union of allative, illative and sublative, while in
 Basque it is derived from allative, which also exists independently.
 
 #</div>
+		
 	
-		<div style="visibility: hidden">Examples
+		
+		
+			<div style="visibility: hidden">Examples
 
 * [eu] _behe_ "low"; _<b>beherantz</b>_ "down"
 
 </div>
+		
 	
-		<div style="visibility: hidden">`Tem`: temporal
+		
+		
+			<div style="visibility: hidden">`Tem`</div>
+		
+			<div style="visibility: hidden"> temporal
 
 The temporal case is used to indicate time.
 
 #</div>
+		
 	
-		<div style="visibility: hidden">Examples
+		
+		
+			<div style="visibility: hidden">Examples
 
 * [hu] _<b>hétkor</b>_ "at seven (o'clock)"; _<b>éjfélkor</b>_ "at midnight";
   _<b>karácsonykor</b>_ "at Christmas"
 
 </div>
+		
 	
-		<div style="visibility: hidden">`Ter`: terminative / terminal allative
+		
+		
+			<div style="visibility: hidden">`Ter`</div>
+		
+			<div style="visibility: hidden"> terminative / terminal allative
 
 The terminative case specifies where something ends in space or
 time. Similar case in Basque is called terminal allative (Spanish
 _adlativo terminal_).
 
 #</div>
+		
 	
-		<div style="visibility: hidden">Examples
+		
+		
+			<div style="visibility: hidden">Examples
 
 * [et] _<b>j&otilde;eni</b>_ "down to the river"; _kella <b>kuueni</b>_
   "till six o'clock"
@@ -927,16 +1217,24 @@ _adlativo terminal_).
 * [eu] _erdi_ "half"; _<b>erdiraino</b>_ "up to the half"
 
 </div>
+		
 	
-		<div style="visibility: hidden">`Cau`: causative / motivative
+		
+		
+			<div style="visibility: hidden">`Cau`</div>
+		
+			<div style="visibility: hidden"> causative / motivative
 
 Noun in this case is the cause of something. In Hungarian it also
 seems to be used frequently with currency ("to buy something _for_ the
 money") and it also can mean the goal of something.
 
 #</div>
+		
 	
-		<div style="visibility: hidden">Examples
+		
+		
+			<div style="visibility: hidden">Examples
 
 * [hu] _Egy világcég benzinkútjánál 7183 <b>forintért</b> tankoltam._
   lit. _a world-wide.company petrol.station.Ade 7183 forint.Cau
@@ -948,17 +1246,26 @@ money") and it also can mean the goal of something.
   behavior"
 
 </div>
+		
 	
-		<div style="visibility: hidden">`Ben`: benefactive / destinative
+		
+		
+			<div style="visibility: hidden">`Ben`</div>
+		
+			<div style="visibility: hidden"> benefactive / destinative
 
 The benefactive case corresponds to the English preposition _for_.
 
 #</div>
+		
 	
-		<div style="visibility: hidden">Examples
+		
+		
+			<div style="visibility: hidden">Examples
 
 * [eu] _mutil_ "boy"; _<b>mutilarentzat</b>_ "for boys"
 </div>
+		
 	
 
 
@@ -1428,7 +1735,9 @@ The benefactive case corresponds to the English preposition _for_.
 	<div property="rdfs:comment">
 	
 	
-		<div style="visibility: hidden">Definiteness is typically a feature of nouns, adjectives and
+		
+		
+			<div style="visibility: hidden">Definiteness is typically a feature of nouns, adjectives and
 articles. Its value distinguishes whether we are talking about
 something known and concrete, or something general or unknown. It can
 be marked on definite and indefinite [articles](u-pos/DET), or
@@ -1436,50 +1745,88 @@ directly on [nouns](u-pos/NOUN), [adjectives](u-pos/ADJ) etc.  In
 Arabic, definiteness is also called the "state".
 
 </div>
+		
 	
-		<div style="visibility: hidden">`Ind`: indefinite
+		
+		
+			<div style="visibility: hidden">`Ind`</div>
+		
+			<div style="visibility: hidden"> indefinite
 
 #</div>
+		
 	
-		<div style="visibility: hidden">Examples
+		
+		
+			<div style="visibility: hidden">Examples
 
 * [en] _<b>a</b> dog_
 
 </div>
+		
 	
-		<div style="visibility: hidden">`Def`: definite
+		
+		
+			<div style="visibility: hidden">`Def`</div>
+		
+			<div style="visibility: hidden"> definite
 
 #</div>
+		
 	
-		<div style="visibility: hidden">Examples
+		
+		
+			<div style="visibility: hidden">Examples
 
 * [en] _<b>the</b> dog_
 
 </div>
+		
 	
-		<div style="visibility: hidden">`Red`: reduced
+		
+		
+			<div style="visibility: hidden">`Red`</div>
+		
+			<div style="visibility: hidden"> reduced
 
 Used in [construct
-state](http://en.wikipedia.org/wiki/Status_constructus) in Arabic. If
+state](http</div>
+		
+			<div style="visibility: hidden">//en.wikipedia.org/wiki/Status_constructus) in Arabic. If
 two nouns are in genitive relation, the first one (the "nomen regens")
 has "reduced definiteness," the second is the genitive and can be
 either definite or indefinite.  Reduced form has neither the definite
 morpheme (article), nor the indefinite morpheme (nunation).
 
 #</div>
+		
 	
-		<div style="visibility: hidden">Examples
+		
+		
+			<div style="visibility: hidden">Examples
 
-* [ar] indefinite state: حلوَةٌ_ḥulwatun_ "a sweet"; definite state:
+* [ar] indefinite state</div>
+		
+			<div style="visibility: hidden"> حلوَةٌ_ḥulwatun_ "a sweet"; definite state</div>
+		
+			<div style="visibility: hidden">
   الحلوَةُ _al-ḥulwatu_ "the sweet"; <b>حلوَةُ </b>_<b>ḥulwatu</b>_
   "sweet of".
 
 </div>
+		
 	
-		<div style="visibility: hidden">`Com`: complex
+		
+		
+			<div style="visibility: hidden">`Com`</div>
+		
+			<div style="visibility: hidden"> complex
 
-Used in <a href="http://books.google.cz/books?id=rs3hzfgj3hoC&amp;pg=PA131&amp;lpg=PA131&amp;dq=arabic+improper+annexation&amp;source=bl&amp;ots=d6gGCpprOX&amp;sig=3G6YkRZsIy_EL0OCEh7_V7qqnlE&amp;hl=cs&amp;ei=ZasDTuLhGc_vsgaLlcyeDg&amp;sa=X&amp;oi=book_result&amp;ct=result&amp;resnum=2&amp;ved=0CB4Q6AEwAQ#v=onepage&amp;q=arabic%20improper%20annexation&amp;f=false">improper
-annexation</a> in Arabic. The genitive construction described above
+Used in &lt;A
+HREF="http</div>
+		
+			<div style="visibility: hidden">//books.google.cz/books?id=rs3hzfgj3hoC&amp;pg=PA131&amp;lpg=PA131&amp;dq=arabic+improper+annexation&amp;source=bl&amp;ots=d6gGCpprOX&amp;sig=3G6YkRZsIy_EL0OCEh7_V7qqnlE&amp;hl=cs&amp;ei=ZasDTuLhGc_vsgaLlcyeDg&amp;sa=X&amp;oi=book_result&amp;ct=result&amp;resnum=2&amp;ved=0CB4Q6AEwAQ#v=onepage&amp;q=arabic%20improper%20annexation&amp;f=false"&gt;improper
+annexation in Arabic. The genitive construction described above
 normally consists of two nouns (first reduced, second genitive). That
 is called proper annexation or iḍāfa. If the first member is an
 adjective or adjectivally used participle and the second member is a
@@ -1489,12 +1836,20 @@ attributive adjunct and thus must agree in definiteness with the noun
 it modifies. Its first part (the adjective or participle) may get
 again the definite article. Although it may look the same as the form
 for the definite state, it is assigned a special value of _complex_
-state to reflect the different origin. See also <a href="http://ufal.mff.cuni.cz/padt/PADT_1.0/docs/papers/2004-nemlar-padt.pdf">Hajič
-et al.</a> page 3.
+state to reflect the different origin. See also &lt;A
+HREF="http</div>
+		
+			<div style="visibility: hidden">//ufal.mff.cuni.cz/padt/PADT_1.0/docs/papers/2004-nemlar-padt.pdf"&gt;Hajič
+et al. page 3.
 
 #</div>
+		
 	
-		<div style="visibility: hidden">Examples:
+		
+		
+			<div style="visibility: hidden">Examples</div>
+		
+			<div style="visibility: hidden">
 
 * [ar] مُخْتَلِفٌ  _muxtalifun_ "different/various" (active participle,
   Form VIII); نَوْعٌ ج أنْوَاعٌ _nawˀun ja anwāˀun_ "kind"; مُخْتَلِفُ
@@ -1504,6 +1859,7 @@ et al.</a> page 3.
   الأنْوَاعِ _al-mašākilu <b>al-muxtalifatu</b> al-anwāˀi_ "the
   problems of various kinds".
 </div>
+		
 	
 
 
@@ -1581,12 +1937,19 @@ et al.</a> page 3.
 	<div property="rdfs:comment">
 	
 	
-		<div style="visibility: hidden">Degree of comparison is typically an inflectional feature of some
+		
+		
+			<div style="visibility: hidden">Degree of comparison is typically an inflectional feature of some
 [adjectives](u-pos/ADJ) and [adverbs](u-pos/ADV).
 
 </div>
+		
 	
-		<div style="visibility: hidden">`Pos`: positive, first degree
+		
+		
+			<div style="visibility: hidden">`Pos`</div>
+		
+			<div style="visibility: hidden"> positive, first degree
 
 This is the base form that merely states a quality of something,
 without comparing it to qualities of others. Note that although this
@@ -1594,43 +1957,67 @@ degree is traditionally called "positive", negative properties can be
 compared, too.
 
 #</div>
+		
 	
-		<div style="visibility: hidden">Examples
+		
+		
+			<div style="visibility: hidden">Examples
 
 * [en] _<b>young</b> man_
 * [cs] _<b>mladý</b> muž_
 
 </div>
+		
 	
-		<div style="visibility: hidden">`Cmp`: comparative, second degree
+		
+		
+			<div style="visibility: hidden">`Cmp`</div>
+		
+			<div style="visibility: hidden"> comparative, second degree
 
 The quality of one object is compared to the same quality of another
 object.
 
 #</div>
+		
 	
-		<div style="visibility: hidden">Examples
+		
+		
+			<div style="visibility: hidden">Examples
 
 * [en] _the man is <b>younger</b> than me_
 * [cs] _ten muž je <b>mladší</b> než já_
 
 </div>
+		
 	
-		<div style="visibility: hidden">`Sup`: superlative, third degree
+		
+		
+			<div style="visibility: hidden">`Sup`</div>
+		
+			<div style="visibility: hidden"> superlative, third degree
 
 The quality of one object is compared to the same quality of all other
 objects within a set.
 
 #</div>
+		
 	
-		<div style="visibility: hidden">Examples
+		
+		
+			<div style="visibility: hidden">Examples
 
 * [en] _this is the <b>youngest</b> man in our team_
 * [cs] _toto je <b>nejmladší</b> muž v našem týmu_
 
 </div>
+		
 	
-		<div style="visibility: hidden">`Abs`: absolute superlative
+		
+		
+			<div style="visibility: hidden">`Abs`</div>
+		
+			<div style="visibility: hidden"> absolute superlative
 
 Some languages can express morphologically that the studied quality of
 the given object is so strong that there is hardly any other object
@@ -1638,12 +2025,16 @@ exceeding it. The quality is not actually compared to any particular
 set of objects.
 
 #</div>
+		
 	
-		<div style="visibility: hidden">Examples
+		
+		
+			<div style="visibility: hidden">Examples
 
 * [es] _guapo_ "handsome"; _<b>guapísimo</b>_ "<b>indescribably
   handsome</b>"
 </div>
+		
 	
 
 
@@ -1708,7 +2099,9 @@ set of objects.
 	<div property="rdfs:comment">
 	
 	
-		<div style="visibility: hidden">`Gender` is usually a lexical feature of [nouns](u-pos/NOUN) and inflectional feature
+		
+		
+			<div style="visibility: hidden">`Gender` is usually a lexical feature of [nouns](u-pos/NOUN) and inflectional feature
 of other parts of speech ([pronouns](u-pos/PRON),
 [adjectives](u-pos/ADJ), [determiners](u-pos/DET), [numerals](u-pos/NUM),
 [verbs](u-pos/VERB)) that mark agreement with
@@ -1718,55 +2111,86 @@ English tagsets.
 
 See also the related feature of [Animacy]().
 
-African languages have an analogous feature of noun classes: there
+African languages have an analogous feature of noun classes</div>
+		
+			<div style="visibility: hidden"> there
 might be separate grammatical categories for flat objects, long thin
 objects etc. African noun classes are not covered in the current
 proposal because none of the tagsets on which the proposal is based
 are for a language with noun classes. They might be added in future.
 
 </div>
+		
 	
-		<div style="visibility: hidden">`Masc`: masculine gender
+		
+		
+			<div style="visibility: hidden">`Masc`</div>
+		
+			<div style="visibility: hidden"> masculine gender
 
 Nouns denoting male persons are masculine. Other nouns may be also
 grammatically masculine, without any relation to sex.
 
 #</div>
+		
 	
-		<div style="visibility: hidden">Examples
+		
+		
+			<div style="visibility: hidden">Examples
 
 * [cs] _<b>hrad</b>_ "castle"
 
 </div>
+		
 	
-		<div style="visibility: hidden">`Fem`: feminine gender
+		
+		
+			<div style="visibility: hidden">`Fem`</div>
+		
+			<div style="visibility: hidden"> feminine gender
 
 Nouns denoting female persons are feminine. Other nouns may be also
 grammatically feminine, without any relation to sex.
 
 #</div>
+		
 	
-		<div style="visibility: hidden">Examples
+		
+		
+			<div style="visibility: hidden">Examples
 
 * [de] _<b>Burg</b>_ "castle"
 
 </div>
+		
 	
-		<div style="visibility: hidden">`Neut`: neuter gender
+		
+		
+			<div style="visibility: hidden">`Neut`</div>
+		
+			<div style="visibility: hidden"> neuter gender
 
 Some languages have only the masculine/feminine distinction while
 others also have this third gender for nouns that are neither
 masculine nor feminine (grammatically).
 
 #</div>
+		
 	
-		<div style="visibility: hidden">Examples
+		
+		
+			<div style="visibility: hidden">Examples
 
 * [cs] _<b>dítě</b>_ "child"
 
 </div>
+		
 	
-		<div style="visibility: hidden">`Com`: common gender
+		
+		
+			<div style="visibility: hidden">`Com`</div>
+		
+			<div style="visibility: hidden"> common gender
 
 Some languages do not distinguish masculine/feminine most of the time
 but they do distinguish neuter vs. non-neuter (Swedish neutrum /
@@ -1794,6 +2218,7 @@ Instead, we should either drop the gender feature entirely
 (suggesting that this word does not inflect for gender)
 or tag individual instances of _grande_ as either masculine or feminine, depending on context.
 </div>
+		
 	
 
 
@@ -1883,20 +2308,30 @@ or tag individual instances of _grande_ as either masculine or feminine, dependi
 	<div property="rdfs:comment">
 	
 	
-		<div style="visibility: hidden">Mood is a feature that expresses modality and subclassifies finite
+		
+		
+			<div style="visibility: hidden">Mood is a feature that expresses modality and subclassifies finite
 verb forms.
 
 </div>
+		
 	
-		<div style="visibility: hidden">`Ind`: indicative
+		
+		
+			<div style="visibility: hidden">`Ind`</div>
+		
+			<div style="visibility: hidden"> indicative
 
 The indicative can be considered the default mood. A verb in
 indicative merely states that something happens, has happened or will
 happen, without adding any attitude of the speaker.
 
 #</div>
+		
 	
-		<div style="visibility: hidden">Examples
+		
+		
+			<div style="visibility: hidden">Examples
 
 * [cs] _<b>Studuješ</b> na univerzitě._ "<b>You study</b> at the
   university."
@@ -1904,22 +2339,35 @@ happen, without adding any attitude of the speaker.
   the university."
 
 </div>
+		
 	
-		<div style="visibility: hidden">`Imp`: imperative
+		
+		
+			<div style="visibility: hidden">`Imp`</div>
+		
+			<div style="visibility: hidden"> imperative
 
 The speaker uses imperative to order or ask the addressee to do the
 action of the verb.
 
 #</div>
+		
 	
-		<div style="visibility: hidden">Examples
+		
+		
+			<div style="visibility: hidden">Examples
 
 * [cs] _<b>Studuj</b> na univerzitě!_ "<b>Study</b> at the university!"
 * [de] _<b>Studiere</b> an der Universität!_ "<b>Study</b> at the university!"
 
 </div>
+		
 	
-		<div style="visibility: hidden">`Cnd`: conditional
+		
+		
+			<div style="visibility: hidden">`Cnd`</div>
+		
+			<div style="visibility: hidden"> conditional
 
 The conditional mood is used to express actions that would have taken
 place under some circumstances but they actually did not / do not
@@ -1928,8 +2376,11 @@ happen. Grammars of some languages may classify conditional as tense
 tenses (past and present).
 
 #</div>
+		
 	
-		<div style="visibility: hidden">Examples
+		
+		
+			<div style="visibility: hidden">Examples
 
 * [cs] <i>Kdy<b>bych</b> byl chytrý, studoval <b>bych</b> na
   univerzitě.</i> "If I were smart I <b>would</b> study at the
@@ -1940,15 +2391,25 @@ tenses (past and present).
   indicative.)
 
 </div>
+		
 	
-		<div style="visibility: hidden">`Pot`: potential
+		
+		
+			<div style="visibility: hidden">`Pot`</div>
+		
+			<div style="visibility: hidden"> potential
 
 The action of the verb is likely but not certain. Used e.g. in
 Finnish.
 
 </div>
+		
 	
-		<div style="visibility: hidden">`Sub`: subjunctive / conjunctive
+		
+		
+			<div style="visibility: hidden">`Sub`</div>
+		
+			<div style="visibility: hidden"> subjunctive / conjunctive
 
 The subjunctive mood is used under certain circumstances in
 subordinate clauses, typically for actions that are subjective or
@@ -1956,46 +2417,79 @@ otherwise uncertain. In German, it may be also used to convey the
 conditional meaning.
 
 #</div>
+		
 	
-		<div style="visibility: hidden">Examples
+		
+		
+			<div style="visibility: hidden">Examples
 
 * [fr] <i>Je veux que tu le <b>fasses</b></i> "I want you to do it" lit. <i>I
   want that you it do</i><tt>.Sub</tt>
 
 </div>
+		
 	
-		<div style="visibility: hidden">`Jus`: jussive
+		
+		
+			<div style="visibility: hidden">`Jus`</div>
+		
+			<div style="visibility: hidden"> jussive
 
 The jussive mood expresses the desire that the action happens. Used
 e.g. in Arabic.
 
 </div>
+		
 	
-		<div style="visibility: hidden">`Qot`: quotative
+		
+		
+			<div style="visibility: hidden">`Qot`</div>
+		
+			<div style="visibility: hidden"> quotative
 
 The quotative mood is used e.g. in Estonian to denote direct speech.
 
 </div>
+		
 	
-		<div style="visibility: hidden">`Opt`: optative
+		
+		
+			<div style="visibility: hidden">`Opt`</div>
+		
+			<div style="visibility: hidden"> optative
 
 Used e.g. in Turkish in exclamations like "May you have a long life!"
 or "If only I were rich!"
 
 </div>
+		
 	
-		<div style="visibility: hidden">`Des`: desiderative
+		
+		
+			<div style="visibility: hidden">`Des`</div>
+		
+			<div style="visibility: hidden"> desiderative
 
-The desiderative mood corresponds to the modal verb "want to": "He
+The desiderative mood corresponds to the modal verb "want to"</div>
+		
+			<div style="visibility: hidden"> "He
 <b>wants to come</b>." Used e.g. in Turkish.
 
 </div>
+		
 	
-		<div style="visibility: hidden">`Nec`: necessitative
+		
+		
+			<div style="visibility: hidden">`Nec`</div>
+		
+			<div style="visibility: hidden"> necessitative
 
 The necessitative mood corresponds to the modal verbs "must, should,
-have to": "He <b>must</b><b> come</b>." Used e.g. in Turkish.
+have to"</div>
+		
+			<div style="visibility: hidden"> "He <b>must</b><b> come</b>." Used e.g. in Turkish.
 </div>
+		
 	
 
 
@@ -2098,7 +2592,9 @@ have to": "He <b>must</b><b> come</b>." Used e.g. in Turkish.
 	<div property="rdfs:comment">
 	
 	
-		<div style="visibility: hidden">Negativeness is typically a feature of [verbs](u-pos/VERB),
+		
+		
+			<div style="visibility: hidden">Negativeness is typically a feature of [verbs](u-pos/VERB),
 [adjectives](u-pos/ADJ), sometimes also [adverbs](u-pos/ADV) and
 [nouns](u-pos/NOUN) in languages that negate using bound
 morphemes. For instance, all Czech verbs and adjectives can be negated
@@ -2116,25 +2612,42 @@ The negativeness feature could be also used to distinguish response
 [interjections](u-pos/INTJ) _yes_ and _no_.
 
 </div>
+		
 	
-		<div style="visibility: hidden">`Pos`: positive, affirmative
+		
+		
+			<div style="visibility: hidden">`Pos`</div>
+		
+			<div style="visibility: hidden"> positive, affirmative
 
 #</div>
+		
 	
-		<div style="visibility: hidden">Examples
+		
+		
+			<div style="visibility: hidden">Examples
 
 * [cs] _<b>přišel</b>_ "he came"
 
 </div>
+		
 	
-		<div style="visibility: hidden">Neg: negative
+		
+		
+			<div style="visibility: hidden">Neg</div>
+		
+			<div style="visibility: hidden"> negative
 
 #</div>
+		
 	
-		<div style="visibility: hidden">Examples
+		
+		
+			<div style="visibility: hidden">Examples
 
 * [cs] _<b>nepřišel</b>_ "he did not come"
 </div>
+		
 	
 
 
@@ -2181,7 +2694,9 @@ The negativeness feature could be also used to distinguish response
 	<div property="rdfs:comment">
 	
 	
-		<div style="visibility: hidden">Some languages (especially Slavic) have a complex system of
+		
+		
+			<div style="visibility: hidden">Some languages (especially Slavic) have a complex system of
 [numerals](u-pos/NUM). For example, in the school grammar of Czech,
 the main part of speech is "numeral", it includes almost everything
 where counting is involved and there are various subtypes. It also
@@ -2195,63 +2710,106 @@ quantifiers and they are considered a subgroup of
 From the syntactic point of view, some numtypes behave like adjectives
 and some behave like adverbs. We tag them [u-pos/ADJ]() and
 [u-pos/ADV]() respectively. Thus the `NumType` feature applies to
-several different parts of speech:
+several different parts of speech</div>
+		
+			<div style="visibility: hidden">
 
-* [u-pos/NUM](): cardinal numerals
-* [u-pos/DET](): quantifiers
-* [u-pos/ADJ](): definite adjectival, e.g. ordinal numerals
-* [u-pos/ADV](): adverbial (e.g. ordinal and multiplicative) numerals, both definite and pronominal
+* [u-pos/NUM]()</div>
+		
+			<div style="visibility: hidden"> cardinal numerals
+* [u-pos/DET]()</div>
+		
+			<div style="visibility: hidden"> quantifiers
+* [u-pos/ADJ]()</div>
+		
+			<div style="visibility: hidden"> definite adjectival, e.g. ordinal numerals
+* [u-pos/ADV]()</div>
+		
+			<div style="visibility: hidden"> adverbial (e.g. ordinal and multiplicative) numerals, both definite and pronominal
 
 </div>
+		
 	
-		<div style="visibility: hidden">`Card`: cardinal number or corresponding interrogative / relative / indefinite / demonstrative word
+		
+		
+			<div style="visibility: hidden">`Card`</div>
+		
+			<div style="visibility: hidden"> cardinal number or corresponding interrogative / relative / indefinite / demonstrative word
 
 Note that in some Indo-European languages there is a fuzzy borderline
 between numerals and nouns for _thousand, million_ and _billion._
 
 #</div>
+		
 	
-		<div style="visibility: hidden">Examples
+		
+		
+			<div style="visibility: hidden">Examples
 
 * [en] _one, two, three_ 
 * [cs] _jeden, dva, tři_ "one, two, three"; _kolik_ "how many";
   _několik_ "some"; _tolik_ "so many"; _mnoho_ "many"; _málo_ "few"
 
 </div>
+		
 	
-		<div style="visibility: hidden">`Ord`: ordinal number or corresponding interrogative / relative / indefinite / demonstrative word
+		
+		
+			<div style="visibility: hidden">`Ord`</div>
+		
+			<div style="visibility: hidden"> ordinal number or corresponding interrogative / relative / indefinite / demonstrative word
 
 This is a subtype of adjective or (in some languages) of adverb.
 
 #</div>
+		
 	
-		<div style="visibility: hidden">Examples
+		
+		
+			<div style="visibility: hidden">Examples
 
 * [en] _first, second, third;_ 
-* [cs] adjectival: _první_ "first"; _druhý_ "second", _třetí_ "third";
+* [cs] adjectival</div>
+		
+			<div style="visibility: hidden"> _první_ "first"; _druhý_ "second", _třetí_ "third";
   _kolikátý_ lit. _how manieth_ "which rank"; _několikátý_ "some
   rank"; _tolikátý_ "this/that rank"
-* [cs] adverbial: _poprvé_ "for the first time"; _podruhé_ "for the
+* [cs] adverbial</div>
+		
+			<div style="visibility: hidden"> _poprvé_ "for the first time"; _podruhé_ "for the
   second time"; _potřetí_ "for the third time"; _pokolikáté_ "for
   which time", _poněkolikáté_ "for x-th time", _potolikáté_
 
 </div>
+		
 	
-		<div style="visibility: hidden">`Mult`: multiplicative numeral or corresponding interrogative / relative / indefinite / demonstrative word
+		
+		
+			<div style="visibility: hidden">`Mult`</div>
+		
+			<div style="visibility: hidden"> multiplicative numeral or corresponding interrogative / relative / indefinite / demonstrative word
 
 This is subtype of adverb.
 
 #</div>
+		
 	
-		<div style="visibility: hidden">Examples
+		
+		
+			<div style="visibility: hidden">Examples
 
 * [cs] _jednou_ "once"; _dvakrát_ "twice"; _třikrát_ "three times";
   _kolikrát_ "how many times", _několikrát_ "several times";
   _tolikrát_ "so many times"
 
 </div>
+		
 	
-		<div style="visibility: hidden">`Frac`: fraction
+		
+		
+			<div style="visibility: hidden">`Frac`</div>
+		
+			<div style="visibility: hidden"> fraction
 
 This is a subtype of cardinal numbers, occasionally distinguished in
 corpora. It may denote a fraction or just the denominator of the
@@ -2259,59 +2817,93 @@ fraction. In various languages these words may behave morphologically
 and syntactically as nouns or ordinal numerals.
 
 #</div>
+		
 	
-		<div style="visibility: hidden">Examples
+		
+		
+			<div style="visibility: hidden">Examples
 
 * [en] _three-quarters_
 * [cs] _půl / polovina_ "half"; _třetina_ "one third"; _čtvrt /
   čtvrtina_ "quarter"
 
 </div>
+		
 	
-		<div style="visibility: hidden">`Sets`: number of sets of things
+		
+		
+			<div style="visibility: hidden">`Sets`</div>
+		
+			<div style="visibility: hidden"> number of sets of things
 
 Morphologically distinct class of numerals used to count sets of
 things, or nouns that are pluralia tantum.
 
 #</div>
+		
 	
-		<div style="visibility: hidden">Examples
+		
+		
+			<div style="visibility: hidden">Examples
 
 * [cs] _<b>dvoje</b> / <b>troje</b> boty_ "<b>two</b> / <b>three</b>
-  [pairs of] shoes"; as opposed to normal cardinal numbers: _dvě / tři
+  [pairs of] shoes"; as opposed to normal cardinal numbers</div>
+		
+			<div style="visibility: hidden"> _dvě / tři
   boty_ "two / three shoes"
 
 </div>
+		
 	
-		<div style="visibility: hidden">`Dist`: distributive numeral
+		
+		
+			<div style="visibility: hidden">`Dist`</div>
+		
+			<div style="visibility: hidden"> distributive numeral
 
 Used to express that the same quantity is distributed to each member
 in a set of targets.
 
 #</div>
+		
 	
-		<div style="visibility: hidden">Examples
+		
+		
+			<div style="visibility: hidden">Examples
 
 * [hu] _három-három in gyermekenként <b>három-három</b> ezer
   forinttal_ "three thousand forint per child"
 
 </div>
+		
 	
-		<div style="visibility: hidden">`Range`: range of values
+		
+		
+			<div style="visibility: hidden">`Range`</div>
+		
+			<div style="visibility: hidden"> range of values
 
 This could be considered a subtype of cardinal numbers, occasionally
 distinguished in corpora.
 
 #</div>
+		
 	
-		<div style="visibility: hidden">Examples
+		
+		
+			<div style="visibility: hidden">Examples
 
 * [en] _two-five_ "two to five" (provided tokenization leaves it as
   one token.)
 
 </div>
+		
 	
-		<div style="visibility: hidden">`Gen`: generic numeral, i.e. a numeral that is neither of the above
+		
+		
+			<div style="visibility: hidden">`Gen`</div>
+		
+			<div style="visibility: hidden"> generic numeral, i.e. a numeral that is neither of the above
 
 Czech school grammar distinguishes this subclass, which is why it
 appears in Czech tagsets. Other Slavic languages may have similar
@@ -2320,8 +2912,11 @@ words but their traditional classification may differ. (Note that
 mentioned above.)
 
 #</div>
+		
 	
-		<div style="visibility: hidden">Examples
+		
+		
+			<div style="visibility: hidden">Examples
 
 * [cs] _<b>čtvero, patero, desatero</b>_ (specific forms of four,
   five, ten; they are morphologically, syntactically and stylistically
@@ -2329,6 +2924,7 @@ mentioned above.)
   trojí, čtverý</b>_ (twofold, threefold, fourfold; these are
   morphologically and syntactically adjectives).
 </div>
+		
 	
 
 
@@ -2462,44 +3058,70 @@ mentioned above.)
 	<div property="rdfs:comment">
 	
 	
-		<div style="visibility: hidden">`Number` is usually an inflectional feature of [nouns](u-pos/NOUN) and,
+		
+		
+			<div style="visibility: hidden">`Number` is usually an inflectional feature of [nouns](u-pos/NOUN) and,
 depending on language, other parts of speech ([pronouns](u-pos/PRON),
 [adjectives](u-pos/ADJ), [determiners](u-pos/DET), [numerals](u-pos/NUM),
 [verbs](u-pos/VERB)) that mark agreement with nouns.
 
 </div>
+		
 	
-		<div style="visibility: hidden">`Sing`: singular number
+		
+		
+			<div style="visibility: hidden">`Sing`</div>
+		
+			<div style="visibility: hidden"> singular number
 
 A singular noun denotes one person, animal or thing.
 
 #</div>
+		
 	
-		<div style="visibility: hidden">Examples
+		
+		
+			<div style="visibility: hidden">Examples
 
 * [en] _<b>car</b>_
 
 </div>
+		
 	
-		<div style="visibility: hidden">`Plur`: plural number
+		
+		
+			<div style="visibility: hidden">`Plur`</div>
+		
+			<div style="visibility: hidden"> plural number
 
 A plural noun denotes several persons, animals or things.
 
 #</div>
+		
 	
-		<div style="visibility: hidden">Examples
+		
+		
+			<div style="visibility: hidden">Examples
 
 * [en] _<b>cars</b>_
 
 </div>
+		
 	
-		<div style="visibility: hidden">`Dual`: dual number
+		
+		
+			<div style="visibility: hidden">`Dual`</div>
+		
+			<div style="visibility: hidden"> dual number
 
 A dual noun denotes two persons, animals or things.
 
 #</div>
+		
 	
-		<div style="visibility: hidden">Examples
+		
+		
+			<div style="visibility: hidden">Examples
 
 * [sl] singular _glas_ "voice", dual _<b>glasova</b>_ "voices", plural
   _glasovi_ "voices"
@@ -2507,8 +3129,13 @@ A dual noun denotes two persons, animals or things.
   _sanatāni_</b> "years", plural سِنُونَ _sinūna_ "years".
 
 </div>
+		
 	
-		<div style="visibility: hidden">`Ptan`: plurale tantum
+		
+		
+			<div style="visibility: hidden">`Ptan`</div>
+		
+			<div style="visibility: hidden"> plurale tantum
 
 Some nouns appear only in the plural form even though they denote one
 thing (semantic singular); some tagsets mark this distinction.
@@ -2519,15 +3146,23 @@ unknown. In Czech, special type of numerals is used when counting
 nouns that are plurale tantum ([NumType]() = Sets).
 
 #</div>
+		
 	
-		<div style="visibility: hidden">Examples
+		
+		
+			<div style="visibility: hidden">Examples
 
 * [en] _<b>scissors, pants</b>_
 * [cs] _<b>nůžky, kalhoty</b>_
 
 </div>
+		
 	
-		<div style="visibility: hidden">`Coll`: collective / mass / singulare tantum
+		
+		
+			<div style="visibility: hidden">`Coll`</div>
+		
+			<div style="visibility: hidden"> collective / mass / singulare tantum
 
 Collective or mass or singulare tantum is a special case of
 singular. It applies to words that use grammatical singular to
@@ -2537,11 +3172,15 @@ semantically plausible. Sometimes, the plural form exists and means
 "several sorts of" or "several packages of".
 
 #</div>
+		
 	
-		<div style="visibility: hidden">Examples
+		
+		
+			<div style="visibility: hidden">Examples
 
 * [cs] _<b>lidstvo</b>_ "mankind"
 </div>
+		
 	
 
 
@@ -2619,7 +3258,9 @@ semantically plausible. Sometimes, the plural form exists and means
 	<div property="rdfs:comment">
 	
 	
-		<div style="visibility: hidden">Person is typically feature of personal and possessive
+		
+		
+			<div style="visibility: hidden">Person is typically feature of personal and possessive
 [pronouns](u-pos/PRON) / [determiners](u-pos/DET), and of [verbs](u-pos/VERB). On verbs it is in
 fact an agreement feature that marks the person of the verb's subject
 (some languages, e.g. Basque, can also mark person of objects). Person
@@ -2628,52 +3269,79 @@ as subject and thus subjects are sometimes dropped (pro-drop
 languages).
 
 </div>
+		
 	
-		<div style="visibility: hidden">`1`: first person
+		
+		
+			<div style="visibility: hidden">`1`</div>
+		
+			<div style="visibility: hidden"> first person
 
 In singular, the first person refers just to the speaker / author. In
 plural, it must include the speaker and one or more additional
 persons. Some languages (e.g. Taiwanese) distinguish inclusive and
-exclusive 1<sup>st</sup> person plural pronouns: the former include
+exclusive 1<sup>st</sup> person plural pronouns</div>
+		
+			<div style="visibility: hidden"> the former include
 the addressee of the utterance (i.e. _I + you_), the latter exclude
 them (i.e. _I + they_).
 
 #</div>
+		
 	
-		<div style="visibility: hidden">Examples
+		
+		
+			<div style="visibility: hidden">Examples
 
 * [en] _<b>I</b>_, _<b>we</b>_
 * [cs] _<b>dělám</b>_ "<b>I</b> do"
 
 </div>
+		
 	
-		<div style="visibility: hidden">`2`: second person
+		
+		
+			<div style="visibility: hidden">`2`</div>
+		
+			<div style="visibility: hidden"> second person
 
 In singular, the second person refers to the addressee of the
 utterance / text. In plural, it may mean several addressees and
 optionally some third persons too.
 
 #</div>
+		
 	
-		<div style="visibility: hidden">Examples
+		
+		
+			<div style="visibility: hidden">Examples
 
 * [en] _<b>you</b>_
 * [cs] _<b>děláš</b>_ "<b>you</b> do"
 
 </div>
+		
 	
-		<div style="visibility: hidden">`3`: third person
+		
+		
+			<div style="visibility: hidden">`3`</div>
+		
+			<div style="visibility: hidden"> third person
 
 The third person refers to one or more persons that are neither
 speakers nor addressees.
 
 #</div>
+		
 	
-		<div style="visibility: hidden">Examples
+		
+		
+			<div style="visibility: hidden">Examples
 
 * [en] _<b>he</b>_, _<b>she</b>_, _<b>it</b>_, _<b>they</b>_
 * [cs] _<b>dělá</b>_ "<b>he/she/it does</b>"
 </div>
+		
 	
 
 
@@ -2734,7 +3402,9 @@ speakers nor addressees.
 	<div property="rdfs:comment">
 	
 	
-		<div style="visibility: hidden">Boolean feature of pronouns, determiners or adjectives.  It tells
+		
+		
+			<div style="visibility: hidden">Boolean feature of pronouns, determiners or adjectives.  It tells
 whether the word is possessive.
 
 While many tagsets would have "possessive" as one of the various
@@ -2743,20 +3413,31 @@ pronoun types, this feature is intentionally separate from
 pronominal types can be optionally possessive, and adjectives can too.
 
 </div>
+		
 	
-		<div style="visibility: hidden">`Yes`: it is possessive
+		
+		
+			<div style="visibility: hidden">`Yes`</div>
+		
+			<div style="visibility: hidden"> it is possessive
 
 Note that there is no `No` value. If the word is not possessive, the
 `Poss` feature will just not be mentioned in the `FEAT` column. (Which
 means that empty value has the `No` meaning.)
 
 #</div>
+		
 	
-		<div style="visibility: hidden">Examples
+		
+		
+			<div style="visibility: hidden">Examples
 
 * [en] _my, your, his, mine, yours, whose_ 
-* [cs] possessive adjectives: _otcův_ "father's", _matčin_ "mother's"
+* [cs] possessive adjectives</div>
+		
+			<div style="visibility: hidden"> _otcův_ "father's", _matčin_ "mother's"
 </div>
+		
 	
 
 
@@ -2793,13 +3474,20 @@ means that empty value has the `No` meaning.)
 	<div property="rdfs:comment">
 	
 	
-		<div style="visibility: hidden">This feature typically applies to [pronouns](u-pos/PRON),
+		
+		
+			<div style="visibility: hidden">This feature typically applies to [pronouns](u-pos/PRON),
 [determiners](u-pos/DET), pronominal [numerals](u-pos/NUM)
 (quantifiers) and pronominal [adverbs](u-pos/ADV).
 
 </div>
+		
 	
-		<div style="visibility: hidden">`Prs`: personal or possessive personal pronoun or determiner
+		
+		
+			<div style="visibility: hidden">`Prs`</div>
+		
+			<div style="visibility: hidden"> personal or possessive personal pronoun or determiner
 
 See also the [Poss]() feature that distinguishes normal personal
 pronouns from possessives. Note that `Prs` also includes reflexive
@@ -2807,49 +3495,78 @@ personal/possessive pronouns (e.g. [cs] _se / svůj;_ see the
 [Reflex]() feature).
 
 #</div>
+		
 	
-		<div style="visibility: hidden">Examples
+		
+		
+			<div style="visibility: hidden">Examples
 
 * [en] _I, you, he, she, it, we, they, my, your, his, her, its, our,
   their, mine, yours, hers, ours, theirs_
 
 </div>
+		
 	
-		<div style="visibility: hidden">`Rcp`: reciprocal pronoun
+		
+		
+			<div style="visibility: hidden">`Rcp`</div>
+		
+			<div style="visibility: hidden"> reciprocal pronoun
 
 #</div>
+		
 	
-		<div style="visibility: hidden">Examples
+		
+		
+			<div style="visibility: hidden">Examples
 
 * [de] _einander,_ "each other"
 * [da] _hinanden_ "each other"
 
 </div>
+		
 	
-		<div style="visibility: hidden">`Art`: article
+		
+		
+			<div style="visibility: hidden">`Art`</div>
+		
+			<div style="visibility: hidden"> article
 
 Article is a special case of determiner that bears the feature of
 [definiteness](Definite) (in other languages, the feature may be
 marked directly on nouns).
 
 #</div>
+		
 	
-		<div style="visibility: hidden">Examples
+		
+		
+			<div style="visibility: hidden">Examples
 
 * [en] _a, an, the_ 
 * [de] _ein, eine, der, die, das_ 
 * [es] _un, una, el, la_
 
 </div>
+		
 	
-		<div style="visibility: hidden">`Int`: interrogative pronoun, determiner, numeral or adverb
+		
+		
+			<div style="visibility: hidden">`Int`</div>
+		
+			<div style="visibility: hidden"> interrogative pronoun, determiner, numeral or adverb
 
 Note that possessive interrogative determiners (_whose_) can be
 distinguished by the [Poss]() feature.
 
 #</div>
+		
 	
-		<div style="visibility: hidden">Examples: 
+		
+		
+			<div style="visibility: hidden">Examples</div>
+		
+			<div style="visibility: hidden"> 
 
 * [cs/en] _kdo / who, co / what, který / which, čí / whose, kolik /
   how many, how much, kolikátý / how-maniest_ (ordinal number),
@@ -2857,31 +3574,49 @@ distinguished by the [Poss]() feature.
   jak / how, proč / why_
 
 </div>
+		
 	
-		<div style="visibility: hidden">`Rel`: relative pronoun, determiner, numeral or adverb
+		
+		
+			<div style="visibility: hidden">`Rel`</div>
+		
+			<div style="visibility: hidden"> relative pronoun, determiner, numeral or adverb
 
 Note that in many languages this class heavily overlaps with
 interrogatives, yet there are pronouns that are only relative, and in
 some languages (Bulgarian, Hindi) the two classes seem to be distinct.
 
 #</div>
+		
 	
-		<div style="visibility: hidden">Examples: 
+		
+		
+			<div style="visibility: hidden">Examples</div>
+		
+			<div style="visibility: hidden"> 
 
 * [cs] _jenž, což_ "which", "that" (relative but not interrogative
   pronouns); _jehož_ "whose" (possessive relative pronoun)
 
 </div>
+		
 	
-		<div style="visibility: hidden">`Dem`: demonstrative pronoun, determiner, numeral or adverb
+		
+		
+			<div style="visibility: hidden">`Dem`</div>
+		
+			<div style="visibility: hidden"> demonstrative pronoun, determiner, numeral or adverb
 
 These are often parallel to interrogatives. Some tagsets might also
 distinguish a separate feature of distance (_here / there_; [es] _aquí
 / ahí / allí_).
 
 #</div>
+		
 	
-		<div style="visibility: hidden">Examples
+		
+		
+			<div style="visibility: hidden">Examples
 
 * [cs/en] _tento / this, tamten / that, takový / such, týž / same,
   tolik / so much, tolikátý / so-maniest_ (ordinal number), _tolikrát
@@ -2889,37 +3624,60 @@ distinguish a separate feature of distance (_here / there_; [es] _aquí
   tak / so_
 
 </div>
+		
 	
-		<div style="visibility: hidden">`Tot`: total (collective) pronoun, determiner or adverb
+		
+		
+			<div style="visibility: hidden">`Tot`</div>
+		
+			<div style="visibility: hidden"> total (collective) pronoun, determiner or adverb
 
 #</div>
+		
 	
-		<div style="visibility: hidden">Examples
+		
+		
+			<div style="visibility: hidden">Examples
 
 * [cs/en] _každý / every, everybody, everyone, each, všechno /
   everything, all, všude / everywhere, vždy / always_
 
 </div>
+		
 	
-		<div style="visibility: hidden">`Neg`: negative pronoun, determiner or adverb
+		
+		
+			<div style="visibility: hidden">`Neg`</div>
+		
+			<div style="visibility: hidden"> negative pronoun, determiner or adverb
 
-Examples: 
+Examples</div>
+		
+			<div style="visibility: hidden"> 
 
 * [cs/en] _nikdo / nobody, nic / nothing, nijaký / no, ničí / no
   one's_ (possessive negative pronoun), _žádný / no, none, nikde /
   nowhere, nikdy / never, nijak / no way_ (lit. “no-how”)
 
 </div>
+		
 	
-		<div style="visibility: hidden">`Ind`: indefinite pronoun, determiner, numeral or adverb
+		
+		
+			<div style="visibility: hidden">`Ind`</div>
+		
+			<div style="visibility: hidden"> indefinite pronoun, determiner, numeral or adverb
 
 Note that some tagsets might further subclassify this category to
 distinguish "some" from "any" etc. Such distinctions are not part of
 universal features but may be added in language-specific extensions.
 
 #</div>
+		
 	
-		<div style="visibility: hidden">Examples
+		
+		
+			<div style="visibility: hidden">Examples
 
 * [cs/en] _někdo / somebody, něco / something, některý / some, něčí /
   someone's_ (possessive indefinite pronoun), _několik / a few,
@@ -2933,6 +3691,7 @@ universal features but may be added in language-specific extensions.
 * [cs/en] _málokdo / few people, leckdo / quite a few people, kdosi /
   somebody…_
 </div>
+		
 	
 
 
@@ -3056,7 +3815,9 @@ universal features but may be added in language-specific extensions.
 	<div property="rdfs:comment">
 	
 	
-		<div style="visibility: hidden">Boolean feature, typically of [pronouns](u-pos/PRON) or
+		
+		
+			<div style="visibility: hidden">Boolean feature, typically of [pronouns](u-pos/PRON) or
 [determiners](u-pos/DET). It tells whether the word is reflexive,
 i.e. refers to the subject of its clause.
 
@@ -3071,20 +3832,33 @@ cases the fused token will be split to two syntactic words, one of
 them being a reflexive pronoun.
 
 </div>
+		
 	
-		<div style="visibility: hidden">`Yes`: it is reflexive
+		
+		
+			<div style="visibility: hidden">`Yes`</div>
+		
+			<div style="visibility: hidden"> it is reflexive
 
 Note that there is no `No` value. If the word is not reflexive, the
 `Reflex` feature will just not be mentioned in the `FEAT`
 column. (Which means that empty value has the `No` meaning.)
 
 #</div>
+		
 	
-		<div style="visibility: hidden">Examples
+		
+		
+			<div style="visibility: hidden">Examples
 
-* [cs] reflexive personal pronouns: _se, si_; reflexive possessive
-  pronoun: _svůj_
+* [cs] reflexive personal pronouns</div>
+		
+			<div style="visibility: hidden"> _se, si_; reflexive possessive
+  pronoun</div>
+		
+			<div style="visibility: hidden"> _svůj_
 </div>
+		
 	
 
 
@@ -3127,7 +3901,9 @@ column. (Which means that empty value has the `No` meaning.)
 	<div property="rdfs:comment">
 	
 	
-		<div style="visibility: hidden">Tense is typically a feature of [verbs](u-pos/VERB).
+		
+		
+			<div style="visibility: hidden">Tense is typically a feature of [verbs](u-pos/VERB).
 It may also occur with other parts of speech
 ([nouns](u-pos/NOUN), [adjectives](u-pos/ADJ), [adverbs](u-pos/ADV)),
 depending on whether borderline word forms such as gerunds and participles
@@ -3155,8 +3931,13 @@ morphologically as just one word, such as _estivera_, which will thus be tagged
 `VerbForm=Fin|Mood=Ind|Tense=Pqp`.
 
 </div>
+		
 	
-		<div style="visibility: hidden">`Past`: past tense / preterite / aorist
+		
+		
+			<div style="visibility: hidden">`Past`</div>
+		
+			<div style="visibility: hidden"> past tense / preterite / aorist
 
 The past tense denotes actions that happened before the current
 moment. In English, this is the simple past form. In German, this is
@@ -3166,40 +3947,64 @@ used freely with both imperfective and perfective verbs (see also
 imperfect).
 
 #</div>
+		
 	
-		<div style="visibility: hidden">Examples
+		
+		
+			<div style="visibility: hidden">Examples
 
 * [en] _he <b>went</b> home_
 
 </div>
+		
 	
-		<div style="visibility: hidden">`Pres`: present tense
+		
+		
+			<div style="visibility: hidden">`Pres`</div>
+		
+			<div style="visibility: hidden"> present tense
 
 The present tense denotes actions that are happening right now or that
 usually happen.
 
 #</div>
+		
 	
-		<div style="visibility: hidden">Examples
+		
+		
+			<div style="visibility: hidden">Examples
 
 * [en] _he <b>goes</b> home_
 
 </div>
+		
 	
-		<div style="visibility: hidden">`Fut`: future tense
+		
+		
+			<div style="visibility: hidden">`Fut`</div>
+		
+			<div style="visibility: hidden"> future tense
 
 The future tense denotes actions that will happen after the current
 moment.
 
 #</div>
+		
 	
-		<div style="visibility: hidden">Examples
+		
+		
+			<div style="visibility: hidden">Examples
 
 * [es] _<b>irá</b> a la casa_ "he/she/it will go home"
 
 </div>
+		
 	
-		<div style="visibility: hidden">`Imp`: imperfect
+		
+		
+			<div style="visibility: hidden">`Imp`</div>
+		
+			<div style="visibility: hidden"> imperfect
 
 Used in e.g. Bulgarian and Croatian, imperfect is a special case of
 the past tense. Note that, unfortunately, imperfect tense is not
@@ -3211,21 +4016,32 @@ tense and perfective verbs have perfect tense. However, both rules can
 be violated in embedded clauses.
 
 </div>
+		
 	
-		<div style="visibility: hidden">`Nar`: narrative
+		
+		
+			<div style="visibility: hidden">`Nar`</div>
+		
+			<div style="visibility: hidden"> narrative
 
 Special case of the past tense, this is the Turkish _miş_-past. The
 difference is whether the speaker personally witnessed the action he
 is describing, or not.
 
 </div>
+		
 	
-		<div style="visibility: hidden">`Pqp`: pluperfect
+		
+		
+			<div style="visibility: hidden">`Pqp`</div>
+		
+			<div style="visibility: hidden"> pluperfect
 
 The pluperfect denotes action that happened before another action in
 past. This value does not apply to English where the pluperfect (past
 perfect) is constructed analytically. It applies e.g. to Portuguese.
 </div>
+		
 	
 
 
@@ -3324,7 +4140,9 @@ perfect) is constructed analytically. It applies e.g. to Portuguese.
 	<div property="rdfs:comment">
 	
 	
-		<div style="visibility: hidden">Even though the name of the feature seems to suggest that it is used
+		
+		
+			<div style="visibility: hidden">Even though the name of the feature seems to suggest that it is used
 exclusively with [verbs](u-pos/VERB), it is not the case. Some verb
 forms in some languages actually form a gray zone between verbs and
 other parts of speech ([nouns](u-pos/NOUN), [adjectives](u-pos/ADJ)
@@ -3334,21 +4152,36 @@ context. In both cases `VerbForm=Part` may be used to separate them
 from other verb forms or other types of adjectives.
 
 </div>
+		
 	
-		<div style="visibility: hidden">`Fin`: finite verb
+		
+		
+			<div style="visibility: hidden">`Fin`</div>
+		
+			<div style="visibility: hidden"> finite verb
 
-Rule of thumb: if it has non-empty [Mood](), it is finite. But beware
+Rule of thumb</div>
+		
+			<div style="visibility: hidden"> if it has non-empty [Mood](), it is finite. But beware
 that some tagsets conflate verb forms and moods into one feature.
 
 #</div>
+		
 	
-		<div style="visibility: hidden">Examples
+		
+		
+			<div style="visibility: hidden">Examples
 
 * [en] _I <b>do</b>, he <b>does</b>_
 
 </div>
+		
 	
-		<div style="visibility: hidden">`Inf`: infinitive
+		
+		
+			<div style="visibility: hidden">`Inf`</div>
+		
+			<div style="visibility: hidden"> infinitive
 
 Infinitive is the citation form of verbs in many languages. Unlike in
 English, it often has morphological form that is distinct from the
@@ -3359,14 +4192,22 @@ verbs etc.  In some languages they behave similarly to nouns and are
 used as such (similar to the gerund in English).
 
 #</div>
+		
 	
-		<div style="visibility: hidden">Examples
+		
+		
+			<div style="visibility: hidden">Examples
 
 * [de] _ich muss <b>gehen</b>_ “I must <b>go</b>”
 
 </div>
+		
 	
-		<div style="visibility: hidden">`Sup`: supine
+		
+		
+			<div style="visibility: hidden">`Sup`</div>
+		
+			<div style="visibility: hidden"> supine
 
 Supine is a rare verb form. It survives in some Slavic languages
 (Slovenian) and is used instead of infinitive as the argument of
@@ -3375,17 +4216,34 @@ motion verbs (old [cs] _jdu <b>spat</b>_ lit. _I-go sleep_).
 A form called "supine" also exists in Swedish where it is a special
 form of the participle, used to form the composite past form of a
 verb.  It is used after the auxiliary verb _ha_ (to have) but not
-after _vara_ (to be):
+after _vara_ (to be)</div>
+		
+			<div style="visibility: hidden">
 
-* Simple past: I ate (the) dinner = _Jag åt maten_ (using preterite)
-* Composite past: I have eaten (the) dinner = _Jag har <b>ätit</b> maten_ (using supine)
-* Past participle common: (The) dinner is eaten = _Maten är äten_ (using past participle)
-* Past participle neuter: (The) apple is eaten = _Äpplet är ätet_
-* Past participle plural: (The) apples are eaten = _Äpplena är ätna_ 
+* Simple past</div>
+		
+			<div style="visibility: hidden"> I ate (the) dinner = _Jag åt maten_ (using preterite)
+* Composite past</div>
+		
+			<div style="visibility: hidden"> I have eaten (the) dinner = _Jag har <b>ätit</b> maten_ (using supine)
+* Past participle common</div>
+		
+			<div style="visibility: hidden"> (The) dinner is eaten = _Maten är äten_ (using past participle)
+* Past participle neuter</div>
+		
+			<div style="visibility: hidden"> (The) apple is eaten = _Äpplet är ätet_
+* Past participle plural</div>
+		
+			<div style="visibility: hidden"> (The) apples are eaten = _Äpplena är ätna_ 
 
 </div>
+		
 	
-		<div style="visibility: hidden">`Part`: participle
+		
+		
+			<div style="visibility: hidden">`Part`</div>
+		
+			<div style="visibility: hidden"> participle
 
 Participle is a non-finite verb form that shares properties of verbs
 and adjectives. Its usage varies across languages. It may be used to
@@ -3397,23 +4255,34 @@ Other features may help to distinguish past/present participles
 participles (Hindi) etc.
 
 #</div>
+		
 	
-		<div style="visibility: hidden">Examples
+		
+		
+			<div style="visibility: hidden">Examples
 
 * [en] _he could have <b>been prepared</b> if he had
   <b>forseen</b> it_; _I will be <b>driving</b> home_.
 
 </div>
+		
 	
-		<div style="visibility: hidden">`Trans`: transgressive
+		
+		
+			<div style="visibility: hidden">`Trans`</div>
+		
+			<div style="visibility: hidden"> transgressive
 
 The transgressive, also called adverbial participle, is a non-finite
 verb form that shares properties of verbs and adverbs. It appears
 e.g. in Slavic and Indo-Aryan languages.
 
 #</div>
+		
 	
-		<div style="visibility: hidden">Examples
+		
+		
+			<div style="visibility: hidden">Examples
 
 * [cs] _zírali na mne, pevně <b>svírajíce</b> své zbraně_ "they
   stared at me <b>while gripping</b> their guns firmly";
@@ -3421,8 +4290,13 @@ e.g. in Slavic and Indo-Aryan languages.
   prepared</b> the dinner, she called her family to the table"
 
 </div>
+		
 	
-		<div style="visibility: hidden">`Ger`: gerund
+		
+		
+			<div style="visibility: hidden">`Ger`</div>
+		
+			<div style="visibility: hidden"> gerund
 
 Gerund is a non-finite verb form that shares properties of verbs and
 nouns. In English it shares the morphological form with present
@@ -3430,12 +4304,16 @@ participle, which may mean that the tagset will not distinguish it
 from the participle.
 
 #</div>
+		
 	
-		<div style="visibility: hidden">Examples
+		
+		
+			<div style="visibility: hidden">Examples
 
 * [en] _I look forward to <b>seeing</b> you_; _he turns a blind
   eye to my <b>being</b> late_
 </div>
+		
 	
 
 
@@ -3543,7 +4421,9 @@ from the participle.
 	<div property="rdfs:comment">
 	
 	
-		<div style="visibility: hidden">Voice is typically a feature of [verbs](u-pos/VERB).
+		
+		
+			<div style="visibility: hidden">Voice is typically a feature of [verbs](u-pos/VERB).
 It may also occur with other parts of speech
 ([nouns](u-pos/NOUN), [adjectives](u-pos/ADJ), [adverbs](u-pos/ADV)),
 depending on whether borderline word forms such as gerunds and participles
@@ -3554,60 +4434,101 @@ distinction. In other languages, other shades of verb meaning are
 categorized as voice.
 
 </div>
+		
 	
-		<div style="visibility: hidden">`Act`: active voice
+		
+		
+			<div style="visibility: hidden">`Act`</div>
+		
+			<div style="visibility: hidden"> active voice
 
 The subject of the verb is the doer of the action (agent), the object
 is affected by the action (patient).
 
 #</div>
+		
 	
-		<div style="visibility: hidden">Examples
+		
+		
+			<div style="visibility: hidden">Examples
 
 * [cs] _<b>Napadli</b> jsme nepřítele._ “We <b>attacked</b> the enemy”
   (the active participle _napadli_ can be used to form either past
   tense or conditional mood; here it forms the past tense.)
 
 </div>
+		
 	
-		<div style="visibility: hidden">`Pass`: passive voice
+		
+		
+			<div style="visibility: hidden">`Pass`</div>
+		
+			<div style="visibility: hidden"> passive voice
 
 The subject of the verb is affected by the action (patient). The doer
 (agent) is either unexpressed or it appears as an object of the verb.
 
 #</div>
+		
 	
-		<div style="visibility: hidden">Examples
+		
+		
+			<div style="visibility: hidden">Examples
 
 * [cs] _Jsme <b>napadeni</b> nepřítelem._ “We are <b>attacked</b> by
   the enemy” (the passive participle _napadeni_ is used to form
   passive in all tenses; here it forms the present passive.)
 
 </div>
+		
 	
-		<div style="visibility: hidden">`Rcp`: reciprocal voice
+		
+		
+			<div style="visibility: hidden">`Rcp`</div>
+		
+			<div style="visibility: hidden"> reciprocal voice
 
 #</div>
+		
 	
-		<div style="visibility: hidden">Examples
+		
+		
+			<div style="visibility: hidden">Examples
 
 * [tr] _<b>karıştı</b>_, _<b>tutuştular</b>_
 
 </div>
+		
 	
-		<div style="visibility: hidden">`Cau`: causative voice
+		
+		
+			<div style="visibility: hidden">`Cau`</div>
+		
+			<div style="visibility: hidden"> causative voice
 
-<a href="https://wiki.ufal.ms.mff.cuni.cz/_media/user:zeman:treebanks:ttbankkl.pdf">Documentation</a>
+&lt;A HREF="https</div>
+		
+			<div style="visibility: hidden">//wiki.ufal.ms.mff.cuni.cz/_media/user</div>
+		
+			<div style="visibility: hidden">zeman</div>
+		
+			<div style="visibility: hidden">treebanks</div>
+		
+			<div style="visibility: hidden">ttbankkl.pdf"&gt;Documentation
 of the METU Sabanci treebank classifies causative as voice (page 26).
 Note that this is a feature of verbs. There are languages that have
 also the causative case of nouns.
 
 #</div>
+		
 	
-		<div style="visibility: hidden">Examples
+		
+		
+			<div style="visibility: hidden">Examples
 
 * [tr] _<b>karıştırıyor</b>_ "is confusing"
 </div>
+		
 	
 
 
