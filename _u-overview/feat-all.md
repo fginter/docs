@@ -26,9 +26,11 @@ permalink: u/feat/all.html
 		{% assign cand_feats = par | split: ":" %}
 		{% for cand_feat in cand_feats %}
 			{% if cand_feat contains "`" %}
-				{% if cand_feat contains " " %}
-				{% else %}
-					<div style="visibility: hidden">cf:{{ cand_feat }}</div>
+				{% if cand_feat contains " " %}{% else %}
+					{% assign feat = cand_feat | replace: "`","" %}
+					<div about="#{{ feat }}" property="rdf:type" resource="#{{ p.title }}" style="visibility: hidden">
+						<div property="oliasystem:hasTagContaining">{{ p.title }}={{ $feat }}</div>
+					</div>
 				{% endif %}
 			{% endif %}
 		{% endfor %}
