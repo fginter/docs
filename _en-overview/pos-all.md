@@ -7,11 +7,8 @@ permalink: en/pos/all.html
 
 # POS tags
 
-<div about="#Concept" property="http://purl.org/dc/terms/language" style="visibility: hidden">{{ permalink }}</div>
-	<!-- for debugging only, replace doesn't seem to work -->
-<!--div about="#Concept" property="http://purl.org/dc/terms/language" style="visibility: hidden">{{ permalink | replace: '/.*', '' }}</div-->
+<div about="#Concept" property="http://purl.org/dc/terms/language" style="visibility: hidden">{{ permalink | replace: '/.*', '' }}</div>
 		
-
 {% include en-pos-table.html %}
 
 ----------
