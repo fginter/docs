@@ -21,9 +21,12 @@ permalink: u/feat/all.html
 	<a id="al-u-feat/{{ p.title }}" class="al-dest"/>
 	<h2><code>{{ p.title }}</code>: {{ p.shortdef }}</h2>
 	<div property="rdfs:comment">
-	{% assign feats = p.content | split: "### " %}
-	{% for f in feats %}
-		<div style="visibility: hidden">{{ f }}</div>
+	{% assign pars = p.content | split: "### " %}
+	{% for par in pars %}
+		{% assign cand_feats = par | split: ":" %}
+		{% for cand_feat in cand_feats %}
+			<div style="visibility: hidden">{{ cand_feat }}</div>
+		{% endfor %}
 	{% endfor %}
 
 {% if p.content contains "<!--details-->" %}    
