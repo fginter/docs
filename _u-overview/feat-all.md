@@ -13,6 +13,10 @@ permalink: u/feat/all.html
 
 {% assign sorted = site.u-feat | sort: 'title' %}
 {% for p in sorted %}
+
+<div about="#has{{ p.title }}" property="rdf:type" resource="owl:ObjectProperty">
+	<div property="rdfs:range" resource="#{{ p.title }}"/>
+</div>
 <div about="#{{ p.title }}" property="rdfs:subClassOf" resource="#Concept">
 	<a id="al-u-feat/{{ p.title }}" class="al-dest"/>
 	<h2><code>{{ p.title }}</code>: {{ p.shortdef }}</h2>
