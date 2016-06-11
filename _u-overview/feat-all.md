@@ -19,6 +19,8 @@ permalink: u/feat/all.html
 <div about="#{{ p.title }}" property="rdfs:subClassOf" resource="#Concept">
 	<a id="al-u-feat/{{ p.title }}" class="al-dest"/>
 	<h2><code property="rdfs:label" lang="">{{ p.title }}</code>: <div property="rdfs:label">{{ p.shortdef }}</div></h2>
+	
+	<p>values:<br/>
 	{% assign pars = p.content | split: "### " %}
 	{% for par in pars %}
 		{% assign cand_feats = par | split: ":" %}
@@ -26,12 +28,12 @@ permalink: u/feat/all.html
 			{% if cand_feat contains "`" %}
 				{% if cand_feat contains " " %}{% else %}
 					{% assign feat = cand_feat | replace: "`","" %}
-					<div about="#{{ p.title }}{{ feat }}" property="rdfs:subClassOf" resource="#{{ p.title }}" style="display: none">
-						<div property="rdfs:label">{{ feat }}</div>
+					<div about="#{{ p.title }}{{ feat }}" property="rdfs:subClassOf" resource="#{{ p.title }}">
+						<code property="rdfs:label">{{ feat }}</code><br/>
 						<div property="rdfs:subClassOf" resource="_:{{ p.title }}{{ feat }}Def">
 							<div about="_:{{ p.title }}{{ feat }}Def" property="rdf:type" resource="owl:Restriction">
 								<div property="owl:onProperty" resource="#has{{ p.title }}"/>
-								<div property="owl:hasSelf" datatype="xsd:boolean">true</div>
+								<div property="owl:hasSelf" datatype="xsd:boolean" style="display: none">true</div>
 							</div>
 						</div>
 					</div>
@@ -39,6 +41,7 @@ permalink: u/feat/all.html
 			{% endif %}
 		{% endfor %}
 	{% endfor %}
+	</p>
 	<div about="#{{ p.title }}" property="rdfs:comment">
 
 {% if p.content contains "<!--details-->" %}    
