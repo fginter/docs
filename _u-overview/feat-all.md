@@ -23,7 +23,7 @@ permalink: u/feat/all.html
 	<div property="rdfs:comment">
 	{% assign feats = p.content | split:"`[^`]*### `" %}
 	{% for f in feats %}
-		<div style="visibility: hidden">{{ f.content }}</div>
+		<div style="visibility: hidden">{{ f }}</div>
 	{% endfor %}
 
 {% if p.content contains "<!--details-->" %}    
