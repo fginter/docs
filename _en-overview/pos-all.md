@@ -5,7 +5,7 @@ generated: 'true'
 permalink: en/pos/all.html
 ---
 
-{% capture lcode %}{{ permalink | split '/' | first }}{% endcapture %}
+{% capture lcode %}{{ permalink | split:"/" | first }}{% endcapture %}
 
 # POS tags
 
