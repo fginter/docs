@@ -14,6 +14,7 @@ permalink: en/pos/all.html
 	<span property="owl:imports" resource="
 https://www.w3.org/2012/pyRdfa/extract?uri=http://universaldependencies.org/docs/u/pos/all.html&format=xml&rdfagraph=output&vocab_expansion=false&rdfa_lite=false&embedded_rdf=true&space_preserve=false&vocab_cache=true&vocab_cache_report=false&vocab_cache_refresh=false"/>
 </span>
+
 <div about="#Concept" property="http://purl.org/dc/terms/language" style="visibility: hidden">{{ lcode }}</div>
 
 {% include en-pos-table.html %}
