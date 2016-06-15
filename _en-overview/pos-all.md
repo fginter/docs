@@ -28,7 +28,6 @@ https://www.w3.org/2012/pyRdfa/extract?uri=http://universaldependencies.org/docs
 	</span>
 </span>
 
-
 {% include en-pos-table.html %}
 
 ----------
