@@ -21,6 +21,13 @@ https://www.w3.org/2012/pyRdfa/extract?uri=http://universaldependencies.org/docs
 		<span property="owl:hasValue" lang=""  style="visibility: hidden">en</span>
 	</span>
 </span>
+<span about="#Concept" property="rdfs:subClassOf" resource="_:{{ tier }}">
+	<span about="_:{{ tier }}" property="rdf:type" resource="owl:Restriction">
+		<span property="owl:onProperty" resource="http://purl.org/olia/system.owl#hasTier"/>
+		<span property="owl:hasValue" lang=""  style="visibility: hidden">UPOS</span>
+	</span>
+</span>
+
 
 {% include en-pos-table.html %}
 
