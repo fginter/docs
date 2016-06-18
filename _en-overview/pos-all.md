@@ -16,7 +16,9 @@ permalink: en/pos/all.html
 		<span property="owl:hasValue" lang=""  style="visibility: hidden">{{ lcode }}</span>
 	</span>
 </span>
-<span about="#pos_{{ lcode }}" property="rdfs:subClassOf" resource="_:{{ tier }}">
+
+# to check: import from ../../u/pos/all.html?
+<span about="../../u/pos/all.html#pos" property="rdfs:subClassOf" resource="_:{{ tier }}">
 	<span about="_:{{ tier }}" property="rdf:type" resource="owl:Restriction">
 		<span property="owl:onProperty" resource="oliasystem:hasTier"/>
 		<span property="owl:hasValue" lang=""  style="visibility: hidden">UPOS</span>
