@@ -6,20 +6,17 @@ permalink: en/pos/all.html
 ---
 
 {% capture lcode %}{{ page.permalink | split:"/" | first }}{% endcapture %}
-{% capture tmp %}{{ page.permalink | split:"/" }}{% endcapture %}
-{% capture type %}{{ tmp[2] }}{% endcapture %}
 
 # POS tags
 
-<span about="#Concept" property="rdfs:label" style="visibility: hidden">{{ page.title }}</span>
-<span about="#Concept" property="rdfs:label" style="visibility: hidden">{{ type }}/{{ tmp | join:'/' }}</span>
-<span about="#Concept" property="rdfs:subClassOf" resource="_:{{ lcode }}">
+<span about="#pos_{{ lcode }}" property="rdfs:label" style="visibility: hidden">{{ page.title }}</span>
+<span about="#pos_{{ lcode }}" property="rdfs:subClassOf" resource="_:{{ lcode }}">
 	<span about="_:{{ lcode }}" property="rdf:type" resource="owl:Restriction">
 		<span property="owl:onProperty" resource="http://purl.org/dc/terms/language"/>
 		<span property="owl:hasValue" lang=""  style="visibility: hidden">{{ lcode }}</span>
 	</span>
 </span>
-<span about="#Concept" property="rdfs:subClassOf" resource="_:{{ tier }}">
+<span about="#pos_{{ lcode }}" property="rdfs:subClassOf" resource="_:{{ tier }}">
 	<span about="_:{{ tier }}" property="rdf:type" resource="owl:Restriction">
 		<span property="owl:onProperty" resource="oliasystem:hasTier"/>
 		<span property="owl:hasValue" lang=""  style="visibility: hidden">UPOS</span>
@@ -32,9 +29,9 @@ permalink: en/pos/all.html
 
 {% assign sorted = site.en-pos | sort: 'title' %}
 {% for p in sorted %}
-<div about="#{{ p.title }}_{{ lcode }}" property="rdf:type" resource="#Concept">
+<div about="#{{ p.title }}_{{ lcode }}" property="rdf:type" resource="#pos_{{ lcode }}">
 	<div property="rdf:type" resource="../../u/pos/all.html#{{ p.title }}">
-	   <div about="../../u/pos/all.html#{{ p.title }}" property="rdfs:subClassOf" resource="../../u/pos/all.html#Concept"/>
+	   <div about="../../u/pos/all.html#{{ p.title }}" property="rdfs:subClassOf" resource="../../u/pos/all.html#pos"/>
 	</div>
 	<a id="al-en-pos/{{ p.title }}" class="al-dest"/>
 
