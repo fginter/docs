@@ -6,15 +6,13 @@ permalink: en/pos/all.html
 ---
 
 {% capture lcode %}{{ page.permalink | split:"/" | first }}{% endcapture %}
+{% capture tmp %}{{ page.permalink | split:"/" }}{% endcapture %}
+{% capture type %}{{ tmp[2] }}{% endcapture %}
 
 # POS tags
 
-# import UD POS ontology
-<span about="." property="rdf:type" resource="owl:Ontology">
-	<span property="owl:imports" resource="
-https://www.w3.org/2012/pyRdfa/extract?uri=http://universaldependencies.org/docs/u/pos/all.html&format=xml&rdfagraph=output&vocab_expansion=false&rdfa_lite=false&embedded_rdf=true&space_preserve=false&vocab_cache=true&vocab_cache_report=false&vocab_cache_refresh=false"/>
-</span>
-
+<span about="#Concept" property="rdfs:label" style="visibility: hidden">{{ page.title }}</span>
+<span about="#Concept" property="rdfs:label" style="visibility: hidden">{{ type }}/{{ tmp }}</span>
 <span about="#Concept" property="rdfs:subClassOf" resource="_:{{ lcode }}">
 	<span about="_:{{ lcode }}" property="rdf:type" resource="owl:Restriction">
 		<span property="owl:onProperty" resource="http://purl.org/dc/terms/language"/>
