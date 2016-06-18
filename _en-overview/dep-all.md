@@ -37,10 +37,8 @@ Marneffe and Manning 2008), but have been updated for UD.
 {% assign sorted = site.en-dep | sort: 'title' %}
 {% for p in sorted %}
 {% capture concept %}{{ p.title | split:':' | first }}{% endcapture %}
-<div about="#{{ p.title }}_{{ lcode }}" property="rdf:type" resource="#dep_{{ lcode }}">
-	<div property="rdf:type" resource="../../u/dep/all.html#{{ concept }}">
-	   <div about="../../u/dep/all.html#{{ p.title }}" property="rdf:type" resource="../../u/dep/all.html#dep"/>
-	</div>
+<div about="#{{ p.title | url_encode }}_{{ lcode }}" property="rdf:type" resource="#dep_{{ lcode }}">
+	<div property="rdf:type" resource="../../u/dep/all.html#{{ concept }}"/>
 	<a id="al-en-dep/{{ p.title }}" class="al-dest"/>
 
 	<h2><code property="oliasystem:hasTag" lang="">{{ p.title }}</code>: <div property="rdfs:label">{{ p.shortdef }}</div></h2>
