@@ -36,8 +36,9 @@ Marneffe and Manning 2008), but have been updated for UD.
 
 {% assign sorted = site.en-dep | sort: 'title' %}
 {% for p in sorted %}
+{% capture concept %}{{ p.title | split:':' | first }}{% endcapture %}
 <div about="#{{ p.title }}_{{ lcode }}" property="rdf:type" resource="#dep_{{ lcode }}">
-	<div property="rdf:type" resource="../../u/dep/all.html#{{ p.title }}">
+	<div property="rdf:type" resource="../../u/dep/all.html#{{ concept }}">
 	   <div about="../../u/dep/all.html#{{ p.title }}" property="rdf:type" resource="../../u/dep/all.html#dep"/>
 	</div>
 	<a id="al-en-dep/{{ p.title }}" class="al-dest"/>
