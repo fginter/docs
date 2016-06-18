@@ -12,7 +12,7 @@ permalink: en/pos/all.html
 # POS tags
 
 <span about="#Concept" property="rdfs:label" style="visibility: hidden">{{ page.title }}</span>
-<span about="#Concept" property="rdfs:label" style="visibility: hidden">{{ type }}/{{ tmp }}</span>
+<span about="#Concept" property="rdfs:label" style="visibility: hidden">{{ type }}/{{ tmp | join:'/' }}</span>
 <span about="#Concept" property="rdfs:subClassOf" resource="_:{{ lcode }}">
 	<span about="_:{{ lcode }}" property="rdf:type" resource="owl:Restriction">
 		<span property="owl:onProperty" resource="http://purl.org/dc/terms/language"/>
