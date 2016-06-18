@@ -27,8 +27,9 @@ https://www.w3.org/2012/pyRdfa/extract?uri=http://universaldependencies.org/docs
 
 {% assign sorted = site.en-pos | sort: 'title' %}
 {% for p in sorted %}
-<div about="#{{ p.title }}_{{ lcode }}" property="rdf:type" resource="#pos_{{ lcode }}">
-	<div property="rdf:type" resource="../../u/pos/all.html#{{ p.title }}"/>
+{% capture concept %}{{ p.title | split:':' | first }}{% endcapture %}
+<div about="#{{ p.title | url_encode}}_{{ lcode }}" property="rdf:type" resource="#pos_{{ lcode }}">
+	<div property="rdf:type" resource="../../u/pos/all.html#{{ concept }}"/>
 	<a id="al-en-pos/{{ p.title }}" class="al-dest"/>
 
 	<h2><code property="oliasystem:hasTag" lang="">{{ p.title }}</code>: <div property="rdfs:label">{{ p.shortdef }}</div></h2>

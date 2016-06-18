@@ -28,7 +28,7 @@ https://www.w3.org/2012/pyRdfa/extract?uri=http://universaldependencies.org/docs
 
 {% assign sorted = site.en-feat | sort: 'title' %}
 {% for p in sorted %}
-<div about="#{{ p.title }}_{{ lcode }}" property="rdfs:subClassOf" resource="#feat_{{ lcode }}">
+<div about="#{{ p.title | url_encode }}_{{ lcode }}" property="rdfs:subClassOf" resource="#feat_{{ lcode }}">
 	<a id="al-en-feat/{{ p.title }}" class="al-dest"/>
 	<h2><code property="rdfs:label" lang="">{{ p.title }}</code>: <span property="rdfs:label">{{ p.shortdef }}</span>
 	<code>[</code> 
@@ -39,8 +39,8 @@ https://www.w3.org/2012/pyRdfa/extract?uri=http://universaldependencies.org/docs
 			{% if cand_feat contains "`" %}
 				{% if cand_feat contains " " %}{% else %}
 					{% assign feat = cand_feat | replace: "`","" %}
-					<span about="#{{ p.title }}{{ feat }}" property="rdf:type" resource="#{{ p.title }}">
-						<span property="rdf:type" resource="../../u/feat/all.html#{{ p.title }}{{ feat }}"/>
+					<span about="#{{ p.title | url_encode }}{{ feat }}" property="rdf:type" resource="#{{ p.title | url_encode }}">
+						<span property="rdf:type" resource="../../u/feat/all.html#{{ p.title | split:':' | first }}{{ feat | split:':' | first }}"/>
 						<code property="oliasystem:hasTagContaining" lang="">{{ p.title }}={{ feat }}</code>
 					</span>
 				{% endif %}
