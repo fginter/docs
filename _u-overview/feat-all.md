@@ -7,6 +7,14 @@ permalink: u/feat/all.html
 
 # Universal features
 
+<span about="#feat" property="rdfs:label" style="visibility: hidden">{{ page.title }}</span>
+<span about="#feat" property="rdfs:subClassOf" resource="_:{{ tier }}">
+	<span about="_:{{ tier }}" property="rdf:type" resource="owl:Restriction">
+		<span property="owl:onProperty" resource="oliasystem:hasTier"/>
+		<span property="owl:hasValue" lang=""  style="visibility: hidden">FEATS</span>
+	</span>
+</span>
+
 {% include u-feat-table.html %}
 
 ----------
@@ -16,7 +24,7 @@ permalink: u/feat/all.html
 <span about="#has{{ p.title }}" property="rdf:type" resource="owl:ObjectProperty">
 	<span property="rdfs:range" resource="#{{ p.title }}"/>
 </span>
-<div about="#{{ p.title }}" property="rdfs:subClassOf" resource="#Concept">
+<div about="#{{ p.title }}" property="rdfs:subClassOf" resource="#feat">
 	<a id="al-u-feat/{{ p.title }}" class="al-dest"/>
 	<h2><code property="rdfs:label" lang="">{{ p.title }}</code>: <span property="rdfs:label">{{ p.shortdef }}</span>
 		<code>[</code>

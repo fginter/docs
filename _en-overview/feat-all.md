@@ -5,6 +5,8 @@ generated: 'true'
 permalink: en/feat/all.html
 ---
 
+{% capture lcode %}{{ page.permalink | split:"/" | first }}{% endcapture %}
+
 # Features
 
 <span about="." property="rdf:type" resource="owl:Ontology">
@@ -12,8 +14,21 @@ permalink: en/feat/all.html
 https://www.w3.org/2012/pyRdfa/extract?uri=http://universaldependencies.org/docs/u/feat/all.html&format=xml&rdfagraph=output&vocab_expansion=false&rdfa_lite=false&embedded_rdf=true&space_preserve=false&vocab_cache=true&vocab_cache_report=false&vocab_cache_refresh=false"/>
 </span>
 
-# not working yet:
-<div about="#Concept" property="http://purl.org/dc/terms/language" style="visibility: hidden">{{ permalink | replace: '/.*', '' }}</div>
+<span about="#feat_{{ lcode }}" property="rdfs:label" style="visibility: hidden">{{ page.title }}</span>
+<span about="#feat_{{ lcode }}" property="rdfs:subClassOf" resource="_:{{ lcode }}">
+	<span about="_:{{ lcode }}" property="rdf:type" resource="owl:Restriction">
+		<span property="owl:onProperty" resource="http://purl.org/dc/terms/language"/>
+		<span property="owl:hasValue" lang=""  style="visibility: hidden">{{ lcode }}</span>
+	</span>
+</span>
+
+# to check: import from ../../u/feat/all.html?
+<span about="../../u/feat/all.html#feat" property="rdfs:subClassOf" resource="_:{{ tier }}">
+	<span about="_:{{ tier }}" property="rdf:type" resource="owl:Restriction">
+		<span property="owl:onProperty" resource="oliasystem:hasTier"/>
+		<span property="owl:hasValue" lang=""  style="visibility: hidden">FEATS</span>
+	</span>
+</span>
 
 {% include en-feat-table.html %}
 
@@ -21,7 +36,7 @@ https://www.w3.org/2012/pyRdfa/extract?uri=http://universaldependencies.org/docs
 
 {% assign sorted = site.en-feat | sort: 'title' %}
 {% for p in sorted %}
-<div about="#{{ p.title }}" property="rdfs:subClassOf" resource="#Concept">
+<div about="#{{ p.title }}_{{ lcode }}" property="rdfs:subClassOf" resource="#feat_{{ lcode }}">
 	<a id="al-en-feat/{{ p.title }}" class="al-dest"/>
 	<h2><code property="rdfs:label" lang="">{{ p.title }}</code>: <span property="rdfs:label">{{ p.shortdef }}</span>
 	<code>[</code> 
