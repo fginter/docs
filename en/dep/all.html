@@ -43,16 +43,33 @@
 	  </div>
 	</noscript>
 
-          <p><span about="." property="rdf:type" resource="owl:Ontology">
+          
+<h1 id="universal-dependencies">Universal Dependencies</h1>
+
+<p><span about="." property="rdf:type" resource="owl:Ontology">
 	<span property="owl:imports" resource=" https://www.w3.org/2012/pyRdfa/extract?uri=http://universaldependencies.org/docs/u/dep/all.html&amp;format=xml&amp;rdfagraph=output&amp;vocab_expansion=false&amp;rdfa_lite=false&amp;embedded_rdf=true&amp;space_preserve=false&amp;vocab_cache=true&amp;vocab_cache_report=false&amp;vocab_cache_refresh=false"></span>
+	<span property="owl:versionInfo">
+These pages draw from Section 2 of <em><a href="http://nlp.stanford.edu/software/dependencies_manual.pdf">Stanford typed dependencies
+manual</a></em> (de
+Marneffe and Manning 2008), but have been updated for UD.
+	</span>
 </span></p>
 
-<h1 id="not-working-yet">not working yet:</h1>
-<div about="#Concept" property="http://purl.org/dc/terms/language" style="visibility: hidden"></div>
+<p><span about="#dep_en" property="rdfs:label" style="visibility: hidden">English grammatical relations</span>
+<span about="#dep_en" property="rdfs:subClassOf" resource="_:en">
+	<span about="_:en" property="rdf:type" resource="owl:Restriction">
+		<span property="owl:onProperty" resource="http://purl.org/dc/terms/language"></span>
+		<span property="owl:hasValue" lang="" style="visibility: hidden">en</span>
+	</span>
+</span></p>
 
-<p>These pages draw from Section 2 of <em><a href="http://nlp.stanford.edu/software/dependencies_manual.pdf">Stanford typed dependencies
-manual</a></em> (de
-Marneffe and Manning 2008), but have been updated for UD.</p>
+<h1 id="to-check-import-from-udepallhtml">to check: import from ../../u/dep/all.html?</h1>
+<p><span about="../../u/dep/all.html#dep" property="rdfs:subClassOf" resource="_:">
+	<span about="_:" property="rdf:type" resource="owl:Restriction">
+		<span property="owl:onProperty" resource="oliasystem:hasTier"></span>
+		<span property="owl:hasValue" lang="" style="visibility: hidden">DEPREL</span>
+	</span>
+</span></p>
 
 <p>Note: <i>nmod</i>, <i>neg</i> and <i>punct</i> appear
 in two places.</p>
@@ -262,522 +279,567 @@ in two places.</p>
 
 <hr />
 
-<div about="#acl" property="rdf:type" resource="#Concept">
-	<div property="rdf:type" resource="../../u/pos/all.html#acl">
-	   <div about="../../u/pos/all.html#acl" property="rdf:type" resource="../../u/pos/all.html#Concept" />
+<div about="#acl_en" property="rdf:type" resource="#dep_en">
+	<div property="rdf:type" resource="../../u/dep/all.html#acl">
+	   <div about="../../u/dep/all.html#acl" property="rdf:type" resource="../../u/dep/all.html#dep" />
 	</div>
 	<a id="al-en-dep/acl" class="al-dest" />
 
 	<h2><code property="oliasystem:hasTag" lang="">acl</code>: <div property="rdfs:label">clausal modifier of noun</div></h2>
 	<div property="rdfs:comment">
 
-<p><code>acl</code> is used for finite and non-finite clauses that modify a
+`acl` is used for finite and non-finite clauses that modify a
 noun. Note that in English relative clauses get assigned a specific
-relation <a href="">acl:relcl</a>, a subtype of <code>acl</code>.</p>
+relation [acl:relcl](), a subtype of `acl`.
 
-<pre><code class="language-sdparse">the issues as he sees them
+~~~ sdparse
+the issues as he sees them
 acl(issues, sees)
-</code></pre>
+~~~
 
-<pre><code class="language-sdparse">Points to establish are ...
+~~~ sdparse
+Points to establish are ...
 acl(Points, establish)
-</code></pre>
+~~~
 
-<pre><code class="language-sdparse">I don't have anything to say to you
+~~~ sdparse
+I don't have anything to say to you
 acl(anything, say)
-</code></pre>
+~~~
 
-<p>Non-relative clause finite clausal complements for nouns are limited to complement clauses with a subset of nouns like <em>fact</em> or <em>report</em>.  We analyze them as <code>acl</code> (parallel to the analysis of this class as “content clauses” in Huddleston and Pullum 2002). Such clausal complements are usually finite (though there are occasional remnant English subjunctives).</p>
+Non-relative clause finite clausal complements for nouns are limited to complement clauses with a subset of nouns like *fact* or *report*.  We analyze them as `acl` (parallel to the analysis of this class as "content clauses" in Huddleston and Pullum 2002). Such clausal complements are usually finite (though there are occasional remnant English subjunctives). 
 
-<pre><code class="language-sdparse">I admire the fact that you are honest 
+~~~ sdparse
+I admire the fact that you are honest 
 acl(fact, honest) 
 mark(honest, that) 
 cop(honest, are) 
 nsubj(honest, you) 
-</code></pre>
+~~~
 
 
 	</div>
 	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_en-dep/acl.md" target="#">edit acl</a>
 </div>
 
-<div about="#acl:relcl" property="rdf:type" resource="#Concept">
-	<div property="rdf:type" resource="../../u/pos/all.html#acl:relcl">
-	   <div about="../../u/pos/all.html#acl:relcl" property="rdf:type" resource="../../u/pos/all.html#Concept" />
+<div about="#acl:relcl_en" property="rdf:type" resource="#dep_en">
+	<div property="rdf:type" resource="../../u/dep/all.html#acl:relcl">
+	   <div about="../../u/dep/all.html#acl:relcl" property="rdf:type" resource="../../u/dep/all.html#dep" />
 	</div>
 	<a id="al-en-dep/acl:relcl" class="al-dest" />
 
 	<h2><code property="oliasystem:hasTag" lang="">acl:relcl</code>: <div property="rdfs:label">relative clause modifier</div></h2>
 	<div property="rdfs:comment">
 
-<p>A relative clause modifier of an noun is a relative clause modifying
+A relative clause modifier of an noun is a relative clause modifying
 the noun.  The relation points from the noun that is modified to the
-head of the relative clause. Relative clauses are finite.</p>
+head of the relative clause. Relative clauses are finite.
 
-<pre><code class="language-sdparse">I saw the man you love
+~~~ sdparse
+I saw the man you love
 acl:relcl(man, love)
-</code></pre>
+~~~
 
-<pre><code class="language-sdparse">I saw the book which you bought
+~~~ sdparse
+I saw the book which you bought
 acl:relcl(book, bought)
-</code></pre>
+~~~
 
 
 	</div>
 	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_en-dep/acl-relcl.md" target="#">edit acl:relcl</a>
 </div>
 
-<div about="#advcl" property="rdf:type" resource="#Concept">
-	<div property="rdf:type" resource="../../u/pos/all.html#advcl">
-	   <div about="../../u/pos/all.html#advcl" property="rdf:type" resource="../../u/pos/all.html#Concept" />
+<div about="#advcl_en" property="rdf:type" resource="#dep_en">
+	<div property="rdf:type" resource="../../u/dep/all.html#advcl">
+	   <div about="../../u/dep/all.html#advcl" property="rdf:type" resource="../../u/dep/all.html#dep" />
 	</div>
 	<a id="al-en-dep/advcl" class="al-dest" />
 
 	<h2><code property="oliasystem:hasTag" lang="">advcl</code>: <div property="rdfs:label">adverbial clause modifier</div></h2>
 	<div property="rdfs:comment">
 
-<p>An adverbial clause modifier is a clause which modifies a verb or other predicate (adjective, etc.), as a modifier not as a core complement. This includes things such as a temporal clause, consequence, conditional clause, purpose
-clause, etc. The dependent must be clausal (or else it is an <a href="">advmod</a>) and the dependent is the main predicate of the clause.</p>
+An adverbial clause modifier is a clause which modifies a verb or other predicate (adjective, etc.), as a modifier not as a core complement. This includes things such as a temporal clause, consequence, conditional clause, purpose
+clause, etc. The dependent must be clausal (or else it is an [advmod]()) and the dependent is the main predicate of the clause.
 
-<pre><code class="language-sdparse">The accident happened as the night was falling
+~~~ sdparse
+The accident happened as the night was falling
 advcl(happened, falling)
-</code></pre>
+~~~
 
-<pre><code class="language-sdparse">If you know who did it , you should tell the teacher
+~~~ sdparse
+If you know who did it , you should tell the teacher
 advcl(tell, know)
-</code></pre>
+~~~
 
-<pre><code class="language-sdparse">He talked to him in order to secure the account
+~~~ sdparse
+He talked to him in order to secure the account
 advcl(talked, secure)
-</code></pre>
+~~~
 
-<pre><code class="language-sdparse">He was upset when I talked to him
+~~~ sdparse
+He was upset when I talked to him
 advcl(upset, talked)
-</code></pre>
+~~~
 
-<pre><code class="language-sdparse">They heard about you missing classes.
+~~~ sdparse
+They heard about you missing classes.
 advcl(heard, missing)
-</code></pre>
+~~~
 
 
 	</div>
 	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_en-dep/advcl.md" target="#">edit advcl</a>
 </div>
 
-<div about="#advmod" property="rdf:type" resource="#Concept">
-	<div property="rdf:type" resource="../../u/pos/all.html#advmod">
-	   <div about="../../u/pos/all.html#advmod" property="rdf:type" resource="../../u/pos/all.html#Concept" />
+<div about="#advmod_en" property="rdf:type" resource="#dep_en">
+	<div property="rdf:type" resource="../../u/dep/all.html#advmod">
+	   <div about="../../u/dep/all.html#advmod" property="rdf:type" resource="../../u/dep/all.html#dep" />
 	</div>
 	<a id="al-en-dep/advmod" class="al-dest" />
 
 	<h2><code property="oliasystem:hasTag" lang="">advmod</code>: <div property="rdfs:label">adverbial modifier</div></h2>
 	<div property="rdfs:comment">
 
-<p>An adverbial modifier of a word is a (non-clausal) adverb or adverbial
-phrase (ADVP) that serves to modify the meaning of the word.</p>
+An adverbial modifier of a word is a (non-clausal) adverb or adverbial
+phrase (ADVP) that serves to modify the meaning of the word.
 
-<pre><code class="language-sdparse">Genetically modified food
+~~~ sdparse
+Genetically modified food
 advmod(modified, Genetically)
-</code></pre>
+~~~
 
-<pre><code class="language-sdparse">less often
+~~~ sdparse
+less often
 advmod(often, less)
-</code></pre>
+~~~
 
 
 	</div>
 	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_en-dep/advmod.md" target="#">edit advmod</a>
 </div>
 
-<div about="#amod" property="rdf:type" resource="#Concept">
-	<div property="rdf:type" resource="../../u/pos/all.html#amod">
-	   <div about="../../u/pos/all.html#amod" property="rdf:type" resource="../../u/pos/all.html#Concept" />
+<div about="#amod_en" property="rdf:type" resource="#dep_en">
+	<div property="rdf:type" resource="../../u/dep/all.html#amod">
+	   <div about="../../u/dep/all.html#amod" property="rdf:type" resource="../../u/dep/all.html#dep" />
 	</div>
 	<a id="al-en-dep/amod" class="al-dest" />
 
 	<h2><code property="oliasystem:hasTag" lang="">amod</code>: <div property="rdfs:label">adjectival modifier</div></h2>
 	<div property="rdfs:comment">
 
-<p>An adjectival modifier of an NP is any adjectival phrase that serves
-to modify the meaning of the NP.</p>
+An adjectival modifier of an NP is any adjectival phrase that serves
+to modify the meaning of the NP.
 
-<pre><code class="language-sdparse">Sam eats red meat
+~~~ sdparse
+Sam eats red meat
 amod(meat, red)
-</code></pre>
+~~~
 
-<pre><code class="language-sdparse">Sam took out  a 3 million dollar loan
+~~~ sdparse
+Sam took out  a 3 million dollar loan
 amod(loan, dollar)
-</code></pre>
+~~~
 
-<pre><code class="language-sdparse">Sam took out  a $ 3 million loan
+~~~ sdparse
+Sam took out  a $ 3 million loan
 amod(loan, $)
-</code></pre>
+~~~
 
 
 	</div>
 	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_en-dep/amod.md" target="#">edit amod</a>
 </div>
 
-<div about="#appos" property="rdf:type" resource="#Concept">
-	<div property="rdf:type" resource="../../u/pos/all.html#appos">
-	   <div about="../../u/pos/all.html#appos" property="rdf:type" resource="../../u/pos/all.html#Concept" />
+<div about="#appos_en" property="rdf:type" resource="#dep_en">
+	<div property="rdf:type" resource="../../u/dep/all.html#appos">
+	   <div about="../../u/dep/all.html#appos" property="rdf:type" resource="../../u/dep/all.html#dep" />
 	</div>
 	<a id="al-en-dep/appos" class="al-dest" />
 
 	<h2><code property="oliasystem:hasTag" lang="">appos</code>: <div property="rdfs:label">appositional modifier</div></h2>
 	<div property="rdfs:comment">
 
-<p>An appositional modifier of an NP is an NP immediately to the right of the first NP that serves to define or modify that NP. It includes parenthesized examples, as well as defining abbreviations in one of these structures.</p>
+An appositional modifier of an NP is an NP immediately to the right of the first NP that serves to define or modify that NP. It includes parenthesized examples, as well as defining abbreviations in one of these structures. 
 
-<pre><code class="language-sdparse">Sam , my brother , arrived
+~~~ sdparse
+Sam , my brother , arrived
 appos(Sam-1, brother-4)
-</code></pre>
+~~~
 
-<pre><code class="language-sdparse">Bill ( John 's cousin )
+~~~ sdparse
+Bill ( John 's cousin )
 appos(Bill-1, cousin-5)
-</code></pre>
+~~~
 
-<pre><code class="language-sdparse">The Australian Broadcasting Corporation ( ABC )
+~~~ sdparse
+The Australian Broadcasting Corporation ( ABC )
 appos(Corporation-4, ABC-6)
-</code></pre>
+~~~
 
 
 	</div>
 	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_en-dep/appos.md" target="#">edit appos</a>
 </div>
 
-<div about="#aux" property="rdf:type" resource="#Concept">
-	<div property="rdf:type" resource="../../u/pos/all.html#aux">
-	   <div about="../../u/pos/all.html#aux" property="rdf:type" resource="../../u/pos/all.html#Concept" />
+<div about="#aux_en" property="rdf:type" resource="#dep_en">
+	<div property="rdf:type" resource="../../u/dep/all.html#aux">
+	   <div about="../../u/dep/all.html#aux" property="rdf:type" resource="../../u/dep/all.html#dep" />
 	</div>
 	<a id="al-en-dep/aux" class="al-dest" />
 
 	<h2><code property="oliasystem:hasTag" lang="">aux</code>: <div property="rdfs:label">auxiliary</div></h2>
 	<div property="rdfs:comment">
 
-<p>An auxiliary of a clause is a non-main verb of the clause, e.g., a
-modal auxiliary, or a form of <em>be</em>, <em>do</em> or <em>have</em> in a periphrastic
-tense.</p>
+An auxiliary of a clause is a non-main verb of the clause, e.g., a
+modal auxiliary, or a form of *be*, *do* or *have* in a periphrastic
+tense. 
 
-<p>(Contrary to the older SD and arguments of Pullum (1982) and following,
-infinitive <em>to</em> is not analyzed as an auxiliary. Instead, it is analyzed
-as a <a href="">mark</a>.)</p>
+(Contrary to the older SD and arguments of Pullum (1982) and following,
+infinitive *to* is not analyzed as an auxiliary. Instead, it is analyzed
+as a [mark]().)
 
-<pre><code class="language-sdparse">Reagan has died
+~~~ sdparse
+Reagan has died
 aux(died-3, has-2)
-</code></pre>
+~~~
 
-<pre><code class="language-sdparse">He should leave
+~~~ sdparse
+He should leave
 aux(leave-3, should-2)
-</code></pre>
+~~~
 
 
 	</div>
 	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_en-dep/aux_.md" target="#">edit aux</a>
 </div>
 
-<div about="#auxpass" property="rdf:type" resource="#Concept">
-	<div property="rdf:type" resource="../../u/pos/all.html#auxpass">
-	   <div about="../../u/pos/all.html#auxpass" property="rdf:type" resource="../../u/pos/all.html#Concept" />
+<div about="#auxpass_en" property="rdf:type" resource="#dep_en">
+	<div property="rdf:type" resource="../../u/dep/all.html#auxpass">
+	   <div about="../../u/dep/all.html#auxpass" property="rdf:type" resource="../../u/dep/all.html#dep" />
 	</div>
 	<a id="al-en-dep/auxpass" class="al-dest" />
 
 	<h2><code property="oliasystem:hasTag" lang="">auxpass</code>: <div property="rdfs:label">passive auxiliary</div></h2>
 	<div property="rdfs:comment">
 
-<p>A passive auxiliary of a clause is a non-main verb of the clause which
-contains the passive information.</p>
+A passive auxiliary of a clause is a non-main verb of the clause which
+contains the passive information.
 
-<pre><code class="language-sdparse">Kennedy has been killed
+~~~ sdparse
+Kennedy has been killed
 auxpass(killed, been)
-</code></pre>
+~~~
 
-<pre><code class="language-sdparse">Kennedy was killed
+~~~ sdparse
+Kennedy was killed
 auxpass(killed, was)
-</code></pre>
+~~~
 
-<pre><code class="language-sdparse">Kennedy got killed
+~~~ sdparse
+Kennedy got killed
 auxpass(killed, got)
-</code></pre>
+~~~
 
 
 	</div>
 	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_en-dep/auxpass.md" target="#">edit auxpass</a>
 </div>
 
-<div about="#case" property="rdf:type" resource="#Concept">
-	<div property="rdf:type" resource="../../u/pos/all.html#case">
-	   <div about="../../u/pos/all.html#case" property="rdf:type" resource="../../u/pos/all.html#Concept" />
+<div about="#case_en" property="rdf:type" resource="#dep_en">
+	<div property="rdf:type" resource="../../u/dep/all.html#case">
+	   <div about="../../u/dep/all.html#case" property="rdf:type" resource="../../u/dep/all.html#dep" />
 	</div>
 	<a id="al-en-dep/case" class="al-dest" />
 
 	<h2><code property="oliasystem:hasTag" lang="">case</code>: <div property="rdfs:label">case marking</div></h2>
 	<div property="rdfs:comment">
 
-<p>The <code>case</code> relation is used for any preposition in English. Prepositions are treated as dependents of the noun they attach to or introduce in an “extended nominal projection”. Thus, contrary to SD, UD abandons treating a preposition as a mediator between a modified word and its object. The <code>case</code> relation aims at providing a uniform analysis of prepositions and case in morphologically rich languages. In English, subordinating conjunctions introducing clauses are often in the form of prepositions. However, they are given a different dependency: The relation <a href="">mark</a> is used for markers in an “extended clausal projection”.</p>
+The `case` relation is used for any preposition in English. Prepositions are treated as dependents of the noun they attach to or introduce in an "extended nominal projection". Thus, contrary to SD, UD abandons treating a preposition as a mediator between a modified word and its object. The `case` relation aims at providing a uniform analysis of prepositions and case in morphologically rich languages. In English, subordinating conjunctions introducing clauses are often in the form of prepositions. However, they are given a different dependency: The relation [mark]() is used for markers in an "extended clausal projection".
 
-<p>The <code>case</code> relation is also used for the possessive clitic <em>‘s</em> in English, which we separate from what it modifies, because it acts as a phrasal clitic, as shown in the last example.</p>
+The `case` relation is also used for the possessive clitic _'s_ in English, which we separate from what it modifies, because it acts as a phrasal clitic, as shown in the last example.
 
-<pre><code class="language-sdparse">I saw a cat in a hat
+~~~ sdparse
+I saw a cat in a hat
 case(hat, in)
-</code></pre>
+~~~
 
-<pre><code class="language-sdparse">I saw a cat with a telescope
+~~~ sdparse
+I saw a cat with a telescope
 case(telescope, with)
-</code></pre>
+~~~
 
-<pre><code class="language-sdparse">He is responsible for meals
+~~~ sdparse
+He is responsible for meals
 case(meals, for)
-</code></pre>
+~~~
 
-<pre><code class="language-sdparse">The school 's grounds
+~~~ sdparse
+The school 's grounds
 case(school, 's)
-</code></pre>
+~~~
 
-<pre><code class="language-sdparse">The head of school 's speech
+~~~ sdparse
+The head of school 's speech
 case(head, 's)
 case(school, of)
 nmod(speech, head)
-</code></pre>
+~~~
 
 
 	</div>
 	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_en-dep/case.md" target="#">edit case</a>
 </div>
 
-<div about="#cc" property="rdf:type" resource="#Concept">
-	<div property="rdf:type" resource="../../u/pos/all.html#cc">
-	   <div about="../../u/pos/all.html#cc" property="rdf:type" resource="../../u/pos/all.html#Concept" />
+<div about="#cc_en" property="rdf:type" resource="#dep_en">
+	<div property="rdf:type" resource="../../u/dep/all.html#cc">
+	   <div about="../../u/dep/all.html#cc" property="rdf:type" resource="../../u/dep/all.html#dep" />
 	</div>
 	<a id="al-en-dep/cc" class="al-dest" />
 
 	<h2><code property="oliasystem:hasTag" lang="">cc</code>: <div property="rdfs:label">coordination</div></h2>
 	<div property="rdfs:comment">
 
-<p>A coordination is the relation between an element of a conjunct and the coordinating conjunction word of the conjunct.  (Note: different dependency grammars have different treatments of coordination.  We take one conjunct of a conjunction (normally the first) as the head of the conjunction.) A conjunction may also appear at the beginning of a sentence.  This is also called a <code>cc</code>, and dependent on the root predicate of the sentence.</p>
+A coordination is the relation between an element of a conjunct and the coordinating conjunction word of the conjunct.  (Note: different dependency grammars have different treatments of coordination.  We take one conjunct of a conjunction (normally the first) as the head of the conjunction.) A conjunction may also appear at the beginning of a sentence.  This is also called a `cc`, and dependent on the root predicate of the sentence. 
 
-<pre><code class="language-sdparse">And then we left .
+~~~ sdparse
+And then we left .
 cc(left, And)
-</code></pre>
+~~~
 
 
 	</div>
 	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_en-dep/cc.md" target="#">edit cc</a>
 </div>
 
-<div about="#cc:preconj" property="rdf:type" resource="#Concept">
-	<div property="rdf:type" resource="../../u/pos/all.html#cc:preconj">
-	   <div about="../../u/pos/all.html#cc:preconj" property="rdf:type" resource="../../u/pos/all.html#Concept" />
+<div about="#cc:preconj_en" property="rdf:type" resource="#dep_en">
+	<div property="rdf:type" resource="../../u/dep/all.html#cc:preconj">
+	   <div about="../../u/dep/all.html#cc:preconj" property="rdf:type" resource="../../u/dep/all.html#dep" />
 	</div>
 	<a id="al-en-dep/cc:preconj" class="al-dest" />
 
 	<h2><code property="oliasystem:hasTag" lang="">cc:preconj</code>: <div property="rdfs:label">preconjunct</div></h2>
 	<div property="rdfs:comment">
 
-<p>A preconjunct is the relation between the head of an NP and a word
+A preconjunct is the relation between the head of an NP and a word
 that appears at the beginning bracketing a conjunction (and puts
-emphasis on it), such as <em>either</em>, <em>both</em>, <em>neither</em>).</p>
+emphasis on it), such as *either*, *both*, *neither*).
 
-<pre><code class="language-sdparse">Both the boys and the girls are here
+~~~ sdparse
+Both the boys and the girls are here
 cc:preconj(boys, Both)
-</code></pre>
+~~~
 
 
 	</div>
 	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_en-dep/cc-preconj.md" target="#">edit cc:preconj</a>
 </div>
 
-<div about="#ccomp" property="rdf:type" resource="#Concept">
-	<div property="rdf:type" resource="../../u/pos/all.html#ccomp">
-	   <div about="../../u/pos/all.html#ccomp" property="rdf:type" resource="../../u/pos/all.html#Concept" />
+<div about="#ccomp_en" property="rdf:type" resource="#dep_en">
+	<div property="rdf:type" resource="../../u/dep/all.html#ccomp">
+	   <div about="../../u/dep/all.html#ccomp" property="rdf:type" resource="../../u/dep/all.html#dep" />
 	</div>
 	<a id="al-en-dep/ccomp" class="al-dest" />
 
 	<h2><code property="oliasystem:hasTag" lang="">ccomp</code>: <div property="rdfs:label">clausal complement</div></h2>
 	<div property="rdfs:comment">
 
-<p>A clausal complement of a verb or adjective is a dependent clause with an internal subject which functions like an object of the verb or adjective.</p>
+A clausal complement of a verb or adjective is a dependent clause with an internal subject which functions like an object of the verb or adjective.  
 
-<pre><code class="language-sdparse">He says that you like to swim
+~~~ sdparse
+He says that you like to swim
 ccomp(says, like)
-</code></pre>
+~~~
 
-<pre><code class="language-sdparse">I am certain that he did it 
+~~~ sdparse
+I am certain that he did it 
 ccomp(certain, did) 
 mark(did, that) 
-</code></pre>
+~~~
 
 
 	</div>
 	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_en-dep/ccomp.md" target="#">edit ccomp</a>
 </div>
 
-<div about="#compound" property="rdf:type" resource="#Concept">
-	<div property="rdf:type" resource="../../u/pos/all.html#compound">
-	   <div about="../../u/pos/all.html#compound" property="rdf:type" resource="../../u/pos/all.html#Concept" />
+<div about="#compound_en" property="rdf:type" resource="#dep_en">
+	<div property="rdf:type" resource="../../u/dep/all.html#compound">
+	   <div about="../../u/dep/all.html#compound" property="rdf:type" resource="../../u/dep/all.html#dep" />
 	</div>
 	<a id="al-en-dep/compound" class="al-dest" />
 
 	<h2><code property="oliasystem:hasTag" lang="">compound</code>: <div property="rdfs:label">compound</div></h2>
 	<div property="rdfs:comment">
 
-<p><em>compound</em> is used for</p>
+*compound* is used for 
 
-<ul>
-  <li>noun compounds (Note that in the current system for dependency extraction, all nouns modify the rightmost noun of the noun phrase – there is no intelligent noun compound analysis.  This is likely to be fixed once the Penn Treebank represents the branching structure of noun phrases.)</li>
-</ul>
+- noun compounds (Note that in the current system for dependency extraction, all nouns modify the rightmost noun of the noun phrase -- there is no intelligent noun compound analysis.  This is likely to be fixed once the Penn Treebank represents the branching structure of noun phrases.) 
 
-<pre><code class="language-sdparse">phone book
+~~~ sdparse
+phone book
 compound(book, phone)
-</code></pre>
+~~~
 
-<pre><code class="language-sdparse">oil price futures
+~~~ sdparse
+oil price futures
 nn(futures, oil)
-</code></pre>
+~~~
 
-<ul>
-  <li>numbers</li>
-</ul>
+- numbers
 
-<pre><code class="language-sdparse">I have four thousand sheep
+~~~ sdparse
+I have four thousand sheep
 compound(thousand, four)
-</code></pre>
+~~~
 
-<pre><code class="language-sdparse">I lost $ 3.2 billion
+~~~ sdparse
+I lost $ 3.2 billion
 compound(billion, 3.2)
-</code></pre>
+~~~
 
 
 	</div>
 	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_en-dep/compound.md" target="#">edit compound</a>
 </div>
 
-<div about="#compound:prt" property="rdf:type" resource="#Concept">
-	<div property="rdf:type" resource="../../u/pos/all.html#compound:prt">
-	   <div about="../../u/pos/all.html#compound:prt" property="rdf:type" resource="../../u/pos/all.html#Concept" />
+<div about="#compound:prt_en" property="rdf:type" resource="#dep_en">
+	<div property="rdf:type" resource="../../u/dep/all.html#compound:prt">
+	   <div about="../../u/dep/all.html#compound:prt" property="rdf:type" resource="../../u/dep/all.html#dep" />
 	</div>
 	<a id="al-en-dep/compound:prt" class="al-dest" />
 
 	<h2><code property="oliasystem:hasTag" lang="">compound:prt</code>: <div property="rdfs:label">phrasal verb particle</div></h2>
 	<div property="rdfs:comment">
 
-<p>The phrasal verb particle relation identifies a phrasal verb, and
+The phrasal verb particle relation identifies a phrasal verb, and
 holds between the verb and its particle. It is a subtype of the
-<a href="">compound</a> relation.</p>
+[compound]() relation.
 
-<pre><code class="language-sdparse">They shut down the station
+~~~ sdparse
+They shut down the station
 compound:prt(shut, down)
-</code></pre>
+~~~
 
-<pre><code class="language-sdparse">They shut the station down
+~~~ sdparse
+They shut the station down
 compound:prt(shut, down)
-</code></pre>
+~~~
 
 
 	</div>
 	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_en-dep/compound-prt.md" target="#">edit compound:prt</a>
 </div>
 
-<div about="#conj" property="rdf:type" resource="#Concept">
-	<div property="rdf:type" resource="../../u/pos/all.html#conj">
-	   <div about="../../u/pos/all.html#conj" property="rdf:type" resource="../../u/pos/all.html#Concept" />
+<div about="#conj_en" property="rdf:type" resource="#dep_en">
+	<div property="rdf:type" resource="../../u/dep/all.html#conj">
+	   <div about="../../u/dep/all.html#conj" property="rdf:type" resource="../../u/dep/all.html#dep" />
 	</div>
 	<a id="al-en-dep/conj" class="al-dest" />
 
 	<h2><code property="oliasystem:hasTag" lang="">conj</code>: <div property="rdfs:label">conjunct</div></h2>
 	<div property="rdfs:comment">
 
-<p>A conjunct is the relation between two elements connected by a
-coordinating conjunction, such as <em>and</em>, <em>or</em>, etc.  We treat
+A conjunct is the relation between two elements connected by a
+coordinating conjunction, such as *and*, *or*, etc.  We treat
 conjunctions asymmetrically: The head of the relation is the first
-conjunct and other conjunctions depend on it via the <code>conj</code> relation.</p>
+conjunct and other conjunctions depend on it via the `conj` relation.
 
-<pre><code class="language-sdparse">Bill is big and honest
+~~~ sdparse
+Bill is big and honest
 conj(big, honest)
-</code></pre>
+~~~
 
 
 	</div>
 	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_en-dep/conj.md" target="#">edit conj</a>
 </div>
 
-<div about="#cop" property="rdf:type" resource="#Concept">
-	<div property="rdf:type" resource="../../u/pos/all.html#cop">
-	   <div about="../../u/pos/all.html#cop" property="rdf:type" resource="../../u/pos/all.html#Concept" />
+<div about="#cop_en" property="rdf:type" resource="#dep_en">
+	<div property="rdf:type" resource="../../u/dep/all.html#cop">
+	   <div about="../../u/dep/all.html#cop" property="rdf:type" resource="../../u/dep/all.html#dep" />
 	</div>
 	<a id="al-en-dep/cop" class="al-dest" />
 
 	<h2><code property="oliasystem:hasTag" lang="">cop</code>: <div property="rdfs:label">copula</div></h2>
 	<div property="rdfs:comment">
 
-<p>A copula is the relation between the complement of a copular verb and
-the copular verb. Copular heads are avoided when possible.</p>
+A copula is the relation between the complement of a copular verb and
+the copular verb. Copular heads are avoided when possible.
 
-<pre><code class="language-sdparse">Bill is an honest man
+~~~ sdparse
+Bill is an honest man
 cop(man, is)
 nsubj(man, Bill)
 amod(man, honest)
 det(man, an)
-</code></pre>
+~~~
 
-<p>Prepositional phrases are annotated similarly, the only difference being that
-the nominal predicate has an additional case marker.</p>
+Prepositional phrases are annotated similarly, the only difference being that
+the nominal predicate has an additional case marker.
 
-<pre><code class="language-sdparse">Bill is from California
+~~~ sdparse
+Bill is from California
 case(California, from)
 cop(California, is)
 nsubj(California, Bill)
-</code></pre>
+~~~
 
-<p>When an adjective or adverb is being predicated of a nominal phrase, the
+When an adjective or adverb is being predicated of a nominal phrase, the
 adjective/adverb is the root, the nominal phrase is the nsubj, and the
-copula is the cop.</p>
+copula is the cop.
 
-<pre><code class="language-sdparse">Bill is honest
+~~~ sdparse
+Bill is honest
 nsubj(honest, Bill)
 cop(honest, is)
-</code></pre>
+~~~
 
-<pre><code class="language-sdparse">It was yesterday
+~~~ sdparse
+It was yesterday
 nsubj(yesterday, It)
 cop(yesterday, was)
-</code></pre>
+~~~
 
-<p>Prepositions may also project a cop dependent.</p>
+Prepositions may also project a cop dependent.
 
-<pre><code class="language-sdparse">The light is on
+~~~ sdparse
+The light is on
 cop(on, is)
 nsubj(on, light)
 det(light, The)
-</code></pre>
+~~~
 
-<p>In predicative wh-constructions, the fronted wh-word is the head, and the copula is 
-another cop.</p>
+In predicative wh-constructions, the fronted wh-word is the head, and the copula is 
+another cop.
 
-<pre><code class="language-sdparse">What is that ?
+~~~ sdparse
+What is that ?
 cop(What, is)
 nsubj(What, that)
-</code></pre>
+~~~
 
-<p>However, whenever the copula has a clausal argument/adjunct, the copula becomes the root, so the cop relation is not used.</p>
+However, whenever the copula has a clausal argument/adjunct, the copula becomes the root, so the cop relation is not used.
 
-<pre><code class="language-sdparse">It was because Bill is honest
+~~~ sdparse
+It was because Bill is honest
 nsubj(was, It)
 mark(honest, because)
 ccomp(was, honest)
 nsubj(honest, Bill)
 cop(honest, is)
-</code></pre>
+~~~
 
-<pre><code class="language-sdparse">My question is : was that really true ?
+~~~ sdparse
+My question is : was that really true ?
 nsubj(is, question)
 ccomp(is, true)
 cop(true, was)
 nsubj(true, that)
 advmod(true, really)
-</code></pre>
+~~~
 
-<pre><code class="language-sdparse">This is to inform you of our decision
+~~~ sdparse
+This is to inform you of our decision
 nsubj(is, This)
 advcl(is, inform)
 aux(inform, to)
@@ -785,191 +847,204 @@ dobj(inform, you)
 nmod(inform, decision)
 case(decision, of)
 poss(decision, our)
-</code></pre>
+~~~
 
-<p>Predicative “be” is the only verb recognized as a copula; other copula-like verbs,such as “become”, “get”, and “seem”, are treated as regular raising verbs, and thus take xcomp arguments. Non-predicative uses of “be”–e.g., “be” when used in periphrastic verbal constructions, presentationals, or existentials–is annotated as an aux instead.
-of a cop.</p>
+Predicative "be" is the only verb recognized as a copula; other copula-like verbs,such as "become", "get", and "seem", are treated as regular raising verbs, and thus take xcomp arguments. Non-predicative uses of "be"--e.g., "be" when used in periphrastic verbal constructions, presentationals, or existentials--is annotated as an aux instead.
+of a cop.
 
-<pre><code class="language-sdparse">Bill got rich
+~~~ sdparse
+Bill got rich
 nsubj(got, Bill)
 xcomp(got, rich)
-</code></pre>
+~~~
 
-<pre><code class="language-sdparse">Bill is speaking
+~~~ sdparse
+Bill is speaking
 nsubj(speaking, Bill)
 aux(speaking, is)
-</code></pre>
+~~~
 
-<pre><code class="language-sdparse">Here are some bags
+~~~ sdparse
+Here are some bags
 advmod(are, Here)
 nsubj(are, bags)
 det(bags, some)
-</code></pre>
+~~~
 
-<pre><code class="language-sdparse">There 's a cow in the field
+~~~ sdparse
+There 's a cow in the field
 expl('s, There)
 nsubj('s, cow)
 det(cow, a)
 nmod('s, field)
 det(field, the)
 case(field, in)
-</code></pre>
+~~~
 
 
 	</div>
 	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_en-dep/cop.md" target="#">edit cop</a>
 </div>
 
-<div about="#csubj" property="rdf:type" resource="#Concept">
-	<div property="rdf:type" resource="../../u/pos/all.html#csubj">
-	   <div about="../../u/pos/all.html#csubj" property="rdf:type" resource="../../u/pos/all.html#Concept" />
+<div about="#csubj_en" property="rdf:type" resource="#dep_en">
+	<div property="rdf:type" resource="../../u/dep/all.html#csubj">
+	   <div about="../../u/dep/all.html#csubj" property="rdf:type" resource="../../u/dep/all.html#dep" />
 	</div>
 	<a id="al-en-dep/csubj" class="al-dest" />
 
 	<h2><code property="oliasystem:hasTag" lang="">csubj</code>: <div property="rdfs:label">clausal subject</div></h2>
 	<div property="rdfs:comment">
 
-<p>A clausal subject is a clausal syntactic subject of a clause, i.e., the subject is itself a clause. The governor of this relation might not always be a verb: when the verb is a copular verb, the root of the clause is the complement of the copular verb. In the two following examples, <em>what she said</em> is the subject.</p>
+A clausal subject is a clausal syntactic subject of a clause, i.e., the subject is itself a clause. The governor of this relation might not always be a verb: when the verb is a copular verb, the root of the clause is the complement of the copular verb. In the two following examples, *what she said* is the subject. 
 
-<pre><code class="language-sdparse">What she said makes sense
+~~~ sdparse
+What she said makes sense
 csubj(makes, said)
-</code></pre>
+~~~
 
 
 	</div>
 	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_en-dep/csubj.md" target="#">edit csubj</a>
 </div>
 
-<div about="#csubjpass" property="rdf:type" resource="#Concept">
-	<div property="rdf:type" resource="../../u/pos/all.html#csubjpass">
-	   <div about="../../u/pos/all.html#csubjpass" property="rdf:type" resource="../../u/pos/all.html#Concept" />
+<div about="#csubjpass_en" property="rdf:type" resource="#dep_en">
+	<div property="rdf:type" resource="../../u/dep/all.html#csubjpass">
+	   <div about="../../u/dep/all.html#csubjpass" property="rdf:type" resource="../../u/dep/all.html#dep" />
 	</div>
 	<a id="al-en-dep/csubjpass" class="al-dest" />
 
 	<h2><code property="oliasystem:hasTag" lang="">csubjpass</code>: <div property="rdfs:label">clausal passive subject</div></h2>
 	<div property="rdfs:comment">
 
-<p>A clausal passive subject is a clausal syntactic subject of a passive
-clause. In the example below, <em>that she lied</em> is the subject.</p>
+A clausal passive subject is a clausal syntactic subject of a passive
+clause. In the example below, *that she lied* is the subject.
 
-<pre><code class="language-sdparse">That she lied was suspected by everyone
+~~~ sdparse
+That she lied was suspected by everyone
 csubjpass(suspected, lied)
-</code></pre>
+~~~
 
 
 	</div>
 	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_en-dep/csubjpass.md" target="#">edit csubjpass</a>
 </div>
 
-<div about="#dep" property="rdf:type" resource="#Concept">
-	<div property="rdf:type" resource="../../u/pos/all.html#dep">
-	   <div about="../../u/pos/all.html#dep" property="rdf:type" resource="../../u/pos/all.html#Concept" />
+<div about="#dep_en" property="rdf:type" resource="#dep_en">
+	<div property="rdf:type" resource="../../u/dep/all.html#dep">
+	   <div about="../../u/dep/all.html#dep" property="rdf:type" resource="../../u/dep/all.html#dep" />
 	</div>
 	<a id="al-en-dep/dep" class="al-dest" />
 
 	<h2><code property="oliasystem:hasTag" lang="">dep</code>: <div property="rdfs:label">dependent</div></h2>
 	<div property="rdfs:comment">
 
-<p>A dependency is labeled as <code>dep</code> when a system is unable to determine
+A dependency is labeled as `dep` when a system is unable to determine
 a more precise dependency relation between two words.  This may be
 because of a weird grammatical construction, a limitation in the
 Stanford Dependency conversion software, a parser error, or because of
-an unresolved long distance dependency.</p>
+an unresolved long distance dependency.
 
-<pre><code class="language-sdparse">Then , as if to show that he could , ...
+~~~ sdparse
+Then , as if to show that he could , ...
 dep(show, if)
-</code></pre>
+~~~
 
 
 	</div>
 	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_en-dep/dep.md" target="#">edit dep</a>
 </div>
 
-<div about="#det" property="rdf:type" resource="#Concept">
-	<div property="rdf:type" resource="../../u/pos/all.html#det">
-	   <div about="../../u/pos/all.html#det" property="rdf:type" resource="../../u/pos/all.html#Concept" />
+<div about="#det_en" property="rdf:type" resource="#dep_en">
+	<div property="rdf:type" resource="../../u/dep/all.html#det">
+	   <div about="../../u/dep/all.html#det" property="rdf:type" resource="../../u/dep/all.html#dep" />
 	</div>
 	<a id="al-en-dep/det" class="al-dest" />
 
 	<h2><code property="oliasystem:hasTag" lang="">det</code>: <div property="rdfs:label">determiner</div></h2>
 	<div property="rdfs:comment">
 
-<p>A determiner is the relation between the head of an NP and its determiner.</p>
+A determiner is the relation between the head of an NP and its determiner. 
 
-<pre><code class="language-sdparse">The man is here
+~~~ sdparse
+The man is here
 det(man, The)
-</code></pre>
+~~~
 
-<pre><code class="language-sdparse">Which book do you prefer ?
+~~~ sdparse
+Which book do you prefer ?
 det(book, Which)
-</code></pre>
+~~~
 
 
 	</div>
 	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_en-dep/det.md" target="#">edit det</a>
 </div>
 
-<div about="#det:predet" property="rdf:type" resource="#Concept">
-	<div property="rdf:type" resource="../../u/pos/all.html#det:predet">
-	   <div about="../../u/pos/all.html#det:predet" property="rdf:type" resource="../../u/pos/all.html#Concept" />
+<div about="#det:predet_en" property="rdf:type" resource="#dep_en">
+	<div property="rdf:type" resource="../../u/dep/all.html#det:predet">
+	   <div about="../../u/dep/all.html#det:predet" property="rdf:type" resource="../../u/dep/all.html#dep" />
 	</div>
 	<a id="al-en-dep/det:predet" class="al-dest" />
 
 	<h2><code property="oliasystem:hasTag" lang="">det:predet</code>: <div property="rdfs:label">predeterminer</div></h2>
 	<div property="rdfs:comment">
 
-<p>A predeterminer is the relation between the head of an NP and a word
-that precedes and modifies the meaning of the NP determiner.</p>
+A predeterminer is the relation between the head of an NP and a word
+that precedes and modifies the meaning of the NP determiner.
 
-<pre><code class="language-sdparse">All the boys are here
+~~~ sdparse
+All the boys are here
 det:predet(boys, All)
-</code></pre>
+~~~
 
 
 	</div>
 	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_en-dep/det-predet.md" target="#">edit det:predet</a>
 </div>
 
-<div about="#discourse" property="rdf:type" resource="#Concept">
-	<div property="rdf:type" resource="../../u/pos/all.html#discourse">
-	   <div about="../../u/pos/all.html#discourse" property="rdf:type" resource="../../u/pos/all.html#Concept" />
+<div about="#discourse_en" property="rdf:type" resource="#dep_en">
+	<div property="rdf:type" resource="../../u/dep/all.html#discourse">
+	   <div about="../../u/dep/all.html#discourse" property="rdf:type" resource="../../u/dep/all.html#dep" />
 	</div>
 	<a id="al-en-dep/discourse" class="al-dest" />
 
 	<h2><code property="oliasystem:hasTag" lang="">discourse</code>: <div property="rdfs:label">discourse element</div></h2>
 	<div property="rdfs:comment">
 
-<p>This is used for interjections and other discourse particles and elements (which are not clearly linked to the structure of the sentence, except in an expressive way). We generally follow the guidelines of what the Penn Treebanks count as an INTJ.  They define this to include: interjections (<em>oh</em>, <em>uh-huh</em>, <em>Welcome</em>), fillers (<em>um</em>, <em>ah</em>), and discourse markers (<em>well</em>, <em>like</em>, <em>actually</em>, but not <em>you know</em>).</p>
+This is used for interjections and other discourse particles and elements (which are not clearly linked to the structure of the sentence, except in an expressive way). We generally follow the guidelines of what the Penn Treebanks count as an INTJ.  They define this to include: interjections (*oh*, *uh-huh*, *Welcome*), fillers (*um*, *ah*), and discourse markers (*well*, *like*, *actually*, but not *you know*). 
 
-<pre><code class="language-sdparse">Iguazu is in Argentina :)
+~~~ sdparse
+Iguazu is in Argentina :)
 discourse(is-2, :)-5)
-</code></pre>
+~~~
 
 
 	</div>
 	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_en-dep/discourse.md" target="#">edit discourse</a>
 </div>
 
-<div about="#dislocated" property="rdf:type" resource="#Concept">
-	<div property="rdf:type" resource="../../u/pos/all.html#dislocated">
-	   <div about="../../u/pos/all.html#dislocated" property="rdf:type" resource="../../u/pos/all.html#Concept" />
+<div about="#dislocated_en" property="rdf:type" resource="#dep_en">
+	<div property="rdf:type" resource="../../u/dep/all.html#dislocated">
+	   <div about="../../u/dep/all.html#dislocated" property="rdf:type" resource="../../u/dep/all.html#dep" />
 	</div>
 	<a id="al-en-dep/dislocated" class="al-dest" />
 
 	<h2><code property="oliasystem:hasTag" lang="">dislocated</code>: <div property="rdfs:label">dislocated elements</div></h2>
 	<div property="rdfs:comment">
 
-<p>The <code>dislocated</code> relation is used for fronted or postposed elements
+The `dislocated` relation is used for fronted or postposed elements
 that do not fulfill the usual core grammatical relations of a
-sentence. Dislocated elements are attached to the same governor as the dependent that they double for.</p>
+sentence. Dislocated elements are attached to the same governor as the dependent that they double for.
 
-<pre><code class="language-sdparse">This is our office , me and Sam
+~~~ sdparse
+This is our office , me and Sam
 dislocated(office, me)
 cc(me, and)
 conj(me, Sam)
-</code></pre>
+~~~
 
-<pre><code class="language-sdparse">The Mezza Luna : you should try it .
+~~~ sdparse
+The Mezza Luna : you should try it .
 det(Luna-3, The-1)
 compound(Luna-3, Mezza-2)
 dislocated(it-8, Luna-3)
@@ -977,184 +1052,194 @@ nsubj(try-7, you-5)
 aux(try-7, should-6)
 root(root-0, try-7)
 dobj(try-7, it-8)
-</code></pre>
+~~~
 
 
 	</div>
 	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_en-dep/dislocated.md" target="#">edit dislocated</a>
 </div>
 
-<div about="#dobj" property="rdf:type" resource="#Concept">
-	<div property="rdf:type" resource="../../u/pos/all.html#dobj">
-	   <div about="../../u/pos/all.html#dobj" property="rdf:type" resource="../../u/pos/all.html#Concept" />
+<div about="#dobj_en" property="rdf:type" resource="#dep_en">
+	<div property="rdf:type" resource="../../u/dep/all.html#dobj">
+	   <div about="../../u/dep/all.html#dobj" property="rdf:type" resource="../../u/dep/all.html#dep" />
 	</div>
 	<a id="al-en-dep/dobj" class="al-dest" />
 
 	<h2><code property="oliasystem:hasTag" lang="">dobj</code>: <div property="rdfs:label">direct object</div></h2>
 	<div property="rdfs:comment">
 
-<p>The direct object of a VP is the noun phrase which is the (accusative) object of the verb.</p>
+The direct object of a VP is the noun phrase which is the (accusative) object of the verb. 
 
-<pre><code class="language-sdparse">She gave me a raise
+~~~ sdparse
+She gave me a raise
 dobj(gave, raise)
-</code></pre>
+~~~
 
 
 	</div>
 	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_en-dep/dobj.md" target="#">edit dobj</a>
 </div>
 
-<div about="#expl" property="rdf:type" resource="#Concept">
-	<div property="rdf:type" resource="../../u/pos/all.html#expl">
-	   <div about="../../u/pos/all.html#expl" property="rdf:type" resource="../../u/pos/all.html#Concept" />
+<div about="#expl_en" property="rdf:type" resource="#dep_en">
+	<div property="rdf:type" resource="../../u/dep/all.html#expl">
+	   <div about="../../u/dep/all.html#expl" property="rdf:type" resource="../../u/dep/all.html#dep" />
 	</div>
 	<a id="al-en-dep/expl" class="al-dest" />
 
 	<h2><code property="oliasystem:hasTag" lang="">expl</code>: <div property="rdfs:label">expletive</div></h2>
 	<div property="rdfs:comment">
 
-<p>This relation captures an existential <em>there</em> or <em>it</em> in extraposition constructions. There is further discussion and examples on the universal dependency page (<a href="">u-dep/expl</a>).</p>
+This relation captures an existential *there* or *it* in extraposition constructions. There is further discussion and examples on the universal dependency page ([u-dep/expl]()).
 
-<pre><code class="language-sdparse">There is a ghost in the room
+~~~ sdparse
+There is a ghost in the room
 expl(is, There)
-</code></pre>
+~~~
 
 
 	</div>
 	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_en-dep/expl.md" target="#">edit expl</a>
 </div>
 
-<div about="#foreign" property="rdf:type" resource="#Concept">
-	<div property="rdf:type" resource="../../u/pos/all.html#foreign">
-	   <div about="../../u/pos/all.html#foreign" property="rdf:type" resource="../../u/pos/all.html#Concept" />
+<div about="#foreign_en" property="rdf:type" resource="#dep_en">
+	<div property="rdf:type" resource="../../u/dep/all.html#foreign">
+	   <div about="../../u/dep/all.html#foreign" property="rdf:type" resource="../../u/dep/all.html#dep" />
 	</div>
 	<a id="al-en-dep/foreign" class="al-dest" />
 
 	<h2><code property="oliasystem:hasTag" lang="">foreign</code>: <div property="rdfs:label">foreign words</div></h2>
 	<div property="rdfs:comment">
 
-<p>We use <code>foreign</code> to label sequences of foreign words. These are given
-a linear analysis: the head is the first token in the foreign phrase.</p>
+We use `foreign` to label sequences of foreign words. These are given
+a linear analysis: the head is the first token in the foreign phrase.
 
-<pre><code class="language-sdparse">I guess that c' est la vie
+~~~ sdparse
+I guess that c' est la vie
 nsubj(guess-2, I-1)
 ccomp(guess-2, c'-4)
 mark(c'-4, that-3)
 foreign(c'-4, est-5)
 foreign(c'-4, la-6)
 foreign(c'-4, vie-7)
-</code></pre>
+~~~
 
 
 	</div>
 	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_en-dep/foreign.md" target="#">edit foreign</a>
 </div>
 
-<div about="#goeswith" property="rdf:type" resource="#Concept">
-	<div property="rdf:type" resource="../../u/pos/all.html#goeswith">
-	   <div about="../../u/pos/all.html#goeswith" property="rdf:type" resource="../../u/pos/all.html#Concept" />
+<div about="#goeswith_en" property="rdf:type" resource="#dep_en">
+	<div property="rdf:type" resource="../../u/dep/all.html#goeswith">
+	   <div about="../../u/dep/all.html#goeswith" property="rdf:type" resource="../../u/dep/all.html#dep" />
 	</div>
 	<a id="al-en-dep/goeswith" class="al-dest" />
 
 	<h2><code property="oliasystem:hasTag" lang="">goeswith</code>: <div property="rdfs:label">goes with</div></h2>
 	<div property="rdfs:comment">
 
-<p>This relation links two parts of a word that are separated in text
+This relation links two parts of a word that are separated in text
 that is not well edited. We follow the treebank: The GW part is the
-dependent and the head is in some sense the <em>main</em> part, often the
-second part.</p>
+dependent and the head is in some sense the *main* part, often the
+second part.
 
-<pre><code class="language-sdparse">They come here with out legal permission
+~~~ sdparse
+They come here with out legal permission
 goeswith(out-5, with-4)
-</code></pre>
+~~~
 
 
 	</div>
 	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_en-dep/goeswith.md" target="#">edit goeswith</a>
 </div>
 
-<div about="#iobj" property="rdf:type" resource="#Concept">
-	<div property="rdf:type" resource="../../u/pos/all.html#iobj">
-	   <div about="../../u/pos/all.html#iobj" property="rdf:type" resource="../../u/pos/all.html#Concept" />
+<div about="#iobj_en" property="rdf:type" resource="#dep_en">
+	<div property="rdf:type" resource="../../u/dep/all.html#iobj">
+	   <div about="../../u/dep/all.html#iobj" property="rdf:type" resource="../../u/dep/all.html#dep" />
 	</div>
 	<a id="al-en-dep/iobj" class="al-dest" />
 
 	<h2><code property="oliasystem:hasTag" lang="">iobj</code>: <div property="rdfs:label">indirect object</div></h2>
 	<div property="rdfs:comment">
 
-<p>The indirect object of a (verbal) predicate is the nominal which is the dative
-object of the verb. The relation <code>iobj</code> is used for objects that are not direct
-objects. It occurs only when there is a <code>dobj</code> or <code>ccomp</code> in the clause.</p>
+The indirect object of a (verbal) predicate is the nominal which is the dative
+object of the verb. The relation `iobj` is used for objects that are not direct
+objects. It occurs only when there is a `dobj` or `ccomp` in the clause.
 
-<pre><code class="language-sdparse">She gave me a raise
+~~~ sdparse
+She gave me a raise
 iobj(gave, me)
-</code></pre>
+~~~
 
-<p>Note that prepositional phrases are not considered core arguments in English,
-hence in <em>she gave it to me</em>, the <em>to me</em> part is attached as <a href="">nmod</a> although
-semantically it corresponds to the dative.</p>
+Note that prepositional phrases are not considered core arguments in English,
+hence in _she gave it to me_, the _to me_ part is attached as [nmod]() although
+semantically it corresponds to the dative.
 
 
 	</div>
 	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_en-dep/iobj.md" target="#">edit iobj</a>
 </div>
 
-<div about="#list" property="rdf:type" resource="#Concept">
-	<div property="rdf:type" resource="../../u/pos/all.html#list">
-	   <div about="../../u/pos/all.html#list" property="rdf:type" resource="../../u/pos/all.html#Concept" />
+<div about="#list_en" property="rdf:type" resource="#dep_en">
+	<div property="rdf:type" resource="../../u/dep/all.html#list">
+	   <div about="../../u/dep/all.html#list" property="rdf:type" resource="../../u/dep/all.html#dep" />
 	</div>
 	<a id="al-en-dep/list" class="al-dest" />
 
 	<h2><code property="oliasystem:hasTag" lang="">list</code>: <div property="rdfs:label">list</div></h2>
 	<div property="rdfs:comment">
 
-<p>The <code>list</code> relation is used for chains of comparable items. Web text often contains passages which are meant to be interpreted as lists but are parsed as single sentences. Email signatures in particular contain these structures, in the form of contact information: the different contact information items are labeled as <code>list</code>; the key-value pair relations are labeled as <a href="">appos</a>.</p>
+The `list` relation is used for chains of comparable items. Web text often contains passages which are meant to be interpreted as lists but are parsed as single sentences. Email signatures in particular contain these structures, in the form of contact information: the different contact information items are labeled as `list`; the key-value pair relations are labeled as [appos]().
 
-<p>In lists with more than two items, all items of the list shoud modify the first one.</p>
+In lists with more than two items, all items of the list shoud modify the first one.
 
-<pre><code class="language-sdparse">Steve Jones Phone: 555-9814 Email: jones@abc.edf
+~~~ sdparse
+Steve Jones Phone: 555-9814 Email: jones@abc.edf
 name(Steve-1, Jones-2)
 list(Steve-1, Phone:-3)
 list(Steve-1, Email:-5)
 appos(Phone:-3, 555-9814-4)
 appos(Email:-5, jones@abc.edf-6)
-</code></pre>
+~~~
 
-<p>In an itemized or numbered list, we have been taking the item marker as a dependent of the head of the contentful list item. This appears to be better than the alternative.</p>
+In an itemized or numbered list, we have been taking the item marker as a dependent of the head of the contentful list item. This appears to be better than the alternative.
 
 
 	</div>
 	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_en-dep/list.md" target="#">edit list</a>
 </div>
 
-<div about="#mark" property="rdf:type" resource="#Concept">
-	<div property="rdf:type" resource="../../u/pos/all.html#mark">
-	   <div about="../../u/pos/all.html#mark" property="rdf:type" resource="../../u/pos/all.html#Concept" />
+<div about="#mark_en" property="rdf:type" resource="#dep_en">
+	<div property="rdf:type" resource="../../u/dep/all.html#mark">
+	   <div about="../../u/dep/all.html#mark" property="rdf:type" resource="../../u/dep/all.html#dep" />
 	</div>
 	<a id="al-en-dep/mark" class="al-dest" />
 
 	<h2><code property="oliasystem:hasTag" lang="">mark</code>: <div property="rdfs:label">marker</div></h2>
 	<div property="rdfs:comment">
 
-<p>A marker is the word introducing a clause subordinate to another clause. For a complement clause, this will typically be <em>that</em> or <em>whether</em>. For an adverbial clause, the marker is typically a preposition like <em>before</em> or a subordinating conjunction fulfilling a similar role like <em>while</em> or <em>although</em>. The mark is a dependent of the subordinate clause head.</p>
+A marker is the word introducing a clause subordinate to another clause. For a complement clause, this will typically be *that* or *whether*. For an adverbial clause, the marker is typically a preposition like *before* or a subordinating conjunction fulfilling a similar role like *while* or *although*. The mark is a dependent of the subordinate clause head. 
 
-<pre><code class="language-sdparse">Forces engaged in fighting after insurgents attacked
+~~~ sdparse
+Forces engaged in fighting after insurgents attacked
 mark(attacked, after)
-</code></pre>
+~~~
 
-<pre><code class="language-sdparse">He says that you like to swim
+~~~ sdparse
+He says that you like to swim
 mark(swim, that)
-</code></pre>
+~~~
 
-<p>The infinitive marker <em>to</em> is analyzed as a <code>mark</code>.</p>
+The infinitive marker *to* is analyzed as a `mark`.
 
-<pre><code class="language-sdparse">I tried to finish it
+~~~ sdparse
+I tried to finish it
 mark(finish, to)
-</code></pre>
+~~~
 
-<p>When a a noun or a verb takes a prepositionally marked non-core argument (modifier) and that modifier is a clause, then we also label that prepositon as <code>mark</code> (as it would not seem reasonable to call it <code>case</code> when it is marking a clause). The result will commonly be a doubly marked clause.</p>
+When a a noun or a verb takes a prepositionally marked non-core argument (modifier) and that modifier is a clause, then we also label that prepositon as `mark` (as it would not seem reasonable to call it `case` when it is marking a clause). The result will commonly be a doubly marked clause.
 
-<pre><code class="language-sdparse">We have no useful information on whether users are at risk .
+~~~ sdparse
+We have no useful information on whether users are at risk .
 nsubj(have, We)
 neg(information, no)
 amod(information, useful)
@@ -1166,760 +1251,844 @@ cop(risk, are)
 case(risk, at)
 acl(information, risk)
 punct(have, .)
-</code></pre>
+~~~
 
 
 	</div>
 	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_en-dep/mark.md" target="#">edit mark</a>
 </div>
 
-<div about="#mwe" property="rdf:type" resource="#Concept">
-	<div property="rdf:type" resource="../../u/pos/all.html#mwe">
-	   <div about="../../u/pos/all.html#mwe" property="rdf:type" resource="../../u/pos/all.html#Concept" />
+<div about="#mwe_en" property="rdf:type" resource="#dep_en">
+	<div property="rdf:type" resource="../../u/dep/all.html#mwe">
+	   <div about="../../u/dep/all.html#mwe" property="rdf:type" resource="../../u/dep/all.html#dep" />
 	</div>
 	<a id="al-en-dep/mwe" class="al-dest" />
 
 	<h2><code property="oliasystem:hasTag" lang="">mwe</code>: <div property="rdfs:label">multi-word expression</div></h2>
 	<div property="rdfs:comment">
 
-<p>The multi-word expression (modifier) relation is used for certain fixed grammaticized expressions with function words that behave like a single function word. Multiword expressions are annotated in a flat, head-initial structure,
+The multi-word expression (modifier) relation is used for certain fixed grammaticized expressions with function words that behave like a single function word. Multiword expressions are annotated in a flat, head-initial structure,
 in which all words in the expression modify the first one using the
-<code>mwe</code> label.</p>
+`mwe` label.
 
-<p>At present, this relation is used inside the following expressions:</p>
+At present, this relation is used inside the following expressions: 
 
-<p><em>as well</em></p>
+*as well*
 
-<pre><code class="language-sdparse">I like dogs as well
+~~~ sdparse
+I like dogs as well
 advmod(like, as)
 mwe(as, well)
-</code></pre>
+~~~
 
-<p><em>as well as</em></p>
+*as well as*
 
-<pre><code class="language-sdparse">I like dogs as well as cats
+~~~ sdparse
+I like dogs as well as cats
 mwe(as-4, well)
 mwe(as-4, as-6)
 cc(dogs, as-4)
-</code></pre>
+~~~
 
-<p><em>such as</em></p>
+*such as*
 
-<pre><code class="language-sdparse">I like fluffy animals , such as dogs
+~~~ sdparse
+I like fluffy animals , such as dogs
 case(dogs, such)
 mwe(such, as)
-</code></pre>
+~~~
 
-<p><em>due to</em> (and other forms, such as <em>d t</em> and <em>d/t</em>)</p>
 
-<pre><code class="language-sdparse">He cried due to the fact that you hurt him
+*due to* (and other forms, such as *d t* and *d/t*)
+
+~~~ sdparse
+He cried due to the fact that you hurt him
 case(fact, due)
 mwe(due, to)
-</code></pre>
+~~~
 
-<p><em>because of</em> (and other forms, such as <em>b c of</em> and <em>b/c of</em>)</p>
+*because of* (and other forms, such as *b c of* and *b/c of*)
 
-<pre><code class="language-sdparse">He cried because of you
+~~~ sdparse
+He cried because of you
 case(you, because)
 mwe(because, of)
-</code></pre>
+~~~
 
-<p><em>instead of</em></p>
+*instead of*
 
-<pre><code class="language-sdparse">John went instead of Mary
+~~~ sdparse
+John went instead of Mary
 mwe(instead, of)
 case(Mary, instead)
-</code></pre>
+~~~
 
-<pre><code class="language-sdparse">John left early instead of staying for the whole thing
+~~~ sdparse
+John left early instead of staying for the whole thing
 mwe(instead, of)
 mark(staying, instead)
-</code></pre>
+~~~
 
-<p><em>in case</em></p>
+*in case*
 
-<pre><code class="language-sdparse">I always back up my files in case my computer crashes
+~~~ sdparse
+I always back up my files in case my computer crashes
 mwe(in, case)
 mark(crashes, in)
-</code></pre>
+~~~
 
-<pre><code class="language-sdparse">I always back up my files just in case
+~~~ sdparse
+I always back up my files just in case
 mwe(in, case)
 advmod(back, in)
 advmod(in, just)
-</code></pre>
+~~~
 
-<p><em>in case of</em></p>
+*in case of*
 
-<pre><code class="language-sdparse">I always back up my files in case of a crash
+~~~ sdparse
+I always back up my files in case of a crash
 mwe(in, case)
 mwe(in, of)
 case(crash, in)
-</code></pre>
+~~~
 
-<p><em>of course</em></p>
+*of course*
 
-<pre><code class="language-sdparse">I like dogs , of course
+~~~ sdparse
+I like dogs , of course
 advmod(like, of)
 mwe(of, course)
-</code></pre>
+~~~
 
-<p><em>so that</em></p>
+*so that*
 
-<pre><code class="language-sdparse">He cried so that you would feel bad
+~~~ sdparse
+He cried so that you would feel bad
 mark(feel, so)
 mwe(so, that)
-</code></pre>
+~~~
 
-<p><em>more than</em> (when used synonymously with “over” in a quantity)</p>
+*more than* (when used synonymously with "over" in a quantity)
 
-<pre><code class="language-sdparse">More than 90 percent
+~~~ sdparse
+More than 90 percent
 advmod(percent, More)
 mwe(More, than)
-</code></pre>
+~~~
 
-<p><em>less than</em> (when used synonymously with “under” in a quantity)</p>
+*less than* (when used synonymously with "under" in a quantity)
 
-<pre><code class="language-sdparse">Less than ten percent
+~~~ sdparse
+Less than ten percent
 advmod(percent, Less)
 mwe(Less, than)
-</code></pre>
+~~~
 
-<p><em>up to</em> (when used in quantities)</p>
+*up to* (when used in quantities)
 
-<pre><code class="language-sdparse">Up to fifty percent
+~~~ sdparse
+Up to fifty percent
 mwe(Up, to)
 advmod(percent, Up)
-</code></pre>
+~~~
 
-<p><em>according to</em></p>
+*according to*
 
-<pre><code class="language-sdparse">According to John
+~~~ sdparse
+According to John
 mwe(According, to)
 case(John, According)
-</code></pre>
+~~~
 
-<p><em>in order</em></p>
+*in order*
 
-<pre><code class="language-sdparse">He cried in order to make you feel bad
+~~~ sdparse
+He cried in order to make you feel bad
 mark(feel, in)
 mwe(in, order)
-</code></pre>
+~~~
 
-<pre><code class="language-sdparse">He cried in order that you might feel bad
+~~~ sdparse
+He cried in order that you might feel bad
 mark(feel, in)
 mwe(in, order)
-</code></pre>
+~~~
 
-<pre><code class="language-sdparse">He cried in order for you to have something to feel bad about
+~~~ sdparse
+He cried in order for you to have something to feel bad about
 mark(have, in)
 mwe(in, order)
-</code></pre>
+~~~
 
-<p><em>rather than</em></p>
+*rather than*
 
-<pre><code class="language-sdparse">I decided to get a dog rather than a cat
+~~~ sdparse
+I decided to get a dog rather than a cat
 mwe(rather, than)
 cc(rather, dog)
-</code></pre>
+~~~
 
-<p><em>at least</em> (when not used for quantities)</p>
+*at least* (when not used for quantities)
 
-<pre><code class="language-sdparse">At least I like dogs
+~~~ sdparse
+At least I like dogs
 mwe(At, least)
 advmod(like, At)
-</code></pre>
+~~~
 
-<p><em>as if</em></p>
+*as if*
 
-<pre><code class="language-sdparse">It was as if he cried to make you feel bad
+~~~ sdparse
+It was as if he cried to make you feel bad
 mwe(as, if)
 mark(cried, as)
-</code></pre>
+~~~
 
-<p><em>prior to</em></p>
+*prior to*
 
-<pre><code class="language-sdparse">John left prior to the meeting
+~~~ sdparse
+John left prior to the meeting
 mwe(prior, to)
 case(meeting, prior)
-</code></pre>
+~~~
 
-<p><em>as to</em></p>
+*as to*
 
-<pre><code class="language-sdparse">As to whether I love dogs ...
+~~~ sdparse
+As to whether I love dogs ...
 mwe(As, to)
 mark(love, As)
-</code></pre>
+~~~
 
-<pre><code class="language-sdparse">As to my love of dogs ...
+~~~ sdparse
+As to my love of dogs ...
 mwe(As, to)
 case(love, As)
-</code></pre>
+~~~
 
-<p><em>kind of</em></p>
+*kind of*
 
-<pre><code class="language-sdparse">I kind of like dogs
+~~~ sdparse
+I kind of like dogs
 mwe(kind, of)
 advmod(like, kind)
-</code></pre>
+~~~
 
-<p><em>whether or not</em></p>
+*whether or not*
 
-<pre><code class="language-sdparse">He 's crying whether or not you feel bad about it
+~~~ sdparse
+He 's crying whether or not you feel bad about it
 mwe(whether, or)
 mwe(whether, not)
 mark(feel, whether)
-</code></pre>
+~~~
 
-<p><em>not to mention</em></p>
+*not to mention*
 
-<pre><code class="language-sdparse">This restaurant is pretty cheap with good food, not to mention their friendly staff
+~~~ sdparse
+This restaurant is pretty cheap with good food, not to mention their friendly staff
 mwe(not, to)
 mwe(not, mention)
 cc(cheap, not)
 conj(staff, cheap)
-</code></pre>
+~~~
 
-<p><em>as opposed to</em></p>
+*as opposed to*
 
-<pre><code class="language-sdparse">John decided to leave early , as opposed to Mary
+~~~ sdparse
+John decided to leave early , as opposed to Mary
 mwe(as, opposed)
 mwe(as, to-9)
 case(Mary, as)
-</code></pre>
+~~~
 
-<p><em>let alone</em></p>
+*let alone*
 
-<pre><code class="language-sdparse">He could n't handle being hurt , let alone hurt by you
+~~~ sdparse
+He could n't handle being hurt , let alone hurt by you
 mwe(let, alone)
 cc(hurt-6, alone)
 conj(hurt-6, hurt-10)
-</code></pre>
+~~~
 
-<p><em>so as to</em></p>
+*so as to*
 
-<pre><code class="language-sdparse">John left early so as to miss the meeting
+~~~ sdparse
+John left early so as to miss the meeting
 mwe(so, as)
 mwe(so, to)
 mark(so, miss)
-</code></pre>
+~~~
 
-<p><em>in between</em></p>
+*in between*
 
-<pre><code class="language-sdparse">John left in between meetings
+~~~ sdparse
+John left in between meetings
 mwe(in, between)
 case(in, meetings)
-</code></pre>
+~~~
 
-<p><em>all but</em></p>
+*all but*
 
-<pre><code class="language-sdparse">John has all but left
+~~~ sdparse
+John has all but left
 mwe(all, but)
 advmod(all, left)
-</code></pre>
+~~~
 
-<p><em>that is</em></p>
+*that is*
 
-<pre><code class="language-sdparse">The dogs need to be housebroken -- that is , '' potty - trained ''
+~~~ sdparse
+The dogs need to be housebroken -- that is , '' potty - trained ''
 mwe(that, is)
 advmod(trained, that)
-</code></pre>
+~~~
 
-<p><em>how come</em></p>
+*how come*
 
-<pre><code class="language-sdparse">How come John left early ?
+~~~ sdparse
+How come John left early ?
 mwe(How, come)
 mark(left, How)
-</code></pre>
+~~~
 
-<p><em>had better</em> (and <em>‘d better</em>)</p>
+*had better* (and *'d better*)
 
-<pre><code class="language-sdparse">You had better apologize
+~~~ sdparse
+You had better apologize
 mwe(had, better)
 aux(had, apologize)
-</code></pre>
+~~~
 
-<h3 id="not-mwes">Not <code>mwe</code>s</h3>
-<p>The following are <strong>not</strong> annotated as <code>mwe</code>s, but are instead labeled according to their apparent internal structure.</p>
+### Not `mwe`s
+The following are **not** annotated as `mwe`s, but are instead labeled according to their apparent internal structure.
 
-<p><em>out of</em>, <em>off of</em> (All double prepositions denoting spatial relations are annotated with two cases on the nominal)</p>
+*out of*, *off of* (All double prepositions denoting spatial relations are annotated with two cases on the nominal)
 
-<pre><code class="language-sdparse">Get out of there !
+~~~ sdparse
+Get out of there !
 nmod(Get, there)
 case(there, out)
 case(there, of)
-</code></pre>
+~~~
 
-<pre><code class="language-sdparse">Get off of that !
+~~~ sdparse
+Get off of that !
 nmod(Get, that)
 case(that, off)
 case(that, of)
-</code></pre>
+~~~ 
 
-<p><em>by far</em></p>
+*by far*
 
-<pre><code class="language-sdparse">Dogs are the best animal by far
+~~~ sdparse
+Dogs are the best animal by far
 nmod(animal, far)
 case(far, by)
-</code></pre>
+~~~
 
-<p><em>what about</em></p>
+*what about*
 
-<pre><code class="language-sdparse">What about John ?
+~~~ sdparse
+What about John ?
 nmod(What, John)
 case(John, about)
-</code></pre>
+~~~
 
-<p><em>at all</em></p>
+*at all*
 
-<pre><code class="language-sdparse">I don't like her at all
+~~~ sdparse
+I don't like her at all
 nmod(like, all)
 case(all, at)
-</code></pre>
+~~~
 
-<p><em>at most</em>, <em>at least</em> (when used for quantities. To determine whether <em>at least</em> should be an <code>mwe</code> or not in borderline cases, substitute it with <em>at most</em>; if the sentence remains grammatical, it should receive its surface analysis)</p>
+*at most*, *at least* (when used for quantities. To determine whether *at least* should be an `mwe` or not in borderline cases, substitute it with *at most*; if the sentence remains grammatical, it should receive its surface analysis)
 
-<pre><code class="language-sdparse">at most 50 percent
+~~~ sdparse
+at most 50 percent
 nmod:npmod(percent, most)
 case(most, at)
-</code></pre>
+~~~
 
-<pre><code class="language-sdparse">at least 50 percent
+~~~ sdparse
+at least 50 percent
 nmod:npmod(percent, least)
 case(least, at)
-</code></pre>
+~~~
 
-<p><em>at best</em>, <em>at worst</em></p>
+*at best*, *at worst*
 
-<pre><code class="language-sdparse">At best , they were guesses
+~~~ sdparse
+At best , they were guesses
 nmod:npmod(guesses, best)
 case(best, At)
-</code></pre>
+~~~
 
-<pre><code class="language-sdparse">At worst , they were lies
+~~~ sdparse
+At worst , they were lies
 nmod:npmod(lies, worst)
 case(worst, At)
-</code></pre>
+~~~
 
-<p><em>what if</em></p>
+*what if*
 
-<pre><code class="language-sdparse">What if John left early ?
+~~~ sdparse
+What if John left early ?
 advcl(What, left)
 mark(left, if)
-</code></pre>
+~~~
 
-<p><em>so long</em></p>
+*so long*
 
-<pre><code class="language-sdparse">So long , Ham 's ... you will be missed
+~~~ sdparse
+So long , Ham 's ... you will be missed
 advmod(long, So)
 vocative(long, Ham)
 parataxis(long, missed)
-</code></pre>
+~~~
 
 
 	</div>
 	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_en-dep/mwe.md" target="#">edit mwe</a>
 </div>
 
-<div about="#name" property="rdf:type" resource="#Concept">
-	<div property="rdf:type" resource="../../u/pos/all.html#name">
-	   <div about="../../u/pos/all.html#name" property="rdf:type" resource="../../u/pos/all.html#Concept" />
+<div about="#name_en" property="rdf:type" resource="#dep_en">
+	<div property="rdf:type" resource="../../u/dep/all.html#name">
+	   <div about="../../u/dep/all.html#name" property="rdf:type" resource="../../u/dep/all.html#dep" />
 	</div>
 	<a id="al-en-dep/name" class="al-dest" />
 
 	<h2><code property="oliasystem:hasTag" lang="">name</code>: <div property="rdfs:label">name</div></h2>
 	<div property="rdfs:comment">
 
-<p><code>name</code> is one of the three relations for compounding in UD (together
-with <a href="">compound</a> and <a href="">mwe</a>).
+`name` is one of the three relations for compounding in UD (together
+with [compound]() and [mwe]()).
 It is used for proper nouns constituted of multiple nominal
-elements. For example, <code>name</code> would be used between the words of
-<em>Hillary Rodham Clinton, New York,</em> or <em>Carl XVI Gustaf</em> but not to
-replace the usual relations in a phrasal or clausal name like <em>The
-king of Sweden</em> or the novels <em>The Lord of the Rings</em> and <em>Captured By
-Aliens.</em>
-Words joined by <code>name</code> should all be part of a minimal noun phrase;
+elements. For example, `name` would be used between the words of
+_Hillary Rodham Clinton, New York,_ or _Carl XVI Gustaf_ but not to
+replace the usual relations in a phrasal or clausal name like _The
+king of Sweden_ or the novels _The Lord of the Rings_ and _Captured By
+Aliens._
+Words joined by `name` should all be part of a minimal noun phrase;
 otherwise regular syntactic relations should be used.  This is
 basically similar to the treatment of noun compounds with
-<a href="">compound</a>, except that in many cases parts of the name may be
-another nominal element such as an adjective <em>(United Airlines).</em></p>
+[compound](), except that in many cases parts of the name may be
+another nominal element such as an adjective _(United Airlines)._
 
-<p>In general, names are annotated in a flat, head-initial structure, in
-which all words in the name modify the first one using the <code>name</code>
-label.</p>
+In general, names are annotated in a flat, head-initial structure, in
+which all words in the name modify the first one using the `name`
+label.
 
-<pre><code class="language-sdparse">Carl XVI Gustaf
+~~~ sdparse
+Carl XVI Gustaf
 name(Carl-1, Gustaf-3)
 name(Carl-1, XVI-2)
-</code></pre>
+~~~
 
-<p>For organization names with clear syntactic modification structure, the dependencies should reflect the syntactic modification structure using regular syntactic relation, as in:.</p>
+For organization names with clear syntactic modification structure, the dependencies should reflect the syntactic modification structure using regular syntactic relation, as in:.
 
-<pre><code class="language-sdparse">Natural Resources Conservation Service
+~~~ sdparse
+Natural Resources Conservation Service
 amod(Resources-2, Natural-1)
 compound(Conservation-3, Resources-2)
 compound(Service-4, Conservation-3)
-</code></pre>
+~~~
 
-<p>In addition, regular syntactic relations are used:
+In addition, regular syntactic relations are used:
 (i) for a modifying determiner or
-(ii) to connect together the words of a description or name which involve embedded prepositional phrases, sentences, etc.</p>
+(ii) to connect together the words of a description or name which involve embedded prepositional phrases, sentences, etc.
 
-<pre><code class="language-sdparse">Le Japon
+~~~ sdparse
+Le Japon
 det(Japon-2, Le-1)
-</code></pre>
+~~~
 
-<pre><code class="language-sdparse">Ludwig van Beethoven
+~~~ sdparse
+Ludwig van Beethoven
 case(Beethoven, van)
-</code></pre>
+~~~
 
-<pre><code class="language-sdparse">Miguel de Cervantes y Saavedra
+~~~ sdparse
+Miguel de Cervantes y Saavedra
 conj(Cervantes, Saavedra)
 cc(Cervantes, y)
 case(Cervantes, de)
-</code></pre>
+~~~
 
-<pre><code class="language-sdparse">The king of Sweden
+~~~ sdparse
+The king of Sweden
 det(king-2, The-1)
 nmod(king-2, Sweden-4)
 case(Sweden-4, of-3)
-</code></pre>
+~~~
 
-<pre><code class="language-sdparse">Río de la Plata
+~~~ sdparse
+Río de la Plata
 case(Plata-4, de-2)
 det(Plata-4, la-3)
 nmod(Río-1, Plata-4)
-</code></pre>
+~~~
 
 
 	</div>
 	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_en-dep/name.md" target="#">edit name</a>
 </div>
 
-<div about="#neg" property="rdf:type" resource="#Concept">
-	<div property="rdf:type" resource="../../u/pos/all.html#neg">
-	   <div about="../../u/pos/all.html#neg" property="rdf:type" resource="../../u/pos/all.html#Concept" />
+<div about="#neg_en" property="rdf:type" resource="#dep_en">
+	<div property="rdf:type" resource="../../u/dep/all.html#neg">
+	   <div about="../../u/dep/all.html#neg" property="rdf:type" resource="../../u/dep/all.html#dep" />
 	</div>
 	<a id="al-en-dep/neg" class="al-dest" />
 
 	<h2><code property="oliasystem:hasTag" lang="">neg</code>: <div property="rdfs:label">negation modifier</div></h2>
 	<div property="rdfs:comment">
 
-<p>The negation modifier is the relation between a negation word and the
-word it modifies. It is used both for predicate negation (canonically, <em>not</em>) and nominal negation (canonically <em>no</em>). Dependents labeled <code>neg</code> in the current treebank are the following (in various lowercase/uppercase forms): <em>n, n’t, neither, never, no, non, not, nt, t</em>.</p>
+The negation modifier is the relation between a negation word and the
+word it modifies. It is used both for predicate negation (canonically, _not_) and nominal negation (canonically _no_). Dependents labeled `neg` in the current treebank are the following (in various lowercase/uppercase forms): _n, n't, neither, never, no, non, not, nt, t_. 
 
-<pre><code class="language-sdparse">Bill is not a scientist
+~~~ sdparse
+Bill is not a scientist
 neg(scientist, not)
-</code></pre>
+~~~
 
-<pre><code class="language-sdparse">Bill does n't drive
+~~~ sdparse
+Bill does n't drive
 neg(drive, n't)
-</code></pre>
+~~~
 
-<pre><code class="language-sdparse">John saw no accidents
+~~~ sdparse
+John saw no accidents
 neg(accidents, no)
-</code></pre>
+~~~
 
 
 	</div>
 	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_en-dep/neg.md" target="#">edit neg</a>
 </div>
 
-<div about="#nmod" property="rdf:type" resource="#Concept">
-	<div property="rdf:type" resource="../../u/pos/all.html#nmod">
-	   <div about="../../u/pos/all.html#nmod" property="rdf:type" resource="../../u/pos/all.html#Concept" />
+<div about="#nmod_en" property="rdf:type" resource="#dep_en">
+	<div property="rdf:type" resource="../../u/dep/all.html#nmod">
+	   <div about="../../u/dep/all.html#nmod" property="rdf:type" resource="../../u/dep/all.html#dep" />
 	</div>
 	<a id="al-en-dep/nmod" class="al-dest" />
 
 	<h2><code property="oliasystem:hasTag" lang="">nmod</code>: <div property="rdfs:label">nominal modifier</div></h2>
 	<div property="rdfs:comment">
 
-<p>The <code>nmod</code> relation is used for nominal modifiers of nouns or clausal
-predicates. <code>nmod</code> is a noun functioning as a non-core (oblique)
-argument or adjunct. In English, <code>nmod</code> is used</p>
+The `nmod` relation is used for nominal modifiers of nouns or clausal
+predicates. `nmod` is a noun functioning as a non-core (oblique)
+argument or adjunct. In English, `nmod` is used
 
-<ul>
-  <li>for prepositional complements:</li>
-</ul>
+- for prepositional complements:
 
-<pre><code class="language-sdparse">the office of the Chair
+~~~ sdparse
+the office of the Chair
 det(office-2, the-1)
 nmod(office-2, Chair-5)
 case(Chair-5, of-3)
 det(Chair-5, the-4)
-</code></pre>
+~~~
 
-<pre><code class="language-sdparse">give the toys to the children
+~~~ sdparse
+give the toys to the children
 dobj(give, toys)
 nmod(give, children)
 case(children, to)
-</code></pre>
+~~~
 
-<p>The <code>nmod</code> relation holds between the noun/predicate modified by the
-prepositional complement and the noun introduced by the preposition.</p>
+The `nmod` relation holds between the noun/predicate modified by the
+prepositional complement and the noun introduced by the preposition.
 
-<ul>
-  <li>for ‘s genitives:</li>
-</ul>
+- for 's genitives:
 
-<pre><code class="language-sdparse">the Chair 's office
+~~~ sdparse
+the Chair 's office
 det(Chair-2, the-1)
 nmod(office-4, Chair-2)
 case(Chair-2, 's-3)
-</code></pre>
+~~~
 
-<p>Nominal modifiers not introduced by a preposition or not ‘s genitives
-are tagged <a href="">nmod:npmod</a>, a subtype of <code>nmod</code>. Temporal nominal
-modifiers are also marked with a separate relation <a href="">nmod:tmod</a>. See
-the definitions of these relations.</p>
+Nominal modifiers not introduced by a preposition or not 's genitives
+are tagged [nmod:npmod](), a subtype of `nmod`. Temporal nominal
+modifiers are also marked with a separate relation [nmod:tmod](). See
+the definitions of these relations.
 
 
 	</div>
 	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_en-dep/nmod.md" target="#">edit nmod</a>
 </div>
 
-<div about="#nmod:npmod" property="rdf:type" resource="#Concept">
-	<div property="rdf:type" resource="../../u/pos/all.html#nmod:npmod">
-	   <div about="../../u/pos/all.html#nmod:npmod" property="rdf:type" resource="../../u/pos/all.html#Concept" />
+<div about="#nmod:npmod_en" property="rdf:type" resource="#dep_en">
+	<div property="rdf:type" resource="../../u/dep/all.html#nmod:npmod">
+	   <div about="../../u/dep/all.html#nmod:npmod" property="rdf:type" resource="../../u/dep/all.html#dep" />
 	</div>
 	<a id="al-en-dep/nmod:npmod" class="al-dest" />
 
 	<h2><code property="oliasystem:hasTag" lang="">nmod:npmod</code>: <div property="rdfs:label">noun phrase as adverbial modifier</div></h2>
 	<div property="rdfs:comment">
 
-<p>This relation is a subtype of the <a href="">nmod</a> relation, which captures
+This relation is a subtype of the [nmod]() relation, which captures
 the following cases where something syntactically a noun phrase is
-used as an adverbial modifier in a sentence:</p>
+used as an adverbial modifier in a sentence:
 
-<p>(i) a measure phrase, which is the relation between the head of an adjectival/adverbial or prepositional phrase and the head of a measure phrase modifying it:</p>
 
-<pre><code class="language-sdparse">The director is 65 years old
+(i) a measure phrase, which is the relation between the head of an adjectival/adverbial or prepositional phrase and the head of a measure phrase modifying it:
+
+~~~ sdparse
+The director is 65 years old
 nmod:npmod(old, years)
-</code></pre>
+~~~
 
-<pre><code class="language-sdparse">6 feet long
+~~~ sdparse
+6 feet long
 nmod:npmod(long, feet)
-</code></pre>
+~~~
 
-<p>(ii) noun phrases giving an extent to a verb, which are not objects:</p>
 
-<pre><code class="language-sdparse">Shares eased a fraction
+(ii) noun phrases giving an extent to a verb, which are not objects:
+
+~~~ sdparse
+Shares eased a fraction
 nmod:npmod(eased, fraction)
-</code></pre>
+~~~
 
-<p>(iii) financial constructions involving an adverbial, notably the following construction <em>$5 a share</em>, where the second nominal means “per share”:</p>
 
-<pre><code class="language-sdparse">IBM earned $ 5 a share
+(iii) financial constructions involving an adverbial, notably the following construction *$5 a share*, where the second nominal means "per share":
+
+~~~ sdparse
+IBM earned $ 5 a share
 nmod:npmod($, share)
-</code></pre>
+~~~
 
-<p>(iv) floating reflexives</p>
 
-<pre><code class="language-sdparse">The silence is itself significant
+(iv) floating reflexives
+
+~~~ sdparse
+The silence is itself significant
 nmod:npmod(significant, itself)
-</code></pre>
+~~~
 
-<p>and (v) certain other absolutive nominal constructions.</p>
+and (v) certain other absolutive nominal constructions.
 
-<p>A temporal modifier <a href="">nmod:tmod</a> is a subclass of npmod which is
-distinguished as a separate relation.</p>
+A temporal modifier [nmod:tmod]() is a subclass of npmod which is
+distinguished as a separate relation.
 
 
 	</div>
 	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_en-dep/nmod-npmod.md" target="#">edit nmod:npmod</a>
 </div>
 
-<div about="#nmod:poss" property="rdf:type" resource="#Concept">
-	<div property="rdf:type" resource="../../u/pos/all.html#nmod:poss">
-	   <div about="../../u/pos/all.html#nmod:poss" property="rdf:type" resource="../../u/pos/all.html#Concept" />
+<div about="#nmod:poss_en" property="rdf:type" resource="#dep_en">
+	<div property="rdf:type" resource="../../u/dep/all.html#nmod:poss">
+	   <div about="../../u/dep/all.html#nmod:poss" property="rdf:type" resource="../../u/dep/all.html#dep" />
 	</div>
 	<a id="al-en-dep/nmod:poss" class="al-dest" />
 
 	<h2><code property="oliasystem:hasTag" lang="">nmod:poss</code>: <div property="rdfs:label">possessive nominal modifier</div></h2>
 	<div property="rdfs:comment">
 
-<p><code>nmod:poss</code> is used for a nominal modifier which occurs before its head in the specifier position used for <em>‘s</em> possessives. It is marked with the <code>case</code> <em>‘s</em> or one of its variant forms. This relation isn’t used for other pre-head modifiers such as noun compounds or quotative phrases.</p>
+`nmod:poss` is used for a nominal modifier which occurs before its head in the specifier position used for _'s_ possessives. It is marked with the `case` _'s_ or one of its variant forms. This relation isn't used for other pre-head modifiers such as noun compounds or quotative phrases.
 
-<pre><code class="language-sdparse">Marie 's book
+~~~ sdparse
+Marie 's book
 nmod:poss(book, Marie)
 case(Marie, 's)
-</code></pre>
+~~~
 
 
 	</div>
 	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_en-dep/nmod-poss.md" target="#">edit nmod:poss</a>
 </div>
 
-<div about="#nmod:tmod" property="rdf:type" resource="#Concept">
-	<div property="rdf:type" resource="../../u/pos/all.html#nmod:tmod">
-	   <div about="../../u/pos/all.html#nmod:tmod" property="rdf:type" resource="../../u/pos/all.html#Concept" />
+<div about="#nmod:tmod_en" property="rdf:type" resource="#dep_en">
+	<div property="rdf:type" resource="../../u/dep/all.html#nmod:tmod">
+	   <div about="../../u/dep/all.html#nmod:tmod" property="rdf:type" resource="../../u/dep/all.html#dep" />
 	</div>
 	<a id="al-en-dep/nmod:tmod" class="al-dest" />
 
 	<h2><code property="oliasystem:hasTag" lang="">nmod:tmod</code>: <div property="rdfs:label">temporal modifier</div></h2>
 	<div property="rdfs:comment">
 
-<p>A temporal modifier is a subtype of the <a href="">nmod</a> relation: if the modifier is specifying a time, it is labeled as <em>tmod</em>.</p>
+A temporal modifier is a subtype of the [nmod]() relation: if the modifier is specifying a time, it is labeled as *tmod*. 
 
-<pre><code class="language-sdparse">Last night , I swam in the pool
+~~~ sdparse
+Last night , I swam in the pool
 nmod:tmod(swam, night)
-</code></pre>
+~~~
 
-<pre><code class="language-sdparse">You need to turn in your homework by next week
+~~~ sdparse
+You need to turn in your homework by next week
 nmod:tmod(turn, week)
-</code></pre>
+~~~
 
 
 	</div>
 	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_en-dep/nmod-tmod.md" target="#">edit nmod:tmod</a>
 </div>
 
-<div about="#nsubj" property="rdf:type" resource="#Concept">
-	<div property="rdf:type" resource="../../u/pos/all.html#nsubj">
-	   <div about="../../u/pos/all.html#nsubj" property="rdf:type" resource="../../u/pos/all.html#Concept" />
+<div about="#nsubj_en" property="rdf:type" resource="#dep_en">
+	<div property="rdf:type" resource="../../u/dep/all.html#nsubj">
+	   <div about="../../u/dep/all.html#nsubj" property="rdf:type" resource="../../u/dep/all.html#dep" />
 	</div>
 	<a id="al-en-dep/nsubj" class="al-dest" />
 
 	<h2><code property="oliasystem:hasTag" lang="">nsubj</code>: <div property="rdfs:label">nominal subject</div></h2>
 	<div property="rdfs:comment">
 
-<p>A nominal subject (<code>nsubj</code>) is a nominal which is the syntactic subject and the proto-agent of a clause.
+A nominal subject (`nsubj`) is a nominal which is the syntactic subject and the proto-agent of a clause.
 That is, it is in the position that passes typical grammatical test for subjecthood, and this argument is the more agentive,
 the do-er, or the proto-agent of the clause. 
-(See <a href="">csubj</a> for when the subject is clausal. See <a href="">nsubjpass</a> and <a href="">csubjpass</a> for when the subject is not 
+(See [csubj]() for when the subject is clausal. See [nsubjpass]() and [csubjpass]() for when the subject is not 
 the proto-agent argument due to valence changing operations.) This nominal may be headed by a noun, 
-or it may be a pronoun or relative pronoun, or in ellipsis contexts, other things such as an adjective.</p>
+or it may be a pronoun or relative pronoun, or in ellipsis contexts, other things such as an adjective.
 
-<p>The <code>nsubj</code> role is only applied to semantic arguments of a predicate.
+The `nsubj` role is only applied to semantic arguments of a predicate.
 When there is an empty argument in a grammatical subject position (sometimes called a pleonastic or expletive),
-it is labeled as <a href="">expl</a>. If there is then a displaced subject
-in the clause, as in the English existential <em>there</em> construction, it will be labeled as <code>nsubj</code>.
-The governor of the <code>nsubj</code> relation might not always be a verb: when
+it is labeled as [expl](). If there is then a displaced subject
+in the clause, as in the English existential _there_ construction, it will be labeled as `nsubj`.
+The governor of the `nsubj` relation might not always be a verb: when
 the verb is a copular verb, the root of the clause is the complement
 of the copular verb, which can be an adjective or noun, including a noun marked by a preposition,
-as in the examples below.</p>
+as in the examples below.
 
-<p>In English, the <code>nsubj</code> normally precedes the predicate that it depends on, but this need not be the case, 
+In English, the `nsubj` normally precedes the predicate that it depends on, but this need not be the case, 
 both for the displaced subjects of expletive constructions and in other cases of stylistic inversion, such
-as the example headed by the predicate <em>come</em> below.</p>
+as the example headed by the predicate _come_ below.
 
-<pre><code class="language-sdparse">Clinton defeated Dole
+~~~ sdparse
+Clinton defeated Dole
 nsubj(defeated, Clinton)
-</code></pre>
+~~~
 
-<pre><code class="language-sdparse">The car is red .
+~~~ sdparse
+The car is red .
 nsubj(red, car)
-</code></pre>
+~~~
 
-<pre><code class="language-sdparse">Sue is a true patriot .
+~~~ sdparse
+Sue is a true patriot .
 nsubj(patriot, Sue)
-</code></pre>
+~~~
 
-<pre><code class="language-sdparse">We are in the barn .
+~~~ sdparse
+We are in the barn .
 nsubj(barn, We)
-</code></pre>
+~~~
 
-<pre><code class="language-sdparse">Agatha is in trouble .
+~~~ sdparse
+Agatha is in trouble .
 nsubj(trouble, Agatha)
-</code></pre>
+~~~
 
-<pre><code class="language-sdparse">There is a ghost in the room .
+~~~ sdparse
+There is a ghost in the room .
 expl(is, There)
 nsubj(is, ghost)
-</code></pre>
+~~~
 
-<pre><code class="language-sdparse">These links present the many viewpoints that existed .
+~~~sdparse
+These links present the many viewpoints that existed .
 acl:relcl(viewpoints, existed)
 nsubj(existed, that)
-</code></pre>
+~~~
 
-<pre><code class="language-sdparse">From China comes news of a new super-small mobile phone .
+~~~sdparse
+From China comes news of a new super-small mobile phone .
 nsubj(comes, news)
-</code></pre>
+~~~
 
 
 	</div>
 	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_en-dep/nsubj.md" target="#">edit nsubj</a>
 </div>
 
-<div about="#nsubjpass" property="rdf:type" resource="#Concept">
-	<div property="rdf:type" resource="../../u/pos/all.html#nsubjpass">
-	   <div about="../../u/pos/all.html#nsubjpass" property="rdf:type" resource="../../u/pos/all.html#Concept" />
+<div about="#nsubjpass_en" property="rdf:type" resource="#dep_en">
+	<div property="rdf:type" resource="../../u/dep/all.html#nsubjpass">
+	   <div about="../../u/dep/all.html#nsubjpass" property="rdf:type" resource="../../u/dep/all.html#dep" />
 	</div>
 	<a id="al-en-dep/nsubjpass" class="al-dest" />
 
 	<h2><code property="oliasystem:hasTag" lang="">nsubjpass</code>: <div property="rdfs:label">passive nominal subject</div></h2>
 	<div property="rdfs:comment">
 
-<p>A passive nominal subject is a noun phrase which is the syntactic
-subject of a passive clause.</p>
+A passive nominal subject is a noun phrase which is the syntactic
+subject of a passive clause.
 
-<pre><code class="language-sdparse">Dole was defeated by Clinton
+~~~ sdparse
+Dole was defeated by Clinton
 nsubjpass(defeated, Dole)
-</code></pre>
+~~~
 
 
 	</div>
 	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_en-dep/nsubjpass.md" target="#">edit nsubjpass</a>
 </div>
 
-<div about="#nummod" property="rdf:type" resource="#Concept">
-	<div property="rdf:type" resource="../../u/pos/all.html#nummod">
-	   <div about="../../u/pos/all.html#nummod" property="rdf:type" resource="../../u/pos/all.html#Concept" />
+<div about="#nummod_en" property="rdf:type" resource="#dep_en">
+	<div property="rdf:type" resource="../../u/dep/all.html#nummod">
+	   <div about="../../u/dep/all.html#nummod" property="rdf:type" resource="../../u/dep/all.html#dep" />
 	</div>
 	<a id="al-en-dep/nummod" class="al-dest" />
 
 	<h2><code property="oliasystem:hasTag" lang="">nummod</code>: <div property="rdfs:label">numeric modifier</div></h2>
 	<div property="rdfs:comment">
 
-<p>A numeric modifier of a noun is any number phrase that serves to
-modify the meaning of the noun with a quantity.</p>
+A numeric modifier of a noun is any number phrase that serves to
+modify the meaning of the noun with a quantity.
 
-<pre><code class="language-sdparse">Sam ate 3 sheep
+~~~ sdparse
+Sam ate 3 sheep
 nummod(sheep, 3)
-</code></pre>
+~~~
 
-<pre><code class="language-sdparse">Sam spent forty dollars
+~~~ sdparse
+Sam spent forty dollars
 nummod(dollars, forty)
-</code></pre>
+~~~
 
-<pre><code class="language-sdparse">Sam spent $ 40
+~~~ sdparse
+Sam spent $ 40
 nummod($, 40)
-</code></pre>
+~~~
 
 
 	</div>
 	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_en-dep/nummod.md" target="#">edit nummod</a>
 </div>
 
-<div about="#parataxis" property="rdf:type" resource="#Concept">
-	<div property="rdf:type" resource="../../u/pos/all.html#parataxis">
-	   <div about="../../u/pos/all.html#parataxis" property="rdf:type" resource="../../u/pos/all.html#Concept" />
+<div about="#parataxis_en" property="rdf:type" resource="#dep_en">
+	<div property="rdf:type" resource="../../u/dep/all.html#parataxis">
+	   <div about="../../u/dep/all.html#parataxis" property="rdf:type" resource="../../u/dep/all.html#dep" />
 	</div>
 	<a id="al-en-dep/parataxis" class="al-dest" />
 
 	<h2><code property="oliasystem:hasTag" lang="">parataxis</code>: <div property="rdfs:label">parataxis</div></h2>
 	<div property="rdfs:comment">
 
-<p>The parataxis relation (from Greek for “place side by side”) is a relation between the main verb of a clause and other sentential elements, such as a sentential parenthetical, a clause after a “:” or a “;”, or two sentences placed side by side without any explicit coordination or subordination.</p>
+The parataxis relation (from Greek for "place side by side") is a relation between the main verb of a clause and other sentential elements, such as a sentential parenthetical, a clause after a ":" or a ";", or two sentences placed side by side without any explicit coordination or subordination. 
 
-<pre><code class="language-sdparse">Let 's face it we 're annoyed
+~~~ sdparse
+Let 's face it we 're annoyed
 parataxis(Let, annoyed)
-</code></pre>
+~~~
 
-<p>When multiple parataxes are present in a single sentence, they get a flat structure, not a hierarchical one, even if they form a temporal sequence.</p>
+When multiple parataxes are present in a single sentence, they get a flat structure, not a hierarchical one, even if they form a temporal sequence.
 
-<pre><code class="language-sdparse">ROOT I 'm not kidding , I once lost a hamster in my house , three months later I walk down in the basement and it was as big as a rat .
+~~~ sdparse
+ROOT I 'm not kidding , I once lost a hamster in my house , three months later I walk down in the basement and it was as big as a rat .
 root(ROOT, kidding)
 parataxis(lost, kidding)
 parataxis(walk, kidding)
-</code></pre>
+~~~
 
-<p>All else being equal, the leftmost phrase should be the head, but in rare situations the parataxis can go ``backwards’’:</p>
+All else being equal, the leftmost phrase should be the head, but in rare situations the parataxis can go ``backwards'':
 
-<pre><code class="language-sdparse">The guy , John said , left early in the morning
+~~~ sdparse
+The guy , John said , left early in the morning
 parataxis(left, said)
-</code></pre>
+~~~
 
 
 
@@ -1927,44 +2096,46 @@ parataxis(left, said)
 	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_en-dep/parataxis.md" target="#">edit parataxis</a>
 </div>
 
-<div about="#punct" property="rdf:type" resource="#Concept">
-	<div property="rdf:type" resource="../../u/pos/all.html#punct">
-	   <div about="../../u/pos/all.html#punct" property="rdf:type" resource="../../u/pos/all.html#Concept" />
+<div about="#punct_en" property="rdf:type" resource="#dep_en">
+	<div property="rdf:type" resource="../../u/dep/all.html#punct">
+	   <div about="../../u/dep/all.html#punct" property="rdf:type" resource="../../u/dep/all.html#dep" />
 	</div>
 	<a id="al-en-dep/punct" class="al-dest" />
 
 	<h2><code property="oliasystem:hasTag" lang="">punct</code>: <div property="rdfs:label">punctuation</div></h2>
 	<div property="rdfs:comment">
 
-<p>This is used for any piece of punctuation in a clause, if punctuation is being retained in the typed dependencies. By default, punctuation is not retained in the output.</p>
+This is used for any piece of punctuation in a clause, if punctuation is being retained in the typed dependencies. By default, punctuation is not retained in the output. 
 
-<pre><code class="language-sdparse">Go home !
+~~~ sdparse
+Go home !
 punct(Go, !)
-</code></pre>
+~~~
 
 
 	</div>
 	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_en-dep/punct.md" target="#">edit punct</a>
 </div>
 
-<div about="#remnant" property="rdf:type" resource="#Concept">
-	<div property="rdf:type" resource="../../u/pos/all.html#remnant">
-	   <div about="../../u/pos/all.html#remnant" property="rdf:type" resource="../../u/pos/all.html#Concept" />
+<div about="#remnant_en" property="rdf:type" resource="#dep_en">
+	<div property="rdf:type" resource="../../u/dep/all.html#remnant">
+	   <div about="../../u/dep/all.html#remnant" property="rdf:type" resource="../../u/dep/all.html#dep" />
 	</div>
 	<a id="al-en-dep/remnant" class="al-dest" />
 
 	<h2><code property="oliasystem:hasTag" lang="">remnant</code>: <div property="rdfs:label">remnant in ellipsis</div></h2>
 	<div property="rdfs:comment">
 
-<p>The <code>remnant</code> relation is used to provide a satisfactory treatment of ellipsis (in
+The `remnant` relation is used to provide a satisfactory treatment of ellipsis (in
 the case of gapping and stripping, where a predicational or verbal
-head gets elided) <em>without</em> having to postulate empty nodes in the basic representation. This is something that was lacking in earlier versions
+head gets elided) *without* having to postulate empty nodes in the basic representation. This is something that was lacking in earlier versions
 of SD and provides a basis for being able to reconstruct dependencies
-in the enhanced representation of SD.</p>
+in the enhanced representation of SD. 
 
-<p>USD adopts an analysis that notes that in ellipsis a <code>remnant</code> corresponds to a <em>correlate</em> in a preceding clause. The <code>remnant</code> relation connects each remnant to its correlate in the basic dependency representation. This is then a sufficient representation to reconstruct the predicate-argument structure in the enhanced representation.</p>
+USD adopts an analysis that notes that in ellipsis a `remnant` corresponds to a *correlate* in a preceding clause. The `remnant` relation connects each remnant to its correlate in the basic dependency representation. This is then a sufficient representation to reconstruct the predicate-argument structure in the enhanced representation.
 
-<pre><code class="language-sdparse">Marie went to Paris and Miriam to Prague
+~~~ sdparse
+Marie went to Paris and Miriam to Prague
 nsubj(went-2, Marie-1)
 root(root-0, went-2)
 nmod(went-2, Paris-4)
@@ -1973,35 +2144,38 @@ cc(went-2, and-5)
 remnant(Marie-1, Miriam-6)
 case(Prague-8, to-7)
 remnant(Paris-4, Prague-8)
-</code></pre>
+~~~
 
-<p>Even in the more complex example below, the <code>remnant</code>
+Even in the more complex example below, the `remnant`
 relations enable us to correctly retrieve the subjects and objects in
-the clauses with an elided verb.</p>
+the clauses with an elided verb.
 
-<pre><code class="language-sdparse">John won bronze , Mary silver , and Sandy gold
+~~~ sdparse
+John won bronze , Mary silver , and Sandy gold
 nsubj(won-2, John-1)
 dobj(won-2, bronze-3)
 remnant(John-1, Mary-5)
 remnant(Mary-5, Sandy-9)
 remnant(bronze-3, silver-6)
 remnant(silver-6, gold-10)
-</code></pre>
+~~~
 
-<p>Note in particular that (unlike for <a href="">conj</a>), <code>remnant</code> uses a chaining analysis where each subsequent remnant depends on the immediately preceding remnant/correlate. The reason for this is that otherwise in a sentence with 2 or more chained ellipses the dependency structure would no longer track which remnants go together. It would become impossible to determine whether Mary won silver and Sandy gold, or Mary won gold and Sandy silver.</p>
+Note in particular that (unlike for [conj]()), `remnant` uses a chaining analysis where each subsequent remnant depends on the immediately preceding remnant/correlate. The reason for this is that otherwise in a sentence with 2 or more chained ellipses the dependency structure would no longer track which remnants go together. It would become impossible to determine whether Mary won silver and Sandy gold, or Mary won gold and Sandy silver.
 
-<p>Instances of stripping typically occur when there is only one argument in the second clause, but with an accompanying adverbial modifier such as <em>not</em> or <em>only</em>. We model these sentences with the remnant relation as well.</p>
+Instances of stripping typically occur when there is only one argument in the second clause, but with an accompanying adverbial modifier such as *not* or *only*. We model these sentences with the remnant relation as well.
 
-<pre><code class="language-sdparse">Marie went to Paris , not Miriam
+~~~ sdparse
+Marie went to Paris , not Miriam
 nsubj(went-2, Marie-1)
 root(root-0, went-2)
 nmod(went-2, Paris-4)
 case(Paris-4, to-3)
 remnant(Marie-1, Miriam-7)
 neg(Miriam-7, not-6)
-</code></pre>
+~~~
 
-<pre><code class="language-sdparse">Marie did go to Europe , but only to Paris .
+~~~ sdparse
+Marie did go to Europe , but only to Paris .
 nsubj(go-3, Marie-1)
 aux(go-3, did-2)
 root(root-0, go-3)
@@ -2011,11 +2185,12 @@ cc(go-3, but-7)
 advmod(Paris-10, only-8)
 case(Paris-10, to-9)
 remnant(Europe-5, Paris-10)
-</code></pre>
+~~~
 
-<p>Sometimes in these constructions adverbials will be “sprouted”, and have no correlate in the precedeing clause. In such a situation, the adverbial should attach to one of the remnants; in principle it shouldn’t matter which remnant it attaches to, since all remnants at a particular depth of embedding point back to the same semantic event (which the adverbial is a part of). However, to enforce a regular system, the adverbial should depend on the nearest leftmost dependent.</p>
+Sometimes in these constructions adverbials will be "sprouted", and have no correlate in the precedeing clause. In such a situation, the adverbial should attach to one of the remnants; in principle it shouldn't matter which remnant it attaches to, since all remnants at a particular depth of embedding point back to the same semantic event (which the adverbial is a part of). However, to enforce a regular system, the adverbial should depend on the nearest leftmost dependent. 
 
-<pre><code class="language-sdparse">Mary will come today and Tom tomorrow , if he finds a ticket .
+~~~ sdparse
+Mary will come today and Tom tomorrow , if he finds a ticket .
 nsubj(come-3, Mary-1)
 aux(come-3, will-2)
 root(root-0, come-3)
@@ -2028,9 +2203,10 @@ nsubj(finds-11, he-10)
 advcl(tomorrow-7, finds-11)
 det(ticket-13, a-12)
 dobj(finds-11, ticket-13)
-</code></pre>
+~~~
 
-<pre><code class="language-sdparse">Mary will come today and , if he finds a ticket , Tom tomorrow .
+~~~ sdparse
+Mary will come today and , if he finds a ticket , Tom tomorrow .
 nsubj(come-3, Mary-1)
 aux(come-3, will-2)
 root(root-0, come-3)
@@ -2043,21 +2219,23 @@ det(ticket-11, a-10)
 dobj(finds-9, ticket-11)
 remnant(Mary-1, Tom-13)
 remnant(today-4, tomorrow-14)
-</code></pre>
+~~~
 
-<p>The <code>remnant</code> relation is used when no predicational material is present. In contrast, in right-node-raising (RNR) and VP-ellipsis constructions in which some kind of predicational or verbal material is still present, the <code>remnant</code> relation is not used. In RNR, the verbs are coordinated and the object is a <a href="">dobj</a> of the first verb:</p>
+The `remnant` relation is used when no predicational material is present. In contrast, in right-node-raising (RNR) and VP-ellipsis constructions in which some kind of predicational or verbal material is still present, the `remnant` relation is not used. In RNR, the verbs are coordinated and the object is a [dobj]() of the first verb:
 
-<pre><code class="language-sdparse">John bought and ate an apple
+~~~ sdparse
+John bought and ate an apple
 nsubj(bought-2, John-1)
 cc(bought-2, and-3)
 conj(bought-2, ate-4)
 det(apple-6, an-5)
 dobj(bought-2, apple-6)
-</code></pre>
+~~~
 
-<p>In VP-ellipsis, we keep the auxiliary as the head, as shown below:</p>
+In VP-ellipsis, we keep the auxiliary as the head, as shown below:
 
-<pre><code class="language-sdparse">John will win gold and Mary will too
+~~~ sdparse
+John will win gold and Mary will too
 nsubj(win-3, John-1)
 aux(win-3, will-2)
 dobj(win-3, gold-4)
@@ -2065,115 +2243,124 @@ cc(win-3, and-5)
 conj(win-3, will-7)
 nsubj(will-7, Mary-6)
 advmod(will-7, too-8)
-</code></pre>
+~~~
 
 
 	</div>
 	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_en-dep/remnant.md" target="#">edit remnant</a>
 </div>
 
-<div about="#reparandum" property="rdf:type" resource="#Concept">
-	<div property="rdf:type" resource="../../u/pos/all.html#reparandum">
-	   <div about="../../u/pos/all.html#reparandum" property="rdf:type" resource="../../u/pos/all.html#Concept" />
+<div about="#reparandum_en" property="rdf:type" resource="#dep_en">
+	<div property="rdf:type" resource="../../u/dep/all.html#reparandum">
+	   <div about="../../u/dep/all.html#reparandum" property="rdf:type" resource="../../u/dep/all.html#dep" />
 	</div>
 	<a id="al-en-dep/reparandum" class="al-dest" />
 
 	<h2><code property="oliasystem:hasTag" lang="">reparandum</code>: <div property="rdfs:label">overridden disfluency</div></h2>
 	<div property="rdfs:comment">
 
-<p>We use <code>reparandum</code> to indicate disfluencies overridden in a speech
-repair. The disfluency is the dependent of the repair.</p>
+We use `reparandum` to indicate disfluencies overridden in a speech
+repair. The disfluency is the dependent of the repair.
 
-<pre><code class="language-sdparse">Go to the righ- to the left .
+~~~ sdparse
+Go to the righ- to the left .
 nmod(Go-1, left-7)
 reparandum(left-7, righ-)
 case(righ-, to-2)
 det(righ-, the-3)
 case(left-7, to-5)
 det(left-7, the-6)
-</code></pre>
+~~~
 
 
 	</div>
 	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_en-dep/reparandum.md" target="#">edit reparandum</a>
 </div>
 
-<div about="#root" property="rdf:type" resource="#Concept">
-	<div property="rdf:type" resource="../../u/pos/all.html#root">
-	   <div about="../../u/pos/all.html#root" property="rdf:type" resource="../../u/pos/all.html#Concept" />
+<div about="#root_en" property="rdf:type" resource="#dep_en">
+	<div property="rdf:type" resource="../../u/dep/all.html#root">
+	   <div about="../../u/dep/all.html#root" property="rdf:type" resource="../../u/dep/all.html#dep" />
 	</div>
 	<a id="al-en-dep/root" class="al-dest" />
 
 	<h2><code property="oliasystem:hasTag" lang="">root</code>: <div property="rdfs:label">root</div></h2>
 	<div property="rdfs:comment">
 
-<p>The <code>root</code> grammatical relation points to the root of the sentence. A fake node “ROOT” is used as the governor. The ROOT node is indexed with “0”, since the indexation of real words in the sentence starts at 1.</p>
+The `root` grammatical relation points to the root of the sentence. A fake node "ROOT" is used as the governor. The ROOT node is indexed with "0", since the indexation of real words in the sentence starts at 1. 
 
-<pre><code class="language-sdparse">ROOT I love French fries .
+~~~ sdparse
+ROOT I love French fries .
 root(ROOT, love)
-</code></pre>
+~~~
 
-<pre><code class="language-sdparse">ROOT Bill is an honest man
+~~~ sdparse
+ROOT Bill is an honest man
 root(ROOT, man)
-</code></pre>
+~~~
 
 
 	</div>
 	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_en-dep/root.md" target="#">edit root</a>
 </div>
 
-<div about="#vocative" property="rdf:type" resource="#Concept">
-	<div property="rdf:type" resource="../../u/pos/all.html#vocative">
-	   <div about="../../u/pos/all.html#vocative" property="rdf:type" resource="../../u/pos/all.html#Concept" />
+<div about="#vocative_en" property="rdf:type" resource="#dep_en">
+	<div property="rdf:type" resource="../../u/dep/all.html#vocative">
+	   <div about="../../u/dep/all.html#vocative" property="rdf:type" resource="../../u/dep/all.html#dep" />
 	</div>
 	<a id="al-en-dep/vocative" class="al-dest" />
 
 	<h2><code property="oliasystem:hasTag" lang="">vocative</code>: <div property="rdfs:label">vocative</div></h2>
 	<div property="rdfs:comment">
 
-<p>The <code>vocative</code> relation is used to mark dialogue participant addressed
+The `vocative` relation is used to mark dialogue participant addressed
 in text (common in emails and newsgroup postings). The relation links
-the addressee’s name to its host sentence.</p>
+the addressee's name to its host sentence.
 
-<pre><code class="language-sdparse">Guys , take it easy!
+~~~ sdparse
+Guys , take it easy!
 vocative(take, Guys)
-</code></pre>
+~~~
 
 
 	</div>
 	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_en-dep/vocative.md" target="#">edit vocative</a>
 </div>
 
-<div about="#xcomp" property="rdf:type" resource="#Concept">
-	<div property="rdf:type" resource="../../u/pos/all.html#xcomp">
-	   <div about="../../u/pos/all.html#xcomp" property="rdf:type" resource="../../u/pos/all.html#Concept" />
+<div about="#xcomp_en" property="rdf:type" resource="#dep_en">
+	<div property="rdf:type" resource="../../u/dep/all.html#xcomp">
+	   <div about="../../u/dep/all.html#xcomp" property="rdf:type" resource="../../u/dep/all.html#dep" />
 	</div>
 	<a id="al-en-dep/xcomp" class="al-dest" />
 
 	<h2><code property="oliasystem:hasTag" lang="">xcomp</code>: <div property="rdfs:label">open clausal complement</div></h2>
 	<div property="rdfs:comment">
 
-<p>An open clausal complement (<code>xcomp</code>) of a verb or an adjective is a predicative or clausal complement without its own subject. The reference of the subject is necessarily determined by an argument external to the xcomp (normally by the object of the next higher clause, if there is one, or else by the subject of the next higher clause. These complements are always non-finite, and they are complements (arguments of the higher verb or adjective) rather than adjuncts/modifiers, such as a purpose clause. The name <code>xcomp</code> is borrowed from Lexical-Functional Grammar.</p>
+An open clausal complement (`xcomp`) of a verb or an adjective is a predicative or clausal complement without its own subject. The reference of the subject is necessarily determined by an argument external to the xcomp (normally by the object of the next higher clause, if there is one, or else by the subject of the next higher clause. These complements are always non-finite, and they are complements (arguments of the higher verb or adjective) rather than adjuncts/modifiers, such as a purpose clause. The name `xcomp` is borrowed from Lexical-Functional Grammar. 
 
-<pre><code class="language-sdparse">He says that you like to swim
+~~~ sdparse
+He says that you like to swim
 xcomp(like, swim)
-</code></pre>
+~~~
 
-<pre><code class="language-sdparse">Sue asked George to respond to her offer
+~~~ sdparse
+Sue asked George to respond to her offer
 xcomp(asked, respond)
-</code></pre>
+~~~
 
-<pre><code class="language-sdparse">I consider him a fool
+~~~ sdparse
+I consider him a fool
 xcomp(consider, fool)
-</code></pre>
+~~~
 
-<pre><code class="language-sdparse">I consider him honest
+~~~ sdparse
+I consider him honest
 xcomp(consider, honest)
-</code></pre>
-
-<pre><code class="language-sdparse">She looks very beautiful
+~~~
+ 
+~~~ sdparse
+She looks very beautiful
 xcomp(looks, beautiful)
-</code></pre>
+~~~
 
 
 	</div>
