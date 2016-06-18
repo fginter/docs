@@ -22,14 +22,6 @@ https://www.w3.org/2012/pyRdfa/extract?uri=http://universaldependencies.org/docs
 	</span>
 </span>
 
-# to check: import from ../../u/feat/all.html?
-<span about="../../u/feat/all.html#feat" property="rdfs:subClassOf" resource="_:{{ tier }}">
-	<span about="_:{{ tier }}" property="rdf:type" resource="owl:Restriction">
-		<span property="owl:onProperty" resource="oliasystem:hasTier"/>
-		<span property="owl:hasValue" lang=""  style="visibility: hidden">FEATS</span>
-	</span>
-</span>
-
 {% include en-feat-table.html %}
 
 ----------

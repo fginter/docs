@@ -12,7 +12,7 @@ permalink: en/dep/all.html
 <span about="." property="rdf:type" resource="owl:Ontology">
 	<span property="owl:imports" resource="
 https://www.w3.org/2012/pyRdfa/extract?uri=http://universaldependencies.org/docs/u/dep/all.html&format=xml&rdfagraph=output&vocab_expansion=false&rdfa_lite=false&embedded_rdf=true&space_preserve=false&vocab_cache=true&vocab_cache_report=false&vocab_cache_refresh=false"/>
-	<span property="owl:vesionInfo">
+	<span property="owl:versionInfo">
 These pages draw from Section 2 of *[Stanford typed dependencies
 manual](http://nlp.stanford.edu/software/dependencies_manual.pdf)* (de
 Marneffe and Manning 2008), but have been updated for UD.
@@ -24,14 +24,6 @@ Marneffe and Manning 2008), but have been updated for UD.
 	<span about="_:{{ lcode }}" property="rdf:type" resource="owl:Restriction">
 		<span property="owl:onProperty" resource="http://purl.org/dc/terms/language"/>
 		<span property="owl:hasValue" lang=""  style="visibility: hidden">{{ lcode }}</span>
-	</span>
-</span>
-
-# to check: import from ../../u/dep/all.html?
-<span about="../../u/dep/all.html#dep" property="rdfs:subClassOf" resource="_:{{ tier }}">
-	<span about="_:{{ tier }}" property="rdf:type" resource="owl:Restriction">
-		<span property="owl:onProperty" resource="oliasystem:hasTier"/>
-		<span property="owl:hasValue" lang=""  style="visibility: hidden">DEPREL</span>
 	</span>
 </span>
 

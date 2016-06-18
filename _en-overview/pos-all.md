@@ -22,14 +22,6 @@ https://www.w3.org/2012/pyRdfa/extract?uri=http://universaldependencies.org/docs
 	</span>
 </span>
 
-# to check: import from ../../u/pos/all.html?
-<span about="../../u/pos/all.html#pos" property="rdfs:subClassOf" resource="_:{{ tier }}">
-	<span about="_:{{ tier }}" property="rdf:type" resource="owl:Restriction">
-		<span property="owl:onProperty" resource="oliasystem:hasTier"/>
-		<span property="owl:hasValue" lang=""  style="visibility: hidden">UPOS</span>
-	</span>
-</span>
-
 {% include en-pos-table.html %}
 
 ----------
