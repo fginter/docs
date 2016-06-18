@@ -18,7 +18,7 @@ https://www.w3.org/2012/pyRdfa/extract?uri=http://universaldependencies.org/docs
 <span about="#Concept" property="rdfs:subClassOf" resource="_:{{ lcode }}">
 	<span about="_:{{ lcode }}" property="rdf:type" resource="owl:Restriction">
 		<span property="owl:onProperty" resource="http://purl.org/dc/terms/language"/>
-		<span property="owl:hasValue" lang=""  style="visibility: hidden">en</span>
+		<span property="owl:hasValue" lang=""  style="visibility: hidden">{{ lcode }}</span>
 	</span>
 </span>
 <span about="#Concept" property="rdfs:subClassOf" resource="_:{{ tier }}">
