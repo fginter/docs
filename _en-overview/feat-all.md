@@ -52,7 +52,7 @@ https://www.w3.org/2012/pyRdfa/extract?uri=http://fginter.github.io/docs/u/feat/
 	{% endfor %}
 	<code>]</code>
 	</h2>
-	<div about="#{{ p.title }}" property="rdfs:comment">	
+	<div about="#{{ p.title | url_encode }}_{{ lcode }}" property="rdfs:comment">	
 {% if p.content contains "<!--details-->" %}    
 {{ p.content | split:"<!--details-->" | first | markdownify }}
 		<a property="rdfs:seeAlso" href="{{ p.title }}" class="al-doc">See details</a>
