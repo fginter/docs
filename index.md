@@ -13,30 +13,44 @@ title:  'Universal Dependencies'
 * Morphology
   * [General principles](u/overview/morphology.html)
   * [Universal POS tags](u/pos/index.html) ([single document](u/pos/all.html)) 
- [<a
+ <a
  property="owl:imports" 
  href="https://www.w3.org/2012/pyRdfa/extract?uri=http://fginter.github.io/docs/u/pos/all.html&format=xml&rdfagraph=output&vocab_expansion=false&rdfa_lite=false&embedded_rdf=true&space_preserve=false&vocab_cache=true&vocab_cache_report=false&vocab_cache_refresh=false"
  title="RDF model"> <img border="0"
  src="http://www.w3.org/RDF/icons/rdf_flyer.24"
- alt="RDF model" height="12pt"/></a>]
+ alt="RDF model" height="12pt"/></a>
   * [Universal features](u/feat/index.html) ([single document](u/feat/all.html))
+  <a
+ property="owl:imports" 
+ href="https://www.w3.org/2012/pyRdfa/extract?uri=http://fginter.github.io/docs/u/feat/all.html&format=xml&rdfagraph=output&vocab_expansion=false&rdfa_lite=false&embedded_rdf=true&space_preserve=false&vocab_cache=true&vocab_cache_report=false&vocab_cache_refresh=false"
+ title="RDF model"> <img border="0"
+ src="http://www.w3.org/RDF/icons/rdf_flyer.24"
+ alt="RDF model" height="12pt"/></a>
   * [Language-specific features](ext-feat-index.html)
   * [Conversion from other tagsets](tagset-conversion/index.html)
 * Syntax
   * [General principles](u/overview/syntax.html)
   * [Specific constructions](u/overview/specific-syntax.html)
   * [Universal dependency relations](u/dep/index.html) ([single document](u/dep/all.html))
+  <a
+ property="owl:imports" 
+ href="https://www.w3.org/2012/pyRdfa/extract?uri=http://fginter.github.io/docs/u/dep/all.html&format=xml&rdfagraph=output&vocab_expansion=false&rdfa_lite=false&embedded_rdf=true&space_preserve=false&vocab_cache=true&vocab_cache_report=false&vocab_cache_refresh=false"
+ title="RDF model"> <img border="0"
+ src="http://www.w3.org/RDF/icons/rdf_flyer.24"
+ alt="RDF model" height="12pt"/></a>
   * [Language-specific relations](ext-dep-index.html)
 
 * [CoNLL-U format](format.html)
 
 <small>
+<span property="rdfs:comment">
 This is the online documentation for Universal
 Dependencies, version 1 (2014-10-01).  We intend to treat version 1 as
 stable for at least the next year, but we may subsequently make
 further revisions based on experiences using it to treebank a range of
 languages. If you plan to use the scheme yourself, please get in touch
 so that we can avoid problems with conflicting versions.
+</span>
 </small>
 
 
@@ -50,6 +64,7 @@ so that we can avoid problems with conflicting versions.
 
 # Download
 
+<span property="owl:versionInfo">
 The data is released through LINDAT/CLARIN.
 
 * Version 1.3 treebanks <a href="http://hdl.handle.net/11234/1-1699">http://hdl.handle.net/11234/1-1699</a>. Released May 15, 2016.
@@ -57,6 +72,7 @@ The data is released through LINDAT/CLARIN.
 * Version 1.1 treebanks are archived at http://hdl.handle.net/11234/LRT-1478. Released May 15, 2015.
 * Version 1.0 treebanks are archived at http://hdl.handle.net/11234/1-1464. Released Jan 15, 2015.
 * The next release (v2.0) is scheduled for Nov 15, 2016. We intend to have regular treebank releases every six months.
+</span>
 
 # Query online
 
