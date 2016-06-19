@@ -25,9 +25,9 @@ https://www.w3.org/2012/pyRdfa/extract?uri=http://universaldependencies.org/docs
 
 ----------
 
-body with lcode
+no recursive lcode
 
-{% assign sorted = site.{{ lcode }}-pos | sort: 'title' %}
+{% assign sorted = site.en-pos | sort: 'title' %}
 {% for p in sorted %}
 {% capture concept %}{{ p.title | split:':' | first }}{% endcapture %}
 <div about="#{{ p.title | url_encode}}_{{ lcode }}" property="rdf:type" resource="#pos_{{ lcode }}">
