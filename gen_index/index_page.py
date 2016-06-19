@@ -5,15 +5,37 @@ link_template="""\
       <li>Morphology
         <ul>
           <li><a href="{langfam_code:}/overview/morphology.html">General principles</a></li>
-          <li><a href="{langfam_code:}/pos/index.html">{langfam_name:} POS tags</a> (<a href="{langfam_code:}/pos/all.html">single document</a>)</li>
-          <li><a href="{langfam_code:}/feat/index.html">{langfam_name:} features</a> (<a href="{langfam_code:}/feat/all.html">single document</a>)</li>
+          <li><a href="{langfam_code:}/pos/index.html">{langfam_name:} POS tags</a> (<a href="{langfam_code:}/pos/all.html">single document</a>)
+		   <a
+ property="owl:imports" 
+ href="https://www.w3.org/2012/pyRdfa/extract?uri=http://fginter.github.io/docs/{langfam_code:}/pos/all.html&format=xml&rdfagraph=output&vocab_expansion=false&rdfa_lite=false&embedded_rdf=true&space_preserve=false&vocab_cache=true&vocab_cache_report=false&vocab_cache_refresh=false"
+ title="RDF model"> <img border="0"
+ src="http://www.w3.org/RDF/icons/rdf_flyer.24"
+ alt="RDF model" height="12pt"/></a>		  
+		  </li>
+          <li><a href="{langfam_code:}/feat/index.html">{langfam_name:} features</a> (<a href="{langfam_code:}/feat/all.html">single document</a>)
+		  	<a
+ property="owl:imports" 
+ href="https://www.w3.org/2012/pyRdfa/extract?uri=http://fginter.github.io/docs/{langfam_code:}/feat/all.html&format=xml&rdfagraph=output&vocab_expansion=false&rdfa_lite=false&embedded_rdf=true&space_preserve=false&vocab_cache=true&vocab_cache_report=false&vocab_cache_refresh=false"
+ title="RDF model"> <img border="0"
+ src="http://www.w3.org/RDF/icons/rdf_flyer.24"
+ alt="RDF model" height="12pt"/></a>		  
+		  </li>
         </ul>
       </li>
       <li>Syntax
         <ul>
           <li><a href="{langfam_code:}/overview/syntax.html">General principles</a></li>
           <li><a href="{langfam_code:}/overview/specific-syntax.html">Specific constructions</a></li>
-          <li><a href="{langfam_code:}/dep/index.html">{langfam_name:} relations</a> (<a href="{langfam_code:}/dep/all.html">single document</a>)</li>
+          <li><a href="{langfam_code:}/dep/index.html">{langfam_name:} relations</a> (<a href="{langfam_code:}/dep/all.html">single document</a>)
+  		  	<a
+ property="owl:imports" 
+ href="https://www.w3.org/2012/pyRdfa/extract?uri=http://fginter.github.io/docs/{langfam_code:}/dep/all.html&format=xml&rdfagraph=output&vocab_expansion=false&rdfa_lite=false&embedded_rdf=true&space_preserve=false&vocab_cache=true&vocab_cache_report=false&vocab_cache_refresh=false"
+ title="RDF model"> <img border="0"
+ src="http://www.w3.org/RDF/icons/rdf_flyer.24"
+ alt="RDF model" height="12pt"/></a>		  
+
+		  </li>
         </ul>
       </li>
     </ul>
