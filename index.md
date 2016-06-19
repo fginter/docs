@@ -18,7 +18,7 @@ title:  'Universal Dependencies'
  href="https://www.w3.org/2012/pyRdfa/extract?uri=http://fginter.github.io/docs/u/pos/all.html&format=xml&rdfagraph=output&vocab_expansion=false&rdfa_lite=false&embedded_rdf=true&space_preserve=false&vocab_cache=true&vocab_cache_report=false&vocab_cache_refresh=false"
  title="RDF model"> <img border="0"
  src="http://www.w3.org/RDF/icons/rdf_flyer.24"
- alt="RDF model" height="15pt"/></a>]
+ alt="RDF model" height="12pt"/></a>]
   * [Universal features](u/feat/index.html) ([single document](u/feat/all.html))
   * [Language-specific features](ext-feat-index.html)
   * [Conversion from other tagsets](tagset-conversion/index.html)
