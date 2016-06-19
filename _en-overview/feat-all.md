@@ -42,7 +42,7 @@ https://www.w3.org/2012/pyRdfa/extract?uri=http://fginter.github.io/docs/u/feat/
 			{% if cand_feat contains "`" %}
 				{% if cand_feat contains " " %}{% else %}
 					{% assign feat = cand_feat | replace: "`","" %}
-					<span about="#{{ p.title | url_encode }}{{ feat }}" property="rdf:type" resource="#{{ p.title | url_encode }}">
+					<span about="#{{ p.title | url_encode }}{{ feat | url_encode }}_{{ lcode }}" property="rdf:type" resource="#{{ p.title | url_encode }}_{{ lcode }}">
 						<span property="rdf:type" resource="../../u/feat/all.html#{{ p.title | split:':' | first }}{{ feat | split:':' | first }}"/>
 						<code property="oliasystem:hasTagContaining" lang="">{{ p.title }}={{ feat }}</code>
 					</span>
