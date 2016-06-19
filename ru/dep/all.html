@@ -43,7 +43,12 @@
 	  </div>
 	</noscript>
 
-          <h1 id="dependencies">Dependencies</h1>
+          
+<h1 id="dependencies">Dependencies</h1>
+
+<p><span about="." property="rdf:type" resource="owl:Ontology">
+	<span property="owl:imports" resource=" https://www.w3.org/2012/pyRdfa/extract?uri=http://universaldependencies.org/docs/u/dep/all.html&amp;format=xml&amp;rdfagraph=output&amp;vocab_expansion=false&amp;rdfa_lite=false&amp;embedded_rdf=true&amp;space_preserve=false&amp;vocab_cache=true&amp;vocab_cache_report=false&amp;vocab_cache_refresh=false"></span>
+</span></p>
 
 <p>Note: <i>nmod</i>, <i>neg</i>, and <i>punct</i> appear
 in two places.</p>
@@ -258,99 +263,143 @@ in two places.</p>
   </tr>
 </table>
 
+<p><span about="#dep_ru" property="rdfs:label" style="visibility: hidden">Dependencies</span>
+<span about="#dep_ru" property="rdfs:subClassOf" resource="_:ru">
+	<span about="_:ru" property="rdf:type" resource="owl:Restriction">
+		<span property="owl:onProperty" resource="http://purl.org/dc/terms/language"></span>
+		<span property="owl:hasValue" lang="" style="visibility: hidden">ru</span>
+	</span>
+</span></p>
+
 <hr />
 
-<p><a id="al-ru-dep/acl" class="al-dest"></a></p>
-<h2><code>acl</code>: clausal modifier of noun</h2>
+<div about="#acl_ru" property="rdf:type" resource="#dep_ru">
+	<div property="rdf:type" resource="../../u/dep/all.html#acl" />
+	<a id="al-ru-dep/acl" class="al-dest" />
 
-<p><code>acl</code> stands for finite and non-finite clauses that modify a nominal.  The <code>acl</code> relation 
-contrasts with the <a href="">advcl</a> relation, which is used for adverbial clauses
-that modify a predicate. The head of the <code>acl</code> relation is the noun
+	<h2><code property="oliasystem:hasTag" lang="">acl</code>: <div property="rdfs:label">clausal modifier of noun</div></h2>
+	<div property="rdfs:comment">
+
+`acl` stands for finite and non-finite clauses that modify a nominal.  The `acl` relation 
+contrasts with the [advcl]() relation, which is used for adverbial clauses
+that modify a predicate. The head of the `acl` relation is the noun
 that is modified, and the dependent is the head of the clause that
-modifies the noun.</p>
+modifies the noun.
 
-<pre><code class="language-sdparse">мужчина , о котором я говорил \n man , about whom I have-talked
+~~~ sdparse
+мужчина , о котором я говорил \n man , about whom I have-talked
 acl(мужчина, говорил)
 acl(man, have-talked)
-</code></pre>
+~~~
 
-<p>This relation is also used for optional depictives.
+This relation is also used for optional depictives.
 The adjective is taken to modify the nominal of which it provides a secondary predication.
-See <a href="">u-dep/xcomp</a> for further discussion of resultatives and depictives.</p>
+See [u-dep/xcomp]() for further discussion of resultatives and depictives.
 
-<pre><code class="language-sdparse">Алена вошла в комнату незамеченной . \n Alena entered to room unnoticed .
+~~~ sdparse
+Алена вошла в комнату незамеченной . \n Alena entered to room unnoticed .
 acl(Алена, незамеченной)
 acl(Alena, unnoticed)
-</code></pre>
+~~~
 
-<pre><code class="language-sdparse">Он нарисовал свою жену обнаженной . \n He painted his wife naked .
+~~~ sdparse
+Он нарисовал свою жену обнаженной . \n He painted his wife naked .
 acl(жену, обнаженной)
 acl(wife, naked)
-</code></pre>
+~~~
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_ru-dep/acl.md" target="#">edit acl</a></p>
 
-<p><a id="al-ru-dep/advcl" class="al-dest"></a></p>
-<h2><code>advcl</code>: adverbial clause modifier</h2>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_ru-dep/acl.md" target="#">edit acl</a>
+</div>
 
-<p>An adverbial clause modifier is a clause which modifies a verb or other predicate (adjective, etc.),
+<div about="#advcl_ru" property="rdf:type" resource="#dep_ru">
+	<div property="rdf:type" resource="../../u/dep/all.html#advcl" />
+	<a id="al-ru-dep/advcl" class="al-dest" />
+
+	<h2><code property="oliasystem:hasTag" lang="">advcl</code>: <div property="rdfs:label">adverbial clause modifier</div></h2>
+	<div property="rdfs:comment">
+
+An adverbial clause modifier is a clause which modifies a verb or other predicate (adjective, etc.),
 as a modifier not as a core complement. This includes things such as a temporal clause, consequence, conditional clause, purpose
-clause, etc. The dependent must be clausal (or else it is an <a href="">advmod</a>) and the dependent is the main predicate of the clause.</p>
+clause, etc. The dependent must be clausal (or else it is an [advmod]()) and the dependent is the main predicate of the clause.
 
-<pre><code class="language-sdparse">Если вы знаете , кто это сделал , вы должны сказать учителю . \n If you know , who this did , you have to-tell the-teacher .
+~~~ sdparse
+Если вы знаете , кто это сделал , вы должны сказать учителю . \n If you know , who this did , you have to-tell the-teacher .
 advcl(должны, знаете)
 advcl(have, know)
-</code></pre>
+~~~
 
-<pre><code class="language-sdparse">Он спешил , чтобы прийти вовремя . \n He rushed , in-order-to come in-time .
+~~~ sdparse
+Он спешил , чтобы прийти вовремя . \n He rushed , in-order-to come in-time .
 advcl(спешил, прийти)
 advcl(rushed, come)
-</code></pre>
+~~~
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_ru-dep/advcl.md" target="#">edit advcl</a></p>
 
-<p><a id="al-ru-dep/advmod" class="al-dest"></a></p>
-<h2><code>advmod</code>: adverbial modifier</h2>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_ru-dep/advcl.md" target="#">edit advcl</a>
+</div>
 
-<p>An adverbial modifier of a word is a (non-clausal) <a href="ru-pos/ADV">adverb</a>
-or adverbial phrase that serves to modify the meaning of the word.</p>
+<div about="#advmod_ru" property="rdf:type" resource="#dep_ru">
+	<div property="rdf:type" resource="../../u/dep/all.html#advmod" />
+	<a id="al-ru-dep/advmod" class="al-dest" />
 
-<p>We differentiate adverbials realized as adverbs (<code>advmod</code>) and
+	<h2><code property="oliasystem:hasTag" lang="">advmod</code>: <div property="rdfs:label">adverbial modifier</div></h2>
+	<div property="rdfs:comment">
+
+An adverbial modifier of a word is a (non-clausal) [adverb](ru-pos/ADV)
+or adverbial phrase that serves to modify the meaning of the word.
+
+We differentiate adverbials realized as adverbs (`advmod`) and
 adverbials realized by noun phrases or adpositional phrases
-(<a href="">nmod</a>).</p>
+([nmod]()).
 
-<pre><code class="language-sdparse">генетически модифицированная еда \n genetically modified food
+~~~ sdparse
+генетически модифицированная еда \n genetically modified food
 advmod(модифицированная, генетически)
 advmod(modified, genetically)
-</code></pre>
+~~~
 
-<pre><code class="language-sdparse">менее часто \n less often
+~~~ sdparse
+менее часто \n less often
 advmod(часто, менее)
 advmod(often, less)
-</code></pre>
+~~~
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_ru-dep/advmod.md" target="#">edit advmod</a></p>
 
-<p><a id="al-ru-dep/amod" class="al-dest"></a></p>
-<h2><code>amod</code>: adjectival modifier</h2>
 
-<p>An adjectival modifier of an NP is any adjectival phrase that serves to modify the meaning of the NP.</p>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_ru-dep/advmod.md" target="#">edit advmod</a>
+</div>
 
-<pre><code class="language-sdparse">Василий ест куриную лапшу . \n Vasily eats chicken noodles .
+<div about="#amod_ru" property="rdf:type" resource="#dep_ru">
+	<div property="rdf:type" resource="../../u/dep/all.html#amod" />
+	<a id="al-ru-dep/amod" class="al-dest" />
+
+	<h2><code property="oliasystem:hasTag" lang="">amod</code>: <div property="rdfs:label">adjectival modifier</div></h2>
+	<div property="rdfs:comment">
+
+An adjectival modifier of an NP is any adjectival phrase that serves to modify the meaning of the NP.
+
+~~~ sdparse
+Василий ест куриную лапшу . \n Vasily eats chicken noodles .
 amod(лапшу, куриную)
 amod(noodles, chicken)
-</code></pre>
+~~~
 
-<pre><code class="language-sdparse">Первое впечатление было хорошим . \n First impression was positive .
+~~~ sdparse
+Первое впечатление было хорошим . \n First impression was positive .
 amod(впечатление, Первое)
 amod(impression, First)
 nsubj(хорошим, впечатление)
 nsubj(positive, impression)
-</code></pre>
+~~~
 
-<p>Exception: if the modifying adjectival word is pronominal (i.e. tagged <a href="">ru-pos/DET</a>), the relation is <a href="">det</a> instead of <code>amod</code>.</p>
+Exception: if the modifying adjectival word is pronominal (i.e. tagged [ru-pos/DET]()), the relation is [det]() instead of `amod`.
 
-<pre><code class="language-sdparse">все эти ваши новые группы \n all these your new groups
+~~~ sdparse
+все эти ваши новые группы \n all these your new groups
 amod(группы, новые)
 amod(groups, new)
 det(группы, ваши)
@@ -359,113 +408,153 @@ det(группы, эти)
 det(groups, these)
 det(группы, все)
 det(groups, all)
-</code></pre>
+~~~
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_ru-dep/amod.md" target="#">edit amod</a></p>
 
-<p><a id="al-ru-dep/appos" class="al-dest"></a></p>
-<h2><code>appos</code>: appositional modifier</h2>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_ru-dep/amod.md" target="#">edit amod</a>
+</div>
 
-<p>An appositional modifier of a noun is a nominal immediately following the first noun that serves to define or modify that noun. It includes parenthesized examples, as well as defining abbreviations in one of these structures.</p>
+<div about="#appos_ru" property="rdf:type" resource="#dep_ru">
+	<div property="rdf:type" resource="../../u/dep/all.html#appos" />
+	<a id="al-ru-dep/appos" class="al-dest" />
 
-<pre><code class="language-sdparse">Карл Четвертый , римский император и чешский король , царствовал в XIV веке . \n Charles IV , Roman Emperor and Czech king , ruled in 14th century .
+	<h2><code property="oliasystem:hasTag" lang="">appos</code>: <div property="rdfs:label">appositional modifier</div></h2>
+	<div property="rdfs:comment">
+
+An appositional modifier of a noun is a nominal immediately following the first noun that serves to define or modify that noun. It includes parenthesized examples, as well as defining abbreviations in one of these structures.
+
+~~~ sdparse
+Карл Четвертый , римский император и чешский король , царствовал в XIV веке . \n Charles IV , Roman Emperor and Czech king , ruled in 14th century .
 appos(Карл, император)
 appos(Charles, Emperor)
 conj(император, король)
 conj(Emperor, king)
-</code></pre>
+~~~
 
-<pre><code class="language-sdparse">Польская Социалистическая Партия ( ПСП ) \n Polish Socialist Party ( PSP )
+~~~ sdparse
+Польская Социалистическая Партия ( ПСП ) \n Polish Socialist Party ( PSP )
 appos(Партия, ПСП)
 appos(Party, PSP)
-</code></pre>
+~~~
 
-<p>There is a slight deviation from the <a href="u-dep/appos">universal</a> standard in case of more than one appositive nominal.
+There is a slight deviation from the [universal](u-dep/appos) standard in case of more than one appositive nominal.
 Instead of attaching them all to the first noun, all the appositive modifiers are put together in coordination,
-then attached as <code>appos</code> to the modified noun.
-This is done regardless whether the appositives are joined by a coordinating conjunction or just a comma.</p>
+then attached as `appos` to the modified noun.
+This is done regardless whether the appositives are joined by a coordinating conjunction or just a comma.
 
-<pre><code class="language-sdparse">Пришел Михаил , мой брат и кузен Давида . \n Came Mikhail , my brother and cousin of-David .
+~~~ sdparse
+Пришел Михаил , мой брат и кузен Давида . \n Came Mikhail , my brother and cousin of-David .
 appos(Михаил, брат)
 appos(Mikhail, brother)
 conj(брат, кузен)
 conj(brother, cousin)
-</code></pre>
+~~~
 
-<pre><code class="language-sdparse">Михаил , мой брат , кузен Давида , придет завтра . \n Mikhail , my brother , cousin of-David , will-come tomorrow .
+~~~ sdparse
+Михаил , мой брат , кузен Давида , придет завтра . \n Mikhail , my brother , cousin of-David , will-come tomorrow .
 appos(Михаил, брат)
 appos(Mikhail, brother)
 conj(брат, кузен)
 conj(brother, cousin)
-</code></pre>
+~~~
 
-<p><code>appos</code> is also used to link key-value pairs in addresses, signatures, etc. (see also the <a href="">list</a> label):</p>
+`appos` is also used to link key-value pairs in addresses, signatures, etc. (see also the [list]() label):
 
-<pre><code class="language-sdparse">Иван Петров , тел . : 8(495)-000-11-22 , e-mail : petrov@mail.ru
+~~~ sdparse
+Иван Петров , тел . : 8(495)-000-11-22 , e-mail : petrov@mail.ru
 name(Иван, Петров)
 list(Иван, тел)
 list(Иван, e-mail)
 appos(тел, 8(495)-000-11-22-7)
 appos(e-mail, petrov@mail.ru)
-</code></pre>
+~~~
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_ru-dep/appos.md" target="#">edit appos</a></p>
 
-<p><a id="al-ru-dep/aux" class="al-dest"></a></p>
-<h2><code>aux</code>: auxiliary</h2>
 
-<p>An auxiliary of a clause is a form of the <a href="ru-pos/AUX">auxiliary verb</a> <em>быть</em> “to be”
-used to construct the periphrastic future tense or conditional.</p>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_ru-dep/appos.md" target="#">edit appos</a>
+</div>
 
-<p>Exception: Auxiliary verb used to construct the passive
-<a href="ru-feat/Voice">voice</a> is not labeled <code>aux</code> but <a href="">auxpass</a>.</p>
+<div about="#aux_ru" property="rdf:type" resource="#dep_ru">
+	<div property="rdf:type" resource="../../u/dep/all.html#aux" />
+	<a id="al-ru-dep/aux" class="al-dest" />
 
-<p>Note that besides <code>aux</code> and <code>auxpass</code>, the verb <em>быть</em> may also act as a <a href="cop">copula</a>
-and as the main verb.</p>
+	<h2><code property="oliasystem:hasTag" lang="">aux</code>: <div property="rdfs:label">auxiliary</div></h2>
+	<div property="rdfs:comment">
 
-<pre><code class="language-sdparse">Завтра я буду выступать в университете . \n Tomorrow I will give-a-talk at the-university .
+An auxiliary of a clause is a form of the [auxiliary verb](ru-pos/AUX) _быть_ “to be”
+used to construct the periphrastic future tense or conditional.
+
+Exception: Auxiliary verb used to construct the passive
+[voice](ru-feat/Voice) is not labeled `aux` but [auxpass]().
+
+Note that besides `aux` and `auxpass`, the verb _быть_ may also act as a [copula](cop)
+and as the main verb.
+
+~~~ sdparse
+Завтра я буду выступать в университете . \n Tomorrow I will give-a-talk at the-university .
 aux(выступать, буду)
 aux(give-a-talk, will)
-</code></pre>
+~~~
 
-<pre><code class="language-sdparse">Если бы я пришел раньше , я бы не пропустил поезд . \n If had I come earlier , I would not have-missed the-train .
+~~~ sdparse
+Если бы я пришел раньше , я бы не пропустил поезд . \n If had I come earlier , I would not have-missed the-train .
 aux(пришел, бы-2)
 aux(come, had)
 aux(пропустил, бы-8)
 aux(have-missed, would)
-</code></pre>
+~~~
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_ru-dep/aux_.md" target="#">edit aux</a></p>
 
-<p><a id="al-ru-dep/auxpass" class="al-dest"></a></p>
-<h2><code>auxpass</code>: passive auxiliary</h2>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_ru-dep/aux_.md" target="#">edit aux</a>
+</div>
 
-<p>A passive auxiliary of a clause is a form of the <a href="cs-pos/AUX">auxiliary verb</a> <em>быть</em> “to be” used to construct the periphrastic passive voice (in the past or future tense, in the infinitive, imperative or conditional mood).</p>
+<div about="#auxpass_ru" property="rdf:type" resource="#dep_ru">
+	<div property="rdf:type" resource="../../u/dep/all.html#auxpass" />
+	<a id="al-ru-dep/auxpass" class="al-dest" />
 
-<pre><code class="language-sdparse">Кеннеди был убит . \n Kennedy was killed .
+	<h2><code property="oliasystem:hasTag" lang="">auxpass</code>: <div property="rdfs:label">passive auxiliary</div></h2>
+	<div property="rdfs:comment">
+
+A passive auxiliary of a clause is a form of the [auxiliary verb](cs-pos/AUX) _быть_ “to be” used to construct the periphrastic passive voice (in the past or future tense, in the infinitive, imperative or conditional mood).
+
+~~~ sdparse
+Кеннеди был убит . \n Kennedy was killed .
 auxpass(убит, был)
 auxpass(killed, was)
-</code></pre>
+~~~
 
-<pre><code class="language-sdparse">Кеннеди будет убит . \n Kennedy will-be killed .
+~~~ sdparse
+Кеннеди будет убит . \n Kennedy will-be killed .
 auxpass(убит, будет)
 auxpass(killed, will-be)
-</code></pre>
+~~~
 
-<pre><code class="language-sdparse">Кеннеди не знал , что ему суждено быть убитым . \n Kennedy did-not-anticipate that his fate is to-be killed .
+~~~ sdparse
+Кеннеди не знал , что ему суждено быть убитым . \n Kennedy did-not-anticipate that his fate is to-be killed .
 auxpass(убитым, быть)
 auxpass(killed, to-be)
-</code></pre>
+~~~
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_ru-dep/auxpass.md" target="#">edit auxpass</a></p>
 
-<p><a id="al-ru-dep/case" class="al-dest"></a></p>
-<h2><code>case</code>: case marking</h2>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_ru-dep/auxpass.md" target="#">edit auxpass</a>
+</div>
 
-<p>Russian uses a combination of oblique morphological cases and prepositions to express semantic case.
-Prepositions in UD are treated as dependents of the noun they attach to. The relation between the noun and the preposition is labeled <code>case</code>.</p>
+<div about="#case_ru" property="rdf:type" resource="#dep_ru">
+	<div property="rdf:type" resource="../../u/dep/all.html#case" />
+	<a id="al-ru-dep/case" class="al-dest" />
 
-<pre><code class="language-sdparse">В пятницу.Acc по дороге.Dat к деревне.Dat мы разговаривали o событии.Loc . \n On Friday during the-journey to the-village we talked about the-event .
+	<h2><code property="oliasystem:hasTag" lang="">case</code>: <div property="rdfs:label">case marking</div></h2>
+	<div property="rdfs:comment">
+
+Russian uses a combination of oblique morphological cases and prepositions to express semantic case.
+Prepositions in UD are treated as dependents of the noun they attach to. The relation between the noun and the preposition is labeled `case`.
+
+~~~ sdparse
+В пятницу.Acc по дороге.Dat к деревне.Dat мы разговаривали o событии.Loc . \n On Friday during the-journey to the-village we talked about the-event .
 case(пятницу.Acc, В)
 case(Friday, On)
 case(дороге.Dat, по)
@@ -474,37 +563,47 @@ case(деревне.Dat, к)
 case(the-village, to)
 case(событии.Loc, o)
 case(the-event, about)
-</code></pre>
+~~~
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_ru-dep/case.md" target="#">edit case</a></p>
 
-<p><a id="al-ru-dep/cc" class="al-dest"></a></p>
-<h2><code>cc</code>: coordinating conjunction</h2>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_ru-dep/case.md" target="#">edit case</a>
+</div>
 
-<p>For more on coordination, see the <a href="">conj</a> relation.
-A <code>cc</code> is the relation between the first conjunct and
-the <a href="ru-pos/CONJ">coordinating conjunction</a> delimiting another conjunct.
+<div about="#cc_ru" property="rdf:type" resource="#dep_ru">
+	<div property="rdf:type" resource="../../u/dep/all.html#cc" />
+	<a id="al-ru-dep/cc" class="al-dest" />
+
+	<h2><code property="oliasystem:hasTag" lang="">cc</code>: <div property="rdfs:label">coordinating conjunction</div></h2>
+	<div property="rdfs:comment">
+
+For more on coordination, see the [conj]() relation.
+A `cc` is the relation between the first conjunct and
+the [coordinating conjunction](ru-pos/CONJ) delimiting another conjunct.
 (Note: different dependency grammars have different treatments of coordination.
-We take the first conjunct as the head of the coordination.)</p>
+We take the first conjunct as the head of the coordination.)
 
-<pre><code class="language-sdparse">Он старый и мудрый мужчина. \n He-is old and wise man .
+~~~ sdparse
+Он старый и мудрый мужчина. \n He-is old and wise man .
 cc(старый, и)
 cc(old, and)
-</code></pre>
+~~~
 
-<p>A coordinating conjunction may also appear at the beginning of a
-sentence. This is also called a <code>cc</code>, and it depends on the root
+A coordinating conjunction may also appear at the beginning of a
+sentence. This is also called a `cc`, and it depends on the root
 predicate of the sentence.
 (In fact there is a coordination that spans multiple sentences.
 We cannot attach a word to the first conjunct because it is in another sentence.
-Thus we attach it to the first conjunct available in the current sentence: its main predicate.)</p>
+Thus we attach it to the first conjunct available in the current sentence: its main predicate.)
 
-<pre><code class="language-sdparse">И потом мы ушли . \n And then we left .
+~~~ sdparse
+И потом мы ушли . \n And then we left .
 cc(ушли, И)
 cc(left, And)
-</code></pre>
+~~~
 
-<pre><code class="language-sdparse">У нас есть яблоки , груши , апельсины и бананы . \n By us are apples , pears , oranges and bananas .
+~~~ sdparse
+У нас есть яблоки , груши , апельсины и бананы . \n By us are apples , pears , oranges and bananas .
 nsubj(есть, яблоки)
 nsubj(are, apples)
 conj(яблоки, груши)
@@ -519,83 +618,111 @@ punct(яблоки, ,-5)
 punct(яблоки, ,-7)
 punct(apples, ,-17)
 punct(apples, ,-19)
-</code></pre>
+~~~
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_ru-dep/cc.md" target="#">edit cc</a></p>
 
-<p><a id="al-ru-dep/ccomp" class="al-dest"></a></p>
-<h2><code>ccomp</code>: clausal complement</h2>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_ru-dep/cc.md" target="#">edit cc</a>
+</div>
 
-<p>A clausal complement of a verb or adjective is a dependent clause 
+<div about="#ccomp_ru" property="rdf:type" resource="#dep_ru">
+	<div property="rdf:type" resource="../../u/dep/all.html#ccomp" />
+	<a id="al-ru-dep/ccomp" class="al-dest" />
+
+	<h2><code property="oliasystem:hasTag" lang="">ccomp</code>: <div property="rdfs:label">clausal complement</div></h2>
+	<div property="rdfs:comment">
+
+A clausal complement of a verb or adjective is a dependent clause 
 which is a core argument. That is, it functions like an object of the verb, or
-adjective.</p>
+adjective.
 
-<pre><code class="language-sdparse">Он говорит , что она работает в музее . \n He says , that she works in a museum .
+~~~ sdparse
+Он говорит , что она работает в музее . \n He says , that she works in a museum .
 ccomp(говорит, работает)
 ccomp(says, works)
-</code></pre>
+~~~
 
-<p>Such clausal complements may be finite or nonfinite. However, if the
+Such clausal complements may be finite or nonfinite. However, if the
 subject of the clausal complement is controlled (that is, must be the same
 as the higher subject or object, with no other possible interpretation)
-the appropriate relation is <a href="">xcomp</a>.</p>
+the appropriate relation is [xcomp]().
 
-<pre><code class="language-sdparse">Генерал приказал нам выйти . \n General ordered us to-leave .
+~~~ sdparse
+Генерал приказал нам выйти . \n General ordered us to-leave .
 ccomp(приказал, выйти)
 ccomp(ordered, to-leave)
-</code></pre>
+~~~
 
-<pre><code class="language-sdparse">Мы начали писать тест . \n We started to-write test .
+~~~ sdparse
+Мы начали писать тест . \n We started to-write test .
 xcomp(начали, писать)
 xcomp(started, to-write)
-</code></pre>
+~~~
 
-<p>The key difference here is that, while it is possible to interpret the first
+The key difference here is that, while it is possible to interpret the first
 sentence to mean that the general will not be leaving, in the second
-sentence it is clear that the subject of <strong>writing</strong> can only be <strong>we</strong>. This is
-what distinguishes <code>ccomp</code> and <code>xcomp</code>.</p>
+sentence it is clear that the subject of __writing__ can only be __we__. This is
+what distinguishes `ccomp` and `xcomp`.
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_ru-dep/ccomp.md" target="#">edit ccomp</a></p>
 
-<p><a id="al-ru-dep/compound" class="al-dest"></a></p>
-<h2><code>compound</code>: compound</h2>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_ru-dep/ccomp.md" target="#">edit ccomp</a>
+</div>
 
-<p><code>compound</code> is one of the relations in UD for compounding.
-The rightmost numeral is the head, the other numerals are attached as its modifiers.</p>
+<div about="#compound_ru" property="rdf:type" resource="#dep_ru">
+	<div property="rdf:type" resource="../../u/dep/all.html#compound" />
+	<a id="al-ru-dep/compound" class="al-dest" />
 
-<pre><code class="language-sdparse">Это будет стоить максимум 5 тысяч рублей . \n It will cost at-most 5 thousand rubles .
+	<h2><code property="oliasystem:hasTag" lang="">compound</code>: <div property="rdfs:label">compound</div></h2>
+	<div property="rdfs:comment">
+
+`compound` is one of the relations in UD for compounding.
+The rightmost numeral is the head, the other numerals are attached as its modifiers.
+
+~~~ sdparse
+Это будет стоить максимум 5 тысяч рублей . \n It will cost at-most 5 thousand rubles .
 nummod:gov(рублей, тысяч)
 nummod:gov(rubles, thousand)
 compound(тысяч, 5-5)
 compound(thousand, 5-14)
-</code></pre>
+~~~
 
-<pre><code class="language-sdparse">Это будет стоить пятьдесят пять тысяч рублей . \n It will cost fifty five thousand rubles .
+~~~ sdparse
+Это будет стоить пятьдесят пять тысяч рублей . \n It will cost fifty five thousand rubles .
 nummod:gov(рублей, тысяч)
 nummod:gov(rubles, thousand)
 compound(тысяч, пятьдесят)
 compound(thousand, fifty)
 compound(тысяч, пять)
 compound(thousand, five)
-</code></pre>
+~~~
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_ru-dep/compound.md" target="#">edit compound</a></p>
 
-<p><a id="al-ru-dep/conj" class="al-dest"></a></p>
-<h2><code>conj</code>: conjunct</h2>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_ru-dep/compound.md" target="#">edit compound</a>
+</div>
 
-<p>A conjunct is the relation between two elements connected by a
-coordinating conjunction, such as <em>and, or,</em> or a comma or other punctuation.
+<div about="#conj_ru" property="rdf:type" resource="#dep_ru">
+	<div property="rdf:type" resource="../../u/dep/all.html#conj" />
+	<a id="al-ru-dep/conj" class="al-dest" />
+
+	<h2><code property="oliasystem:hasTag" lang="">conj</code>: <div property="rdfs:label">conjunct</div></h2>
+	<div property="rdfs:comment">
+
+A conjunct is the relation between two elements connected by a
+coordinating conjunction, such as _and, or,_ or a comma or other punctuation.
 We treat coordination asymmetrically in what is known as the Stanford style:
 The head of the relation is the first
-conjunct and all the other conjuncts depend on it via the <code>conj</code> relation.</p>
+conjunct and all the other conjuncts depend on it via the `conj` relation.
 
-<pre><code class="language-sdparse">Он старый и мудрый мужчина . \n He-is old and wise man .
+~~~ sdparse
+Он старый и мудрый мужчина . \n He-is old and wise man .
 conj(старый, мудрый)
 conj(old, wise)
-</code></pre>
+~~~
 
-<pre><code class="language-sdparse">У нас есть яблоки , груши , апельсины и бананы . \n By us are apples , pears , oranges and bananas .
+~~~ sdparse
+У нас есть яблоки , груши , апельсины и бананы . \n By us are apples , pears , oranges and bananas .
 nsubj(есть, яблоки)
 nsubj(are, apples)
 conj(яблоки, груши)
@@ -610,11 +737,12 @@ punct(яблоки, ,-5)
 punct(яблоки, ,-7)
 punct(apples, ,-17)
 punct(apples, ,-19)
-</code></pre>
+~~~
 
-<p>Coordinate clauses are treated the same way as coordination of other constituent types:</p>
+Coordinate clauses are treated the same way as coordination of other constituent types:
 
-<pre><code class="language-sdparse">Он пришел домой , помылся и пошел в кровать . \n He came home , showered-himself and went to bed .
+~~~ sdparse
+Он пришел домой , помылся и пошел в кровать . \n He came home , showered-himself and went to bed .
 conj(пришел, помылся)
 conj(пришел, пошел)
 conj(came, showered-himself)
@@ -623,117 +751,168 @@ punct(пришел, ,-4)
 punct(came, ,-15)
 cc(пришел, и)
 cc(came, and)
-</code></pre>
+~~~
 
-<p>See <a href="u-dep/conj">universal/conj</a> for more details on various coordination-related issues.</p>
+See [universal/conj](u-dep/conj) for more details on various coordination-related issues.
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_ru-dep/conj.md" target="#">edit conj</a></p>
 
-<p><a id="al-ru-dep/cop" class="al-dest"></a></p>
-<h2><code>cop</code>: copula</h2>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_ru-dep/conj.md" target="#">edit conj</a>
+</div>
 
-<p>A copula is the relation between the nominal predicate and
-the copular verb <em><b>быть</b></em> “to be” (or its variants <em>бывал, был</em>).
-The verb <em>становиться</em> “to become”, despite being counted among copular verbs by some authors,
-is not analyzed as <code>cop</code>.</p>
+<div about="#cop_ru" property="rdf:type" resource="#dep_ru">
+	<div property="rdf:type" resource="../../u/dep/all.html#cop" />
+	<a id="al-ru-dep/cop" class="al-dest" />
 
-<p>We normally take a copula as a dependent of its complement (the nominal predicate).
-The nominal predicate is usually a <a href="cs-pos/NOUN">noun</a>, an <a href="cs-pos/ADJ">adjective</a>
-or a <a href="../feat/VerbForm.html#part-participle">participle</a>.</p>
+	<h2><code property="oliasystem:hasTag" lang="">cop</code>: <div property="rdfs:label">copula</div></h2>
+	<div property="rdfs:comment">
 
-<pre><code class="language-sdparse">Андрей был честным человеком . \n Andrew was an honest man .
+A copula is the relation between the nominal predicate and
+the copular verb _<b>быть</b>_ “to be” (or its variants _бывал, был_).
+The verb _становиться_ “to become”, despite being counted among copular verbs by some authors,
+is not analyzed as `cop`.
+
+We normally take a copula as a dependent of its complement (the nominal predicate).
+The nominal predicate is usually a [noun](cs-pos/NOUN), an [adjective](cs-pos/ADJ)
+or a <a href="../feat/VerbForm.html#part-participle">participle</a>.
+
+~~~ sdparse
+Андрей был честным человеком . \n Andrew was an honest man .
 cop(человеком, был)
 cop(man, was)
-</code></pre>
+~~~
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_ru-dep/cop.md" target="#">edit cop</a></p>
 
-<p><a id="al-ru-dep/csubj" class="al-dest"></a></p>
-<h2><code>csubj</code>: clausal subject</h2>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_ru-dep/cop.md" target="#">edit cop</a>
+</div>
 
-<p>A clausal subject is a clausal syntactic subject of a clause, i.e.,
+<div about="#csubj_ru" property="rdf:type" resource="#dep_ru">
+	<div property="rdf:type" resource="../../u/dep/all.html#csubj" />
+	<a id="al-ru-dep/csubj" class="al-dest" />
+
+	<h2><code property="oliasystem:hasTag" lang="">csubj</code>: <div property="rdfs:label">clausal subject</div></h2>
+	<div property="rdfs:comment">
+
+A clausal subject is a clausal syntactic subject of a clause, i.e.,
 the subject is itself a clause. The governor of this relation might
 not always be a verb: when the verb is a copular verb, the root of the
 clause is the complement of the copular verb. The dependent is the main lexical verb or other 
-predicate of the subject clause.</p>
+predicate of the subject clause.
 
-<pre><code class="language-sdparse">Забыть Ваню трудно . \n To-forget Vanya , it-is-hard .
+~~~ sdparse
+Забыть Ваню трудно . \n To-forget Vanya , it-is-hard .
 csubj(трудно, забыть)
 csubj(it-is-hard, To-forget)
-</code></pre>
+~~~
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_ru-dep/csubj.md" target="#">edit csubj</a></p>
 
-<p><a id="al-ru-dep/csubjpass" class="al-dest"></a></p>
-<h2><code>csubjpass</code>: clausal passive subject</h2>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_ru-dep/csubj.md" target="#">edit csubj</a>
+</div>
 
-<p>A clausal passive subject is a clausal syntactic subject of a passive clause.</p>
+<div about="#csubjpass_ru" property="rdf:type" resource="#dep_ru">
+	<div property="rdf:type" resource="../../u/dep/all.html#csubjpass" />
+	<a id="al-ru-dep/csubjpass" class="al-dest" />
 
-<pre><code class="language-sdparse">Мне было сказано , чтобы я все хорошо взвесил . \n To-me it-has-been told , that I it very-well weigh .
+	<h2><code property="oliasystem:hasTag" lang="">csubjpass</code>: <div property="rdfs:label">clausal passive subject</div></h2>
+	<div property="rdfs:comment">
+
+A clausal passive subject is a clausal syntactic subject of a passive clause.
+
+~~~ sdparse
+Мне было сказано , чтобы я все хорошо взвесил . \n To-me it-has-been told , that I it very-well weigh .
 csubjpass(сказано, взвесил)
 csubjpass(told, weigh)
-</code></pre>
+~~~
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_ru-dep/csubjpass.md" target="#">edit csubjpass</a></p>
 
-<p><a id="al-ru-dep/dep" class="al-dest"></a></p>
-<h2><code>dep</code>: unspecified dependency</h2>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_ru-dep/csubjpass.md" target="#">edit csubjpass</a>
+</div>
 
-<p>A dependency is labeled as <code>dep</code> when a system is unable to
+<div about="#dep_ru" property="rdf:type" resource="#dep_ru">
+	<div property="rdf:type" resource="../../u/dep/all.html#dep" />
+	<a id="al-ru-dep/dep" class="al-dest" />
+
+	<h2><code property="oliasystem:hasTag" lang="">dep</code>: <div property="rdfs:label">unspecified dependency</div></h2>
+	<div property="rdfs:comment">
+
+A dependency is labeled as `dep` when a system is unable to
 determine a more precise dependency relation between two words.  This
 may be because of a weird grammatical construction, a limitation in
 software, a parser error, or
-because of an unresolved long distance dependency.</p>
+because of an unresolved long distance dependency.
 
-<pre><code class="language-sdparse">А к чему – было не понятно . \n And for what – it-was not clear .
+~~~ sdparse
+А к чему – было не понятно . \n And for what – it-was not clear .
 dep(понятно, чему)
 dep(clear, what)
-</code></pre>
+~~~
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_ru-dep/dep.md" target="#">edit dep</a></p>
 
-<p><a id="al-ru-dep/det" class="al-dest"></a></p>
-<h2><code>det</code>: determiner</h2>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_ru-dep/dep.md" target="#">edit dep</a>
+</div>
 
-<p>The relation determiner (<code>det</code>) holds between a nominal head and its <a href="ru-pos/DET">determiner</a>.
+<div about="#det_ru" property="rdf:type" resource="#dep_ru">
+	<div property="rdf:type" resource="../../u/dep/all.html#det" />
+	<a id="al-ru-dep/det" class="al-dest" />
+
+	<h2><code property="oliasystem:hasTag" lang="">det</code>: <div property="rdfs:label">determiner</div></h2>
+	<div property="rdfs:comment">
+
+The relation determiner (`det`) holds between a nominal head and its [determiner](ru-pos/DET).
 This relation is used for pronominal adjectival modifiers of noun phrases.
-Non-pronominal adjectives are tagged <a href="">ru-pos/ADJ</a> and the relation is labeled <a href="">amod</a>.</p>
+Non-pronominal adjectives are tagged [ru-pos/ADJ]() and the relation is labeled [amod]().
 
-<pre><code class="language-sdparse">Тот человек уже здесь . \n The man already is-here .
+~~~ sdparse
+Тот человек уже здесь . \n The man already is-here .
 det(человек, Тот)
 det(man, The)
-</code></pre>
+~~~
 
-<pre><code class="language-sdparse">Это моя ошибка . \n This-is my mistake .
+
+~~~ sdparse
+Это моя ошибка . \n This-is my mistake .
 det(ошибка, моя)
 det(mistake, my)
-</code></pre>
+~~~
 
-<pre><code class="language-sdparse">Какая книга тебе нравится больше всего ? \n Which book to-you is-nice most of-all ?
+~~~ sdparse
+Какая книга тебе нравится больше всего ? \n Which book to-you is-nice most of-all ?
 det(книга, Какая)
 det(book, Which)
-</code></pre>
+~~~
 
-<p>NB: The relation of the pronominal quantifiers сколько, столько to their head is a subtype of the <code>det</code> relation:
-either <a href="">ru-dep/det:numgov</a> or <a href="">ru-dep/det:nummod</a>.</p>
+NB: The relation of the pronominal quantifiers сколько, столько to their head is a subtype of the `det` relation:
+either [ru-dep/det:numgov]() or [ru-dep/det:nummod]().
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_ru-dep/det.md" target="#">edit det</a></p>
 
-<p><a id="al-ru-dep/det:numgov" class="al-dest"></a></p>
-<h2><code>det:numgov</code>: pronominal quantifier governing the case of the noun</h2>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_ru-dep/det.md" target="#">edit det</a>
+</div>
 
-<p>Pronominal quantifiers are labeled <code>det:numgov</code> instead of <a href="">det</a>
+<div about="#det%3Anumgov_ru" property="rdf:type" resource="#dep_ru">
+	<div property="rdf:type" resource="../../u/dep/all.html#det" />
+	<a id="al-ru-dep/det:numgov" class="al-dest" />
+
+	<h2><code property="oliasystem:hasTag" lang="">det:numgov</code>: <div property="rdfs:label">pronominal quantifier governing the case of the noun</div></h2>
+	<div property="rdfs:comment">
+
+Pronominal quantifiers are labeled `det:numgov` instead of [det]()
 because they normally do not agree with the quantified noun in case
-(unlike non-quantifying determiners).</p>
+(unlike non-quantifying determiners).
 
-<p>The quantifier requires the counted noun to be in its genitive form.
+The quantifier requires the counted noun to be in its genitive form.
 The whole phrase (quantifier + noun) is treated as a singular neuter noun phrase
-and it can fill roles where nominative, accusative or vocative noun phrases are expected.</p>
+and it can fill roles where nominative, accusative or vocative noun phrases are expected.
 
-<p>In UD the quantifier depends on the quantified noun and the <code>det:numgov</code> label is used to preserve
-the information about case conditions.</p>
+In UD the quantifier depends on the quantified noun and the `det:numgov` label is used to preserve
+the information about case conditions.
 
-<pre><code class="language-sdparse">Сколько мужчин играло в карты ? \n How-many men played cards ?
+~~~ sdparse
+Сколько мужчин играло в карты ? \n How-many men played cards ?
 det:numgov(мужчин, Сколько)
 nsubj(играло, мужчин)
 dobj(играло, карты)
@@ -743,23 +922,31 @@ det:numgov(men, How-many)
 nsubj(played, men)
 dobj(played, cards)
 punct(played, ?-12)
-</code></pre>
+~~~
 
-<p>See <a href="">nummod</a> for a broader discussion of the various situations with quantifiers.</p>
+See [nummod]() for a broader discussion of the various situations with quantifiers.
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_ru-dep/det-numgov.md" target="#">edit det:numgov</a></p>
 
-<p><a id="al-ru-dep/det:nummod" class="al-dest"></a></p>
-<h2><code>det:nummod</code>: pronominal quantifier agreeing in case with the noun</h2>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_ru-dep/det-numgov.md" target="#">edit det:numgov</a>
+</div>
 
-<p>Pronominal quantifiers are labeled <code>det:nummod</code> or <a href="">det:numgov</a> instead of <a href="">det</a>
+<div about="#det%3Anummod_ru" property="rdf:type" resource="#dep_ru">
+	<div property="rdf:type" resource="../../u/dep/all.html#det" />
+	<a id="al-ru-dep/det:nummod" class="al-dest" />
+
+	<h2><code property="oliasystem:hasTag" lang="">det:nummod</code>: <div property="rdfs:label">pronominal quantifier agreeing in case with the noun</div></h2>
+	<div property="rdfs:comment">
+
+Pronominal quantifiers are labeled `det:nummod` or [det:numgov]() instead of [det]()
 because they normally do not agree with the quantified noun in case
 (unlike non-quantifying determiners).
 They do agree only if the whole phrase (quantifier + noun) fills a role where
 genitive, dative, locative or instrumental noun phrases are expected.
-In these situations they are labeled <code>det:nummod</code>.</p>
+In these situations they are labeled `det:nummod`.
 
-<pre><code class="language-sdparse">Не помню , со сколькими мужчинами я играл в карты . \n Not I-remember , with how-many men I played cards .
+~~~ sdparse
+Не помню , со сколькими мужчинами я играл в карты . \n Not I-remember , with how-many men I played cards .
 neg(помню, Не)
 ccomp(помню, играл)
 punct(играл, ,-3)
@@ -779,263 +966,356 @@ iobj(played, men)
 case(men, with)
 det:nummod(men, how-many)
 punct(I-remember, .-22)
-</code></pre>
+~~~
 
-<p>See <a href="">nummod</a> for a broader discussion of the various situations with quantifiers.</p>
+See [nummod]() for a broader discussion of the various situations with quantifiers.
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_ru-dep/det-nummod.md" target="#">edit det:nummod</a></p>
 
-<p><a id="al-ru-dep/discourse" class="al-dest"></a></p>
-<h2><code>discourse</code>: discourse element</h2>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_ru-dep/det-nummod.md" target="#">edit det:nummod</a>
+</div>
 
-<p>At present we use the <code>discourse</code> relation for what is labeled <code>AuxO</code> in the Prague Dependency Treebank:
-redundant or emotional items, redundant coreferential pronoun.</p>
+<div about="#discourse_ru" property="rdf:type" resource="#dep_ru">
+	<div property="rdf:type" resource="../../u/dep/all.html#discourse" />
+	<a id="al-ru-dep/discourse" class="al-dest" />
 
-<pre><code class="language-sdparse">čemu že se to zpronevěřily \n what that themselves it they-betrayed
+	<h2><code property="oliasystem:hasTag" lang="">discourse</code>: <div property="rdfs:label">discourse element</div></h2>
+	<div property="rdfs:comment">
+
+At present we use the `discourse` relation for what is labeled `AuxO` in the Prague Dependency Treebank:
+redundant or emotional items, redundant coreferential pronoun.
+
+~~~ sdparse
+čemu že se to zpronevěřily \n what that themselves it they-betrayed
 discourse(zpronevěřily, to)
 discourse(they-betrayed, it)
-</code></pre>
-<p>(meaning “… what they betrayed”)</p>
+~~~
+(meaning “… what they betrayed”)
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_ru-dep/discourse.md" target="#">edit discourse</a></p>
 
-<p><a id="al-ru-dep/dislocated" class="al-dest"></a></p>
-<h2><code>dislocated</code>: dislocated elements</h2>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_ru-dep/discourse.md" target="#">edit discourse</a>
+</div>
 
-<p>This document is a placeholder for the language-specific documentation
-for <code>dislocated</code>.</p>
+<div about="#dislocated_ru" property="rdf:type" resource="#dep_ru">
+	<div property="rdf:type" resource="../../u/dep/all.html#dislocated" />
+	<a id="al-ru-dep/dislocated" class="al-dest" />
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_ru-dep/dislocated.md" target="#">edit dislocated</a></p>
+	<h2><code property="oliasystem:hasTag" lang="">dislocated</code>: <div property="rdfs:label">dislocated elements</div></h2>
+	<div property="rdfs:comment">
 
-<p><a id="al-ru-dep/dobj" class="al-dest"></a></p>
-<h2><code>dobj</code>: direct object</h2>
+This document is a placeholder for the language-specific documentation
+for `dislocated`.
 
-<p>The direct object of a verb is the noun phrase that denotes the entity acted upon.
-Most often the direct object is in the <a href="cs-feat/Case">accusative case</a> but
+
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_ru-dep/dislocated.md" target="#">edit dislocated</a>
+</div>
+
+<div about="#dobj_ru" property="rdf:type" resource="#dep_ru">
+	<div property="rdf:type" resource="../../u/dep/all.html#dobj" />
+	<a id="al-ru-dep/dobj" class="al-dest" />
+
+	<h2><code property="oliasystem:hasTag" lang="">dobj</code>: <div property="rdfs:label">direct object</div></h2>
+	<div property="rdfs:comment">
+
+The direct object of a verb is the noun phrase that denotes the entity acted upon.
+Most often the direct object is in the [accusative case](cs-feat/Case) but
 there are verbs that require their objects be in other cases (except for
-nominative and vocative).</p>
+nominative and vocative).
 
-<p>Accusative example:</p>
+Accusative example:
 
-<pre><code class="language-sdparse">Я купил машину . \n I have-bought car .
+~~~ sdparse
+Я купил машину . \n I have-bought car .
 dobj(купил, машину)
 dobj(have-bought, car)
-</code></pre>
+~~~
 
-<p>Genitive example:</p>
+Genitive example:
 
-<pre><code class="language-sdparse">Я не боюсь этого . \n I-am not afraid of this .
+~~~ sdparse
+Я не боюсь этого . \n I-am not afraid of this .
 dobj(боюсь, этого)
 dobj(afraid, this)
-</code></pre>
+~~~
 
-<p>Dative example:</p>
+Dative example:
 
-<pre><code class="language-sdparse">Но это не соответствует действительности . \n But this not corresponds to-reality .
+~~~ sdparse
+Но это не соответствует действительности . \n But this not corresponds to-reality .
 dobj(соответствует, действительности)
 dobj(corresponds, to-reality)
-</code></pre>
+~~~
 
-<p>Instrumental example:</p>
+Instrumental example:
 
-<pre><code class="language-sdparse">Президент руководит страной . \n The President rules the country .
+~~~ sdparse
+Президент руководит страной . \n The President rules the country .
 dobj(руководит, страной)
 dobj(rules, country)
-</code></pre>
+~~~
 
-<p>In general, if there is just one object, it should be labeled <code>dobj</code>,
+In general, if there is just one object, it should be labeled `dobj`,
 regardless of the morphological case or semantic role that it bears. If there are two or more
-objects, one of them should be <code>dobj</code> and the others should be
-<a href="">iobj</a>. In such cases it is necessary to decide what is the most
-directly affected object <em>(patient).</em> The one exception is when there is a clausal complement. Then the clausal complement is regarded as a “clausal direct object” and an object nominal will be an iobj.</p>
+objects, one of them should be `dobj` and the others should be
+[iobj](). In such cases it is necessary to decide what is the most
+directly affected object _(patient)._ The one exception is when there is a clausal complement. Then the clausal complement is regarded as a “clausal direct object” and an object nominal will be an iobj.
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_ru-dep/dobj.md" target="#">edit dobj</a></p>
 
-<p><a id="al-ru-dep/expl" class="al-dest"></a></p>
-<h2><code>expl</code>: expletive: reflexive pronoun with an inherently reflexive verb</h2>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_ru-dep/dobj.md" target="#">edit dobj</a>
+</div>
 
-<p>Reflexive pronouns (see the feature <a href="">cs-feat/Reflex</a>) usually replace objects of verbs.
+<div about="#expl_ru" property="rdf:type" resource="#dep_ru">
+	<div property="rdf:type" resource="../../u/dep/all.html#expl" />
+	<a id="al-ru-dep/expl" class="al-dest" />
+
+	<h2><code property="oliasystem:hasTag" lang="">expl</code>: <div property="rdfs:label">expletive: reflexive pronoun with an inherently reflexive verb</div></h2>
+	<div property="rdfs:comment">
+
+Reflexive pronouns (see the feature [cs-feat/Reflex]()) usually replace objects of verbs.
 However, some verbs are inherently reflexive, i.e. the verb always occurs with a reflexive
-prounoun, and the pronoun cannot be replaced by a non-reflexive pronoun.</p>
+prounoun, and the pronoun cannot be replaced by a non-reflexive pronoun.
 
-<p>With these verbs, the reflexive pronoun is attached as <code>expl</code> instead of <a href="">dobj</a>.
-(Note that the <code>expl</code> relation is first used for this purpose in the UD release 1.2,
+With these verbs, the reflexive pronoun is attached as `expl` instead of [dobj]().
+(Note that the `expl` relation is first used for this purpose in the UD release 1.2,
 to increase parallelism with other languages. In the previous releases this usage of
-reflexive <em>se/si</em> was labeled <code>compound:reflex</code>.)</p>
+reflexive _se/si_ was labeled `compound:reflex`.)
 
-<pre><code class="language-sdparse">Martin se bojí zvířat . \n Martin REFLEX fears animals .
+~~~ sdparse
+Martin se bojí zvířat . \n Martin REFLEX fears animals .
 expl(bojí, se)
 expl(fears, REFLEX)
-</code></pre>
+~~~
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_ru-dep/expl.md" target="#">edit expl</a></p>
 
-<p><a id="al-ru-dep/foreign" class="al-dest"></a></p>
-<h2><code>foreign</code>: foreign words</h2>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_ru-dep/expl.md" target="#">edit expl</a>
+</div>
 
-<p>We use <code>foreign</code> to label sequences of foreign words. These are given
-a linear analysis: the head is the first token in the foreign phrase.</p>
+<div about="#foreign_ru" property="rdf:type" resource="#dep_ru">
+	<div property="rdf:type" resource="../../u/dep/all.html#foreign" />
+	<a id="al-ru-dep/foreign" class="al-dest" />
 
-<p><code>foreign</code> does not apply to loanwords or to foreign <a href="name">names</a>. 
+	<h2><code property="oliasystem:hasTag" lang="">foreign</code>: <div property="rdfs:label">foreign words</div></h2>
+	<div property="rdfs:comment">
+
+We use `foreign` to label sequences of foreign words. These are given
+a linear analysis: the head is the first token in the foreign phrase.
+
+`foreign` does not apply to loanwords or to foreign [names](name). 
 It applies to quoted foreign text incorporated in a sentence/discourse
 of the host language (unless we want to and know how to annotate the
-internal structure according to the syntax of the foreign language).</p>
+internal structure according to the syntax of the foreign language).
 
-<pre><code class="language-sdparse">Он придет , когда полетят свиньи ( When pigs fly ) .
+~~~ sdparse
+Он придет , когда полетят свиньи ( When pigs fly ) .
 foreign(When, pigs)
 foreign(When, fly)
-</code></pre>
+~~~
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_ru-dep/foreign.md" target="#">edit foreign</a></p>
 
-<p><a id="al-ru-dep/goeswith" class="al-dest"></a></p>
-<h2><code>goeswith</code>: goes with</h2>
 
-<p>This relation links two parts of a word that are separated in text
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_ru-dep/foreign.md" target="#">edit foreign</a>
+</div>
+
+<div about="#goeswith_ru" property="rdf:type" resource="#dep_ru">
+	<div property="rdf:type" resource="../../u/dep/all.html#goeswith" />
+	<a id="al-ru-dep/goeswith" class="al-dest" />
+
+	<h2><code property="oliasystem:hasTag" lang="">goeswith</code>: <div property="rdfs:label">goes with</div></h2>
+	<div property="rdfs:comment">
+
+This relation links two parts of a word that are separated in text
 that is not well edited.
-The head is in some sense the “main” part, often the second part.</p>
+The head is in some sense the “main” part, often the second part.
 
-<pre><code class="language-sdparse">Он остановился чтобы о тдышаться .
+~~~ sdparse
+Он остановился чтобы о тдышаться .
 goeswith(тдышаться, о)
-</code></pre>
+~~~
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_ru-dep/goeswith.md" target="#">edit goeswith</a></p>
 
-<p><a id="al-ru-dep/iobj" class="al-dest"></a></p>
-<h2><code>iobj</code>: indirect object</h2>
 
-<p>The indirect object of a verb is any nominal phrase that is a core
-argument of the verb but is not its subject or <a href="dobj">direct object</a>.
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_ru-dep/goeswith.md" target="#">edit goeswith</a>
+</div>
+
+<div about="#iobj_ru" property="rdf:type" resource="#dep_ru">
+	<div property="rdf:type" resource="../../u/dep/all.html#iobj" />
+	<a id="al-ru-dep/iobj" class="al-dest" />
+
+	<h2><code property="oliasystem:hasTag" lang="">iobj</code>: <div property="rdfs:label">indirect object</div></h2>
+	<div property="rdfs:comment">
+
+The indirect object of a verb is any nominal phrase that is a core
+argument of the verb but is not its subject or [direct object](dobj).
 The prototypical example is the recipient of ditransitive verbs of
-exchange:</p>
+exchange:
 
-<pre><code class="language-sdparse">Павел дал Петру две груши . \n Pavel gave Peter two pears .
+~~~ sdparse
+Павел дал Петру две груши . \n Pavel gave Peter two pears .
 iobj(дал, Петру)
 iobj(gave, Peter)
-</code></pre>
+~~~
 
-<p>However, Russian allows other semantic roles as additional objects.
-The morphological <a href="">ru-feat/Case</a> of the objects is dictated by verb valency.</p>
+However, Russian allows other semantic roles as additional objects.
+The morphological [ru-feat/Case]() of the objects is dictated by verb valency.
 
-<p>In the following Russian example, the verb takes two arguments. One of them is direct object (patient), the other is indirect (addressee). It is parallel to how the English translation would be annotated (where there is no morphological case marking) and also to verbs of giving (cf. a similar sentence, <em>he gave my daughter a class of maths</em>).</p>
+In the following Russian example, the verb takes two arguments. One of them is direct object (patient), the other is indirect (addressee). It is parallel to how the English translation would be annotated (where there is no morphological case marking) and also to verbs of giving (cf. a similar sentence, _he gave my daughter a class of maths_).
 
-<pre><code class="language-sdparse">Он преподает моей дочери математику . \n He teaches my daughter.Dat maths.Acc .
+~~~ sdparse
+Он преподает моей дочери математику . \n He teaches my daughter.Dat maths.Acc .
 dobj(преподает, математику)
 iobj(преподает, дочери)
 dobj(teaches, maths.Acc)
 iobj(teaches, daughter.Dat)
-</code></pre>
+~~~
 
-<p>In general, if there is just one object, it should be labeled
-<a href="">dobj</a>, regardless of the morphological case or semantic role.
-For example, <em>преподавать</em> “to teach” can take either the subject matter or the recipient as the only object,
-and in both cases it would be analyzed as the <a href="">dobj</a>:</p>
+In general, if there is just one object, it should be labeled
+[dobj](), regardless of the morphological case or semantic role.
+For example, _преподавать_ “to teach” can take either the subject matter or the recipient as the only object,
+and in both cases it would be analyzed as the [dobj]():
 
-<pre><code class="language-sdparse">Он преподает математику . \n He teaches maths .
+~~~ sdparse
+Он преподает математику . \n He teaches maths .
 dobj(преподает, математику)
 dobj(teaches, maths)
-</code></pre>
+~~~
 
-<pre><code class="language-sdparse">Он преподает студентам . \n He teaches students .
+~~~ sdparse
+Он преподает студентам . \n He teaches students .
 dobj(преподает, студентам)
 dobj(teaches, students)
-</code></pre>
+~~~
 
-<p>The one exception is when there is a clausal complement.
+The one exception is when there is a clausal complement.
 Then the clausal complement is regarded as a “clausal direct object” and an object nominal will be an iobj, parallel to
-the simple ditransitive case:</p>
+the simple ditransitive case:
 
-<pre><code class="language-sdparse">Она сказала студентам , что сегодня вечером нужно учиться . \n She told students , that today evening they-needed to-study .
+~~~ sdparse
+Она сказала студентам , что сегодня вечером нужно учиться . \n She told students , that today evening they-needed to-study .
 iobj(сказала, студентам)
 ccomp(сказала, нужно)
 iobj(told, students)
 ccomp(told, they-needed)
-</code></pre>
+~~~
 
-<pre><code class="language-sdparse">Она рассказала студентам свой план . \n She told students her plan .
+~~~ sdparse
+Она рассказала студентам свой план . \n She told students her plan .
 iobj(рассказала, студентам)
 dobj(рассказала, план)
 iobj(told, students)
 dobj(told, plan)
-</code></pre>
+~~~
 
-<p>If there are two or more objects, one of them should be <a href="">dobj</a> and the others should be <code>iobj</code>. In such cases it is necessary to decide what is the most directly affected object <em>(patient)</em>, and the Accusative <a href="">ru-feat/Case</a> has priority over the Dative, Instrumental, and Genitive cases.</p>
+If there are two or more objects, one of them should be [dobj]() and the others should be `iobj`. In such cases it is necessary to decide what is the most directly affected object _(patient)_, and the Accusative [ru-feat/Case]() has priority over the Dative, Instrumental, and Genitive cases.
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_ru-dep/iobj.md" target="#">edit iobj</a></p>
 
-<p><a id="al-ru-dep/list" class="al-dest"></a></p>
-<h2><code>list</code>: list</h2>
 
-<p>The <code>list</code> relation is used for chains of comparable items.
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_ru-dep/iobj.md" target="#">edit iobj</a>
+</div>
+
+<div about="#list_ru" property="rdf:type" resource="#dep_ru">
+	<div property="rdf:type" resource="../../u/dep/all.html#list" />
+	<a id="al-ru-dep/list" class="al-dest" />
+
+	<h2><code property="oliasystem:hasTag" lang="">list</code>: <div property="rdfs:label">list</div></h2>
+	<div property="rdfs:comment">
+
+The `list` relation is used for chains of comparable items.
 In lists with more than two items, all items of the list should modify the first one.
 Informal and web text often contains passages which are meant to be interpreted as lists but are parsed as single sentences.
 Email signatures often contain these structures, in the form of contact information:
-the different contact information items are labeled as <code>list</code>; the key-value pair relations are labeled as <a href="">appos</a>.</p>
+the different contact information items are labeled as `list`; the key-value pair relations are labeled as [appos]().
 
-<p>However, <code>list</code> should not be over-used. If a construction can be easily analyzed
+However, `list` should not be over-used. If a construction can be easily analyzed
 using the grammatical relations of standard sentences, such as when there is overt coordination,
-then it should be analyzed with these more standard relations, even if it is laid out as a list typographically.</p>
+then it should be analyzed with these more standard relations, even if it is laid out as a list typographically.
 
-<pre><code class="language-sdparse">Стив Джонс тел.: 555-9814 e-mail: jones@mail.ru
+~~~ sdparse
+Стив Джонс тел.: 555-9814 e-mail: jones@mail.ru
 name(Стив-1, Джонс-2)
 list(Стив-1, тел.:-3)
 list(Стив-1, e-mail:-5)
 appos(тел.:-3, 555-9814-4)
 appos(e-mail:-5, jones@mail.ru-6)
-</code></pre>
+~~~
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_ru-dep/list.md" target="#">edit list</a></p>
 
-<p><a id="al-ru-dep/mark" class="al-dest"></a></p>
-<h2><code>mark</code>: marker</h2>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_ru-dep/list.md" target="#">edit list</a>
+</div>
 
-<p>A marker is the subordinating conjunction introducing a finite clause subordinate to another clause.
-The mark is a dependent of the subordinate clause head.</p>
+<div about="#mark_ru" property="rdf:type" resource="#dep_ru">
+	<div property="rdf:type" resource="../../u/dep/all.html#mark" />
+	<a id="al-ru-dep/mark" class="al-dest" />
 
-<pre><code class="language-sdparse">Я не знал , что ты говоришь по-немецки . \n I didn't know , that you speak German .
+	<h2><code property="oliasystem:hasTag" lang="">mark</code>: <div property="rdfs:label">marker</div></h2>
+	<div property="rdfs:comment">
+
+A marker is the subordinating conjunction introducing a finite clause subordinate to another clause.
+The mark is a dependent of the subordinate clause head.
+
+~~~ sdparse
+Я не знал , что ты говоришь по-немецки . \n I didn't know , that you speak German .
 mark(говоришь, что)
 mark(speak, that)
-</code></pre>
+~~~
 
-<pre><code class="language-sdparse">Мы отправим товар , как только на наш счет поступят деньги . \n We will-dispatch goods , as soon-as at our account arrive money .
+~~~ sdparse
+Мы отправим товар , как только на наш счет поступят деньги . \n We will-dispatch goods , as soon-as at our account arrive money .
 mark(поступят, как)
 mwe(как, только)
 mark(arrive, as)
 mwe(as, soon-as)
-</code></pre>
+~~~
 
-<p>Note that the subordinating conjunction should not be confused with relative pronouns and adverbs.
+Note that the subordinating conjunction should not be confused with relative pronouns and adverbs.
 These fill a valency slot in the frame of the subordinate predicate,
-and are labeled according to their role in the frame, they are not <code>mark</code>:</p>
+and are labeled according to their role in the frame, they are not `mark`:
 
-<pre><code class="language-sdparse">Я бы хотел узнать , когда нам поступят деньги на счет . \n I would like to-know , when us arrive money at account .
+~~~ sdparse
+Я бы хотел узнать , когда нам поступят деньги на счет . \n I would like to-know , when us arrive money at account .
 advmod(поступят, когда)
 advmod(arrive, when)
-</code></pre>
+~~~
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_ru-dep/mark.md" target="#">edit mark</a></p>
 
-<p><a id="al-ru-dep/mwe" class="al-dest"></a></p>
-<h2><code>mwe</code>: multi-word expression</h2>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_ru-dep/mark.md" target="#">edit mark</a>
+</div>
 
-<p>The multi-word expression (modifier) relation is one of the
+<div about="#mwe_ru" property="rdf:type" resource="#dep_ru">
+	<div property="rdf:type" resource="../../u/dep/all.html#mwe" />
+	<a id="al-ru-dep/mwe" class="al-dest" />
+
+	<h2><code property="oliasystem:hasTag" lang="">mwe</code>: <div property="rdfs:label">multi-word expression</div></h2>
+	<div property="rdfs:comment">
+
+The multi-word expression (modifier) relation is one of the
 relations for compounding and it is intended for function words.
 In Russian it is used for multi-word prepositions.
-The leftmost word is the head and all the other words are attached as its <code>mwe</code> modifiers.</p>
+The leftmost word is the head and all the other words are attached as its `mwe` modifiers.
 
-<pre><code class="language-sdparse">В отличие от тебя , мне нечего стыдиться . \n In contrast to you , I-have nothing to-be-ashamed .
+~~~ sdparse
+В отличие от тебя , мне нечего стыдиться . \n In contrast to you , I-have nothing to-be-ashamed .
 mwe(В, отличие)
 mwe(В, от)
 case(тебя, В)
 mwe(In, contrast)
 mwe(In, to)
 case(you, In)
-</code></pre>
+~~~
 
-<p>Multi-word prepositions usually form a contiguous span of the sentence. In exceptional cases however, they can be interrupted
-by emphasizers and other words:</p>
+Multi-word prepositions usually form a contiguous span of the sentence. In exceptional cases however, they can be interrupted
+by emphasizers and other words:
 
-<pre><code class="language-sdparse">в сравнении , например , с долгом \n in comparison , for-example , to loans
+~~~ sdparse
+в сравнении , например , с долгом \n in comparison , for-example , to loans
 mwe(в, сравнении)
 mwe(в, с)
 case(долгом, в)
@@ -1044,21 +1324,29 @@ mwe(in, comparison)
 mwe(in, to)
 case(loans, in)
 advmod:emph(loans, for-example)
-</code></pre>
+~~~
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_ru-dep/mwe.md" target="#">edit mwe</a></p>
 
-<p><a id="al-ru-dep/name" class="al-dest"></a></p>
-<h2><code>name</code>: name</h2>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_ru-dep/mwe.md" target="#">edit mwe</a>
+</div>
 
-<p><code>name</code> is one of the relations for compounding in UD.
-In Russian it is used to join the first name of a person with the patronymic and the last name.</p>
+<div about="#name_ru" property="rdf:type" resource="#dep_ru">
+	<div property="rdf:type" resource="../../u/dep/all.html#name" />
+	<a id="al-ru-dep/name" class="al-dest" />
 
-<p>The leftmost name is always the head and the other name(s) are attached to it.</p>
+	<h2><code property="oliasystem:hasTag" lang="">name</code>: <div property="rdfs:label">name</div></h2>
+	<div property="rdfs:comment">
 
-<p>The relation is not used to attach adjectives to nouns within multi-word names of places, organizations etc.</p>
+`name` is one of the relations for compounding in UD.
+In Russian it is used to join the first name of a person with the patronymic and the last name.
 
-<pre><code class="language-sdparse">Президент Владимир Владимирович Путин вчера посетил Минеральные Воды . \n President Vladimir Vladimirovich Putin yesterday visited Mineralnye Vody .
+The leftmost name is always the head and the other name(s) are attached to it.
+
+The relation is not used to attach adjectives to nouns within multi-word names of places, organizations etc.
+
+~~~ sdparse
+Президент Владимир Владимирович Путин вчера посетил Минеральные Воды . \n President Vladimir Vladimirovich Putin yesterday visited Mineralnye Vody .
 name(Владимир, Владимирович)
 name(Vladimir, Vladimirovich)
 name(Владимир, Путин)
@@ -1067,85 +1355,107 @@ nmod(Владимир, Президент)
 nmod(Vladimir, President)
 amod(Воды, Минеральные)
 amod(Vody, Mineralnye)
-</code></pre>
+~~~
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_ru-dep/name.md" target="#">edit name</a></p>
 
-<p><a id="al-ru-dep/neg" class="al-dest"></a></p>
-<h2><code>neg</code>: negation modifier</h2>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_ru-dep/name.md" target="#">edit name</a>
+</div>
 
-<p>The negation modifier is the relation between the negation word <em>не</em> and the
-word it modifies.</p>
+<div about="#neg_ru" property="rdf:type" resource="#dep_ru">
+	<div property="rdf:type" resource="../../u/dep/all.html#neg" />
+	<a id="al-ru-dep/neg" class="al-dest" />
 
-<p>Negation in Russian is most of the time expressed using a bound morpheme (the prefix <em>не-</em>).
+	<h2><code property="oliasystem:hasTag" lang="">neg</code>: <div property="rdfs:label">negation modifier</div></h2>
+	<div property="rdfs:comment">
+
+The negation modifier is the relation between the negation word _не_ and the
+word it modifies.
+
+Negation in Russian is most of the time expressed using a bound morpheme (the prefix _не-_).
 Occurrences of the morpheme as a separate word are rare in comparison to other languages,
-yet they exist.</p>
+yet they exist.
 
-<pre><code class="language-sdparse">Она не ест рыбу . \n She not eats fish .
+~~~ sdparse
+Она не ест рыбу . \n She not eats fish .
 neg(ест, не)
 neg(eats, not)
-</code></pre>
+~~~
 
-<pre><code class="language-sdparse">Ему был нужен четвероногий , а не двуногий друг . \n To-him was needed quadrupedal , and not bipedal friend .
+~~~ sdparse
+Ему был нужен четвероногий , а не двуногий друг . \n To-him was needed quadrupedal , and not bipedal friend .
 neg(двуногий, не)
 neg(bipedal, not)
-</code></pre>
+~~~
 
-<p>Note that the negative determiners (pronouns) are attached as <a href="">det</a>, not <code>neg</code>:</p>
+Note that the negative determiners (pronouns) are attached as [det](), not `neg`:
 
-<pre><code class="language-sdparse">Премьер не был никаким дураком . \n The-Prime-Minister not was no fool .
+~~~ sdparse
+Премьер не был никаким дураком . \n The-Prime-Minister not was no fool .
 det(дураком, никаким)
 det(fool, no)
-</code></pre>
+~~~
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_ru-dep/neg.md" target="#">edit neg</a></p>
 
-<p><a id="al-ru-dep/nmod" class="al-dest"></a></p>
-<h2><code>nmod</code>: nominal modifier</h2>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_ru-dep/neg.md" target="#">edit neg</a>
+</div>
 
-<p>The <code>nmod</code> relation is used for nominal modifiers. They depend either
+<div about="#nmod_ru" property="rdf:type" resource="#dep_ru">
+	<div property="rdf:type" resource="../../u/dep/all.html#nmod" />
+	<a id="al-ru-dep/nmod" class="al-dest" />
+
+	<h2><code property="oliasystem:hasTag" lang="">nmod</code>: <div property="rdfs:label">nominal modifier</div></h2>
+	<div property="rdfs:comment">
+
+The `nmod` relation is used for nominal modifiers. They depend either
 on another noun (group “noun dependents”) or on a predicate (group
-“non-core dependents of clausal predicates”).</p>
+“non-core dependents of clausal predicates”).
 
-<p><code>nmod</code> is a <a href="cs-pos/NOUN">noun</a> (or noun phrase) functioning as a
+`nmod` is a [noun](cs-pos/NOUN) (or noun phrase) functioning as a
 non-core (oblique) argument or adjunct.
 This means that it functionally corresponds to an adverbial when it attaches to a verb, adjective or other adverb.
-But when attaching to a noun, it usually corresponds to a non-agreeing attribute in genitive.</p>
+But when attaching to a noun, it usually corresponds to a non-agreeing attribute in genitive. 
 
-<p>In Russian the <code>nmod</code> relation covers only those possessives that are expressed using the genitive.
-If a possessive adjective is used, the relation is labeled <a href="">amod</a>.
-If a possessive determiner (pronoun) is used, the relation is labeled <a href="">det</a>.</p>
+In Russian the `nmod` relation covers only those possessives that are expressed using the genitive.
+If a possessive adjective is used, the relation is labeled [amod]().
+If a possessive determiner (pronoun) is used, the relation is labeled [det]().
 
-<pre><code class="language-sdparse">карта студента \n card of-student
+~~~ sdparse
+карта студента \n card of-student
 nmod(карта, студента)
 nmod(card, of-student)
-</code></pre>
+~~~
 
-<pre><code class="language-sdparse">студенческая карта \n student's card
+~~~ sdparse
+студенческая карта \n student's card
 amod(карта, студенческая)
 amod(card, student's)
-</code></pre>
+~~~
 
-<pre><code class="language-sdparse">его карта \n his card
+~~~ sdparse
+его карта \n his card
 det(карта, его)
 det(card, his)
-</code></pre>
+~~~
 
-<p><code>nmod</code> is also used for temporal nominal modifiers:</p>
+`nmod` is also used for temporal nominal modifiers:
 
-<pre><code class="language-sdparse">Последний раз мы разговаривали зимой . \n Last time we talked in-winter .
+~~~ sdparse
+Последний раз мы разговаривали зимой . \n Last time we talked in-winter .
 nmod(разговаривали, зимой)
 nmod(talked, in-winter)
-</code></pre>
+~~~
 
-<h2 id="agreeing-attribute-of-a-noun">Agreeing attribute of a noun</h2>
+## Agreeing attribute of a noun
 
-<p><code>nmod</code> noun phrases attached to nouns are usually in the genitive <a href="">ru-feat/Case</a> and follow the modified noun.
-However, there is also a different kind of <code>nmod</code> that precedes the modified noun and agrees with it in case and number.
-A typical example is a title attached to a name of a person. The relation is similar to the <a href="">name</a> relation
-that links the first and the last name, but it is not labeled <code>name</code> because the title is not part of the name:</p>
+`nmod` noun phrases attached to nouns are usually in the genitive [ru-feat/Case]() and follow the modified noun.
+However, there is also a different kind of `nmod` that precedes the modified noun and agrees with it in case and number.
+A typical example is a title attached to a name of a person. The relation is similar to the [name]() relation
+that links the first and the last name, but it is not labeled `name` because the title is not part of the name:
 
-<pre><code class="language-sdparse">российский президент Владимир Владимирович Путин \n Russian president Vladimir Vladimirovich Putin
+~~~ sdparse
+российский президент Владимир Владимирович Путин \n Russian president Vladimir Vladimirovich Putin
 amod(президент, российский)
 amod(president, Russian)
 nmod(Владимир, президент)
@@ -1154,117 +1464,145 @@ name(Владимир, Путин)
 name(Vladimir, Putin)
 name(Владимир, Владимирович)
 name(Vladimir, Vladimirovich)
-</code></pre>
+~~~
 
-<p>Note that the same thing can be also expressed using an <a href="appos">apposition</a>.
-In the case of apposition, the title follows the modified name and is separated by a punctuation symbol:</p>
+Note that the same thing can be also expressed using an [apposition](appos).
+In the case of apposition, the title follows the modified name and is separated by a punctuation symbol:
 
-<pre><code class="language-sdparse">Владимир Путин , российский президент
+~~~ sdparse
+Владимир Путин , российский президент
 name(Владимир, Путин)
 punct(президент, ,-3)
 amod(президент, российский)
 appos(Путин, президент)
-</code></pre>
+~~~
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_ru-dep/nmod.md" target="#">edit nmod</a></p>
 
-<p><a id="al-ru-dep/nsubj" class="al-dest"></a></p>
-<h2><code>nsubj</code>: nominal subject</h2>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_ru-dep/nmod.md" target="#">edit nmod</a>
+</div>
 
-<p>A nominal subject is a NP which is the syntactic subject of a clause; in Russian, the phrase is in the Nominative <a href="">Case</a>.
-(See <a href="">csubj</a> for when the subject is clausal. See <a href="">nsubjpass</a> and <a href="">csubjpass</a> for when the subject is not the proto-agent argument due to valence changing operations.)
-The governor of the <code>nsubj</code> relation might not always be a verb: when the verb is a copular verb, the root of the clause is the complement of the copular verb, which can be an adjective or noun.</p>
+<div about="#nsubj_ru" property="rdf:type" resource="#dep_ru">
+	<div property="rdf:type" resource="../../u/dep/all.html#nsubj" />
+	<a id="al-ru-dep/nsubj" class="al-dest" />
 
-<pre><code class="language-sdparse">Ленинградскую симфонию написал Шостакович . \n Leningrad Symphony wrote Shostakovich .
+	<h2><code property="oliasystem:hasTag" lang="">nsubj</code>: <div property="rdfs:label">nominal subject</div></h2>
+	<div property="rdfs:comment">
+
+A nominal subject is a NP which is the syntactic subject of a clause; in Russian, the phrase is in the Nominative [Case]().
+(See [csubj]() for when the subject is clausal. See [nsubjpass]() and [csubjpass]() for when the subject is not the proto-agent argument due to valence changing operations.)
+The governor of the `nsubj` relation might not always be a verb: when the verb is a copular verb, the root of the clause is the complement of the copular verb, which can be an adjective or noun.
+
+~~~ sdparse
+Ленинградскую симфонию написал Шостакович . \n Leningrad Symphony wrote Shostakovich .
 nsubj(написал, Шостакович)
 nsubj(wrote, Shostakovich)
-</code></pre>
+~~~
 
-<pre><code class="language-sdparse">Автомобиль красный . \n Car is-red .
+~~~ sdparse
+Автомобиль красный . \n Car is-red .
 nsubj(красный, Автомобиль)
 nsubj(is-red, Car)
-</code></pre>
+~~~
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_ru-dep/nsubj.md" target="#">edit nsubj</a></p>
 
-<p><a id="al-ru-dep/nsubjpass" class="al-dest"></a></p>
-<h2><code>nsubjpass</code>: passive nominal subject</h2>
 
-<p>A passive nominal subject is a noun phrase which is the syntactic
-subject of a passive clause.</p>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_ru-dep/nsubj.md" target="#">edit nsubj</a>
+</div>
 
-<pre><code class="language-sdparse">Шварценберг был побеждён Земаном . \n Schwarzenberg was defeated by-Zeman .
+<div about="#nsubjpass_ru" property="rdf:type" resource="#dep_ru">
+	<div property="rdf:type" resource="../../u/dep/all.html#nsubjpass" />
+	<a id="al-ru-dep/nsubjpass" class="al-dest" />
+
+	<h2><code property="oliasystem:hasTag" lang="">nsubjpass</code>: <div property="rdfs:label">passive nominal subject</div></h2>
+	<div property="rdfs:comment">
+
+A passive nominal subject is a noun phrase which is the syntactic
+subject of a passive clause.
+
+~~~ sdparse
+Шварценберг был побеждён Земаном . \n Schwarzenberg was defeated by-Zeman .
 nsubjpass(побеждён, Шварценберг)
 nsubjpass(defeated, Schwarzenberg)
-</code></pre>
+~~~
 
-<p>Reflexive passive (the meaning is “This will be solved tomorrow.”)</p>
+Reflexive passive (the meaning is “This will be solved tomorrow.”)
 
-<pre><code class="language-sdparse">Это решится завтра . \n This will-be-solved tomorrow .
+~~~ sdparse
+Это решится завтра . \n This will-be-solved tomorrow .
 nsubjpass(решится, Это)
 nsubjpass(will-be-solved, This)
-</code></pre>
+~~~
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_ru-dep/nsubjpass.md" target="#">edit nsubjpass</a></p>
 
-<p><a id="al-ru-dep/nummod" class="al-dest"></a></p>
-<h2><code>nummod</code>: numeric modifier</h2>
 
-<p>A numeric modifier of a noun is any <a href="ru-pos/NUM">number</a> phrase
-that serves to modify the meaning of the noun with a quantity.</p>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_ru-dep/nsubjpass.md" target="#">edit nsubjpass</a>
+</div>
 
-<pre><code class="language-sdparse">Ян съел три стейка . \n Jan ate three steaks .
+<div about="#nummod_ru" property="rdf:type" resource="#dep_ru">
+	<div property="rdf:type" resource="../../u/dep/all.html#nummod" />
+	<a id="al-ru-dep/nummod" class="al-dest" />
+
+	<h2><code property="oliasystem:hasTag" lang="">nummod</code>: <div property="rdfs:label">numeric modifier</div></h2>
+	<div property="rdfs:comment">
+
+A numeric modifier of a noun is any [number](ru-pos/NUM) phrase
+that serves to modify the meaning of the noun with a quantity.
+
+~~~ sdparse
+Ян съел три стейка . \n Jan ate three steaks .
 nummod(стейка, три)
 nummod(steaks, three)
-</code></pre>
+~~~
 
-<h2 id="agreement-and-government-with-russian-quantifiers">Agreement and government with Russian quantifiers</h2>
 
-<p>The morphological and syntactic behavior of Russian numerals is a complex matter.
-Small cardinal numerals <em>один</em> “one”, <em>два</em> “two”, <em>три</em> “three” and <em>четыре</em> “four” agree with the counted
-noun in case (<em>один</em> also agrees in gender and number;
-<em>два</em> also agrees in gender).
+
+## Agreement and government with Russian quantifiers
+
+The morphological and syntactic behavior of Russian numerals is a complex matter.
+Small cardinal numerals _один_ “one”, _два_ “two”, _три_ “three” and _четыре_ “four” agree with the counted
+noun in case (_один_ also agrees in gender and number;
+_два_ also agrees in gender).
 They behave as if they modify the counted noun; they are similar to adjectives in this respect.
-Examples:</p>
+Examples:
 
-<ul>
-  <li><em><b>Один</b> мужчина спал, <b>два</b> мужчины играли в карты.</em> “One man slept, two men played cards.”</li>
-  <li><em><b>Одна</b> женщина спала, <b>две</b> женщины играли в карты.</em> “One woman slept, two women played cards.”</li>
-  <li><em><b>Одно</b> чудовище спало, <b>два</b> чудовища играли в карты.</em> “One monster slept, two monsters played cards.”</li>
-</ul>
+- _<b>Один</b> мужчина спал, <b>два</b> мужчины играли в карты._ “One man slept, two men played cards.”
+- _<b>Одна</b> женщина спала, <b>две</b> женщины играли в карты._ “One woman slept, two women played cards.”
+- _<b>Одно</b> чудовище спало, <b>два</b> чудовища играли в карты._ “One monster slept, two monsters played cards.”
 
-<p>It is straightforward to convert such dependencies to <code>nummod</code>:</p>
+It is straightforward to convert such dependencies to `nummod`:
 
-<pre><code class="language-sdparse">Одно чудовище спало . \n One monster slept .
+~~~ sdparse
+Одно чудовище спало . \n One monster slept .
 nummod(чудовище, Одно)
 nsubj(спало, чудовище)
 punct(спало, .-4)
 nummod(monster, One)
 nsubj(slept, monster)
 punct(slept, .-9)
-</code></pre>
+~~~
 
-<p>Larger cardinals behave differently.
+Larger cardinals behave differently.
 They require that the counted noun be in the genitive case; this indicates that they actually govern the noun.
 Such constructions are parallel to nouns modified by other noun phrases in genitive.
 The whole phrase (numeral + counted noun) behaves as a noun phrase in neuter gender and singular number
-(which is important for subject-verb agreement).</p>
+(which is important for subject-verb agreement).
 
-<ul>
-  <li><em><b>Пять</b> мужчин играло в карты.</em> “Five men played cards.”</li>
-  <li><em>Группа мужчин играла в карты.</em> “A group of men played cards.”</li>
-</ul>
+- _<b>Пять</b> мужчин играло в карты._ “Five men played cards.”
+- _Группа мужчин играла в карты._ “A group of men played cards.”
 
-<p>One could argue that <em>пять мужчин</em> is parallel to <em>группа мужчин</em> and that <em>мужчин</em> should be <a href="">nmod</a> of <em>пять</em>.
+One could argue that _пять мужчин_ is parallel to _группа мужчин_ and that _мужчин_ should be [nmod]() of _пять_.
 There are both advantages and drawbacks to such a solution.
 On the one hand, it reflects well the agreement in case, gender and number.
 On the other hand, it is confusing that there are two different analyses of counted noun constructions,
-depending on the numeric value.</p>
+depending on the numeric value.
 
-<p>Moreover, the numeral does not govern the noun in all morphological cases.
+Moreover, the numeral does not govern the noun in all morphological cases.
 The following table shows the case of the whole phrase (numeral + noun; first column)
 and the consequences for the case of the parts (note that these numerals have only
-three distinct morphological forms, resulting in homonymy).</p>
+three distinct morphological forms, resulting in homonymy).
 
 <table>
 <tr><th>Phrase Case</th><th>Example</th><th>Numeral Case</th><th>Noun Case</th></tr>
@@ -1277,27 +1615,25 @@ three distinct morphological forms, resulting in homonymy).</p>
 <tr><td>Ins</td><td>пятью мужчинами</td>  <td>Ins</td><td>Ins</td></tr>
 </table>
 
-<p>We can say that the noun has the case of the whole phrase if it is dative, locative or instrumental.
+We can say that the noun has the case of the whole phrase if it is dative, locative or instrumental.
 The numeral then agrees with the noun in case.
 The numeral forces the noun to the genitive case if the whole phrase is nominative, accusative or vocative
 (but the vocative usage is rather hypothetical).
 In genitive, the noun and the numeral agree with each other; but note that the numeral uses its
-inflected form, as in the other cases where it agrees with the noun.</p>
+inflected form, as in the other cases where it agrees with the noun.
 
-<p>Pronominal quantifiers behave as high-value numerals and govern the quantifed nouns:</p>
+Pronominal quantifiers behave as high-value numerals and govern the quantifed nouns:
 
-<ul>
-  <li><em><b>Сколько</b> мужчин играло в карты?</em> “How many men played cards?”</li>
-  <li><em><b>Несколько</b> (<b>много</b>, <b>мало</b>) мужчин играло в карты.</em> “Several (many, few) men played cards.”</li>
-  <li><em><b>Столько</b> мужчин, играющих в карты, я никогда не видел.</em> “I have never seen so many men playing cards.”</li>
-</ul>
+- _<b>Сколько</b> мужчин играло в карты?_ “How many men played cards?”
+- _<b>Несколько</b> (<b>много</b>, <b>мало</b>) мужчин играло в карты._ “Several (many, few) men played cards.”
+- _<b>Столько</b> мужчин, играющих в карты, я никогда не видел._ “I have never seen so many men playing cards.”
 
-<p>The UD conversion uses a structure that is parallel among all the above cases,
+The UD conversion uses a structure that is parallel among all the above cases,
 and also with universal dependencies in other languages.
 The counted noun is always the head and the numeral is always attached as its modifier.
 Nevertheless, we use different relation labels to mark situations where the numeral (or quantifier)
 actually governs the morphological case of the noun.
-There are four labels used:</p>
+There are four labels used:
 
 <table>
 <tr><td></td><td><strong>Numeric</strong></td><td><strong>Pronominal</strong></td></tr>
@@ -1305,7 +1641,8 @@ There are four labels used:</p>
 <tr><td><strong>Numeral governs</strong></td><td><tt><a href="nummod-gov.html">nummod:gov</a></tt></td><td><tt><a href="det-numgov.html">det:numgov</a></tt></td></tr>
 </table>
 
-<pre><code class="language-sdparse">Три мужчины играли в карты . \n Three men played cards .
+~~~ sdparse
+Три мужчины играли в карты . \n Three men played cards .
 nummod(мужчины, Три)
 nsubj(играли, мужчины)
 dobj(играли, карты)
@@ -1315,9 +1652,10 @@ nummod(men, Three)
 nsubj(played, men)
 dobj(played, cards)
 punct(played, .-12)
-</code></pre>
+~~~
 
-<pre><code class="language-sdparse">Пять мужчин играло в карты . \n Five men played cards .
+~~~ sdparse
+Пять мужчин играло в карты . \n Five men played cards .
 nummod:gov(мужчин, Пять)
 nsubj(играло, мужчин)
 dobj(играло, карты)
@@ -1327,9 +1665,10 @@ nummod:gov(men, Five)
 nsubj(played, men)
 dobj(played, cards)
 punct(played, .-12)
-</code></pre>
+~~~
 
-<pre><code class="language-sdparse">Сколько мужчин играло в карты ? \n How-many men played cards ?
+~~~ sdparse
+Сколько мужчин играло в карты ? \n How-many men played cards ?
 det:numgov(мужчин, Сколько)
 nsubj(играло, мужчин)
 dobj(играло, карты)
@@ -1339,9 +1678,10 @@ det:numgov(men, How-many)
 nsubj(played, men)
 dobj(played, cards)
 punct(played, ?-12)
-</code></pre>
+~~~
 
-<pre><code class="language-sdparse">Играл я в карты с пятью мужчинами . \n Played I cards with five men .
+~~~ sdparse
+Играл я в карты с пятью мужчинами . \n Played I cards with five men .
 nsubj(Играл, я)
 dobj(Играл, карты)
 case(карты, в)
@@ -1355,9 +1695,10 @@ iobj(Played, men)
 case(men, with)
 nummod(men, five)
 punct(Played, .-16)
-</code></pre>
+~~~
 
-<pre><code class="language-sdparse">Не помню , со сколькими мужчинами я играл в карты . \n Not I-remember , with how-many men I played cards .
+~~~ sdparse
+Не помню , со сколькими мужчинами я играл в карты . \n Not I-remember , with how-many men I played cards .
 neg(помню, Не)
 ccomp(помню, играл)
 punct(играл, ,-3)
@@ -1377,61 +1718,68 @@ iobj(played, men)
 case(men, with)
 det:nummod(men, how-many)
 punct(I-remember, .-22)
-</code></pre>
+~~~
 
-<h2 id="additional-remarks">Additional remarks</h2>
 
-<p>In the typical case, million is tagged as a <a href="ru-pos/NOUN">NOUN</a> in genitive, it is preceded by a smaller number,
-and it is not followed by smaller numerals (as it is in <em>million five hundred thousand</em>).
-It is followed by the counted noun and gets the following analysis:</p>
 
-<pre><code class="language-sdparse">50 миллионов крон \n 50 millions of-crowns
+## Additional remarks
+
+In the typical case, million is tagged as a [NOUN](ru-pos/NOUN) in genitive, it is preceded by a smaller number,
+and it is not followed by smaller numerals (as it is in _million five hundred thousand_).
+It is followed by the counted noun and gets the following analysis:
+
+~~~ sdparse
+50 миллионов крон \n 50 millions of-crowns
 nummod:gov(миллионов, 50-1)
 nummod:gov(millions, 50-5)
 nmod(миллионов, крон)
 nmod(millions, of-crowns)
-</code></pre>
+~~~
 
-<p>On the other hand the word <em>тысяча</em> “thousand” may be a noun
-(<em>на площади были тысячи людей</em> “there were thousands of people in the square”)
-or a numeral:</p>
+On the other hand the word _тысяча_ “thousand” may be a noun
+(_на площади были тысячи людей_ “there were thousands of people in the square”)
+or a numeral:
 
-<pre><code class="language-sdparse">максимум 50 тысяч крон \n at-most 50 thousand crowns
+~~~ sdparse
+максимум 50 тысяч крон \n at-most 50 thousand crowns
 advmod:emph(крон, максимум)
 nummod:gov(крон, тысяч)
 compound(тысяч, 50-2)
 advmod:emph(crowns, at-most)
 nummod:gov(crowns, thousand)
 compound(thousand, 50-7)
-</code></pre>
+~~~
 
-<p>Note that the two numeral words in the above example are joined using the <a href="">compound</a> relation.
-Also note that the <a href="advmod:emph">intensifier</a> <em>максимум</em> is attached to the head of the phrase <em>(крон)</em> and not to the number.</p>
+Note that the two numeral words in the above example are joined using the [compound]() relation.
+Also note that the [intensifier](advmod:emph) _максимум_ is attached to the head of the phrase _(крон)_ and not to the number.
 
-<p>Similarly there may be other nodes (such as punctuation) that are attached to the head of the phrase
-and they are related to the whole phrase rather than directly to the head noun:</p>
+Similarly there may be other nodes (such as punctuation) that are attached to the head of the phrase
+and they are related to the whole phrase rather than directly to the head noun:
 
-<pre><code class="language-sdparse">( 9 дней ) \n ( 9 days )
+~~~ sdparse
+( 9 дней ) \n ( 9 days )
 punct(дней, (-1)
 nummod:gov(дней, 9-2)
 punct(дней, )-4)
 punct(days, (-6)
 nummod:gov(days, 9-7)
 punct(days, )-9)
-</code></pre>
+~~~
 
-<pre><code class="language-sdparse">5 минут с установкой \n 5 minutes including adjustment
+~~~ sdparse
+5 минут с установкой \n 5 minutes including adjustment
 nummod:gov(минут, 5-1)
 nmod(минут, установкой)
 case(установкой, с)
 nummod:gov(minutes, 5-6)
 nmod(minutes, adjustment)
 case(adjustment, including)
-</code></pre>
+~~~
 
-<h2 id="dates">Dates</h2>
+## Dates
 
-<pre><code class="language-sdparse">Директор предложил расформировать персонал к 31 . 12 . \n Director proposed to-disband the-staff towards 31 st December .
+~~~ sdparse
+Директор предложил расформировать персонал к 31 . 12 . \n Director proposed to-disband the-staff towards 31 st December .
 advmod(расформировать, 12)
 case(12, к)
 punct(12, .-9)
@@ -1442,35 +1790,44 @@ case(December, towards)
 punct(December, .-19)
 nummod(December, 31-16)
 punct(31-16, st)
-</code></pre>
+~~~
 
-<h2 id="numbered-objects">Numbered objects</h2>
+## Numbered objects
 
-<p>House number in address is attached as <code>nummod</code> to the name of the street:</p>
+House number in address is attached as `nummod` to the name of the street:
 
-<pre><code class="language-sdparse">в доме на Тверской 12 \n in the-house at Tverskaya 12
+~~~ sdparse
+в доме на Тверской 12 \n in the-house at Tverskaya 12
 nmod(доме, Тверской-4)
 case(Тверской-4, на-3)
 nummod(Тверской-4, 12-5)
 nmod(the-house, Tverskaya)
 case(Tverskaya, at)
 nummod(Tverskaya, 12-11)
-</code></pre>
+~~~
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_ru-dep/nummod.md" target="#">edit nummod</a></p>
 
-<p><a id="al-ru-dep/nummod:gov" class="al-dest"></a></p>
-<h2><code>nummod:gov</code>: numeric modifier governing the case of the noun</h2>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_ru-dep/nummod.md" target="#">edit nummod</a>
+</div>
 
-<p><code>nummod:gov</code> differs from <a href="">nummod</a>
+<div about="#nummod%3Agov_ru" property="rdf:type" resource="#dep_ru">
+	<div property="rdf:type" resource="../../u/dep/all.html#nummod" />
+	<a id="al-ru-dep/nummod:gov" class="al-dest" />
+
+	<h2><code property="oliasystem:hasTag" lang="">nummod:gov</code>: <div property="rdfs:label">numeric modifier governing the case of the noun</div></h2>
+	<div property="rdfs:comment">
+
+`nummod:gov` differs from [nummod]()
 in that the numeral requires the counted noun to be in its genitive form.
 The whole phrase (numeral + noun) is treated as a singular neuter noun phrase
-and it can fill roles where nominative, accusative or vocative noun phrases are expected.</p>
+and it can fill roles where nominative, accusative or vocative noun phrases are expected.
 
-<p>In UD the numeral is annotated as dependent of the noun and the <code>nummod:gov</code> label is used to preserve
-the information about case conditions.</p>
+In UD the numeral is annotated as dependent of the noun and the `nummod:gov` label is used to preserve
+the information about case conditions.
 
-<pre><code class="language-sdparse">Пять мужчин играло в карты . \n Five men played cards .
+~~~ sdparse
+Пять мужчин играло в карты . \n Five men played cards .
 nummod:gov(мужчин, Пять)
 nsubj(играло, мужчин)
 dobj(играло, карты)
@@ -1480,95 +1837,115 @@ nummod:gov(men, Five)
 nsubj(played, men)
 dobj(played, cards)
 punct(played, .-12)
-</code></pre>
+~~~
 
-<p>See <a href="">nummod</a> for a broader discussion of the various situations with quantifiers.</p>
+See [nummod]() for a broader discussion of the various situations with quantifiers.
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_ru-dep/nummod-gov.md" target="#">edit nummod:gov</a></p>
 
-<p><a id="al-ru-dep/parataxis" class="al-dest"></a></p>
-<h2><code>parataxis</code>: parataxis</h2>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_ru-dep/nummod-gov.md" target="#">edit nummod:gov</a>
+</div>
 
-<p>The parataxis relation (from Greek for “place side by side”) is a
+<div about="#parataxis_ru" property="rdf:type" resource="#dep_ru">
+	<div property="rdf:type" resource="../../u/dep/all.html#parataxis" />
+	<a id="al-ru-dep/parataxis" class="al-dest" />
+
+	<h2><code property="oliasystem:hasTag" lang="">parataxis</code>: <div property="rdfs:label">parataxis</div></h2>
+	<div property="rdfs:comment">
+
+The parataxis relation (from Greek for “place side by side”) is a
 relation between a word (often the main predicate of a sentence) and other
 elements, such as a sentential parenthetical or a clause after a “:” or
 a “;”, placed side by side without any explicit
-coordination, subordination, or argument relation with the head word. Parataxis is a discourse-like equivalent of coordination, and so usually obeys an iconic ordering. Hence it is normal for the first part of a sentence to be the head and the second part to be the parataxis dependent, regardless of the headedness properties of the language.  But things do get more complicated, such as cases of parentheticals, which appear medially.</p>
+coordination, subordination, or argument relation with the head word. Parataxis is a discourse-like equivalent of coordination, and so usually obeys an iconic ordering. Hence it is normal for the first part of a sentence to be the head and the second part to be the parataxis dependent, regardless of the headedness properties of the language.  But things do get more complicated, such as cases of parentheticals, which appear medially.
 
-<h2 id="an-inventory-of-constructions-to-which-parataxis-has-been-applied">An inventory of constructions to which parataxis has been applied</h2>
+## An inventory of constructions to which parataxis has been applied
 
-<h3 id="treatment-of-reported-speech">Treatment of reported speech</h3>
+### Treatment of reported speech
 
-<p>For this reported speech example:</p>
+For this reported speech example:
 
-<pre><code class="language-sdparse">Тот парень , сказал Вася , ушёл рано утром  . \n The guy , said Vasya , left early in-the-morning .
+~~~ sdparse
+Тот парень , сказал Вася , ушёл рано утром  . \n The guy , said Vasya , left early in-the-morning .
 parataxis(ушёл, сказал)
 parataxis(left, said)
-</code></pre>
+~~~
 
-<p>There are paraphrases that convey essentially the same meaning but with a different syntactic structure. When the reported speech is embedded in a subordinate clause (with or without an overt complementizer <em>что</em> “that”), the subordinate clause is a <a href="">ccomp</a> of the speech verb. When the reported speech follows the speech verb and is separated by a colon, the reported speech forms a main clause that attaches to the preceding main clause with a <a href="">parataxis</a> relation, hence with the speech verb as its head.
-However, when the speech verb occurs as a medial or final parenthetical, the relation is reversed and the speech verb is treated as a <a href="">parataxis</a> of the reported speech. 
+There are paraphrases that convey essentially the same meaning but with a different syntactic structure. When the reported speech is embedded in a subordinate clause (with or without an overt complementizer _что_ “that”), the subordinate clause is a [ccomp]() of the speech verb. When the reported speech follows the speech verb and is separated by a colon, the reported speech forms a main clause that attaches to the preceding main clause with a [parataxis]() relation, hence with the speech verb as its head.
+However, when the speech verb occurs as a medial or final parenthetical, the relation is reversed and the speech verb is treated as a [parataxis]() of the reported speech. 
 This analysis is not uncontroversial but follows many authorities, such as Huddleston and Pullum (2002),
-<em>The Cambridge Grammar of the English Language</em> (see chapter 11, section 9).</p>
+_The Cambridge Grammar of the English Language_ (see chapter 11, section 9). 
 
-<pre><code class="language-sdparse">Вася сказал , что тот парень ушёл рано утром . \n Vasya said , that the guy left early in-the-morning .
+~~~ sdparse
+Вася сказал , что тот парень ушёл рано утром . \n Vasya said , that the guy left early in-the-morning .
 ccomp(сказал, ушёл)
 ccomp(said, left)
-</code></pre>
+~~~
 
-<pre><code class="language-sdparse">Вася сказал : " Тот парень ушёл рано утром . " \n Vasya said : " The guy left early in-the-morning . "
+~~~ sdparse
+Вася сказал : " Тот парень ушёл рано утром . " \n Vasya said : " The guy left early in-the-morning . "
 parataxis(сказал, ушёл)
 parataxis(said, left)
-</code></pre>
+~~~
 
-<pre><code class="language-sdparse">" Тот парень ушёл рано утром , " сказал Вася . \n " The guy left early in-the-morning , " said Vasya .
+~~~ sdparse
+" Тот парень ушёл рано утром , " сказал Вася . \n " The guy left early in-the-morning , " said Vasya .
 parataxis(ушёл, сказал)
 parataxis(left, said)
-</code></pre>
+~~~
 
-<pre><code class="language-sdparse">" Тот парень , " — сказал Вася , — " ушёл рано утром . " \n " The guy , " — said Vasya , — " left early in-the-morning . "
+~~~ sdparse
+" Тот парень , " — сказал Вася , — " ушёл рано утром . " \n " The guy , " — said Vasya , — " left early in-the-morning . "
 parataxis(ушёл, сказал)
 parataxis(left, said)
-</code></pre>
+~~~
 
-<p>An argument for this analysis is that in the cases analyzed as embedding, the entire clause can be further embedded 
-(<em>I was taken aback when John said the guy left early in the morning.</em>),
+An argument for this analysis is that in the cases analyzed as embedding, the entire clause can be further embedded 
+(_I was taken aback when John said the guy left early in the morning._),
 while this is not possible with medial or final placement of the speech verb 
-(<em>*I was taken aback when the guy left early this morning, John said.</em>).</p>
+(_*I was taken aback when the guy left early this morning, John said._).
 
-<h3 id="news-article-bylines">News article bylines</h3>
+### News article bylines
 
-<p>The <code>parataxis</code> relation should be used to connect the parts of a news article byline.
-There does not seem to be a better relation to use.</p>
+The `parataxis` relation should be used to connect the parts of a news article byline.
+There does not seem to be a better relation to use.
 
-<pre><code class="language-sdparse">Вашингтон ( CNN ) :
+~~~ sdparse
+Вашингтон ( CNN ) :
 parataxis(Вашингтон, CNN)
-</code></pre>
+~~~
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_ru-dep/parataxis.md" target="#">edit parataxis</a></p>
 
-<p><a id="al-ru-dep/punct" class="al-dest"></a></p>
-<h2><code>punct</code>: punctuation</h2>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_ru-dep/parataxis.md" target="#">edit parataxis</a>
+</div>
 
-<p>This is used for any piece of punctuation in a clause.</p>
+<div about="#punct_ru" property="rdf:type" resource="#dep_ru">
+	<div property="rdf:type" resource="../../u/dep/all.html#punct" />
+	<a id="al-ru-dep/punct" class="al-dest" />
 
-<pre><code class="language-sdparse">Иди домой ! \n Go home !
+	<h2><code property="oliasystem:hasTag" lang="">punct</code>: <div property="rdfs:label">punctuation</div></h2>
+	<div property="rdfs:comment">
+
+This is used for any piece of punctuation in a clause.
+
+~~~ sdparse
+Иди домой ! \n Go home !
 punct(Иди, !-3)
 punct(Go, !-7)
-</code></pre>
+~~~
 
-<p>Tokens with the relation <code>punct</code> always attach to content words (except in cases of ellipsis) and can never have dependents.
-Since <code>punct</code> is not a normal dependency relation, the usual criteria for determining the head word do not apply. 
-Instead, we use the following principles:</p>
+Tokens with the relation `punct` always attach to content words (except in cases of ellipsis) and can never have dependents.
+Since `punct` is not a normal dependency relation, the usual criteria for determining the head word do not apply. 
+Instead, we use the following principles:
 
-<ol>
-  <li>A punctuation mark separating coordinated units is attached to the first conjunct.</li>
-  <li>A punctuation mark preceding or following a subordinated unit is attached to this unit.</li>
-  <li>Within the relevant unit, a punctuation mark is attached at the highest possible node that preserves projectivity.</li>
-  <li>Paired punctuation marks (quotes and brackets) should be attached to the same word unless that would create non-projectivity. This word is usually the head of the phrase enclosed in the paired punctuation.</li>
-</ol>
+1. A punctuation mark separating coordinated units is attached to the first conjunct.
+2. A punctuation mark preceding or following a subordinated unit is attached to this unit.
+3. Within the relevant unit, a punctuation mark is attached at the highest possible node that preserves projectivity.
+4. Paired punctuation marks (quotes and brackets) should be attached to the same word unless that would create non-projectivity. This word is usually the head of the phrase enclosed in the paired punctuation.
 
-<pre><code class="language-sdparse">Мы покупаем яблоки , груши , апельсины и бананы . \n We buy apples , pears , oranges and bananas .
+~~~ sdparse
+Мы покупаем яблоки , груши , апельсины и бананы . \n We buy apples , pears , oranges and bananas .
 dobj(покупаем, яблоки)
 dobj(buy, apples)
 conj(яблоки, груши)
@@ -1583,18 +1960,20 @@ punct(яблоки, ,-4)
 punct(яблоки, ,-6)
 punct(apples, ,-15)
 punct(apples, ,-17)
-</code></pre>
+~~~
 
-<pre><code class="language-sdparse">Мужчина , которого ты вчера видел , пришёл снова . \n Man , whom you-have yesterday seen , came again .
+~~~ sdparse
+Мужчина , которого ты вчера видел , пришёл снова . \n Man , whom you-have yesterday seen , came again .
 punct(видел, ,-2)
 punct(seen, ,-13)
 punct(видел, ,-7)
 punct(seen, ,-18)
 punct(пришёл, .-10)
 punct(came, .-21)
-</code></pre>
+~~~
 
-<pre><code class="language-sdparse">Аббревиатура напр . означает " например " . \n The-abbreviation eg . means " for-example " .
+~~~ sdparse
+Аббревиатура напр . означает " например " . \n The-abbreviation eg . means " for-example " .
 punct(напр, .-3)
 punct(eg, .-12)
 punct(например, "-5)
@@ -1603,18 +1982,26 @@ punct(например, "-7)
 punct(for-example, "-16)
 punct(означает, .-8)
 punct(means, .-17)
-</code></pre>
+~~~
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_ru-dep/punct.md" target="#">edit punct</a></p>
 
-<p><a id="al-ru-dep/remnant" class="al-dest"></a></p>
-<h2><code>remnant</code>: remnant in ellipsis</h2>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_ru-dep/punct.md" target="#">edit punct</a>
+</div>
 
-<p>The <code>remnant</code> relation is used to provide a satisfactory treatment of certain instances of
+<div about="#remnant_ru" property="rdf:type" resource="#dep_ru">
+	<div property="rdf:type" resource="../../u/dep/all.html#remnant" />
+	<a id="al-ru-dep/remnant" class="al-dest" />
+
+	<h2><code property="oliasystem:hasTag" lang="">remnant</code>: <div property="rdfs:label">remnant in ellipsis</div></h2>
+	<div property="rdfs:comment">
+
+The `remnant` relation is used to provide a satisfactory treatment of certain instances of
 ellipsis (in the case of gapping and stripping, where a predicational or verbal
-head gets elided).</p>
+head gets elided).
 
-<pre><code class="language-sdparse">Павел заказал говядину , а Мария свинину . \n Pavel  ordered beef and Maria pork .
+~~~ sdparse
+Павел заказал говядину , а Мария свинину . \n Pavel  ordered beef and Maria pork .
 nsubj(заказал, Павел)
 nsubj(ordered, Pavel)
 dobj(заказал, говядину)
@@ -1623,47 +2010,65 @@ remnant(Павел, Мария)
 remnant(Pavel, Maria)
 remnant(говядину, свинину)
 remnant(beef, pork)
-</code></pre>
+~~~
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_ru-dep/remnant.md" target="#">edit remnant</a></p>
 
-<p><a id="al-ru-dep/reparandum" class="al-dest"></a></p>
-<h2><code>reparandum</code>: overridden disfluency</h2>
 
-<p>We use <code>reparandum</code> to indicate disfluencies overridden in a speech
-repair. The disfluency is the dependent of the repair.</p>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_ru-dep/remnant.md" target="#">edit remnant</a>
+</div>
 
-<pre><code class="language-sdparse">Идите напра- налево . \n Go to-the-righ- to-the-left .
+<div about="#reparandum_ru" property="rdf:type" resource="#dep_ru">
+	<div property="rdf:type" resource="../../u/dep/all.html#reparandum" />
+	<a id="al-ru-dep/reparandum" class="al-dest" />
+
+	<h2><code property="oliasystem:hasTag" lang="">reparandum</code>: <div property="rdfs:label">overridden disfluency</div></h2>
+	<div property="rdfs:comment">
+
+We use `reparandum` to indicate disfluencies overridden in a speech
+repair. The disfluency is the dependent of the repair.
+
+~~~ sdparse
+Идите напра- налево . \n Go to-the-righ- to-the-left .
 reparandum(налево, напра-)
 reparandum(to-the-left, to-the-righ-)
-</code></pre>
+~~~
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_ru-dep/reparandum.md" target="#">edit reparandum</a></p>
 
-<p><a id="al-ru-dep/root" class="al-dest"></a></p>
-<h2><code>root</code>: root</h2>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_ru-dep/reparandum.md" target="#">edit reparandum</a>
+</div>
 
-<p>The <code>root</code> grammatical relation points to the root of the sentence. A
-fake node <code>ROOT</code> is used as the governor. The <code>ROOT</code> node is indexed
-with 0, since the indexing of real words in the sentence starts at 1.</p>
+<div about="#root_ru" property="rdf:type" resource="#dep_ru">
+	<div property="rdf:type" resource="../../u/dep/all.html#root" />
+	<a id="al-ru-dep/root" class="al-dest" />
 
-<pre><code class="language-sdparse">ROOT Люблю индийскую еду . \n ROOT I-love Indian food .
+	<h2><code property="oliasystem:hasTag" lang="">root</code>: <div property="rdfs:label">root</div></h2>
+	<div property="rdfs:comment">
+
+The `root` grammatical relation points to the root of the sentence. A
+fake node `ROOT` is used as the governor. The `ROOT` node is indexed
+with 0, since the indexing of real words in the sentence starts at 1.
+
+~~~ sdparse
+ROOT Люблю индийскую еду . \n ROOT I-love Indian food .
 root(ROOT-1, Люблю)
 root(ROOT-7, I-love)
-</code></pre>
+~~~
 
-<p>There is just one node with the <code>root</code> dependency relation in every
+There is just one node with the `root` dependency relation in every
 tree. If the main predicate is not present (due to
-<a href="http://universaldependencies.org/cs/overview/specific-syntax.html#ellipsis">ellipsis</a>)
+[ellipsis](http://universaldependencies.org/cs/overview/specific-syntax.html#ellipsis))
 and there are
 multiple orphaned dependents, the leftmost dependent is promoted to
-the head (root) position and the other orphans are attached to it.</p>
+the head (root) position and the other orphans are attached to it.
 
-<p>An example sentence-like segment that lacks the main verb:
-<em>И что он на это ?</em>
-“And what [does] he [say] to it?”</p>
+An example sentence-like segment that lacks the main verb:
+_И что он на это ?_
+“And what [does] he [say] to it?”
 
-<pre><code class="language-sdparse">ROOT И что он на это ? \n ROOT And what he to it ?
+~~~ sdparse
+ROOT И что он на это ? \n ROOT And what he to it ?
 root(ROOT-1, И)
 root(ROOT-9, And)
 dobj(И, что)
@@ -1676,78 +2081,101 @@ nsubj(И, он)
 nsubj(And, he)
 punct(И, ?-7)
 punct(And, ?-15)
-</code></pre>
+~~~
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_ru-dep/root.md" target="#">edit root</a></p>
 
-<p><a id="al-ru-dep/vocative" class="al-dest"></a></p>
-<h2><code>vocative</code>: vocative</h2>
 
-<p>The <code>vocative</code> relation is used to mark dialogue participant addressed in text.
-The relation links the addressee’s name to its host sentence.
-In Russian, the addressee’s name can also appear in the vocative <a href="">Case</a> form.</p>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_ru-dep/root.md" target="#">edit root</a>
+</div>
 
-<pre><code class="language-sdparse">Мужчина , Вы дурак ! \n Sir , you-are a-fool !
+<div about="#vocative_ru" property="rdf:type" resource="#dep_ru">
+	<div property="rdf:type" resource="../../u/dep/all.html#vocative" />
+	<a id="al-ru-dep/vocative" class="al-dest" />
+
+	<h2><code property="oliasystem:hasTag" lang="">vocative</code>: <div property="rdfs:label">vocative</div></h2>
+	<div property="rdfs:comment">
+
+The `vocative` relation is used to mark dialogue participant addressed in text.
+The relation links the addressee's name to its host sentence.
+In Russian, the addressee's name can also appear in the vocative [Case]() form.
+
+~~~ sdparse
+Мужчина , Вы дурак ! \n Sir , you-are a-fool !
 vocative(дурак, Мужчина)
 vocative(a-fool, Sir)
-</code></pre>
+~~~
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_ru-dep/vocative.md" target="#">edit vocative</a></p>
 
-<p><a id="al-ru-dep/xcomp" class="al-dest"></a></p>
-<h2><code>xcomp</code>: open clausal complement</h2>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_ru-dep/vocative.md" target="#">edit vocative</a>
+</div>
 
-<p>An open clausal complement (<code>xcomp</code>) of a verb or an adjective is a
+<div about="#xcomp_ru" property="rdf:type" resource="#dep_ru">
+	<div property="rdf:type" resource="../../u/dep/all.html#xcomp" />
+	<a id="al-ru-dep/xcomp" class="al-dest" />
+
+	<h2><code property="oliasystem:hasTag" lang="">xcomp</code>: <div property="rdfs:label">open clausal complement</div></h2>
+	<div property="rdfs:comment">
+
+An open clausal complement (`xcomp`) of a verb or an adjective is a
 predicative or clausal complement without its own subject. The
 reference of the subject is necessarily determined by an argument
 external to the xcomp (normally by the subject of the next higher
-clause). This is often referred to as <em>obligatory control</em>. 
+clause). This is often referred to as *obligatory control*. 
 These complements are always non-finite, and they are
 complements (arguments of the higher verb or adjective) rather than
-adjuncts/modifiers, such as a purpose clause. The name <code>xcomp</code> is
-borrowed from Lexical-Functional Grammar.</p>
+adjuncts/modifiers, such as a purpose clause. The name `xcomp` is
+borrowed from Lexical-Functional Grammar.
 
-<pre><code class="language-sdparse">Хочешь плавать ? \n Do-you-want to-swim ?
+~~~ sdparse
+Хочешь плавать ? \n Do-you-want to-swim ?
 xcomp(Хочешь, плавать)
 xcomp(Do-you-want, to-swim)
-</code></pre>
+~~~
 
-<pre><code class="language-sdparse">Я начал там работать вчера . \n I started there to-work yesterday .
+~~~ sdparse
+Я начал там работать вчера . \n I started there to-work yesterday .
 xcomp(начал, работать)
 xcomp(started, to-work)
-</code></pre>
+~~~
 
-<p>Note that the above condition “without its own subject” does not mean that a 
-clause is an <code>xcomp</code> just because its subject is not <em>overt.</em>
+Note that the above condition “without its own subject” does not mean that a 
+clause is an `xcomp` just because its subject is not _overt._
 The subject must be necessarily inherited from a fixed position in the higher clause.
 That is, there should be no available interpretation where the subject of the lower clause may be distinct
 from the specified role of the upper clause.
 In cases where the missing subject may or must be distinct from a fixed role in the higher clause,
-<a href="">ccomp</a> should be used instead, as below.  This includes cases of arbitrary subjects and anaphoric control.</p>
+[ccomp]() should be used instead, as below.  This includes cases of arbitrary subjects and anaphoric control.
 
-<pre><code class="language-sdparse">Начальник приказал выкопать ров . \n Boss ordered to-dig ditch .
+~~~ sdparse
+Начальник приказал выкопать ров . \n Boss ordered to-dig ditch .
 ccomp(приказал, выкопать)
 ccomp(ordered, to-dig)
-</code></pre>
+~~~
 
-<p>Pro-drop languages have clauses where the subject is not present as a separate word,
+Pro-drop languages have clauses where the subject is not present as a separate word,
 yet it is inherently present (and often deducible from the form of the verb)
 and it does not depend on arguments from a higher clause.
 Thus in neither of the following two Russian examples is there any overt subject,
-yet only the second example contains an <code>xcomp</code>.</p>
+yet only the second example contains an `xcomp`.
 
-<pre><code class="language-sdparse">Пишу , потому что я это обещал . \n I-write , because that I-have it promised .
+~~~ sdparse
+Пишу , потому что я это обещал . \n I-write , because that I-have it promised .
 advcl(Пишу, обещал)
 advcl(I-write, promised)
-</code></pre>
+~~~
 
-<pre><code class="language-sdparse">Я обещал писать . \n I have-promised to-write .
+~~~ sdparse
+Я обещал писать . \n I have-promised to-write .
 xcomp(обещал, писать)
 xcomp(have-promised, to-write)
-</code></pre>
+~~~
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_ru-dep/xcomp.md" target="#">edit xcomp</a></p>
 
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_ru-dep/xcomp.md" target="#">edit xcomp</a>
+</div>
 
 
       </div>

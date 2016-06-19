@@ -43,7 +43,19 @@
 	  </div>
 	</noscript>
 
-          <h1 id="pos-tags">POS tags</h1>
+          
+<h1 id="pos-tags">POS tags</h1>
+
+<p><span about="." property="rdf:type" resource="owl:Ontology">
+	<span property="owl:imports" resource=" https://www.w3.org/2012/pyRdfa/extract?uri=http://universaldependencies.org/docs/u/pos/all.html&amp;format=xml&amp;rdfagraph=output&amp;vocab_expansion=false&amp;rdfa_lite=false&amp;embedded_rdf=true&amp;space_preserve=false&amp;vocab_cache=true&amp;vocab_cache_report=false&amp;vocab_cache_refresh=false"></span>
+	</span>
+<span about="#pos_el" property="rdfs:label" style="visibility: hidden">POS tags</span>
+<span about="#pos_el" property="rdfs:subClassOf" resource="_:el">
+	<span about="_:el" property="rdf:type" resource="owl:Restriction">
+		<span property="owl:onProperty" resource="http://purl.org/dc/terms/language"></span>
+		<span property="owl:hasValue" lang="" style="visibility: hidden">el</span>
+	</span>
+</span></p>
 
 <table class="typeindex">
   <thead>
@@ -99,191 +111,305 @@
 
 <hr />
 
-<p><a id="al-el-pos/ADJ" class="al-dest"></a></p>
-<h2><code>ADJ</code>: adjective</h2>
+<div about="#ADJ_el" property="rdf:type" resource="#pos_el">
+	<div property="rdf:type" resource="../../u/pos/all.html#ADJ" />
+	<a id="al-el-pos/ADJ" class="al-dest" />
 
-<h3 id="definition">Definition</h3>
+	<h2><code property="oliasystem:hasTag" lang="">ADJ</code>: <div property="rdfs:label">adjective</div></h2>
+	<div property="rdfs:comment">
 
-<p>Adjectives are words that typically modify nouns and specify their
-properties or attributes. They may also function as predicates, as in</p>
+### Definition
 
-<p><em>Το αυτοκίνητο είναι πράσινο.</em> “The car is green.”</p>
+Adjectives are words that typically modify nouns and specify their
+properties or attributes. They may also function as predicates, as in
 
-<p>The <code>ADJ</code> tag is intended for ordinary adjectives only. See <a href="">DET</a>
-for determiners and <a href="">NUM</a> for cardinal numerals.</p>
+_Το αυτοκίνητο είναι πράσινο._ “The car is green.”
 
-<p>Αdjectival ordinal numerals that behave like adjectives both 
-morphologically and syntactically <em>(πρώτος, δεύτερος, 
-εξηκοστός)</em> are tagged as adjectives.</p>
+The `ADJ` tag is intended for ordinary adjectives only. See [DET]()
+for determiners and [NUM]() for cardinal numerals.
 
-<p>Greek adjectives inflect for
-<a href="">el-feat/Gender</a> <em>(μεγάλος – μεγάλη – μεγάλο)</em> “big”,
-<a href="">el-feat/Number</a> <em>(μεγάλος – μεγάλοι)</em> and
-<a href="">el-feat/Case</a> <em>(μεγάλοι – μεγάλων – μεγάλους)</em>.</p>
+Αdjectival ordinal numerals that behave like adjectives both 
+morphologically and syntactically _(πρώτος, δεύτερος, 
+εξηκοστός)_ are tagged as adjectives.
 
-<p>Non-periphrastic comparative and superlative <a href="degrees">el-feat/Degree</a>  of Greek adjectives are formed using a small set of suffixes or irregular forms.</p>
+Greek adjectives inflect for
+[el-feat/Gender]() _(μεγάλος – μεγάλη – μεγάλο)_ “big”,
+[el-feat/Number]() _(μεγάλος – μεγάλοι)_ and
+[el-feat/Case]() _(μεγάλοι – μεγάλων – μεγάλους)_.
 
-<ul>
-  <li><em>ταχύς – ταχύτερος – ταχύτατος</em>  “fast”</li>
-  <li><em>ακριβής – ακριβέστερος – ακριβέστατος</em> “exact”</li>
-  <li><em>μεγάλος – μεγαλύτερος – μέγιστος</em> “big”</li>
-</ul>
+Non-periphrastic comparative and superlative [el-feat/Degree](degrees)  of Greek adjectives are formed using a small set of suffixes or irregular forms.
 
-<h3 id="examples">Examples</h3>
+- _ταχύς – ταχύτερος – ταχύτατος_  “fast”
+- _ακριβής – ακριβέστερος – ακριβέστατος_ “exact”
+- _μεγάλος – μεγαλύτερος – μέγιστος_ "big"
 
-<ul>
-  <li><em>μεγάλος</em>, “big”</li>
-  <li><em>πράσινος</em>, “green”</li>
-  <li><em>ακατάληπτος</em>, “incomprehensible”</li>
-  <li><em>πρώτος, δεύτερος, τρίτος</em>, “first, second, third”</li>
-</ul>
+### Examples
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_el-pos/ADJ.md" target="#">edit ADJ</a></p>
+- _μεγάλος_, "big"
+- _πράσινος_, "green"
+- _ακατάληπτος_, "incomprehensible"
+- _πρώτος, δεύτερος, τρίτος_, "first, second, third"
 
-<p><a id="al-el-pos/ADP" class="al-dest"></a></p>
-<h2><code>ADP</code>: adposition</h2>
 
-<p>This document is a placeholder for the language-specific documentation
-for <code>ADP</code>.</p>
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_el-pos/ADP.md" target="#">edit ADP</a></p>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_el-pos/ADJ.md" target="#">edit ADJ</a>
 
-<p><a id="al-el-pos/ADV" class="al-dest"></a></p>
-<h2><code>ADV</code>: adverb</h2>
 
-<p>This document is a placeholder for the language-specific documentation
-for <code>ADV</code>.</p>
+<div about="#ADP_el" property="rdf:type" resource="#pos_el">
+	<div property="rdf:type" resource="../../u/pos/all.html#ADP" />
+	<a id="al-el-pos/ADP" class="al-dest" />
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_el-pos/ADV.md" target="#">edit ADV</a></p>
+	<h2><code property="oliasystem:hasTag" lang="">ADP</code>: <div property="rdfs:label">adposition</div></h2>
+	<div property="rdfs:comment">
 
-<p><a id="al-el-pos/AUX" class="al-dest"></a></p>
-<h2><code>AUX</code>: auxiliary verb</h2>
+This document is a placeholder for the language-specific documentation
+for `ADP`.
 
-<p>This document is a placeholder for the language-specific documentation
-for <code>AUX</code>.</p>
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_el-pos/AUX_.md" target="#">edit AUX</a></p>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_el-pos/ADP.md" target="#">edit ADP</a>
 
-<p><a id="al-el-pos/CONJ" class="al-dest"></a></p>
-<h2><code>CONJ</code>: coordinating conjunction</h2>
 
-<p>A coordinating conjunction is a word that links words or larger
+<div about="#ADV_el" property="rdf:type" resource="#pos_el">
+	<div property="rdf:type" resource="../../u/pos/all.html#ADV" />
+	<a id="al-el-pos/ADV" class="al-dest" />
+
+	<h2><code property="oliasystem:hasTag" lang="">ADV</code>: <div property="rdfs:label">adverb</div></h2>
+	<div property="rdfs:comment">
+
+This document is a placeholder for the language-specific documentation
+for `ADV`.
+
+
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_el-pos/ADV.md" target="#">edit ADV</a>
+
+
+<div about="#AUX_el" property="rdf:type" resource="#pos_el">
+	<div property="rdf:type" resource="../../u/pos/all.html#AUX" />
+	<a id="al-el-pos/AUX" class="al-dest" />
+
+	<h2><code property="oliasystem:hasTag" lang="">AUX</code>: <div property="rdfs:label">auxiliary verb</div></h2>
+	<div property="rdfs:comment">
+
+This document is a placeholder for the language-specific documentation
+for `AUX`.
+
+
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_el-pos/AUX_.md" target="#">edit AUX</a>
+
+
+<div about="#CONJ_el" property="rdf:type" resource="#pos_el">
+	<div property="rdf:type" resource="../../u/pos/all.html#CONJ" />
+	<a id="al-el-pos/CONJ" class="al-dest" />
+
+	<h2><code property="oliasystem:hasTag" lang="">CONJ</code>: <div property="rdfs:label">coordinating conjunction</div></h2>
+	<div property="rdfs:comment">
+
+A coordinating conjunction is a word that links words or larger
 constituents without syntactically subordinating one to the other and
-expresses a semantic relationship between them.</p>
+expresses a semantic relationship between them.
 
-<p>For <em>subordinating</em> conjunctions, see <a href="">SCONJ</a>.</p>
+For *subordinating* conjunctions, see [SCONJ]().
 
-<p>In correlative (paired) coordinating conjuctions such as <em>είτε - είτε</em> or 
-<em>ή - ή</em> “either - or”, both words are annotated <code>CONJ</code>.</p>
+In correlative (paired) coordinating conjuctions such as _είτε - είτε_ or 
+_ή - ή_ "either - or", both words are annotated `CONJ`.
 
-<h4 id="examples">Examples</h4>
+#### Examples
 
-<ul>
-  <li><em>και</em> “and”</li>
-  <li><em>ή</em> “or”</li>
-  <li><em>αλλά</em> “but”</li>
-  <li><em><b>είτε</b> εσύ <b>είτε</b> ο Παύλος</em> “<b>either</b> you <b>or</b> Pavlos”</li>
-  <li><em><b>ούτε</b> εσύ <b>ούτε</b> ο Παύλος</em> “<b>neither</b> you <b>nor</b> Pavlos”</li>
-</ul>
+* _και_ "and"
+* _ή_ "or"
+* _αλλά_ "but"
+* _<b>είτε</b> εσύ <b>είτε</b> ο Παύλος_ "<b>either</b> you <b>or</b> Pavlos"
+* _<b>ούτε</b> εσύ <b>ούτε</b> ο Παύλος_ "<b>neither</b> you <b>nor</b> Pavlos"  
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_el-pos/CONJ.md" target="#">edit CONJ</a></p>
 
-<p><a id="al-el-pos/DET" class="al-dest"></a></p>
-<h2><code>DET</code>: determiner</h2>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_el-pos/CONJ.md" target="#">edit CONJ</a>
 
-<p>This document is a placeholder for the language-specific documentation
-for <code>DET</code>.</p>
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_el-pos/DET.md" target="#">edit DET</a></p>
+<div about="#DET_el" property="rdf:type" resource="#pos_el">
+	<div property="rdf:type" resource="../../u/pos/all.html#DET" />
+	<a id="al-el-pos/DET" class="al-dest" />
 
-<p><a id="al-el-pos/INTJ" class="al-dest"></a></p>
-<h2><code>INTJ</code>: interjection</h2>
+	<h2><code property="oliasystem:hasTag" lang="">DET</code>: <div property="rdfs:label">determiner</div></h2>
+	<div property="rdfs:comment">
 
-<p>This document is a placeholder for the language-specific documentation
-for <code>INTJ</code>.</p>
+This document is a placeholder for the language-specific documentation
+for `DET`.
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_el-pos/INTJ.md" target="#">edit INTJ</a></p>
 
-<p><a id="al-el-pos/NOUN" class="al-dest"></a></p>
-<h2><code>NOUN</code>: noun</h2>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_el-pos/DET.md" target="#">edit DET</a>
 
-<p>This document is a placeholder for the language-specific documentation
-for <code>NOUN</code>.</p>
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_el-pos/NOUN.md" target="#">edit NOUN</a></p>
+<div about="#INTJ_el" property="rdf:type" resource="#pos_el">
+	<div property="rdf:type" resource="../../u/pos/all.html#INTJ" />
+	<a id="al-el-pos/INTJ" class="al-dest" />
 
-<p><a id="al-el-pos/NUM" class="al-dest"></a></p>
-<h2><code>NUM</code>: numeral</h2>
+	<h2><code property="oliasystem:hasTag" lang="">INTJ</code>: <div property="rdfs:label">interjection</div></h2>
+	<div property="rdfs:comment">
 
-<p>This document is a placeholder for the language-specific documentation
-for <code>NUM</code>.</p>
+This document is a placeholder for the language-specific documentation
+for `INTJ`.
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_el-pos/NUM.md" target="#">edit NUM</a></p>
 
-<p><a id="al-el-pos/PART" class="al-dest"></a></p>
-<h2><code>PART</code>: particle</h2>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_el-pos/INTJ.md" target="#">edit INTJ</a>
 
-<p>This document is a placeholder for the language-specific documentation
-for <code>PART</code>.</p>
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_el-pos/PART.md" target="#">edit PART</a></p>
+<div about="#NOUN_el" property="rdf:type" resource="#pos_el">
+	<div property="rdf:type" resource="../../u/pos/all.html#NOUN" />
+	<a id="al-el-pos/NOUN" class="al-dest" />
 
-<p><a id="al-el-pos/PRON" class="al-dest"></a></p>
-<h2><code>PRON</code>: pronoun</h2>
+	<h2><code property="oliasystem:hasTag" lang="">NOUN</code>: <div property="rdfs:label">noun</div></h2>
+	<div property="rdfs:comment">
 
-<p>This document is a placeholder for the language-specific documentation
-for <code>PRON</code>.</p>
+This document is a placeholder for the language-specific documentation
+for `NOUN`.
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_el-pos/PRON.md" target="#">edit PRON</a></p>
 
-<p><a id="al-el-pos/PROPN" class="al-dest"></a></p>
-<h2><code>PROPN</code>: proper noun</h2>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_el-pos/NOUN.md" target="#">edit NOUN</a>
 
-<p>This document is a placeholder for the language-specific documentation
-for <code>PROPN</code>.</p>
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_el-pos/PROPN.md" target="#">edit PROPN</a></p>
+<div about="#NUM_el" property="rdf:type" resource="#pos_el">
+	<div property="rdf:type" resource="../../u/pos/all.html#NUM" />
+	<a id="al-el-pos/NUM" class="al-dest" />
 
-<p><a id="al-el-pos/PUNCT" class="al-dest"></a></p>
-<h2><code>PUNCT</code>: punctuation</h2>
+	<h2><code property="oliasystem:hasTag" lang="">NUM</code>: <div property="rdfs:label">numeral</div></h2>
+	<div property="rdfs:comment">
 
-<p>This document is a placeholder for the language-specific documentation
-for <code>PUNCT</code>.</p>
+This document is a placeholder for the language-specific documentation
+for `NUM`.
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_el-pos/PUNCT.md" target="#">edit PUNCT</a></p>
 
-<p><a id="al-el-pos/SCONJ" class="al-dest"></a></p>
-<h2><code>SCONJ</code>: subordinating conjunction</h2>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_el-pos/NUM.md" target="#">edit NUM</a>
 
-<p>This document is a placeholder for the language-specific documentation
-for <code>SCONJ</code>.</p>
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_el-pos/SCONJ.md" target="#">edit SCONJ</a></p>
+<div about="#PART_el" property="rdf:type" resource="#pos_el">
+	<div property="rdf:type" resource="../../u/pos/all.html#PART" />
+	<a id="al-el-pos/PART" class="al-dest" />
 
-<p><a id="al-el-pos/SYM" class="al-dest"></a></p>
-<h2><code>SYM</code>: symbol</h2>
+	<h2><code property="oliasystem:hasTag" lang="">PART</code>: <div property="rdfs:label">particle</div></h2>
+	<div property="rdfs:comment">
 
-<p>This document is a placeholder for the language-specific documentation
-for <code>SYM</code>.</p>
+This document is a placeholder for the language-specific documentation
+for `PART`.
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_el-pos/SYM.md" target="#">edit SYM</a></p>
 
-<p><a id="al-el-pos/VERB" class="al-dest"></a></p>
-<h2><code>VERB</code>: verb</h2>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_el-pos/PART.md" target="#">edit PART</a>
 
-<p>This document is a placeholder for the language-specific documentation
-for <code>VERB</code>.</p>
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_el-pos/VERB.md" target="#">edit VERB</a></p>
+<div about="#PRON_el" property="rdf:type" resource="#pos_el">
+	<div property="rdf:type" resource="../../u/pos/all.html#PRON" />
+	<a id="al-el-pos/PRON" class="al-dest" />
 
-<p><a id="al-el-pos/X" class="al-dest"></a></p>
-<h2><code>X</code>: other</h2>
+	<h2><code property="oliasystem:hasTag" lang="">PRON</code>: <div property="rdfs:label">pronoun</div></h2>
+	<div property="rdfs:comment">
 
-<p>This document is a placeholder for the language-specific documentation
-for <code>X</code>.</p>
+This document is a placeholder for the language-specific documentation
+for `PRON`.
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_el-pos/X.md" target="#">edit X</a></p>
 
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_el-pos/PRON.md" target="#">edit PRON</a>
+
+
+<div about="#PROPN_el" property="rdf:type" resource="#pos_el">
+	<div property="rdf:type" resource="../../u/pos/all.html#PROPN" />
+	<a id="al-el-pos/PROPN" class="al-dest" />
+
+	<h2><code property="oliasystem:hasTag" lang="">PROPN</code>: <div property="rdfs:label">proper noun</div></h2>
+	<div property="rdfs:comment">
+
+This document is a placeholder for the language-specific documentation
+for `PROPN`.
+
+
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_el-pos/PROPN.md" target="#">edit PROPN</a>
+
+
+<div about="#PUNCT_el" property="rdf:type" resource="#pos_el">
+	<div property="rdf:type" resource="../../u/pos/all.html#PUNCT" />
+	<a id="al-el-pos/PUNCT" class="al-dest" />
+
+	<h2><code property="oliasystem:hasTag" lang="">PUNCT</code>: <div property="rdfs:label">punctuation</div></h2>
+	<div property="rdfs:comment">
+
+This document is a placeholder for the language-specific documentation
+for `PUNCT`.
+
+
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_el-pos/PUNCT.md" target="#">edit PUNCT</a>
+
+
+<div about="#SCONJ_el" property="rdf:type" resource="#pos_el">
+	<div property="rdf:type" resource="../../u/pos/all.html#SCONJ" />
+	<a id="al-el-pos/SCONJ" class="al-dest" />
+
+	<h2><code property="oliasystem:hasTag" lang="">SCONJ</code>: <div property="rdfs:label">subordinating conjunction</div></h2>
+	<div property="rdfs:comment">
+
+This document is a placeholder for the language-specific documentation
+for `SCONJ`.
+
+
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_el-pos/SCONJ.md" target="#">edit SCONJ</a>
+
+
+<div about="#SYM_el" property="rdf:type" resource="#pos_el">
+	<div property="rdf:type" resource="../../u/pos/all.html#SYM" />
+	<a id="al-el-pos/SYM" class="al-dest" />
+
+	<h2><code property="oliasystem:hasTag" lang="">SYM</code>: <div property="rdfs:label">symbol</div></h2>
+	<div property="rdfs:comment">
+
+This document is a placeholder for the language-specific documentation
+for `SYM`.
+
+
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_el-pos/SYM.md" target="#">edit SYM</a>
+
+
+<div about="#VERB_el" property="rdf:type" resource="#pos_el">
+	<div property="rdf:type" resource="../../u/pos/all.html#VERB" />
+	<a id="al-el-pos/VERB" class="al-dest" />
+
+	<h2><code property="oliasystem:hasTag" lang="">VERB</code>: <div property="rdfs:label">verb</div></h2>
+	<div property="rdfs:comment">
+
+This document is a placeholder for the language-specific documentation
+for `VERB`.
+
+
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_el-pos/VERB.md" target="#">edit VERB</a>
+
+
+<div about="#X_el" property="rdf:type" resource="#pos_el">
+	<div property="rdf:type" resource="../../u/pos/all.html#X" />
+	<a id="al-el-pos/X" class="al-dest" />
+
+	<h2><code property="oliasystem:hasTag" lang="">X</code>: <div property="rdfs:label">other</div></h2>
+	<div property="rdfs:comment">
+
+This document is a placeholder for the language-specific documentation
+for `X`.
+
+
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_el-pos/X.md" target="#">edit X</a>
+
+</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div>
 
 
       </div>

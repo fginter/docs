@@ -43,7 +43,12 @@
 	  </div>
 	</noscript>
 
-          <h1 id="dependencies">Dependencies</h1>
+          
+<h1 id="dependencies">Dependencies</h1>
+
+<p><span about="." property="rdf:type" resource="owl:Ontology">
+	<span property="owl:imports" resource=" https://www.w3.org/2012/pyRdfa/extract?uri=http://universaldependencies.org/docs/u/dep/all.html&amp;format=xml&amp;rdfagraph=output&amp;vocab_expansion=false&amp;rdfa_lite=false&amp;embedded_rdf=true&amp;space_preserve=false&amp;vocab_cache=true&amp;vocab_cache_report=false&amp;vocab_cache_refresh=false"></span>
+</span></p>
 
 <p>Note: <i>nmod</i>, <i>neg</i>, and <i>punct</i> appear
 in two places.</p>
@@ -228,31 +233,52 @@ in two places.</p>
   </tr>
 </table>
 
+<p><span about="#dep_et" property="rdfs:label" style="visibility: hidden">Dependencies</span>
+<span about="#dep_et" property="rdfs:subClassOf" resource="_:et">
+	<span about="_:et" property="rdf:type" resource="owl:Restriction">
+		<span property="owl:onProperty" resource="http://purl.org/dc/terms/language"></span>
+		<span property="owl:hasValue" lang="" style="visibility: hidden">et</span>
+	</span>
+</span></p>
+
 <hr />
 
-<p><a id="al-et-dep/acl" class="al-dest"></a></p>
-<h2><code>acl</code>: clausal modifier of noun</h2>
+<div about="#acl_et" property="rdf:type" resource="#dep_et">
+	<div property="rdf:type" resource="../../u/dep/all.html#acl" />
+	<a id="al-et-dep/acl" class="al-dest" />
 
-<p>The dependency relation  <code>acl</code> stands for finite and non-finite clauses that modify a nominal.</p>
+	<h2><code property="oliasystem:hasTag" lang="">acl</code>: <div property="rdfs:label">clausal modifier of noun</div></h2>
+	<div property="rdfs:comment">
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_et-dep/acl.md" target="#">edit acl</a></p>
+The dependency relation  `acl` stands for finite and non-finite clauses that modify a nominal.
 
-<p><a id="al-et-dep/advcl" class="al-dest"></a></p>
-<h2><code>advcl</code>: adverbial clause modifier</h2>
 
-<p>advcl: adverbial clause modifier</p>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_et-dep/acl.md" target="#">edit acl</a>
+</div>
 
-<p>An adverbial clause modifier is a clause which modifies a verb or other predicate (adjective, etc.), as a modifier not as a core complement. This includes things such as a temporal clause, consequence, conditional clause, purpose clause, etc. Also comparative constructions are annotated using dependency relation advcl.</p>
+<div about="#advcl_et" property="rdf:type" resource="#dep_et">
+	<div property="rdf:type" resource="../../u/dep/all.html#advcl" />
+	<a id="al-et-dep/advcl" class="al-dest" />
 
-<pre><code class="language-sdparse">Ta jooksis karjudes .
+	<h2><code property="oliasystem:hasTag" lang="">advcl</code>: <div property="rdfs:label">adverbial clause modifier</div></h2>
+	<div property="rdfs:comment">
+
+advcl: adverbial clause modifier
+
+An adverbial clause modifier is a clause which modifies a verb or other predicate (adjective, etc.), as a modifier not as a core complement. This includes things such as a temporal clause, consequence, conditional clause, purpose clause, etc. Also comparative constructions are annotated using dependency relation advcl.
+
+~~~ sdparse
+Ta jooksis karjudes .
 nsubj(jooksis-2, Ta-1)
 advcl(jooksis-2, karjudes-3)
 punct(jooksis-2, .-4)
-</code></pre>
+~~~
 
-<p>He ran shouting.</p>
+He ran shouting.
 
-<pre><code class="language-sdparse">Mulle pakuti süüa , kui õhtul koolist saabusin .
+~~~ sdparse
+Mulle pakuti süüa , kui õhtul koolist saabusin .
 nmod(pakuti-2, Mulle-1)
 xcomp(pakuti-2, süüa-3)
 punct(saabusin-8,-4)
@@ -261,95 +287,156 @@ advmod(saabusin-8, õhtul-6)
 nmod(saabusin-8, koolist-7)
 advcl(pakuti-2, saabusin-8)
 punct(saabusin-8, .-9)
-</code></pre>
+~~~
 
-<p>I was offered something to eat, when I arrived from school in the evening</p>
+I was offered something to eat, when I arrived from school in the evening
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_et-dep/advcl.md" target="#">edit advcl</a></p>
 
-<p><a id="al-et-dep/advmod" class="al-dest"></a></p>
-<h2><code>advmod</code>: adverbial modifier</h2>
 
-<p>Adverbial modifier advmod is an adverbial modifying an adverb, a verb, an adjective or a nominal.</p>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_et-dep/advcl.md" target="#">edit advcl</a>
+</div>
 
-<pre><code class="language-sdparse">jooksis väga kiiresti
+<div about="#advmod_et" property="rdf:type" resource="#dep_et">
+	<div property="rdf:type" resource="../../u/dep/all.html#advmod" />
+	<a id="al-et-dep/advmod" class="al-dest" />
+
+	<h2><code property="oliasystem:hasTag" lang="">advmod</code>: <div property="rdfs:label">adverbial modifier</div></h2>
+	<div property="rdfs:comment">
+
+Adverbial modifier advmod is an adverbial modifying an adverb, a verb, an adjective or a nominal. 
+
+~~~ sdparse
+jooksis väga kiiresti
 advmod(kiiresti-3, väga-2)
 advmod(jooksis-1, kiiresti-3)
-</code></pre>
+~~~
 
-<p>ran very quickly</p>
+ran very quickly
 
-<pre><code class="language-sdparse">Kass nägi ka koera .
+~~~ sdparse
+Kass nägi ka koera .
 nsubj(nägi-2, Kass-1)
 advmod(koera-4, ka-3)
 dobj(nägi-2, koera-4)
 punct(nägi-2, .-5)
-</code></pre>
-<p>The cat saw also the dog.</p>
+~~~
+The cat saw also the dog.
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_et-dep/advmod.md" target="#">edit advmod</a></p>
 
-<p><a id="al-et-dep/amod" class="al-dest"></a></p>
-<h2><code>amod</code>: adjectival modifier</h2>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_et-dep/advmod.md" target="#">edit advmod</a>
+</div>
 
-<p>An adjectival modifier of a noun is any adjectival phrase that serves to modify the meaning of the noun.</p>
+<div about="#amod_et" property="rdf:type" resource="#dep_et">
+	<div property="rdf:type" resource="../../u/dep/all.html#amod" />
+	<a id="al-et-dep/amod" class="al-dest" />
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_et-dep/amod.md" target="#">edit amod</a></p>
+	<h2><code property="oliasystem:hasTag" lang="">amod</code>: <div property="rdfs:label">adjectival modifier</div></h2>
+	<div property="rdfs:comment">
 
-<p><a id="al-et-dep/appos" class="al-dest"></a></p>
-<h2><code>appos</code>: appositional modifier</h2>
+An adjectival modifier of a noun is any adjectival phrase that serves to modify the meaning of the noun.
 
-<p>An appositional modifier is a noun preceding or following the head noun that serves to define or modify that noun. Note that appositions can be both right- and left-headed in Estonian UD.</p>
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_et-dep/appos.md" target="#">edit appos</a></p>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_et-dep/amod.md" target="#">edit amod</a>
+</div>
 
-<p><a id="al-et-dep/aux" class="al-dest"></a></p>
-<h2><code>aux</code>: auxiliary</h2>
+<div about="#appos_et" property="rdf:type" resource="#dep_et">
+	<div property="rdf:type" resource="../../u/dep/all.html#appos" />
+	<a id="al-et-dep/appos" class="al-dest" />
 
-<p>An auxiliary of a clause is a non-main verb of the clause, e.g., a modal auxiliary, or an auxiliary in a periphrastic tense.
-‘olema’ and in rare occasions ‘saama’ are auxiliaries that form periphrastic tense forms. In the current version of Estonain UD, only ‘saama’, ‘võima’, ‘pidama’, ‘näima’, ‘paistma’, ‘tunduma’ are regarded as modal auxiliaries.</p>
+	<h2><code property="oliasystem:hasTag" lang="">appos</code>: <div property="rdfs:label">appositional modifier</div></h2>
+	<div property="rdfs:comment">
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_et-dep/aux_.md" target="#">edit aux</a></p>
+An appositional modifier is a noun preceding or following the head noun that serves to define or modify that noun. Note that appositions can be both right- and left-headed in Estonian UD.
 
-<p><a id="al-et-dep/auxpass" class="al-dest"></a></p>
-<h2><code>auxpass</code>: passive auxiliary</h2>
 
-<p>This document is a placeholder for the language-specific documentation
-for <code>auxpass</code>.</p>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_et-dep/appos.md" target="#">edit appos</a>
+</div>
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_et-dep/auxpass.md" target="#">edit auxpass</a></p>
+<div about="#aux_et" property="rdf:type" resource="#dep_et">
+	<div property="rdf:type" resource="../../u/dep/all.html#aux" />
+	<a id="al-et-dep/aux" class="al-dest" />
 
-<p><a id="al-et-dep/case" class="al-dest"></a></p>
-<h2><code>case</code>: case marking</h2>
+	<h2><code property="oliasystem:hasTag" lang="">aux</code>: <div property="rdfs:label">auxiliary</div></h2>
+	<div property="rdfs:comment">
 
-<p>case: case marking</p>
+An auxiliary of a clause is a non-main verb of the clause, e.g., a modal auxiliary, or an auxiliary in a periphrastic tense.
+'olema' and in rare occasions 'saama' are auxiliaries that form periphrastic tense forms. In the current version of Estonain UD, only 'saama', 'võima', 'pidama', 'näima', 'paistma', 'tunduma' are regarded as modal auxiliaries.
 
-<p>The case relation is used to annotate prepositions and postpositions. Case-marking elements (i.e. adpositions) are treated as dependents of the noun they attach to.</p>
 
-<pre><code class="language-sdparse">Rüütel läks lossi juurde .
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_et-dep/aux_.md" target="#">edit aux</a>
+</div>
+
+<div about="#auxpass_et" property="rdf:type" resource="#dep_et">
+	<div property="rdf:type" resource="../../u/dep/all.html#auxpass" />
+	<a id="al-et-dep/auxpass" class="al-dest" />
+
+	<h2><code property="oliasystem:hasTag" lang="">auxpass</code>: <div property="rdfs:label">passive auxiliary</div></h2>
+	<div property="rdfs:comment">
+
+This document is a placeholder for the language-specific documentation
+for `auxpass`.
+
+
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_et-dep/auxpass.md" target="#">edit auxpass</a>
+</div>
+
+<div about="#case_et" property="rdf:type" resource="#dep_et">
+	<div property="rdf:type" resource="../../u/dep/all.html#case" />
+	<a id="al-et-dep/case" class="al-dest" />
+
+	<h2><code property="oliasystem:hasTag" lang="">case</code>: <div property="rdfs:label">case marking</div></h2>
+	<div property="rdfs:comment">
+
+case: case marking
+
+The case relation is used to annotate prepositions and postpositions. Case-marking elements (i.e. adpositions) are treated as dependents of the noun they attach to.
+
+~~~ sdparse
+Rüütel läks lossi juurde .
 nsubj(läks-2, Rüütel-1)
 nmod(läks-2, lossi-3)
 case(lossi-3, juurde-4)
 punct(läks-2, .-5)
-</code></pre>
+~~~
 
-<p>Knight went near the castle.</p>
+Knight went near the castle.
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_et-dep/case.md" target="#">edit case</a></p>
 
-<p><a id="al-et-dep/cc" class="al-dest"></a></p>
-<h2><code>cc</code>: coordinating conjunction</h2>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_et-dep/case.md" target="#">edit case</a>
+</div>
 
-<p>A <code>cc</code> is the relation between the first conjunct and the coordinating conjunction delimiting another conjunct.</p>
+<div about="#cc_et" property="rdf:type" resource="#dep_et">
+	<div property="rdf:type" resource="../../u/dep/all.html#cc" />
+	<a id="al-et-dep/cc" class="al-dest" />
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_et-dep/cc.md" target="#">edit cc</a></p>
+	<h2><code property="oliasystem:hasTag" lang="">cc</code>: <div property="rdfs:label">coordinating conjunction</div></h2>
+	<div property="rdfs:comment">
 
-<p><a id="al-et-dep/ccomp" class="al-dest"></a></p>
-<h2><code>ccomp</code>: clausal complement</h2>
+A `cc` is the relation between the first conjunct and the coordinating conjunction delimiting another conjunct.
 
-<p>A clausal complement of a verb or adjective is a dependent clause which is a core argument.</p>
 
-<pre><code class="language-sdparse">Ma usun , et kõik läheb hästi.
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_et-dep/cc.md" target="#">edit cc</a>
+</div>
+
+<div about="#ccomp_et" property="rdf:type" resource="#dep_et">
+	<div property="rdf:type" resource="../../u/dep/all.html#ccomp" />
+	<a id="al-et-dep/ccomp" class="al-dest" />
+
+	<h2><code property="oliasystem:hasTag" lang="">ccomp</code>: <div property="rdfs:label">clausal complement</div></h2>
+	<div property="rdfs:comment">
+
+A clausal complement of a verb or adjective is a dependent clause which is a core argument.
+
+~~~ sdparse
+Ma usun , et kõik läheb hästi.
 nsubj(usun-2, Ma-1)
 punct(usun-2, ,-3)
 mark(läheb-6, et-4)
@@ -357,122 +444,197 @@ nsubj(läheb-6, kõik-5)
 ccomp(usun-2, läheb-6)
 advmod(läheb-6, hästi-7)
 punct(usun-2, .-8)
-</code></pre>
+~~~
 
-<p>I beleive, that everything goes well.</p>
+I beleive, that everything goes well.
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_et-dep/ccomp.md" target="#">edit ccomp</a></p>
 
-<p><a id="al-et-dep/compound" class="al-dest"></a></p>
-<h2><code>compound</code>: compound</h2>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_et-dep/ccomp.md" target="#">edit ccomp</a>
+</div>
 
-<p>The dependency relation compound is used for annotating numbers written with several words or several sequences of digits or combinations of them.</p>
+<div about="#compound_et" property="rdf:type" resource="#dep_et">
+	<div property="rdf:type" resource="../../u/dep/all.html#compound" />
+	<a id="al-et-dep/compound" class="al-dest" />
 
-<pre><code class="language-sdparse">60 000
+	<h2><code property="oliasystem:hasTag" lang="">compound</code>: <div property="rdfs:label">compound</div></h2>
+	<div property="rdfs:comment">
+
+The dependency relation compound is used for annotating numbers written with several words or several sequences of digits or combinations of them.
+
+~~~ sdparse
+60 000
 compound(60-1, 000-2)
 ~~
 
 ~~~sdparse
 kaks tuhat
 compound(kaks-1, tuhat-2)
-</code></pre>
+~~~
 
-<p>two thousand</p>
+two thousand
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_et-dep/compound.md" target="#">edit compound</a></p>
 
-<p><a id="al-et-dep/conj" class="al-dest"></a></p>
-<h2><code>conj</code>: conjunct</h2>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_et-dep/compound.md" target="#">edit compound</a>
+</div>
 
-<p>A conjunct is the relation between two elements connected by a coordinating conjunction. Coordinated elements can be words, phrases or clauses. The head of the relation is the first conjunct and all the other conjuncts depend on it via the <code>conj</code> relation.</p>
+<div about="#conj_et" property="rdf:type" resource="#dep_et">
+	<div property="rdf:type" resource="../../u/dep/all.html#conj" />
+	<a id="al-et-dep/conj" class="al-dest" />
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_et-dep/conj.md" target="#">edit conj</a></p>
+	<h2><code property="oliasystem:hasTag" lang="">conj</code>: <div property="rdfs:label">conjunct</div></h2>
+	<div property="rdfs:comment">
 
-<p><a id="al-et-dep/cop" class="al-dest"></a></p>
-<h2><code>cop</code>: copula</h2>
+A conjunct is the relation between two elements connected by a coordinating conjunction. Coordinated elements can be words, phrases or clauses. The head of the relation is the first conjunct and all the other conjuncts depend on it via the `conj` relation.
 
-<p>A copula is the relation between the complement of a copular verb and the copular verb. ‘olema’ is the only copular verb in Estonian UD.
-The predicative is the head of the copular clause, and also the governor of the cop dependency.</p>
 
-<pre><code class="language-sdparse">Kass on triibuline . 
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_et-dep/conj.md" target="#">edit conj</a>
+</div>
+
+<div about="#cop_et" property="rdf:type" resource="#dep_et">
+	<div property="rdf:type" resource="../../u/dep/all.html#cop" />
+	<a id="al-et-dep/cop" class="al-dest" />
+
+	<h2><code property="oliasystem:hasTag" lang="">cop</code>: <div property="rdfs:label">copula</div></h2>
+	<div property="rdfs:comment">
+
+A copula is the relation between the complement of a copular verb and the copular verb. 'olema' is the only copular verb in Estonian UD.
+The predicative is the head of the copular clause, and also the governor of the cop dependency.
+
+~~~ sdparse
+Kass on triibuline . 
 nsubj:cop (triibuline-3, Kass-1)
 cop (triibuline-3, on-2)
 punct (triibuline-3, .-4) 
-</code></pre>
+~~~
 
-<p>Cat is striped</p>
+Cat is striped
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_et-dep/cop.md" target="#">edit cop</a></p>
 
-<p><a id="al-et-dep/csubj" class="al-dest"></a></p>
-<h2><code>csubj</code>: clausal subject</h2>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_et-dep/cop.md" target="#">edit cop</a>
+</div>
 
-<p>A clausal subject is a clausal syntactic subject of a clause. Both finite and non-finite clauses can act as clausal subjects.</p>
+<div about="#csubj_et" property="rdf:type" resource="#dep_et">
+	<div property="rdf:type" resource="../../u/dep/all.html#csubj" />
+	<a id="al-et-dep/csubj" class="al-dest" />
 
-<pre><code class="language-sdparse">Mulle meeldib mõelda .
+	<h2><code property="oliasystem:hasTag" lang="">csubj</code>: <div property="rdfs:label">clausal subject</div></h2>
+	<div property="rdfs:comment">
+
+A clausal subject is a clausal syntactic subject of a clause. Both finite and non-finite clauses can act as clausal subjects.
+
+~~~ sdparse
+Mulle meeldib mõelda .
 nmod(meeldib-2, mulle-1)
 csubj(meeldib-2, mõelda-3)
 punct(meeldib-2, .-4)
-</code></pre>
+~~~
 
-<p>I like to think.</p>
+I like to think.
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_et-dep/csubj.md" target="#">edit csubj</a></p>
 
-<p><a id="al-et-dep/csubjpass" class="al-dest"></a></p>
-<h2><code>csubjpass</code>: clausal passive subject</h2>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_et-dep/csubj.md" target="#">edit csubj</a>
+</div>
 
-<p>This document is a placeholder for the language-specific documentation
-for <code>csubjpass</code>.</p>
+<div about="#csubjpass_et" property="rdf:type" resource="#dep_et">
+	<div property="rdf:type" resource="../../u/dep/all.html#csubjpass" />
+	<a id="al-et-dep/csubjpass" class="al-dest" />
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_et-dep/csubjpass.md" target="#">edit csubjpass</a></p>
+	<h2><code property="oliasystem:hasTag" lang="">csubjpass</code>: <div property="rdfs:label">clausal passive subject</div></h2>
+	<div property="rdfs:comment">
 
-<p><a id="al-et-dep/dep" class="al-dest"></a></p>
-<h2><code>dep</code>: unspecified dependency</h2>
+This document is a placeholder for the language-specific documentation
+for `csubjpass`.
 
-<p>This document is a placeholder for the language-specific documentation
-for <code>dep</code>.</p>
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_et-dep/dep.md" target="#">edit dep</a></p>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_et-dep/csubjpass.md" target="#">edit csubjpass</a>
+</div>
 
-<p><a id="al-et-dep/det" class="al-dest"></a></p>
-<h2><code>det</code>: determiner</h2>
+<div about="#dep_et" property="rdf:type" resource="#dep_et">
+	<div property="rdf:type" resource="../../u/dep/all.html#dep" />
+	<a id="al-et-dep/dep" class="al-dest" />
 
-<p>This document is a placeholder for the language-specific documentation
-for <code>det</code>.</p>
+	<h2><code property="oliasystem:hasTag" lang="">dep</code>: <div property="rdfs:label">unspecified dependency</div></h2>
+	<div property="rdfs:comment">
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_et-dep/det.md" target="#">edit det</a></p>
+This document is a placeholder for the language-specific documentation
+for `dep`.
 
-<p><a id="al-et-dep/discourse" class="al-dest"></a></p>
-<h2><code>discourse</code>: discourse element</h2>
 
-<p>This document is a placeholder for the language-specific documentation
-for <code>discourse</code>.</p>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_et-dep/dep.md" target="#">edit dep</a>
+</div>
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_et-dep/discourse.md" target="#">edit discourse</a></p>
+<div about="#det_et" property="rdf:type" resource="#dep_et">
+	<div property="rdf:type" resource="../../u/dep/all.html#det" />
+	<a id="al-et-dep/det" class="al-dest" />
 
-<p><a id="al-et-dep/dislocated" class="al-dest"></a></p>
-<h2><code>dislocated</code>: dislocated elements</h2>
+	<h2><code property="oliasystem:hasTag" lang="">det</code>: <div property="rdfs:label">determiner</div></h2>
+	<div property="rdfs:comment">
 
-<p>This document is a placeholder for the language-specific documentation
-for <code>dislocated</code>.</p>
+This document is a placeholder for the language-specific documentation
+for `det`.
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_et-dep/dislocated.md" target="#">edit dislocated</a></p>
 
-<p><a id="al-et-dep/dobj" class="al-dest"></a></p>
-<h2><code>dobj</code>: direct object</h2>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_et-dep/det.md" target="#">edit det</a>
+</div>
 
-<p>In Estonian, a direct object can be a noun in singular or plural nominative case, singular genitive case or singular or plural partitive case.</p>
+<div about="#discourse_et" property="rdf:type" resource="#dep_et">
+	<div property="rdf:type" resource="../../u/dep/all.html#discourse" />
+	<a id="al-et-dep/discourse" class="al-dest" />
 
-<pre><code class="language-sdparse">Kass nägi koera .
+	<h2><code property="oliasystem:hasTag" lang="">discourse</code>: <div property="rdfs:label">discourse element</div></h2>
+	<div property="rdfs:comment">
+
+This document is a placeholder for the language-specific documentation
+for `discourse`.
+
+
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_et-dep/discourse.md" target="#">edit discourse</a>
+</div>
+
+<div about="#dislocated_et" property="rdf:type" resource="#dep_et">
+	<div property="rdf:type" resource="../../u/dep/all.html#dislocated" />
+	<a id="al-et-dep/dislocated" class="al-dest" />
+
+	<h2><code property="oliasystem:hasTag" lang="">dislocated</code>: <div property="rdfs:label">dislocated elements</div></h2>
+	<div property="rdfs:comment">
+
+This document is a placeholder for the language-specific documentation
+for `dislocated`.
+
+
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_et-dep/dislocated.md" target="#">edit dislocated</a>
+</div>
+
+<div about="#dobj_et" property="rdf:type" resource="#dep_et">
+	<div property="rdf:type" resource="../../u/dep/all.html#dobj" />
+	<a id="al-et-dep/dobj" class="al-dest" />
+
+	<h2><code property="oliasystem:hasTag" lang="">dobj</code>: <div property="rdfs:label">direct object</div></h2>
+	<div property="rdfs:comment">
+
+In Estonian, a direct object can be a noun in singular or plural nominative case, singular genitive case or singular or plural partitive case.
+
+~~~ sdparse
+Kass nägi koera .
 nsubj(nägi-2, Kass-1)
 dobj(nägi-2, koera-3)
 punct(nägi-2, .-4)
-</code></pre>
+~~~
 
-<p>The cat saw the dog.</p>
+The cat saw the dog.
 
-<pre><code class="language-sdparse">Öö jooksul olid hundid kolm lammast maha murdnud .
+~~~ sdparse
+Öö jooksul olid hundid kolm lammast maha murdnud .
 nmod(murdnud-8, Öö-1)
 case(Öö-1,jooksul-2)
 aux(murdnud-8,olid-3)
@@ -481,199 +643,346 @@ nummod(lammast-6,kolm-5)
 dobj(murdnud-8,lammast-6)
 compound:prt(murdnud-8,maha-7)
 punct(murdnud-8,.-9)
-</code></pre>
+~~~
 
-<p>The wolves had killed three sheep during the night.</p>
+The wolves had killed three sheep during the night.
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_et-dep/dobj.md" target="#">edit dobj</a></p>
 
-<p><a id="al-et-dep/expl" class="al-dest"></a></p>
-<h2><code>expl</code>: expletive</h2>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_et-dep/dobj.md" target="#">edit dobj</a>
+</div>
 
-<p>This document is a placeholder for the language-specific documentation
-for <code>expl</code>.</p>
+<div about="#expl_et" property="rdf:type" resource="#dep_et">
+	<div property="rdf:type" resource="../../u/dep/all.html#expl" />
+	<a id="al-et-dep/expl" class="al-dest" />
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_et-dep/expl.md" target="#">edit expl</a></p>
+	<h2><code property="oliasystem:hasTag" lang="">expl</code>: <div property="rdfs:label">expletive</div></h2>
+	<div property="rdfs:comment">
 
-<p><a id="al-et-dep/foreign" class="al-dest"></a></p>
-<h2><code>foreign</code>: foreign words</h2>
+This document is a placeholder for the language-specific documentation
+for `expl`.
 
-<p>This document is a placeholder for the language-specific documentation
-for <code>foreign</code>.</p>
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_et-dep/foreign.md" target="#">edit foreign</a></p>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_et-dep/expl.md" target="#">edit expl</a>
+</div>
 
-<p><a id="al-et-dep/goeswith" class="al-dest"></a></p>
-<h2><code>goeswith</code>: goes with</h2>
+<div about="#foreign_et" property="rdf:type" resource="#dep_et">
+	<div property="rdf:type" resource="../../u/dep/all.html#foreign" />
+	<a id="al-et-dep/foreign" class="al-dest" />
 
-<p>This document is a placeholder for the language-specific documentation
-for <code>goeswith</code>.</p>
+	<h2><code property="oliasystem:hasTag" lang="">foreign</code>: <div property="rdfs:label">foreign words</div></h2>
+	<div property="rdfs:comment">
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_et-dep/goeswith.md" target="#">edit goeswith</a></p>
+This document is a placeholder for the language-specific documentation
+for `foreign`.
 
-<p><a id="al-et-dep/iobj" class="al-dest"></a></p>
-<h2><code>iobj</code>: indirect object</h2>
 
-<p>This document is a placeholder for the language-specific documentation
-for <code>iobj</code>.</p>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_et-dep/foreign.md" target="#">edit foreign</a>
+</div>
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_et-dep/iobj.md" target="#">edit iobj</a></p>
+<div about="#goeswith_et" property="rdf:type" resource="#dep_et">
+	<div property="rdf:type" resource="../../u/dep/all.html#goeswith" />
+	<a id="al-et-dep/goeswith" class="al-dest" />
 
-<p><a id="al-et-dep/list" class="al-dest"></a></p>
-<h2><code>list</code>: list</h2>
+	<h2><code property="oliasystem:hasTag" lang="">goeswith</code>: <div property="rdfs:label">goes with</div></h2>
+	<div property="rdfs:comment">
 
-<p>This document is a placeholder for the language-specific documentation
-for <code>list</code>.</p>
+This document is a placeholder for the language-specific documentation
+for `goeswith`.
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_et-dep/list.md" target="#">edit list</a></p>
 
-<p><a id="al-et-dep/mark" class="al-dest"></a></p>
-<h2><code>mark</code>: marker</h2>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_et-dep/goeswith.md" target="#">edit goeswith</a>
+</div>
 
-<p>This document is a placeholder for the language-specific documentation
-for <code>mark</code>.</p>
+<div about="#iobj_et" property="rdf:type" resource="#dep_et">
+	<div property="rdf:type" resource="../../u/dep/all.html#iobj" />
+	<a id="al-et-dep/iobj" class="al-dest" />
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_et-dep/mark.md" target="#">edit mark</a></p>
+	<h2><code property="oliasystem:hasTag" lang="">iobj</code>: <div property="rdfs:label">indirect object</div></h2>
+	<div property="rdfs:comment">
 
-<p><a id="al-et-dep/mwe" class="al-dest"></a></p>
-<h2><code>mwe</code>: multi-word expression</h2>
+This document is a placeholder for the language-specific documentation
+for `iobj`.
 
-<p>This document is a placeholder for the language-specific documentation
-for <code>mwe</code>.</p>
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_et-dep/mwe.md" target="#">edit mwe</a></p>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_et-dep/iobj.md" target="#">edit iobj</a>
+</div>
 
-<p><a id="al-et-dep/name" class="al-dest"></a></p>
-<h2><code>name</code>: name</h2>
+<div about="#list_et" property="rdf:type" resource="#dep_et">
+	<div property="rdf:type" resource="../../u/dep/all.html#list" />
+	<a id="al-et-dep/list" class="al-dest" />
 
-<p>The dependency relation name is used for proper nouns constituted of multiple nominal elements. Note that names are right-headed in Estonian UD.</p>
+	<h2><code property="oliasystem:hasTag" lang="">list</code>: <div property="rdfs:label">list</div></h2>
+	<div property="rdfs:comment">
 
-<pre><code class="language-sdparse">Arvo Pärt
+This document is a placeholder for the language-specific documentation
+for `list`.
+
+
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_et-dep/list.md" target="#">edit list</a>
+</div>
+
+<div about="#mark_et" property="rdf:type" resource="#dep_et">
+	<div property="rdf:type" resource="../../u/dep/all.html#mark" />
+	<a id="al-et-dep/mark" class="al-dest" />
+
+	<h2><code property="oliasystem:hasTag" lang="">mark</code>: <div property="rdfs:label">marker</div></h2>
+	<div property="rdfs:comment">
+
+This document is a placeholder for the language-specific documentation
+for `mark`.
+
+
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_et-dep/mark.md" target="#">edit mark</a>
+</div>
+
+<div about="#mwe_et" property="rdf:type" resource="#dep_et">
+	<div property="rdf:type" resource="../../u/dep/all.html#mwe" />
+	<a id="al-et-dep/mwe" class="al-dest" />
+
+	<h2><code property="oliasystem:hasTag" lang="">mwe</code>: <div property="rdfs:label">multi-word expression</div></h2>
+	<div property="rdfs:comment">
+
+This document is a placeholder for the language-specific documentation
+for `mwe`.
+
+
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_et-dep/mwe.md" target="#">edit mwe</a>
+</div>
+
+<div about="#name_et" property="rdf:type" resource="#dep_et">
+	<div property="rdf:type" resource="../../u/dep/all.html#name" />
+	<a id="al-et-dep/name" class="al-dest" />
+
+	<h2><code property="oliasystem:hasTag" lang="">name</code>: <div property="rdfs:label">name</div></h2>
+	<div property="rdfs:comment">
+
+The dependency relation name is used for proper nouns constituted of multiple nominal elements. Note that names are right-headed in Estonian UD.
+
+~~~ sdparse
+Arvo Pärt
 name(Pärt-2, Arvo-1)
-</code></pre>
+~~~
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_et-dep/name.md" target="#">edit name</a></p>
 
-<p><a id="al-et-dep/neg" class="al-dest"></a></p>
-<h2><code>neg</code>: negation modifier</h2>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_et-dep/name.md" target="#">edit name</a>
+</div>
 
-<p>The negation modifier is the relation between a negation word and the word it modifies.</p>
+<div about="#neg_et" property="rdf:type" resource="#dep_et">
+	<div property="rdf:type" resource="../../u/dep/all.html#neg" />
+	<a id="al-et-dep/neg" class="al-dest" />
 
-<p>Words ‘ei’, ‘ära’ and ‘ärge’ as parts of negative verb form are annotated using this relation.</p>
+	<h2><code property="oliasystem:hasTag" lang="">neg</code>: <div property="rdfs:label">negation modifier</div></h2>
+	<div property="rdfs:comment">
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_et-dep/neg.md" target="#">edit neg</a></p>
+The negation modifier is the relation between a negation word and the word it modifies.
 
-<p><a id="al-et-dep/nmod" class="al-dest"></a></p>
-<h2><code>nmod</code>: nominal modifier</h2>
+Words 'ei', 'ära' and 'ärge' as parts of negative verb form are annotated using this relation.
 
-<p>The nmod relation is used for nominal modifiers. They depend either on another noun (group “noun dependents”) or on a predicate (group “non-core dependents of clausal predicates”). They can occur alone or together with an adposition in an adpositional phrase.</p>
 
-<pre><code class="language-sdparse">Rüütel läks lossi .
+
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_et-dep/neg.md" target="#">edit neg</a>
+</div>
+
+<div about="#nmod_et" property="rdf:type" resource="#dep_et">
+	<div property="rdf:type" resource="../../u/dep/all.html#nmod" />
+	<a id="al-et-dep/nmod" class="al-dest" />
+
+	<h2><code property="oliasystem:hasTag" lang="">nmod</code>: <div property="rdfs:label">nominal modifier</div></h2>
+	<div property="rdfs:comment">
+
+The nmod relation is used for nominal modifiers. They depend either on another noun (group “noun dependents”) or on a predicate (group “non-core dependents of clausal predicates”). They can occur alone or together with an adposition in an adpositional phrase.
+
+~~~ sdparse
+Rüütel läks lossi .
 nsubj(läks-2, Rüütel-1)
 nmod(läks-2, lossi-3)
 punct(läks-2, .-4)
-</code></pre>
+~~~
 
-<p>Knight went into the castle.</p>
+Knight went into the castle.
 
-<pre><code class="language-sdparse">Rüütel läks lossi juurde .
+~~~ sdparse
+Rüütel läks lossi juurde .
 nsubj(läks-2, Rüütel-1)
 nmod(läks-2, lossi-3)
 case(lossi-3, juurde-4)
 punct(läks-2, .-5)
-</code></pre>
+~~~
 
-<p>Knight went near the castle.</p>
+Knight went near the castle.
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_et-dep/nmod.md" target="#">edit nmod</a></p>
 
-<p><a id="al-et-dep/nsubj" class="al-dest"></a></p>
-<h2><code>nsubj</code>: nominal subject</h2>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_et-dep/nmod.md" target="#">edit nmod</a>
+</div>
 
-<p>The dependency type <code>nsubj</code> marks nominal subjects of the non-copular clause.</p>
+<div about="#nsubj_et" property="rdf:type" resource="#dep_et">
+	<div property="rdf:type" resource="../../u/dep/all.html#nsubj" />
+	<a id="al-et-dep/nsubj" class="al-dest" />
 
-<pre><code class="language-sdparse">Kass nägi koera .  
+	<h2><code property="oliasystem:hasTag" lang="">nsubj</code>: <div property="rdfs:label">nominal subject</div></h2>
+	<div property="rdfs:comment">
+
+The dependency type `nsubj` marks nominal subjects of the non-copular clause.
+
+~~~ sdparse
+Kass nägi koera .  
 nsubj (nägi-2, Kass-1)
 dobj (nägi-2, koera-3)
 punct (nägi-2, .-4)
-</code></pre>
+~~~
 
-<p>The cat saw the dog.</p>
+The cat saw the dog.
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_et-dep/nsubj.md" target="#">edit nsubj</a></p>
 
-<p><a id="al-et-dep/nsubjpass" class="al-dest"></a></p>
-<h2><code>nsubjpass</code>: passive nominal subject</h2>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_et-dep/nsubj.md" target="#">edit nsubj</a>
+</div>
 
-<p>This document is a placeholder for the language-specific documentation
-for <code>nsubjpass</code>.</p>
+<div about="#nsubjpass_et" property="rdf:type" resource="#dep_et">
+	<div property="rdf:type" resource="../../u/dep/all.html#nsubjpass" />
+	<a id="al-et-dep/nsubjpass" class="al-dest" />
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_et-dep/nsubjpass.md" target="#">edit nsubjpass</a></p>
+	<h2><code property="oliasystem:hasTag" lang="">nsubjpass</code>: <div property="rdfs:label">passive nominal subject</div></h2>
+	<div property="rdfs:comment">
 
-<p><a id="al-et-dep/nummod" class="al-dest"></a></p>
-<h2><code>nummod</code>: numeric modifier</h2>
+This document is a placeholder for the language-specific documentation
+for `nsubjpass`.
 
-<p>This document is a placeholder for the language-specific documentation
-for <code>nummod</code>.</p>
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_et-dep/nummod.md" target="#">edit nummod</a></p>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_et-dep/nsubjpass.md" target="#">edit nsubjpass</a>
+</div>
 
-<p><a id="al-et-dep/parataxis" class="al-dest"></a></p>
-<h2><code>parataxis</code>: parataxis</h2>
+<div about="#nummod_et" property="rdf:type" resource="#dep_et">
+	<div property="rdf:type" resource="../../u/dep/all.html#nummod" />
+	<a id="al-et-dep/nummod" class="al-dest" />
 
-<p>This document is a placeholder for the language-specific documentation
-for <code>parataxis</code>.</p>
+	<h2><code property="oliasystem:hasTag" lang="">nummod</code>: <div property="rdfs:label">numeric modifier</div></h2>
+	<div property="rdfs:comment">
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_et-dep/parataxis.md" target="#">edit parataxis</a></p>
+This document is a placeholder for the language-specific documentation
+for `nummod`.
 
-<p><a id="al-et-dep/punct" class="al-dest"></a></p>
-<h2><code>punct</code>: punctuation</h2>
 
-<p>This document is a placeholder for the language-specific documentation
-for <code>punct</code>.</p>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_et-dep/nummod.md" target="#">edit nummod</a>
+</div>
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_et-dep/punct.md" target="#">edit punct</a></p>
+<div about="#parataxis_et" property="rdf:type" resource="#dep_et">
+	<div property="rdf:type" resource="../../u/dep/all.html#parataxis" />
+	<a id="al-et-dep/parataxis" class="al-dest" />
 
-<p><a id="al-et-dep/remnant" class="al-dest"></a></p>
-<h2><code>remnant</code>: remnant in ellipsis</h2>
+	<h2><code property="oliasystem:hasTag" lang="">parataxis</code>: <div property="rdfs:label">parataxis</div></h2>
+	<div property="rdfs:comment">
 
-<p>This document is a placeholder for the language-specific documentation
-for <code>remnant</code>.</p>
+This document is a placeholder for the language-specific documentation
+for `parataxis`.
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_et-dep/remnant.md" target="#">edit remnant</a></p>
 
-<p><a id="al-et-dep/reparandum" class="al-dest"></a></p>
-<h2><code>reparandum</code>: overridden disfluency</h2>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_et-dep/parataxis.md" target="#">edit parataxis</a>
+</div>
 
-<p>This document is a placeholder for the language-specific documentation
-for <code>reparandum</code>.</p>
+<div about="#punct_et" property="rdf:type" resource="#dep_et">
+	<div property="rdf:type" resource="../../u/dep/all.html#punct" />
+	<a id="al-et-dep/punct" class="al-dest" />
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_et-dep/reparandum.md" target="#">edit reparandum</a></p>
+	<h2><code property="oliasystem:hasTag" lang="">punct</code>: <div property="rdfs:label">punctuation</div></h2>
+	<div property="rdfs:comment">
 
-<p><a id="al-et-dep/root" class="al-dest"></a></p>
-<h2><code>root</code>: root</h2>
+This document is a placeholder for the language-specific documentation
+for `punct`.
 
-<p>This document is a placeholder for the language-specific documentation
-for <code>root</code>.</p>
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_et-dep/root.md" target="#">edit root</a></p>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_et-dep/punct.md" target="#">edit punct</a>
+</div>
 
-<p><a id="al-et-dep/vocative" class="al-dest"></a></p>
-<h2><code>vocative</code>: vocative</h2>
+<div about="#remnant_et" property="rdf:type" resource="#dep_et">
+	<div property="rdf:type" resource="../../u/dep/all.html#remnant" />
+	<a id="al-et-dep/remnant" class="al-dest" />
 
-<p>This document is a placeholder for the language-specific documentation
-for <code>vocative</code>.</p>
+	<h2><code property="oliasystem:hasTag" lang="">remnant</code>: <div property="rdfs:label">remnant in ellipsis</div></h2>
+	<div property="rdfs:comment">
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_et-dep/vocative.md" target="#">edit vocative</a></p>
+This document is a placeholder for the language-specific documentation
+for `remnant`.
 
-<p><a id="al-et-dep/xcomp" class="al-dest"></a></p>
-<h2><code>xcomp</code>: open clausal complement</h2>
 
-<p>This document is a placeholder for the language-specific documentation
-for <code>xcomp</code>.</p>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_et-dep/remnant.md" target="#">edit remnant</a>
+</div>
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_et-dep/xcomp.md" target="#">edit xcomp</a></p>
+<div about="#reparandum_et" property="rdf:type" resource="#dep_et">
+	<div property="rdf:type" resource="../../u/dep/all.html#reparandum" />
+	<a id="al-et-dep/reparandum" class="al-dest" />
 
+	<h2><code property="oliasystem:hasTag" lang="">reparandum</code>: <div property="rdfs:label">overridden disfluency</div></h2>
+	<div property="rdfs:comment">
+
+This document is a placeholder for the language-specific documentation
+for `reparandum`.
+
+
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_et-dep/reparandum.md" target="#">edit reparandum</a>
+</div>
+
+<div about="#root_et" property="rdf:type" resource="#dep_et">
+	<div property="rdf:type" resource="../../u/dep/all.html#root" />
+	<a id="al-et-dep/root" class="al-dest" />
+
+	<h2><code property="oliasystem:hasTag" lang="">root</code>: <div property="rdfs:label">root</div></h2>
+	<div property="rdfs:comment">
+
+This document is a placeholder for the language-specific documentation
+for `root`.
+
+
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_et-dep/root.md" target="#">edit root</a>
+</div>
+
+<div about="#vocative_et" property="rdf:type" resource="#dep_et">
+	<div property="rdf:type" resource="../../u/dep/all.html#vocative" />
+	<a id="al-et-dep/vocative" class="al-dest" />
+
+	<h2><code property="oliasystem:hasTag" lang="">vocative</code>: <div property="rdfs:label">vocative</div></h2>
+	<div property="rdfs:comment">
+
+This document is a placeholder for the language-specific documentation
+for `vocative`.
+
+
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_et-dep/vocative.md" target="#">edit vocative</a>
+</div>
+
+<div about="#xcomp_et" property="rdf:type" resource="#dep_et">
+	<div property="rdf:type" resource="../../u/dep/all.html#xcomp" />
+	<a id="al-et-dep/xcomp" class="al-dest" />
+
+	<h2><code property="oliasystem:hasTag" lang="">xcomp</code>: <div property="rdfs:label">open clausal complement</div></h2>
+	<div property="rdfs:comment">
+
+This document is a placeholder for the language-specific documentation
+for `xcomp`.
+
+
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_et-dep/xcomp.md" target="#">edit xcomp</a>
+</div>
 
 
       </div>

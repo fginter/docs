@@ -43,7 +43,20 @@
 	  </div>
 	</noscript>
 
-          <h1 id="features">Features</h1>
+          
+<h1 id="features">Features</h1>
+
+<p><span about="." property="rdf:type" resource="owl:Ontology">
+	<span property="owl:imports" resource=" https://www.w3.org/2012/pyRdfa/extract?uri=http://universaldependencies.org/docs/u/feat/all.html&amp;format=xml&amp;rdfagraph=output&amp;vocab_expansion=false&amp;rdfa_lite=false&amp;embedded_rdf=true&amp;space_preserve=false&amp;vocab_cache=true&amp;vocab_cache_report=false&amp;vocab_cache_refresh=false"></span>
+</span></p>
+
+<p><span about="#feat_fi" property="rdfs:label" style="visibility: hidden">Features</span>
+<span about="#feat_fi" property="rdfs:subClassOf" resource="_:fi">
+	<span about="_:fi" property="rdf:type" resource="owl:Restriction">
+		<span property="owl:onProperty" resource="http://purl.org/dc/terms/language"></span>
+		<span property="owl:hasValue" lang="" style="visibility: hidden">fi</span>
+	</span>
+</span></p>
 
 <table class="typeindex">
   <tr>
@@ -133,8 +146,44 @@
 
 <hr />
 
-<p><a id="al-fi-feat/Abbr" class="al-dest"></a></p>
-<h2><code>Abbr</code>: abbreviation</h2>
+<div about="#Abbr_fi" property="rdfs:subClassOf" resource="#feat_fi">
+	<a id="al-fi-feat/Abbr" class="al-dest" />
+	<h2><code property="rdfs:label" lang="">Abbr</code>: <span property="rdfs:label">abbreviation</span>
+	<code>[</code> 
+	
+	
+		
+		
+			
+				
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#AbbrYes_fi" property="rdf:type" resource="#Abbr_fi">
+						<span property="rdf:type" resource="../../u/feat/all.html#AbbrYes" />
+						<code property="oliasystem:hasTagContaining" lang="">Abbr=Yes</code>
+					</span>
+				
+			
+		
+			
+				
+			
+		
+	
+		
+		
+			
+		
+	
+	<code>]</code>
+	</h2>
+	<div about="#Abbr_fi" property="rdfs:comment">	
 
 <p>Boolean feature marking a word as an abbreviation.</p>
 
@@ -155,10 +204,415 @@ the <code>Abbr</code> feature will not appear.</p>
   <li>[fi] <em>USA</em>, <em>EU</em></li>
 </ul>
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_fi-feat/Abbr.md" target="#">edit Abbr</a></p>
 
-<p><a id="al-fi-feat/Case" class="al-dest"></a></p>
-<h2><code>Case</code>: case</h2>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_fi-feat/Abbr.md" target="#">edit Abbr</a>
+</div>
+
+<div about="#Case_fi" property="rdfs:subClassOf" resource="#feat_fi">
+	<a id="al-fi-feat/Case" class="al-dest" />
+	<h2><code property="rdfs:label" lang="">Case</code>: <span property="rdfs:label">case</span>
+	<code>[</code> 
+	
+	
+		
+		
+	
+		
+		
+			
+				
+					
+					<span about="#CaseNom_fi" property="rdf:type" resource="#Case_fi">
+						<span property="rdf:type" resource="../../u/feat/all.html#CaseNom" />
+						<code property="oliasystem:hasTagContaining" lang="">Case=Nom</code>
+					</span>
+				
+			
+		
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#CaseAcc_fi" property="rdf:type" resource="#Case_fi">
+						<span property="rdf:type" resource="../../u/feat/all.html#CaseAcc" />
+						<code property="oliasystem:hasTagContaining" lang="">Case=Acc</code>
+					</span>
+				
+			
+		
+			
+		
+			
+		
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#CaseGen_fi" property="rdf:type" resource="#Case_fi">
+						<span property="rdf:type" resource="../../u/feat/all.html#CaseGen" />
+						<code property="oliasystem:hasTagContaining" lang="">Case=Gen</code>
+					</span>
+				
+			
+		
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#CaseIns_fi" property="rdf:type" resource="#Case_fi">
+						<span property="rdf:type" resource="../../u/feat/all.html#CaseIns" />
+						<code property="oliasystem:hasTagContaining" lang="">Case=Ins</code>
+					</span>
+				
+			
+		
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+		
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#CasePar_fi" property="rdf:type" resource="#Case_fi">
+						<span property="rdf:type" resource="../../u/feat/all.html#CasePar" />
+						<code property="oliasystem:hasTagContaining" lang="">Case=Par</code>
+					</span>
+				
+			
+		
+			
+		
+	
+		
+		
+			
+		
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#CaseEss_fi" property="rdf:type" resource="#Case_fi">
+						<span property="rdf:type" resource="../../u/feat/all.html#CaseEss" />
+						<code property="oliasystem:hasTagContaining" lang="">Case=Ess</code>
+					</span>
+				
+			
+		
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+		
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#CaseTra_fi" property="rdf:type" resource="#Case_fi">
+						<span property="rdf:type" resource="../../u/feat/all.html#CaseTra" />
+						<code property="oliasystem:hasTagContaining" lang="">Case=Tra</code>
+					</span>
+				
+			
+		
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+		
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#CaseCom_fi" property="rdf:type" resource="#Case_fi">
+						<span property="rdf:type" resource="../../u/feat/all.html#CaseCom" />
+						<code property="oliasystem:hasTagContaining" lang="">Case=Com</code>
+					</span>
+				
+			
+		
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+		
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#CaseAbe_fi" property="rdf:type" resource="#Case_fi">
+						<span property="rdf:type" resource="../../u/feat/all.html#CaseAbe" />
+						<code property="oliasystem:hasTagContaining" lang="">Case=Abe</code>
+					</span>
+				
+			
+		
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#CaseIne_fi" property="rdf:type" resource="#Case_fi">
+						<span property="rdf:type" resource="../../u/feat/all.html#CaseIne" />
+						<code property="oliasystem:hasTagContaining" lang="">Case=Ine</code>
+					</span>
+				
+			
+		
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#CaseIll_fi" property="rdf:type" resource="#Case_fi">
+						<span property="rdf:type" resource="../../u/feat/all.html#CaseIll" />
+						<code property="oliasystem:hasTagContaining" lang="">Case=Ill</code>
+					</span>
+				
+			
+		
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#CaseEla_fi" property="rdf:type" resource="#Case_fi">
+						<span property="rdf:type" resource="../../u/feat/all.html#CaseEla" />
+						<code property="oliasystem:hasTagContaining" lang="">Case=Ela</code>
+					</span>
+				
+			
+		
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#CaseAde_fi" property="rdf:type" resource="#Case_fi">
+						<span property="rdf:type" resource="../../u/feat/all.html#CaseAde" />
+						<code property="oliasystem:hasTagContaining" lang="">Case=Ade</code>
+					</span>
+				
+			
+		
+			
+		
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+		
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#CaseAll_fi" property="rdf:type" resource="#Case_fi">
+						<span property="rdf:type" resource="../../u/feat/all.html#CaseAll" />
+						<code property="oliasystem:hasTagContaining" lang="">Case=All</code>
+					</span>
+				
+			
+		
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#CaseAbl_fi" property="rdf:type" resource="#Case_fi">
+						<span property="rdf:type" resource="../../u/feat/all.html#CaseAbl" />
+						<code property="oliasystem:hasTagContaining" lang="">Case=Abl</code>
+					</span>
+				
+			
+		
+			
+		
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+		
+			
+				
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+		
+			
+		
+	
+		
+		
+			
+		
+			
+		
+			
+		
+	
+		
+		
+			
+		
+			
+		
+	
+		
+		
+			
+		
+	
+	<code>]</code>
+	</h2>
+	<div about="#Case_fi" property="rdfs:comment">	
 
 <h3 id="nom-nominative"><code>Nom</code>: nominative</h3>
 
@@ -431,10 +885,140 @@ UD Finnish follows ISK in not recognizing the lative case.</p>
 
 <p>FinnTreeBank (FI_FTB) marks the base form of the first infinitive as lative in contrast to translative.</p>
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_fi-feat/Case.md" target="#">edit Case</a></p>
 
-<p><a id="al-fi-feat/Clitic" class="al-dest"></a></p>
-<h2><code>Clitic</code>: clitic</h2>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_fi-feat/Case.md" target="#">edit Case</a>
+</div>
+
+<div about="#Clitic_fi" property="rdfs:subClassOf" resource="#feat_fi">
+	<a id="al-fi-feat/Clitic" class="al-dest" />
+	<h2><code property="rdfs:label" lang="">Clitic</code>: <span property="rdfs:label">clitic</span>
+	<code>[</code> 
+	
+	
+		
+		
+			
+		
+			
+				
+			
+		
+	
+		
+		
+			
+				
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+				
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+				
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+				
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+				
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#CliticS%0A%0ATODO%0A%0A%23_fi" property="rdf:type" resource="#Clitic_fi">
+						<span property="rdf:type" resource="../../u/feat/all.html#CliticS
+
+TODO
+
+#" />
+						<code property="oliasystem:hasTagContaining" lang="">Clitic=S
+
+TODO
+
+#</code>
+					</span>
+				
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+				
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+	
+	<code>]</code>
+	</h2>
+	<div about="#Clitic_fi" property="rdfs:comment">	
 
 <p>(Please note: this part of the documentation is not yet completed.)</p>
 
@@ -529,10 +1113,48 @@ also as a conjunction.</p>
   <li><a href="http://scripta.kotus.fi/visk/sisallys.php?p=1635">http://scripta.kotus.fi/visk/sisallys.php?p=1635</a> (in Finnish)</li>
 </ul>
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_fi-feat/Clitic.md" target="#">edit Clitic</a></p>
 
-<p><a id="al-fi-feat/Connegative" class="al-dest"></a></p>
-<h2><code>Connegative</code>: connegative</h2>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_fi-feat/Clitic.md" target="#">edit Clitic</a>
+</div>
+
+<div about="#Connegative_fi" property="rdfs:subClassOf" resource="#feat_fi">
+	<a id="al-fi-feat/Connegative" class="al-dest" />
+	<h2><code property="rdfs:label" lang="">Connegative</code>: <span property="rdfs:label">connegative</span>
+	<code>[</code> 
+	
+	
+		
+		
+			
+		
+	
+		
+		
+			
+		
+			
+				
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+		
+			
+		
+			
+		
+	
+	<code>]</code>
+	</h2>
+	<div about="#Connegative_fi" property="rdfs:comment">	
 
 <p>Boolean feature of verbs (<a href="">VERB</a> and <a href="">AUX</a>), marking a word as
 being in connegative form.</p>
@@ -559,10 +1181,95 @@ connegative form.</p>
   <li><a href="https://code.google.com/p/omorfi/wiki/AnalysisPossibilities#Negated_verb_forms">Omorfi tagger documentation</a></li>
 </ul>
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_fi-feat/Connegative.md" target="#">edit Connegative</a></p>
 
-<p><a id="al-fi-feat/Degree" class="al-dest"></a></p>
-<h2><code>Degree</code>: degree of comparison</h2>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_fi-feat/Connegative.md" target="#">edit Connegative</a>
+</div>
+
+<div about="#Degree_fi" property="rdfs:subClassOf" resource="#feat_fi">
+	<a id="al-fi-feat/Degree" class="al-dest" />
+	<h2><code property="rdfs:label" lang="">Degree</code>: <span property="rdfs:label">degree of comparison</span>
+	<code>[</code> 
+	
+	
+		
+		
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#DegreePos_fi" property="rdf:type" resource="#Degree_fi">
+						<span property="rdf:type" resource="../../u/feat/all.html#DegreePos" />
+						<code property="oliasystem:hasTagContaining" lang="">Degree=Pos</code>
+					</span>
+				
+			
+		
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#DegreeCmp_fi" property="rdf:type" resource="#Degree_fi">
+						<span property="rdf:type" resource="../../u/feat/all.html#DegreeCmp" />
+						<code property="oliasystem:hasTagContaining" lang="">Degree=Cmp</code>
+					</span>
+				
+			
+		
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#DegreeSup_fi" property="rdf:type" resource="#Degree_fi">
+						<span property="rdf:type" resource="../../u/feat/all.html#DegreeSup" />
+						<code property="oliasystem:hasTagContaining" lang="">Degree=Sup</code>
+					</span>
+				
+			
+		
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+		
+	
+	<code>]</code>
+	</h2>
+	<div about="#Degree_fi" property="rdfs:comment">	
 
 <p>Degree of comparison is a feature of <a href="fi-pos/ADJ">adjectives</a>,
 some <a href="fi-pos/ADV">adverbs</a>, and <a href="fi-pos/VERB">verbs</a> in participle form.</p>
@@ -607,10 +1314,353 @@ things within a set.</p>
 
 <p>The FI_FTB corpus applies the degree of comparison only when it is noticeable in the word form (that is, in comparative or superlative). Positive (Pos) is not used, as not all adjectives, adverbs and verb participles can appear in the other degrees of comparison at all.</p>
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_fi-feat/Degree.md" target="#">edit Degree</a></p>
 
-<p><a id="al-fi-feat/Derivation" class="al-dest"></a></p>
-<h2><code>Derivation</code>: derivation</h2>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_fi-feat/Degree.md" target="#">edit Degree</a>
+</div>
+
+<div about="#Derivation_fi" property="rdfs:subClassOf" resource="#feat_fi">
+	<a id="al-fi-feat/Derivation" class="al-dest" />
+	<h2><code property="rdfs:label" lang="">Derivation</code>: <span property="rdfs:label">derivation</span>
+	<code>[</code> 
+	
+	
+		
+		
+			
+		
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#DerivationMinen_fi" property="rdf:type" resource="#Derivation_fi">
+						<span property="rdf:type" resource="../../u/feat/all.html#DerivationMinen" />
+						<code property="oliasystem:hasTagContaining" lang="">Derivation=Minen</code>
+					</span>
+				
+			
+		
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+		
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#DerivationSti_fi" property="rdf:type" resource="#Derivation_fi">
+						<span property="rdf:type" resource="../../u/feat/all.html#DerivationSti" />
+						<code property="oliasystem:hasTagContaining" lang="">Derivation=Sti</code>
+					</span>
+				
+			
+		
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+		
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#DerivationInen_fi" property="rdf:type" resource="#Derivation_fi">
+						<span property="rdf:type" resource="../../u/feat/all.html#DerivationInen" />
+						<code property="oliasystem:hasTagContaining" lang="">Derivation=Inen</code>
+					</span>
+				
+			
+		
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+		
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#DerivationLainen_fi" property="rdf:type" resource="#Derivation_fi">
+						<span property="rdf:type" resource="../../u/feat/all.html#DerivationLainen" />
+						<code property="oliasystem:hasTagContaining" lang="">Derivation=Lainen</code>
+					</span>
+				
+			
+		
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+		
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#DerivationJa_fi" property="rdf:type" resource="#Derivation_fi">
+						<span property="rdf:type" resource="../../u/feat/all.html#DerivationJa" />
+						<code property="oliasystem:hasTagContaining" lang="">Derivation=Ja</code>
+					</span>
+				
+			
+		
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+		
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#DerivationTon_fi" property="rdf:type" resource="#Derivation_fi">
+						<span property="rdf:type" resource="../../u/feat/all.html#DerivationTon" />
+						<code property="oliasystem:hasTagContaining" lang="">Derivation=Ton</code>
+					</span>
+				
+			
+		
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+		
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#DerivationVs_fi" property="rdf:type" resource="#Derivation_fi">
+						<span property="rdf:type" resource="../../u/feat/all.html#DerivationVs" />
+						<code property="oliasystem:hasTagContaining" lang="">Derivation=Vs</code>
+					</span>
+				
+			
+		
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#DerivationLlinen_fi" property="rdf:type" resource="#Derivation_fi">
+						<span property="rdf:type" resource="../../u/feat/all.html#DerivationLlinen" />
+						<code property="oliasystem:hasTagContaining" lang="">Derivation=Llinen</code>
+					</span>
+				
+			
+		
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+		
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#DerivationTtain_fi" property="rdf:type" resource="#Derivation_fi">
+						<span property="rdf:type" resource="../../u/feat/all.html#DerivationTtain" />
+						<code property="oliasystem:hasTagContaining" lang="">Derivation=Ttain</code>
+					</span>
+				
+			
+		
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#DerivationU_fi" property="rdf:type" resource="#Derivation_fi">
+						<span property="rdf:type" resource="../../u/feat/all.html#DerivationU" />
+						<code property="oliasystem:hasTagContaining" lang="">Derivation=U</code>
+					</span>
+				
+			
+		
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+		
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#DerivationTtaa_fi" property="rdf:type" resource="#Derivation_fi">
+						<span property="rdf:type" resource="../../u/feat/all.html#DerivationTtaa" />
+						<code property="oliasystem:hasTagContaining" lang="">Derivation=Ttaa</code>
+					</span>
+				
+			
+		
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#DerivationTar_fi" property="rdf:type" resource="#Derivation_fi">
+						<span property="rdf:type" resource="../../u/feat/all.html#DerivationTar" />
+						<code property="oliasystem:hasTagContaining" lang="">Derivation=Tar</code>
+					</span>
+				
+			
+		
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+		
+	
+	<code>]</code>
+	</h2>
+	<div about="#Derivation_fi" property="rdfs:comment">	
 
 <p>(Please note: this part of the documentation is not yet completed.)</p>
 
@@ -821,10 +1871,69 @@ to a word.</p>
 
 <p>The language-specific feature Derivation is not in use in FI_FTB.</p>
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_fi-feat/Derivation.md" target="#">edit Derivation</a></p>
 
-<p><a id="al-fi-feat/Foreign" class="al-dest"></a></p>
-<h2><code>Foreign</code>: foreign word</h2>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_fi-feat/Derivation.md" target="#">edit Derivation</a>
+</div>
+
+<div about="#Foreign_fi" property="rdfs:subClassOf" resource="#feat_fi">
+	<a id="al-fi-feat/Foreign" class="al-dest" />
+	<h2><code property="rdfs:label" lang="">Foreign</code>: <span property="rdfs:label">foreign word</span>
+	<code>[</code> 
+	
+	
+		
+		
+			
+		
+			
+				
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#ForeignForeign_fi" property="rdf:type" resource="#Foreign_fi">
+						<span property="rdf:type" resource="../../u/feat/all.html#ForeignForeign" />
+						<code property="oliasystem:hasTagContaining" lang="">Foreign=Foreign</code>
+					</span>
+				
+			
+		
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#ForeignFscript_fi" property="rdf:type" resource="#Foreign_fi">
+						<span property="rdf:type" resource="../../u/feat/all.html#ForeignFscript" />
+						<code property="oliasystem:hasTagContaining" lang="">Foreign=Fscript</code>
+					</span>
+				
+			
+		
+			
+		
+	
+		
+		
+			
+		
+	
+	<code>]</code>
+	</h2>
+	<div about="#Foreign_fi" property="rdfs:comment">	
 
 <p>Is this a foreign word? Not a loan word and not a foreign name but a
 genuinely foreign word appearing inside native text. This feature
@@ -846,10 +1955,114 @@ class to which the word belongs in its original language.</p>
 
 <p>TODO</p>
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_fi-feat/Foreign.md" target="#">edit Foreign</a></p>
 
-<p><a id="al-fi-feat/InfForm" class="al-dest"></a></p>
-<h2><code>InfForm</code>: form of infinitive</h2>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_fi-feat/Foreign.md" target="#">edit Foreign</a>
+</div>
+
+<div about="#InfForm_fi" property="rdfs:subClassOf" resource="#feat_fi">
+	<a id="al-fi-feat/InfForm" class="al-dest" />
+	<h2><code property="rdfs:label" lang="">InfForm</code>: <span property="rdfs:label">form of infinitive</span>
+	<code>[</code> 
+	
+	
+		
+		
+			
+		
+			
+				
+			
+		
+			
+		
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#InfForm1_fi" property="rdf:type" resource="#InfForm_fi">
+						<span property="rdf:type" resource="../../u/feat/all.html#InfForm1" />
+						<code property="oliasystem:hasTagContaining" lang="">InfForm=1</code>
+					</span>
+				
+			
+		
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+		
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#InfForm2_fi" property="rdf:type" resource="#InfForm_fi">
+						<span property="rdf:type" resource="../../u/feat/all.html#InfForm2" />
+						<code property="oliasystem:hasTagContaining" lang="">InfForm=2</code>
+					</span>
+				
+			
+		
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+		
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#InfForm3_fi" property="rdf:type" resource="#InfForm_fi">
+						<span property="rdf:type" resource="../../u/feat/all.html#InfForm3" />
+						<code property="oliasystem:hasTagContaining" lang="">InfForm=3</code>
+					</span>
+				
+			
+		
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+		
+			
+		
+	
+	<code>]</code>
+	</h2>
+	<div about="#InfForm_fi" property="rdfs:comment">	
 
 <p>(Please note: the labels on this page, including the feature name
 <code>InfForm</code>, are subject to change.)</p>
@@ -915,10 +2128,89 @@ for verbs.</p>
   <li><a href="http://kaino.kotus.fi/visk/sisallys.php?p=121">http://kaino.kotus.fi/visk/sisallys.php?p=121</a> (in Finnish)</li>
 </ul>
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_fi-feat/InfForm.md" target="#">edit InfForm</a></p>
 
-<p><a id="al-fi-feat/Mood" class="al-dest"></a></p>
-<h2><code>Mood</code>: mood</h2>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_fi-feat/InfForm.md" target="#">edit InfForm</a>
+</div>
+
+<div about="#Mood_fi" property="rdfs:subClassOf" resource="#feat_fi">
+	<a id="al-fi-feat/Mood" class="al-dest" />
+	<h2><code property="rdfs:label" lang="">Mood</code>: <span property="rdfs:label">mood</span>
+	<code>[</code> 
+	
+	
+		
+		
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#MoodInd_fi" property="rdf:type" resource="#Mood_fi">
+						<span property="rdf:type" resource="../../u/feat/all.html#MoodInd" />
+						<code property="oliasystem:hasTagContaining" lang="">Mood=Ind</code>
+					</span>
+				
+			
+		
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#MoodImp_fi" property="rdf:type" resource="#Mood_fi">
+						<span property="rdf:type" resource="../../u/feat/all.html#MoodImp" />
+						<code property="oliasystem:hasTagContaining" lang="">Mood=Imp</code>
+					</span>
+				
+			
+		
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+		
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+		
+			
+		
+	
+		
+		
+			
+		
+	
+	<code>]</code>
+	</h2>
+	<div about="#Mood_fi" property="rdfs:comment">	
 
 <p>Mood is a feature that expresses modality and subclassifies finite
 <a href="fi-pos/VERB">verb</a> forms.</p>
@@ -968,18 +2260,112 @@ happen.</p>
   <li>[fi] <em>talo <b>valmistunee</b></em> “the house <b>will likely be completed</b>”</li>
 </ul>
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_fi-feat/Mood.md" target="#">edit Mood</a></p>
 
-<p><a id="al-fi-feat/Negative" class="al-dest"></a></p>
-<h2><code>Negative</code>: whether the word can be or is negated</h2>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_fi-feat/Mood.md" target="#">edit Mood</a>
+</div>
+
+<div about="#Negative_fi" property="rdfs:subClassOf" resource="#feat_fi">
+	<a id="al-fi-feat/Negative" class="al-dest" />
+	<h2><code property="rdfs:label" lang="">Negative</code>: <span property="rdfs:label">whether the word can be or is negated</span>
+	<code>[</code> 
+	
+	
+		
+		
+			
+				
+			
+		
+	
+	<code>]</code>
+	</h2>
+	<div about="#Negative_fi" property="rdfs:comment">	
 
 <p>In UD Finnish, the feature <code>Negative</code> exclusively marks forms of the
 negation verb <em>ei</em>.</p>
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_fi-feat/Negative.md" target="#">edit Negative</a></p>
 
-<p><a id="al-fi-feat/NumType" class="al-dest"></a></p>
-<h2><code>NumType</code>: numeral type</h2>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_fi-feat/Negative.md" target="#">edit Negative</a>
+</div>
+
+<div about="#NumType_fi" property="rdfs:subClassOf" resource="#feat_fi">
+	<a id="al-fi-feat/NumType" class="al-dest" />
+	<h2><code property="rdfs:label" lang="">NumType</code>: <span property="rdfs:label">numeral type</span>
+	<code>[</code> 
+	
+	
+		
+		
+	
+		
+		
+			
+				
+					
+					<span about="#NumTypeCard_fi" property="rdf:type" resource="#NumType_fi">
+						<span property="rdf:type" resource="../../u/feat/all.html#NumTypeCard" />
+						<code property="oliasystem:hasTagContaining" lang="">NumType=Card</code>
+					</span>
+				
+			
+		
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#NumTypeOrd_fi" property="rdf:type" resource="#NumType_fi">
+						<span property="rdf:type" resource="../../u/feat/all.html#NumTypeOrd" />
+						<code property="oliasystem:hasTagContaining" lang="">NumType=Ord</code>
+					</span>
+				
+			
+		
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#NumTypeMult_fi" property="rdf:type" resource="#NumType_fi">
+						<span property="rdf:type" resource="../../u/feat/all.html#NumTypeMult" />
+						<code property="oliasystem:hasTagContaining" lang="">NumType=Mult</code>
+					</span>
+				
+			
+		
+			
+		
+	
+		
+		
+			
+		
+			
+		
+			
+		
+	
+	<code>]</code>
+	</h2>
+	<div about="#NumType_fi" property="rdfs:comment">	
 
 <h3 id="card-cardinal-number-or-corresponding-interrogative--relative--indefinite--demonstrative-word"><code>Card</code>: cardinal number or corresponding interrogative / relative / indefinite / demonstrative word</h3>
 
@@ -1011,10 +2397,67 @@ negation verb <em>ei</em>.</p>
 
 <p>(TODO: others from <a href="http://universaldependencies.org/u/feat/NumType.html">http://universaldependencies.org/u/feat/NumType.html</a>?)</p>
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_fi-feat/NumType.md" target="#">edit NumType</a></p>
 
-<p><a id="al-fi-feat/Number" class="al-dest"></a></p>
-<h2><code>Number</code>: number</h2>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_fi-feat/NumType.md" target="#">edit NumType</a>
+</div>
+
+<div about="#Number_fi" property="rdfs:subClassOf" resource="#feat_fi">
+	<a id="al-fi-feat/Number" class="al-dest" />
+	<h2><code property="rdfs:label" lang="">Number</code>: <span property="rdfs:label">number</span>
+	<code>[</code> 
+	
+	
+		
+		
+			
+				
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#NumberSing_fi" property="rdf:type" resource="#Number_fi">
+						<span property="rdf:type" resource="../../u/feat/all.html#NumberSing" />
+						<code property="oliasystem:hasTagContaining" lang="">Number=Sing</code>
+					</span>
+				
+			
+		
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#NumberPlur_fi" property="rdf:type" resource="#Number_fi">
+						<span property="rdf:type" resource="../../u/feat/all.html#NumberPlur" />
+						<code property="oliasystem:hasTagContaining" lang="">Number=Plur</code>
+					</span>
+				
+			
+		
+			
+		
+	
+		
+		
+			
+		
+	
+	<code>]</code>
+	</h2>
+	<div about="#Number_fi" property="rdfs:comment">	
 
 <p><code>Number</code> is a feature of <a href="fi-pos/NOUN">nouns</a>, <a href="fi-pos/PRON">pronouns</a>
 and <a href="fi-pos/NUM">numbers</a> as well as of <a href="u-pos/VERB">verbs</a> and 
@@ -1044,10 +2487,82 @@ and <a href="fi-pos/NUM">numbers</a> as well as of <a href="u-pos/VERB">verbs</a
   <li>[fi] <em>vaikeat</em> “difficult”</li>
 </ul>
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_fi-feat/Number.md" target="#">edit Number</a></p>
 
-<p><a id="al-fi-feat/Number[psor]" class="al-dest"></a></p>
-<h2><code>Number[psor]</code>: number of possessor</h2>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_fi-feat/Number.md" target="#">edit Number</a>
+</div>
+
+<div about="#Number%5Bpsor%5D_fi" property="rdfs:subClassOf" resource="#feat_fi">
+	<a id="al-fi-feat/Number[psor]" class="al-dest" />
+	<h2><code property="rdfs:label" lang="">Number[psor]</code>: <span property="rdfs:label">number of possessor</span>
+	<code>[</code> 
+	
+	
+		
+		
+			
+				
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#Number%5Bpsor%5DSing_fi" property="rdf:type" resource="#Number%5Bpsor%5D_fi">
+						<span property="rdf:type" resource="../../u/feat/all.html#Number[psor]Sing" />
+						<code property="oliasystem:hasTagContaining" lang="">Number[psor]=Sing</code>
+					</span>
+				
+			
+		
+			
+		
+	
+		
+		
+			
+		
+			
+				
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#Number%5Bpsor%5DPlur_fi" property="rdf:type" resource="#Number%5Bpsor%5D_fi">
+						<span property="rdf:type" resource="../../u/feat/all.html#Number[psor]Plur" />
+						<code property="oliasystem:hasTagContaining" lang="">Number[psor]=Plur</code>
+					</span>
+				
+			
+		
+			
+		
+	
+		
+		
+			
+		
+			
+				
+			
+		
+	
+		
+		
+			
+		
+			
+		
+	
+	<code>]</code>
+	</h2>
+	<div about="#Number%5Bpsor%5D_fi" property="rdfs:comment">	
 
 <p><code>Number[psor]</code> is a
 <a href="/docs/u/overview/feat-layers.html">layered feature</a> of
@@ -1075,10 +2590,139 @@ and <a href="fi-pos/NUM">numbers</a> as well as of <a href="u-pos/VERB">verbs</a
   <li><a href="http://scripta.kotus.fi/visk/sisallys.php?p=97">http://scripta.kotus.fi/visk/sisallys.php?p=97</a> (in Finnish)</li>
 </ul>
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_fi-feat/Number-psor.md" target="#">edit Number[psor]</a></p>
 
-<p><a id="al-fi-feat/PartForm" class="al-dest"></a></p>
-<h2><code>PartForm</code>: form of participle</h2>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_fi-feat/Number-psor.md" target="#">edit Number[psor]</a>
+</div>
+
+<div about="#PartForm_fi" property="rdfs:subClassOf" resource="#feat_fi">
+	<a id="al-fi-feat/PartForm" class="al-dest" />
+	<h2><code property="rdfs:label" lang="">PartForm</code>: <span property="rdfs:label">form of participle</span>
+	<code>[</code> 
+	
+	
+		
+		
+			
+		
+			
+				
+			
+		
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#PartFormPres_fi" property="rdf:type" resource="#PartForm_fi">
+						<span property="rdf:type" resource="../../u/feat/all.html#PartFormPres" />
+						<code property="oliasystem:hasTagContaining" lang="">PartForm=Pres</code>
+					</span>
+				
+			
+		
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+		
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#PartFormPast_fi" property="rdf:type" resource="#PartForm_fi">
+						<span property="rdf:type" resource="../../u/feat/all.html#PartFormPast" />
+						<code property="oliasystem:hasTagContaining" lang="">PartForm=Past</code>
+					</span>
+				
+			
+		
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+		
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#PartFormAgt_fi" property="rdf:type" resource="#PartForm_fi">
+						<span property="rdf:type" resource="../../u/feat/all.html#PartFormAgt" />
+						<code property="oliasystem:hasTagContaining" lang="">PartForm=Agt</code>
+					</span>
+				
+			
+		
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+		
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#PartFormNeg_fi" property="rdf:type" resource="#PartForm_fi">
+						<span property="rdf:type" resource="../../u/feat/all.html#PartFormNeg" />
+						<code property="oliasystem:hasTagContaining" lang="">PartForm=Neg</code>
+					</span>
+				
+			
+		
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+		
+			
+		
+	
+	<code>]</code>
+	</h2>
+	<div about="#PartForm_fi" property="rdfs:comment">	
 
 <p>(Please note: the labels on this page, including the feature name
 <code>PartForm</code>, are subject to change.)</p>
@@ -1157,10 +2801,97 @@ participle forms.</p>
   <li><a href="http://kaino.kotus.fi/visk/sisallys.php?p=526">http://kaino.kotus.fi/visk/sisallys.php?p=526</a> (in Finnish)</li>
 </ul>
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_fi-feat/PartForm.md" target="#">edit PartForm</a></p>
 
-<p><a id="al-fi-feat/Person" class="al-dest"></a></p>
-<h2><code>Person</code>: person</h2>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_fi-feat/PartForm.md" target="#">edit PartForm</a>
+</div>
+
+<div about="#Person_fi" property="rdfs:subClassOf" resource="#feat_fi">
+	<a id="al-fi-feat/Person" class="al-dest" />
+	<h2><code property="rdfs:label" lang="">Person</code>: <span property="rdfs:label">person</span>
+	<code>[</code> 
+	
+	
+		
+		
+			
+				
+			
+		
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#Person1_fi" property="rdf:type" resource="#Person_fi">
+						<span property="rdf:type" resource="../../u/feat/all.html#Person1" />
+						<code property="oliasystem:hasTagContaining" lang="">Person=1</code>
+					</span>
+				
+			
+		
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#Person2_fi" property="rdf:type" resource="#Person_fi">
+						<span property="rdf:type" resource="../../u/feat/all.html#Person2" />
+						<code property="oliasystem:hasTagContaining" lang="">Person=2</code>
+					</span>
+				
+			
+		
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#Person3_fi" property="rdf:type" resource="#Person_fi">
+						<span property="rdf:type" resource="../../u/feat/all.html#Person3" />
+						<code property="oliasystem:hasTagContaining" lang="">Person=3</code>
+					</span>
+				
+			
+		
+			
+		
+	
+		
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+	
+	<code>]</code>
+	</h2>
+	<div about="#Person_fi" property="rdfs:comment">	
 
 <p><code>Person</code> is a feature of <a href="u-pos/VERB">verbs</a> (TODO: also pronouns?).</p>
 
@@ -1204,10 +2935,94 @@ nor addressees.</p>
 
 <p>TODO: consider <a href="http://en.wikipedia.org/wiki/Voice_(grammar)#The_fourth_person_in_Baltic-Finnic_languages">fourth person</a>, e.g. <em>kirja <strong>julkaistiin</strong></em>? (cf. ISK <a href="http://scripta.kotus.fi/visk/sisallys.php?p=106">http://scripta.kotus.fi/visk/sisallys.php?p=106</a>, <a href="http://scripta.kotus.fi/visk/sisallys.php?p=1313">http://scripta.kotus.fi/visk/sisallys.php?p=1313</a>)</p>
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_fi-feat/Person.md" target="#">edit Person</a></p>
 
-<p><a id="al-fi-feat/Person[psor]" class="al-dest"></a></p>
-<h2><code>Person[psor]</code>: person of possessor</h2>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_fi-feat/Person.md" target="#">edit Person</a>
+</div>
+
+<div about="#Person%5Bpsor%5D_fi" property="rdfs:subClassOf" resource="#feat_fi">
+	<a id="al-fi-feat/Person[psor]" class="al-dest" />
+	<h2><code property="rdfs:label" lang="">Person[psor]</code>: <span property="rdfs:label">person of possessor</span>
+	<code>[</code> 
+	
+	
+		
+		
+			
+				
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#Person%5Bpsor%5D1_fi" property="rdf:type" resource="#Person%5Bpsor%5D_fi">
+						<span property="rdf:type" resource="../../u/feat/all.html#Person[psor]1" />
+						<code property="oliasystem:hasTagContaining" lang="">Person[psor]=1</code>
+					</span>
+				
+			
+		
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#Person%5Bpsor%5D2_fi" property="rdf:type" resource="#Person%5Bpsor%5D_fi">
+						<span property="rdf:type" resource="../../u/feat/all.html#Person[psor]2" />
+						<code property="oliasystem:hasTagContaining" lang="">Person[psor]=2</code>
+					</span>
+				
+			
+		
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#Person%5Bpsor%5D3_fi" property="rdf:type" resource="#Person%5Bpsor%5D_fi">
+						<span property="rdf:type" resource="../../u/feat/all.html#Person[psor]3" />
+						<code property="oliasystem:hasTagContaining" lang="">Person[psor]=3</code>
+					</span>
+				
+			
+		
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+		
+			
+		
+	
+	<code>]</code>
+	</h2>
+	<div about="#Person%5Bpsor%5D_fi" property="rdfs:comment">	
 
 <p><code>Person[psor]</code> is a
 <a href="/docs/u/overview/feat-layers.html">layered feature</a> of
@@ -1243,10 +3058,34 @@ nor addressees.</p>
   <li><a href="http://scripta.kotus.fi/visk/sisallys.php?p=97">http://scripta.kotus.fi/visk/sisallys.php?p=97</a> (in Finnish)</li>
 </ul>
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_fi-feat/Person-psor.md" target="#">edit Person[psor]</a></p>
 
-<p><a id="al-fi-feat/Poss" class="al-dest"></a></p>
-<h2><code>Poss</code>: possessive</h2>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_fi-feat/Person-psor.md" target="#">edit Person[psor]</a>
+</div>
+
+<div about="#Poss_fi" property="rdfs:subClassOf" resource="#feat_fi">
+	<a id="al-fi-feat/Poss" class="al-dest" />
+	<h2><code property="rdfs:label" lang="">Poss</code>: <span property="rdfs:label">possessive</span>
+	<code>[</code> 
+	
+	
+		
+		
+			
+				
+			
+		
+	
+		
+		
+			
+		
+			
+		
+	
+	<code>]</code>
+	</h2>
+	<div about="#Poss_fi" property="rdfs:comment">	
 
 <p>Finnish does not have a separate category of possessive pronouns,
 instead using possessive suffixes (see <a href="">Person[psor]</a> and
@@ -1261,10 +3100,207 @@ instead using possessive suffixes (see <a href="">Person[psor]</a> and
   <li><a href="http://scripta.kotus.fi/visk/sisallys.php?p=100">http://scripta.kotus.fi/visk/sisallys.php?p=100</a> (in Finnish)</li>
 </ul>
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_fi-feat/Poss.md" target="#">edit Poss</a></p>
 
-<p><a id="al-fi-feat/PronType" class="al-dest"></a></p>
-<h2><code>PronType</code>: pronominal type</h2>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_fi-feat/Poss.md" target="#">edit Poss</a>
+</div>
+
+<div about="#PronType_fi" property="rdfs:subClassOf" resource="#feat_fi">
+	<a id="al-fi-feat/PronType" class="al-dest" />
+	<h2><code property="rdfs:label" lang="">PronType</code>: <span property="rdfs:label">pronominal type</span>
+	<code>[</code> 
+	
+	
+		
+		
+	
+		
+		
+			
+				
+					
+					<span about="#PronTypePrs_fi" property="rdf:type" resource="#PronType_fi">
+						<span property="rdf:type" resource="../../u/feat/all.html#PronTypePrs" />
+						<code property="oliasystem:hasTagContaining" lang="">PronType=Prs</code>
+					</span>
+				
+			
+		
+			
+		
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+		
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#PronTypeRcp_fi" property="rdf:type" resource="#PronType_fi">
+						<span property="rdf:type" resource="../../u/feat/all.html#PronTypeRcp" />
+						<code property="oliasystem:hasTagContaining" lang="">PronType=Rcp</code>
+					</span>
+				
+			
+		
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+		
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#PronTypeInt_fi" property="rdf:type" resource="#PronType_fi">
+						<span property="rdf:type" resource="../../u/feat/all.html#PronTypeInt" />
+						<code property="oliasystem:hasTagContaining" lang="">PronType=Int</code>
+					</span>
+				
+			
+		
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+		
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#PronTypeRel_fi" property="rdf:type" resource="#PronType_fi">
+						<span property="rdf:type" resource="../../u/feat/all.html#PronTypeRel" />
+						<code property="oliasystem:hasTagContaining" lang="">PronType=Rel</code>
+					</span>
+				
+			
+		
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+		
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#PronTypeDem_fi" property="rdf:type" resource="#PronType_fi">
+						<span property="rdf:type" resource="../../u/feat/all.html#PronTypeDem" />
+						<code property="oliasystem:hasTagContaining" lang="">PronType=Dem</code>
+					</span>
+				
+			
+		
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+		
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#PronTypeInd_fi" property="rdf:type" resource="#PronType_fi">
+						<span property="rdf:type" resource="../../u/feat/all.html#PronTypeInd" />
+						<code property="oliasystem:hasTagContaining" lang="">PronType=Ind</code>
+					</span>
+				
+			
+		
+			
+		
+	
+		
+		
+			
+		
+			
+		
+			
+		
+			
+				
+			
+		
+	
+		
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+	
+	<code>]</code>
+	</h2>
+	<div about="#PronType_fi" property="rdfs:comment">	
 
 <h3 id="prs-personal"><code>Prs</code>: personal</h3>
 
@@ -1410,18 +3446,95 @@ However, as the
 feature only covers inherently negative pronouns, UD Finnish assigns
 the <code>PronType</code> value <code>Ind</code> to these pronouns.</p>
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_fi-feat/PronType.md" target="#">edit PronType</a></p>
 
-<p><a id="al-fi-feat/Reflex" class="al-dest"></a></p>
-<h2><code>Reflex</code>: reflexive</h2>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_fi-feat/PronType.md" target="#">edit PronType</a>
+</div>
+
+<div about="#Reflex_fi" property="rdfs:subClassOf" resource="#feat_fi">
+	<a id="al-fi-feat/Reflex" class="al-dest" />
+	<h2><code property="rdfs:label" lang="">Reflex</code>: <span property="rdfs:label">reflexive</span>
+	<code>[</code> 
+	
+	
+		
+		
+			
+				
+			
+		
+	
+	<code>]</code>
+	</h2>
+	<div about="#Reflex_fi" property="rdfs:comment">	
 
 <p>This document is a placeholder for the language-specific documentation
 for <code>Reflex</code>.</p>
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_fi-feat/Reflex.md" target="#">edit Reflex</a></p>
 
-<p><a id="al-fi-feat/Style" class="al-dest"></a></p>
-<h2><code>Style</code>: style</h2>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_fi-feat/Reflex.md" target="#">edit Reflex</a>
+</div>
+
+<div about="#Style_fi" property="rdfs:subClassOf" resource="#feat_fi">
+	<a id="al-fi-feat/Style" class="al-dest" />
+	<h2><code property="rdfs:label" lang="">Style</code>: <span property="rdfs:label">style</span>
+	<code>[</code> 
+	
+	
+		
+		
+	
+		
+		
+			
+				
+					
+					<span about="#StyleColl_fi" property="rdf:type" resource="#Style_fi">
+						<span property="rdf:type" resource="../../u/feat/all.html#StyleColl" />
+						<code property="oliasystem:hasTagContaining" lang="">Style=Coll</code>
+					</span>
+				
+			
+		
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#StyleArch_fi" property="rdf:type" resource="#Style_fi">
+						<span property="rdf:type" resource="../../u/feat/all.html#StyleArch" />
+						<code property="oliasystem:hasTagContaining" lang="">Style=Arch</code>
+					</span>
+				
+			
+		
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+				
+			
+		
+	
+	<code>]</code>
+	</h2>
+	<div about="#Style_fi" property="rdfs:comment">	
 
 <h3 id="coll-word-is-colloquial"><code>Coll</code>: word is colloquial</h3>
 
@@ -1448,10 +3561,78 @@ for <code>Reflex</code>.</p>
 and only very few instances of this value appear in the
 UD Finnish corpus.</p>
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_fi-feat/Style.md" target="#">edit Style</a></p>
 
-<p><a id="al-fi-feat/Tense" class="al-dest"></a></p>
-<h2><code>Tense</code>: tense</h2>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_fi-feat/Style.md" target="#">edit Style</a>
+</div>
+
+<div about="#Tense_fi" property="rdfs:subClassOf" resource="#feat_fi">
+	<a id="al-fi-feat/Tense" class="al-dest" />
+	<h2><code property="rdfs:label" lang="">Tense</code>: <span property="rdfs:label">tense</span>
+	<code>[</code> 
+	
+	
+		
+		
+			
+				
+			
+		
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#TensePres_fi" property="rdf:type" resource="#Tense_fi">
+						<span property="rdf:type" resource="../../u/feat/all.html#TensePres" />
+						<code property="oliasystem:hasTagContaining" lang="">Tense=Pres</code>
+					</span>
+				
+			
+		
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#TensePast_fi" property="rdf:type" resource="#Tense_fi">
+						<span property="rdf:type" resource="../../u/feat/all.html#TensePast" />
+						<code property="oliasystem:hasTagContaining" lang="">Tense=Past</code>
+					</span>
+				
+			
+		
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+		
+			
+		
+			
+		
+	
+	<code>]</code>
+	</h2>
+	<div about="#Tense_fi" property="rdfs:comment">	
 
 <p>The <code>Tense</code> feature applies to verbs (<a href="">VERB</a> and <a href="">AUX</a>),
 specifying the time when the action took or takes place, in
@@ -1492,10 +3673,47 @@ moment.</p>
   <li><a href="http://scripta.kotus.fi/visk/sisallys.php?p=1530">http://scripta.kotus.fi/visk/sisallys.php?p=1530</a> (in Finnish)</li>
 </ul>
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_fi-feat/Tense.md" target="#">edit Tense</a></p>
 
-<p><a id="al-fi-feat/Typo" class="al-dest"></a></p>
-<h2><code>Typo</code>: misspelled</h2>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_fi-feat/Tense.md" target="#">edit Tense</a>
+</div>
+
+<div about="#Typo_fi" property="rdfs:subClassOf" resource="#feat_fi">
+	<a id="al-fi-feat/Typo" class="al-dest" />
+	<h2><code property="rdfs:label" lang="">Typo</code>: <span property="rdfs:label">misspelled</span>
+	<code>[</code> 
+	
+	
+		
+		
+			
+		
+	
+		
+		
+			
+		
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+		
+	
+	<code>]</code>
+	</h2>
+	<div about="#Typo_fi" property="rdfs:comment">	
 
 <p>Boolean feature marking a word as involving misspelling, grammatical
 error, etc.</p>
@@ -1514,10 +3732,110 @@ error, etc.</p>
 
 <p>The language-specific feature Typo is not in use in the FI_FTB corpus.</p>
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_fi-feat/Typo.md" target="#">edit Typo</a></p>
 
-<p><a id="al-fi-feat/VerbForm" class="al-dest"></a></p>
-<h2><code>VerbForm</code>: form of verb or deverbative</h2>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_fi-feat/Typo.md" target="#">edit Typo</a>
+</div>
+
+<div about="#VerbForm_fi" property="rdfs:subClassOf" resource="#feat_fi">
+	<a id="al-fi-feat/VerbForm" class="al-dest" />
+	<h2><code property="rdfs:label" lang="">VerbForm</code>: <span property="rdfs:label">form of verb or deverbative</span>
+	<code>[</code> 
+	
+	
+		
+		
+	
+		
+		
+			
+				
+					
+					<span about="#VerbFormFin_fi" property="rdf:type" resource="#VerbForm_fi">
+						<span property="rdf:type" resource="../../u/feat/all.html#VerbFormFin" />
+						<code property="oliasystem:hasTagContaining" lang="">VerbForm=Fin</code>
+					</span>
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#VerbFormInf_fi" property="rdf:type" resource="#VerbForm_fi">
+						<span property="rdf:type" resource="../../u/feat/all.html#VerbFormInf" />
+						<code property="oliasystem:hasTagContaining" lang="">VerbForm=Inf</code>
+					</span>
+				
+			
+		
+			
+				
+			
+		
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#VerbFormPart_fi" property="rdf:type" resource="#VerbForm_fi">
+						<span property="rdf:type" resource="../../u/feat/all.html#VerbFormPart" />
+						<code property="oliasystem:hasTagContaining" lang="">VerbForm=Part</code>
+					</span>
+				
+			
+		
+			
+				
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+	
+	<code>]</code>
+	</h2>
+	<div about="#VerbForm_fi" property="rdfs:comment">	
 
 <h3 id="fin-finite-verb"><code>Fin</code>: finite verb</h3>
 
@@ -1578,10 +3896,67 @@ Participle forms are further differentiated using the feature
   <li><a href="http://kaino.kotus.fi/visk/sisallys.php?p=121">http://kaino.kotus.fi/visk/sisallys.php?p=121</a> (in Finnish)</li>
 </ul>
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_fi-feat/VerbForm.md" target="#">edit VerbForm</a></p>
 
-<p><a id="al-fi-feat/Voice" class="al-dest"></a></p>
-<h2><code>Voice</code>: voice</h2>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_fi-feat/VerbForm.md" target="#">edit VerbForm</a>
+</div>
+
+<div about="#Voice_fi" property="rdfs:subClassOf" resource="#feat_fi">
+	<a id="al-fi-feat/Voice" class="al-dest" />
+	<h2><code property="rdfs:label" lang="">Voice</code>: <span property="rdfs:label">voice</span>
+	<code>[</code> 
+	
+	
+		
+		
+			
+				
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#VoiceAct_fi" property="rdf:type" resource="#Voice_fi">
+						<span property="rdf:type" resource="../../u/feat/all.html#VoiceAct" />
+						<code property="oliasystem:hasTagContaining" lang="">Voice=Act</code>
+					</span>
+				
+			
+		
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#VoicePass_fi" property="rdf:type" resource="#Voice_fi">
+						<span property="rdf:type" resource="../../u/feat/all.html#VoicePass" />
+						<code property="oliasystem:hasTagContaining" lang="">Voice=Pass</code>
+					</span>
+				
+			
+		
+			
+		
+	
+		
+		
+			
+		
+	
+	<code>]</code>
+	</h2>
+	<div about="#Voice_fi" property="rdfs:comment">	
 
 <p>The <code>Voice</code> feature captures the distinction between active
 and passive for verbs (<a href="">fi-pos/VERB</a> and <a href="">fi-pos/AUX</a>).</p>
@@ -1604,7 +3979,10 @@ and passive for verbs (<a href="">fi-pos/VERB</a> and <a href="">fi-pos/AUX</a>)
   <li>[fi] <em>sitä <b>voidaan</b> käyttää</em> “it <b>can</b> be used”</li>
 </ul>
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_fi-feat/Voice.md" target="#">edit Voice</a></p>
+
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_fi-feat/Voice.md" target="#">edit Voice</a>
+</div>
 
 
 

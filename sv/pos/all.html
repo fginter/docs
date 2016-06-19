@@ -43,7 +43,19 @@
 	  </div>
 	</noscript>
 
-          <h1 id="pos-tags">POS tags</h1>
+          
+<h1 id="pos-tags">POS tags</h1>
+
+<p><span about="." property="rdf:type" resource="owl:Ontology">
+	<span property="owl:imports" resource=" https://www.w3.org/2012/pyRdfa/extract?uri=http://universaldependencies.org/docs/u/pos/all.html&amp;format=xml&amp;rdfagraph=output&amp;vocab_expansion=false&amp;rdfa_lite=false&amp;embedded_rdf=true&amp;space_preserve=false&amp;vocab_cache=true&amp;vocab_cache_report=false&amp;vocab_cache_refresh=false"></span>
+	</span>
+<span about="#pos_sv" property="rdfs:label" style="visibility: hidden">POS tags</span>
+<span about="#pos_sv" property="rdfs:subClassOf" resource="_:sv">
+	<span about="_:sv" property="rdf:type" resource="owl:Restriction">
+		<span property="owl:onProperty" resource="http://purl.org/dc/terms/language"></span>
+		<span property="owl:hasValue" lang="" style="visibility: hidden">sv</span>
+	</span>
+</span></p>
 
 <table class="typeindex">
   <thead>
@@ -99,353 +111,438 @@
 
 <hr />
 
-<p><a id="al-sv-pos/ADJ" class="al-dest"></a></p>
-<h2><code>ADJ</code>: adjective</h2>
+<div about="#ADJ_sv" property="rdf:type" resource="#pos_sv">
+	<div property="rdf:type" resource="../../u/pos/all.html#ADJ" />
+	<a id="al-sv-pos/ADJ" class="al-dest" />
 
-<h3 id="definition">Definition</h3>
+	<h2><code property="oliasystem:hasTag" lang="">ADJ</code>: <div property="rdfs:label">adjective</div></h2>
+	<div property="rdfs:comment">
 
-<p>Adjectives are words that typically modify nouns and specify their properties or attributes. 
+### Definition
+
+Adjectives are words that typically modify nouns and specify their properties or attributes. 
 Adjectives in Swedish normally agree in gender and number with the noun they modify (both in
-attributive and predicative position), e.g. <em>en <b>stor</b> skillnad</em> “a big difference” (common singular), 
-<em>ett <b>stort</b> problem</em> “a big problem” (neuter singual) and <em><b>stora</b> delar</em> “big parts” (plural).</p>
+attributive and predicative position), e.g. _en <b>stor</b> skillnad_ "a big difference" (common singular), 
+_ett <b>stort</b> problem_ "a big problem" (neuter singual) and _<b>stora</b> delar_ "big parts" (plural). 
 
-<h3 id="examples">Examples</h3>
+### Examples
 
-<ul>
-  <li><em>gammal/gammalt/gamla</em> “old”</li>
-  <li><em>grön/grönt/gröna</em> “green”</li>
-  <li><em>ofattbar/ofattbart/ofattbara</em> “incomprehensible”</li>
-</ul>
+- _gammal/gammalt/gamla_ "old"
+- _grön/grönt/gröna_ "green"
+- _ofattbar/ofattbart/ofattbara_ "incomprehensible"
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_sv-pos/ADJ.md" target="#">edit ADJ</a></p>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_sv-pos/ADJ.md" target="#">edit ADJ</a>
 
-<p><a id="al-sv-pos/ADP" class="al-dest"></a></p>
-<h2><code>ADP</code>: adposition</h2>
 
-<h3 id="definition">Definition</h3>
+<div about="#ADP_sv" property="rdf:type" resource="#pos_sv">
+	<div property="rdf:type" resource="../../u/pos/all.html#ADP" />
+	<a id="al-sv-pos/ADP" class="al-dest" />
 
-<p>Adposition is a cover term for prepositions and postpositions.</p>
+	<h2><code property="oliasystem:hasTag" lang="">ADP</code>: <div property="rdfs:label">adposition</div></h2>
+	<div property="rdfs:comment">
 
-<p>Swedish has prepositions but not postpositions (except in a few fixed archaic phrases). In Swedish, some prepositions may also function as verb particles, as in <em>säga <b>till</b></em> “tell” or <em>komma <b>åt</b></em> “get at”. They are still tagged <code>ADP</code> and not <a href="">PART</a>.</p>
+### Definition
 
-<h3 id="examples">Examples</h3>
+Adposition is a cover term for prepositions and postpositions. 
 
-<ul>
-  <li><em>i</em> “in/on”</li>
-  <li><em>på</em> “of/at”</li>
-  <li><em>genom</em> “through/via”</li>
-</ul>
+Swedish has prepositions but not postpositions (except in a few fixed archaic phrases). In Swedish, some prepositions may also function as verb particles, as in _säga <b>till</b>_ "tell" or _komma <b>åt</b>_ "get at". They are still tagged `ADP` and not [PART]().
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_sv-pos/ADP.md" target="#">edit ADP</a></p>
+### Examples
 
-<p><a id="al-sv-pos/ADV" class="al-dest"></a></p>
-<h2><code>ADV</code>: adverb</h2>
+- _i_ "in/on"
+- _på_ "of/at"
+- _genom_ "through/via"
 
-<h3 id="definition">Definition</h3>
 
-<p>Adverbs are words that typically modify <a href="ADJ">adjectives</a>,
-<a href="VERB">verbs</a> or other adverbs for such categories as time, place,
-direction or manner.</p>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_sv-pos/ADP.md" target="#">edit ADP</a>
 
-<p>Note that in Swedish, some adverbs may also function as
-verbal particles, as in <em>se <b>ut</b></em> “look” or <em>gömma <b>undan</b></em> “hide away”.  They
-are still tagged <code>ADV</code> and not <a href="">PART</a>.</p>
 
-<h3 id="examples">Examples</h3>
+<div about="#ADV_sv" property="rdf:type" resource="#pos_sv">
+	<div property="rdf:type" resource="../../u/pos/all.html#ADV" />
+	<a id="al-sv-pos/ADV" class="al-dest" />
 
-<ul>
-  <li><em><b>mycket</b> brådskande</em> “<b>very</b> urgent”</li>
-  <li><em>samtidigt</em> “simultaneously”</li>
-  <li><em>det är <b>bara</b></em> “it is <b>only</b>”</li>
-</ul>
+	<h2><code property="oliasystem:hasTag" lang="">ADV</code>: <div property="rdfs:label">adverb</div></h2>
+	<div property="rdfs:comment">
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_sv-pos/ADV.md" target="#">edit ADV</a></p>
+### Definition
 
-<p><a id="al-sv-pos/AUX" class="al-dest"></a></p>
-<h2><code>AUX</code>: auxiliary verb</h2>
+Adverbs are words that typically modify [adjectives](ADJ),
+[verbs](VERB) or other adverbs for such categories as time, place,
+direction or manner.
 
-<h3 id="definition">Definition</h3>
+Note that in Swedish, some adverbs may also function as
+verbal particles, as in _se <b>ut</b>_ "look" or _gömma <b>undan</b>_ "hide away".  They
+are still tagged `ADV` and not [PART]().
 
-<p>An auxiliary verb is a verb that accompanies the lexical verb of a
+### Examples
+
+- _<b>mycket</b> brådskande_ "<b>very</b> urgent"
+- _samtidigt_ "simultaneously"
+- _det är <b>bara</b>_ "it is <b>only</b>"
+
+
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_sv-pos/ADV.md" target="#">edit ADV</a>
+
+
+<div about="#AUX_sv" property="rdf:type" resource="#pos_sv">
+	<div property="rdf:type" resource="../../u/pos/all.html#AUX" />
+	<a id="al-sv-pos/AUX" class="al-dest" />
+
+	<h2><code property="oliasystem:hasTag" lang="">AUX</code>: <div property="rdfs:label">auxiliary verb</div></h2>
+	<div property="rdfs:comment">
+
+### Definition
+
+An auxiliary verb is a verb that accompanies the lexical verb of a
 verb phrase and expresses grammatical distinctions not carried by the
-lexical verb, such as person, number, tense, mood, aspect, and voice.</p>
+lexical verb, such as person, number, tense, mood, aspect, and voice.
 
-<p>Swedish auxiliary verbs can be divided into tense auxiliaries, modal auxiliaries, passive auxiliaries, and copulas.</p>
+Swedish auxiliary verbs can be divided into tense auxiliaries, modal auxiliaries, passive auxiliaries, and copulas.
 
-<h3 id="examples">Examples</h3>
+### Examples
 
-<ul>
-  <li>Tense auxiliary: <em><b>har</b> gjort</em> “<b>has</b> done”, <em><b>kommer (att)</b> göra</em> “is going to do”, <em><b>hade</b> gjort</em> “hade done”</li>
-  <li>Modal auxiliary: <em><b>måste</b> skapa</em> “must create”, <em><b>bör</b> leda till</em> “should lead to”</li>
-  <li>Passive auxiliary: <em><b>blev</b> tvungen</em> “was forced”, <em><b>blir</b> skalad</em> “is peeled”</li>
-  <li>Copula: <em><b>är</b> sjuk</em> “is sick”, <em><b>var</b> en idiot</em> “was an idiot”</li>
-</ul>
+- Tense auxiliary: _<b>har</b> gjort_ "<b>has</b> done", _<b>kommer (att)</b> göra_ "is going to do", _<b>hade</b> gjort_ "hade done"
+- Modal auxiliary: _<b>måste</b> skapa_ "must create", _<b>bör</b> leda till_ "should lead to"
+- Passive auxiliary: _<b>blev</b> tvungen_ "was forced", _<b>blir</b> skalad_ "is peeled"
+- Copula: _<b>är</b> sjuk_ "is sick", _<b>var</b> en idiot_ "was an idiot"
 
-<h3 id="delimitation">Delimitation</h3>
+### Delimitation
 
-<p>The exact delimitation of auxiliaries in Swedish is not completely clear-cut, especially for the category of modal auxiliaries and copulas. In the Swedish UD treebank, we have adopted a consensus solution based on existing Swedish grammars, the original Talbanken annotation, and the universal UD guidelines. Below we list the verbs that may appear in each group:</p>
+The exact delimitation of auxiliaries in Swedish is not completely clear-cut, especially for the category of modal auxiliaries and copulas. In the Swedish UD treebank, we have adopted a consensus solution based on existing Swedish grammars, the original Talbanken annotation, and the universal UD guidelines. Below we list the verbs that may appear in each group:
 
-<ul>
-  <li>Tense auxiliary: <em>har</em>, <em>komma</em></li>
-  <li>Modal auxiliary: <em>böra</em>, <em>kunna</em>, <em>måste</em>, <em>skola</em>, <em>vilja</em>, <em>må</em>, <em>torde</em>, <em>lär</em>, <em>få</em>, <em>behöva</em></li>
-  <li>Passive auxiliary: <em>bli</em></li>
-  <li>Copula: <em>vara</em></li>
-</ul>
+- Tense auxiliary: _har_, _komma_
+- Modal auxiliary: _böra_, _kunna_, _måste_, _skola_, _vilja_, _må_, _torde_, _lär_, _få_, _behöva_
+- Passive auxiliary: _bli_
+- Copula: _vara_
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_sv-pos/AUX_.md" target="#">edit AUX</a></p>
 
-<p><a id="al-sv-pos/CONJ" class="al-dest"></a></p>
-<h2><code>CONJ</code>: coordinating conjunction</h2>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_sv-pos/AUX_.md" target="#">edit AUX</a>
 
-<h3 id="definition">Definition</h3>
 
-<p>A coordinating conjunction is a word that links words or larger
+<div about="#CONJ_sv" property="rdf:type" resource="#pos_sv">
+	<div property="rdf:type" resource="../../u/pos/all.html#CONJ" />
+	<a id="al-sv-pos/CONJ" class="al-dest" />
+
+	<h2><code property="oliasystem:hasTag" lang="">CONJ</code>: <div property="rdfs:label">coordinating conjunction</div></h2>
+	<div property="rdfs:comment">
+
+### Definition
+
+A coordinating conjunction is a word that links words or larger
 constituents without syntactically subordinating one to the other and
-expresses a semantic relationship between them.</p>
+expresses a semantic relationship between them.
 
-<h3 id="examples">Examples</h3>
+### Examples
 
-<ul>
-  <li><em>och</em> “and”</li>
-  <li><em>eller</em> “or”</li>
-  <li><em>men</em> “but”</li>
-</ul>
+- _och_ "and"
+- _eller_ "or"
+- _men_ "but"
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_sv-pos/CONJ.md" target="#">edit CONJ</a></p>
 
-<p><a id="al-sv-pos/DET" class="al-dest"></a></p>
-<h2><code>DET</code>: determiner</h2>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_sv-pos/CONJ.md" target="#">edit CONJ</a>
 
-<h3 id="definition">Definition</h3>
 
-<p>Determiners are words that modify <a href="NOUN">nouns</a> or noun phrases and
-express the reference of the noun phrase in context. Like <a href="ADJ">adjectives</a>,
+<div about="#DET_sv" property="rdf:type" resource="#pos_sv">
+	<div property="rdf:type" resource="../../u/pos/all.html#DET" />
+	<a id="al-sv-pos/DET" class="al-dest" />
+
+	<h2><code property="oliasystem:hasTag" lang="">DET</code>: <div property="rdfs:label">determiner</div></h2>
+	<div property="rdfs:comment">
+
+### Definition
+
+Determiners are words that modify [nouns](NOUN) or noun phrases and
+express the reference of the noun phrase in context. Like [adjectives](ADJ),
 Swedish determiners typically agree with the noun they modify for gender and number,
-e.g. <em><b>vår</b> kost</em> “our diet” (common singular), <em><b>vårt</b> samhälle</em> “our society” (neuter singular), 
-<em><b>våra</b> åsikter</em> “our opinions” (plural).</p>
+e.g. _<b>vår</b> kost_ "our diet" (common singular), _<b>vårt</b> samhälle_ "our society" (neuter singular), 
+_<b>våra</b> åsikter_ "our opinions" (plural). 
 
-<h3 id="examples">Examples</h3>
+### Examples
 
-<ul>
-  <li>Articles: <em>en</em> “a/an”, <em>ett</em> “a/an”, <em>den</em> “the”, <em>det</em> “the”, <em>de</em> “the”</li>
-  <li>Possessive determiners: <em>min</em> “my” as in <em><b>min</b> bil</em> “my car”, <em>deras</em> “their” as in <em><b>deras</b> attityder</em> “their attitudes”, <em><b>ditt</b> jobb</em> “your job”</li>
-  <li>Demonstrative determiners: <em>detta</em> “this/that” as in <em>hela <b>detta</b> nätverk</em> “this whole network”</li>
-  <li>Interrogative determiners: <em>vilket</em> “which/what” as in <em><b>vilket</b> samband finns?</em> “what relation is there?”</li>
-  <li>Relative determiners: <em>vilken</em> “which/what” as in <em>komma ihåg <b>vilken</b> tidning det var</em> “remember which newspaper it was”</li>
-  <li>Indefinite determiners: <em>någon</em> “any/some” as in <em>det har inte gjorts <b>någon</b> undersökning</em> “there hasn’t been any investigation”</li>
-  <li>Totality determiners: <em>alla</em> “all”</li>
-  <li>Negative determiners: <em>ingen</em> “no” as in <em>han behöver <b>ingen</b> hjälp</em> “he needs no help”</li>
-</ul>
+- Articles: _en_ "a/an", _ett_ "a/an", _den_ "the", _det_ "the", _de_ "the"  
+- Possessive determiners: _min_ "my" as in _<b>min</b> bil_ "my car", _deras_ "their" as in _<b>deras</b> attityder_ "their attitudes", _<b>ditt</b> jobb_ "your job"
+- Demonstrative determiners: _detta_ "this/that" as in _hela <b>detta</b> nätverk_ "this whole network" 
+- Interrogative determiners: _vilket_ "which/what" as in _<b>vilket</b> samband finns?_ "what relation is there?"
+- Relative determiners: _vilken_ "which/what" as in _komma ihåg <b>vilken</b> tidning det var_ "remember which newspaper it was"
+- Indefinite determiners: _någon_ "any/some" as in _det har inte gjorts <b>någon</b> undersökning_ "there hasn't been any investigation" 
+- Totality determiners: _alla_ "all"
+- Negative determiners: _ingen_ "no" as in _han behöver <b>ingen</b> hjälp_ "he needs no help"
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_sv-pos/DET.md" target="#">edit DET</a></p>
 
-<p><a id="al-sv-pos/INTJ" class="al-dest"></a></p>
-<h2><code>INTJ</code>: interjection</h2>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_sv-pos/DET.md" target="#">edit DET</a>
 
-<h3 id="definition">Definition</h3>
 
-<p>An interjection is a word that is used most often as an exclamation or
-part of an exclamation.</p>
+<div about="#INTJ_sv" property="rdf:type" resource="#pos_sv">
+	<div property="rdf:type" resource="../../u/pos/all.html#INTJ" />
+	<a id="al-sv-pos/INTJ" class="al-dest" />
 
-<h3 id="examples">Examples</h3>
+	<h2><code property="oliasystem:hasTag" lang="">INTJ</code>: <div property="rdfs:label">interjection</div></h2>
+	<div property="rdfs:comment">
 
-<ul>
-  <li><em>Tack!</em> “Thanks!”</li>
-  <li><em>Aj!</em> “Ouch!”</li>
-  <li><em>Pang!</em> “Bam!”</li>
-</ul>
+### Definition
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_sv-pos/INTJ.md" target="#">edit INTJ</a></p>
+An interjection is a word that is used most often as an exclamation or
+part of an exclamation. 
 
-<p><a id="al-sv-pos/NOUN" class="al-dest"></a></p>
-<h2><code>NOUN</code>: noun</h2>
+### Examples
 
-<h3 id="definition">Definition</h3>
+- _Tack!_ "Thanks!"
+- _Aj!_ "Ouch!"
+- _Pang!_ "Bam!"
 
-<p>Nouns are a part of speech typically denoting a person, place, thing,
-animal or idea.</p>
 
-<h3 id="examples">Examples</h3>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_sv-pos/INTJ.md" target="#">edit INTJ</a>
 
-<ul>
-  <li><em>flicka</em> “girl”</li>
-  <li><em>katt</em> “cat”</li>
-  <li><em>träd</em> “tree”</li>
-  <li><em>luft</em> “air”</li>
-  <li><em>skönhet</em> “beauty”</li>
-</ul>
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_sv-pos/NOUN.md" target="#">edit NOUN</a></p>
+<div about="#NOUN_sv" property="rdf:type" resource="#pos_sv">
+	<div property="rdf:type" resource="../../u/pos/all.html#NOUN" />
+	<a id="al-sv-pos/NOUN" class="al-dest" />
 
-<p><a id="al-sv-pos/NUM" class="al-dest"></a></p>
-<h2><code>NUM</code>: numeral</h2>
+	<h2><code property="oliasystem:hasTag" lang="">NOUN</code>: <div property="rdfs:label">noun</div></h2>
+	<div property="rdfs:comment">
 
-<h3 id="definition">Definition</h3>
+### Definition
 
-<p>A numeral is a word, functioning most typically as a determiner or pronoun, that expresses a number and a relation to the
-number, such as quantity, sequence, frequency or fraction.</p>
+Nouns are a part of speech typically denoting a person, place, thing,
+animal or idea.
 
-<p>Cardinal numerals are covered by NUM regardless of syntactic function and regardless of whether they are expressed as words (<em>fyra</em> “four”), digits (4) or Roman numerals (IV). By contrast, ordinal numerals are always tagged ADJ.</p>
+### Examples
 
-<p>Note that in Swedish the decimal mark is most often a comma. Thousands are then separated by either a space or dot.</p>
+- _flicka_ "girl"
+- _katt_ "cat"
+- _träd_ "tree"
+- _luft_ "air"
+- _skönhet_ "beauty"
 
-<h3 id="examples">Examples</h3>
 
-<ul>
-  <li><em>0, 1, 2, 3, 2014, 1 000 000, 3.000,15, 3,14159265359</em></li>
-  <li><em>ett</em> “one”, <em>två</em> “two”, <em>tre</em> “three”, <em>sjuttiosju</em> “seventy-seven”</li>
-  <li><em>I, II, III, IV, V, MMXIV</em></li>
-</ul>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_sv-pos/NOUN.md" target="#">edit NOUN</a>
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_sv-pos/NUM.md" target="#">edit NUM</a></p>
 
-<p><a id="al-sv-pos/PART" class="al-dest"></a></p>
-<h2><code>PART</code>: particle</h2>
+<div about="#NUM_sv" property="rdf:type" resource="#pos_sv">
+	<div property="rdf:type" resource="../../u/pos/all.html#NUM" />
+	<a id="al-sv-pos/NUM" class="al-dest" />
 
-<p>Particles are function words that must be associated with another word or phrase to impart meaning and that do not satisfy definitions of other universal parts of speech (e.g. adpositions, coordinating conjunctions, subordinating conjunctions or auxiliary verbs).</p>
+	<h2><code property="oliasystem:hasTag" lang="">NUM</code>: <div property="rdfs:label">numeral</div></h2>
+	<div property="rdfs:comment">
 
-<p>In Swedish <code>PART</code> is currently only used for the infinitive marker <em>att</em>. Note that not all instances of <em>att</em> are of type <code>PART</code>, as <em>att</em> can also be used as a <a href="">SCONJ</a>.</p>
+### Definition
 
-<h3 id="example">Example</h3>
+A numeral is a word, functioning most typically as a determiner or pronoun, that expresses a number and a relation to the
+number, such as quantity, sequence, frequency or fraction.
 
-<ul>
-  <li><em>det är möjligt <b>att</b> förändra den</em> “it is possible <b>to</b> change it”</li>
-</ul>
+Cardinal numerals are covered by NUM regardless of syntactic function and regardless of whether they are expressed as words (_fyra_ "four"), digits (4) or Roman numerals (IV). By contrast, ordinal numerals are always tagged ADJ.
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_sv-pos/PART.md" target="#">edit PART</a></p>
+Note that in Swedish the decimal mark is most often a comma. Thousands are then separated by either a space or dot.
 
-<p><a id="al-sv-pos/PRON" class="al-dest"></a></p>
-<h2><code>PRON</code>: pronoun</h2>
+### Examples
 
-<h3 id="definition">Definition</h3>
+- _0, 1, 2, 3, 2014, 1 000 000, 3.000,15, 3,14159265359_
+- _ett_ "one", _två_ "two", _tre_ "three", _sjuttiosju_ "seventy-seven"
+- _I, II, III, IV, V, MMXIV_
 
-<p>Pronouns are words that substitute for <a href="NOUN">nouns</a> or noun phrases.
+
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_sv-pos/NUM.md" target="#">edit NUM</a>
+
+
+<div about="#PART_sv" property="rdf:type" resource="#pos_sv">
+	<div property="rdf:type" resource="../../u/pos/all.html#PART" />
+	<a id="al-sv-pos/PART" class="al-dest" />
+
+	<h2><code property="oliasystem:hasTag" lang="">PART</code>: <div property="rdfs:label">particle</div></h2>
+	<div property="rdfs:comment">
+
+Particles are function words that must be associated with another word or phrase to impart meaning and that do not satisfy definitions of other universal parts of speech (e.g. adpositions, coordinating conjunctions, subordinating conjunctions or auxiliary verbs).
+
+In Swedish `PART` is currently only used for the infinitive marker _att_. Note that not all instances of _att_ are of type `PART`, as _att_ can also be used as a [SCONJ]().
+
+### Example
+
+- _det är möjligt <b>att</b> förändra den_ "it is possible <b>to</b> change it"
+
+
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_sv-pos/PART.md" target="#">edit PART</a>
+
+
+<div about="#PRON_sv" property="rdf:type" resource="#pos_sv">
+	<div property="rdf:type" resource="../../u/pos/all.html#PRON" />
+	<a id="al-sv-pos/PRON" class="al-dest" />
+
+	<h2><code property="oliasystem:hasTag" lang="">PRON</code>: <div property="rdfs:label">pronoun</div></h2>
+	<div property="rdfs:comment">
+
+### Definition
+
+Pronouns are words that substitute for [nouns](NOUN) or noun phrases.
 Their meaning is recoverable from the linguistic or extralinguistic
-context.</p>
+context.
 
-<h3 id="examples">Examples</h3>
+### Examples
 
-<ul>
-  <li>Personal (subject) pronouns: <em>jag</em> “I”, <em>du</em> “you”, <em>han</em> “he”, <em>hon</em> “she”, <em>det/den</em> “it”, <em>vi</em> “we”, <em>de</em> “they”</li>
-  <li>Personal (object)/reflexive pronouns: <em>mig</em> “me/myself”, <em>dig</em> “you/yourself”, <em>honom</em> “him”, <em>henne</em> “her”, <em>sig</em> “itself/himself/herself/themselves”, <em>oss</em> “us/ourselves”</li>
-  <li>Demonstrative pronouns: <em>detta</em> “that/this” as in <em><b>detta</b> är en svår fråga</em> “that is a difficult question”</li>
-  <li>Interrogative pronouns: <em>vem</em> “who” <em>vad</em> “what” as in <em><b>Vad</b> tycker du?</em> “What do you think?”</li>
-  <li>Relative pronouns: <em>vem</em>, <em>vad</em> as in <em><b>vem</b> denna person än är</em> “whoever this person is”</li>
-  <li>Indefinite pronouns: <em>någon</em> “someone/anybody”, <em>något</em> “something/anything”</li>
-  <li>Totality pronouns: <em>alla</em> “everyone”, <em>allt</em> “everything”</li>
-  <li>Negative pronouns: <em>ingen</em> “nobody”, <em>inget</em> “nothing”</li>
-</ul>
+- Personal (subject) pronouns: _jag_ "I", _du_ "you", _han_ "he", _hon_ "she", _det/den_ "it", _vi_ "we", _de_ "they"
+- Personal (object)/reflexive pronouns: _mig_ "me/myself", _dig_ "you/yourself", _honom_ "him", _henne_ "her", _sig_ "itself/himself/herself/themselves", _oss_ "us/ourselves"
+- Demonstrative pronouns: _detta_ "that/this" as in _<b>detta</b> är en svår fråga_ "that is a difficult question"
+- Interrogative pronouns: _vem_ "who" _vad_ "what" as in _<b>Vad</b> tycker du?_ "What do you think?"
+- Relative pronouns: _vem_, _vad_ as in _<b>vem</b> denna person än är_ "whoever this person is"
+- Indefinite pronouns: _någon_ "someone/anybody", _något_ "something/anything"
+- Totality pronouns: _alla_ "everyone", _allt_ "everything"
+- Negative pronouns: _ingen_ "nobody", _inget_ "nothing"
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_sv-pos/PRON.md" target="#">edit PRON</a></p>
 
-<p><a id="al-sv-pos/PROPN" class="al-dest"></a></p>
-<h2><code>PROPN</code>: proper noun</h2>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_sv-pos/PRON.md" target="#">edit PRON</a>
 
-<h3 id="definition">Definition</h3>
 
-<p>A proper noun is a noun (or nominal content word) that is the name (or
-part of the name) of a specific individual, place, or object.</p>
+<div about="#PROPN_sv" property="rdf:type" resource="#pos_sv">
+	<div property="rdf:type" resource="../../u/pos/all.html#PROPN" />
+	<a id="al-sv-pos/PROPN" class="al-dest" />
 
-<p>In Swedish proper nouns differ from common nouns in inflecting only for case, not for definiteness or number.</p>
+	<h2><code property="oliasystem:hasTag" lang="">PROPN</code>: <div property="rdfs:label">proper noun</div></h2>
+	<div property="rdfs:comment">
 
-<h3 id="examples">Examples</h3>
+### Definition
 
-<ul>
-  <li><em>Ingmar</em>, <em>Ingrid</em></li>
-  <li><em>Skåne</em>, <em>USA</em></li>
-  <li><em>Expressen</em>, <em>Pirelli</em></li>
-</ul>
+A proper noun is a noun (or nominal content word) that is the name (or
+part of the name) of a specific individual, place, or object.
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_sv-pos/PROPN.md" target="#">edit PROPN</a></p>
+In Swedish proper nouns differ from common nouns in inflecting only for case, not for definiteness or number.
 
-<p><a id="al-sv-pos/PUNCT" class="al-dest"></a></p>
-<h2><code>PUNCT</code>: punctuation</h2>
+### Examples
 
-<h3 id="definition">Definition</h3>
+- _Ingmar_, _Ingrid_
+- _Skåne_, _USA_
+- _Expressen_, _Pirelli_
 
-<p>Punctuation marks are non-alphabetical characters and character groups used to delimit linguistic units in printed text. 
-They are tagged PUNCT regardless of their function.</p>
 
-<h3 id="examples">Examples</h3>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_sv-pos/PROPN.md" target="#">edit PROPN</a>
 
-<ul>
-  <li>Period: .</li>
-  <li>Comma: ,</li>
-  <li>Parentheses: ()</li>
-</ul>
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_sv-pos/PUNCT.md" target="#">edit PUNCT</a></p>
+<div about="#PUNCT_sv" property="rdf:type" resource="#pos_sv">
+	<div property="rdf:type" resource="../../u/pos/all.html#PUNCT" />
+	<a id="al-sv-pos/PUNCT" class="al-dest" />
 
-<p><a id="al-sv-pos/SCONJ" class="al-dest"></a></p>
-<h2><code>SCONJ</code>: subordinating conjunction</h2>
+	<h2><code property="oliasystem:hasTag" lang="">PUNCT</code>: <div property="rdfs:label">punctuation</div></h2>
+	<div property="rdfs:comment">
 
-<h3 id="definition">Definition</h3>
+### Definition
 
-<p>A subordinating conjunction is a conjunction that links constructions
-by making one of them a constituent of the other.</p>
+Punctuation marks are non-alphabetical characters and character groups used to delimit linguistic units in printed text. 
+They are tagged PUNCT regardless of their function.
 
-<h3 id="examples">Examples</h3>
+### Examples
 
-<ul>
-  <li><em>eftersom</em> “because”</li>
-  <li><em>om</em> “if”</li>
-  <li><em>att</em> “that” as in <em>visa <b>att</b> du kan klara det</em> “show that you can do it”</li>
-</ul>
+- Period: .
+- Comma: ,
+- Parentheses: ()
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_sv-pos/SCONJ.md" target="#">edit SCONJ</a></p>
 
-<p><a id="al-sv-pos/SYM" class="al-dest"></a></p>
-<h2><code>SYM</code>: symbol</h2>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_sv-pos/PUNCT.md" target="#">edit PUNCT</a>
 
-<h3 id="definition">Definition</h3>
 
-<p>A symbol is a word-like entity that differs from ordinary words by
-form, function, or both.</p>
+<div about="#SCONJ_sv" property="rdf:type" resource="#pos_sv">
+	<div property="rdf:type" resource="../../u/pos/all.html#SCONJ" />
+	<a id="al-sv-pos/SCONJ" class="al-dest" />
 
-<h3 id="examples">Examples</h3>
+	<h2><code property="oliasystem:hasTag" lang="">SCONJ</code>: <div property="rdfs:label">subordinating conjunction</div></h2>
+	<div property="rdfs:comment">
 
-<ul>
-  <li><em>$, %, §, ©</em></li>
-  <li><em>+, −, ×, ÷, =, &lt;, &gt;</em></li>
-  <li>:), ♥‿♥, 😝</li>
-  <li><em>john.doe@universal.org, http://universaldependencies.org/, 1-800-COMPANY</em></li>
-</ul>
+### Definition
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_sv-pos/SYM.md" target="#">edit SYM</a></p>
+A subordinating conjunction is a conjunction that links constructions
+by making one of them a constituent of the other.
 
-<p><a id="al-sv-pos/VERB" class="al-dest"></a></p>
-<h2><code>VERB</code>: verb</h2>
+### Examples
 
-<h3 id="definition">Definition</h3>
+- _eftersom_ "because"
+- _om_ "if"
+- _att_ "that" as in _visa <b>att</b> du kan klara det_ "show that you can do it"
 
-<p>A verb is a member of the syntactic class of words that typically
+
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_sv-pos/SCONJ.md" target="#">edit SCONJ</a>
+
+
+<div about="#SYM_sv" property="rdf:type" resource="#pos_sv">
+	<div property="rdf:type" resource="../../u/pos/all.html#SYM" />
+	<a id="al-sv-pos/SYM" class="al-dest" />
+
+	<h2><code property="oliasystem:hasTag" lang="">SYM</code>: <div property="rdfs:label">symbol</div></h2>
+	<div property="rdfs:comment">
+
+### Definition
+
+A symbol is a word-like entity that differs from ordinary words by
+form, function, or both.
+
+### Examples
+
+* _$, %, §, ©_
+* _+, −, ×, ÷, =, &lt;, &gt;_
+* :), ♥‿♥, 😝
+* _john.doe@universal.org, http://universaldependencies.org/, 1-800-COMPANY_
+
+
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_sv-pos/SYM.md" target="#">edit SYM</a>
+
+
+<div about="#VERB_sv" property="rdf:type" resource="#pos_sv">
+	<div property="rdf:type" resource="../../u/pos/all.html#VERB" />
+	<a id="al-sv-pos/VERB" class="al-dest" />
+
+	<h2><code property="oliasystem:hasTag" lang="">VERB</code>: <div property="rdfs:label">verb</div></h2>
+	<div property="rdfs:comment">
+
+### Definition
+
+A verb is a member of the syntactic class of words that typically
 signal events and actions, can constitute a minimal predicate in a
 clause, and govern the number and types of other constituents which
-may occur in the clause.</p>
+may occur in the clause. 
 
-<p>The tag VERB is reserved for full lexical verbs, while auxiliary verbs are tagged <a href="">AUX</a>.</p>
+The tag VERB is reserved for full lexical verbs, while auxiliary verbs are tagged [AUX]().
 
-<h3 id="examples">Examples</h3>
+### Examples
 
-<ul>
-  <li><em>att <b>visa</b></em> “to <b>show</b>”, <em>jag <b>visar</b></em> “I <b>show</b>”, <em>han <b>visade</b></em> “he showed”</li>
-  <li><em>att <b>flyga</b></em> “to <b>fly</b>”, <em>vi <b>flyger</b></em> “we <b>fly</b>”, <em>de <b>flög</b></em> “they flew”</li>
-</ul>
+- _att <b>visa</b>_ "to <b>show</b>", _jag <b>visar</b>_ "I <b>show</b>", _han <b>visade</b>_ "he showed"
+- _att <b>flyga</b>_ "to <b>fly</b>", _vi <b>flyger</b>_ "we <b>fly</b>", _de <b>flög</b>_ "they flew"
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_sv-pos/VERB.md" target="#">edit VERB</a></p>
 
-<p><a id="al-sv-pos/X" class="al-dest"></a></p>
-<h2><code>X</code>: other</h2>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_sv-pos/VERB.md" target="#">edit VERB</a>
 
-<h3 id="definition">Definition</h3>
 
-<p>The tag <code>X</code> is used for words that for some reason cannot be assigned
-a real part-of-speech category.</p>
+<div about="#X_sv" property="rdf:type" resource="#pos_sv">
+	<div property="rdf:type" resource="../../u/pos/all.html#X" />
+	<a id="al-sv-pos/X" class="al-dest" />
 
-<p><b>Note:</b> Version 1 of the Swedish UD treebank used X for foreign words (corresponding to the language-specific tag UO), but from version 1.1 these words are given a proper linguistic category and X is currently not used in Swedish. However, it still exists as a potentially permissible tag.</p>
+	<h2><code property="oliasystem:hasTag" lang="">X</code>: <div property="rdfs:label">other</div></h2>
+	<div property="rdfs:comment">
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_sv-pos/X.md" target="#">edit X</a></p>
+### Definition
 
+The tag `X` is used for words that for some reason cannot be assigned
+a real part-of-speech category.
+
+<b>Note:</b> Version 1 of the Swedish UD treebank used X for foreign words (corresponding to the language-specific tag UO), but from version 1.1 these words are given a proper linguistic category and X is currently not used in Swedish. However, it still exists as a potentially permissible tag.
+
+
+
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_sv-pos/X.md" target="#">edit X</a>
+
+</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div>
 
 
       </div>

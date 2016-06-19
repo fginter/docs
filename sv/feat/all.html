@@ -43,7 +43,20 @@
 	  </div>
 	</noscript>
 
-          <h1 id="features">Features</h1>
+          
+<h1 id="features">Features</h1>
+
+<p><span about="." property="rdf:type" resource="owl:Ontology">
+	<span property="owl:imports" resource=" https://www.w3.org/2012/pyRdfa/extract?uri=http://universaldependencies.org/docs/u/feat/all.html&amp;format=xml&amp;rdfagraph=output&amp;vocab_expansion=false&amp;rdfa_lite=false&amp;embedded_rdf=true&amp;space_preserve=false&amp;vocab_cache=true&amp;vocab_cache_report=false&amp;vocab_cache_refresh=false"></span>
+</span></p>
+
+<p><span about="#feat_sv" property="rdfs:label" style="visibility: hidden">Features</span>
+<span about="#feat_sv" property="rdfs:subClassOf" resource="_:sv">
+	<span about="_:sv" property="rdf:type" resource="owl:Restriction">
+		<span property="owl:onProperty" resource="http://purl.org/dc/terms/language"></span>
+		<span property="owl:hasValue" lang="" style="visibility: hidden">sv</span>
+	</span>
+</span></p>
 
 <table class="typeindex">
   <tr>
@@ -106,8 +119,82 @@
 
 <hr />
 
-<p><a id="al-sv-feat/Case" class="al-dest"></a></p>
-<h2><code>Case</code>: case</h2>
+<div about="#Case_sv" property="rdfs:subClassOf" resource="#feat_sv">
+	<a id="al-sv-feat/Case" class="al-dest" />
+	<h2><code property="rdfs:label" lang="">Case</code>: <span property="rdfs:label">case</span>
+	<code>[</code> 
+	
+	
+		
+		
+			
+		
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#CaseNom_sv" property="rdf:type" resource="#Case_sv">
+						<span property="rdf:type" resource="../../u/feat/all.html#CaseNom" />
+						<code property="oliasystem:hasTagContaining" lang="">Case=Nom</code>
+					</span>
+				
+			
+		
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#CaseAcc_sv" property="rdf:type" resource="#Case_sv">
+						<span property="rdf:type" resource="../../u/feat/all.html#CaseAcc" />
+						<code property="oliasystem:hasTagContaining" lang="">Case=Acc</code>
+					</span>
+				
+			
+		
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#CaseGen_sv" property="rdf:type" resource="#Case_sv">
+						<span property="rdf:type" resource="../../u/feat/all.html#CaseGen" />
+						<code property="oliasystem:hasTagContaining" lang="">Case=Gen</code>
+					</span>
+				
+			
+		
+			
+		
+	
+		
+		
+			
+		
+	
+	<code>]</code>
+	</h2>
+	<div about="#Case_sv" property="rdfs:comment">	
 
 <p>Case is usually an inflectional feature of <a href="sv-pos/NOUN">nouns</a>, helping to specify the role of the noun phrase in the sentence. Swedish makes use of three cases: nominative, accusative, and genitive. The accusative is found only in 
 pronouns (PRON), while the nominative/genitive distinction occurs with nouns (NOUN), proper nouns (PROPN) 
@@ -146,10 +233,66 @@ and adjectives (ADJ).</p>
   <li>[sv] <em><b>patientens</b> ekonomi</em> “the <b>patient’s</b> finances”</li>
 </ul>
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_sv-feat/Case.md" target="#">edit Case</a></p>
 
-<p><a id="al-sv-feat/Definite" class="al-dest"></a></p>
-<h2><code>Definite</code>: definiteness or state</h2>
+
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_sv-feat/Case.md" target="#">edit Case</a>
+</div>
+
+<div about="#Definite_sv" property="rdfs:subClassOf" resource="#feat_sv">
+	<a id="al-sv-feat/Definite" class="al-dest" />
+	<h2><code property="rdfs:label" lang="">Definite</code>: <span property="rdfs:label">definiteness or state</span>
+	<code>[</code> 
+	
+	
+		
+		
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#DefiniteInd_sv" property="rdf:type" resource="#Definite_sv">
+						<span property="rdf:type" resource="../../u/feat/all.html#DefiniteInd" />
+						<code property="oliasystem:hasTagContaining" lang="">Definite=Ind</code>
+					</span>
+				
+			
+		
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#DefiniteDef_sv" property="rdf:type" resource="#Definite_sv">
+						<span property="rdf:type" resource="../../u/feat/all.html#DefiniteDef" />
+						<code property="oliasystem:hasTagContaining" lang="">Definite=Def</code>
+					</span>
+				
+			
+		
+			
+		
+	
+		
+		
+			
+		
+	
+	<code>]</code>
+	</h2>
+	<div about="#Definite_sv" property="rdfs:comment">	
 
 <p>Definiteness in Swedish is an inflectional feature of <a href="sv-pos/NOUN">nouns</a>, as well as <a href="sv-pos/ADJ">adjectives</a> and <a href="sv-pos/DET">determiners</a> that agree with nouns. Its value distinguishes whether we are talking about something known and concrete, or something general or unknown.</p>
 
@@ -171,10 +314,85 @@ and adjectives (ADJ).</p>
   <li>[sv] <em><b>de särskilda förmånerna</b></em> “the special benefits”</li>
 </ul>
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_sv-feat/Definite.md" target="#">edit Definite</a></p>
 
-<p><a id="al-sv-feat/Degree" class="al-dest"></a></p>
-<h2><code>Degree</code>: degree of comparison</h2>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_sv-feat/Definite.md" target="#">edit Definite</a>
+</div>
+
+<div about="#Degree_sv" property="rdfs:subClassOf" resource="#feat_sv">
+	<a id="al-sv-feat/Degree" class="al-dest" />
+	<h2><code property="rdfs:label" lang="">Degree</code>: <span property="rdfs:label">degree of comparison</span>
+	<code>[</code> 
+	
+	
+		
+		
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#DegreePos_sv" property="rdf:type" resource="#Degree_sv">
+						<span property="rdf:type" resource="../../u/feat/all.html#DegreePos" />
+						<code property="oliasystem:hasTagContaining" lang="">Degree=Pos</code>
+					</span>
+				
+			
+		
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#DegreeCmp_sv" property="rdf:type" resource="#Degree_sv">
+						<span property="rdf:type" resource="../../u/feat/all.html#DegreeCmp" />
+						<code property="oliasystem:hasTagContaining" lang="">Degree=Cmp</code>
+					</span>
+				
+			
+		
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#DegreeSup_sv" property="rdf:type" resource="#Degree_sv">
+						<span property="rdf:type" resource="../../u/feat/all.html#DegreeSup" />
+						<code property="oliasystem:hasTagContaining" lang="">Degree=Sup</code>
+					</span>
+				
+			
+		
+			
+		
+	
+		
+		
+			
+		
+	
+	<code>]</code>
+	</h2>
+	<div about="#Degree_sv" property="rdfs:comment">	
 
 <p>Degree of comparison is typically an inflectional feature of some <a href="sv-pos/ADJ">adjectives</a> and <a href="sv-pos/ADV">adverbs</a>.</p>
 
@@ -213,10 +431,85 @@ things within a set.</p>
   <li>[sv] <em><b>största</b> valdistriktet</em> “largest constituency”</li>
 </ul>
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_sv-feat/Degree.md" target="#">edit Degree</a></p>
 
-<p><a id="al-sv-feat/Gender" class="al-dest"></a></p>
-<h2><code>Gender</code>: gender</h2>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_sv-feat/Degree.md" target="#">edit Degree</a>
+</div>
+
+<div about="#Gender_sv" property="rdfs:subClassOf" resource="#feat_sv">
+	<a id="al-sv-feat/Gender" class="al-dest" />
+	<h2><code property="rdfs:label" lang="">Gender</code>: <span property="rdfs:label">gender</span>
+	<code>[</code> 
+	
+	
+		
+		
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#GenderCom_sv" property="rdf:type" resource="#Gender_sv">
+						<span property="rdf:type" resource="../../u/feat/all.html#GenderCom" />
+						<code property="oliasystem:hasTagContaining" lang="">Gender=Com</code>
+					</span>
+				
+			
+		
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#GenderNeut_sv" property="rdf:type" resource="#Gender_sv">
+						<span property="rdf:type" resource="../../u/feat/all.html#GenderNeut" />
+						<code property="oliasystem:hasTagContaining" lang="">Gender=Neut</code>
+					</span>
+				
+			
+		
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#GenderMasc_sv" property="rdf:type" resource="#Gender_sv">
+						<span property="rdf:type" resource="../../u/feat/all.html#GenderMasc" />
+						<code property="oliasystem:hasTagContaining" lang="">Gender=Masc</code>
+					</span>
+				
+			
+		
+			
+		
+	
+		
+		
+			
+		
+	
+	<code>]</code>
+	</h2>
+	<div about="#Gender_sv" property="rdfs:comment">	
 
 <p>Gender is a lexical feature of nouns and an inflectional feature
 of other parts of speech (adjectives, determiners) that mark agreement with
@@ -255,10 +548,83 @@ nouns.</p>
   <li>[sv] <em>den <b>brittiske</b> författaren</em> “the British author”</li>
 </ul>
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_sv-feat/Gender.md" target="#">edit Gender</a></p>
 
-<p><a id="al-sv-feat/Mood" class="al-dest"></a></p>
-<h2><code>Mood</code>: mood</h2>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_sv-feat/Gender.md" target="#">edit Gender</a>
+</div>
+
+<div about="#Mood_sv" property="rdfs:subClassOf" resource="#feat_sv">
+	<a id="al-sv-feat/Mood" class="al-dest" />
+	<h2><code property="rdfs:label" lang="">Mood</code>: <span property="rdfs:label">mood</span>
+	<code>[</code> 
+	
+	
+		
+		
+	
+		
+		
+			
+				
+					
+					<span about="#MoodInd_sv" property="rdf:type" resource="#Mood_sv">
+						<span property="rdf:type" resource="../../u/feat/all.html#MoodInd" />
+						<code property="oliasystem:hasTagContaining" lang="">Mood=Ind</code>
+					</span>
+				
+			
+		
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#MoodImp_sv" property="rdf:type" resource="#Mood_sv">
+						<span property="rdf:type" resource="../../u/feat/all.html#MoodImp" />
+						<code property="oliasystem:hasTagContaining" lang="">Mood=Imp</code>
+					</span>
+				
+			
+		
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#MoodSub_sv" property="rdf:type" resource="#Mood_sv">
+						<span property="rdf:type" resource="../../u/feat/all.html#MoodSub" />
+						<code property="oliasystem:hasTagContaining" lang="">Mood=Sub</code>
+					</span>
+				
+			
+		
+			
+		
+	
+		
+		
+			
+		
+	
+	<code>]</code>
+	</h2>
+	<div about="#Mood_sv" property="rdfs:comment">	
 
 <h3 id="ind-indicative"><code>Ind</code>: indicative</h3>
 
@@ -295,10 +661,67 @@ action of the verb.</p>
   <li>[sv] <em>som om jag vore försumlig</em> “as if I were neglectful”</li>
 </ul>
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_sv-feat/Mood.md" target="#">edit Mood</a></p>
 
-<p><a id="al-sv-feat/Number" class="al-dest"></a></p>
-<h2><code>Number</code>: number</h2>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_sv-feat/Mood.md" target="#">edit Mood</a>
+</div>
+
+<div about="#Number_sv" property="rdfs:subClassOf" resource="#feat_sv">
+	<a id="al-sv-feat/Number" class="al-dest" />
+	<h2><code property="rdfs:label" lang="">Number</code>: <span property="rdfs:label">number</span>
+	<code>[</code> 
+	
+	
+		
+		
+			
+				
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#NumberSing_sv" property="rdf:type" resource="#Number_sv">
+						<span property="rdf:type" resource="../../u/feat/all.html#NumberSing" />
+						<code property="oliasystem:hasTagContaining" lang="">Number=Sing</code>
+					</span>
+				
+			
+		
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#NumberPlur_sv" property="rdf:type" resource="#Number_sv">
+						<span property="rdf:type" resource="../../u/feat/all.html#NumberPlur" />
+						<code property="oliasystem:hasTagContaining" lang="">Number=Plur</code>
+					</span>
+				
+			
+		
+			
+		
+	
+		
+		
+			
+		
+	
+	<code>]</code>
+	</h2>
+	<div about="#Number_sv" property="rdfs:comment">	
 
 <p><code>Number</code> in Swedish is a feature of <a href="sv-pos/NOUN">nouns</a>, <a href="sv-pos/PRON">pronouns</a>, <a href="sv-pos/ADJ">adjectives</a> and <a href="sv-pos/DET">determiners</a>.</p>
 
@@ -324,20 +747,75 @@ action of the verb.</p>
   <li>[sv] <em>några färdigheter</em> “some skills”</li>
 </ul>
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_sv-feat/Number.md" target="#">edit Number</a></p>
 
-<p><a id="al-sv-feat/Person" class="al-dest"></a></p>
-<h2><code>Person</code>: person</h2>
+
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_sv-feat/Number.md" target="#">edit Number</a>
+</div>
+
+<div about="#Person_sv" property="rdfs:subClassOf" resource="#feat_sv">
+	<a id="al-sv-feat/Person" class="al-dest" />
+	<h2><code property="rdfs:label" lang="">Person</code>: <span property="rdfs:label">person</span>
+	<code>[</code> 
+	
+	
+		
+		
+			
+				
+			
+		
+	
+	<code>]</code>
+	</h2>
+	<div about="#Person_sv" property="rdfs:comment">	
 
 <p>Swedish <a href="sv-pos/VERB">verbs</a> do not inflect for <code>Person</code>. Certain personal and possessive
 pronouns can be considered to have <code>Person</code> as a feature. However, in Swedish this is always
 completely unambiguous given the word form. The <code>Person</code> feature is not currently used in the 
 Swedish treebank. For further discussion of <code>Person</code> see the universal depency page (<a href="">u-feat/person</a>).</p>
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_sv-feat/Person.md" target="#">edit Person</a></p>
 
-<p><a id="al-sv-feat/Poss" class="al-dest"></a></p>
-<h2><code>Poss</code>: possessive</h2>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_sv-feat/Person.md" target="#">edit Person</a>
+</div>
+
+<div about="#Poss_sv" property="rdfs:subClassOf" resource="#feat_sv">
+	<a id="al-sv-feat/Poss" class="al-dest" />
+	<h2><code property="rdfs:label" lang="">Poss</code>: <span property="rdfs:label">possessive</span>
+	<code>[</code> 
+	
+	
+		
+		
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#PossYes_sv" property="rdf:type" resource="#Poss_sv">
+						<span property="rdf:type" resource="../../u/feat/all.html#PossYes" />
+						<code property="oliasystem:hasTagContaining" lang="">Poss=Yes</code>
+					</span>
+				
+			
+		
+			
+				
+			
+		
+	
+		
+		
+			
+		
+	
+	<code>]</code>
+	</h2>
+	<div about="#Poss_sv" property="rdfs:comment">	
 
 <p>Poss is a boolean feature of some determiners in Swedish, indicating whether it is possessive or not.</p>
 
@@ -353,10 +831,85 @@ Swedish treebank. For further discussion of <code>Person</code> see the universa
   <li><em>vars</em> “whose”</li>
 </ul>
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_sv-feat/Poss.md" target="#">edit Poss</a></p>
 
-<p><a id="al-sv-feat/PronType" class="al-dest"></a></p>
-<h2><code>PronType</code>: pronominal type</h2>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_sv-feat/Poss.md" target="#">edit Poss</a>
+</div>
+
+<div about="#PronType_sv" property="rdfs:subClassOf" resource="#feat_sv">
+	<a id="al-sv-feat/PronType" class="al-dest" />
+	<h2><code property="rdfs:label" lang="">PronType</code>: <span property="rdfs:label">pronominal type</span>
+	<code>[</code> 
+	
+	
+		
+		
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#PronTypeInt_sv" property="rdf:type" resource="#PronType_sv">
+						<span property="rdf:type" resource="../../u/feat/all.html#PronTypeInt" />
+						<code property="oliasystem:hasTagContaining" lang="">PronType=Int</code>
+					</span>
+				
+			
+		
+			
+		
+	
+		
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#PronTypeRel_sv" property="rdf:type" resource="#PronType_sv">
+						<span property="rdf:type" resource="../../u/feat/all.html#PronTypeRel" />
+						<code property="oliasystem:hasTagContaining" lang="">PronType=Rel</code>
+					</span>
+				
+			
+		
+			
+		
+	
+		
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+				
+			
+		
+	
+	<code>]</code>
+	</h2>
+	<div about="#PronType_sv" property="rdfs:comment">	
 
 <p>Pronominal type is a feature of (some) pronouns, determiners and pronominal adverbs in Swedish.</p>
 
@@ -384,10 +937,67 @@ Swedish treebank. For further discussion of <code>Person</code> see the universa
 (corresponding to the English wh-category), we currently do not disambiguate between <code>Int</code> and <code>Rel</code>, which means 
 that any word belonging to one of these categories is assigned the feature <code>PronType=Int,Rel</code>.</p>
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_sv-feat/PronType.md" target="#">edit PronType</a></p>
 
-<p><a id="al-sv-feat/Tense" class="al-dest"></a></p>
-<h2><code>Tense</code>: tense</h2>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_sv-feat/PronType.md" target="#">edit PronType</a>
+</div>
+
+<div about="#Tense_sv" property="rdfs:subClassOf" resource="#feat_sv">
+	<a id="al-sv-feat/Tense" class="al-dest" />
+	<h2><code property="rdfs:label" lang="">Tense</code>: <span property="rdfs:label">tense</span>
+	<code>[</code> 
+	
+	
+		
+		
+			
+				
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#TensePres_sv" property="rdf:type" resource="#Tense_sv">
+						<span property="rdf:type" resource="../../u/feat/all.html#TensePres" />
+						<code property="oliasystem:hasTagContaining" lang="">Tense=Pres</code>
+					</span>
+				
+			
+		
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#TensePast_sv" property="rdf:type" resource="#Tense_sv">
+						<span property="rdf:type" resource="../../u/feat/all.html#TensePast" />
+						<code property="oliasystem:hasTagContaining" lang="">Tense=Past</code>
+					</span>
+				
+			
+		
+			
+		
+	
+		
+		
+			
+		
+	
+	<code>]</code>
+	</h2>
+	<div about="#Tense_sv" property="rdfs:comment">	
 
 <p>The <code>Tense</code> feature applies to verbs (<a href="">VERB</a> and <a href="">AUX</a>), specifying the time when the action took / takes place, in relation to the current moment or to another action in the utterance.</p>
 
@@ -415,10 +1025,118 @@ that any word belonging to one of these categories is assigned the feature <code
   <li>[sv] <em>han önskar att han <b>var</b> i Spanien</em> “he wishes that he was in Spain”</li>
 </ul>
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_sv-feat/Tense.md" target="#">edit Tense</a></p>
 
-<p><a id="al-sv-feat/VerbForm" class="al-dest"></a></p>
-<h2><code>VerbForm</code>: form of verb or deverbative</h2>
+
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_sv-feat/Tense.md" target="#">edit Tense</a>
+</div>
+
+<div about="#VerbForm_sv" property="rdfs:subClassOf" resource="#feat_sv">
+	<a id="al-sv-feat/VerbForm" class="al-dest" />
+	<h2><code property="rdfs:label" lang="">VerbForm</code>: <span property="rdfs:label">form of verb or deverbative</span>
+	<code>[</code> 
+	
+	
+		
+		
+	
+		
+		
+			
+				
+					
+					<span about="#VerbFormFin_sv" property="rdf:type" resource="#VerbForm_sv">
+						<span property="rdf:type" resource="../../u/feat/all.html#VerbFormFin" />
+						<code property="oliasystem:hasTagContaining" lang="">VerbForm=Fin</code>
+					</span>
+				
+			
+		
+			
+				
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#VerbFormInf_sv" property="rdf:type" resource="#VerbForm_sv">
+						<span property="rdf:type" resource="../../u/feat/all.html#VerbFormInf" />
+						<code property="oliasystem:hasTagContaining" lang="">VerbForm=Inf</code>
+					</span>
+				
+			
+		
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#VerbFormPart_sv" property="rdf:type" resource="#VerbForm_sv">
+						<span property="rdf:type" resource="../../u/feat/all.html#VerbFormPart" />
+						<code property="oliasystem:hasTagContaining" lang="">VerbForm=Part</code>
+					</span>
+				
+			
+		
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#VerbFormSup_sv" property="rdf:type" resource="#VerbForm_sv">
+						<span property="rdf:type" resource="../../u/feat/all.html#VerbFormSup" />
+						<code property="oliasystem:hasTagContaining" lang="">VerbForm=Sup</code>
+					</span>
+				
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+	
+		
+		
+			
+		
+	
+	<code>]</code>
+	</h2>
+	<div about="#VerbForm_sv" property="rdfs:comment">	
 
 <h3 id="fin-finite-verb"><code>Fin</code>: finite verb</h3>
 
@@ -473,10 +1191,69 @@ that any word belonging to one of these categories is assigned the feature <code
   <li>[sv] <em>antalet lägenheter har <b>sjunkit</b></em> “the number of apartments has decreased”</li>
 </ul>
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_sv-feat/VerbForm.md" target="#">edit VerbForm</a></p>
 
-<p><a id="al-sv-feat/Voice" class="al-dest"></a></p>
-<h2><code>Voice</code>: voice</h2>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_sv-feat/VerbForm.md" target="#">edit VerbForm</a>
+</div>
+
+<div about="#Voice_sv" property="rdfs:subClassOf" resource="#feat_sv">
+	<a id="al-sv-feat/Voice" class="al-dest" />
+	<h2><code property="rdfs:label" lang="">Voice</code>: <span property="rdfs:label">voice</span>
+	<code>[</code> 
+	
+	
+		
+		
+			
+				
+			
+		
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#VoiceAct_sv" property="rdf:type" resource="#Voice_sv">
+						<span property="rdf:type" resource="../../u/feat/all.html#VoiceAct" />
+						<code property="oliasystem:hasTagContaining" lang="">Voice=Act</code>
+					</span>
+				
+			
+		
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#VoicePass_sv" property="rdf:type" resource="#Voice_sv">
+						<span property="rdf:type" resource="../../u/feat/all.html#VoicePass" />
+						<code property="oliasystem:hasTagContaining" lang="">Voice=Pass</code>
+					</span>
+				
+			
+		
+			
+		
+	
+		
+		
+			
+		
+	
+	<code>]</code>
+	</h2>
+	<div about="#Voice_sv" property="rdfs:comment">	
 
 <p>The <code>Voice</code> feature captures the distinction between active and passive for verbs (<a href="">sv-pos/VERB</a> and <a href="">sv-pos/AUX</a>). The value <code>Pass</code> is only used when the passive voice is realized morphologically. (Swedish in addition has a periphrastic passive similar to English: <em>han blev jagad</em> “he was chased”.)</p>
 
@@ -498,7 +1275,10 @@ that any word belonging to one of these categories is assigned the feature <code
   <li>[sv] <em>det <b>hanteras</b> fel</em> “it is handled incorrectly”</li>
 </ul>
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_sv-feat/Voice.md" target="#">edit Voice</a></p>
+
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_sv-feat/Voice.md" target="#">edit Voice</a>
+</div>
 
 
 

@@ -43,7 +43,19 @@
 	  </div>
 	</noscript>
 
-          <h1 id="pos-tags">POS tags</h1>
+          
+<h1 id="pos-tags">POS tags</h1>
+
+<p><span about="." property="rdf:type" resource="owl:Ontology">
+	<span property="owl:imports" resource=" https://www.w3.org/2012/pyRdfa/extract?uri=http://universaldependencies.org/docs/u/pos/all.html&amp;format=xml&amp;rdfagraph=output&amp;vocab_expansion=false&amp;rdfa_lite=false&amp;embedded_rdf=true&amp;space_preserve=false&amp;vocab_cache=true&amp;vocab_cache_report=false&amp;vocab_cache_refresh=false"></span>
+	</span>
+<span about="#pos_ru" property="rdfs:label" style="visibility: hidden">POS tags</span>
+<span about="#pos_ru" property="rdfs:subClassOf" resource="_:ru">
+	<span about="_:ru" property="rdf:type" resource="owl:Restriction">
+		<span property="owl:onProperty" resource="http://purl.org/dc/terms/language"></span>
+		<span property="owl:hasValue" lang="" style="visibility: hidden">ru</span>
+	</span>
+</span></p>
 
 <table class="typeindex">
   <thead>
@@ -99,666 +111,741 @@
 
 <hr />
 
-<p><a id="al-ru-pos/ADJ" class="al-dest"></a></p>
-<h2><code>ADJ</code>: adjective</h2>
+<div about="#ADJ_ru" property="rdf:type" resource="#pos_ru">
+	<div property="rdf:type" resource="../../u/pos/all.html#ADJ" />
+	<a id="al-ru-pos/ADJ" class="al-dest" />
 
-<h3 id="definition">Definition</h3>
+	<h2><code property="oliasystem:hasTag" lang="">ADJ</code>: <div property="rdfs:label">adjective</div></h2>
+	<div property="rdfs:comment">
 
-<p>Adjectives are words that typically modify nouns and specify their
-properties or attributes. They may also function as predicates, as in</p>
+### Definition
 
-<p><em>Машина зеленая</em> “The car is green.”</p>
+Adjectives are words that typically modify nouns and specify their
+properties or attributes. They may also function as predicates, as in
 
-<p>The <code>ADJ</code> tag is intended for ordinary adjectives only. See <a href="">DET</a>
-for determiners and <a href="">NUM</a> for cardinal numerals.</p>
+_Машина зеленая_ “The car is green.”
 
-<p>In accord with the UD approach,
-adjectival ordinal numerals <em>(первый, седьмой, стопятидесятый) </em>
+The `ADJ` tag is intended for ordinary adjectives only. See [DET]()
+for determiners and [NUM]() for cardinal numerals.
+
+In accord with the UD approach,
+adjectival ordinal numerals _(первый, седьмой, стопятидесятый)&nbsp;_
 are tagged as adjectives, although the traditional grammar classifies
 them as numerals. They behave like adjectives both morphologically and
 syntactically, with the exception that they cannot be compared and
-negated.</p>
+negated.
 
-<p>Most Russian adjectives inflect for
-<a href="">ru-feat/Gender</a> <em>(большой – большое – большая)</em> “big”,
-<a href="">ru-feat/Number</a> <em>(большой – большие)</em>,
-<a href="">ru-feat/Case</a> <em>(большой – большого – большому – большим – большом)</em>,
-<a href="">ru-feat/Degree</a> <em>(большой – больше – наибольший)</em> and
-<a href="ru-feat/Negative">Negation</a> <em>(большой – небольшой)</em>.</p>
+Most Russian adjectives inflect for
+[ru-feat/Gender]() _(большой – большое – большая)_ “big”,
+[ru-feat/Number]() _(большой – большие)_,
+[ru-feat/Case]() _(большой – большого – большому – большим – большом)_,
+[ru-feat/Degree]() _(большой – больше – наибольший)_ and
+[Negation](ru-feat/Negative) _(большой – небольшой)_.
 
-<h3 id="examples">Examples</h3>
+### Examples
 
-<ul>
-  <li><em>большой</em> “big”</li>
-  <li><em>старый</em> “old”</li>
-  <li><em>зеленый</em> “green”</li>
-  <li><em>студенческий, учительский</em> “student’s, teacher’s” (possessive adjectives)</li>
-  <li><em>первый, второй, третий</em> “first, second, third”</li>
-  <li><em>сделанный</em> “done” (passive participial adjective)</li>
-  <li><em>делающий</em> “doing” (present participial adjective, derived from present transgressive)</li>
-  <li><em>сделавший</em> “having done” (past participial adjective, derived from past transgressive)</li>
-</ul>
+- _большой_ “big”
+- _старый_ “old”
+- _зеленый_ “green”
+- _студенческий, учительский_ “student's, teacher's” (possessive adjectives)
+- _первый, второй, третий_ “first, second, third”
+- _сделанный_ “done” (passive participial adjective)
+- _делающий_ “doing” (present participial adjective, derived from present transgressive)
+- _сделавший_ “having done” (past participial adjective, derived from past transgressive)
 
-<h3 id="border-cases">Border cases</h3>
+### Border cases
 
-<p>Passive participles lie on the border between verbs and adjectives.
-Core participial forms (ending in consonant or short vowel) are tagged <code>VERB</code>.
-Long forms are participial adjectives and they are tagged <code>ADJ</code>.
-For example:</p>
+Passive participles lie on the border between verbs and adjectives.
+Core participial forms (ending in consonant or short vowel) are tagged `VERB`.
+Long forms are participial adjectives and they are tagged `ADJ`.
+For example:
 
-<ul>
-  <li>Verb: <em>писан, писано, писана, писаны</em>  “written”</li>
-  <li>Adjective: <em>писанный, писанное, писанная, писанные</em>  “written”</li>
-</ul>
+- Verb: _писан, писано, писана, писаны_ &nbsp;“written”
+- Adjective: _писанный, писанное, писанная, писанные_ &nbsp;“written”
 
-<p>Only true participles (verbs) can be used to form the passive voice
-(but it may be sometimes difficult to distinguish from copula constructions, see <a href="">AUX</a>).
+Only true participles (verbs) can be used to form the passive voice
+(but it may be sometimes difficult to distinguish from copula constructions, see [AUX]()).
 On the other hand, the participial adjectives inflect for case and thus
-can modify nouns.</p>
+can modify nouns.
 
-<p>There is an analogy with some adjectives that preserved so called nominal (short) forms.
-And these adjectives are not derived from verbs. Example:</p>
+There is an analogy with some adjectives that preserved so called nominal (short) forms.
+And these adjectives are not derived from verbs. Example:
 
-<ul>
-  <li>Short (nominal) forms: <em>стар, старо, стара</em>  “old”</li>
-  <li>Normal (pronominal) forms: <em>старый, старое, старая</em>  “old”</li>
-</ul>
+- Short (nominal) forms: _стар, старо, стара_ &nbsp;“old”
+- Normal (pronominal) forms: _старый, старое, старая_ &nbsp;“old”
 
-<p>Here both groups are <code>ADJ</code>. The nominal forms are used in predication,
-the standard forms both in predication and to modify nouns.</p>
+Here both groups are `ADJ`. The nominal forms are used in predication,
+the standard forms both in predication and to modify nouns.
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_ru-pos/ADJ.md" target="#">edit ADJ</a></p>
 
-<p><a id="al-ru-pos/ADP" class="al-dest"></a></p>
-<h2><code>ADP</code>: adposition</h2>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_ru-pos/ADJ.md" target="#">edit ADJ</a>
 
-<h3 id="definition">Definition</h3>
 
-<p>Russian has only prepositions but not postpositionsand and circumpositions.
+<div about="#ADP_ru" property="rdf:type" resource="#pos_ru">
+	<div property="rdf:type" resource="../../u/pos/all.html#ADP" />
+	<a id="al-ru-pos/ADP" class="al-dest" />
+
+	<h2><code property="oliasystem:hasTag" lang="">ADP</code>: <div property="rdfs:label">adposition</div></h2>
+	<div property="rdfs:comment">
+
+### Definition
+
+Russian has only prepositions but not postpositionsand and circumpositions.
 They occur before a complement noun phrase
 (noun, pronoun)
 and they form a single structure with the complement to express its
-grammatical and semantic relation to another unit within a clause.</p>
+grammatical and semantic relation to another unit within a clause.
 
-<p>Some prepositions take the form of fixed multiword expressions, e.g.
-<em>по сравнению с</em> “in comparison with”, <em>в связи с</em>
+Some prepositions take the form of fixed multiword expressions, e.g.
+_по сравнению с_ “in comparison with”, _в связи с_
 “in connection with”. The
 component words are then still tagged according to their basic use
-(<em>по</em> is <code>ADP</code>, <em>сравнению</em> is <a href="">NOUN</a>, etc.) and their status as
-multiword expressions are accounted for in the syntactic annotation</p>
+(_по_ is `ADP`, _сравнению_ is [NOUN](), etc.) and their status as
+multiword expressions are accounted for in the syntactic annotation
 
-<h3 id="examples">Examples</h3>
+### Examples
 
-<ul>
-  <li><em>в;</em> “in, at”</li>
-  <li><em>к</em> “to”</li>
-  <li><em>на</em> “on, at”</li>
-</ul>
+- _в;_ “in, at”
+- _к_ “to”
+- _на_ “on, at”
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_ru-pos/ADP.md" target="#">edit ADP</a></p>
 
-<p><a id="al-ru-pos/ADV" class="al-dest"></a></p>
-<h2><code>ADV</code>: adverb</h2>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_ru-pos/ADP.md" target="#">edit ADP</a>
 
-<h3 id="definition">Definition</h3>
 
-<p>Adverbs are words that typically modify <a href="VERB">verbs</a> for such
+<div about="#ADV_ru" property="rdf:type" resource="#pos_ru">
+	<div property="rdf:type" resource="../../u/pos/all.html#ADV" />
+	<a id="al-ru-pos/ADV" class="al-dest" />
+
+	<h2><code property="oliasystem:hasTag" lang="">ADV</code>: <div property="rdfs:label">adverb</div></h2>
+	<div property="rdfs:comment">
+
+### Definition
+
+Adverbs are words that typically modify [verbs](VERB) for such
 categories as time, place, direction or manner. They may also modify
-<a href="ADJ">adjectives</a> and other adverbs, as in <em><b>очень</b> важно </em> “very significantly” or
-<em><b>вероятно</b> неправильно </em> “provably wrong”.</p>
+[adjectives](ADJ) and other adverbs, as in _<b>очень</b> важно&nbsp;_ “very significantly” or
+_<b>вероятно</b> неправильно&nbsp;_ “provably wrong”.
 
-<p>There is a closed subclass of <em>pronominal adverbs</em> that refer to
+There is a closed subclass of _pronominal adverbs_ that refer to
 circumstances in context, rather than naming them directly; similarly
 to pronouns, these can be categorized as interrogative, relative,
-demonstrative etc. Pronominal adverbs also get the <code>ADV</code>
-part-of-speech tag but they are differentiated by additional features.</p>
+demonstrative etc. Pronominal adverbs also get the `ADV`
+part-of-speech tag but they are differentiated by additional features.
 
-<p>Note that Russian transgressives (also called adverbial participles)
-are tagged <a href="">VERB</a>, not <code>ADV</code>.</p>
+Note that Russian transgressives (also called adverbial participles)
+are tagged [VERB](), not `ADV`.
 
-<h3 id="examples">Examples</h3>
+### Examples
 
-<ul>
-  <li><em>очень </em> “very”</li>
-  <li><em>хорошо </em> “well”</li>
-  <li><em>точно </em> “exactly”</li>
-  <li><em>завтра </em> “tomorrow”</li>
-  <li><em>вниз, наверх </em> “up, down”</li>
-  <li>ordinal numeral adverbs: <em>впервые </em> “for the first time”</li>
-  <li>multiplicative numeral adverbs: <em>однажды, дважды, трижды </em> “once, twice, three times”</li>
-  <li>interrogative adverbs: <em>где, куда, когда, как, почему </em> “where, where to, when, how, why”</li>
-  <li>demonstrative adverbs: <em>здесь, там, сейчас, потом, так </em> “here, there, now, then, so”</li>
-  <li>indefinite adverbs: <em>где-то, куда-то, когда-то, как-то </em> “somewhere, to somewhere, sometime, somehow”</li>
-  <li>total adverbs: <em>везде, всегда </em> “everywhere, always”</li>
-  <li>negative adverbs: <em>нигде, никогда </em> “nowhere, never”</li>
-</ul>
+- _очень&nbsp;_ “very”
+- _хорошо&nbsp;_ “well”
+- _точно&nbsp;_ “exactly”
+- _завтра&nbsp;_ “tomorrow”
+- _вниз, наверх&nbsp;_ “up, down”
+- ordinal numeral adverbs: _впервые&nbsp;_ “for the first time”
+- multiplicative numeral adverbs: _однажды, дважды, трижды&nbsp;_ “once, twice, three times”
+- interrogative adverbs: _где, куда, когда, как, почему&nbsp;_ “where, where to, when, how, why”
+- demonstrative adverbs: _здесь, там, сейчас, потом, так&nbsp;_ “here, there, now, then, so”
+- indefinite adverbs: _где-то, куда-то, когда-то, как-то&nbsp;_ “somewhere, to somewhere, sometime, somehow”
+- total adverbs: _везде, всегда&nbsp;_ “everywhere, always”
+- negative adverbs: _нигде, никогда&nbsp;_ “nowhere, never”
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_ru-pos/ADV.md" target="#">edit ADV</a></p>
 
-<p><a id="al-ru-pos/AUX" class="al-dest"></a></p>
-<h2><code>AUX</code>: auxiliary verb</h2>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_ru-pos/ADV.md" target="#">edit ADV</a>
 
-<h3 id="definition">Definition</h3>
 
-<p>The only truly auxiliary verb in Russian is <em>быть</em> “to be”.
+<div about="#AUX_ru" property="rdf:type" resource="#pos_ru">
+	<div property="rdf:type" resource="../../u/pos/all.html#AUX" />
+	<a id="al-ru-pos/AUX" class="al-dest" />
+
+	<h2><code property="oliasystem:hasTag" lang="">AUX</code>: <div property="rdfs:label">auxiliary verb</div></h2>
+	<div property="rdfs:comment">
+
+### Definition
+
+The only truly auxiliary verb in Russian is _быть_ “to be”.
 It accompanies the lexical verb of a verb phrase and expresses
-grammatical distinctions not carried by the lexical verb.</p>
+grammatical distinctions not carried by the lexical verb.
 
-<h3 id="examples">Examples</h3>
+### Examples
 
-<ul>
-  <li>
-    <p>Future tense. Finite future form of <em>быть</em> is combined with infinitive
-of the lexical verb. The auxiliary expresses person, number and tense:
-<em><b>буду</b> делать</em> “I will do”,
-<em><b>будешь</b> делать</em> “you will do”,
-<em><b>будут</b> делать</em> “they will do”.
-Note that a limited set of verbs can form future morphologically, without
-the auxiliary.</p>
-  </li>
-  <li>
-    <p>Conditional mood.
-Conditional form (historically aorist) of <em>být</em> is combined with past participle
-of the lexical verb. The auxiliary expresses person and number,
-the participle expresses gender and number:
-<em>сделал <b>бы</b></em> “I would do.<code>Masc</code>”,
-<em>сделала <b>бы</b></em> “I would do.<code>Fem</code>”,
-<em>сделали <b>бы</b></em> “we would do.<code>Masc</code>”.</p>
-  </li>
-  <li>
-    <p>Passive voice.
-A form of <em>быть</em> (in various tenses and moods or in the infinitive) is combined with
-passive participle
-of the lexical verb. The auxiliary expresses person, number, tense(past and future) and mood,
-the participle expresses gender, number and voice:
-<em><b>будет</b> сделан</em> “he will be done”,
-<em><b>был</b> сделан</em> “he was done”,
-<em><b>был бы</b> сделан</em> “he would be done”,</p>
-  </li>
-</ul>
+- Future tense. Finite future form of _быть_ is combined with infinitive
+  of the lexical verb. The auxiliary expresses person, number and tense:
+  _<b>буду</b> делать_ “I will do”,
+  _<b>будешь</b> делать_ “you will do”,
+  _<b>будут</b> делать_ “they will do”.
+  Note that a limited set of verbs can form future morphologically, without
+  the auxiliary.
 
-<h3 id="modal-verbs-are-not-auxiliaries">Modal verbs are not auxiliaries</h3>
+- Conditional mood.
+  Conditional form (historically aorist) of _být_ is combined with past participle
+  of the lexical verb. The auxiliary expresses person and number,
+  the participle expresses gender and number:
+  _сделал <b>бы</b>_ “I would do.`Masc`”,
+  _сделала <b>бы</b>_ “I would do.`Fem`”,
+  _сделали <b>бы</b>_ “we would do.`Masc`”.
 
-<p>Russian modal verbs are not considered auxiliary and they are tagged <code>VERB</code>.
-Their behavior is only slightly different from other content verbs.</p>
+- Passive voice.
+  A form of _быть_ (in various tenses and moods or in the infinitive) is combined with
+  passive participle
+  of the lexical verb. The auxiliary expresses person, number, tense(past and future) and mood,
+  the participle expresses gender, number and voice:
+  _<b>будет</b> сделан_ “he will be done”,
+  _<b>был</b> сделан_ “he was done”,
+  _<b>был бы</b> сделан_ “he would be done”,
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_ru-pos/AUX_.md" target="#">edit AUX</a></p>
+### Modal verbs are not auxiliaries
 
-<p><a id="al-ru-pos/CONJ" class="al-dest"></a></p>
-<h2><code>CONJ</code>: coordinating conjunction</h2>
+Russian modal verbs are not considered auxiliary and they are tagged `VERB`.
+Their behavior is only slightly different from other content verbs.
 
-<h3 id="definition">Definition</h3>
 
-<p>A coordinating conjunction is a word that links words or larger
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_ru-pos/AUX_.md" target="#">edit AUX</a>
+
+
+<div about="#CONJ_ru" property="rdf:type" resource="#pos_ru">
+	<div property="rdf:type" resource="../../u/pos/all.html#CONJ" />
+	<a id="al-ru-pos/CONJ" class="al-dest" />
+
+	<h2><code property="oliasystem:hasTag" lang="">CONJ</code>: <div property="rdfs:label">coordinating conjunction</div></h2>
+	<div property="rdfs:comment">
+
+### Definition
+
+A coordinating conjunction is a word that links words or larger
 constituents without syntactically subordinating one to the other and
-expresses a semantic relationship between them.</p>
+expresses a semantic relationship between them.
 
-<p>For <em>subordinating conjunctions,</em> see <a href="">SCONJ</a>.</p>
+For _subordinating conjunctions,_ see [SCONJ]().
 
-<h3 id="examples">Examples</h3>
+### Examples
 
-<ul>
-  <li><em>и </em> “and”</li>
-  <li><em>или </em> “or”</li>
-  <li><em>но </em> “but”</li>
-</ul>
+- _и&nbsp;_ “and”
+- _или&nbsp;_ “or”
+- _но&nbsp;_ “but”
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_ru-pos/CONJ.md" target="#">edit CONJ</a></p>
 
-<p><a id="al-ru-pos/DET" class="al-dest"></a></p>
-<h2><code>DET</code>: determiner</h2>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_ru-pos/CONJ.md" target="#">edit CONJ</a>
 
-<h3 id="definition">Definition</h3>
 
-<p>Determiners are words that modify <a href="NOUN">nouns</a> or noun phrases and
+<div about="#DET_ru" property="rdf:type" resource="#pos_ru">
+	<div property="rdf:type" resource="../../u/pos/all.html#DET" />
+	<a id="al-ru-pos/DET" class="al-dest" />
+
+	<h2><code property="oliasystem:hasTag" lang="">DET</code>: <div property="rdfs:label">determiner</div></h2>
+	<div property="rdfs:comment">
+
+### Definition
+
+Determiners are words that modify [nouns](NOUN) or noun phrases and
 express the reference of the noun phrase in context. That is, a
 determiner may indicate whether the noun is referring to a definite or
 indefinite element of a class, to a closer or more distant element, to
 an element belonging to a specified person or thing, to a particular
-number or quantity, etc.</p>
+number or quantity, etc.
 
-<p>An important point to note is that the traditional grammar of Russian does not
+An important point to note is that the traditional grammar of Russian does not
 define determiners as a separate word class. Russian does not have articles.
 Most determiners are traditionally called pronouns; that is, an UD-conformant
-annotation of Russian must distinguish between substantive pronouns (UD tag <a href="">PRON</a>)
-and attributive pronouns (UD tag <code>DET</code>).</p>
+annotation of Russian must distinguish between substantive pronouns (UD tag [PRON]())
+and attributive pronouns (UD tag `DET`).
 
-<h3 id="examples">Examples</h3>
+### Examples
 
-<ul>
-  <li>possessive determiners: <em>мой, твой, его, её, наш, ваш, их </em> “my, your, his, her, our, your, their”</li>
-  <li>reflexive possessive determiner: <em>свой </em> “one’s own”</li>
-  <li>demonstrative determiners: <em>этот </em> as in <em>Я видела <b>эту</b> машину вчера. </em> “I saw <b>this</b> car yesterday.”</li>
-  <li>interrogative determiners: <em>какой </em> as in <em><b>Какая</b> машина тебе нравится? </em> “<b>Which</b> car do you like?”</li>
-  <li>relative determiners: <em>который </em> as in <em>Мне интересно, <b>которая</b> машина тебе нравится. </em> “I wonder <b>which</b> car you like.”</li>
-  <li>relative possessive determiner: <em>чей </em> “whose”</li>
-  <li>indefinite determiners: <em>некоторый</em></li>
-  <li>total determiners: <em>каждый</em></li>
-  <li>negative determiners: <em>никакой </em> as in <em>У нас не осталось <b>никаких</b> машин. </em> “We have <b>no</b> cars available.”</li>
-</ul>
+- possessive determiners: _мой, твой, его, её, наш, ваш, их&nbsp;_ “my, your, his, her, our, your, their”
+- reflexive possessive determiner: _свой&nbsp;_ “one's own”
+- demonstrative determiners: _этот&nbsp;_ as in _Я видела <b>эту</b> машину вчера.&nbsp;_ “I saw <b>this</b> car yesterday.”
+- interrogative determiners: _какой&nbsp;_ as in _<b>Какая</b> машина тебе нравится?&nbsp;_ “<b>Which</b> car do you like?”
+- relative determiners: _который&nbsp;_ as in _Мне интересно, <b>которая</b> машина тебе нравится.&nbsp;_ “I wonder <b>which</b> car you like.”
+- relative possessive determiner: _чей&nbsp;_ “whose”
+- indefinite determiners: _некоторый_
+- total determiners: _каждый_
+- negative determiners: _никакой&nbsp;_ as in _У нас не осталось <b>никаких</b> машин.&nbsp;_ “We have <b>no</b> cars available.”
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_ru-pos/DET.md" target="#">edit DET</a></p>
 
-<p><a id="al-ru-pos/INTJ" class="al-dest"></a></p>
-<h2><code>INTJ</code>: interjection</h2>
 
-<h3 id="definition">Definition</h3>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_ru-pos/DET.md" target="#">edit DET</a>
 
-<p>An interjection is a word that is used most often as an exclamation or
+
+<div about="#INTJ_ru" property="rdf:type" resource="#pos_ru">
+	<div property="rdf:type" resource="../../u/pos/all.html#INTJ" />
+	<a id="al-ru-pos/INTJ" class="al-dest" />
+
+	<h2><code property="oliasystem:hasTag" lang="">INTJ</code>: <div property="rdfs:label">interjection</div></h2>
+	<div property="rdfs:comment">
+
+### Definition
+
+An interjection is a word that is used most often as an exclamation or
 part of an exclamation. It typically expresses an emotional reaction,
 is not syntactically related to other accompanying expressions, and
 may include a combination of sounds not otherwise found in the
-language.</p>
+language.
 
-<h3 id="examples">Examples</h3>
+### Examples
 
-<p>(Note that no direct translation of interjections is possible.
+(Note that no direct translation of interjections is possible.
 The approximate translations below are for orientation purposes and they
-cannot serve to judge the part of speech from the English perspective.)</p>
+cannot serve to judge the part of speech from the English perspective.)
 
-<ul>
-  <li><em>ах </em> “oh”</li>
-  <li><em>ого </em> “wow”</li>
-  <li><em>ну </em> “well”</li>
-  <li><em>ради бога </em> “for God’s sake”</li>
-</ul>
+- _ах&nbsp;_ “oh”
+- _ого&nbsp;_ “wow”
+- _ну&nbsp;_ “well”
+- _ради бога&nbsp;_ “for God's sake”
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_ru-pos/INTJ.md" target="#">edit INTJ</a></p>
 
-<p><a id="al-ru-pos/NOUN" class="al-dest"></a></p>
-<h2><code>NOUN</code>: noun</h2>
 
-<h3 id="definition">Definition</h3>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_ru-pos/INTJ.md" target="#">edit INTJ</a>
 
-<p>Nouns are a part of speech typically denoting a person, place, thing,
-animal or idea.</p>
 
-<p>The <code>NOUN</code> tag is intended for common nouns only. See <a href="">PROPN</a> for
-proper nouns and <a href="">PRON</a> for pronouns.</p>
+<div about="#NOUN_ru" property="rdf:type" resource="#pos_ru">
+	<div property="rdf:type" resource="../../u/pos/all.html#NOUN" />
+	<a id="al-ru-pos/NOUN" class="al-dest" />
 
-<p>Russian nouns have the lexical feature <a href="">ru-feat/Gender</a>.
-Furthermore, the nouns inflect for <a href="">ru-feat/Number</a> and <a href="">ru-feat/Case</a>.</p>
+	<h2><code property="oliasystem:hasTag" lang="">NOUN</code>: <div property="rdfs:label">noun</div></h2>
+	<div property="rdfs:comment">
 
-<p>A verbal noun can be derived productively from almost every verb
-(e.g. <em>есть</em>  “to eat” → <em>поедание</em>  “eating”).
-While in other languages a corresponding form may be called gerund and tagged <a href="">VERB</a>,
-in Russian it is tagged <code>NOUN</code>. It has always the neuter gender and the full
-number-case inflectional paradigm.</p>
+### Definition
 
-<h3 id="examples">Examples</h3>
+Nouns are a part of speech typically denoting a person, place, thing,
+animal or idea.
 
-<ul>
-  <li><em>девочка</em>  “girl”</li>
-  <li><em>кошка</em>  “cat”</li>
-  <li><em>дерево</em>  “tree”</li>
-  <li><em>воздух</em>  “air”</li>
-  <li><em>красота</em>  “beauty”</li>
-  <li><em>плавание</em>  “swimming”</li>
-</ul>
+The `NOUN` tag is intended for common nouns only. See [PROPN]() for
+proper nouns and [PRON]() for pronouns.
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_ru-pos/NOUN.md" target="#">edit NOUN</a></p>
+Russian nouns have the lexical feature [ru-feat/Gender]().
+Furthermore, the nouns inflect for [ru-feat/Number]() and [ru-feat/Case]().
 
-<p><a id="al-ru-pos/NUM" class="al-dest"></a></p>
-<h2><code>NUM</code>: numeral</h2>
+A verbal noun can be derived productively from almost every verb
+(e.g. _есть_&nbsp; “to eat” → _поедание_&nbsp; “eating”).
+While in other languages a corresponding form may be called gerund and tagged [VERB](),
+in Russian it is tagged `NOUN`. It has always the neuter gender and the full
+number-case inflectional paradigm.
 
-<h3 id="definition">Definition</h3>
+### Examples
 
-<p>A numeral is a word, functioning most typically as a determiner,
+- _девочка_&nbsp; “girl”
+- _кошка_&nbsp; “cat”
+- _дерево_&nbsp; “tree”
+- _воздух_&nbsp; “air”
+- _красота_&nbsp; “beauty”
+- _плавание_&nbsp; “swimming”
+
+
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_ru-pos/NOUN.md" target="#">edit NOUN</a>
+
+
+<div about="#NUM_ru" property="rdf:type" resource="#pos_ru">
+	<div property="rdf:type" resource="../../u/pos/all.html#NUM" />
+	<a id="al-ru-pos/NUM" class="al-dest" />
+
+	<h2><code property="oliasystem:hasTag" lang="">NUM</code>: <div property="rdfs:label">numeral</div></h2>
+	<div property="rdfs:comment">
+
+### Definition
+
+A numeral is a word, functioning most typically as a determiner,
 adjective or pronoun, that expresses a number and a relation to the
-number, such as quantity, sequence, frequency or fraction.</p>
+number, such as quantity, sequence, frequency or fraction.
 
-<p>Note that cardinal numerals are covered by <code>NUM</code> whether they are used
-as determiners or not (as in <em>Windows <b>7</b></em>) and whether they
-are expressed as words <em>(четыре)</em>, digits <em>(4)</em> or Roman numerals
-<em>(IV)</em>.</p>
+Note that cardinal numerals are covered by `NUM` whether they are used
+as determiners or not (as in _Windows <b>7</b>_) and whether they
+are expressed as words _(четыре)_, digits _(4)_ or Roman numerals
+_(IV)_.
 
-<p>Russian grammar distinguishes several subclasses of <em>pronominal numerals (quantifiers):</em>
-interrogative and relative <em>(сколько </em> “how many”);
-demonstrative <em>(столько </em> “this many”);
-indefinite <em>(несколько </em> “several”).
+Russian grammar distinguishes several subclasses of _pronominal numerals (quantifiers):_
+interrogative and relative _(сколько&nbsp;_ “how many”);
+demonstrative _(столько&nbsp;_ “this many”);
+indefinite _(несколько&nbsp;_ “several”).
 These words behave similarly to (most) cardinal numbers,
 e.g. they require that the counted noun phrase be in genitive.
 They are not similar to adjectives (unlike their English counterparts).
-However, in accord with the UD standard, they should be tagged <a href="">DET</a>, not <code>NUM</code>.</p>
+However, in accord with the UD standard, they should be tagged [DET](), not `NUM`.
 
-<p>In addition, several types of (non-pronominal) numerals, such as ordinal
-numerals and multiplicative numerals, are tagged <a href="">ADJ</a> or <a href="">ADV</a>, based on
-their syntactic and morphological behavior.</p>
+In addition, several types of (non-pronominal) numerals, such as ordinal
+numerals and multiplicative numerals, are tagged [ADJ]() or [ADV](), based on
+their syntactic and morphological behavior.
 
-<h3 id="examples">Examples</h3>
+### Examples
 
-<ul>
-  <li><em>0, 1, 2, 3, 4, 5, 2014, 1000000, 3.14159265359</em></li>
-  <li><em>I, II, III, IV, V, MMXIV</em></li>
-  <li><em>один, два, три, четыре, пять, семьдесят </em> “one, two, three, four, five, seventy”</li>
-  <li><em>половина, треть, четверть  </em> “one-half, one third, quarter”: denominators of fractions constitute a separate class of cardinal numerals.</li>
-  <li><em>четверо, пятеро </em> “four, five” (These are special forms, so-called generic numerals. They are used rarely, in literary or archaic style.)</li>
-</ul>
+- _0, 1, 2, 3, 4, 5, 2014, 1000000, 3.14159265359_
+- _I, II, III, IV, V, MMXIV_
+- _один, два, три, четыре, пять, семьдесят&nbsp;_ “one, two, three, four, five, seventy”
+- _половина, треть, четверть &nbsp;_ “one-half, one third, quarter”: denominators of fractions constitute a separate class of cardinal numerals.
+- _четверо, пятеро&nbsp;_ “four, five” (These are special forms, so-called generic numerals. They are used rarely, in literary or archaic style.)
 
-<h3 id="counterexamples">Counterexamples</h3>
+### Counterexamples
 
-<ul>
-  <li><em>первый, второй, третий </em> “first, second, third”: adjectival ordinal numerals. They are tagged <a href="">ADJ</a>, and the <a href="">ru-feat/NumType</a> feature reveals their semantic relation to numbers.</li>
-  <li><em>впервые </em> “for the first time”: adverbial ordinal numerals. They are tagged <a href="">ADV</a>, and the <a href="">ru-feat/NumType</a> feature reveals their semantic relation to numbers.</li>
-  <li><em>однажды, дважды, трижды </em> “once, twice, three times”: multiplicative numerals. They are tagged <a href="">ADV</a>, and the <a href="">ru-feat/NumType</a> feature reveals their semantic relation to numbers.</li>
-  <li><em>двое, трое, четверо, пятеро </em> “twofold, three kinds of, four kinds of, five kinds of: generic numerals. They are tagged <a href="">ADJ</a>.</li>
-  <li><em>пара, тройка, четверка </em> “pair, triplet, foursome”: n-tuples <em>(n-tice) </em> are not considered numerals in the Czech grammar. They are tagged <a href="">NOUN</a>.</li>
-  <li><em>единица, двойка, тройка, четверка, пятерка </em> “number one, number two, number three, number four, number five”: names of numbers, or of objects identified by the number (e.g. of a bus route). They are not considered numerals and they are tagged <a href="">NOUN</a>.</li>
-  <li><em>тысяча, миллион, биллион, триллион </em> “thousand, million, billion, trillion”: words for large quantities are ambiguous between cardinal numerals (tagged <code>NUM</code>) and nouns.
-If they inflect as nouns, they are tagged <a href="">NOUN</a>; but the borderline is fuzzy.
-For instance, in phrases like <em><b>тысячи</b> людей вышли на улицы</em> (“<b>thousands</b> of people went on the streets”),
-<em>тысячи </em> is a noun.
-In numeric expressions, e.g. <em>110 <b>тысяч</b> долларов </em> (“110 <b>thousand</b> dollars”), it is a cardinal numeral.</li>
-</ul>
+- _первый, второй, третий&nbsp;_ “first, second, third”: adjectival ordinal numerals. They are tagged [ADJ](), and the [ru-feat/NumType]() feature reveals their semantic relation to numbers.
+- _впервые&nbsp;_ “for the first time”: adverbial ordinal numerals. They are tagged [ADV](), and the [ru-feat/NumType]() feature reveals their semantic relation to numbers.
+- _однажды, дважды, трижды&nbsp;_ “once, twice, three times”: multiplicative numerals. They are tagged [ADV](), and the [ru-feat/NumType]() feature reveals their semantic relation to numbers.
+- _двое, трое, четверо, пятеро&nbsp;_ “twofold, three kinds of, four kinds of, five kinds of: generic numerals. They are tagged [ADJ]().
+- _пара, тройка, четверка&nbsp;_ “pair, triplet, foursome”: n-tuples _(n-tice)&nbsp;_ are not considered numerals in the Czech grammar. They are tagged [NOUN]().
+- _единица, двойка, тройка, четверка, пятерка&nbsp;_ “number one, number two, number three, number four, number five”: names of numbers, or of objects identified by the number (e.g. of a bus route). They are not considered numerals and they are tagged [NOUN]().
+- _тысяча, миллион, биллион, триллион&nbsp;_ “thousand, million, billion, trillion”: words for large quantities are ambiguous between cardinal numerals (tagged `NUM`) and nouns.
+  If they inflect as nouns, they are tagged [NOUN](); but the borderline is fuzzy.
+  For instance, in phrases like _<b>тысячи</b> людей вышли на улицы_ (“<b>thousands</b> of people went on the streets”),
+  _тысячи&nbsp;_ is a noun.
+  In numeric expressions, e.g. _110 <b>тысяч</b> долларов&nbsp;_ (“110 <b>thousand</b> dollars”), it is a cardinal numeral.
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_ru-pos/NUM.md" target="#">edit NUM</a></p>
 
-<p><a id="al-ru-pos/PART" class="al-dest"></a></p>
-<h2><code>PART</code>: particle</h2>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_ru-pos/NUM.md" target="#">edit NUM</a>
 
-<h3 id="definition">Definition</h3>
 
-<p>Particles are function words that must be associated with another word
+<div about="#PART_ru" property="rdf:type" resource="#pos_ru">
+	<div property="rdf:type" resource="../../u/pos/all.html#PART" />
+	<a id="al-ru-pos/PART" class="al-dest" />
+
+	<h2><code property="oliasystem:hasTag" lang="">PART</code>: <div property="rdfs:label">particle</div></h2>
+	<div property="rdfs:comment">
+
+### Definition
+
+Particles are function words that must be associated with another word
 or phrase to impart meaning and that do not satisfy definitions of
-other universal parts of speech (e.g. <a href="ADP">adpositions</a>,
-<a href="CONJ">coordinating conjunctions</a>, <a href="SCONJ">subordinating conjunctions</a>
-or <a href="AUX">auxiliary verbs</a>).  Particles may encode grammatical
+other universal parts of speech (e.g. [adpositions](ADP),
+[coordinating conjunctions](CONJ), [subordinating conjunctions](SCONJ)
+or [auxiliary verbs](AUX)).  Particles may encode grammatical
 categories such as negation, mood, tense etc. Russian particles are
-not inflected.</p>
+not inflected.
 
-<p>Note that response words such as <em>да </em> “yes”, <em>нет </em> “no”, etc.
+Note that response words such as _да&nbsp;_ “yes”, _нет&nbsp;_ “no”, etc.
 are considered particles in the PDT tagset but they should be retagged
-as interjections under the UD standard.</p>
+as interjections under the UD standard. 
 
-<h3 id="examples">Examples</h3>
+### Examples
 
-<ul>
-  <li>Sentence modality: <em><b>пусть</b> </em> (“<b>May you</b> have an enjoyable stay!”)</li>
-  <li><em>же </em> “just, only”</li>
-  <li><em>аж </em> “as late as, even, up to” 
-Use case: <em>Мне сегодня аж пять писем пришло. </em> “Today I have recieved even five letters”</li>
-</ul>
+- Sentence modality: _<b>пусть</b>&nbsp;_ (“<b>May you</b> have an enjoyable stay!”)
+- _же&nbsp;_ “just, only” 
+- _аж&nbsp;_ “as late as, even, up to” 
+  Use case: _Мне сегодня аж пять писем пришло.&nbsp;_ “Today I have recieved even five letters”
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_ru-pos/PART.md" target="#">edit PART</a></p>
 
-<p><a id="al-ru-pos/PRON" class="al-dest"></a></p>
-<h2><code>PRON</code>: pronoun</h2>
 
-<h3 id="definition">Definition</h3>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_ru-pos/PART.md" target="#">edit PART</a>
 
-<p>Pronouns are words that substitute for <a href="NOUN">nouns</a> or noun phrases,
+
+<div about="#PRON_ru" property="rdf:type" resource="#pos_ru">
+	<div property="rdf:type" resource="../../u/pos/all.html#PRON" />
+	<a id="al-ru-pos/PRON" class="al-dest" />
+
+	<h2><code property="oliasystem:hasTag" lang="">PRON</code>: <div property="rdfs:label">pronoun</div></h2>
+	<div property="rdfs:comment">
+
+### Definition
+
+Pronouns are words that substitute for [nouns](NOUN) or noun phrases,
 whose meaning is recoverable from the linguistic or extralinguistic
-context.</p>
+context.
 
-<p>Pronouns under this definition function like nouns. Note that
-Russian grammar traditionally extends the term <em>pronoun</em> to words that
-substitute for <a href="ADJ">adjectives</a>. Such words are not tagged <code>PRON</code>
-under our universal scheme. They are tagged as <a href="DET">determiners</a> in
-order to annotate the same thing same way across languages.</p>
+Pronouns under this definition function like nouns. Note that
+Russian grammar traditionally extends the term _pronoun_ to words that
+substitute for [adjectives](ADJ). Such words are not tagged `PRON`
+under our universal scheme. They are tagged as [determiners](DET) in
+order to annotate the same thing same way across languages.
 
-<p>For instance, <em>‘это </em> “this” is traditionally called pronoun in
+For instance, _'это&nbsp;_ “this” is traditionally called pronoun in
 Russian grammar, regardless of context (the notion of determiners does
 not exist in Russian grammar). To make the annotation parallel across
-languages, it should be now tagged <code>PRON</code> in <em>Я видел <b>это</b> вчера. </em> “I saw <b>this</b> yesterday.” and <code>DET</code> in
-<em>Я видел <b>эту</b> машину вчера. </em> “I saw <b>this</b> car yesterday.”</p>
+languages, it should be now tagged `PRON` in _Я видел <b>это</b> вчера.&nbsp;_ “I saw <b>this</b> yesterday.” and `DET` in
+_Я видел <b>эту</b> машину вчера.&nbsp;_ “I saw <b>this</b> car yesterday.”
 
-<h3 id="examples">Examples</h3>
+### Examples
 
-<ul>
-  <li>personal pronouns: <em>я, ты, он, она, оно, мы, вы, они </em> “I, you, he, she, it, we, you, they”</li>
-  <li>reflexive pronouns: <em>себе, сам </em> “oneself”</li>
-  <li>demonstrative pronouns: <em>это </em> as in <em>Я видел <b>это</b> вчера. </em> “I saw <b>this</b> yesterday.”</li>
-  <li>interrogative pronouns: <em>кто, что </em> “who, what” as in <em><b>Что</b> ты думаешь? </em> “<b>What</b> do you think?”</li>
-  <li>relative pronouns: <em>кто, что </em> “who, what” as in <em>Мне интересно, <b>что</b> ты думаешь. </em>  “I wonder <b>what</b> you think.”</li>
-  <li>indefinite pronouns: <em>кто-то, что-то </em> “somebody, something”</li>
-  <li>total pronouns: <em>каждый, все </em> “everybody, all”</li>
-  <li>negative pronouns: <em>никто, ничто </em> “nobody, nothing”</li>
-</ul>
+- personal pronouns: _я, ты, он, она, оно, мы, вы, они&nbsp;_ “I, you, he, she, it, we, you, they”
+- reflexive pronouns: _себе, сам&nbsp;_ “oneself”
+- demonstrative pronouns: _это&nbsp;_ as in _Я видел <b>это</b> вчера.&nbsp;_ “I saw <b>this</b> yesterday.”
+- interrogative pronouns: _кто, что&nbsp;_ “who, what” as in _<b>Что</b> ты думаешь?&nbsp;_ “<b>What</b> do you think?”
+- relative pronouns: _кто, что&nbsp;_ “who, what” as in _Мне интересно, <b>что</b> ты думаешь.&nbsp;_  “I wonder <b>what</b> you think.”
+- indefinite pronouns: _кто-то, что-то&nbsp;_ “somebody, something”
+- total pronouns: _каждый, все&nbsp;_ “everybody, all”
+- negative pronouns: _никто, ничто&nbsp;_ “nobody, nothing”
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_ru-pos/PRON.md" target="#">edit PRON</a></p>
 
-<p><a id="al-ru-pos/PROPN" class="al-dest"></a></p>
-<h2><code>PROPN</code>: proper noun</h2>
 
-<h3 id="definition">Definition</h3>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_ru-pos/PRON.md" target="#">edit PRON</a>
 
-<p>A proper noun is a noun that is the name
+
+<div about="#PROPN_ru" property="rdf:type" resource="#pos_ru">
+	<div property="rdf:type" resource="../../u/pos/all.html#PROPN" />
+	<a id="al-ru-pos/PROPN" class="al-dest" />
+
+	<h2><code property="oliasystem:hasTag" lang="">PROPN</code>: <div property="rdfs:label">proper noun</div></h2>
+	<div property="rdfs:comment">
+
+### Definition
+
+A proper noun is a noun that is the name
 of a specific individual, place, or object.
-Russian proper nouns are always written starting with an uppercase letter.</p>
+Russian proper nouns are always written starting with an uppercase letter.
 
-<p>Single-word named entities should be tagged <code>PROPN</code> though they originate
-from a common noun <em>(Грязь) </em>(village) or an adjective <em>(Белая) </em>(river).
+Single-word named entities should be tagged `PROPN` though they originate
+from a common noun _(Грязь)&nbsp;_(village) or an adjective _(Белая)&nbsp;_(river).
 Even if they were originally adjectives and inflect according to adjectival
-paradigms, they behave syntactically as nouns. For instance, <em>Белая </em>
+paradigms, they behave syntactically as nouns. For instance, _Белая&nbsp;_
 (a river in Bashkortostan) is originally feminine form of the
-adjective <em>белый </em> “warm” but as a geographical name, it is a noun.
+adjective _белый&nbsp;_ “warm” but as a geographical name, it is a noun.
 It denotes a concrete location (rather than a property of somebody/something)
 and its feminine gender is fixed (while adjectives have forms in all three
-genders).</p>
+genders).
 
-<p>Note that names of languages <em>(русский, английский)</em>
-and adjectives derived from geographical names <em>(русский, английский </em> “Czech, English”)
-are written in lowercase and are not tagged <code>PROPN</code>.</p>
+Note that names of languages _(русский, английский)_
+and adjectives derived from geographical names _(русский, английский&nbsp;_ “Czech, English”)
+are written in lowercase and are not tagged `PROPN`.
 
-<p>Personal names are typically treated as a sequence of proper nouns
+Personal names are typically treated as a sequence of proper nouns
 (one or more given names and one or more surnames).
-If the name contains prepositions, conjunctions or articles (foreign names), these are tagged as <code>ADP</code>, <code>CONJ</code> and <code>DET</code>,
-respectively.</p>
+If the name contains prepositions, conjunctions or articles (foreign names), these are tagged as `ADP`, `CONJ` and `DET`,
+respectively.
 
-<p>Russian (and other Slavic) multi-word named entities have internal syntactic
+Russian (and other Slavic) multi-word named entities have internal syntactic
 structure, which is preserved in the annotation. The headword is always noun
-and there may be other nouns involved. They will be tagged either <code>PROPN</code> or
-<code>NOUN</code> and possible ambiguities must be resolved individually.
-Modifying adjectives are never tagged <code>PROPN</code>. Even if an adjective is the
+and there may be other nouns involved. They will be tagged either `PROPN` or
+`NOUN` and possible ambiguities must be resolved individually.
+Modifying adjectives are never tagged `PROPN`. Even if an adjective is the
 first word of a multi-word name, and thus it starts with an uppercase letter,
-it is still tagged <code>ADJ</code>.
+it is still tagged `ADJ`.
 Similarly, function words in named entities retain their normal tags.
 These rules are less strict for foreign named entities where the original
-part of speech is hidden for a Czech speaker.</p>
+part of speech is hidden for a Czech speaker.
 
-<h3 id="examples">Examples</h3>
+### Examples
 
-<ul>
-  <li><em>Белая</em>.<code>ADJ</code> <em>река</em>.<code>NOUN</code> “White River”. Even though the two words
-together are a name of a particular river, <em>река</em> is a common noun and is
-tagged as such.</li>
-  <li><em>Организация</em>.<code>NOUN</code> <em>Объединенных</em>.<code>ADJ</code> <em>Наций</em>.<code>NOUN</code> “United Nations Organization”
-consists of three words, none of which is proper noun. However, the acronym
-<em><b>ООН</b> </em> “UNO” is a single-token name and is tagged <code>PROPN</code>.</li>
-</ul>
+- _Белая_.`ADJ` _река_.`NOUN` “White River”. Even though the two words
+  together are a name of a particular river, _река_ is a common noun and is
+  tagged as such.
+- _Организация_.`NOUN` _Объединенных_.`ADJ` _Наций_.`NOUN` “United Nations Organization”
+  consists of three words, none of which is proper noun. However, the acronym
+  _<b>ООН</b>&nbsp;_ “UNO” is a single-token name and is tagged `PROPN`.
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_ru-pos/PROPN.md" target="#">edit PROPN</a></p>
 
-<p><a id="al-ru-pos/PUNCT" class="al-dest"></a></p>
-<h2><code>PUNCT</code>: punctuation</h2>
 
-<h3 id="definition">Definition</h3>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_ru-pos/PROPN.md" target="#">edit PROPN</a>
 
-<p>Punctuation marks are non-alphabetical characters and character groups
-used to delimit linguistic units in printed text.</p>
 
-<p>Punctuation is not taken to include logograms such as <em>$</em>, <em>%</em>, and
-<em>§</em>, which are instead tagged as <a href="">SYM</a>.</p>
+<div about="#PUNCT_ru" property="rdf:type" resource="#pos_ru">
+	<div property="rdf:type" resource="../../u/pos/all.html#PUNCT" />
+	<a id="al-ru-pos/PUNCT" class="al-dest" />
 
-<h3 id="examples">Examples</h3>
+	<h2><code property="oliasystem:hasTag" lang="">PUNCT</code>: <div property="rdfs:label">punctuation</div></h2>
+	<div property="rdfs:comment">
 
-<ul>
-  <li>Period: <em><b>.</b></em></li>
-  <li>Comma: <em><b>,</b></em></li>
-  <li>Parentheses: <em><b>()</b></em></li>
-</ul>
+### Definition
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_ru-pos/PUNCT.md" target="#">edit PUNCT</a></p>
+Punctuation marks are non-alphabetical characters and character groups
+used to delimit linguistic units in printed text.
 
-<p><a id="al-ru-pos/SCONJ" class="al-dest"></a></p>
-<h2><code>SCONJ</code>: subordinating conjunction</h2>
+Punctuation is not taken to include logograms such as _$_, _%_, and
+_§_, which are instead tagged as [SYM]().
 
-<h3 id="definition">Definition</h3>
+### Examples
 
-<p>A subordinating conjunction is a conjunction that links constructions
+- Period: _<b>.</b>_
+- Comma: _<b>,</b>_
+- Parentheses: _<b>()</b>_
+
+
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_ru-pos/PUNCT.md" target="#">edit PUNCT</a>
+
+
+<div about="#SCONJ_ru" property="rdf:type" resource="#pos_ru">
+	<div property="rdf:type" resource="../../u/pos/all.html#SCONJ" />
+	<a id="al-ru-pos/SCONJ" class="al-dest" />
+
+	<h2><code property="oliasystem:hasTag" lang="">SCONJ</code>: <div property="rdfs:label">subordinating conjunction</div></h2>
+	<div property="rdfs:comment">
+
+### Definition
+
+A subordinating conjunction is a conjunction that links constructions
 by making one of them a constituent of the other. The subordinating
 conjunction typically marks the incorporated constituent which has the
-status of a (subordinate) clause.</p>
+status of a (subordinate) clause.
 
-<p>For <em>coordinating conjunctions,</em> see <a href="">CONJ</a>.</p>
+For _coordinating conjunctions,_ see [CONJ]().
 
-<h3 id="examples">Examples</h3>
+### Examples
 
-<ul>
-  <li><em>что </em> “that”</li>
-  <li><em>если </em> “if”</li>
-  <li><em>как </em> “as”</li>
-  <li><em>чем </em> “than”</li>
-</ul>
+- _что&nbsp;_ “that”
+- _если&nbsp;_ “if”
+- _как&nbsp;_ “as”
+- _чем&nbsp;_ “than”
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_ru-pos/SCONJ.md" target="#">edit SCONJ</a></p>
 
-<p><a id="al-ru-pos/SYM" class="al-dest"></a></p>
-<h2><code>SYM</code>: symbol</h2>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_ru-pos/SCONJ.md" target="#">edit SCONJ</a>
 
-<h3 id="definition">Definition</h3>
 
-<p>A symbol is a word-like entity that differs from ordinary words by
-form, function, or both.</p>
+<div about="#SYM_ru" property="rdf:type" resource="#pos_ru">
+	<div property="rdf:type" resource="../../u/pos/all.html#SYM" />
+	<a id="al-ru-pos/SYM" class="al-dest" />
 
-<p>Many symbols are or contain special non-alphanumeric characters,
-similarly to <a href="PUNCT">punctuation</a>.  What makes them different from
+	<h2><code property="oliasystem:hasTag" lang="">SYM</code>: <div property="rdfs:label">symbol</div></h2>
+	<div property="rdfs:comment">
+
+### Definition
+
+A symbol is a word-like entity that differs from ordinary words by
+form, function, or both.
+
+Many symbols are or contain special non-alphanumeric characters,
+similarly to [punctuation](PUNCT).  What makes them different from
 punctuation is that they can be substituted by normal words.  This
-involves all currency symbols, e.g. <em>$ 75</em> is identical to
-<em>seventy-five dollars</em>.</p>
+involves all currency symbols, e.g. _$ 75_ is identical to
+_seventy-five dollars_.
 
-<p>Mathematical operators form another group of symbols.</p>
+Mathematical operators form another group of symbols.
 
-<p>Another group of symbols is emoticons and emoji.</p>
+Another group of symbols is emoticons and emoji.
 
-<p>Strings that consists entirely of alphanumeric characters are not
-symbols but they may be <a href="PROPN">proper nouns</a>: <em>130XE</em>, <em>DC10</em>; others
-may be tagged <code>PROPN</code> (rather than <code>SYM</code>) even if they contain special
-characters: <em>DC-10</em>.
+Strings that consists entirely of alphanumeric characters are not
+symbols but they may be [proper nouns](PROPN): _130XE_, _DC10_; others
+may be tagged `PROPN` (rather than `SYM`) even if they contain special
+characters: _DC-10_.
 Similarly, abbreviations for single words are not symbols but are assigned the part of speech
-of the full form. For example, <em>Mr.</em> (mister), <em>kg</em> (kilogram), <em>km</em> (kilometr), <em>dr</em> (doktor)
-should be tagged <a href="NOUN">nouns</a>.
-Acronyms for proper names such as <em>OSN</em> and <em>NATO</em> should be tagged as <a href="PROPN">proper nouns</a>.</p>
+of the full form. For example, _Mr._ (mister), _kg_ (kilogram), _km_ (kilometr), _dr_ (doktor)
+should be tagged [nouns](NOUN).
+Acronyms for proper names such as _OSN_ and _NATO_ should be tagged as [proper nouns](PROPN).
 
-<p>Characters used as bullets in itemized lists <em>(•, ‣)</em> are not symbols,
-they are punctuation.</p>
+Characters used as bullets in itemized lists _(•, ‣)_ are not symbols,
+they are punctuation.
 
-<h3 id="examples">Examples</h3>
+### Examples
 
-<ul>
-  <li><em>$, %, §, ©</em></li>
-  <li><em>+, −, ×, ÷, =, &lt;, &gt;</em></li>
-  <li>:), ♥‿♥, 😝</li>
-  <li><em>john.doe@universal.org, http://universaldependencies.org/, 1-800-COMPANY</em></li>
-</ul>
+- _$, %, §, ©_
+- _+, −, ×, ÷, =, &lt;, &gt;_
+- :), ♥‿♥, 😝
+- _john.doe@universal.org, http://universaldependencies.org/, 1-800-COMPANY_
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_ru-pos/SYM.md" target="#">edit SYM</a></p>
 
-<p><a id="al-ru-pos/VERB" class="al-dest"></a></p>
-<h2><code>VERB</code>: verb</h2>
 
-<h3 id="definition">Definition</h3>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_ru-pos/SYM.md" target="#">edit SYM</a>
 
-<p>A verb is a member of the syntactic class of words that typically
+
+<div about="#VERB_ru" property="rdf:type" resource="#pos_ru">
+	<div property="rdf:type" resource="../../u/pos/all.html#VERB" />
+	<a id="al-ru-pos/VERB" class="al-dest" />
+
+	<h2><code property="oliasystem:hasTag" lang="">VERB</code>: <div property="rdfs:label">verb</div></h2>
+	<div property="rdfs:comment">
+
+### Definition
+
+A verb is a member of the syntactic class of words that typically
 signal events and actions, can constitute a minimal predicate in a
 clause, and govern the number and types of other constituents which
-may occur in the clause.</p>
+may occur in the clause.
 
-<p>Note that the <code>VERB</code> tag covers main verbs <em>(content verbs),</em>
-<em>modal verbs</em> and
-<em>copulas</em> but it does not cover <em>auxiliary verbs,</em> for which there is
-the <a href="">AUX</a> tag. (Russian modal verbs are not considered auxiliary.)
-See the description of <code>AUX</code> for more information on the borderline
-between <code>VERB</code> and <code>AUX</code>.</p>
+Note that the `VERB` tag covers main verbs _(content verbs),_
+_modal verbs_ and
+_copulas_ but it does not cover _auxiliary verbs,_ for which there is
+the [AUX]() tag. (Russian modal verbs are not considered auxiliary.)
+See the description of `AUX` for more information on the borderline
+between `VERB` and `AUX`.
 
-<p>Czech verbs can take the following morphological forms:</p>
+Czech verbs can take the following morphological forms:
 
-<ul>
-  <li>Infinitive (this is the citation form)</li>
-  <li>Finite verb (indicative and imperative forms; conditional is constructed periphrastically)</li>
-  <li>Past participle (used to construct past and conditional)</li>
-  <li>Passive participle (used to construct passive voice; also used separately as an adjective)</li>
-  <li>Transgressive (also called adverbial participle)</li>
-</ul>
+- Infinitive (this is the citation form)
+- Finite verb (indicative and imperative forms; conditional is constructed periphrastically)
+- Past participle (used to construct past and conditional)
+- Passive participle (used to construct passive voice; also used separately as an adjective)
+- Transgressive (also called adverbial participle)
 
-<p>There are participial forms that are tagged as adjectives (<a href="">ADJ</a>) rather than verbs.
-See below for examples.</p>
+There are participial forms that are tagged as adjectives ([ADJ]()) rather than verbs.
+See below for examples.
 
-<p>A verbal noun can be derived productively from almost every verb
-(e.g. <em>есть</em>  “to eat” → <em>поедание</em>  “eating”).
-While in other languages a corresponding form may be called gerund and tagged <code>VERB</code>,
-in Russian it is tagged <a href="">NOUN</a>. It has always the neuter <a href="">ru-feat/Gender</a>
-and it inflects for <a href="">ru-feat/Number</a> and <a href="">ru-feat/Case</a>.</p>
+A verbal noun can be derived productively from almost every verb
+(e.g. _есть_ &nbsp;“to eat” → _поедание_ &nbsp;“eating”).
+While in other languages a corresponding form may be called gerund and tagged `VERB`,
+in Russian it is tagged [NOUN](). It has always the neuter [ru-feat/Gender]()
+and it inflects for [ru-feat/Number]() and [ru-feat/Case]().
 
-<h3 id="examples">Examples</h3>
+### Examples
 
-<ul>
-  <li><em>рисовать</em>  “to draw”</li>
-  <li><em>рисую, рисуешь, рисует, рисуем, рисуете, рисуют</em>  “I draw, you draw, he/she/it draw, we draw, you draw, they draw”</li>
-  <li><em>рисуй, рисуйте</em>  “draw” (imperative in different persons and numbers)</li>
-  <li><em>рисовал, рисовала, рисовало, рисовали</em>  “drew” (past participle in different genders and numbers)</li>
-  <li><em>рисован, рисована, рисовано, рисованы</em>  “drawn” (passive participle in different genders and numbers)</li>
-  <li><em>рисуя</em>  “drawing” (present transgressive)</li>
-</ul>
+- _рисовать_ &nbsp;“to draw”
+- _рисую, рисуешь, рисует, рисуем, рисуете, рисуют_ &nbsp;“I draw, you draw, he/she/it draw, we draw, you draw, they draw”
+- _рисуй, рисуйте_ &nbsp;“draw” (imperative in different persons and numbers)
+- _рисовал, рисовала, рисовало, рисовали_ &nbsp;“drew” (past participle in different genders and numbers)
+- _рисован, рисована, рисовано, рисованы_ &nbsp;“drawn” (passive participle in different genders and numbers)
+- _рисуя_ &nbsp;“drawing” (present transgressive)
 
-<h3 id="border-cases">Border cases</h3>
+### Border cases
 
-<p>There are passive participles as verb forms (<code>VERB</code>)
-and participial adjectives (<code>ADJ</code>). For example:</p>
+There are passive participles as verb forms (`VERB`)
+and participial adjectives (`ADJ`). For example:
 
-<ul>
-  <li>Verb: <em>рисован, рисована, рисовано, рисованы</em>  “drawn”</li>
-  <li>Adjective: <em>рисованый, рисованая, рисованое, рисованые</em>  “drawn”</li>
-</ul>
+- Verb: _рисован, рисована, рисовано, рисованы_ &nbsp;“drawn”
+- Adjective: _рисованый, рисованая, рисованое, рисованые_ &nbsp;“drawn”
 
-<p>Their meaning is almost identical but the usage slightly varies.
-Both groups can be used in nominal predication with <a href="ru-dep/cop">copula</a>.
+Their meaning is almost identical but the usage slightly varies.
+Both groups can be used in nominal predication with [copula](ru-dep/cop).
 Only true participles (verbs) can be used to form the passive voice
-(but it may be sometimes difficult to distinguish from copula constructions, see <a href="">AUX</a>).
+(but it may be sometimes difficult to distinguish from copula constructions, see [AUX]()).
 On the other hand, the participial adjectives inflect for case and thus
-can modify nouns.</p>
+can modify nouns.
 
-<p>There is an analogy with some adjectives that preserved so called nominal (short) forms.
-And these adjectives are not derived from verbs. Example:</p>
+There is an analogy with some adjectives that preserved so called nominal (short) forms.
+And these adjectives are not derived from verbs. Example:
 
-<ul>
-  <li>Short (nominal) forms: <em>стар, стара, старо</em>  “old”</li>
-  <li>Normal (pronominal) forms: <em>старый, старая, старое</em>  “old”</li>
-</ul>
+- Short (nominal) forms: _стар, стара, старо_ &nbsp;“old”
+- Normal (pronominal) forms: _старый, старая, старое_ &nbsp;“old”
 
-<p>Here both groups are <code>ADJ</code>. The nominal forms are used in predication,
-the standard forms both in predication and to modify nouns.</p>
+Here both groups are `ADJ`. The nominal forms are used in predication,
+the standard forms both in predication and to modify nouns.
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_ru-pos/VERB.md" target="#">edit VERB</a></p>
 
-<p><a id="al-ru-pos/X" class="al-dest"></a></p>
-<h2><code>X</code>: other</h2>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_ru-pos/VERB.md" target="#">edit VERB</a>
 
-<h3 id="definition">Definition</h3>
 
-<p>The tag <code>X</code> is used for words that for some reason cannot be assigned
-a real part-of-speech category.</p>
+<div about="#X_ru" property="rdf:type" resource="#pos_ru">
+	<div property="rdf:type" resource="../../u/pos/all.html#X" />
+	<a id="al-ru-pos/X" class="al-dest" />
 
-<p>A special usage of <code>X</code> is for cases of code-switching where it is not
+	<h2><code property="oliasystem:hasTag" lang="">X</code>: <div property="rdfs:label">other</div></h2>
+	<div property="rdfs:comment">
+
+### Definition
+
+The tag `X` is used for words that for some reason cannot be assigned
+a real part-of-speech category.
+
+A special usage of `X` is for cases of code-switching where it is not
 possible (or meaningful) to analyze the intervening language
-grammatically (and where the dependency relation <em>foreign</em> is
+grammatically (and where the dependency relation _foreign_ is
 typically used in the syntactic analysis).
 This rarely applies to the PDT data where many foreign words are tagged with their original
-part of speech.</p>
+part of speech.
 
-<p>Even if foreign words are tagged <code>X</code>, this usage does not extend
+Even if foreign words are tagged `X`, this usage does not extend
 to ordinary loan words which should be assigned a normal
-part-of-speech. For example, in <em>Он надел килт </em> “He put on kilt”,
-<em>килт</em> is an ordinary <a href="">NOUN</a>.</p>
+part-of-speech. For example, in _Он надел килт&nbsp;_ “He put on kilt”,
+_килт_ is an ordinary [NOUN]().
 
-<h3 id="examples">Examples</h3>
+### Examples
 
-<ul>
-  <li><em>И потом он просто <b>xfgh pdl jklw</b> </em> “And then he just <b>xfgh pdl jklw</b>”</li>
-</ul>
+- _И потом он просто <b>xfgh pdl jklw</b>&nbsp;_ “And then he just <b>xfgh pdl jklw</b>”
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_ru-pos/X.md" target="#">edit X</a></p>
 
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_ru-pos/X.md" target="#">edit X</a>
+
+</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div>
 
 
       </div>

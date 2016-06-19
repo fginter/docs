@@ -43,7 +43,19 @@
 	  </div>
 	</noscript>
 
-          <h1 id="pos-tags">POS tags</h1>
+          
+<h1 id="pos-tags">POS tags</h1>
+
+<p><span about="." property="rdf:type" resource="owl:Ontology">
+	<span property="owl:imports" resource=" https://www.w3.org/2012/pyRdfa/extract?uri=http://universaldependencies.org/docs/u/pos/all.html&amp;format=xml&amp;rdfagraph=output&amp;vocab_expansion=false&amp;rdfa_lite=false&amp;embedded_rdf=true&amp;space_preserve=false&amp;vocab_cache=true&amp;vocab_cache_report=false&amp;vocab_cache_refresh=false"></span>
+	</span>
+<span about="#pos_no" property="rdfs:label" style="visibility: hidden">POS tags</span>
+<span about="#pos_no" property="rdfs:subClassOf" resource="_:no">
+	<span about="_:no" property="rdf:type" resource="owl:Restriction">
+		<span property="owl:onProperty" resource="http://purl.org/dc/terms/language"></span>
+		<span property="owl:hasValue" lang="" style="visibility: hidden">no</span>
+	</span>
+</span></p>
 
 <table class="typeindex">
   <thead>
@@ -99,316 +111,402 @@
 
 <hr />
 
-<p><a id="al-no-pos/ADJ" class="al-dest"></a></p>
-<h2><code>ADJ</code>: adjective</h2>
+<div about="#ADJ_no" property="rdf:type" resource="#pos_no">
+	<div property="rdf:type" resource="../../u/pos/all.html#ADJ" />
+	<a id="al-no-pos/ADJ" class="al-dest" />
 
-<h5 id="definition">Definition</h5>
-<p>Adjectives are words that typically modify nouns and specify their properties or attributes. In Norwegian, adjectives agree with their head in gender, number and definiteness: <em>stort hus</em> “big house”, <em>store hus</em> “big houses”, <em>det store huset</em> “the big house”.</p>
+	<h2><code property="oliasystem:hasTag" lang="">ADJ</code>: <div property="rdfs:label">adjective</div></h2>
+	<div property="rdfs:comment">
 
-<h5 id="examples">Examples</h5>
-<ul>
-  <li><em>stor</em> “big”</li>
-  <li><em>gammel</em> “old”</li>
-  <li><em>grønn</em> “green”</li>
-</ul>
+#####Definition
+Adjectives are words that typically modify nouns and specify their properties or attributes. In Norwegian, adjectives agree with their head in gender, number and definiteness: *stort hus* "big house", *store hus* "big houses", *det store huset* "the big house".
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_no-pos/ADJ.md" target="#">edit ADJ</a></p>
+#####Examples
+* *stor* "big"
+* *gammel* "old"
+* *grønn* "green"
 
-<p><a id="al-no-pos/ADP" class="al-dest"></a></p>
-<h2><code>ADP</code>: adposition</h2>
 
-<h5 id="definition">Definition</h5>
-<p>Adposition is a cover term for prepositions and postpositions, Norwegian has prepositions and not postpositions.
-Some prepositions may function as verb particles, as in <em>slå opp</em> “look up”, <em>gå inn</em> “go inside”, but these are still analyzed as <code>ADP</code>.</p>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_no-pos/ADJ.md" target="#">edit ADJ</a>
 
-<h5 id="examples">Examples</h5>
-<ul>
-  <li><em>i</em> “in”</li>
-  <li><em>på</em> “on”</li>
-  <li><em>utenfor</em> “outside”</li>
-</ul>
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_no-pos/ADP.md" target="#">edit ADP</a></p>
+<div about="#ADP_no" property="rdf:type" resource="#pos_no">
+	<div property="rdf:type" resource="../../u/pos/all.html#ADP" />
+	<a id="al-no-pos/ADP" class="al-dest" />
 
-<p><a id="al-no-pos/ADV" class="al-dest"></a></p>
-<h2><code>ADV</code>: adverb</h2>
+	<h2><code property="oliasystem:hasTag" lang="">ADP</code>: <div property="rdfs:label">adposition</div></h2>
+	<div property="rdfs:comment">
 
-<h5 id="definition">Definition</h5>
-<p>Adverbs are words that typically modify <a href="ADJ">adjectives</a>,
-<a href="VERB">verbs</a> or other adverbs for such categories as time, place,
-direction or manner.</p>
+#####Definition
+Adposition is a cover term for prepositions and postpositions, Norwegian has prepositions and not postpositions.
+Some prepositions may function as verb particles, as in *slå opp* "look up", *gå inn* "go inside", but these are still analyzed as `ADP`.
 
-<h5 id="examples">Examples</h5>
-<ul>
-  <li><em>Han kom <b>nettopp</b></em> “He just arrived”</li>
-  <li><em><b>Derfor</b> kom han</em> “Therefore, he came”</li>
-  <li><em><b>nesten</b> ferdig</em> “almost finished”</li>
-</ul>
+#####Examples
+* *i* "in"
+* *på* "on"
+* *utenfor* "outside"
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_no-pos/ADV.md" target="#">edit ADV</a></p>
 
-<p><a id="al-no-pos/AUX" class="al-dest"></a></p>
-<h2><code>AUX</code>: auxiliary verb</h2>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_no-pos/ADP.md" target="#">edit ADP</a>
 
-<h5 id="definition">Definition</h5>
-<p>An auxiliary verb is a verb that accompanies the lexical verb of a verb phrase and expresses grammatical distinctions not carried by the lexical verb, such as person, number, tense, mood, aspect, and voice.</p>
 
-<p>Auxiliaries in Norwegian include  temporal, passive and modal auxiliaries (see below). Note that some modals can occur without a main verb (<em>skal hjem</em> lit. <em>shall home</em> “will go home”) and will then be annotated as <code>VERB</code>.</p>
+<div about="#ADV_no" property="rdf:type" resource="#pos_no">
+	<div property="rdf:type" resource="../../u/pos/all.html#ADV" />
+	<a id="al-no-pos/ADV" class="al-dest" />
 
-<h5 id="examples">Examples</h5>
-<ul>
-  <li>temporal: <em>ha</em> “have” (<em><b>har</b> spist</em> “has eaten”), <em>være</em> “be” (<em><b>er</b> kommet</em> “has come”)</li>
-  <li>passive: <em>bli</em> “become” (<em><b>blir</b> spist</em> “is eaten”)</li>
-  <li>modal: <em>kunne</em> “can”, <em>skulle</em> “should”, <em>ville</em> “will”, <em>måtte</em> “must”, <em>burde</em> “should” (<em><b>kan/skal/vil/må/bør</b> spise</em> “can/should/will/must/should eat”)</li>
-</ul>
+	<h2><code property="oliasystem:hasTag" lang="">ADV</code>: <div property="rdfs:label">adverb</div></h2>
+	<div property="rdfs:comment">
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_no-pos/AUX_.md" target="#">edit AUX</a></p>
+#####Definition
+Adverbs are words that typically modify [adjectives](ADJ),
+[verbs](VERB) or other adverbs for such categories as time, place,
+direction or manner.
 
-<p><a id="al-no-pos/CONJ" class="al-dest"></a></p>
-<h2><code>CONJ</code>: coordinating conjunction</h2>
+#####Examples
+* _Han kom <b>nettopp</b>_ "He just arrived"
+* _<b>Derfor</b> kom han_ "Therefore, he came"
+* _<b>nesten</b> ferdig_ "almost finished"
 
-<h5 id="definition">Definition</h5>
-<p>A coordinating conjunction is a word that links words or larger constituents without syntactically subordinating one to the other and expresses a semantic relationship between them.</p>
 
-<h5 id="examples">Examples</h5>
-<ul>
-  <li><em>og</em> “and”</li>
-  <li><em>eller</em> “or”</li>
-  <li><em>men</em> “but”</li>
-</ul>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_no-pos/ADV.md" target="#">edit ADV</a>
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_no-pos/CONJ.md" target="#">edit CONJ</a></p>
 
-<p><a id="al-no-pos/DET" class="al-dest"></a></p>
-<h2><code>DET</code>: determiner</h2>
+<div about="#AUX_no" property="rdf:type" resource="#pos_no">
+	<div property="rdf:type" resource="../../u/pos/all.html#AUX" />
+	<a id="al-no-pos/AUX" class="al-dest" />
 
-<h4 id="definition">Definition</h4>
-<p>Determiners are words that modify nouns or noun phrases and express the reference of the noun phrase in context.
-In Norwegian, most determiners agree with the nominal head in terms of gender and number, e.g. <em><b>min</b> bil</em> “my car”, <em><b>mitt</b> barn</em> “my child”, <em><b>mine</b> barn</em> “my children”. 
-We distinguish three main types of determiners: possessive, demonstrative and quantifying.</p>
+	<h2><code property="oliasystem:hasTag" lang="">AUX</code>: <div property="rdfs:label">auxiliary verb</div></h2>
+	<div property="rdfs:comment">
 
-<p><strong>Possessive</strong></p>
+#####Definition
+An auxiliary verb is a verb that accompanies the lexical verb of a verb phrase and expresses grammatical distinctions not carried by the lexical verb, such as person, number, tense, mood, aspect, and voice.
 
-<p>Possessive determiners agree in gender and number with the noun the modify, their form varies depending on person. In Norwegian, possessive determiners usually precede their head noun, but may occur after the head noun when the noun is in the definite form, e.g. <em>bilen <b>hans</b></em> “his car”
-* <em><b>mitt</b> barn</em> “my child” 
-* <em><b>våre</b> barn</em> “our children”
-* <em>barnet <b>vårt</b></em> “our child”</p>
+Auxiliaries in Norwegian include  temporal, passive and modal auxiliaries (see below). Note that some modals can occur without a main verb (*skal hjem* lit. *shall home* "will go home") and will then be annotated as `VERB`.
 
-<p><strong>Demonstrative</strong></p>
+#####Examples
+* temporal: *ha* "have" (_<b>har</b> spist_ "has eaten"), *være* "be" (_<b>er</b> kommet_ "has come")
+* passive: *bli* "become" (_<b>blir</b> spist_ "is eaten")
+* modal: *kunne* "can", *skulle* "should", *ville* "will", *måtte* "must", *burde* "should" (_<b>kan/skal/vil/må/bør</b> spise_ "can/should/will/must/should eat")
 
-<p>Demonstrative determiners agree in gender and number with the noun the modify. This group of determiners include the interrogative <em>hvilken</em> “which”. The demonstratives may only precede the noun they modify.</p>
 
-<ul>
-  <li><em><b>dette</b> barnet</em> “this child”, <em><b>det</b> barnet</em> “that child”, <em><b>den</b> bilen</em>“that car”</li>
-  <li><em>(det) <b>samme</b> barnet</em> “(the) same child”, <em>(det) <b>andre</b> barnet</em> “(the) other child”</li>
-  <li><em><b>hvilken</b> bil</em> “which car”, <em><b>hvilket</b> hus</em> “which house”</li>
-</ul>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_no-pos/AUX_.md" target="#">edit AUX</a>
 
-<p><strong>Quantifying</strong></p>
 
-<p>The quantifying pronouns are a heterogenous group of determiners which all occur before the noun they modify. Some of these agree with their nominal head (like articles and indefinite determiners) and some do not.</p>
+<div about="#CONJ_no" property="rdf:type" resource="#pos_no">
+	<div property="rdf:type" resource="../../u/pos/all.html#CONJ" />
+	<a id="al-no-pos/CONJ" class="al-dest" />
 
-<ul>
-  <li><em><b>en</b> bil</em> “a car”, <em><b>et</b> barn</em> “a child”, <em><b>ei</b> jente</em> “a girl”</li>
-  <li><em><b>noen</b> biler</em> “some cars”</li>
-  <li><em><b>alle</b> biler</em> “all cars”</li>
-  <li><em><b>begge</b> bilene</em> “both cars”</li>
-</ul>
+	<h2><code property="oliasystem:hasTag" lang="">CONJ</code>: <div property="rdfs:label">coordinating conjunction</div></h2>
+	<div property="rdfs:comment">
 
-<h4 id="references">References</h4>
-<p>Jan Terje Faarlund, Svein Lie and Kjell Ivar Vannebo. 1997. “Norsk referansegrammatikk”. Universitetsforlaget, Oslo, Norway.</p>
+#####Definition
+A coordinating conjunction is a word that links words or larger constituents without syntactically subordinating one to the other and expresses a semantic relationship between them.
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_no-pos/DET.md" target="#">edit DET</a></p>
+#####Examples
+* *og* "and"
+* *eller* "or"
+* *men* "but"
 
-<p><a id="al-no-pos/INTJ" class="al-dest"></a></p>
-<h2><code>INTJ</code>: interjection</h2>
 
-<h5 id="definition">Definition</h5>
-<p>An interjection is a word that is used most often as an exclamation or part of an exclamation.</p>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_no-pos/CONJ.md" target="#">edit CONJ</a>
 
-<h5 id="examples">Examples</h5>
-<ul>
-  <li><em>ja</em> “yes”, <em>nei</em>, “no”</li>
-  <li><em>hei</em> “hi”, <em>hallo</em> “hello”, <em>heisan</em> “hi there”</li>
-  <li><em>å</em> “oh”</li>
-  <li><em>ok</em> “okay”</li>
-  <li><em>piip</em> “peep”</li>
-</ul>
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_no-pos/INTJ.md" target="#">edit INTJ</a></p>
+<div about="#DET_no" property="rdf:type" resource="#pos_no">
+	<div property="rdf:type" resource="../../u/pos/all.html#DET" />
+	<a id="al-no-pos/DET" class="al-dest" />
 
-<p><a id="al-no-pos/NOUN" class="al-dest"></a></p>
-<h2><code>NOUN</code>: noun</h2>
+	<h2><code property="oliasystem:hasTag" lang="">DET</code>: <div property="rdfs:label">determiner</div></h2>
+	<div property="rdfs:comment">
 
-<h5 id="definition">Definition</h5>
-<p>Nouns are a part of speech typically denoting a person, place, thing, animal or idea. The <code>NOUN</code> tag is used only for common nouns, see <a href="">PROPN</a> for proper nouns.</p>
+####Definition
+Determiners are words that modify nouns or noun phrases and express the reference of the noun phrase in context.
+In Norwegian, most determiners agree with the nominal head in terms of gender and number, e.g. _<b>min</b> bil_ "my car", _<b>mitt</b> barn_ "my child", _<b>mine</b> barn_ "my children". 
+We distinguish three main types of determiners: possessive, demonstrative and quantifying.
 
-<p>In Norwegian, nouns inflect for definiteness (<em>bil-bilen</em>) and usually also for number (<em>bil - biler</em>).</p>
+**Possessive**
 
-<h5 id="examples">Examples</h5>
-<ul>
-  <li><em>jente</em> “girl”</li>
-  <li><em>katt</em> “cat”</li>
-  <li><em>tre</em> “tree”</li>
-  <li><em>luft</em> “air”</li>
-  <li><em>skjønnhet</em> “beauty”</li>
-</ul>
+Possessive determiners agree in gender and number with the noun the modify, their form varies depending on person. In Norwegian, possessive determiners usually precede their head noun, but may occur after the head noun when the noun is in the definite form, e.g. _bilen <b>hans</b>_ "his car"
+* _<b>mitt</b> barn_ "my child" 
+* _<b>våre</b> barn_ "our children"
+* _barnet <b>vårt</b>_ "our child"
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_no-pos/NOUN.md" target="#">edit NOUN</a></p>
+**Demonstrative**
 
-<p><a id="al-no-pos/NUM" class="al-dest"></a></p>
-<h2><code>NUM</code>: numeral</h2>
+Demonstrative determiners agree in gender and number with the noun the modify. This group of determiners include the interrogative *hvilken* "which". The demonstratives may only precede the noun they modify.
 
-<h5 id="definition">Definition</h5>
-<p>A numeral is a word, functioning most typically as a determiner, adjective or pronoun, that expresses a number and a relation to the number, such as quantity, sequence, frequency or fraction.</p>
+* _<b>dette</b> barnet_ "this child", _<b>det</b> barnet_ "that child", _<b>den</b> bilen_"that car"
+* _(det) <b>samme</b> barnet_ "(the) same child", _(det) <b>andre</b> barnet_ "(the) other child"
+* _<b>hvilken</b> bil_ "which car", _<b>hvilket</b> hus_ "which house"  
 
-<h5 id="examples">Examples</h5>
-<ul>
-  <li>0, 1, 2, 3, 4, 5, 2014, 1000000, 3.14159265359</li>
-  <li><em>tre</em> “three”, <em>femtito</em> “fifty-two”, <em>fire-fem</em> “four-five”, <em>tusen</em> “thousand”</li>
-</ul>
+**Quantifying**
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_no-pos/NUM.md" target="#">edit NUM</a></p>
+The quantifying pronouns are a heterogenous group of determiners which all occur before the noun they modify. Some of these agree with their nominal head (like articles and indefinite determiners) and some do not.
 
-<p><a id="al-no-pos/PART" class="al-dest"></a></p>
-<h2><code>PART</code>: particle</h2>
+* _<b>en</b> bil_ "a car", _<b>et</b> barn_ "a child", _<b>ei</b> jente_ "a girl"
+* _<b>noen</b> biler_ "some cars"
+* _<b>alle</b> biler_ "all cars"
+* _<b>begge</b> bilene_ "both cars"
 
-<h5 id="definition">Definition</h5>
-<p>Particles are function words that must be associated with another word or phrase to impart meaning and that do not satisfy definitions of other universal parts of speech.</p>
+####References
+Jan Terje Faarlund, Svein Lie and Kjell Ivar Vannebo. 1997. "Norsk referansegrammatikk". Universitetsforlaget, Oslo, Norway.
 
-<p>For Norwegian, <code>PART</code> is used only for the infinitival marker <em>å</em> “to”.</p>
 
-<h5 id="examples">Examples</h5>
-<ul>
-  <li><em>Han liker <b>å</b> spise is</em> “He likes to eat icecream”</li>
-</ul>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_no-pos/DET.md" target="#">edit DET</a>
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_no-pos/PART.md" target="#">edit PART</a></p>
 
-<p><a id="al-no-pos/PRON" class="al-dest"></a></p>
-<h2><code>PRON</code>: pronoun</h2>
+<div about="#INTJ_no" property="rdf:type" resource="#pos_no">
+	<div property="rdf:type" resource="../../u/pos/all.html#INTJ" />
+	<a id="al-no-pos/INTJ" class="al-dest" />
 
-<h5 id="definition">Definition</h5>
-<p>Pronouns are words that substitute for nouns or noun phrases, whose meaning is recoverable from the linguistic or extralinguistic context.</p>
+	<h2><code property="oliasystem:hasTag" lang="">INTJ</code>: <div property="rdfs:label">interjection</div></h2>
+	<div property="rdfs:comment">
 
-<p>In Norwegian, the personal pronouns are the only words that inflect for case (nominative/accusative).</p>
+#####Definition
+An interjection is a word that is used most often as an exclamation or part of an exclamation.
 
-<p>The relativizer <em>som</em> “that” is counted as a relative pronoun even though there are linguistic reasons to treat it as a subordinating conjunction (<code>SCONJ</code>). This is done in order to preserve information about the function of the antecedent in the syntactic analysis. Note that <em>som</em> “that” may also function as a preposition and will then receive the <code>ADP</code> tag (<em>fortsette <b>som</b>  leder</em> “continue as leader”).</p>
+#####Examples
+* *ja* "yes", *nei*, "no"
+* *hei* "hi", *hallo* "hello", *heisan* "hi there"
+* *å* "oh"
+* *ok* "okay"
+* *piip* "peep"
 
-<h5 id="examples">Examples</h5>
-<ul>
-  <li>personal: <em>han</em> “he”, <em>hun</em> “she”, <em>det</em> “it”, <em>ham</em> “him”, <em>henne</em> “her”</li>
-  <li>demonstrative: <em>dette</em> “this”</li>
-  <li>reflexive: <em>seg</em> “self”</li>
-  <li>reciprocal: <em>hverandre</em> “eachother”</li>
-  <li>interrogative: <em>hvem</em> “who”, <em>hva</em> “what”, <em>hvilken</em> “which”</li>
-  <li>totality: <em>alle</em> “all”</li>
-  <li>indefinite: <em>noen</em> “some”</li>
-  <li>relative: <em>som</em> “that”</li>
-</ul>
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_no-pos/PRON.md" target="#">edit PRON</a></p>
 
-<p><a id="al-no-pos/PROPN" class="al-dest"></a></p>
-<h2><code>PROPN</code>: proper noun</h2>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_no-pos/INTJ.md" target="#">edit INTJ</a>
 
-<h5 id="definition">Definition</h5>
-<p>A proper noun is a noun (or nominal content word) that is the name (or part of the name) of a specific individual, place, or object.</p>
 
-<p>In Norwegian, proper nouns do usually not inflect for morphological properties like gender, number, etc. Proper nouns are furthermore written with a capital letter.</p>
+<div about="#NOUN_no" property="rdf:type" resource="#pos_no">
+	<div property="rdf:type" resource="../../u/pos/all.html#NOUN" />
+	<a id="al-no-pos/NOUN" class="al-dest" />
 
-<h5 id="examples">Examples</h5>
-<ul>
-  <li><em>Kari</em>, <em>Ola</em></li>
-  <li><em>Oslo</em>, <em>Bergen</em></li>
-</ul>
+	<h2><code property="oliasystem:hasTag" lang="">NOUN</code>: <div property="rdfs:label">noun</div></h2>
+	<div property="rdfs:comment">
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_no-pos/PROPN.md" target="#">edit PROPN</a></p>
+#####Definition
+Nouns are a part of speech typically denoting a person, place, thing, animal or idea. The `NOUN` tag is used only for common nouns, see [PROPN]() for proper nouns.
 
-<p><a id="al-no-pos/PUNCT" class="al-dest"></a></p>
-<h2><code>PUNCT</code>: punctuation</h2>
+In Norwegian, nouns inflect for definiteness (*bil-bilen*) and usually also for number (*bil - biler*).
 
-<h5 id="definition">Definition</h5>
-<p>Punctuation marks are non-alphabetical characters and character groups used in many languages to delimit linguistic units in printed text.</p>
+#####Examples
+* *jente* "girl"
+* *katt* "cat"
+* *tre* "tree"
+* *luft* "air"
+* *skjønnhet* "beauty"
 
-<h5 id="examples">Examples</h5>
-<ul>
-  <li>Period: <b>.</b></li>
-  <li>Comma: <b>,</b></li>
-  <li>Parentheses: <b>()</b></li>
-</ul>
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_no-pos/PUNCT.md" target="#">edit PUNCT</a></p>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_no-pos/NOUN.md" target="#">edit NOUN</a>
 
-<p><a id="al-no-pos/SCONJ" class="al-dest"></a></p>
-<h2><code>SCONJ</code>: subordinating conjunction</h2>
 
-<h5 id="definition">Definition</h5>
-<p>A subordinating conjunction is a conjunction that links constructions by making one of them a constituent of the other. The subordinating conjunction typically marks the incorporated constituent which has the status of a (subordinate) clause.</p>
+<div about="#NUM_no" property="rdf:type" resource="#pos_no">
+	<div property="rdf:type" resource="../../u/pos/all.html#NUM" />
+	<a id="al-no-pos/NUM" class="al-dest" />
 
-<h5 id="examples">Examples</h5>
-<ul>
-  <li>Complementizers: <em>at</em> “that”, <em>om</em> “if/whether”</li>
-  <li>Adverbial clause introducers: <em>når</em> “when”, <em>siden</em> “since”, <em>fordi</em> “because”</li>
-</ul>
+	<h2><code property="oliasystem:hasTag" lang="">NUM</code>: <div property="rdfs:label">numeral</div></h2>
+	<div property="rdfs:comment">
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_no-pos/SCONJ.md" target="#">edit SCONJ</a></p>
+#####Definition
+A numeral is a word, functioning most typically as a determiner, adjective or pronoun, that expresses a number and a relation to the number, such as quantity, sequence, frequency or fraction.
 
-<p><a id="al-no-pos/SYM" class="al-dest"></a></p>
-<h2><code>SYM</code>: symbol</h2>
+#####Examples
+* 0, 1, 2, 3, 4, 5, 2014, 1000000, 3.14159265359
+* *tre* "three", *femtito* "fifty-two", *fire-fem* "four-five", *tusen* "thousand"
 
-<h5 id="definition">Definition</h5>
-<p>A symbol is a word-like entity that differs from ordinary words by form, function, or both.</p>
 
-<p>Many symbols are or contain special non-alphanumeric characters, similarly to punctuation. What makes them different from punctuation is that they can be substituted by normal words.</p>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_no-pos/NUM.md" target="#">edit NUM</a>
 
-<h5 id="examples">Examples</h5>
-<ul>
-  <li>
-    <table>
-      <tbody>
-        <tr>
-          <td><em>/</em>, *</td>
-          <td>*</td>
-        </tr>
-      </tbody>
-    </table>
-  </li>
-  <li>*</li>
-</ul>
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_no-pos/SYM.md" target="#">edit SYM</a></p>
+<div about="#PART_no" property="rdf:type" resource="#pos_no">
+	<div property="rdf:type" resource="../../u/pos/all.html#PART" />
+	<a id="al-no-pos/PART" class="al-dest" />
 
-<p><a id="al-no-pos/VERB" class="al-dest"></a></p>
-<h2><code>VERB</code>: verb</h2>
+	<h2><code property="oliasystem:hasTag" lang="">PART</code>: <div property="rdfs:label">particle</div></h2>
+	<div property="rdfs:comment">
 
-<h5 id="definition">Definition</h5>
-<p>A verb is a member of the syntactic class of words that typically signal events and actions, can constitute a minimal predicate in a clause, and govern the number and types of other constituents which may occur in the clause.
-Note that the VERB tag covers main verbs (content verbs) and copulas but it does not cover auxiliary verbs, for which there is the <a href="">AUX</a> tag.</p>
+#####Definition
+Particles are function words that must be associated with another word or phrase to impart meaning and that do not satisfy definitions of other universal parts of speech.
 
-<p>In Norwegian, modal verbs occurring alone, as in <em><b>skal</b> hjem</em> lit. <em>shall home</em> “will go home” are tagged as <code>VERB</code>, but otherwise they will be <code>AUX</code>. Participles are annotated as verbs when they occur with auxiliaries <em>ha</em> “have”, <em>få</em> “get” or a modal auxiliary. When the participle occurs with the copula or <em>bli</em> “become” or follows a head noun, the participle may be either adjective or verb (for syntactic tests to determine these cases, see Kinn et. al.).</p>
+For Norwegian, `PART` is used only for the infinitival marker *å* "to".
 
-<h5 id="examples">Examples</h5>
-<ul>
-  <li><em>løpe</em> “run”, <em>løper</em> “runs”, <em>løp</em> “ran”, <em>(har) løpt</em> “(has) run”</li>
-  <li><em>spise</em> “eat”, <em>spiser</em> “eats”, <em>spiste</em> “ate”, <em>(har) spist</em> “(has) eaten”</li>
-</ul>
+#####Examples
+* _Han liker <b>å</b> spise is_ "He likes to eat icecream"
 
-<h5 id="references">References</h5>
-<p>Kari Kinn, Per Erik Solberg and Pål Kristian Eriksen. “<a href="http://www.nb.no/sbfil/dok/20140314_guidelines_ndt_english.pdf">NDT Guidelines
-for Morphological Annotation</a>”. National Library Tech Report.</p>
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_no-pos/VERB.md" target="#">edit VERB</a></p>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_no-pos/PART.md" target="#">edit PART</a>
 
-<p><a id="al-no-pos/X" class="al-dest"></a></p>
-<h2><code>X</code>: other</h2>
 
-<h5 id="definition">Definition</h5>
-<p>The tag X is used for words that for some reason cannot be assigned a real part-of-speech category.
-In the Norwegian data, this tag is used mostly for foreign words.</p>
+<div about="#PRON_no" property="rdf:type" resource="#pos_no">
+	<div property="rdf:type" resource="../../u/pos/all.html#PRON" />
+	<a id="al-no-pos/PRON" class="al-dest" />
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_no-pos/X.md" target="#">edit X</a></p>
+	<h2><code property="oliasystem:hasTag" lang="">PRON</code>: <div property="rdfs:label">pronoun</div></h2>
+	<div property="rdfs:comment">
 
+#####Definition
+Pronouns are words that substitute for nouns or noun phrases, whose meaning is recoverable from the linguistic or extralinguistic context. 
+
+In Norwegian, the personal pronouns are the only words that inflect for case (nominative/accusative).
+
+The relativizer *som* "that" is counted as a relative pronoun even though there are linguistic reasons to treat it as a subordinating conjunction (`SCONJ`). This is done in order to preserve information about the function of the antecedent in the syntactic analysis. Note that *som* "that" may also function as a preposition and will then receive the `ADP` tag (_fortsette <b>som</b>  leder_ "continue as leader").
+
+#####Examples
+* personal: *han* "he", *hun* "she", *det* "it", *ham* "him", *henne* "her"
+* demonstrative: *dette* "this"
+* reflexive: *seg* "self"
+* reciprocal: *hverandre* "eachother"
+* interrogative: *hvem* "who", *hva* "what", *hvilken* "which"
+* totality: *alle* "all"
+* indefinite: *noen* "some"
+* relative: *som* "that"
+
+
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_no-pos/PRON.md" target="#">edit PRON</a>
+
+
+<div about="#PROPN_no" property="rdf:type" resource="#pos_no">
+	<div property="rdf:type" resource="../../u/pos/all.html#PROPN" />
+	<a id="al-no-pos/PROPN" class="al-dest" />
+
+	<h2><code property="oliasystem:hasTag" lang="">PROPN</code>: <div property="rdfs:label">proper noun</div></h2>
+	<div property="rdfs:comment">
+
+#####Definition
+A proper noun is a noun (or nominal content word) that is the name (or part of the name) of a specific individual, place, or object.
+
+In Norwegian, proper nouns do usually not inflect for morphological properties like gender, number, etc. Proper nouns are furthermore written with a capital letter.
+
+#####Examples
+* *Kari*, *Ola*
+* *Oslo*, *Bergen*
+
+
+
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_no-pos/PROPN.md" target="#">edit PROPN</a>
+
+
+<div about="#PUNCT_no" property="rdf:type" resource="#pos_no">
+	<div property="rdf:type" resource="../../u/pos/all.html#PUNCT" />
+	<a id="al-no-pos/PUNCT" class="al-dest" />
+
+	<h2><code property="oliasystem:hasTag" lang="">PUNCT</code>: <div property="rdfs:label">punctuation</div></h2>
+	<div property="rdfs:comment">
+
+#####Definition
+Punctuation marks are non-alphabetical characters and character groups used in many languages to delimit linguistic units in printed text.
+
+#####Examples
+* Period: <b>.</b>
+* Comma: <b>,</b>
+* Parentheses: <b>()</b>
+
+
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_no-pos/PUNCT.md" target="#">edit PUNCT</a>
+
+
+<div about="#SCONJ_no" property="rdf:type" resource="#pos_no">
+	<div property="rdf:type" resource="../../u/pos/all.html#SCONJ" />
+	<a id="al-no-pos/SCONJ" class="al-dest" />
+
+	<h2><code property="oliasystem:hasTag" lang="">SCONJ</code>: <div property="rdfs:label">subordinating conjunction</div></h2>
+	<div property="rdfs:comment">
+
+#####Definition
+A subordinating conjunction is a conjunction that links constructions by making one of them a constituent of the other. The subordinating conjunction typically marks the incorporated constituent which has the status of a (subordinate) clause.
+
+#####Examples
+* Complementizers: *at* "that", *om* "if/whether"
+* Adverbial clause introducers: *når* "when", *siden* "since", *fordi* "because"
+
+
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_no-pos/SCONJ.md" target="#">edit SCONJ</a>
+
+
+<div about="#SYM_no" property="rdf:type" resource="#pos_no">
+	<div property="rdf:type" resource="../../u/pos/all.html#SYM" />
+	<a id="al-no-pos/SYM" class="al-dest" />
+
+	<h2><code property="oliasystem:hasTag" lang="">SYM</code>: <div property="rdfs:label">symbol</div></h2>
+	<div property="rdfs:comment">
+
+#####Definition
+A symbol is a word-like entity that differs from ordinary words by form, function, or both.
+
+Many symbols are or contain special non-alphanumeric characters, similarly to punctuation. What makes them different from punctuation is that they can be substituted by normal words. 
+
+#####Examples
+* */*, *|*
+* *
+
+
+
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_no-pos/SYM.md" target="#">edit SYM</a>
+
+
+<div about="#VERB_no" property="rdf:type" resource="#pos_no">
+	<div property="rdf:type" resource="../../u/pos/all.html#VERB" />
+	<a id="al-no-pos/VERB" class="al-dest" />
+
+	<h2><code property="oliasystem:hasTag" lang="">VERB</code>: <div property="rdfs:label">verb</div></h2>
+	<div property="rdfs:comment">
+
+#####Definition
+A verb is a member of the syntactic class of words that typically signal events and actions, can constitute a minimal predicate in a clause, and govern the number and types of other constituents which may occur in the clause.
+Note that the VERB tag covers main verbs (content verbs) and copulas but it does not cover auxiliary verbs, for which there is the [AUX]() tag.
+
+In Norwegian, modal verbs occurring alone, as in _<b>skal</b> hjem_ lit. _shall home_ "will go home" are tagged as `VERB`, but otherwise they will be `AUX`. Participles are annotated as verbs when they occur with auxiliaries *ha* "have", *få* "get" or a modal auxiliary. When the participle occurs with the copula or *bli* "become" or follows a head noun, the participle may be either adjective or verb (for syntactic tests to determine these cases, see Kinn et. al.).
+
+
+#####Examples
+* *løpe* "run", *løper* "runs", *løp* "ran", *(har) løpt* "(has) run"
+* *spise* "eat", *spiser* "eats", *spiste* "ate", *(har) spist* "(has) eaten"
+ 
+
+
+#####References
+Kari Kinn, Per Erik Solberg and Pål Kristian Eriksen. "[NDT Guidelines
+for Morphological Annotation](http://www.nb.no/sbfil/dok/20140314_guidelines_ndt_english.pdf)". National Library Tech Report.
+
+
+
+
+
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_no-pos/VERB.md" target="#">edit VERB</a>
+
+
+<div about="#X_no" property="rdf:type" resource="#pos_no">
+	<div property="rdf:type" resource="../../u/pos/all.html#X" />
+	<a id="al-no-pos/X" class="al-dest" />
+
+	<h2><code property="oliasystem:hasTag" lang="">X</code>: <div property="rdfs:label">other</div></h2>
+	<div property="rdfs:comment">
+
+#####Definition
+The tag X is used for words that for some reason cannot be assigned a real part-of-speech category.
+In the Norwegian data, this tag is used mostly for foreign words.
+
+
+
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_no-pos/X.md" target="#">edit X</a>
+
+</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div>
 
 
       </div>

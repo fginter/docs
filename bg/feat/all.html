@@ -43,7 +43,20 @@
 	  </div>
 	</noscript>
 
-          <h1 id="features">Features</h1>
+          
+<h1 id="features">Features</h1>
+
+<p><span about="." property="rdf:type" resource="owl:Ontology">
+	<span property="owl:imports" resource=" https://www.w3.org/2012/pyRdfa/extract?uri=http://universaldependencies.org/docs/u/feat/all.html&amp;format=xml&amp;rdfagraph=output&amp;vocab_expansion=false&amp;rdfa_lite=false&amp;embedded_rdf=true&amp;space_preserve=false&amp;vocab_cache=true&amp;vocab_cache_report=false&amp;vocab_cache_refresh=false"></span>
+</span></p>
+
+<p><span about="#feat_bg" property="rdfs:label" style="visibility: hidden">Features</span>
+<span about="#feat_bg" property="rdfs:subClassOf" resource="_:bg">
+	<span about="_:bg" property="rdf:type" resource="owl:Restriction">
+		<span property="owl:onProperty" resource="http://purl.org/dc/terms/language"></span>
+		<span property="owl:hasValue" lang="" style="visibility: hidden">bg</span>
+	</span>
+</span></p>
 
 <table class="typeindex">
   <tr>
@@ -106,8 +119,57 @@
 
 <hr />
 
-<p><a id="al-bg-feat/Animacy" class="al-dest"></a></p>
-<h2><code>Animacy</code>: animacy</h2>
+<div about="#Animacy_bg" property="rdfs:subClassOf" resource="#feat_bg">
+	<a id="al-bg-feat/Animacy" class="al-dest" />
+	<h2><code property="rdfs:label" lang="">Animacy</code>: <span property="rdfs:label">animacy</span>
+	<code>[</code> 
+	
+	
+		
+		
+			
+				
+			
+		
+			
+		
+	
+		
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+	
+		
+		
+			
+		
+			
+				
+			
+		
+	
+		
+		
+			
+		
+			
+				
+			
+		
+	
+	<code>]</code>
+	</h2>
+	<div about="#Animacy_bg" property="rdfs:comment">	
 
 <p>Similarly to <a href="">Gender</a> (and to the African noun classes), animacy
 is usually a lexical feature of <a href="u-pos/NOUN">nouns</a> and inflectional feature of
@@ -149,10 +211,67 @@ With very few exceptions, these features are not encoded grammatically.</p>
 
 <p>Note that the symbol `#’, used in the Universal POS section indicates a holder for arbitrary number of features, suppressed in the respective tag as irrelevant in the BulTreeBank tagset, when mapped to the Universal one.</p>
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_bg-feat/Animacy.md" target="#">edit Animacy</a></p>
 
-<p><a id="al-bg-feat/Aspect" class="al-dest"></a></p>
-<h2><code>Aspect</code>: aspect</h2>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_bg-feat/Animacy.md" target="#">edit Animacy</a>
+</div>
+
+<div about="#Aspect_bg" property="rdfs:subClassOf" resource="#feat_bg">
+	<a id="al-bg-feat/Aspect" class="al-dest" />
+	<h2><code property="rdfs:label" lang="">Aspect</code>: <span property="rdfs:label">aspect</span>
+	<code>[</code> 
+	
+	
+		
+		
+			
+		
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#AspectImp_bg" property="rdf:type" resource="#Aspect_bg">
+						<span property="rdf:type" resource="../../u/feat/all.html#AspectImp" />
+						<code property="oliasystem:hasTagContaining" lang="">Aspect=Imp</code>
+					</span>
+				
+			
+		
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#AspectPerf_bg" property="rdf:type" resource="#Aspect_bg">
+						<span property="rdf:type" resource="../../u/feat/all.html#AspectPerf" />
+						<code property="oliasystem:hasTagContaining" lang="">Aspect=Perf</code>
+					</span>
+				
+			
+		
+			
+		
+	
+		
+		
+			
+		
+	
+	<code>]</code>
+	</h2>
+	<div about="#Aspect_bg" property="rdfs:comment">	
 
 <p>Aspect</p>
 
@@ -189,10 +308,52 @@ this aspect does not work well with the present tense for actual activities.</p>
   <li>разбера / <em>razbera</em> “understand”</li>
 </ul>
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_bg-feat/Aspect.md" target="#">edit Aspect</a></p>
 
-<p><a id="al-bg-feat/Case" class="al-dest"></a></p>
-<h2><code>Case</code>: case</h2>
+
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_bg-feat/Aspect.md" target="#">edit Aspect</a>
+</div>
+
+<div about="#Case_bg" property="rdfs:subClassOf" resource="#feat_bg">
+	<a id="al-bg-feat/Case" class="al-dest" />
+	<h2><code property="rdfs:label" lang="">Case</code>: <span property="rdfs:label">case</span>
+	<code>[</code> 
+	
+	
+		
+		
+			
+		
+			
+		
+	
+		
+		
+			
+		
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+		
+			
+		
+	
+	<code>]</code>
+	</h2>
+	<div about="#Case_bg" property="rdfs:comment">	
 
 <p>In Bulgarian only some nouns have special vocative forms (v):</p>
 
@@ -229,10 +390,67 @@ this aspect does not work well with the present tense for actual activities.</p>
 
 <p>The canonical sentence would be: <em>Той взе шапката ми</em> / Toy vze shapkata mi ‘He took hat.DEF my.POSS’ (He took my hat).</p>
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_bg-feat/Case.md" target="#">edit Case</a></p>
 
-<p><a id="al-bg-feat/Definite" class="al-dest"></a></p>
-<h2><code>Definite</code>: definiteness or state</h2>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_bg-feat/Case.md" target="#">edit Case</a>
+</div>
+
+<div about="#Definite_bg" property="rdfs:subClassOf" resource="#feat_bg">
+	<a id="al-bg-feat/Definite" class="al-dest" />
+	<h2><code property="rdfs:label" lang="">Definite</code>: <span property="rdfs:label">definiteness or state</span>
+	<code>[</code> 
+	
+	
+		
+		
+			
+		
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#DefiniteInd_bg" property="rdf:type" resource="#Definite_bg">
+						<span property="rdf:type" resource="../../u/feat/all.html#DefiniteInd" />
+						<code property="oliasystem:hasTagContaining" lang="">Definite=Ind</code>
+					</span>
+				
+			
+		
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#DefiniteDef_bg" property="rdf:type" resource="#Definite_bg">
+						<span property="rdf:type" resource="../../u/feat/all.html#DefiniteDef" />
+						<code property="oliasystem:hasTagContaining" lang="">Definite=Def</code>
+					</span>
+				
+			
+		
+			
+		
+	
+		
+		
+			
+		
+	
+	<code>]</code>
+	</h2>
+	<div about="#Definite_bg" property="rdfs:comment">	
 
 <p>Definiteness is typically a feature of nouns, adjectives and
 articles. Its value distinguishes whether we are talking about
@@ -262,10 +480,88 @@ in postposition (жена<b>та</b> / <em>zhena<b>ta</b></em> ‘woman-the’ (
   <li>Видях <b>жената</b> да минава по улицата / <em>Vidyah <b>zhenata</b> da minava po ulitsata</em> “I saw the woman walking on the street”</li>
 </ul>
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_bg-feat/Definite.md" target="#">edit Definite</a></p>
 
-<p><a id="al-bg-feat/Degree" class="al-dest"></a></p>
-<h2><code>Degree</code>: degree of comparison</h2>
+
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_bg-feat/Definite.md" target="#">edit Definite</a>
+</div>
+
+<div about="#Degree_bg" property="rdfs:subClassOf" resource="#feat_bg">
+	<a id="al-bg-feat/Degree" class="al-dest" />
+	<h2><code property="rdfs:label" lang="">Degree</code>: <span property="rdfs:label">degree of comparison</span>
+	<code>[</code> 
+	
+	
+		
+		
+			
+				
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#DegreePos_bg" property="rdf:type" resource="#Degree_bg">
+						<span property="rdf:type" resource="../../u/feat/all.html#DegreePos" />
+						<code property="oliasystem:hasTagContaining" lang="">Degree=Pos</code>
+					</span>
+				
+			
+		
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#DegreeCmp_bg" property="rdf:type" resource="#Degree_bg">
+						<span property="rdf:type" resource="../../u/feat/all.html#DegreeCmp" />
+						<code property="oliasystem:hasTagContaining" lang="">Degree=Cmp</code>
+					</span>
+				
+			
+		
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#DegreeSup_bg" property="rdf:type" resource="#Degree_bg">
+						<span property="rdf:type" resource="../../u/feat/all.html#DegreeSup" />
+						<code property="oliasystem:hasTagContaining" lang="">Degree=Sup</code>
+					</span>
+				
+			
+		
+			
+		
+	
+		
+		
+			
+		
+	
+	<code>]</code>
+	</h2>
+	<div about="#Degree_bg" property="rdfs:comment">	
 
 <p>Degree of comparison is typically an inflectional feature of some
 <a href="u-pos/ADJ">adjectives</a> and <a href="u-pos/ADV">adverbs</a>.</p>
@@ -312,10 +608,60 @@ objects within a set.</p>
   <li>Той е <b>най-младият</b> учител в училището / <em>Toy e <b>nay-mladiyat</b> uchitel v uchilishteto</em> “He is the youngest teacher in the school”</li>
 </ul>
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_bg-feat/Degree.md" target="#">edit Degree</a></p>
 
-<p><a id="al-bg-feat/Gender" class="al-dest"></a></p>
-<h2><code>Gender</code>: gender</h2>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_bg-feat/Degree.md" target="#">edit Degree</a>
+</div>
+
+<div about="#Gender_bg" property="rdfs:subClassOf" resource="#feat_bg">
+	<a id="al-bg-feat/Gender" class="al-dest" />
+	<h2><code property="rdfs:label" lang="">Gender</code>: <span property="rdfs:label">gender</span>
+	<code>[</code> 
+	
+	
+		
+		
+			
+		
+			
+		
+	
+		
+		
+			
+		
+			
+		
+			
+		
+			
+		
+	
+		
+		
+			
+		
+			
+		
+			
+		
+			
+		
+	
+		
+		
+			
+		
+			
+		
+			
+		
+			
+		
+	
+	<code>]</code>
+	</h2>
+	<div about="#Gender_bg" property="rdfs:comment">	
 
 <p>Gender is usually a lexical feature of nouns and inflectional
 feature of other parts of speech (adjectives, verbs) that mark
@@ -344,10 +690,88 @@ feminine, without any relation to sex.</p>
 
 <p>Example: [bg] <i><span style="color:red">дете</span></i> / <em>dete</em> “child”</p>
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_bg-feat/Gender.md" target="#">edit Gender</a></p>
 
-<p><a id="al-bg-feat/Mood" class="al-dest"></a></p>
-<h2><code>Mood</code>: mood</h2>
+
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_bg-feat/Gender.md" target="#">edit Gender</a>
+</div>
+
+<div about="#Mood_bg" property="rdfs:subClassOf" resource="#feat_bg">
+	<a id="al-bg-feat/Mood" class="al-dest" />
+	<h2><code property="rdfs:label" lang="">Mood</code>: <span property="rdfs:label">mood</span>
+	<code>[</code> 
+	
+	
+		
+		
+			
+		
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#MoodInd_bg" property="rdf:type" resource="#Mood_bg">
+						<span property="rdf:type" resource="../../u/feat/all.html#MoodInd" />
+						<code property="oliasystem:hasTagContaining" lang="">Mood=Ind</code>
+					</span>
+				
+			
+		
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#MoodImp_bg" property="rdf:type" resource="#Mood_bg">
+						<span property="rdf:type" resource="../../u/feat/all.html#MoodImp" />
+						<code property="oliasystem:hasTagContaining" lang="">Mood=Imp</code>
+					</span>
+				
+			
+		
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#MoodCnd_bg" property="rdf:type" resource="#Mood_bg">
+						<span property="rdf:type" resource="../../u/feat/all.html#MoodCnd" />
+						<code property="oliasystem:hasTagContaining" lang="">Mood=Cnd</code>
+					</span>
+				
+			
+		
+			
+		
+	
+		
+		
+			
+		
+	
+	<code>]</code>
+	</h2>
+	<div about="#Mood_bg" property="rdfs:comment">	
 
 <p>Mood</p>
 
@@ -395,10 +819,58 @@ happen. It usually presupposes volition. The forms in Bulgarian are analytic.</p
   <li><b>Би трябвало</b> добре да се подготвим за срещата. / <em>Bi tryabvalo dobre da se podgotvim za sreshtata</em> “We should prepare very well for the meeting.”</li>
 </ul>
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_bg-feat/Mood.md" target="#">edit Mood</a></p>
 
-<p><a id="al-bg-feat/Negative" class="al-dest"></a></p>
-<h2><code>Negative</code>: whether the word can be or is negated</h2>
+
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_bg-feat/Mood.md" target="#">edit Mood</a>
+</div>
+
+<div about="#Negative_bg" property="rdfs:subClassOf" resource="#feat_bg">
+	<a id="al-bg-feat/Negative" class="al-dest" />
+	<h2><code property="rdfs:label" lang="">Negative</code>: <span property="rdfs:label">whether the word can be or is negated</span>
+	<code>[</code> 
+	
+	
+		
+		
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#NegativePos_bg" property="rdf:type" resource="#Negative_bg">
+						<span property="rdf:type" resource="../../u/feat/all.html#NegativePos" />
+						<code property="oliasystem:hasTagContaining" lang="">Negative=Pos</code>
+					</span>
+				
+			
+		
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+		
+			
+		
+	
+		
+		
+			
+		
+	
+	<code>]</code>
+	</h2>
+	<div about="#Negative_bg" property="rdfs:comment">	
 
 <p>Negativeness</p>
 
@@ -438,10 +910,119 @@ Verbs and transgressives, however, use the clitic <em>не</em> for negation.</p
   <li><b>не вървейки</b> / <em>ne varveyki</em> “not walking”</li>
 </ul>
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_bg-feat/Negative.md" target="#">edit Negative</a></p>
 
-<p><a id="al-bg-feat/NumType" class="al-dest"></a></p>
-<h2><code>NumType</code>: numeral type</h2>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_bg-feat/Negative.md" target="#">edit Negative</a>
+</div>
+
+<div about="#NumType_bg" property="rdfs:subClassOf" resource="#feat_bg">
+	<a id="al-bg-feat/NumType" class="al-dest" />
+	<h2><code property="rdfs:label" lang="">NumType</code>: <span property="rdfs:label">numeral type</span>
+	<code>[</code> 
+	
+	
+		
+		
+			
+				
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#NumTypeCard_bg" property="rdf:type" resource="#NumType_bg">
+						<span property="rdf:type" resource="../../u/feat/all.html#NumTypeCard" />
+						<code property="oliasystem:hasTagContaining" lang="">NumType=Card</code>
+					</span>
+				
+			
+		
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#NumTypeOrd_bg" property="rdf:type" resource="#NumType_bg">
+						<span property="rdf:type" resource="../../u/feat/all.html#NumTypeOrd" />
+						<code property="oliasystem:hasTagContaining" lang="">NumType=Ord</code>
+					</span>
+				
+			
+		
+			
+		
+	
+		
+		
+			
+		
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#NumTypeMult_bg" property="rdf:type" resource="#NumType_bg">
+						<span property="rdf:type" resource="../../u/feat/all.html#NumTypeMult" />
+						<code property="oliasystem:hasTagContaining" lang="">NumType=Mult</code>
+					</span>
+				
+			
+		
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#NumTypeFrac_bg" property="rdf:type" resource="#NumType_bg">
+						<span property="rdf:type" resource="../../u/feat/all.html#NumTypeFrac" />
+						<code property="oliasystem:hasTagContaining" lang="">NumType=Frac</code>
+					</span>
+				
+			
+		
+			
+		
+	
+		
+		
+			
+		
+	
+	<code>]</code>
+	</h2>
+	<div about="#NumType_bg" property="rdfs:comment">	
 
 <p>NumType</p>
 
@@ -514,10 +1095,72 @@ fraction. In Bulgarian the numerator is cardinal numeral and denominator is ordi
   <li>[bg] две трети / <em>dve treti</em> “two thirds”</li>
 </ul>
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_bg-feat/NumType.md" target="#">edit NumType</a></p>
 
-<p><a id="al-bg-feat/Number" class="al-dest"></a></p>
-<h2><code>Number</code>: number</h2>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_bg-feat/NumType.md" target="#">edit NumType</a>
+</div>
+
+<div about="#Number_bg" property="rdfs:subClassOf" resource="#feat_bg">
+	<a id="al-bg-feat/Number" class="al-dest" />
+	<h2><code property="rdfs:label" lang="">Number</code>: <span property="rdfs:label">number</span>
+	<code>[</code> 
+	
+	
+		
+		
+			
+		
+			
+		
+	
+		
+		
+			
+		
+			
+		
+			
+		
+	
+		
+		
+			
+		
+			
+		
+			
+		
+	
+		
+		
+			
+		
+			
+		
+			
+		
+	
+		
+		
+			
+		
+			
+		
+			
+		
+	
+		
+		
+			
+		
+			
+		
+			
+		
+	
+	<code>]</code>
+	</h2>
+	<div about="#Number_bg" property="rdfs:comment">	
 
 <p>Number is an inflectional feature of nouns, adjectives, verbs. In the tagset it is encoded as: singular (s), plural (p), count (c), pluralia tantum (l). Singularia tantum is not encoded.</p>
 
@@ -551,10 +1194,85 @@ fraction. In Bulgarian the numerator is cardinal numeral and denominator is ordi
 
 <p>Examples: [bg] човечество / <em>chovechestvo</em> (mankind)</p>
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_bg-feat/Number.md" target="#">edit Number</a></p>
 
-<p><a id="al-bg-feat/Person" class="al-dest"></a></p>
-<h2><code>Person</code>: person</h2>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_bg-feat/Number.md" target="#">edit Number</a>
+</div>
+
+<div about="#Person_bg" property="rdfs:subClassOf" resource="#feat_bg">
+	<a id="al-bg-feat/Person" class="al-dest" />
+	<h2><code property="rdfs:label" lang="">Person</code>: <span property="rdfs:label">person</span>
+	<code>[</code> 
+	
+	
+		
+		
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#Person1_bg" property="rdf:type" resource="#Person_bg">
+						<span property="rdf:type" resource="../../u/feat/all.html#Person1" />
+						<code property="oliasystem:hasTagContaining" lang="">Person=1</code>
+					</span>
+				
+			
+		
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#Person2_bg" property="rdf:type" resource="#Person_bg">
+						<span property="rdf:type" resource="../../u/feat/all.html#Person2" />
+						<code property="oliasystem:hasTagContaining" lang="">Person=2</code>
+					</span>
+				
+			
+		
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#Person3_bg" property="rdf:type" resource="#Person_bg">
+						<span property="rdf:type" resource="../../u/feat/all.html#Person3" />
+						<code property="oliasystem:hasTagContaining" lang="">Person=3</code>
+					</span>
+				
+			
+		
+			
+		
+	
+		
+		
+			
+		
+	
+	<code>]</code>
+	</h2>
+	<div about="#Person_bg" property="rdfs:comment">	
 
 <p>Person</p>
 
@@ -605,10 +1323,50 @@ speakers nor addressees.</p>
   <li>идва / <em>idva</em> “He/she/it is coming”</li>
 </ul>
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_bg-feat/Person.md" target="#">edit Person</a></p>
 
-<p><a id="al-bg-feat/Poss" class="al-dest"></a></p>
-<h2><code>Poss</code>: possessive</h2>
+
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_bg-feat/Person.md" target="#">edit Person</a>
+</div>
+
+<div about="#Poss_bg" property="rdfs:subClassOf" resource="#feat_bg">
+	<a id="al-bg-feat/Poss" class="al-dest" />
+	<h2><code property="rdfs:label" lang="">Poss</code>: <span property="rdfs:label">possessive</span>
+	<code>[</code> 
+	
+	
+		
+		
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#PossYes_bg" property="rdf:type" resource="#Poss_bg">
+						<span property="rdf:type" resource="../../u/feat/all.html#PossYes" />
+						<code property="oliasystem:hasTagContaining" lang="">Poss=Yes</code>
+					</span>
+				
+			
+		
+			
+				
+			
+		
+	
+		
+		
+			
+		
+			
+		
+	
+	<code>]</code>
+	</h2>
+	<div about="#Poss_bg" property="rdfs:comment">	
 
 <p>Poss</p>
 
@@ -635,10 +1393,189 @@ means that empty value has the <code>No</code> meaning.)</p>
   <li>[bg] possessive adjectives: майчина любов / <em>maychina lyubov</em> “mother’s love”</li>
 </ul>
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_bg-feat/Poss.md" target="#">edit Poss</a></p>
 
-<p><a id="al-bg-feat/PronType" class="al-dest"></a></p>
-<h2><code>PronType</code>: pronominal type</h2>
+
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_bg-feat/Poss.md" target="#">edit Poss</a>
+</div>
+
+<div about="#PronType_bg" property="rdfs:subClassOf" resource="#feat_bg">
+	<a id="al-bg-feat/PronType" class="al-dest" />
+	<h2><code property="rdfs:label" lang="">PronType</code>: <span property="rdfs:label">pronominal type</span>
+	<code>[</code> 
+	
+	
+		
+		
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#PronTypePrs_bg" property="rdf:type" resource="#PronType_bg">
+						<span property="rdf:type" resource="../../u/feat/all.html#PronTypePrs" />
+						<code property="oliasystem:hasTagContaining" lang="">PronType=Prs</code>
+					</span>
+				
+			
+		
+			
+				
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#PronTypeRcp_bg" property="rdf:type" resource="#PronType_bg">
+						<span property="rdf:type" resource="../../u/feat/all.html#PronTypeRcp" />
+						<code property="oliasystem:hasTagContaining" lang="">PronType=Rcp</code>
+					</span>
+				
+			
+		
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#PronTypeInt_bg" property="rdf:type" resource="#PronType_bg">
+						<span property="rdf:type" resource="../../u/feat/all.html#PronTypeInt" />
+						<code property="oliasystem:hasTagContaining" lang="">PronType=Int</code>
+					</span>
+				
+			
+		
+			
+		
+	
+		
+		
+			
+		
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#PronTypeRel_bg" property="rdf:type" resource="#PronType_bg">
+						<span property="rdf:type" resource="../../u/feat/all.html#PronTypeRel" />
+						<code property="oliasystem:hasTagContaining" lang="">PronType=Rel</code>
+					</span>
+				
+			
+		
+			
+		
+	
+		
+		
+			
+		
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#PronTypeDem_bg" property="rdf:type" resource="#PronType_bg">
+						<span property="rdf:type" resource="../../u/feat/all.html#PronTypeDem" />
+						<code property="oliasystem:hasTagContaining" lang="">PronType=Dem</code>
+					</span>
+				
+			
+		
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#PronTypeTot_bg" property="rdf:type" resource="#PronType_bg">
+						<span property="rdf:type" resource="../../u/feat/all.html#PronTypeTot" />
+						<code property="oliasystem:hasTagContaining" lang="">PronType=Tot</code>
+					</span>
+				
+			
+		
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#PronTypeNeg_bg" property="rdf:type" resource="#PronType_bg">
+						<span property="rdf:type" resource="../../u/feat/all.html#PronTypeNeg" />
+						<code property="oliasystem:hasTagContaining" lang="">PronType=Neg</code>
+					</span>
+				
+			
+		
+			
+		
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#PronTypeInd_bg" property="rdf:type" resource="#PronType_bg">
+						<span property="rdf:type" resource="../../u/feat/all.html#PronTypeInd" />
+						<code property="oliasystem:hasTagContaining" lang="">PronType=Ind</code>
+					</span>
+				
+			
+		
+			
+		
+	
+		
+		
+			
+		
+	
+	<code>]</code>
+	</h2>
+	<div about="#PronType_bg" property="rdfs:comment">	
 
 <p>PronType</p>
 
@@ -731,10 +1668,54 @@ one’s” (possessive negative pronoun), etc.</li>
   <li>[bg/en] еди-кой си / <em>edi-koy si</em> “somebody specific for the speaker, but not for the hearer”</li>
 </ul>
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_bg-feat/PronType.md" target="#">edit PronType</a></p>
 
-<p><a id="al-bg-feat/Reflex" class="al-dest"></a></p>
-<h2><code>Reflex</code>: reflexive</h2>
+
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_bg-feat/PronType.md" target="#">edit PronType</a>
+</div>
+
+<div about="#Reflex_bg" property="rdfs:subClassOf" resource="#feat_bg">
+	<a id="al-bg-feat/Reflex" class="al-dest" />
+	<h2><code property="rdfs:label" lang="">Reflex</code>: <span property="rdfs:label">reflexive</span>
+	<code>[</code> 
+	
+	
+		
+		
+			
+		
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#ReflexYes_bg" property="rdf:type" resource="#Reflex_bg">
+						<span property="rdf:type" resource="../../u/feat/all.html#ReflexYes" />
+						<code property="oliasystem:hasTagContaining" lang="">Reflex=Yes</code>
+					</span>
+				
+			
+		
+			
+				
+			
+		
+	
+		
+		
+			
+		
+			
+		
+			
+		
+	
+	<code>]</code>
+	</h2>
+	<div about="#Reflex_bg" property="rdfs:comment">	
 
 <p>Reflex</p>
 
@@ -761,10 +1742,87 @@ column. (Which means that empty value has the <code>No</code> meaning.)</p>
 pronoun: свой / <em>svoy</em> “oneself’s”.</li>
 </ul>
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_bg-feat/Reflex.md" target="#">edit Reflex</a></p>
 
-<p><a id="al-bg-feat/Tense" class="al-dest"></a></p>
-<h2><code>Tense</code>: tense</h2>
+
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_bg-feat/Reflex.md" target="#">edit Reflex</a>
+</div>
+
+<div about="#Tense_bg" property="rdfs:subClassOf" resource="#feat_bg">
+	<a id="al-bg-feat/Tense" class="al-dest" />
+	<h2><code property="rdfs:label" lang="">Tense</code>: <span property="rdfs:label">tense</span>
+	<code>[</code> 
+	
+	
+		
+		
+			
+		
+			
+		
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#TensePast_bg" property="rdf:type" resource="#Tense_bg">
+						<span property="rdf:type" resource="../../u/feat/all.html#TensePast" />
+						<code property="oliasystem:hasTagContaining" lang="">Tense=Past</code>
+					</span>
+				
+			
+		
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#TensePres_bg" property="rdf:type" resource="#Tense_bg">
+						<span property="rdf:type" resource="../../u/feat/all.html#TensePres" />
+						<code property="oliasystem:hasTagContaining" lang="">Tense=Pres</code>
+					</span>
+				
+			
+		
+			
+		
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#TenseImp_bg" property="rdf:type" resource="#Tense_bg">
+						<span property="rdf:type" resource="../../u/feat/all.html#TenseImp" />
+						<code property="oliasystem:hasTagContaining" lang="">Tense=Imp</code>
+					</span>
+				
+			
+		
+			
+		
+	
+	<code>]</code>
+	</h2>
+	<div about="#Tense_bg" property="rdfs:comment">	
 
 <p>Tense</p>
 
@@ -815,10 +1873,123 @@ Both verbs - perfective and imperfective - are used in imperfect tense.</p>
   <li>Щом <b>дойдеше</b>, веднага запалваше цигара. / <em>Shtom doydeshe, vednaga zapalvashe tsigara</em> “Every time he came, he always lit a cigarette”.</li>
 </ul>
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_bg-feat/Tense.md" target="#">edit Tense</a></p>
 
-<p><a id="al-bg-feat/VerbForm" class="al-dest"></a></p>
-<h2><code>VerbForm</code>: form of verb or deverbative</h2>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_bg-feat/Tense.md" target="#">edit Tense</a>
+</div>
+
+<div about="#VerbForm_bg" property="rdfs:subClassOf" resource="#feat_bg">
+	<a id="al-bg-feat/VerbForm" class="al-dest" />
+	<h2><code property="rdfs:label" lang="">VerbForm</code>: <span property="rdfs:label">form of verb or deverbative</span>
+	<code>[</code> 
+	
+	
+		
+		
+			
+				
+			
+		
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#VerbFormFin_bg" property="rdf:type" resource="#VerbForm_bg">
+						<span property="rdf:type" resource="../../u/feat/all.html#VerbFormFin" />
+						<code property="oliasystem:hasTagContaining" lang="">VerbForm=Fin</code>
+					</span>
+				
+			
+		
+			
+		
+			
+		
+			
+				
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#VerbFormPart_bg" property="rdf:type" resource="#VerbForm_bg">
+						<span property="rdf:type" resource="../../u/feat/all.html#VerbFormPart" />
+						<code property="oliasystem:hasTagContaining" lang="">VerbForm=Part</code>
+					</span>
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+		
+	
+		
+		
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#VerbFormTrans_bg" property="rdf:type" resource="#VerbForm_bg">
+						<span property="rdf:type" resource="../../u/feat/all.html#VerbFormTrans" />
+						<code property="oliasystem:hasTagContaining" lang="">VerbForm=Trans</code>
+					</span>
+				
+			
+		
+			
+		
+	
+		
+		
+			
+		
+			
+				
+			
+		
+	
+	<code>]</code>
+	</h2>
+	<div about="#VerbForm_bg" property="rdfs:comment">	
 
 <p>Even though the name of the feature seems to suggest that it is used
 exclusively with <a href="u-pos/VERB">verbs</a>, it is not the case. Some verb
@@ -877,10 +2048,70 @@ e.g. in Slavic and Indo-Aryan languages.</p>
 
 <p>Note that the symbol `#’, used in the Universal POS section indicates a holder for arbitrary number of features, suppressed in the respective tag as irrelevant in the BulTreeBank tagset, when mapped to the Universal one.</p>
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_bg-feat/VerbForm.md" target="#">edit VerbForm</a></p>
 
-<p><a id="al-bg-feat/Voice" class="al-dest"></a></p>
-<h2><code>Voice</code>: voice</h2>
+
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_bg-feat/VerbForm.md" target="#">edit VerbForm</a>
+</div>
+
+<div about="#Voice_bg" property="rdfs:subClassOf" resource="#feat_bg">
+	<a id="al-bg-feat/Voice" class="al-dest" />
+	<h2><code property="rdfs:label" lang="">Voice</code>: <span property="rdfs:label">voice</span>
+	<code>[</code> 
+	
+	
+		
+		
+			
+		
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#VoiceAct_bg" property="rdf:type" resource="#Voice_bg">
+						<span property="rdf:type" resource="../../u/feat/all.html#VoiceAct" />
+						<code property="oliasystem:hasTagContaining" lang="">Voice=Act</code>
+					</span>
+				
+			
+		
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#VoicePass_bg" property="rdf:type" resource="#Voice_bg">
+						<span property="rdf:type" resource="../../u/feat/all.html#VoicePass" />
+						<code property="oliasystem:hasTagContaining" lang="">Voice=Pass</code>
+					</span>
+				
+			
+		
+			
+		
+			
+		
+	
+		
+		
+			
+		
+	
+	<code>]</code>
+	</h2>
+	<div about="#Voice_bg" property="rdfs:comment">	
 
 <p>Voice</p>
 
@@ -924,7 +2155,10 @@ In Bulgarian there are two ways of forming passive:</p>
   <li>Тази книга <b>беше прочетена</b> по-бързо от другите. / <em>Tazi kniga beshe prochetena po-barzo ot drugite</em> “This book was read faster than the others”.</li>
 </ul>
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_bg-feat/Voice.md" target="#">edit Voice</a></p>
+
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_bg-feat/Voice.md" target="#">edit Voice</a>
+</div>
 
 
 

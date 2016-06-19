@@ -43,7 +43,19 @@
 	  </div>
 	</noscript>
 
-          <h1 id="pos-tags">POS tags</h1>
+          
+<h1 id="pos-tags">POS tags</h1>
+
+<p><span about="." property="rdf:type" resource="owl:Ontology">
+	<span property="owl:imports" resource=" https://www.w3.org/2012/pyRdfa/extract?uri=http://universaldependencies.org/docs/u/pos/all.html&amp;format=xml&amp;rdfagraph=output&amp;vocab_expansion=false&amp;rdfa_lite=false&amp;embedded_rdf=true&amp;space_preserve=false&amp;vocab_cache=true&amp;vocab_cache_report=false&amp;vocab_cache_refresh=false"></span>
+	</span>
+<span about="#pos_ca" property="rdfs:label" style="visibility: hidden">POS tags</span>
+<span about="#pos_ca" property="rdfs:subClassOf" resource="_:ca">
+	<span about="_:ca" property="rdf:type" resource="owl:Restriction">
+		<span property="owl:onProperty" resource="http://purl.org/dc/terms/language"></span>
+		<span property="owl:hasValue" lang="" style="visibility: hidden">ca</span>
+	</span>
+</span></p>
 
 <table class="typeindex">
   <thead>
@@ -99,231 +111,338 @@
 
 <hr />
 
-<p><a id="al-ca-pos/ADJ" class="al-dest"></a></p>
-<h2><code>ADJ</code>: adjective</h2>
+<div about="#ADJ_ca" property="rdf:type" resource="#pos_ca">
+	<div property="rdf:type" resource="../../u/pos/all.html#ADJ" />
+	<a id="al-ca-pos/ADJ" class="al-dest" />
 
-<h3 id="definition">Definition</h3>
+	<h2><code property="oliasystem:hasTag" lang="">ADJ</code>: <div property="rdfs:label">adjective</div></h2>
+	<div property="rdfs:comment">
 
-<p>Adjectives are words that typically modify nouns and specify their properties or attributes. They may also function as predicates, as in</p>
+### Definition
 
-<p><em>El cotxe és <b>verd</b>.</em> “The car is green.”</p>
+Adjectives are words that typically modify nouns and specify their properties or attributes. They may also function as predicates, as in
 
-<p>In Catalan, adjectives normally follow the noun, e.g. <em>La casa <b>groga</b></em> “The yellow house”, although sometimes they may also precede the noun, e.g. <em>La <b>blanca</b> neu</em> “The white snow”.</p>
+_El cotxe és <b>verd</b>._ "The car is green."
 
-<p>Adjectives in Catalan agree in number and gender with the noun they modify, e.g. <em>la casa <b>groga</b></em> (femenine singular), <em>les cases <b>grogues</b></em> (femenine plural).</p>
+In Catalan, adjectives normally follow the noun, e.g. _La casa <b>groga</b>_ "The yellow house", although sometimes they may also precede the noun, e.g. _La <b>blanca</b> neu_ "The white snow".
 
-<p>The class of adjectives in Catalan UD also includes <em>ordinal numbers</em> and <em>participial adjectives</em>, both behaving as adjectives morphologically and syntactically. Note that <em>participles</em> are word forms that may share properties and usage of adjectives and verbs. Depending on context, they may be classified as either <a href="">VERB</a> or ADJ.</p>
+Adjectives in Catalan agree in number and gender with the noun they modify, e.g. _la casa <b>groga</b>_ (femenine singular), _les cases <b>grogues</b>_ (femenine plural).
 
-<p>To conform to the UD guidelines, possessive adjectives are handled as determiners <a href="">DET</a>.</p>
+The class of adjectives in Catalan UD also includes _ordinal numbers_ and _participial adjectives_, both behaving as adjectives morphologically and syntactically. Note that _participles_ are word forms that may share properties and usage of adjectives and verbs. Depending on context, they may be classified as either [VERB]() or ADJ.
 
-<h3 id="examples">Examples</h3>
+To conform to the UD guidelines, possessive adjectives are handled as determiners [DET]().
 
-<ul>
-  <li><em>gran</em> “big”</li>
-  <li><em>vell</em> “old”</li>
-  <li><em>verd</em> “green”</li>
-  <li><em>incomprensible</em> “incomprehensible”</li>
-  <li><em>primer</em> “first”, <em>segon</em> “second”, <em>tercer</em> “third”</li>
-</ul>
+### Examples
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_ca-pos/ADJ.md" target="#">edit ADJ</a></p>
+* _gran_ "big"
+* _vell_ "old"
+* _verd_ "green"
+* _incomprensible_ “incomprehensible”
+* _primer_ "first", _segon_ "second", _tercer_ "third"
 
-<p><a id="al-ca-pos/ADP" class="al-dest"></a></p>
-<h2><code>ADP</code>: adposition</h2>
 
-<p>This document is a placeholder for the language-specific documentation
-for <code>ADP</code>.</p>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_ca-pos/ADJ.md" target="#">edit ADJ</a>
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_ca-pos/ADP.md" target="#">edit ADP</a></p>
 
-<p><a id="al-ca-pos/ADV" class="al-dest"></a></p>
-<h2><code>ADV</code>: adverb</h2>
+<div about="#ADP_ca" property="rdf:type" resource="#pos_ca">
+	<div property="rdf:type" resource="../../u/pos/all.html#ADP" />
+	<a id="al-ca-pos/ADP" class="al-dest" />
 
-<h3 id="definition">Definition</h3>
+	<h2><code property="oliasystem:hasTag" lang="">ADP</code>: <div property="rdfs:label">adposition</div></h2>
+	<div property="rdfs:comment">
 
-<p>Adverbs are words that typically modify <a href="VERB">verbs</a> for such categories as time, place, direction or manner. They may also modify <a href="ADJ">adjectives</a> (as in <em><b>clarament</b> fals</em> “clearly fake”), other adverbs (as in <em><b>molt breument</b></em> “very briefly”) or even <a href="NOUN">nouns</a> / <a href="PRON">pronouns</a> (as in <em><b>solament</b> tu</em> “only you”).</p>
+This document is a placeholder for the language-specific documentation
+for `ADP`.
 
-<p>There is a closed subclass of <em>pronominal adverbs</em> that refer to circumstances in context, rather than naming them directly; similarly to pronouns, these can be categorized as interrogative, relative, demonstrative, etc. To conform to the UD guidelines, pronominal adverbs also get the <code>ADV</code> part-of-speech tag but they are differentiated by additional features (see <a href="PronType">pronominal type</a>).</p>
 
-<h3 id="examples">Examples</h3>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_ca-pos/ADP.md" target="#">edit ADP</a>
 
-<ul>
-  <li><em>molt</em> “very”</li>
-  <li><em>bé</em> “well”</li>
-  <li><em>exactament</em> “exactly”</li>
-  <li><em>demà</em> “tomorrow”</li>
-  <li><em>dalt, baix</em> “up, down”</li>
-  <li>interrogative or exclamative adverbs: <em>on, quan, com, per què</em> “where, when, how, why</li>
-  <li>demonstrative adverbs: <em>aquí, allí, ara, després</em> “here, there, now, then”</li>
-  <li>totality adverbs: <em>sempre</em> “always”</li>
-  <li>negative adverbs: <em>mai</em> “never”</li>
-</ul>
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_ca-pos/ADV.md" target="#">edit ADV</a></p>
+<div about="#ADV_ca" property="rdf:type" resource="#pos_ca">
+	<div property="rdf:type" resource="../../u/pos/all.html#ADV" />
+	<a id="al-ca-pos/ADV" class="al-dest" />
 
-<p><a id="al-ca-pos/AUX" class="al-dest"></a></p>
-<h2><code>AUX</code>: auxiliary verb</h2>
+	<h2><code property="oliasystem:hasTag" lang="">ADV</code>: <div property="rdfs:label">adverb</div></h2>
+	<div property="rdfs:comment">
 
-<p>This document is a placeholder for the language-specific documentation
-for <code>AUX</code>.</p>
+### Definition
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_ca-pos/AUX_.md" target="#">edit AUX</a></p>
+Adverbs are words that typically modify [verbs](VERB) for such categories as time, place, direction or manner. They may also modify [adjectives](ADJ) (as in _<b>clarament</b> fals_ "clearly fake"), other adverbs (as in _<b>molt breument</b>_ "very briefly") or even [nouns](NOUN) / [pronouns](PRON) (as in _<b>solament</b> tu_ "only you").
 
-<p><a id="al-ca-pos/CONJ" class="al-dest"></a></p>
-<h2><code>CONJ</code>: coordinating conjunction</h2>
+There is a closed subclass of _pronominal adverbs_ that refer to circumstances in context, rather than naming them directly; similarly to pronouns, these can be categorized as interrogative, relative, demonstrative, etc. To conform to the UD guidelines, pronominal adverbs also get the `ADV` part-of-speech tag but they are differentiated by additional features (see [pronominal type](PronType)).
 
-<p>This document is a placeholder for the language-specific documentation
-for <code>CONJ</code>.</p>
+### Examples
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_ca-pos/CONJ.md" target="#">edit CONJ</a></p>
+- _molt_ "very"
+- _bé_ "well"
+- _exactament_ "exactly"
+- _demà_ "tomorrow"
+- _dalt, baix_ "up, down"
+- interrogative or exclamative adverbs: _on, quan, com, per què_ "where, when, how, why
+- demonstrative adverbs: _aquí, allí, ara, després_ "here, there, now, then"
+- totality adverbs: _sempre_ "always"
+- negative adverbs: _mai_ "never"
 
-<p><a id="al-ca-pos/DET" class="al-dest"></a></p>
-<h2><code>DET</code>: determiner</h2>
 
-<p>This document is a placeholder for the language-specific documentation
-for <code>DET</code>.</p>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_ca-pos/ADV.md" target="#">edit ADV</a>
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_ca-pos/DET.md" target="#">edit DET</a></p>
 
-<p><a id="al-ca-pos/INTJ" class="al-dest"></a></p>
-<h2><code>INTJ</code>: interjection</h2>
+<div about="#AUX_ca" property="rdf:type" resource="#pos_ca">
+	<div property="rdf:type" resource="../../u/pos/all.html#AUX" />
+	<a id="al-ca-pos/AUX" class="al-dest" />
 
-<h3 id="definition">Definition</h3>
+	<h2><code property="oliasystem:hasTag" lang="">AUX</code>: <div property="rdfs:label">auxiliary verb</div></h2>
+	<div property="rdfs:comment">
 
-<p>An interjection is a word that is used most often as an exclamation or part of an exclamation. It typically expresses an emotional reaction, is not syntactically related to other accompanying expressions, and may include a combination of sounds not otherwise found in the language.</p>
+This document is a placeholder for the language-specific documentation
+for `AUX`.
 
-<p>Note that words primarily belonging to another part of speech retains their original category when used in exclamations. For example, in the phrase <em>¡Déu meu!</em>, <em>Déu</em> is a <a href="">NOUN</a> and <em>meu</em> is a <a href="">PRON</a> even in exclamatory uses.</p>
 
-<p>As a special case of interjections, we recognize feedback particles such as <em>sí</em> and <em>no</em>. Note that uses of <em>sí</em> and <em>no</em> syntactically related to other accompanying expressions in a sentence are recognized as <a href="">ADV</a>.</p>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_ca-pos/AUX_.md" target="#">edit AUX</a>
 
-<h3 id="examples">Examples</h3>
 
-<p>Marked as interjections:</p>
+<div about="#CONJ_ca" property="rdf:type" resource="#pos_ca">
+	<div property="rdf:type" resource="../../u/pos/all.html#CONJ" />
+	<a id="al-ca-pos/CONJ" class="al-dest" />
 
-<ul>
-  <li><em>psst</em></li>
-  <li><em>ai</em></li>
-  <li><em>bravo</em></li>
-  <li><em>hola</em></li>
-  <li><em>sí</em>, e.g. <em><b>Sí</b>, perque…</em> “<b>Yes</b>, because…”.</li>
-  <li><em>no</em>, e.g. <em><b>No</b>, no ho crec.</em> “<b>No</b>, I don’t believe it.”</li>
-</ul>
+	<h2><code property="oliasystem:hasTag" lang="">CONJ</code>: <div property="rdfs:label">coordinating conjunction</div></h2>
+	<div property="rdfs:comment">
 
-<p>Marked as adverbs:</p>
+This document is a placeholder for the language-specific documentation
+for `CONJ`.
 
-<ul>
-  <li><em>sí</em>, e.g. <em>Votarem <b>sí</b>.</em> “We will vote <b>yes</b>”.</li>
-  <li><em>no</em>, e.g. <em><b>No</b> és veritat.</em> “It is <b>not</b> true.”</li>
-</ul>
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_ca-pos/INTJ.md" target="#">edit INTJ</a></p>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_ca-pos/CONJ.md" target="#">edit CONJ</a>
 
-<p><a id="al-ca-pos/NOUN" class="al-dest"></a></p>
-<h2><code>NOUN</code>: noun</h2>
 
-<h3 id="definition">Definition</h3>
+<div about="#DET_ca" property="rdf:type" resource="#pos_ca">
+	<div property="rdf:type" resource="../../u/pos/all.html#DET" />
+	<a id="al-ca-pos/DET" class="al-dest" />
 
-<p>Nouns are a part of speech typically denoting a person, place, thing, animal or idea.</p>
+	<h2><code property="oliasystem:hasTag" lang="">DET</code>: <div property="rdfs:label">determiner</div></h2>
+	<div property="rdfs:comment">
 
-<p>The <code>NOUN</code> tag is intended for common nouns only. See <a href="">PROPN</a> for proper nouns and <a href="">PRON</a> for pronouns.</p>
+This document is a placeholder for the language-specific documentation
+for `DET`.
 
-<p>Spanish nouns have the lexical feature <a href="">ca-feat/Gender</a>. Furthermore, the nouns inflect for <a href="">ca-feat/Number</a>.</p>
 
-<h3 id="examples">Examples</h3>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_ca-pos/DET.md" target="#">edit DET</a>
 
-<ul>
-  <li><em>noia</em> “girl”</li>
-  <li><em>gat</em> “cat”</li>
-  <li><em>arbre</em> “tree”</li>
-  <li><em>aire</em> “air”</li>
-  <li><em>bellesa</em> “beauty”</li>
-</ul>
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_ca-pos/NOUN.md" target="#">edit NOUN</a></p>
+<div about="#INTJ_ca" property="rdf:type" resource="#pos_ca">
+	<div property="rdf:type" resource="../../u/pos/all.html#INTJ" />
+	<a id="al-ca-pos/INTJ" class="al-dest" />
 
-<p><a id="al-ca-pos/NUM" class="al-dest"></a></p>
-<h2><code>NUM</code>: numeral</h2>
+	<h2><code property="oliasystem:hasTag" lang="">INTJ</code>: <div property="rdfs:label">interjection</div></h2>
+	<div property="rdfs:comment">
 
-<p>This document is a placeholder for the language-specific documentation
-for <code>NUM</code>.</p>
+### Definition
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_ca-pos/NUM.md" target="#">edit NUM</a></p>
+An interjection is a word that is used most often as an exclamation or part of an exclamation. It typically expresses an emotional reaction, is not syntactically related to other accompanying expressions, and may include a combination of sounds not otherwise found in the language.
 
-<p><a id="al-ca-pos/PART" class="al-dest"></a></p>
-<h2><code>PART</code>: particle</h2>
+Note that words primarily belonging to another part of speech retains their original category when used in exclamations. For example, in the phrase _¡Déu meu!_, _Déu_ is a [NOUN]() and _meu_ is a [PRON]() even in exclamatory uses.
 
-<p>This document is a placeholder for the language-specific documentation
-for <code>PART</code>.</p>
+As a special case of interjections, we recognize feedback particles such as _sí_ and _no_. Note that uses of _sí_ and _no_ syntactically related to other accompanying expressions in a sentence are recognized as [ADV]().
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_ca-pos/PART.md" target="#">edit PART</a></p>
+### Examples
 
-<p><a id="al-ca-pos/PRON" class="al-dest"></a></p>
-<h2><code>PRON</code>: pronoun</h2>
+Marked as interjections:
 
-<p>This document is a placeholder for the language-specific documentation
-for <code>PRON</code>.</p>
+- _psst_
+- _ai_
+- _bravo_
+- _hola_
+- _sí_, e.g. _<b>Sí</b>, perque..._ "<b>Yes</b>, because...".
+- _no_, e.g. _<b>No</b>, no ho crec._ "<b>No</b>, I don't believe it."
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_ca-pos/PRON.md" target="#">edit PRON</a></p>
+Marked as adverbs:
 
-<p><a id="al-ca-pos/PROPN" class="al-dest"></a></p>
-<h2><code>PROPN</code>: proper noun</h2>
+- _sí_, e.g. _Votarem <b>sí</b>._ "We will vote <b>yes</b>".
+- _no_, e.g. _<b>No</b> és veritat._ "It is <b>not</b> true."
 
-<p>This document is a placeholder for the language-specific documentation
-for <code>PROPN</code>.</p>
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_ca-pos/PROPN.md" target="#">edit PROPN</a></p>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_ca-pos/INTJ.md" target="#">edit INTJ</a>
 
-<p><a id="al-ca-pos/PUNCT" class="al-dest"></a></p>
-<h2><code>PUNCT</code>: punctuation</h2>
 
-<h3 id="definition">Definition</h3>
+<div about="#NOUN_ca" property="rdf:type" resource="#pos_ca">
+	<div property="rdf:type" resource="../../u/pos/all.html#NOUN" />
+	<a id="al-ca-pos/NOUN" class="al-dest" />
 
-<p>Punctuation marks are non-alphabetical characters and character groups used in many languages to delimit linguistic units in printed text.</p>
+	<h2><code property="oliasystem:hasTag" lang="">NOUN</code>: <div property="rdfs:label">noun</div></h2>
+	<div property="rdfs:comment">
 
-<p>Punctuation is not taken to include logograms such as <em>$</em>, <em>%</em>, and <em>§</em>, which are instead tagged as <a href="">SYM</a>.</p>
+### Definition
 
-<h3 id="examples">Examples</h3>
+Nouns are a part of speech typically denoting a person, place, thing, animal or idea.
 
-<ul>
-  <li>Period: <em><b>.</b></em></li>
-  <li>Comma: <em><b>,</b></em></li>
-  <li>Parentheses: <em><b>()</b></em></li>
-</ul>
+The `NOUN` tag is intended for common nouns only. See [PROPN]() for proper nouns and [PRON]() for pronouns.
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_ca-pos/PUNCT.md" target="#">edit PUNCT</a></p>
+Spanish nouns have the lexical feature [ca-feat/Gender](). Furthermore, the nouns inflect for [ca-feat/Number]().
 
-<p><a id="al-ca-pos/SCONJ" class="al-dest"></a></p>
-<h2><code>SCONJ</code>: subordinating conjunction</h2>
+### Examples
 
-<p>This document is a placeholder for the language-specific documentation
-for <code>SCONJ</code>.</p>
+- _noia_ “girl”
+- _gat_ “cat”
+- _arbre_ “tree”
+- _aire_ “air”
+- _bellesa_ “beauty”
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_ca-pos/SCONJ.md" target="#">edit SCONJ</a></p>
 
-<p><a id="al-ca-pos/SYM" class="al-dest"></a></p>
-<h2><code>SYM</code>: symbol</h2>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_ca-pos/NOUN.md" target="#">edit NOUN</a>
 
-<p>This document is a placeholder for the language-specific documentation
-for <code>SYM</code>.</p>
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_ca-pos/SYM.md" target="#">edit SYM</a></p>
+<div about="#NUM_ca" property="rdf:type" resource="#pos_ca">
+	<div property="rdf:type" resource="../../u/pos/all.html#NUM" />
+	<a id="al-ca-pos/NUM" class="al-dest" />
 
-<p><a id="al-ca-pos/VERB" class="al-dest"></a></p>
-<h2><code>VERB</code>: verb</h2>
+	<h2><code property="oliasystem:hasTag" lang="">NUM</code>: <div property="rdfs:label">numeral</div></h2>
+	<div property="rdfs:comment">
 
-<p>This document is a placeholder for the language-specific documentation
-for <code>VERB</code>.</p>
+This document is a placeholder for the language-specific documentation
+for `NUM`.
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_ca-pos/VERB.md" target="#">edit VERB</a></p>
 
-<p><a id="al-ca-pos/X" class="al-dest"></a></p>
-<h2><code>X</code>: other</h2>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_ca-pos/NUM.md" target="#">edit NUM</a>
 
-<p>This document is a placeholder for the language-specific documentation
-for <code>X</code>.</p>
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_ca-pos/X.md" target="#">edit X</a></p>
+<div about="#PART_ca" property="rdf:type" resource="#pos_ca">
+	<div property="rdf:type" resource="../../u/pos/all.html#PART" />
+	<a id="al-ca-pos/PART" class="al-dest" />
 
+	<h2><code property="oliasystem:hasTag" lang="">PART</code>: <div property="rdfs:label">particle</div></h2>
+	<div property="rdfs:comment">
+
+This document is a placeholder for the language-specific documentation
+for `PART`.
+
+
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_ca-pos/PART.md" target="#">edit PART</a>
+
+
+<div about="#PRON_ca" property="rdf:type" resource="#pos_ca">
+	<div property="rdf:type" resource="../../u/pos/all.html#PRON" />
+	<a id="al-ca-pos/PRON" class="al-dest" />
+
+	<h2><code property="oliasystem:hasTag" lang="">PRON</code>: <div property="rdfs:label">pronoun</div></h2>
+	<div property="rdfs:comment">
+
+This document is a placeholder for the language-specific documentation
+for `PRON`.
+
+
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_ca-pos/PRON.md" target="#">edit PRON</a>
+
+
+<div about="#PROPN_ca" property="rdf:type" resource="#pos_ca">
+	<div property="rdf:type" resource="../../u/pos/all.html#PROPN" />
+	<a id="al-ca-pos/PROPN" class="al-dest" />
+
+	<h2><code property="oliasystem:hasTag" lang="">PROPN</code>: <div property="rdfs:label">proper noun</div></h2>
+	<div property="rdfs:comment">
+
+This document is a placeholder for the language-specific documentation
+for `PROPN`.
+
+
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_ca-pos/PROPN.md" target="#">edit PROPN</a>
+
+
+<div about="#PUNCT_ca" property="rdf:type" resource="#pos_ca">
+	<div property="rdf:type" resource="../../u/pos/all.html#PUNCT" />
+	<a id="al-ca-pos/PUNCT" class="al-dest" />
+
+	<h2><code property="oliasystem:hasTag" lang="">PUNCT</code>: <div property="rdfs:label">punctuation</div></h2>
+	<div property="rdfs:comment">
+
+### Definition
+
+Punctuation marks are non-alphabetical characters and character groups used in many languages to delimit linguistic units in printed text.
+
+Punctuation is not taken to include logograms such as _$_, _%_, and _§_, which are instead tagged as [SYM]().
+
+### Examples
+
+- Period: _<b>.</b>_
+- Comma: _<b>,</b>_
+- Parentheses: _<b>()</b>_
+
+
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_ca-pos/PUNCT.md" target="#">edit PUNCT</a>
+
+
+<div about="#SCONJ_ca" property="rdf:type" resource="#pos_ca">
+	<div property="rdf:type" resource="../../u/pos/all.html#SCONJ" />
+	<a id="al-ca-pos/SCONJ" class="al-dest" />
+
+	<h2><code property="oliasystem:hasTag" lang="">SCONJ</code>: <div property="rdfs:label">subordinating conjunction</div></h2>
+	<div property="rdfs:comment">
+
+This document is a placeholder for the language-specific documentation
+for `SCONJ`.
+
+
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_ca-pos/SCONJ.md" target="#">edit SCONJ</a>
+
+
+<div about="#SYM_ca" property="rdf:type" resource="#pos_ca">
+	<div property="rdf:type" resource="../../u/pos/all.html#SYM" />
+	<a id="al-ca-pos/SYM" class="al-dest" />
+
+	<h2><code property="oliasystem:hasTag" lang="">SYM</code>: <div property="rdfs:label">symbol</div></h2>
+	<div property="rdfs:comment">
+
+This document is a placeholder for the language-specific documentation
+for `SYM`.
+
+
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_ca-pos/SYM.md" target="#">edit SYM</a>
+
+
+<div about="#VERB_ca" property="rdf:type" resource="#pos_ca">
+	<div property="rdf:type" resource="../../u/pos/all.html#VERB" />
+	<a id="al-ca-pos/VERB" class="al-dest" />
+
+	<h2><code property="oliasystem:hasTag" lang="">VERB</code>: <div property="rdfs:label">verb</div></h2>
+	<div property="rdfs:comment">
+
+This document is a placeholder for the language-specific documentation
+for `VERB`.
+
+
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_ca-pos/VERB.md" target="#">edit VERB</a>
+
+
+<div about="#X_ca" property="rdf:type" resource="#pos_ca">
+	<div property="rdf:type" resource="../../u/pos/all.html#X" />
+	<a id="al-ca-pos/X" class="al-dest" />
+
+	<h2><code property="oliasystem:hasTag" lang="">X</code>: <div property="rdfs:label">other</div></h2>
+	<div property="rdfs:comment">
+
+This document is a placeholder for the language-specific documentation
+for `X`.
+
+
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_ca-pos/X.md" target="#">edit X</a>
+
+</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div>
 
 
       </div>

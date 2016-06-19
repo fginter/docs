@@ -43,7 +43,20 @@
 	  </div>
 	</noscript>
 
-          <h1 id="features">Features</h1>
+          
+<h1 id="features">Features</h1>
+
+<p><span about="." property="rdf:type" resource="owl:Ontology">
+	<span property="owl:imports" resource=" https://www.w3.org/2012/pyRdfa/extract?uri=http://universaldependencies.org/docs/u/feat/all.html&amp;format=xml&amp;rdfagraph=output&amp;vocab_expansion=false&amp;rdfa_lite=false&amp;embedded_rdf=true&amp;space_preserve=false&amp;vocab_cache=true&amp;vocab_cache_report=false&amp;vocab_cache_refresh=false"></span>
+</span></p>
+
+<p><span about="#feat_sl" property="rdfs:label" style="visibility: hidden">Features</span>
+<span about="#feat_sl" property="rdfs:subClassOf" resource="_:sl">
+	<span about="_:sl" property="rdf:type" resource="owl:Restriction">
+		<span property="owl:onProperty" resource="http://purl.org/dc/terms/language"></span>
+		<span property="owl:hasValue" lang="" style="visibility: hidden">sl</span>
+	</span>
+</span></p>
 
 <table class="typeindex">
   <tr>
@@ -123,8 +136,36 @@
 
 <hr />
 
-<p><a id="al-sl-feat/Abbr" class="al-dest"></a></p>
-<h2><code>Abbr</code>: abbreviation</h2>
+<div about="#Abbr_sl" property="rdfs:subClassOf" resource="#feat_sl">
+	<a id="al-sl-feat/Abbr" class="al-dest" />
+	<h2><code property="rdfs:label" lang="">Abbr</code>: <span property="rdfs:label">abbreviation</span>
+	<code>[</code> 
+	
+	
+		
+		
+			
+		
+			
+		
+	
+		
+		
+			
+		
+			
+		
+	
+		
+		
+			
+				
+			
+		
+	
+	<code>]</code>
+	</h2>
+	<div about="#Abbr_sl" property="rdfs:comment">	
 
 <p>Abbreviation is a feature of <a href="X">X: other</a> to mark abbreviations ending with a dot.</p>
 
@@ -142,10 +183,73 @@
 
 <p>Currently, all abbreviations are converted to <code>X</code> and assigned the <code>Abbr=Yes</code> feature.</p>
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_sl-feat/Abbreviation.md" target="#">edit Abbr</a></p>
 
-<p><a id="al-sl-feat/Animacy" class="al-dest"></a></p>
-<h2><code>Animacy</code>: animacy</h2>
+
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_sl-feat/Abbreviation.md" target="#">edit Abbr</a>
+</div>
+
+<div about="#Animacy_sl" property="rdfs:subClassOf" resource="#feat_sl">
+	<a id="al-sl-feat/Animacy" class="al-dest" />
+	<h2><code property="rdfs:label" lang="">Animacy</code>: <span property="rdfs:label">animacy</span>
+	<code>[</code> 
+	
+	
+		
+		
+			
+				
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#AnimacyAnim_sl" property="rdf:type" resource="#Animacy_sl">
+						<span property="rdf:type" resource="../../u/feat/all.html#AnimacyAnim" />
+						<code property="oliasystem:hasTagContaining" lang="">Animacy=Anim</code>
+					</span>
+				
+			
+		
+			
+				
+			
+		
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#AnimacyInan_sl" property="rdf:type" resource="#Animacy_sl">
+						<span property="rdf:type" resource="../../u/feat/all.html#AnimacyInan" />
+						<code property="oliasystem:hasTagContaining" lang="">Animacy=Inan</code>
+					</span>
+				
+			
+		
+			
+				
+			
+		
+			
+		
+	
+		
+		
+			
+				
+			
+		
+	
+	<code>]</code>
+	</h2>
+	<div about="#Animacy_sl" property="rdfs:comment">	
 
 <p>In contrast to some other languages, the Slovenian tagset does not consider <code>Animacy</code> to be a lexical feature, as certain types of inanimate nouns, such as institutions, personified objects, brand names etc., often take on both semantic and grammatical features of animate nouns.</p>
 
@@ -177,10 +281,73 @@
 
 <p>All nouns with Animate=yes are converted to <code>Animacy=Anim</code> and all nouns with Animate=no are converted to <code>Animacy=Inan</code>.</p>
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_sl-feat/Animacy.md" target="#">edit Animacy</a></p>
 
-<p><a id="al-sl-feat/Aspect" class="al-dest"></a></p>
-<h2><code>Aspect</code>: aspect</h2>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_sl-feat/Animacy.md" target="#">edit Animacy</a>
+</div>
+
+<div about="#Aspect_sl" property="rdfs:subClassOf" resource="#feat_sl">
+	<a id="al-sl-feat/Aspect" class="al-dest" />
+	<h2><code property="rdfs:label" lang="">Aspect</code>: <span property="rdfs:label">aspect</span>
+	<code>[</code> 
+	
+	
+		
+		
+			
+		
+			
+				
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#AspectImp_sl" property="rdf:type" resource="#Aspect_sl">
+						<span property="rdf:type" resource="../../u/feat/all.html#AspectImp" />
+						<code property="oliasystem:hasTagContaining" lang="">Aspect=Imp</code>
+					</span>
+				
+			
+		
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#AspectPerf_sl" property="rdf:type" resource="#Aspect_sl">
+						<span property="rdf:type" resource="../../u/feat/all.html#AspectPerf" />
+						<code property="oliasystem:hasTagContaining" lang="">Aspect=Perf</code>
+					</span>
+				
+			
+		
+			
+		
+	
+		
+		
+			
+				
+			
+		
+	
+		
+		
+			
+				
+			
+		
+	
+	<code>]</code>
+	</h2>
+	<div about="#Aspect_sl" property="rdfs:comment">	
 
 <p>Aspect is a lexical feature of <a href="VERB">verbs</a> that specifies the duration and completion of action in time.</p>
 
@@ -215,10 +382,128 @@
 
 <p>Verbs with Aspect=perfective are converted to <code>Aspect=Perf</code>, verbs with Aspect=imperfective are converted <code>Aspect=Imp</code> and verbs with Aspect=biaspectual are not assigned the <code>Aspect</code> feature.</p>
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_sl-feat/Aspect.md" target="#">edit Aspect</a></p>
 
-<p><a id="al-sl-feat/Case" class="al-dest"></a></p>
-<h2><code>Case</code>: case</h2>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_sl-feat/Aspect.md" target="#">edit Aspect</a>
+</div>
+
+<div about="#Case_sl" property="rdfs:subClassOf" resource="#feat_sl">
+	<a id="al-sl-feat/Case" class="al-dest" />
+	<h2><code property="rdfs:label" lang="">Case</code>: <span property="rdfs:label">case</span>
+	<code>[</code> 
+	
+	
+		
+		
+			
+				
+			
+		
+			
+				
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#CaseNom_sl" property="rdf:type" resource="#Case_sl">
+						<span property="rdf:type" resource="../../u/feat/all.html#CaseNom" />
+						<code property="oliasystem:hasTagContaining" lang="">Case=Nom</code>
+					</span>
+				
+			
+		
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#CaseGen_sl" property="rdf:type" resource="#Case_sl">
+						<span property="rdf:type" resource="../../u/feat/all.html#CaseGen" />
+						<code property="oliasystem:hasTagContaining" lang="">Case=Gen</code>
+					</span>
+				
+			
+		
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#CaseDat_sl" property="rdf:type" resource="#Case_sl">
+						<span property="rdf:type" resource="../../u/feat/all.html#CaseDat" />
+						<code property="oliasystem:hasTagContaining" lang="">Case=Dat</code>
+					</span>
+				
+			
+		
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#CaseAcc_sl" property="rdf:type" resource="#Case_sl">
+						<span property="rdf:type" resource="../../u/feat/all.html#CaseAcc" />
+						<code property="oliasystem:hasTagContaining" lang="">Case=Acc</code>
+					</span>
+				
+			
+		
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#CaseLoc_sl" property="rdf:type" resource="#Case_sl">
+						<span property="rdf:type" resource="../../u/feat/all.html#CaseLoc" />
+						<code property="oliasystem:hasTagContaining" lang="">Case=Loc</code>
+					</span>
+				
+			
+		
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#CaseIns_sl" property="rdf:type" resource="#Case_sl">
+						<span property="rdf:type" resource="../../u/feat/all.html#CaseIns" />
+						<code property="oliasystem:hasTagContaining" lang="">Case=Ins</code>
+					</span>
+				
+			
+		
+			
+		
+	
+		
+		
+			
+				
+			
+		
+	
+	<code>]</code>
+	</h2>
+	<div about="#Case_sl" property="rdfs:comment">	
 
 <p><code>Case</code> is an inflectional feature of <a href="ADJ">adjectives</a>, <a href="DET">determiners</a>, <a href="NOUN">nouns</a>, <a href="NUM">numerals</a>, <a href="PRON">pronouns</a> and <a href="PROPN">proper nouns</a>, as well as a valency (lexical) feature of <a href="ADP">adpositions</a>.</p>
 
@@ -281,10 +566,72 @@
 
 <p>Tokens with feature Case=nominative are converted to <code>Case=Nom</code>, tokens with feature Case=genitive are converted to <code>Case=Gen</code>, tokens with feature Case=dative are converted to <code>Case=Dat</code>, tokens with feature Case=accusative are converted to <code>Case=Acc</code>, tokens with feature Case=locative are converted to <code>Case=Loc</code>, tokens with feature Case=instrumental are converted to <code>Case=Ins</code>.</p>
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_sl-feat/Case.md" target="#">edit Case</a></p>
 
-<p><a id="al-sl-feat/Definite" class="al-dest"></a></p>
-<h2><code>Definite</code>: definiteness or state</h2>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_sl-feat/Case.md" target="#">edit Case</a>
+</div>
+
+<div about="#Definite_sl" property="rdfs:subClassOf" resource="#feat_sl">
+	<a id="al-sl-feat/Definite" class="al-dest" />
+	<h2><code property="rdfs:label" lang="">Definite</code>: <span property="rdfs:label">definiteness or state</span>
+	<code>[</code> 
+	
+	
+		
+		
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#DefiniteInd_sl" property="rdf:type" resource="#Definite_sl">
+						<span property="rdf:type" resource="../../u/feat/all.html#DefiniteInd" />
+						<code property="oliasystem:hasTagContaining" lang="">Definite=Ind</code>
+					</span>
+				
+			
+		
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#DefiniteDef_sl" property="rdf:type" resource="#Definite_sl">
+						<span property="rdf:type" resource="../../u/feat/all.html#DefiniteDef" />
+						<code property="oliasystem:hasTagContaining" lang="">Definite=Def</code>
+					</span>
+				
+			
+		
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+				
+			
+		
+	
+	<code>]</code>
+	</h2>
+	<div about="#Definite_sl" property="rdfs:comment">	
 
 <p>Definiteness in Slovenian is an inflectional feature of masculine word forms in nominative and accusative singular that distinguishes whether we are talking about something known and concrete, or something general or unknown. It is currently marked on some <a href="ADJ">adjectives</a> and some <a href="DET">determiners</a>.</p>
 
@@ -316,10 +663,92 @@
 
 <p>However, note that definiteness has not been sufficiently solved within JOS, as it could also be attributed to other POS categories or category types, such as ordinal written numerals (<em>prvi, drugi, tretji</em>) and pronouns (<em>neki</em>). Consequently, some inconsistencies occur, as different JOS categories are merged into one UD category. For example, JOS-adjective <em>slovenski</em> “Slovenian” has feature <code>Definite=Def</code>, whereas JOS-numeral <em>prvi</em> “the first” does not have any <code>Definite</code> feature, although they are both tagged as UD <code>ADJ</code> and display identical grammatical characteristics.</p>
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_sl-feat/Definite.md" target="#">edit Definite</a></p>
 
-<p><a id="al-sl-feat/Degree" class="al-dest"></a></p>
-<h2><code>Degree</code>: degree of comparison</h2>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_sl-feat/Definite.md" target="#">edit Definite</a>
+</div>
+
+<div about="#Degree_sl" property="rdfs:subClassOf" resource="#feat_sl">
+	<a id="al-sl-feat/Degree" class="al-dest" />
+	<h2><code property="rdfs:label" lang="">Degree</code>: <span property="rdfs:label">degree of comparison</span>
+	<code>[</code> 
+	
+	
+		
+		
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#DegreePos_sl" property="rdf:type" resource="#Degree_sl">
+						<span property="rdf:type" resource="../../u/feat/all.html#DegreePos" />
+						<code property="oliasystem:hasTagContaining" lang="">Degree=Pos</code>
+					</span>
+				
+			
+		
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#DegreeCmp_sl" property="rdf:type" resource="#Degree_sl">
+						<span property="rdf:type" resource="../../u/feat/all.html#DegreeCmp" />
+						<code property="oliasystem:hasTagContaining" lang="">Degree=Cmp</code>
+					</span>
+				
+			
+		
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#DegreeSup_sl" property="rdf:type" resource="#Degree_sl">
+						<span property="rdf:type" resource="../../u/feat/all.html#DegreeSup" />
+						<code property="oliasystem:hasTagContaining" lang="">Degree=Sup</code>
+					</span>
+				
+			
+		
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+				
+			
+		
+	
+	<code>]</code>
+	</h2>
+	<div about="#Degree_sl" property="rdfs:comment">	
 
 <p>Degree of comparison is an inflectional feature of some <a href="ADJ">adjectives</a> and <a href="ADV">adverbs</a>.</p>
 
@@ -360,10 +789,48 @@
 
 <p>All adjectives and adverbs with feature Degree=positive are converted to <code>Degree=Pos</code>, all adjectives and adverbs with feature Degree=comparative are converted to <code>Degree=Cmp</code>, all adjectives and adverbs with Degree=superlative are converted to <code>Degree=Sup</code>.</p>
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_sl-feat/Degree.md" target="#">edit Degree</a></p>
 
-<p><a id="al-sl-feat/Foreign" class="al-dest"></a></p>
-<h2><code>Foreign</code>: This is this a foreign word</h2>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_sl-feat/Degree.md" target="#">edit Degree</a>
+</div>
+
+<div about="#Foreign_sl" property="rdfs:subClassOf" resource="#feat_sl">
+	<a id="al-sl-feat/Foreign" class="al-dest" />
+	<h2><code property="rdfs:label" lang="">Foreign</code>: <span property="rdfs:label">This is this a foreign word</span>
+	<code>[</code> 
+	
+	
+		
+		
+			
+				
+			
+		
+			
+		
+	
+		
+		
+			
+		
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+				
+			
+		
+	
+	<code>]</code>
+	</h2>
+	<div about="#Foreign_sl" property="rdfs:comment">	
 
 <p><code>Foreign</code> is a lexical feature of some words belonging to class <a href="X">X: other</a>. It is assigned to intervening foreign words that have not been analyzed grammatically. These can appear as a string or in combination with other Slovenian words. If a word is commonly used in Slovenian and displays Slovenian grammatical behavior, such as inflection, it is considered to be a Slovenian (loan) word, not a foreign word.</p>
 
@@ -381,10 +848,92 @@
 
 <p>All tokens with tag Residual and Type=foreign are converted to <code>X</code> and Foreign=Yes.</p>
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_sl-feat/Foreign.md" target="#">edit Foreign</a></p>
 
-<p><a id="al-sl-feat/Gender" class="al-dest"></a></p>
-<h2><code>Gender</code>: gender</h2>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_sl-feat/Foreign.md" target="#">edit Foreign</a>
+</div>
+
+<div about="#Gender_sl" property="rdfs:subClassOf" resource="#feat_sl">
+	<a id="al-sl-feat/Gender" class="al-dest" />
+	<h2><code property="rdfs:label" lang="">Gender</code>: <span property="rdfs:label">gender</span>
+	<code>[</code> 
+	
+	
+		
+		
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#GenderMasc_sl" property="rdf:type" resource="#Gender_sl">
+						<span property="rdf:type" resource="../../u/feat/all.html#GenderMasc" />
+						<code property="oliasystem:hasTagContaining" lang="">Gender=Masc</code>
+					</span>
+				
+			
+		
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#GenderFem_sl" property="rdf:type" resource="#Gender_sl">
+						<span property="rdf:type" resource="../../u/feat/all.html#GenderFem" />
+						<code property="oliasystem:hasTagContaining" lang="">Gender=Fem</code>
+					</span>
+				
+			
+		
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#GenderNeut_sl" property="rdf:type" resource="#Gender_sl">
+						<span property="rdf:type" resource="../../u/feat/all.html#GenderNeut" />
+						<code property="oliasystem:hasTagContaining" lang="">Gender=Neut</code>
+					</span>
+				
+			
+		
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+				
+			
+		
+	
+	<code>]</code>
+	</h2>
+	<div about="#Gender_sl" property="rdfs:comment">	
 
 <p>Gender is a lexical feature of <a href="NOUN">nouns</a> and <a href="PROPN">proper nouns</a>, and an inflectional feature of other parts of speech (<a href="ADJ">adjectives</a>, <a href="VERB">verbs</a>, <a href="AUX">auxiliary</a>, <a href="PRON">pronouns</a>, <a href="DET">determiners</a> and <a href="NUM">numerals</a>) that mark agreement with nouns.</p>
 
@@ -425,10 +974,102 @@
 
 <p>All tokens with feature Gender=masculine are converted to <code>Gender=Masc</code>, all tokens with feature Gender=feminine are converted to <code>Gender=Fem</code> and all tokens with feature Gender=neuter are converted to <code>Gender=Neut</code>.</p>
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_sl-feat/Gender.md" target="#">edit Gender</a></p>
 
-<p><a id="al-sl-feat/Gender[psor]" class="al-dest"></a></p>
-<h2><code>Gender[psor]</code>: possessor’s gender</h2>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_sl-feat/Gender.md" target="#">edit Gender</a>
+</div>
+
+<div about="#Gender%5Bpsor%5D_sl" property="rdfs:subClassOf" resource="#feat_sl">
+	<a id="al-sl-feat/Gender[psor]" class="al-dest" />
+	<h2><code property="rdfs:label" lang="">Gender[psor]</code>: <span property="rdfs:label">possessor’s gender</span>
+	<code>[</code> 
+	
+	
+		
+		
+			
+		
+			
+				
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#Gender%5Bpsor%5DMasc_sl" property="rdf:type" resource="#Gender%5Bpsor%5D_sl">
+						<span property="rdf:type" resource="../../u/feat/all.html#Gender[psor]Masc" />
+						<code property="oliasystem:hasTagContaining" lang="">Gender[psor]=Masc</code>
+					</span>
+				
+			
+		
+			
+		
+	
+		
+		
+			
+				
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#Gender%5Bpsor%5DFem_sl" property="rdf:type" resource="#Gender%5Bpsor%5D_sl">
+						<span property="rdf:type" resource="../../u/feat/all.html#Gender[psor]Fem" />
+						<code property="oliasystem:hasTagContaining" lang="">Gender[psor]=Fem</code>
+					</span>
+				
+			
+		
+			
+		
+	
+		
+		
+			
+				
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#Gender%5Bpsor%5DNeut_sl" property="rdf:type" resource="#Gender%5Bpsor%5D_sl">
+						<span property="rdf:type" resource="../../u/feat/all.html#Gender[psor]Neut" />
+						<code property="oliasystem:hasTagContaining" lang="">Gender[psor]=Neut</code>
+					</span>
+				
+			
+		
+			
+		
+	
+		
+		
+			
+				
+			
+		
+	
+		
+		
+			
+				
+			
+		
+	
+	<code>]</code>
+	</h2>
+	<div about="#Gender%5Bpsor%5D_sl" property="rdfs:comment">	
 
 <p>Possessive <a href="PRON">pronouns</a> and <a href="DET">determiners</a> may have two different genders: that of the possessed object (in agreement with the modifying noun, inflectional feature) and that of the possessor (inherent, lexical feature). The <code>Gender[psor]</code> feature denotes the possessor’s gender.</p>
 
@@ -465,10 +1106,95 @@
 
 <p>Note that JOS annotation scheme does not assign possessor’s gender to possessive adjectives. For example, the possessive adjectival word form <em>sinova</em> (son’s) in <em>sinova mama</em> “son’s mother” is currently annotated with <code>Gender=Fem</code>, whereas it should be annotated with <code>Gender[psor]=Masc|Gender=Fem</code> in the future.</p>
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_sl-feat/Gender-psor.md" target="#">edit Gender[psor]</a></p>
 
-<p><a id="al-sl-feat/Mood" class="al-dest"></a></p>
-<h2><code>Mood</code>: mood</h2>
+
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_sl-feat/Gender-psor.md" target="#">edit Gender[psor]</a>
+</div>
+
+<div about="#Mood_sl" property="rdfs:subClassOf" resource="#feat_sl">
+	<a id="al-sl-feat/Mood" class="al-dest" />
+	<h2><code property="rdfs:label" lang="">Mood</code>: <span property="rdfs:label">mood</span>
+	<code>[</code> 
+	
+	
+		
+		
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#MoodInd_sl" property="rdf:type" resource="#Mood_sl">
+						<span property="rdf:type" resource="../../u/feat/all.html#MoodInd" />
+						<code property="oliasystem:hasTagContaining" lang="">Mood=Ind</code>
+					</span>
+				
+			
+		
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#MoodImp_sl" property="rdf:type" resource="#Mood_sl">
+						<span property="rdf:type" resource="../../u/feat/all.html#MoodImp" />
+						<code property="oliasystem:hasTagContaining" lang="">Mood=Imp</code>
+					</span>
+				
+			
+		
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#MoodCnd_sl" property="rdf:type" resource="#Mood_sl">
+						<span property="rdf:type" resource="../../u/feat/all.html#MoodCnd" />
+						<code property="oliasystem:hasTagContaining" lang="">Mood=Cnd</code>
+					</span>
+				
+			
+		
+			
+				
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+				
+			
+		
+	
+	<code>]</code>
+	</h2>
+	<div about="#Mood_sl" property="rdfs:comment">	
 
 <p>Mood is a feature that expresses modality and subclassifies finite verb forms. It is an inflectional feature of <a href="AUX">auxiliaries</a> and <a href="VERB">verbs</a>.</p>
 
@@ -512,10 +1238,78 @@
 
 <p>All verbs with VForm=present and VForm=future are converted to <code>Mood=Ind</code>, all verbs with VForm=imperative are converted to <code>Mood=Imp</code> and all verbs with VForm=conditional are converted to <code>Mood=Cnd</code>. The non-finite verb forms (participle, infinitive, supine) do not have any <code>Mood</code>.</p>
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_sl-feat/Mood.md" target="#">edit Mood</a></p>
 
-<p><a id="al-sl-feat/Negative" class="al-dest"></a></p>
-<h2><code>Negative</code>: whether the word can be or is negated</h2>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_sl-feat/Mood.md" target="#">edit Mood</a>
+</div>
+
+<div about="#Negative_sl" property="rdfs:subClassOf" resource="#feat_sl">
+	<a id="al-sl-feat/Negative" class="al-dest" />
+	<h2><code property="rdfs:label" lang="">Negative</code>: <span property="rdfs:label">whether the word can be or is negated</span>
+	<code>[</code> 
+	
+	
+		
+		
+			
+		
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#NegativeNeg_sl" property="rdf:type" resource="#Negative_sl">
+						<span property="rdf:type" resource="../../u/feat/all.html#NegativeNeg" />
+						<code property="oliasystem:hasTagContaining" lang="">Negative=Neg</code>
+					</span>
+				
+			
+		
+			
+				
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#NegativePos_sl" property="rdf:type" resource="#Negative_sl">
+						<span property="rdf:type" resource="../../u/feat/all.html#NegativePos" />
+						<code property="oliasystem:hasTagContaining" lang="">Negative=Pos</code>
+					</span>
+				
+			
+		
+			
+				
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+				
+			
+		
+	
+	<code>]</code>
+	</h2>
+	<div about="#Negative_sl" property="rdfs:comment">	
 
 <p>In Slovenian, negation can be expressed in different ways. Syntactically, it can be marked by using negation particle <em>ne</em> “not”, as in <em>Tega <b>ne</b> vem</em> “I do not know that.” or <em>Šli smo na <b>ne</b> najbolj zanimivo predavanje.</em> “We attended a not too interesting lecture.”, or by using special negated verb form, as in <em>To <b>ni</b> ona.</em> “This is not her.” Morhplogically, negation is marked by prefix <em>ne-</em>, as in <em><b>ne</b>pravičen</em> “unfair”, <em><b>ne</b>želen</em> “unwanted” etc.</p>
 
@@ -549,10 +1343,70 @@
 
 <p>All verbs with feature Negative=no are converted to <code>Negative=Pos</code> and all verbs with feature Negative=yes are converted to <code>Negative=Neg</code>.</p>
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_sl-feat/Negative.md" target="#">edit Negative</a></p>
 
-<p><a id="al-sl-feat/NumForm" class="al-dest"></a></p>
-<h2><code>NumForm</code>: numeral form</h2>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_sl-feat/Negative.md" target="#">edit Negative</a>
+</div>
+
+<div about="#NumForm_sl" property="rdfs:subClassOf" resource="#feat_sl">
+	<a id="al-sl-feat/NumForm" class="al-dest" />
+	<h2><code property="rdfs:label" lang="">NumForm</code>: <span property="rdfs:label">numeral form</span>
+	<code>[</code> 
+	
+	
+		
+		
+			
+				
+			
+		
+	
+		
+		
+			
+		
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+		
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+		
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+				
+			
+		
+	
+	<code>]</code>
+	</h2>
+	<div about="#NumForm_sl" property="rdfs:comment">	
 
 <p><code>NumForm</code> is a lexical feature of <a href="NUM">numerals</a> that marks whether the number is expressed by digits or letters.</p>
 
@@ -587,10 +1441,114 @@
 
 <p><code>NumForm</code> is assigned to all numerals that are converted to UD <code>NUM</code>. Numerals with Form=digit are converted to <code>NumForm=Digit</code>, numerals with Form=roman are converted to <code>NumForm=Roman</code> and numerals with Form=letter are converted to <code>NumForm=Word</code>. Note, however, that (word) numerals that are converted to UD <code>ADJ</code>, do not have any <code>NumForm</code>.</p>
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_sl-feat/NumForm.md" target="#">edit NumForm</a></p>
 
-<p><a id="al-sl-feat/NumType" class="al-dest"></a></p>
-<h2><code>NumType</code>: numeral type</h2>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_sl-feat/NumForm.md" target="#">edit NumForm</a>
+</div>
+
+<div about="#NumType_sl" property="rdfs:subClassOf" resource="#feat_sl">
+	<a id="al-sl-feat/NumType" class="al-dest" />
+	<h2><code property="rdfs:label" lang="">NumType</code>: <span property="rdfs:label">numeral type</span>
+	<code>[</code> 
+	
+	
+		
+		
+			
+				
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#NumTypeCard_sl" property="rdf:type" resource="#NumType_sl">
+						<span property="rdf:type" resource="../../u/feat/all.html#NumTypeCard" />
+						<code property="oliasystem:hasTagContaining" lang="">NumType=Card</code>
+					</span>
+				
+			
+		
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#NumTypeOrd_sl" property="rdf:type" resource="#NumType_sl">
+						<span property="rdf:type" resource="../../u/feat/all.html#NumTypeOrd" />
+						<code property="oliasystem:hasTagContaining" lang="">NumType=Ord</code>
+					</span>
+				
+			
+		
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#NumTypeSets_sl" property="rdf:type" resource="#NumType_sl">
+						<span property="rdf:type" resource="../../u/feat/all.html#NumTypeSets" />
+						<code property="oliasystem:hasTagContaining" lang="">NumType=Sets</code>
+					</span>
+				
+			
+		
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#NumTypeGen_sl" property="rdf:type" resource="#NumType_sl">
+						<span property="rdf:type" resource="../../u/feat/all.html#NumTypeGen" />
+						<code property="oliasystem:hasTagContaining" lang="">NumType=Gen</code>
+					</span>
+				
+			
+		
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+				
+			
+		
+	
+	<code>]</code>
+	</h2>
+	<div about="#NumType_sl" property="rdfs:comment">	
 
 <p>In Slovenian UD Treebank, <code>NumType</code> is a lexical feature of <a href="NUM">numerals</a> and some <a href="ADJ">adjectives</a> that denote counting by numbers.</p>
 
@@ -638,10 +1596,98 @@
 
 <p>Note that other types of quantifying words have not been explicitly marked in JOS, so assigning these and other <code>NumType</code> values to other words or part-of-speech categories, such as adjectives (<em>enkraten, dvakraten, trikraten</em>), adverbs (<em>enkrat, dvakrat, trikrat</em>; <em>prvič, drugič, tretjič</em>), determiners (<em>veliko, malo, nekaj, koliko</em>) and nouns (<em>tretjina, polovica, četrtina</em>), remains for future work.</p>
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_sl-feat/NumType.md" target="#">edit NumType</a></p>
 
-<p><a id="al-sl-feat/Number" class="al-dest"></a></p>
-<h2><code>Number</code>: number</h2>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_sl-feat/NumType.md" target="#">edit NumType</a>
+</div>
+
+<div about="#Number_sl" property="rdfs:subClassOf" resource="#feat_sl">
+	<a id="al-sl-feat/Number" class="al-dest" />
+	<h2><code property="rdfs:label" lang="">Number</code>: <span property="rdfs:label">number</span>
+	<code>[</code> 
+	
+	
+		
+		
+			
+				
+			
+		
+			
+				
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#NumberSing_sl" property="rdf:type" resource="#Number_sl">
+						<span property="rdf:type" resource="../../u/feat/all.html#NumberSing" />
+						<code property="oliasystem:hasTagContaining" lang="">Number=Sing</code>
+					</span>
+				
+			
+		
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#NumberDual_sl" property="rdf:type" resource="#Number_sl">
+						<span property="rdf:type" resource="../../u/feat/all.html#NumberDual" />
+						<code property="oliasystem:hasTagContaining" lang="">Number=Dual</code>
+					</span>
+				
+			
+		
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#NumberPlur_sl" property="rdf:type" resource="#Number_sl">
+						<span property="rdf:type" resource="../../u/feat/all.html#NumberPlur" />
+						<code property="oliasystem:hasTagContaining" lang="">Number=Plur</code>
+					</span>
+				
+			
+		
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+				
+			
+		
+	
+	<code>]</code>
+	</h2>
+	<div about="#Number_sl" property="rdfs:comment">	
 
 <p>In Slovenian, <code>Number</code> is an inflectional feature of <a href="NOUN">nouns</a> and <a href="PROPN">proper nouns</a>, and other parts of speech (<a href="ADJ">adjectives</a>, <a href="AUX">auxiliaries</a>, <a href="DET">determiners</a>, <a href="NUM">numerals</a>, <a href="PRON">pronouns</a>, <a href="VERB">verbs</a>) that mark agreement with nouns.</p>
 
@@ -684,10 +1730,102 @@
 
 <p>All tokens with feature Number=singular are converted to <code>Number=Sing</code>, all tokens with Number=dual are converted to <code>Number=Dual</code> and all tokens with Number=plural are converted to <code>Number=Plur</code>.</p>
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_sl-feat/Number.md" target="#">edit Number</a></p>
 
-<p><a id="al-sl-feat/Number[psor]" class="al-dest"></a></p>
-<h2><code>Number[psor]</code>: possessor’s number</h2>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_sl-feat/Number.md" target="#">edit Number</a>
+</div>
+
+<div about="#Number%5Bpsor%5D_sl" property="rdfs:subClassOf" resource="#feat_sl">
+	<a id="al-sl-feat/Number[psor]" class="al-dest" />
+	<h2><code property="rdfs:label" lang="">Number[psor]</code>: <span property="rdfs:label">possessor’s number</span>
+	<code>[</code> 
+	
+	
+		
+		
+			
+		
+			
+				
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#Number%5Bpsor%5DSing_sl" property="rdf:type" resource="#Number%5Bpsor%5D_sl">
+						<span property="rdf:type" resource="../../u/feat/all.html#Number[psor]Sing" />
+						<code property="oliasystem:hasTagContaining" lang="">Number[psor]=Sing</code>
+					</span>
+				
+			
+		
+			
+		
+	
+		
+		
+			
+				
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#Number%5Bpsor%5DDual_sl" property="rdf:type" resource="#Number%5Bpsor%5D_sl">
+						<span property="rdf:type" resource="../../u/feat/all.html#Number[psor]Dual" />
+						<code property="oliasystem:hasTagContaining" lang="">Number[psor]=Dual</code>
+					</span>
+				
+			
+		
+			
+		
+	
+		
+		
+			
+				
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#Number%5Bpsor%5DPlur_sl" property="rdf:type" resource="#Number%5Bpsor%5D_sl">
+						<span property="rdf:type" resource="../../u/feat/all.html#Number[psor]Plur" />
+						<code property="oliasystem:hasTagContaining" lang="">Number[psor]=Plur</code>
+					</span>
+				
+			
+		
+			
+		
+	
+		
+		
+			
+				
+			
+		
+	
+		
+		
+			
+				
+			
+		
+	
+	<code>]</code>
+	</h2>
+	<div about="#Number%5Bpsor%5D_sl" property="rdfs:comment">	
 
 <p>Possessive <a href="PRON">pronouns</a> and <a href="DET">determiners</a> may have two different numbers: that of the possessed object (in agreement with the modifying noun, inflectional feature) and that of the possessor (inherent, lexical feature). The <code>Number[psor]</code> feature denotes the possessor’s number.</p>
 
@@ -725,10 +1863,93 @@
 
 <p>All pronouns with feature Owner_number=singular are converted to <code>Number[psor]=Sing</code>, all pronouns with Owner_number=dual are converted to <code>Number[psor]=Dual</code> and all pronouns with Owner_number=plural are converted to <code>Number[psor]=Plur</code>.</p>
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_sl-feat/Number-psor.md" target="#">edit Number[psor]</a></p>
 
-<p><a id="al-sl-feat/Person" class="al-dest"></a></p>
-<h2><code>Person</code>: person</h2>
+
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_sl-feat/Number-psor.md" target="#">edit Number[psor]</a>
+</div>
+
+<div about="#Person_sl" property="rdfs:subClassOf" resource="#feat_sl">
+	<a id="al-sl-feat/Person" class="al-dest" />
+	<h2><code property="rdfs:label" lang="">Person</code>: <span property="rdfs:label">person</span>
+	<code>[</code> 
+	
+	
+		
+		
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#Person1_sl" property="rdf:type" resource="#Person_sl">
+						<span property="rdf:type" resource="../../u/feat/all.html#Person1" />
+						<code property="oliasystem:hasTagContaining" lang="">Person=1</code>
+					</span>
+				
+			
+		
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#Person2_sl" property="rdf:type" resource="#Person_sl">
+						<span property="rdf:type" resource="../../u/feat/all.html#Person2" />
+						<code property="oliasystem:hasTagContaining" lang="">Person=2</code>
+					</span>
+				
+			
+		
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#Person3_sl" property="rdf:type" resource="#Person_sl">
+						<span property="rdf:type" resource="../../u/feat/all.html#Person3" />
+						<code property="oliasystem:hasTagContaining" lang="">Person=3</code>
+					</span>
+				
+			
+		
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+				
+			
+		
+	
+	<code>]</code>
+	</h2>
+	<div about="#Person_sl" property="rdfs:comment">	
 
 <p>Person is a lexical feature of personal and possessive <a href="PRON">pronouns</a> and <a href="DET">determiners</a>, and an inflectional feature of <a href="AUX">auxiliaries</a> and <a href="VERB">verbs</a>.</p>
 
@@ -769,10 +1990,54 @@
 
 <p>All tokens with feature Person=first are converted to <code>Person=1</code>, all tokens with feature Person=second are converted to <code>Person=2</code> and all tokens with feature Person=third are converted to <code>Person=3</code>.</p>
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_sl-feat/Person.md" target="#">edit Person</a></p>
 
-<p><a id="al-sl-feat/Poss" class="al-dest"></a></p>
-<h2><code>Poss</code>: possessive</h2>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_sl-feat/Person.md" target="#">edit Person</a>
+</div>
+
+<div about="#Poss_sl" property="rdfs:subClassOf" resource="#feat_sl">
+	<a id="al-sl-feat/Poss" class="al-dest" />
+	<h2><code property="rdfs:label" lang="">Poss</code>: <span property="rdfs:label">possessive</span>
+	<code>[</code> 
+	
+	
+		
+		
+			
+				
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#PossYes_sl" property="rdf:type" resource="#Poss_sl">
+						<span property="rdf:type" resource="../../u/feat/all.html#PossYes" />
+						<code property="oliasystem:hasTagContaining" lang="">Poss=Yes</code>
+					</span>
+				
+			
+		
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+				
+			
+		
+	
+	<code>]</code>
+	</h2>
+	<div about="#Poss_sl" property="rdfs:comment">	
 
 <p><code>Possessive</code> is a lexical feature of <a href="ADJ">adjectives</a>, <a href="DET">determiners</a> and <a href="PRON">pronouns</a>.  It tells whether the word is possessive. Words without the <code>Poss</code> feature are not possessive.</p>
 
@@ -790,10 +2055,176 @@
 
 <p>All adjectives and pronouns with Type=possessive are converted to <code>Poss=Yes</code>. Additionally, the reflexive pronoun <em>svoj</em> is also converted to <code>Poss=Yes</code>. Note that within JOS annotation scheme, possessiveness is not explicitly marked with other types of pronouns that denote possession, such as <em>ćigav, čigaver, nikogaršnji</em> etc.</p>
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_sl-feat/Poss.md" target="#">edit Poss</a></p>
 
-<p><a id="al-sl-feat/PronType" class="al-dest"></a></p>
-<h2><code>PronType</code>: pronominal type</h2>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_sl-feat/Poss.md" target="#">edit Poss</a>
+</div>
+
+<div about="#PronType_sl" property="rdfs:subClassOf" resource="#feat_sl">
+	<a id="al-sl-feat/PronType" class="al-dest" />
+	<h2><code property="rdfs:label" lang="">PronType</code>: <span property="rdfs:label">pronominal type</span>
+	<code>[</code> 
+	
+	
+		
+		
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#PronTypePrs_sl" property="rdf:type" resource="#PronType_sl">
+						<span property="rdf:type" resource="../../u/feat/all.html#PronTypePrs" />
+						<code property="oliasystem:hasTagContaining" lang="">PronType=Prs</code>
+					</span>
+				
+			
+		
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#PronTypeInt_sl" property="rdf:type" resource="#PronType_sl">
+						<span property="rdf:type" resource="../../u/feat/all.html#PronTypeInt" />
+						<code property="oliasystem:hasTagContaining" lang="">PronType=Int</code>
+					</span>
+				
+			
+		
+			
+		
+	
+		
+		
+			
+		
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#PronTypeRel_sl" property="rdf:type" resource="#PronType_sl">
+						<span property="rdf:type" resource="../../u/feat/all.html#PronTypeRel" />
+						<code property="oliasystem:hasTagContaining" lang="">PronType=Rel</code>
+					</span>
+				
+			
+		
+			
+		
+	
+		
+		
+			
+		
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#PronTypeDem_sl" property="rdf:type" resource="#PronType_sl">
+						<span property="rdf:type" resource="../../u/feat/all.html#PronTypeDem" />
+						<code property="oliasystem:hasTagContaining" lang="">PronType=Dem</code>
+					</span>
+				
+			
+		
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#PronTypeTot_sl" property="rdf:type" resource="#PronType_sl">
+						<span property="rdf:type" resource="../../u/feat/all.html#PronTypeTot" />
+						<code property="oliasystem:hasTagContaining" lang="">PronType=Tot</code>
+					</span>
+				
+			
+		
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#PronTypeNeg_sl" property="rdf:type" resource="#PronType_sl">
+						<span property="rdf:type" resource="../../u/feat/all.html#PronTypeNeg" />
+						<code property="oliasystem:hasTagContaining" lang="">PronType=Neg</code>
+					</span>
+				
+			
+		
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#PronTypeInd_sl" property="rdf:type" resource="#PronType_sl">
+						<span property="rdf:type" resource="../../u/feat/all.html#PronTypeInd" />
+						<code property="oliasystem:hasTagContaining" lang="">PronType=Ind</code>
+					</span>
+				
+			
+		
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+				
+			
+		
+	
+	<code>]</code>
+	</h2>
+	<div about="#PronType_sl" property="rdfs:comment">	
 
 <p>This is a lexical feature of <a href="PRON">pronouns</a> and some <a href="DET">determiners</a>.</p>
 
@@ -891,10 +2322,54 @@
 
 <p>Not that currently <code>PronType</code> is only assigned to pronouns and determiners, but not to other POS categories, such as adverbs (<em>zakaj</em> “why”, <em>čemu</em> “what for”, <em>kako</em> “how”, <em>tukaj</em> “here”, <em>tam</em> “there”, <em>tolikokrat</em> “this many times” etc.)</p>
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_sl-feat/PronType.md" target="#">edit PronType</a></p>
 
-<p><a id="al-sl-feat/Reflex" class="al-dest"></a></p>
-<h2><code>Reflex</code>: reflexive</h2>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_sl-feat/PronType.md" target="#">edit PronType</a>
+</div>
+
+<div about="#Reflex_sl" property="rdfs:subClassOf" resource="#feat_sl">
+	<a id="al-sl-feat/Reflex" class="al-dest" />
+	<h2><code property="rdfs:label" lang="">Reflex</code>: <span property="rdfs:label">reflexive</span>
+	<code>[</code> 
+	
+	
+		
+		
+			
+		
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#ReflexYes_sl" property="rdf:type" resource="#Reflex_sl">
+						<span property="rdf:type" resource="../../u/feat/all.html#ReflexYes" />
+						<code property="oliasystem:hasTagContaining" lang="">Reflex=Yes</code>
+					</span>
+				
+			
+		
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+				
+			
+		
+	
+	<code>]</code>
+	</h2>
+	<div about="#Reflex_sl" property="rdfs:comment">	
 
 <p>Reflexiveness is a lexical feature of some <a href="PRON">pronouns</a> and <a href="DET">determiners</a>. It tells whether the word is reflexive,
 i.e. refers to the subject of its clause.</p>
@@ -925,10 +2400,73 @@ i.e. refers to the subject of its clause.</p>
 <h3 id="conversion-to-jos">Conversion to JOS</h3>
 <p>All pronouns with feature Type=reflexive are converted to UD <code>Reflexice=Yes</code>.</p>
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_sl-feat/Reflex.md" target="#">edit Reflex</a></p>
 
-<p><a id="al-sl-feat/Tense" class="al-dest"></a></p>
-<h2><code>Tense</code>: tense</h2>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_sl-feat/Reflex.md" target="#">edit Reflex</a>
+</div>
+
+<div about="#Tense_sl" property="rdfs:subClassOf" resource="#feat_sl">
+	<a id="al-sl-feat/Tense" class="al-dest" />
+	<h2><code property="rdfs:label" lang="">Tense</code>: <span property="rdfs:label">tense</span>
+	<code>[</code> 
+	
+	
+		
+		
+			
+				
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#TensePres_sl" property="rdf:type" resource="#Tense_sl">
+						<span property="rdf:type" resource="../../u/feat/all.html#TensePres" />
+						<code property="oliasystem:hasTagContaining" lang="">Tense=Pres</code>
+					</span>
+				
+			
+		
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#TenseFut_sl" property="rdf:type" resource="#Tense_sl">
+						<span property="rdf:type" resource="../../u/feat/all.html#TenseFut" />
+						<code property="oliasystem:hasTagContaining" lang="">Tense=Fut</code>
+					</span>
+				
+			
+		
+			
+				
+			
+		
+			
+		
+	
+		
+		
+			
+				
+			
+		
+	
+	<code>]</code>
+	</h2>
+	<div about="#Tense_sl" property="rdfs:comment">	
 
 <p>Tense is an inflectional feature of <a href="NOUN">nouns</a> and <a href="AUX">auxiliaries</a> that specifies the time when the action took / takes / will take place, in relation to the current moment or to another action in the utterance. In Slovenian, only <code>Present</code> tense and <code>Future</code> tense can be expressed morphologically, while past tense is formed syntactically, by a combination of a present auxiliary verb <em>biti</em> “to be” and past participle (l-participle), e.g. <em>sem šel</em> “I went”.</p>
 
@@ -959,10 +2497,68 @@ i.e. refers to the subject of its clause.</p>
 
 <p>All verbs with VForm=present are converted to UD <code>Tense=Pres</code> and all verbs with VForm=future are converted to UD <code>Ťense=Fut</code>. We do not assign tense to other verb forms, such as participle, infinitive, supine, conditional and imperative.</p>
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_sl-feat/Tense.md" target="#">edit Tense</a></p>
 
-<p><a id="al-sl-feat/Variant" class="al-dest"></a></p>
-<h2><code>Variant</code>: alternative form of word</h2>
+
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_sl-feat/Tense.md" target="#">edit Tense</a>
+</div>
+
+<div about="#Variant_sl" property="rdfs:subClassOf" resource="#feat_sl">
+	<a id="al-sl-feat/Variant" class="al-dest" />
+	<h2><code property="rdfs:label" lang="">Variant</code>: <span property="rdfs:label">alternative form of word</span>
+	<code>[</code> 
+	
+	
+		
+		
+			
+				
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#VariantBound_sl" property="rdf:type" resource="#Variant_sl">
+						<span property="rdf:type" resource="../../u/feat/all.html#VariantBound" />
+						<code property="oliasystem:hasTagContaining" lang="">Variant=Bound</code>
+					</span>
+				
+			
+		
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#VariantShort_sl" property="rdf:type" resource="#Variant_sl">
+						<span property="rdf:type" resource="../../u/feat/all.html#VariantShort" />
+						<code property="oliasystem:hasTagContaining" lang="">Variant=Short</code>
+					</span>
+				
+			
+		
+			
+		
+	
+		
+		
+			
+		
+	
+	<code>]</code>
+	</h2>
+	<div about="#Variant_sl" property="rdfs:comment">	
 
 <p>In Slovenian, the <code>Variant</code> feature is either a lexical or inflectional features of some <a href="PRON">pronouns</a>.</p>
 
@@ -991,10 +2587,118 @@ i.e. refers to the subject of its clause.</p>
 *<em>se</em> (“oneself”, used either as a variant of reflexive pronoun <em>sebi</em> or as an obligatory free morpheme with pseudo-reflexive verbs, such as <em>smejati se</em> “to laugh”)</li>
 </ul>
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_sl-feat/Variant.md" target="#">edit Variant</a></p>
 
-<p><a id="al-sl-feat/VerbForm" class="al-dest"></a></p>
-<h2><code>VerbForm</code>: form of verb or deverbative</h2>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_sl-feat/Variant.md" target="#">edit Variant</a>
+</div>
+
+<div about="#VerbForm_sl" property="rdfs:subClassOf" resource="#feat_sl">
+	<a id="al-sl-feat/VerbForm" class="al-dest" />
+	<h2><code property="rdfs:label" lang="">VerbForm</code>: <span property="rdfs:label">form of verb or deverbative</span>
+	<code>[</code> 
+	
+	
+		
+		
+			
+				
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#VerbFormFin_sl" property="rdf:type" resource="#VerbForm_sl">
+						<span property="rdf:type" resource="../../u/feat/all.html#VerbFormFin" />
+						<code property="oliasystem:hasTagContaining" lang="">VerbForm=Fin</code>
+					</span>
+				
+			
+		
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#VerbFormInf_sl" property="rdf:type" resource="#VerbForm_sl">
+						<span property="rdf:type" resource="../../u/feat/all.html#VerbFormInf" />
+						<code property="oliasystem:hasTagContaining" lang="">VerbForm=Inf</code>
+					</span>
+				
+			
+		
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#VerbFormPart_sl" property="rdf:type" resource="#VerbForm_sl">
+						<span property="rdf:type" resource="../../u/feat/all.html#VerbFormPart" />
+						<code property="oliasystem:hasTagContaining" lang="">VerbForm=Part</code>
+					</span>
+				
+			
+		
+			
+		
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#VerbFormTrans_sl" property="rdf:type" resource="#VerbForm_sl">
+						<span property="rdf:type" resource="../../u/feat/all.html#VerbFormTrans" />
+						<code property="oliasystem:hasTagContaining" lang="">VerbForm=Trans</code>
+					</span>
+				
+			
+		
+			
+				
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+				
+			
+		
+	
+	<code>]</code>
+	</h2>
+	<div about="#VerbForm_sl" property="rdfs:comment">	
 
 <p>Principally, <code>VerbForm</code> is an inflectional feature of <a href="VERB">verbs</a> and <a href="AUX">auxiliaries</a>, however, it is also used as a lexical feature of some <a href="ADJ">adjectives</a> and <a href="ADV">adverbs</a>.</p>
 
@@ -1054,7 +2758,10 @@ i.e. refers to the subject of its clause.</p>
 
 <p>Note that <code>gerunds</code> are currently marked as <a href="NOUN">nouns</a> and do not have a special <code>VerbForm</code> feature to distinguish them from other common nouns.</p>
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_sl-feat/VerbForm.md" target="#">edit VerbForm</a></p>
+
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_sl-feat/VerbForm.md" target="#">edit VerbForm</a>
+</div>
 
 
 

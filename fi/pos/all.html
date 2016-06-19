@@ -43,7 +43,19 @@
 	  </div>
 	</noscript>
 
-          <h1 id="pos-tags">POS tags</h1>
+          
+<h1 id="pos-tags">POS tags</h1>
+
+<p><span about="." property="rdf:type" resource="owl:Ontology">
+	<span property="owl:imports" resource=" https://www.w3.org/2012/pyRdfa/extract?uri=http://universaldependencies.org/docs/u/pos/all.html&amp;format=xml&amp;rdfagraph=output&amp;vocab_expansion=false&amp;rdfa_lite=false&amp;embedded_rdf=true&amp;space_preserve=false&amp;vocab_cache=true&amp;vocab_cache_report=false&amp;vocab_cache_refresh=false"></span>
+	</span>
+<span about="#pos_fi" property="rdfs:label" style="visibility: hidden">POS tags</span>
+<span about="#pos_fi" property="rdfs:subClassOf" resource="_:fi">
+	<span about="_:fi" property="rdf:type" resource="owl:Restriction">
+		<span property="owl:onProperty" resource="http://purl.org/dc/terms/language"></span>
+		<span property="owl:hasValue" lang="" style="visibility: hidden">fi</span>
+	</span>
+</span></p>
 
 <table class="typeindex">
   <thead>
@@ -99,430 +111,487 @@
 
 <hr />
 
-<p><a id="al-fi-pos/ADJ" class="al-dest"></a></p>
-<h2><code>ADJ</code>: adjective</h2>
+<div about="#ADJ_fi" property="rdf:type" resource="#pos_fi">
+	<div property="rdf:type" resource="../../u/pos/all.html#ADJ" />
+	<a id="al-fi-pos/ADJ" class="al-dest" />
 
-<p>Adjectives are words that typically modify nouns and specify their
-properties or attributes.</p>
+	<h2><code property="oliasystem:hasTag" lang="">ADJ</code>: <div property="rdfs:label">adjective</div></h2>
+	<div property="rdfs:comment">
 
-<p>UD Finnish annotation follows VISK in assigning pro-adjectives the
-<code>ADJ</code> tag (e.g. <em>tämä/PRON</em> “this” → <em>tällainen/ADJ</em> “like this”; see
-e.g. <a href="http://scripta.kotus.fi/visk/sisallys.php?p=610">VISK § 610</a>; in
-Finnish).</p>
+Adjectives are words that typically modify nouns and specify their
+properties or attributes.
 
-<h4 id="examples">Examples</h4>
+UD Finnish annotation follows VISK in assigning pro-adjectives the
+`ADJ` tag (e.g. *tämä/PRON* "this" → *tällainen/ADJ* "like this"; see
+e.g. [VISK § 610](http://scripta.kotus.fi/visk/sisallys.php?p=610); in
+Finnish).
 
-<ul>
-  <li>[fi] <em>suuri</em> “big”, <em>vanha</em> “old”, <em>vihreä</em> “green”</li>
-  <li>[fi] <em>tällainen</em> “like this”, <em>tuollainen</em> “like that”, <em>semmoinen</em> “like it”</li>
-</ul>
+#### Examples
 
-<h4 id="references">References</h4>
+* [fi] _suuri_ "big", _vanha_ "old", _vihreä_ "green"
+* [fi] _tällainen_ "like this", _tuollainen_ "like that", _semmoinen_ "like it"
 
-<ul>
-  <li><a href="http://scripta.kotus.fi/visk/sisallys.php?p=603">http://scripta.kotus.fi/visk/sisallys.php?p=603</a> (in Finnish)</li>
-  <li><a href="http://scripta.kotus.fi/visk/sisallys.php?p=610">http://scripta.kotus.fi/visk/sisallys.php?p=610</a> (in Finnish)</li>
-</ul>
+#### References
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_fi-pos/ADJ.md" target="#">edit ADJ</a></p>
+* &lt;http://scripta.kotus.fi/visk/sisallys.php?p=603&gt; (in Finnish)
+* &lt;http://scripta.kotus.fi/visk/sisallys.php?p=610&gt; (in Finnish)
 
-<p><a id="al-fi-pos/ADP" class="al-dest"></a></p>
-<h2><code>ADP</code>: adposition</h2>
 
-<p>Adposition is a cover term for prepositions and postpositions.</p>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_fi-pos/ADJ.md" target="#">edit ADJ</a>
 
-<h4 id="examples">Examples</h4>
 
-<ul>
-  <li>[fi] <em>alla</em> “under”, <em>päällä</em> “over”</li>
-  <li>[fi] <em>ennen</em> “before”, <em>jälkeen</em> “after”</li>
-  <li>[fi] <em>kanssa</em> “with”, <em>ilman</em> “without”</li>
-</ul>
+<div about="#ADP_fi" property="rdf:type" resource="#pos_fi">
+	<div property="rdf:type" resource="../../u/pos/all.html#ADP" />
+	<a id="al-fi-pos/ADP" class="al-dest" />
 
-<h4 id="references">References</h4>
+	<h2><code property="oliasystem:hasTag" lang="">ADP</code>: <div property="rdfs:label">adposition</div></h2>
+	<div property="rdfs:comment">
 
-<ul>
-  <li><a href="http://scripta.kotus.fi/visk/sisallys.php?p=687">http://scripta.kotus.fi/visk/sisallys.php?p=687</a> (in Finnish)</li>
-</ul>
+Adposition is a cover term for prepositions and postpositions.
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_fi-pos/ADP.md" target="#">edit ADP</a></p>
+#### Examples
 
-<p><a id="al-fi-pos/ADV" class="al-dest"></a></p>
-<h2><code>ADV</code>: adverb</h2>
+* [fi] _alla_ "under", _päällä_ "over"
+* [fi] _ennen_ "before", _jälkeen_ "after"
+* [fi] _kanssa_ "with", _ilman_ "without"
+ 
+#### References
 
-<p>Adverbs are words that typically modify <a href="ADJ">adjectives</a>,
-<a href="VERB">verbs</a> or other adverbs for such categories as time, place,
-direction or manner.</p>
+* &lt;http://scripta.kotus.fi/visk/sisallys.php?p=687&gt; (in Finnish)
 
-<h4 id="examples">Examples</h4>
 
-<ul>
-  <li>[fi] <em><b>hyvin</b> suuri</em> “<b>very</b> large”</li>
-  <li>[fi] <em><b>erittäin</b> vaikea</em> “<b>extremely</b> difficult”</li>
-</ul>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_fi-pos/ADP.md" target="#">edit ADP</a>
 
-<h4 id="references">References</h4>
 
-<ul>
-  <li><a href="http://scripta.kotus.fi/visk/sisallys.php?p=646">http://scripta.kotus.fi/visk/sisallys.php?p=646</a> (in Finnish)</li>
-</ul>
+<div about="#ADV_fi" property="rdf:type" resource="#pos_fi">
+	<div property="rdf:type" resource="../../u/pos/all.html#ADV" />
+	<a id="al-fi-pos/ADV" class="al-dest" />
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_fi-pos/ADV.md" target="#">edit ADV</a></p>
+	<h2><code property="oliasystem:hasTag" lang="">ADV</code>: <div property="rdfs:label">adverb</div></h2>
+	<div property="rdfs:comment">
 
-<p><a id="al-fi-pos/AUX" class="al-dest"></a></p>
-<h2><code>AUX</code>: auxiliary verb</h2>
+Adverbs are words that typically modify [adjectives](ADJ),
+[verbs](VERB) or other adverbs for such categories as time, place,
+direction or manner.
 
-<p>An auxiliary verb is a verb that accompanies the lexical verb of a
+#### Examples
+
+* [fi] _<b>hyvin</b> suuri_ "<b>very</b> large"
+* [fi] _<b>erittäin</b> vaikea_ "<b>extremely</b> difficult"
+
+#### References
+
+* &lt;http://scripta.kotus.fi/visk/sisallys.php?p=646&gt; (in Finnish)
+
+
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_fi-pos/ADV.md" target="#">edit ADV</a>
+
+
+<div about="#AUX_fi" property="rdf:type" resource="#pos_fi">
+	<div property="rdf:type" resource="../../u/pos/all.html#AUX" />
+	<a id="al-fi-pos/AUX" class="al-dest" />
+
+	<h2><code property="oliasystem:hasTag" lang="">AUX</code>: <div property="rdfs:label">auxiliary verb</div></h2>
+	<div property="rdfs:comment">
+
+An auxiliary verb is a verb that accompanies the lexical verb of a
 verb phrase and expresses grammatical distinctions not carried by the
-lexical verb, such as person, number, tense, mood, aspect, and voice.</p>
+lexical verb, such as person, number, tense, mood, aspect, and voice.
 
-<p>Finnish modal verbs are counted as auxiliaries. Finnish auxiliary and
-modal verbs are</p>
+Finnish modal verbs are counted as auxiliaries. Finnish auxiliary and
+modal verbs are
 
-<ul>
-  <li><em>täytyä</em> “must”</li>
-  <li><em>pitää</em> “have to”</li>
-  <li><em>tarvita</em> “need”</li>
-  <li><em>joutua</em> “have to”</li>
-  <li><em>voida</em> “be able to, can”</li>
-  <li><em>saattaa</em> “may”</li>
-  <li><em>taitaa</em> “be+probably, may”</li>
-  <li><em>mahtaa</em> “be+probably, may”</li>
-  <li><em>olla</em> “be”</li>
-  <li><em>aikoa</em> “be going to”</li>
-</ul>
+* _täytyä_ "must"
+* _pitää_ "have to"
+* _tarvita_ "need"
+* _joutua_ "have to"
+* _voida_ "be able to, can"
+* _saattaa_ "may"
+* _taitaa_ "be+probably, may"
+* _mahtaa_ "be+probably, may"
+* _olla_ "be"
+* _aikoa_ "be going to"
 
-<h4 id="examples">Examples</h4>
+#### Examples
 
-<ul>
-  <li>[fi] <em><b>täytyy</b> tehdä</em> “<b>must</b> do”</li>
-  <li>[fi] <em><b>olemme</b> tehneet</em> “we <b>have</b> done”</li>
-  <li>[fi] <em><b>olisi pitänyt</b> tehdä</em> “<b>would have had</b> to do”</li>
-</ul>
+* [fi] _<b>täytyy</b> tehdä_ "<b>must</b> do"
+* [fi] _<b>olemme</b> tehneet_ "we <b>have</b> done"
+* [fi] _<b>olisi pitänyt</b> tehdä_ "<b>would have had</b> to do"
 
-<h4 id="references">References</h4>
+#### References
 
-<ul>
-  <li><a href="http://scripta.kotus.fi/visk/sisallys.php?p=450">http://scripta.kotus.fi/visk/sisallys.php?p=450</a> (in Finnish)</li>
-  <li><a href="http://scripta.kotus.fi/visk/sisallys.php?p=1562">http://scripta.kotus.fi/visk/sisallys.php?p=1562</a> (in Finnish)</li>
-</ul>
+* &lt;http://scripta.kotus.fi/visk/sisallys.php?p=450&gt; (in Finnish)
+* &lt;http://scripta.kotus.fi/visk/sisallys.php?p=1562&gt; (in Finnish)
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_fi-pos/AUX_.md" target="#">edit AUX</a></p>
 
-<p><a id="al-fi-pos/CONJ" class="al-dest"></a></p>
-<h2><code>CONJ</code>: coordinating conjunction</h2>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_fi-pos/AUX_.md" target="#">edit AUX</a>
 
-<p>A coordinating conjunction is a word that links words or larger
+
+<div about="#CONJ_fi" property="rdf:type" resource="#pos_fi">
+	<div property="rdf:type" resource="../../u/pos/all.html#CONJ" />
+	<a id="al-fi-pos/CONJ" class="al-dest" />
+
+	<h2><code property="oliasystem:hasTag" lang="">CONJ</code>: <div property="rdfs:label">coordinating conjunction</div></h2>
+	<div property="rdfs:comment">
+
+A coordinating conjunction is a word that links words or larger
 constituents without syntactically subordinating one to the other and
-expresses a semantic relationship between them.</p>
+expresses a semantic relationship between them.
 
-<p>For <em>subordinating</em> conjunctions, see <a href="">SCONJ</a>.</p>
+For *subordinating* conjunctions, see [SCONJ]().
 
-<p>In correlative (paired) coordinating conjuctions such as <em>sekä - että</em>
-“both - and” and <em>joko - tai</em> “either - or”, both words are annotated
-<code>CONJ</code> (see also <a href="">cc:preconj</a>).</p>
+In correlative (paired) coordinating conjuctions such as _sekä - että_
+"both - and" and _joko - tai_ "either - or", both words are annotated
+`CONJ` (see also [cc:preconj]()).
 
-<h4 id="examples">Examples</h4>
+#### Examples
 
-<ul>
-  <li>[fi] <em>ja</em> “and”, <em>tai</em> “or”, <em>mutta</em> “but”</li>
-  <li>[fi] <em><b>sekä</b> koirat <b>että</b> kissat</em> “<b>both</b> dogs <b>and</b> cats”</li>
-</ul>
+* [fi] _ja_ "and", _tai_ "or", _mutta_ "but"
+* [fi] _<b>sekä</b> koirat <b>että</b> kissat_ "<b>both</b> dogs <b>and</b> cats"
 
-<h4 id="references">References</h4>
+#### References
 
-<ul>
-  <li><a href="http://scripta.kotus.fi/visk/sisallys.php?p=817">http://scripta.kotus.fi/visk/sisallys.php?p=817</a> (in Finnish)</li>
-  <li><a href="http://scripta.kotus.fi/visk/sisallys.php?p=815">http://scripta.kotus.fi/visk/sisallys.php?p=815</a> (in Finnish)</li>
-</ul>
+* &lt;http://scripta.kotus.fi/visk/sisallys.php?p=817&gt; (in Finnish)
+* &lt;http://scripta.kotus.fi/visk/sisallys.php?p=815&gt; (in Finnish)
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_fi-pos/CONJ.md" target="#">edit CONJ</a></p>
 
-<p><a id="al-fi-pos/DET" class="al-dest"></a></p>
-<h2><code>DET</code>: determiner</h2>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_fi-pos/CONJ.md" target="#">edit CONJ</a>
 
-<p>Determiners are words that modify <a href="NOUN">nouns</a> or noun phrases and
-express the reference of the noun phrase in context.</p>
 
-<p>Finnish has no true articles
-(see e.g. <a href="http://wals.info/valuesets/37A-fin">WALS</a>) and many
-formalizations of Finnish morphology don’t involve a determiner (or
-related) tag. However, words such as <em>yksi</em> “one” and <em>se</em> “that”
-are used similarly to articles, especially in spoken language.</p>
+<div about="#DET_fi" property="rdf:type" resource="#pos_fi">
+	<div property="rdf:type" resource="../../u/pos/all.html#DET" />
+	<a id="al-fi-pos/DET" class="al-dest" />
 
-<h4 id="examples">Examples</h4>
+	<h2><code property="oliasystem:hasTag" lang="">DET</code>: <div property="rdfs:label">determiner</div></h2>
+	<div property="rdfs:comment">
 
-<ul>
-  <li>[fi] <em>yksi mies lähti</em> “a/one man left”</li>
-  <li>[fi] <em>se mies lähti</em> “the/that man left”</li>
-</ul>
+Determiners are words that modify [nouns](NOUN) or noun phrases and
+express the reference of the noun phrase in context.
 
-<h4 id="references">References</h4>
+Finnish has no true articles
+(see e.g. [WALS](http://wals.info/valuesets/37A-fin)) and many
+formalizations of Finnish morphology don't involve a determiner (or
+related) tag. However, words such as _yksi_ "one" and _se_ "that"
+are used similarly to articles, especially in spoken language.
 
-<ul>
-  <li><a href="http://scripta.kotus.fi/cgi-bin/visktermit/visktermit.cgi?h_id=aCHEBBEDH">http://scripta.kotus.fi/cgi-bin/visktermit/visktermit.cgi?h_id=aCHEBBEDH</a> (in Finnish)</li>
-</ul>
+#### Examples
 
-<h2 id="diffs">Diffs</h2>
+* [fi] _yksi mies lähti_ "a/one man left"
+* [fi] _se mies lähti_ "the/that man left"
 
-<h3 id="turku-dependency-treebank">Turku Dependency Treebank</h3>
+#### References
 
-<p>No <code>DET</code> tag (or related) is annotated in TDT, and <code>DET</code> is
-not used in the current version of the UD Finnish corpus.</p>
+* &lt;http://scripta.kotus.fi/cgi-bin/visktermit/visktermit.cgi?h_id=aCHEBBEDH&gt; (in Finnish)
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_fi-pos/DET.md" target="#">edit DET</a></p>
+## Diffs
 
-<p><a id="al-fi-pos/INTJ" class="al-dest"></a></p>
-<h2><code>INTJ</code>: interjection</h2>
+### Turku Dependency Treebank
 
-<p>An interjection is a word that is used most often as an exclamation or
-part of an exclamation.</p>
+No `DET` tag (or related) is annotated in TDT, and `DET` is
+not used in the current version of the UD Finnish corpus.
 
-<h4 id="examples">Examples</h4>
 
-<ul>
-  <li>[fi] <em>no</em>, “well”, <em>ai</em> “oh”, <em>hyi</em> “yuck”</li>
-  <li>[fi] <em>psst</em></li>
-</ul>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_fi-pos/DET.md" target="#">edit DET</a>
 
-<h4 id="references">References</h4>
 
-<ul>
-  <li><a href="http://scripta.kotus.fi/visk/sisallys.php?p=856">http://scripta.kotus.fi/visk/sisallys.php?p=856</a> (in Finnish)</li>
-</ul>
+<div about="#INTJ_fi" property="rdf:type" resource="#pos_fi">
+	<div property="rdf:type" resource="../../u/pos/all.html#INTJ" />
+	<a id="al-fi-pos/INTJ" class="al-dest" />
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_fi-pos/INTJ.md" target="#">edit INTJ</a></p>
+	<h2><code property="oliasystem:hasTag" lang="">INTJ</code>: <div property="rdfs:label">interjection</div></h2>
+	<div property="rdfs:comment">
 
-<p><a id="al-fi-pos/NOUN" class="al-dest"></a></p>
-<h2><code>NOUN</code>: noun</h2>
+An interjection is a word that is used most often as an exclamation or
+part of an exclamation.
 
-<p>Nouns inflect for <a href="Case">case</a> and <a href="Number">number</a> and denote things
-such as people, places, things, animals and ideas.</p>
+#### Examples
 
-<p>Proper nouns are not annotated as <code>NOUN</code> but rather <a href="">PROPN</a>.</p>
+* [fi] _no_, "well", _ai_ "oh", _hyi_ "yuck"
+* [fi] _psst_
 
-<h4 id="examples">Examples</h4>
+#### References
 
-<ul>
-  <li>[fi] <em>tyttö</em> “girl”</li>
-  <li>[fi] <em>kissa</em> “cat”</li>
-  <li>[fi] <em>puu</em> “tree”</li>
-</ul>
+* &lt;http://scripta.kotus.fi/visk/sisallys.php?p=856&gt; (in Finnish)
 
-<h4 id="references">References</h4>
 
-<ul>
-  <li><a href="http://scripta.kotus.fi/visk/sisallys.php?p=551">http://scripta.kotus.fi/visk/sisallys.php?p=551</a> (in Finnish)</li>
-</ul>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_fi-pos/INTJ.md" target="#">edit INTJ</a>
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_fi-pos/NOUN.md" target="#">edit NOUN</a></p>
 
-<p><a id="al-fi-pos/NUM" class="al-dest"></a></p>
-<h2><code>NUM</code>: numeral</h2>
+<div about="#NOUN_fi" property="rdf:type" resource="#pos_fi">
+	<div property="rdf:type" resource="../../u/pos/all.html#NOUN" />
+	<a id="al-fi-pos/NOUN" class="al-dest" />
 
-<p>A numeral is a word, functioning most typically as a determiner,
+	<h2><code property="oliasystem:hasTag" lang="">NOUN</code>: <div property="rdfs:label">noun</div></h2>
+	<div property="rdfs:comment">
+
+Nouns inflect for [case](Case) and [number](Number) and denote things
+such as people, places, things, animals and ideas.
+
+Proper nouns are not annotated as `NOUN` but rather [PROPN]().
+
+#### Examples
+
+* [fi] _tyttö_ "girl"
+* [fi] _kissa_ "cat"
+* [fi] _puu_ "tree"
+
+#### References
+
+* &lt;http://scripta.kotus.fi/visk/sisallys.php?p=551&gt; (in Finnish)
+
+
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_fi-pos/NOUN.md" target="#">edit NOUN</a>
+
+
+<div about="#NUM_fi" property="rdf:type" resource="#pos_fi">
+	<div property="rdf:type" resource="../../u/pos/all.html#NUM" />
+	<a id="al-fi-pos/NUM" class="al-dest" />
+
+	<h2><code property="oliasystem:hasTag" lang="">NUM</code>: <div property="rdfs:label">numeral</div></h2>
+	<div property="rdfs:comment">
+
+A numeral is a word, functioning most typically as a determiner,
 adjective or pronoun, that expresses a number and a relation to the
-number, such as quantity, sequence, frequency or fraction.</p>
+number, such as quantity, sequence, frequency or fraction.
 
-<h4 id="examples">Examples</h4>
+#### Examples
 
-<ul>
-  <li>[fi] <em>0, 1, 2, 3, 4, 5, 2014, 1000000, 3.14159265359</em></li>
-  <li>[fi] <em>yksi, kaksi, kolme</em> “one, two, three”</li>
-  <li>[fi] <em>I, II, III, IV, V, MMXIV</em></li>
-</ul>
+* [fi] _0, 1, 2, 3, 4, 5, 2014, 1000000, 3.14159265359_
+* [fi] _yksi, kaksi, kolme_ "one, two, three"
+* [fi] _I, II, III, IV, V, MMXIV_
 
-<h4 id="references">References</h4>
+#### References
 
-<ul>
-  <li><a href="http://scripta.kotus.fi/visk/sisallys.php?p=771">http://scripta.kotus.fi/visk/sisallys.php?p=771</a> (in Finnish)</li>
-</ul>
+* &lt;http://scripta.kotus.fi/visk/sisallys.php?p=771&gt; (in Finnish)
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_fi-pos/NUM.md" target="#">edit NUM</a></p>
 
-<p><a id="al-fi-pos/PART" class="al-dest"></a></p>
-<h2><code>PART</code>: particle</h2>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_fi-pos/NUM.md" target="#">edit NUM</a>
 
-<p>The UD Finnish annotation does not use the <a href="">u-pos/PART</a> part of speech.
-See <a href="">ADV</a>, <a href="">ADP</a>, <a href="">CONJ</a>, <a href="">SCONJ</a>, <a href="">INTJ</a> for tags applying to
-words that have been termed “particles” in some descriptions of Finnish.</p>
 
-<h4 id="references">References</h4>
+<div about="#PART_fi" property="rdf:type" resource="#pos_fi">
+	<div property="rdf:type" resource="../../u/pos/all.html#PART" />
+	<a id="al-fi-pos/PART" class="al-dest" />
 
-<ul>
-  <li><a href="http://scripta.kotus.fi/visk/sisallys.php?p=792">http://scripta.kotus.fi/visk/sisallys.php?p=792</a> (in Finnish)</li>
-  <li><a href="http://scripta.kotus.fi/visk/sisallys.php?p=793">http://scripta.kotus.fi/visk/sisallys.php?p=793</a> (in Finnish)</li>
-</ul>
+	<h2><code property="oliasystem:hasTag" lang="">PART</code>: <div property="rdfs:label">particle</div></h2>
+	<div property="rdfs:comment">
 
-<h2 id="diffs">Diffs</h2>
+The UD Finnish annotation does not use the [u-pos/PART]() part of speech.
+See [ADV](), [ADP](), [CONJ](), [SCONJ](), [INTJ]() for tags applying to
+words that have been termed "particles" in some descriptions of Finnish.
 
-<h3 id="finntreebank">FinnTreeBank</h3>
+#### References
 
-<p>The FI_FTB-corpus follows the general UD documentation in recognizing
+* &lt;http://scripta.kotus.fi/visk/sisallys.php?p=792&gt; (in Finnish)
+* &lt;http://scripta.kotus.fi/visk/sisallys.php?p=793&gt; (in Finnish)
+
+## Diffs
+
+### FinnTreeBank
+
+The FI_FTB-corpus follows the general UD documentation in recognizing
 the particle as a part-of-speech category. The specification between PART,
 ADV and ADP has been carried out as in
-<a href="http://scripta.kotus.fi/visk/sisallys.php?p=792">ISK § 792</a> (in Finnish).</p>
+[ISK § 792](http://scripta.kotus.fi/visk/sisallys.php?p=792) (in Finnish).
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_fi-pos/PART.md" target="#">edit PART</a></p>
 
-<p><a id="al-fi-pos/PRON" class="al-dest"></a></p>
-<h2><code>PRON</code>: pronoun</h2>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_fi-pos/PART.md" target="#">edit PART</a>
 
-<p>Pronouns are words that substitute for <a href="NOUN.html">nouns</a>
+
+<div about="#PRON_fi" property="rdf:type" resource="#pos_fi">
+	<div property="rdf:type" resource="../../u/pos/all.html#PRON" />
+	<a id="al-fi-pos/PRON" class="al-dest" />
+
+	<h2><code property="oliasystem:hasTag" lang="">PRON</code>: <div property="rdfs:label">pronoun</div></h2>
+	<div property="rdfs:comment">
+
+Pronouns are words that substitute for <a href="NOUN.html">nouns</a>
 or noun phrases, whose meaning is recoverable from the linguistic or
-extralinguistic context.</p>
+extralinguistic context.
 
-<p>See also <a href="">PronType</a>.</p>
+See also [PronType]().
 
-<h4 id="examples">Examples</h4>
+#### Examples
 
-<ul>
-  <li>[fi] <em>minä, sinä, hän, me, te, he</em> “I, you, he/she, we, you, they” (personal pronouns)</li>
-  <li>[fi] <em>itse</em> “self” (reflexive pronoun)</li>
-  <li>[fi] <em>tämä, tuo, se, nämä, nuo, ne</em> “this, that, it/that, these, those, they/those” (demonstrative pronouns)</li>
-  <li>[fi] <em>kuka, mikä, kumpi</em> “who, what, which” (interrogative pronouns)</li>
-  <li>[fi] <em>joka, mikä</em> “who, that” (relative pronouns)</li>
-  <li>[fi] TODO (indefinite pronouns)</li>
-  <li>[fi] TODO (totality pronouns)</li>
-  <li>[fi] TODO (negative pronouns)</li>
-  <li>[fi] <em>muu</em> “other”, <em>sama</em> “same”</li>
-</ul>
+* [fi] _minä, sinä, hän, me, te, he_ "I, you, he/she, we, you, they" (personal pronouns)
+* [fi] _itse_ "self" (reflexive pronoun)
+* [fi] _tämä, tuo, se, nämä, nuo, ne_ "this, that, it/that, these, those, they/those" (demonstrative pronouns)
+* [fi] _kuka, mikä, kumpi_ "who, what, which" (interrogative pronouns)
+* [fi] _joka, mikä_ "who, that" (relative pronouns)
+* [fi] TODO (indefinite pronouns)
+* [fi] TODO (totality pronouns)
+* [fi] TODO (negative pronouns)
+* [fi] _muu_ "other", _sama_ "same"
 
-<h4 id="references">References</h4>
+#### References
 
-<ul>
-  <li><a href="http://scripta.kotus.fi/visk/sisallys.php?p=713">http://scripta.kotus.fi/visk/sisallys.php?p=713</a> (in Finnish)</li>
-</ul>
+* &lt;http://scripta.kotus.fi/visk/sisallys.php?p=713&gt; (in Finnish)
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_fi-pos/PRON.md" target="#">edit PRON</a></p>
 
-<p><a id="al-fi-pos/PROPN" class="al-dest"></a></p>
-<h2><code>PROPN</code>: proper noun</h2>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_fi-pos/PRON.md" target="#">edit PRON</a>
 
-<p>A proper noun is a noun (or nominal content word) that is the name (or
-part of the name) of a specific individual, place, or object.</p>
 
-<p>Acronyms of proper nouns, such as <em>EU</em> and <em>YK</em>, should be tagged PROPN.</p>
+<div about="#PROPN_fi" property="rdf:type" resource="#pos_fi">
+	<div property="rdf:type" resource="../../u/pos/all.html#PROPN" />
+	<a id="al-fi-pos/PROPN" class="al-dest" />
 
-<h4 id="examples">Examples</h4>
+	<h2><code property="oliasystem:hasTag" lang="">PROPN</code>: <div property="rdfs:label">proper noun</div></h2>
+	<div property="rdfs:comment">
 
-<ul>
-  <li>[fi] <em>Aapo</em>, <em>Anna</em> (male/female first name)</li>
-  <li><em>Turku</em> (city name)</li>
-  <li><em>EU</em>, <em>YK</em> “EU, UN”</li>
-</ul>
+A proper noun is a noun (or nominal content word) that is the name (or
+part of the name) of a specific individual, place, or object.
 
-<h4 id="references">References</h4>
+Acronyms of proper nouns, such as *EU* and *YK*, should be tagged PROPN.
 
-<ul>
-  <li><a href="http://scripta.kotus.fi/visk/sisallys.php?p=596">http://scripta.kotus.fi/visk/sisallys.php?p=596</a> (in Finnish)</li>
-</ul>
+#### Examples
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_fi-pos/PROPN.md" target="#">edit PROPN</a></p>
+* [fi] _Aapo_, _Anna_ (male/female first name)
+* _Turku_ (city name)
+* _EU_, _YK_ "EU, UN"
 
-<p><a id="al-fi-pos/PUNCT" class="al-dest"></a></p>
-<h2><code>PUNCT</code>: punctuation</h2>
+#### References
 
-<p>Punctuation marks are non-alphabetical characters and character groups
-used to delimit linguistic units in printed text.</p>
+* &lt;http://scripta.kotus.fi/visk/sisallys.php?p=596&gt; (in Finnish)
 
-<h4 id="examples">Examples</h4>
 
-<ul>
-  <li>Period: <em><b>.</b></em></li>
-  <li>Comma: <em><b>,</b></em></li>
-  <li>Parentheses: <em><b>()</b></em></li>
-</ul>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_fi-pos/PROPN.md" target="#">edit PROPN</a>
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_fi-pos/PUNCT.md" target="#">edit PUNCT</a></p>
 
-<p><a id="al-fi-pos/SCONJ" class="al-dest"></a></p>
-<h2><code>SCONJ</code>: subordinating conjunction</h2>
+<div about="#PUNCT_fi" property="rdf:type" resource="#pos_fi">
+	<div property="rdf:type" resource="../../u/pos/all.html#PUNCT" />
+	<a id="al-fi-pos/PUNCT" class="al-dest" />
 
-<p>A subordinating conjunction is a conjunction that links constructions
-by making one of them a constituent of the other.</p>
+	<h2><code property="oliasystem:hasTag" lang="">PUNCT</code>: <div property="rdfs:label">punctuation</div></h2>
+	<div property="rdfs:comment">
 
-<p>Both the Finnish complementizer <em>että</em> and the comparative conjunction
-<em>kuin</em> are tagged <code>SCONJ</code>.</p>
+Punctuation marks are non-alphabetical characters and character groups
+used to delimit linguistic units in printed text.
 
-<h4 id="examples">Examples</h4>
+#### Examples
 
-<ul>
-  <li>[fi] <em>koska</em> “because”</li>
-  <li>[fi] <em>vaikka</em> “although”</li>
-  <li>[fi] <em>parempi <b>kuin</b></em> “better <b>than</b>”</li>
-</ul>
+* Period: _<b>.</b>_
+* Comma: _<b>,</b>_
+* Parentheses: _<b>()</b>_
 
-<h4 id="references">References</h4>
 
-<ul>
-  <li><a href="http://scripta.kotus.fi/visk/sisallys.php?p=816">http://scripta.kotus.fi/visk/sisallys.php?p=816</a> (in Finnish)</li>
-  <li><a href="http://scripta.kotus.fi/visk/sisallys.php?p=818">http://scripta.kotus.fi/visk/sisallys.php?p=818</a> (in Finnish)</li>
-</ul>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_fi-pos/PUNCT.md" target="#">edit PUNCT</a>
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_fi-pos/SCONJ.md" target="#">edit SCONJ</a></p>
 
-<p><a id="al-fi-pos/SYM" class="al-dest"></a></p>
-<h2><code>SYM</code>: symbol</h2>
+<div about="#SCONJ_fi" property="rdf:type" resource="#pos_fi">
+	<div property="rdf:type" resource="../../u/pos/all.html#SCONJ" />
+	<a id="al-fi-pos/SCONJ" class="al-dest" />
 
-<p>A symbol is a word-like entity that differs from ordinary words by
-form, function, or both.</p>
+	<h2><code property="oliasystem:hasTag" lang="">SCONJ</code>: <div property="rdfs:label">subordinating conjunction</div></h2>
+	<div property="rdfs:comment">
 
-<h4 id="examples">Examples</h4>
+A subordinating conjunction is a conjunction that links constructions
+by making one of them a constituent of the other.
 
-<ul>
-  <li><em>$, %, §, ©</em></li>
-  <li><em>+, −, ×, ÷, =, &lt;, &gt;</em></li>
-  <li>:), ♥‿♥, 😝</li>
-  <li><em>john.doe@universal.org, http://universaldependencies.org/, 1-800-COMPANY</em></li>
-</ul>
+Both the Finnish complementizer _että_ and the comparative conjunction
+_kuin_ are tagged `SCONJ`.
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_fi-pos/SYM.md" target="#">edit SYM</a></p>
+#### Examples
 
-<p><a id="al-fi-pos/VERB" class="al-dest"></a></p>
-<h2><code>VERB</code>: verb</h2>
+* [fi] _koska_ "because"
+* [fi] _vaikka_ "although"
+* [fi] _parempi <b>kuin</b>_ "better <b>than</b>"
 
-<p>Verbs typically inflect for <a href="Tense">tense</a>, <a href="Mood">mood</a> and
-<a href="Person">person</a> and signal events and actions. Verbs can constitute a
+#### References
+
+* &lt;http://scripta.kotus.fi/visk/sisallys.php?p=816&gt; (in Finnish)
+* &lt;http://scripta.kotus.fi/visk/sisallys.php?p=818&gt; (in Finnish)
+
+
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_fi-pos/SCONJ.md" target="#">edit SCONJ</a>
+
+
+<div about="#SYM_fi" property="rdf:type" resource="#pos_fi">
+	<div property="rdf:type" resource="../../u/pos/all.html#SYM" />
+	<a id="al-fi-pos/SYM" class="al-dest" />
+
+	<h2><code property="oliasystem:hasTag" lang="">SYM</code>: <div property="rdfs:label">symbol</div></h2>
+	<div property="rdfs:comment">
+
+A symbol is a word-like entity that differs from ordinary words by
+form, function, or both.
+
+#### Examples
+
+* _$, %, §, ©_
+* _+, −, ×, ÷, =, &lt;, &gt;_
+* :), ♥‿♥, 😝
+* _john.doe@universal.org, http://universaldependencies.org/, 1-800-COMPANY_
+
+
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_fi-pos/SYM.md" target="#">edit SYM</a>
+
+
+<div about="#VERB_fi" property="rdf:type" resource="#pos_fi">
+	<div property="rdf:type" resource="../../u/pos/all.html#VERB" />
+	<a id="al-fi-pos/VERB" class="al-dest" />
+
+	<h2><code property="oliasystem:hasTag" lang="">VERB</code>: <div property="rdfs:label">verb</div></h2>
+	<div property="rdfs:comment">
+
+Verbs typically inflect for [tense](Tense), [mood](Mood) and
+[person](Person) and signal events and actions. Verbs can constitute a
 minimal predicate in a clause, and govern the number and types of
-other constituents which may occur in the clause.</p>
+other constituents which may occur in the clause.
 
-<p>Auxiliary and modal verbs are not annotated as <code>VERB</code> but rather
-<a href="">AUX</a>.</p>
+Auxiliary and modal verbs are not annotated as `VERB` but rather
+[AUX]().
 
-<h4 id="examples">Examples</h4>
+#### Examples
 
-<ul>
-  <li>[fi] <em>juosta, syödä</em> “run, eat”</li>
-  <li>[fi] <em>ei</em> “no” (negation verb)</li>
-</ul>
+* [fi] _juosta, syödä_ "run, eat"
+* [fi] _ei_ "no" (negation verb)
 
-<h4 id="references">References</h4>
+#### References
 
-<ul>
-  <li><a href="http://scripta.kotus.fi/visk/sisallys.php?p=444">http://scripta.kotus.fi/visk/sisallys.php?p=444</a> (in Finnish)</li>
-</ul>
+* &lt;http://scripta.kotus.fi/visk/sisallys.php?p=444&gt; (in Finnish)
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_fi-pos/VERB.md" target="#">edit VERB</a></p>
 
-<p><a id="al-fi-pos/X" class="al-dest"></a></p>
-<h2><code>X</code>: other</h2>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_fi-pos/VERB.md" target="#">edit VERB</a>
 
-<p>The tag <code>X</code> is used for words that for some reason cannot be assigned
-a real part-of-speech category.</p>
 
-<p>Foreign words appearing inside native text are tagged <code>X</code> (see also
-<a href="">Foreign</a>).</p>
+<div about="#X_fi" property="rdf:type" resource="#pos_fi">
+	<div property="rdf:type" resource="../../u/pos/all.html#X" />
+	<a id="al-fi-pos/X" class="al-dest" />
 
-<h4 id="examples">Examples</h4>
+	<h2><code property="oliasystem:hasTag" lang="">X</code>: <div property="rdfs:label">other</div></h2>
+	<div property="rdfs:comment">
 
-<ul>
-  <li>[fi] <em>Uskoo ken <b>tahtsssszzt brrrzzzt</b>.</em></li>
-  <li>[fi] <em>Opimme fyysikoiden “<b>Let’s assume a spherical cow</b>” -lähestymistavan.</em></li>
-</ul>
+The tag `X` is used for words that for some reason cannot be assigned
+a real part-of-speech category.
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_fi-pos/X.md" target="#">edit X</a></p>
+Foreign words appearing inside native text are tagged `X` (see also
+[Foreign]()).
 
+#### Examples
+
+* [fi] _Uskoo ken <b>tahtsssszzt brrrzzzt</b>._
+* [fi] _Opimme fyysikoiden "<b>Let's assume a spherical cow</b>" -lähestymistavan._
+
+
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_fi-pos/X.md" target="#">edit X</a>
+
+</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div>
 
 
       </div>

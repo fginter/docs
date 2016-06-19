@@ -43,7 +43,12 @@
 	  </div>
 	</noscript>
 
-          <h1 id="dependencies">Dependencies</h1>
+          
+<h1 id="dependencies">Dependencies</h1>
+
+<p><span about="." property="rdf:type" resource="owl:Ontology">
+	<span property="owl:imports" resource=" https://www.w3.org/2012/pyRdfa/extract?uri=http://universaldependencies.org/docs/u/dep/all.html&amp;format=xml&amp;rdfagraph=output&amp;vocab_expansion=false&amp;rdfa_lite=false&amp;embedded_rdf=true&amp;space_preserve=false&amp;vocab_cache=true&amp;vocab_cache_report=false&amp;vocab_cache_refresh=false"></span>
+</span></p>
 
 <p>Note: <i>nmod</i>, <i>neg</i>, and <i>punct</i> appear
 in two places.</p>
@@ -228,1359 +233,1915 @@ in two places.</p>
   </tr>
 </table>
 
+<p><span about="#dep_tr" property="rdfs:label" style="visibility: hidden">Dependencies</span>
+<span about="#dep_tr" property="rdfs:subClassOf" resource="_:tr">
+	<span about="_:tr" property="rdf:type" resource="owl:Restriction">
+		<span property="owl:onProperty" resource="http://purl.org/dc/terms/language"></span>
+		<span property="owl:hasValue" lang="" style="visibility: hidden">tr</span>
+	</span>
+</span></p>
+
 <hr />
 
-<p><a id="al-tr-dep/acl" class="al-dest"></a></p>
-<h2><code>acl</code>: clausal modifier of noun</h2>
+<div about="#acl_tr" property="rdf:type" resource="#dep_tr">
+	<div property="rdf:type" resource="../../u/dep/all.html#acl" />
+	<a id="al-tr-dep/acl" class="al-dest" />
 
-<p><code>acl</code> stands for finite and non-finite clauses that modify a nominal. 
-The head of the <code>acl</code> relation is the noun that is modified, 
-and the dependent is the head of the clause that modifies the noun.</p>
+	<h2><code property="oliasystem:hasTag" lang="">acl</code>: <div property="rdfs:label">clausal modifier of noun</div></h2>
+	<div property="rdfs:comment">
 
-<p>Like non-clausal adjectives, most adjectival clauses in Turkish precede the noun they modify.
-The only exception is the adjectival clauses formed by <em>ki</em>
-that is similar to English relative pronouns “which” or “who” (not to be confused by suffix <em>-ki</em>).</p>
+`acl` stands for finite and non-finite clauses that modify a nominal. 
+The head of the `acl` relation is the noun that is modified, 
+and the dependent is the head of the clause that modifies the noun.
 
-<p>The primary means of subordination, including forming adjectival clauses,
+Like non-clausal adjectives, most adjectival clauses in Turkish precede the noun they modify.
+The only exception is the adjectival clauses formed by _ki_
+that is similar to English relative pronouns "which" or "who" (not to be confused by suffix _-ki_).
+
+The primary means of subordination, including forming adjectival clauses,
 is through the subordinating suffixes attached to the head of the subordinate clause.
-The adjectival clauses formed by <em>-ki</em> is not as frequent and cover only a limited range uses of adjectival clauses.</p>
+The adjectival clauses formed by _-ki_ is not as frequent and cover only a limited range uses of adjectival clauses.
 
-<pre><code class="language-sdparse">Ali'nin okuduğu kitap \n The book that Ali is reading
+~~~ sdparse
+Ali'nin okuduğu kitap \n The book that Ali is reading
 acl(kitap, okuduğu)
-</code></pre>
+~~~
 
-<pre><code class="language-sdparse">Ali , ki çok kitap okur , henüz son kitabını okumamış. \n Ali, who reads a lot, hasn't read your last book yet
+~~~ sdparse
+Ali , ki çok kitap okur , henüz son kitabını okumamış. \n Ali, who reads a lot, hasn't read your last book yet
 acl(Ali, okur)
 mark(okur, ki)
-</code></pre>
+~~~
 
-<p>Almost all adjectival clauses in Turkish are relative clauses.
-There are only a few marginal constructions where a pronoun referring to the modified noun can be present in the subordinate clause.</p>
+Almost all adjectival clauses in Turkish are relative clauses.
+There are only a few marginal constructions where a pronoun referring to the modified noun can be present in the subordinate clause.
 
-<pre><code class="language-sdparse">Ali , ki onu\/kendisini üç gündür görmüyorduk , evde kitap okuyormuş \n Ali, who we haven't been seeing (him\/himself) for three days, has apparently been reading books at home
+~~~ sdparse
+Ali , ki onu\/kendisini üç gündür görmüyorduk , evde kitap okuyormuş \n Ali, who we haven't been seeing (him\/himself) for three days, has apparently been reading books at home
 acl(Ali, görmüyorduk)
 mark(görmüyorduk, ki)
-</code></pre>
+~~~
 
-<p>We currently do not mark (non-)relative clauses differently.</p>
+We currently do not mark (non-)relative clauses differently.
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_tr-dep/acl.md" target="#">edit acl</a></p>
 
-<p><a id="al-tr-dep/advcl" class="al-dest"></a></p>
-<h2><code>advcl</code>: adverbial clause modifier</h2>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_tr-dep/acl.md" target="#">edit acl</a>
+</div>
 
-<p>An adverbial clause modifier is a clause which modifies a verb or other predicate (adjective, etc.), as a modifier not as a core complement. 
+<div about="#advcl_tr" property="rdf:type" resource="#dep_tr">
+	<div property="rdf:type" resource="../../u/dep/all.html#advcl" />
+	<a id="al-tr-dep/advcl" class="al-dest" />
+
+	<h2><code property="oliasystem:hasTag" lang="">advcl</code>: <div property="rdfs:label">adverbial clause modifier</div></h2>
+	<div property="rdfs:comment">
+
+An adverbial clause modifier is a clause which modifies a verb or other predicate (adjective, etc.), as a modifier not as a core complement. 
 This includes things such as a temporal clause, consequence, conditional clause, purpose clause, etc.
-The dependent must be clausal (or else it is an <a href="">advmod</a>) and the dependent is the main predicate of the clause.</p>
+The dependent must be clausal (or else it is an [advmod]()) and the dependent is the main predicate of the clause.
 
-<p>Note that we treat the conditional clauses specially and mark then with a subtype: <a href="advcl-cond">advcl:cond</a>.</p>
+Note that we treat the conditional clauses specially and mark then with a subtype: [advcl:cond](advcl-cond).
 
-<p>Turkish adverbial clauses are mainly formed by a set of <a href="https://en.wikipedia.org/wiki/Converb">converb</a>ial suffixes.</p>
+Turkish adverbial clauses are mainly formed by a set of [converb](https://en.wikipedia.org/wiki/Converb)ial suffixes.
 
-<pre><code class="language-sdparse">Ali gelince sevindi . \n He\/she became happy when Ali arrived
+~~~ sdparse
+Ali gelince sevindi . \n He\/she became happy when Ali arrived
 advcl(sevindi, gelince)
-</code></pre>
+~~~
 
-<pre><code class="language-sdparse">Okurken uyuyakalmışım . \n I fell asleep while reading
+~~~ sdparse
+Okurken uyuyakalmışım . \n I fell asleep while reading
 advcl(uyuyakalmışım, Okurken)
-</code></pre>
+~~~
 
-<p>The subordinator <em>ki</em> and a few other subordinating words may also form adverbial clauses.</p>
+The subordinator _ki_ and a few other subordinating words may also form adverbial clauses.
 
-<pre><code class="language-sdparse">Bu kitabı sen de okursun diye aldım \n I bought this book so that you would read it too
+~~~ sdparse
+Bu kitabı sen de okursun diye aldım \n I bought this book so that you would read it too
 advcl(aldım, okursun)
 mark(okursun, diye)
-</code></pre>
+~~~
 
-<pre><code class="language-sdparse">Bu kitabı aldım ki sen de okuyasın \n I bought this book so that you would read it too
+~~~ sdparse
+Bu kitabı aldım ki sen de okuyasın \n I bought this book so that you would read it too
 advcl(aldım, okuyasın)
 mark(okuyasın, ki)
-</code></pre>
+~~~
 
-<pre><code class="language-sdparse">Bu kitabı okudun mu herşeyi anlayacaksın \n You will understand everything once you have read this book
+~~~ sdparse
+Bu kitabı okudun mu herşeyi anlayacaksın \n You will understand everything once you have read this book
 advcl(anlayacaksın, okudun)
 mark(okudun, mu)
-</code></pre>
+~~~
 
-<p>A large number of adverbials and adverbial clauses are formed by postpositions attached to nouns or noun clauses.
-We do not mark these as adverbial (<code>advmod</code> or <code>advcl</code>).
-For both cases we use <a href="nmod">nmod</a> (see discussion of subordination
-in <a href="">tr-overview/specific-syntax</a>).</p>
+A large number of adverbials and adverbial clauses are formed by postpositions attached to nouns or noun clauses.
+We do not mark these as adverbial (`advmod` or `advcl`).
+For both cases we use [nmod](nmod) (see discussion of subordination
+in [tr-overview/specific-syntax]()).
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_tr-dep/advcl.md" target="#">edit advcl</a></p>
 
-<p><a id="al-tr-dep/advcl:cond" class="al-dest"></a></p>
-<h2><code>advcl:cond</code>: conditional adverbial clause modifier</h2>
 
-<p>This relation is a subtype of <a href="">advcl</a>.
-It is used for conditional clauses.</p>
 
-<pre><code class="language-sdparse">Kitabı okusaydın anlardın . \n You would understand if you had read the book
+
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_tr-dep/advcl.md" target="#">edit advcl</a>
+</div>
+
+<div about="#advcl%3Acond_tr" property="rdf:type" resource="#dep_tr">
+	<div property="rdf:type" resource="../../u/dep/all.html#advcl" />
+	<a id="al-tr-dep/advcl:cond" class="al-dest" />
+
+	<h2><code property="oliasystem:hasTag" lang="">advcl:cond</code>: <div property="rdfs:label">conditional adverbial clause modifier</div></h2>
+	<div property="rdfs:comment">
+
+This relation is a subtype of [advcl]().
+It is used for conditional clauses.
+
+~~~ sdparse
+Kitabı okusaydın anlardın . \n You would understand if you had read the book
 advcl:cond(anlardın, okusaydın)
-</code></pre>
+~~~
 
-<p>In Turkish conditional clauses are formed by a verbal inflection on the head of the clause. 
-There are also two redundant words, <em>eğer</em> and <em>şayet</em> that may be included at the beginning or end of the phrase.
+In Turkish conditional clauses are formed by a verbal inflection on the head of the clause. 
+There are also two redundant words, _eğer_ and _şayet_ that may be included at the beginning or end of the phrase.
 Use of these words are only for emphasis or an early signal that a conditional clause follows.
-We use <a href="">discourse</a> (not <a href="">mark</a>) for marking the relation between these words and head of the conditional clause.</p>
+We use [discourse]() (not [mark]()) for marking the relation between these words and head of the conditional clause.
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_tr-dep/advcl-cond.md" target="#">edit advcl:cond</a></p>
 
-<p><a id="al-tr-dep/advmod" class="al-dest"></a></p>
-<h2><code>advmod</code>: adverbial modifier</h2>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_tr-dep/advcl-cond.md" target="#">edit advcl:cond</a>
+</div>
 
-<p>An adverbial modifier of a word is a (non-clausal) <a href="tr-pos/ADV">adverb</a> or adverbial phrase that serves to modify the meaning of the word.</p>
+<div about="#advmod_tr" property="rdf:type" resource="#dep_tr">
+	<div property="rdf:type" resource="../../u/dep/all.html#advmod" />
+	<a id="al-tr-dep/advmod" class="al-dest" />
 
-<p>Note that nouns in particular morphological <a href="tr-feat/Case">cases</a>,
-or followed by and <a href="tr-pos/ADP">adposition</a> are marked using <a href="">nmod</a> even if they function as adverbial modifiers.</p>
+	<h2><code property="oliasystem:hasTag" lang="">advmod</code>: <div property="rdfs:label">adverbial modifier</div></h2>
+	<div property="rdfs:comment">
 
-<pre><code class="language-sdparse">Çok iyi bir kitap \n A very good book
+An adverbial modifier of a word is a (non-clausal) [adverb](tr-pos/ADV) or adverbial phrase that serves to modify the meaning of the word.
+
+Note that nouns in particular morphological [cases](tr-feat/Case),
+or followed by and [adposition](tr-pos/ADP) are marked using [nmod]() even if they function as adverbial modifiers.
+
+~~~ sdparse
+Çok iyi bir kitap \n A very good book
 advmod(iyi, Çok)
-</code></pre>
+~~~
 
-<pre><code class="language-sdparse">Sürekli konuşuyorlar \n They are talking continuously
+~~~ sdparse
+Sürekli konuşuyorlar \n They are talking continuously
 advmod(konuşuyorlar, Sürekli)
-</code></pre>
+~~~
 
-<p>We use a special label, <a href="">tr-dep/advmod:emph</a> for adverbial modifiers that are used for emphasis.</p>
+We use a special label, [tr-dep/advmod:emph]() for adverbial modifiers that are used for emphasis.
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_tr-dep/advmod.md" target="#">edit advmod</a></p>
 
-<p><a id="al-tr-dep/advmod:emph" class="al-dest"></a></p>
-<h2><code>advmod:emph</code>: emphasizing word, intensifier</h2>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_tr-dep/advmod.md" target="#">edit advmod</a>
+</div>
 
-<p>This is a subtype of  <a href="">advmod</a>. 
-It used for (non-clausal) modifiers that emphasize or intensify their heads.</p>
+<div about="#advmod%3Aemph_tr" property="rdf:type" resource="#dep_tr">
+	<div property="rdf:type" resource="../../u/dep/all.html#advmod" />
+	<a id="al-tr-dep/advmod:emph" class="al-dest" />
 
-<pre><code class="language-sdparse">Çok da güzel bir kızmış \n She was (apparently) a very (very) beautiful girl.
+	<h2><code property="oliasystem:hasTag" lang="">advmod:emph</code>: <div property="rdfs:label">emphasizing word, intensifier</div></h2>
+	<div property="rdfs:comment">
+
+This is a subtype of  [advmod](). 
+It used for (non-clausal) modifiers that emphasize or intensify their heads.
+
+~~~ sdparse
+Çok da güzel bir kızmış \n She was (apparently) a very (very) beautiful girl.
 admod:emph(Çok, da)
 admod(güzel, Çok)
-</code></pre>
+~~~
 
-<pre><code class="language-sdparse">Güzel mi güzel bir kız \n A very (very,very) beautiful girl
+~~~ sdparse
+Güzel mi güzel bir kız \n A very (very,very) beautiful girl
 advmod:emph(Güzel-1, mi)
-</code></pre>
+~~~
 
-<pre><code class="language-sdparse">Kitabı bile okumamış \n He (apparently) hasn't even read the book
+~~~ sdparse
+Kitabı bile okumamış \n He (apparently) hasn't even read the book
 admod:emph(okumamış, bile)
-</code></pre>
+~~~
 
-<pre><code class="language-sdparse">İlk kitabı bile okumamış \n He (apparently) hasn't read even the book
+~~~ sdparse
+İlk kitabı bile okumamış \n He (apparently) hasn't read even the book
 admod:emph(kitabı, bile)
-</code></pre>
+~~~
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_tr-dep/advmod-emph.md" target="#">edit advmod:emph</a></p>
 
-<p><a id="al-tr-dep/amod" class="al-dest"></a></p>
-<h2><code>amod</code>: adjectival modifier</h2>
 
-<p>An adjectival modifier of a noun is any adjectival phrase that serves to modify the meaning of the noun.</p>
 
-<p><code>amod</code> is not used for all modifiers of nouns.
-We use <a href="">det</a> for determiners (tagged tr<a href="">-pos/DET</a>),
-and for so-called “bare noun compounds” we use <a href="">compound</a>.</p>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_tr-dep/advmod-emph.md" target="#">edit advmod:emph</a>
+</div>
 
-<pre><code class="language-sdparse">Ali kırmızı şarap sever . \n Ali likes red wine
+<div about="#amod_tr" property="rdf:type" resource="#dep_tr">
+	<div property="rdf:type" resource="../../u/dep/all.html#amod" />
+	<a id="al-tr-dep/amod" class="al-dest" />
+
+	<h2><code property="oliasystem:hasTag" lang="">amod</code>: <div property="rdfs:label">adjectival modifier</div></h2>
+	<div property="rdfs:comment">
+
+An adjectival modifier of a noun is any adjectival phrase that serves to modify the meaning of the noun.
+
+`amod` is not used for all modifiers of nouns.
+We use [det]() for determiners (tagged tr[-pos/DET]()),
+and for so-called "bare noun compounds" we use [compound]().
+
+~~~ sdparse
+Ali kırmızı şarap sever . \n Ali likes red wine
 amod(şarap, kırmızı)
-</code></pre>
+~~~
 
-<pre><code class="language-sdparse">Kıza kırmızı bir gül verdi . \n He gave the girl a red rose .
+~~~ sdparse
+Kıza kırmızı bir gül verdi . \n He gave the girl a red rose .
 amod(gül, kırmızı)
 det(gül, bir)
-</code></pre>
+~~~
 
-<pre><code class="language-sdparse">Büyük tahta kapının önünde bekliyordu . \n He\/she was waiting in front of the big wooden door
+~~~ sdparse
+Büyük tahta kapının önünde bekliyordu . \n He\/she was waiting in front of the big wooden door
 amod(kapının, büyük)
 compound(kapının, tahta)
-</code></pre>
+~~~
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_tr-dep/amod.md" target="#">edit amod</a></p>
 
-<p><a id="al-tr-dep/appos" class="al-dest"></a></p>
-<h2><code>appos</code>: appositional modifier</h2>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_tr-dep/amod.md" target="#">edit amod</a>
+</div>
 
-<p>An appositional modifier of a noun is a nominal immediately following
+<div about="#appos_tr" property="rdf:type" resource="#dep_tr">
+	<div property="rdf:type" resource="../../u/dep/all.html#appos" />
+	<a id="al-tr-dep/appos" class="al-dest" />
+
+	<h2><code property="oliasystem:hasTag" lang="">appos</code>: <div property="rdfs:label">appositional modifier</div></h2>
+	<div property="rdfs:comment">
+
+An appositional modifier of a noun is a nominal immediately following
 the first noun that serves to define or modify that noun. It includes
 parenthesized examples, as well as defining abbreviations in one of
-these structures.</p>
+these structures.
 
-<pre><code class="language-sdparse">Ali , en iyi arkadaşım , beni partiye davet etmedi . \n Ali, my best friend, did not invite me to the party .
+
+~~~ sdparse
+Ali , en iyi arkadaşım , beni partiye davet etmedi . \n Ali, my best friend, did not invite me to the party .
 appos(Ali, arkadaşım)
-</code></pre>
+~~~
 
-<pre><code class="language-sdparse">Devlet Tiyatroları ( DT ) \n State Theatre ( DT )
+~~~ sdparse
+Devlet Tiyatroları ( DT ) \n State Theatre ( DT )
 appos(Tiyatroları, DT)
-</code></pre>
+~~~
 
-<p><em>appos</em> is also used to link key-value pairs in addresses, signatures,
-etc. (see also the <a href="">list</a> label):</p>
+*appos* is also used to link key-value pairs in addresses, signatures,
+etc. (see also the [list]() label):
 
-<pre><code class="language-sdparse">Ali Yılmaz ,  tel : 555-55-55 , email : ali@example.com
+~~~ sdparse
+Ali Yılmaz ,  tel : 555-55-55 , email : ali@example.com
 name(Ali, Yılmaz)
 list(Ali, tel)
 list(Ali, email)
 appos(tel, 555-55-55)
 appos(email, ali@example.com)
-</code></pre>
+~~~
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_tr-dep/appos.md" target="#">edit appos</a></p>
 
-<p><a id="al-tr-dep/aux" class="al-dest"></a></p>
-<h2><code>aux</code>: auxiliary</h2>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_tr-dep/appos.md" target="#">edit appos</a>
+</div>
 
-<p>An auxiliary of a clause is a <a href="tr-pos/AUX">non-main verb</a> of the clause.</p>
+<div about="#aux_tr" property="rdf:type" resource="#dep_tr">
+	<div property="rdf:type" resource="../../u/dep/all.html#aux" />
+	<a id="al-tr-dep/aux" class="al-dest" />
 
-<p>In Turkish two verbs, <em>ol-</em> and, in formal registers, <em>bulun</em>,
+	<h2><code property="oliasystem:hasTag" lang="">aux</code>: <div property="rdfs:label">auxiliary</div></h2>
+	<div property="rdfs:comment">
+
+An auxiliary of a clause is a [non-main verb](tr-pos/AUX) of the clause.
+
+In Turkish two verbs, _ol-_ and, in formal registers, _bulun_,
 complement the main verb with additional tense/aspect/modality suffixes
 that cannot be attached to the main verb due to morphological restrictions
-(or sometimes stylistic reasons).</p>
+(or sometimes stylistic reasons).
 
-<p>The auxiliary use of <em>ol-</em> is different than its use as a copula,
-where the <a href="">cop</a> relation is used.</p>
+The auxiliary use of _ol-_ is different than its use as a copula,
+where the [cop]() relation is used.
 
-<p>We use a subtype of <code>aux</code>, <a href="aux-q">aux:q</a>, question particle <em>mi</em>.</p>
+We use a subtype of `aux`, [aux:q](aux-q), question particle _mi_.
 
-<pre><code class="language-sdparse">Yarın çalışıyor olacak . \n He\/she will be working tomorrow
+~~~ sdparse
+Yarın çalışıyor olacak . \n He\/she will be working tomorrow
 aux(çalışıyor, olacak)
-</code></pre>
+~~~
 
-<pre><code class="language-sdparse">Okumuş olsa bilirdi . \n He would know if he had read (it) .
+~~~ sdparse
+Okumuş olsa bilirdi . \n He would know if he had read (it) .
 aux(Okumuş, olsa)
-</code></pre>
+~~~
 
-<pre><code class="language-sdparse">Sorumluluğu almış bulunduk . \n He have taken the responsibility
+~~~ sdparse
+Sorumluluğu almış bulunduk . \n He have taken the responsibility
 aux(almış, bulunduk)
-</code></pre>
+~~~
 
-<p>We also use <code>aux</code> in case bound auxiliary <code>-abil</code> is separated from the main verb.</p>
+We also use `aux` in case bound auxiliary `-abil` is separated from the main verb.
 
-<pre><code class="language-sdparse">Göremeye de bilirdin . \n You might have also not seen it 
+~~~ sdparse
+Göremeye de bilirdin . \n You might have also not seen it 
 aux(Göremeye, bilirdin)
-</code></pre>
+~~~
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_tr-dep/aux_.md" target="#">edit aux</a></p>
 
-<p><a id="al-tr-dep/aux:q" class="al-dest"></a></p>
-<h2><code>aux:q</code>: question particle</h2>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_tr-dep/aux_.md" target="#">edit aux</a>
+</div>
 
-<p>This is a subtype of <a href="">aux</a>, used for question particle <em>-mI (mı/mi/mu/mü)</em>.</p>
+<div about="#aux%3Aq_tr" property="rdf:type" resource="#dep_tr">
+	<div property="rdf:type" resource="../../u/dep/all.html#aux" />
+	<a id="al-tr-dep/aux:q" class="al-dest" />
 
-<p>The question particle, when attached to a predicate,
-typically carries some of the tense/aspect/modality suffixes as well as person/number agreement suffixes.</p>
+	<h2><code property="oliasystem:hasTag" lang="">aux:q</code>: <div property="rdfs:label">question particle</div></h2>
+	<div property="rdfs:comment">
 
-<p>Although it does not function as an auxiliary when attached to non-predicate words or phrases,
-we use <code>aux:q</code> for all uses of the question particle.</p>
+This is a subtype of [aux](), used for question particle _-mI (mı/mi/mu/mü)_.
 
-<p><strong>Annotation of question particles are not well-specified in UD, and currently under discussion.</strong></p>
+The question particle, when attached to a predicate,
+typically carries some of the tense/aspect/modality suffixes as well as person/number agreement suffixes.
 
-<pre><code class="language-sdparse">Okuyacak mısınız ? \n Are you going to read ?
+Although it does not function as an auxiliary when attached to non-predicate words or phrases,
+we use `aux:q` for all uses of the question particle.
+
+**Annotation of question particles are not well-specified in UD, and currently under discussion.**
+
+~~~ sdparse
+Okuyacak mısınız ? \n Are you going to read ?
 aux:q(Okuyacak, mısınız)
-</code></pre>
+~~~
 
-<pre><code class="language-sdparse">Kitabı Ali'den aldın mı ? \n _Did_ you take the book from Ali ?
+~~~ sdparse
+Kitabı Ali'den aldın mı ? \n _Did_ you take the book from Ali ?
 aux:q(aldın, mı)
-</code></pre>
+~~~
 
-<pre><code class="language-sdparse">Kitabı Ali'den mi aldın ? \n Did you take the book _from Ali_ ?
+~~~ sdparse
+Kitabı Ali'den mi aldın ? \n Did you take the book _from Ali_ ?
 aux:q(Ali'den, mi)
-</code></pre>
+~~~
 
-<pre><code class="language-sdparse">Kitabı mı Ali'den aldın ? \n Did you take _the book_ from Ali ?
+~~~ sdparse
+Kitabı mı Ali'den aldın ? \n Did you take _the book_ from Ali ?
 aux:q(Kitabı, mı)
-</code></pre>
+~~~
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_tr-dep/aux-q.md" target="#">edit aux:q</a></p>
 
-<p><a id="al-tr-dep/auxpass" class="al-dest"></a></p>
-<h2><code>auxpass</code>: passive auxiliary</h2>
 
-<p>We do not use <code>auxpass</code></p>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_tr-dep/aux-q.md" target="#">edit aux:q</a>
+</div>
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_tr-dep/auxpass.md" target="#">edit auxpass</a></p>
+<div about="#auxpass_tr" property="rdf:type" resource="#dep_tr">
+	<div property="rdf:type" resource="../../u/dep/all.html#auxpass" />
+	<a id="al-tr-dep/auxpass" class="al-dest" />
 
-<p><a id="al-tr-dep/case" class="al-dest"></a></p>
-<h2><code>case</code>: case marking</h2>
+	<h2><code property="oliasystem:hasTag" lang="">auxpass</code>: <div property="rdfs:label">passive auxiliary</div></h2>
+	<div property="rdfs:comment">
 
-<p>The case relation is used for any case-marking element which is
+We do not use `auxpass`
+
+
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_tr-dep/auxpass.md" target="#">edit auxpass</a>
+</div>
+
+<div about="#case_tr" property="rdf:type" resource="#dep_tr">
+	<div property="rdf:type" resource="../../u/dep/all.html#case" />
+	<a id="al-tr-dep/case" class="al-dest" />
+
+	<h2><code property="oliasystem:hasTag" lang="">case</code>: <div property="rdfs:label">case marking</div></h2>
+	<div property="rdfs:comment">
+
+The case relation is used for any case-marking element which is
 treated as a separate syntactic word (including prepositions,
 postpositions, and clitic case markers). Case-marking elements are
-treated as dependents of the noun or clause they attach to.</p>
+treated as dependents of the noun or clause they attach to.
 
-<p>In Turkish, case marking is typically done through suffixation,
-in which case the case-marked word will carry the appropriate <a href="tr-feat/Case">Case</a> feature.
-The <code>case</code> relation marks postpositions,
-and some of the case-like suffixes that are tokenized as separate syntactic tokens (inflectional groups).</p>
+In Turkish, case marking is typically done through suffixation,
+in which case the case-marked word will carry the appropriate [Case](tr-feat/Case) feature.
+The `case` relation marks postpositions,
+and some of the case-like suffixes that are tokenized as separate syntactic tokens (inflectional groups).
 
-<pre><code class="language-sdparse">Ağaçların arasında kayboldular . \n They disappeared _between_ the trees
+~~~ sdparse
+Ağaçların arasında kayboldular . \n They disappeared _between_ the trees
 case(Ağaçların, arasında)
-</code></pre>
+~~~
 
-<pre><code class="language-sdparse">Bu kitabı annem için aldım . \n I bought this book _for_ my mother
+~~~ sdparse
+Bu kitabı annem için aldım . \n I bought this book _for_ my mother
 case(annem, için)
-</code></pre>
+~~~
 
-<pre><code class="language-sdparse">Öğleden sonra dersim var . \n I have a class _after_ noon (=in the afternoon)
+~~~ sdparse
+Öğleden sonra dersim var . \n I have a class _after_ noon (=in the afternoon)
 case(Öğleden, sonra)
-</code></pre>
+~~~
 
-<pre><code class="language-sdparse">İkiye kadar bunu bitirmem gerek \n I need to finish this until\/by two
+~~~ sdparse
+İkiye kadar bunu bitirmem gerek \n I need to finish this until\/by two
 case(İkiye, kadar)
-</code></pre>
+~~~
 
-<pre><code class="language-sdparse">Siyah saç –lı kız \n The girl _with_ black hair
+~~~ sdparse
+Siyah saç –lı kız \n The girl _with_ black hair
 case(saç, –lı)
-</code></pre>
+~~~
 
-<p>Currently, we also use <code>case</code> for some not-so-case-like modifiers.</p>
+Currently, we also use `case` for some not-so-case-like modifiers.
 
-<pre><code class="language-sdparse">Arabada –ki kız \n The girl in the car
+~~~ sdparse
+Arabada –ki kız \n The girl in the car
 case(Arabada, –ki)
-</code></pre>
+~~~
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_tr-dep/case.md" target="#">edit case</a></p>
 
-<p><a id="al-tr-dep/cc" class="al-dest"></a></p>
-<h2><code>cc</code>: coordinating conjunction</h2>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_tr-dep/case.md" target="#">edit case</a>
+</div>
 
-<p>A <code>cc</code> is the relation between the first conjunct and the <a href="../pos/CONJ">coordinating conjunction</a> delimiting another conjunct.</p>
+<div about="#cc_tr" property="rdf:type" resource="#dep_tr">
+	<div property="rdf:type" resource="../../u/dep/all.html#cc" />
+	<a id="al-tr-dep/cc" class="al-dest" />
 
-<p>Note that we currently diverge from UD specification by marking the last conjunct as the head.
-See the <a href="">conj</a> relation, for more information.</p>
+	<h2><code property="oliasystem:hasTag" lang="">cc</code>: <div property="rdfs:label">coordinating conjunction</div></h2>
+	<div property="rdfs:comment">
 
-<pre><code class="language-sdparse">Elma ve armut aldık . \n We both apples and oranges .
+A `cc` is the relation between the first conjunct and the [coordinating conjunction](../pos/CONJ) delimiting another conjunct.
+
+Note that we currently diverge from UD specification by marking the last conjunct as the head.
+See the [conj]() relation, for more information.
+
+~~~ sdparse
+Elma ve armut aldık . \n We both apples and oranges .
 cc(armut, ve)
 conj(armut, Elma)
-</code></pre>
+~~~
 
-<pre><code class="language-sdparse">Geldiler ve film başladı . \n They arrived and the movie started.
+~~~ sdparse
+Geldiler ve film başladı . \n They arrived and the movie started.
 cc(başladı, ve)
 conj(başladı, Geldiler)
-</code></pre>
+~~~
 
-<pre><code class="language-sdparse">Okudum ama hiçbirşey anlamadım . \n I read it but I did not understand anything
+~~~ sdparse
+Okudum ama hiçbirşey anlamadım . \n I read it but I did not understand anything
 cc(anlamadım, ama)
 conj(anlamadım, Okudum)
-</code></pre>
+~~~
 
-<pre><code class="language-sdparse">Ali ile Ayşe'yi gördüm .  \n I saw Ali and Ayşe
+~~~ sdparse
+Ali ile Ayşe'yi gördüm .  \n I saw Ali and Ayşe
 conj(Ayşe'yi, Ali)
 cc(Ayşe'yi, ile)
-</code></pre>
-<p>Note that in instrumental or commutative usage of <em>ile</em> the relation <a href="">case</a> is used.</p>
+~~~
+Note that in instrumental or commutative usage of _ile_ the relation [case]() is used.
 
-<pre><code class="language-sdparse">Ya Ayşe ya Ali oradadır . \n Either Ayşe or Ali would be there .
+~~~ sdparse
+Ya Ayşe ya Ali oradadır . \n Either Ayşe or Ali would be there .
 cc(Ali, ya-3)
 cc(Ali, Ya-1)
 conj(Ali, Ayşe)
-</code></pre>
+~~~
 
-<pre><code class="language-sdparse">Ne Ayşe ne Ali geldi . \n Neither Ayşe nor Ali came .
+~~~ sdparse
+Ne Ayşe ne Ali geldi . \n Neither Ayşe nor Ali came .
 cc(Ali, ne-3)
 cc(Ali, Ne-1)
 conj(Ali, Ayşe)
-</code></pre>
+~~~
 
-<pre><code class="language-sdparse">Almak isterim de çok pahalı . \n I want to buy but it is too expensive
+~~~ sdparse
+Almak isterim de çok pahalı . \n I want to buy but it is too expensive
 cc(pahalı, de)
 conj(pahalı, isterim)
-</code></pre>
+~~~
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_tr-dep/cc.md" target="#">edit cc</a></p>
 
-<p><a id="al-tr-dep/ccomp" class="al-dest"></a></p>
-<h2><code>ccomp</code>: clausal complement</h2>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_tr-dep/cc.md" target="#">edit cc</a>
+</div>
 
-<p>A clausal complement of a predicate is a dependent clause which is a core argument.
-That is, it functions like an object of the predicate.</p>
+<div about="#ccomp_tr" property="rdf:type" resource="#dep_tr">
+	<div property="rdf:type" resource="../../u/dep/all.html#ccomp" />
+	<a id="al-tr-dep/ccomp" class="al-dest" />
 
-<p>We split the verbal noun suffixes,
+	<h2><code property="oliasystem:hasTag" lang="">ccomp</code>: <div property="rdfs:label">clausal complement</div></h2>
+	<div property="rdfs:comment">
+
+A clausal complement of a predicate is a dependent clause which is a core argument.
+That is, it functions like an object of the predicate.
+
+We split the verbal noun suffixes,
 and mark them as the head of the subordinate clause.
-The unit with the subordinating suffix is tagged as <a href="tr-pos/NOUN">noun</a>.
-However, we still use <code>ccomp</code> for the relation between the higher level clause and the clausal object.</p>
+The unit with the subordinating suffix is tagged as [noun](tr-pos/NOUN).
+However, we still use `ccomp` for the relation between the higher level clause and the clausal object.
 
-<p>At present, we use <code>ccomp</code> only for direct objects, i.e., non-finite noun phrases in accusative or nominative <a href="tr-feat/Case">Case</a>.
-The arguments in other cases are marked using <a href="">nmod</a> relation or appropriate subtype of it.</p>
+At present, we use `ccomp` only for direct objects, i.e., non-finite noun phrases in accusative or nominative [Case](tr-feat/Case).
+The arguments in other cases are marked using [nmod]() relation or appropriate subtype of it.
 
-<pre><code class="language-sdparse">Sonunda " artık yeter " dedi . \n Finally, he said " that's enough " .
+~~~ sdparse
+Sonunda " artık yeter " dedi . \n Finally, he said " that's enough " .
 ccomp(dedi, yeter)
-</code></pre>
+~~~
 
-<pre><code class="language-sdparse">Sevmiyorum demedim . \n I did not say I don't like it .
+~~~ sdparse
+Sevmiyorum demedim . \n I did not say I don't like it .
 ccomp(demedim, Sevmiyorum)
-</code></pre>
+~~~
 
-<pre><code class="language-sdparse">Sevme/VERB –diğimi/NOUN söylemedim/VERB . \n I did not that I don't like it .
+~~~ sdparse
+Sevme/VERB –diğimi/NOUN söylemedim/VERB . \n I did not that I don't like it .
 ccomp(söylemedim, –diğimi)
 acl(–diğimi, Sevme)
-</code></pre>
+~~~
 
-<pre><code class="language-sdparse">Yarın gelecek sanıyordum . \n I thought he'd come tomorrow
+~~~ sdparse
+Yarın gelecek sanıyordum . \n I thought he'd come tomorrow
 ccomp(sanıyordum, gelecek)
-</code></pre>
+~~~
 
-<pre><code class="language-sdparse">Sanıyordum ki yarın gelecek . \n I thought he'd come tomorrow
+~~~ sdparse
+Sanıyordum ki yarın gelecek . \n I thought he'd come tomorrow
 ccomp(Sanıyordum, gelecek)
 mark(gelecek, ki)
-</code></pre>
+~~~
 
-<pre><code class="language-sdparse">Yarın gelecek diye biliyordum . \n I knew (as if) she'd come tomorrow .
+~~~ sdparse
+Yarın gelecek diye biliyordum . \n I knew (as if) she'd come tomorrow .
 ccomp(biliyordum, gelecek)
 makr(gelecek, diye)
-</code></pre>
+~~~
 
-<p>See also <a href="">xcomp</a>.</p>
+See also [xcomp]().
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_tr-dep/ccomp.md" target="#">edit ccomp</a></p>
 
-<p><a id="al-tr-dep/ccomp:cau" class="al-dest"></a></p>
-<h2><code>ccomp:cau</code>: clausal complement of a causative verb which refers to the "causee"</h2>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_tr-dep/ccomp.md" target="#">edit ccomp</a>
+</div>
 
-<p>This is the clausal counterpart of <a href="dobj-cau">dobj:cau</a>.</p>
+<div about="#ccomp%3Acau_tr" property="rdf:type" resource="#dep_tr">
+	<div property="rdf:type" resource="../../u/dep/all.html#ccomp" />
+	<a id="al-tr-dep/ccomp:cau" class="al-dest" />
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_tr-dep/ccomp-cau.md" target="#">edit ccomp:cau</a></p>
+	<h2><code property="oliasystem:hasTag" lang="">ccomp:cau</code>: <div property="rdfs:label">clausal complement of a causative verb which refers to the "causee"</div></h2>
+	<div property="rdfs:comment">
 
-<p><a id="al-tr-dep/compound" class="al-dest"></a></p>
-<h2><code>compound</code>: compound</h2>
+This is the clausal counterpart of [dobj:cau](dobj-cau).
 
-<p><code>compound</code> is one of the relations in UD for compounding.
-In Turkish it is used for bare noun compounds, compound verbal forms and numbers.</p>
 
-<pre><code class="language-sdparse">Anneannem bana bir çift yün çorap örmüş . \n My grandmother knitted pair of woolen socks for me .
+
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_tr-dep/ccomp-cau.md" target="#">edit ccomp:cau</a>
+</div>
+
+<div about="#compound_tr" property="rdf:type" resource="#dep_tr">
+	<div property="rdf:type" resource="../../u/dep/all.html#compound" />
+	<a id="al-tr-dep/compound" class="al-dest" />
+
+	<h2><code property="oliasystem:hasTag" lang="">compound</code>: <div property="rdfs:label">compound</div></h2>
+	<div property="rdfs:comment">
+
+`compound` is one of the relations in UD for compounding.
+In Turkish it is used for bare noun compounds, compound verbal forms and numbers.
+
+~~~ sdparse
+Anneannem bana bir çift yün çorap örmüş . \n My grandmother knitted pair of woolen socks for me .
 compound(çorap, yün)
-</code></pre>
+~~~
 
-<pre><code class="language-sdparse">Yagmurlu havalardan nefret ediyor . \n He\/she hates rainy weather
+~~~ sdparse
+Yagmurlu havalardan nefret ediyor . \n He\/she hates rainy weather
 compound(nefret, ediyor)
-</code></pre>
+~~~
 
-<pre><code class="language-sdparse">Onun fiyatı iki yüz elli lira . \n Price of it is two hundred and fifty liras .
+~~~ sdparse
+Onun fiyatı iki yüz elli lira . \n Price of it is two hundred and fifty liras .
 compound(iki, yüz)
 conj:num(yüz, elli)
-</code></pre>
+~~~
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_tr-dep/compound.md" target="#">edit compound</a></p>
 
-<p><a id="al-tr-dep/compound:redup" class="al-dest"></a></p>
-<h2><code>compound:redup</code>: reduplicated compounds</h2>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_tr-dep/compound.md" target="#">edit compound</a>
+</div>
 
-<p>This subtype of <a href="">compound</a> covers a range of reduplicated forms in Turkish.
-Reduplication is a common process especially for <a href="tr-pos/ADV">adverbs</a> and <a href="tr-pos/ADJ">adjectives</a>,
-but it is also used for reduplicated <a href="tr-pos/NOUN">noun</a> and <a href="tr-pos/VERB">verb</a> forms.</p>
+<div about="#compound%3Aredup_tr" property="rdf:type" resource="#dep_tr">
+	<div property="rdf:type" resource="../../u/dep/all.html#compound" />
+	<a id="al-tr-dep/compound:redup" class="al-dest" />
 
-<p>The reduplication typically involves two identical words,
+	<h2><code property="oliasystem:hasTag" lang="">compound:redup</code>: <div property="rdfs:label">reduplicated compounds</div></h2>
+	<div property="rdfs:comment">
+
+This subtype of [compound]() covers a range of reduplicated forms in Turkish.
+Reduplication is a common process especially for [adverbs](tr-pos/ADV) and [adjectives](tr-pos/ADJ),
+but it is also used for reduplicated [noun](tr-pos/NOUN) and [verb](tr-pos/VERB) forms.
+
+The reduplication typically involves two identical words,
 but some morpho-phonological alternations (as in m-reduplication in example 3 below) are possible.
-In some cases one of the words in reduplicated forms may also be modified individually by other words (see example 4 below).</p>
+In some cases one of the words in reduplicated forms may also be modified individually by other words (see example 4 below).
 
-<pre><code class="language-sdparse">Koca koca adamlar oyun oynuyorlar . \n _Big (+emph)_ men are playing games .
+~~~ sdparse
+Koca koca adamlar oyun oynuyorlar . \n _Big (+emph)_ men are playing games .
 compound:redup(koca-2, Koca-1)
-</code></pre>
+~~~
 
-<pre><code class="language-sdparse">Açık açık söylüyorum . \n I am telling it _clearly_
+~~~ sdparse
+Açık açık söylüyorum . \n I am telling it _clearly_
 compound:redup(açık-2, Açık-1)
-</code></pre>
+~~~
 
-<pre><code class="language-sdparse">Araba maraba almışlar . \n They bought (a) car (and things like that)
+~~~ sdparse
+Araba maraba almışlar . \n They bought (a) car (and things like that)
 compound:redup(Araba, maraba)
-</code></pre>
+~~~
 
-<pre><code class="language-sdparse">Güzel mi güzel bir kız . \n A pretty (emphasized) girl .
+~~~ sdparse
+Güzel mi güzel bir kız . \n A pretty (emphasized) girl .
 compound:redup(güzel-3, Güzel)
 advmod:emph(Güzel-1, mi)
-</code></pre>
+~~~
 
-<pre><code class="language-sdparse">Herşeyi kendi kendilerine planlamışlar . \n They planed it all by themselves .
+~~~ sdparse
+Herşeyi kendi kendilerine planlamışlar . \n They planed it all by themselves .
 compound:redup(kendilerine, kendi)
-</code></pre>
+~~~
 
-<pre><code class="language-sdparse">Ayağını sürükleye sürükleye yürüyordu . \n He\/she was walking by dragging his\/her feet.
+~~~ sdparse
+Ayağını sürükleye sürükleye yürüyordu . \n He\/she was walking by dragging his\/her feet.
 compound:redup(sürükleye-3, sürükleye-2)
-</code></pre>
+~~~
 
-<pre><code class="language-sdparse">Bu kadar zamanda okusa okusa birkaç sayfa okumuştur . \n In that time he\/she could have read _at most_ half of it .
+~~~ sdparse
+Bu kadar zamanda okusa okusa birkaç sayfa okumuştur . \n In that time he\/she could have read _at most_ half of it .
 compound:redup(okusa-5, okusa-4)
-</code></pre>
+~~~
 
-<pre><code class="language-sdparse">Mektubu aldı alalı odasından çıkmadı . \n He\/she has not left his\/her room since he\/she got the letter
+~~~ sdparse
+Mektubu aldı alalı odasından çıkmadı . \n He\/she has not left his\/her room since he\/she got the letter
 compound:redup(aldı, alalı)
-</code></pre>
+~~~
 
-<pre><code class="language-sdparse">Mektubu alır almaz yanıt verdi . \n He\/she responded as soon as he\/she received the letter .
+~~~ sdparse
+Mektubu alır almaz yanıt verdi . \n He\/she responded as soon as he\/she received the letter .
 compound:redup(almaz, alır)
-</code></pre>
+~~~
 
-<p>For lexicalized multi-word items with repetition where one or more of the words are not free lexemes, (e.g. <em>paldır küldür</em>, <em>ufak tefek</em>), we use <a href="">mwe</a>.</p>
+For lexicalized multi-word items with repetition where one or more of the words are not free lexemes, (e.g. _paldır küldür_, _ufak tefek_), we use [mwe]().
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_tr-dep/compound-redup.md" target="#">edit compound:redup</a></p>
 
-<p><a id="al-tr-dep/conj" class="al-dest"></a></p>
-<h2><code>conj</code>: conjunct</h2>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_tr-dep/compound-redup.md" target="#">edit compound:redup</a>
+</div>
 
-<p>A conjunct is the relation between two elements connected by a
-coordinating conjunction, such as and, or, etc.</p>
+<div about="#conj_tr" property="rdf:type" resource="#dep_tr">
+	<div property="rdf:type" resource="../../u/dep/all.html#conj" />
+	<a id="al-tr-dep/conj" class="al-dest" />
 
-<p>We diverge from UD specification by marking the last (instead of the first) conjunct as the head of the relation.
-All the other conjuncts depend on the last via the <code>conj</code> relation.</p>
+	<h2><code property="oliasystem:hasTag" lang="">conj</code>: <div property="rdfs:label">conjunct</div></h2>
+	<div property="rdfs:comment">
 
-<pre><code class="language-sdparse">Bir kız , iki erkek çocukları var . \n They have one girl and two boys.
+A conjunct is the relation between two elements connected by a
+coordinating conjunction, such as and, or, etc. 
+
+We diverge from UD specification by marking the last (instead of the first) conjunct as the head of the relation.
+All the other conjuncts depend on the last via the `conj` relation.
+
+~~~ sdparse
+Bir kız , iki erkek çocukları var . \n They have one girl and two boys.
 conj(erkek, kız)
-</code></pre>
+~~~
 
-<pre><code class="language-sdparse">Film siyah beyaz . \n The movie is black and white
+~~~ sdparse
+Film siyah beyaz . \n The movie is black and white
 conj(beyaz, siyah)
-</code></pre>
+~~~
 
-<pre><code class="language-sdparse">Ayşe'yle Ali kavga ediyoralardı . \n Ayşe and Ali were fighting .
+~~~ sdparse
+Ayşe'yle Ali kavga ediyoralardı . \n Ayşe and Ali were fighting .
 conj(Ali, Ayşe'yle)
-</code></pre>
+~~~
 
-<pre><code class="language-sdparse">Ayşe , Ali ve beni davet etmedi . \n He\/she did not invite Ayşe , Ali and me .
+~~~ sdparse
+Ayşe , Ali ve beni davet etmedi . \n He\/she did not invite Ayşe , Ali and me .
 conj(beni, Ali)
 conj(beni, Ayşe)
 cc(beni, ve)
 punct(beni, ,-2)
-</code></pre>
+~~~
 
-<pre><code class="language-sdparse">Ya Ayşe , ya Ali ya da  beni davet etmeliydi . \n He\/she should have invited not Ayşe , Ali or me .
+~~~ sdparse
+Ya Ayşe , ya Ali ya da  beni davet etmeliydi . \n He\/she should have invited not Ayşe , Ali or me .
 conj(beni, Ali)
 conj(beni, Ayşe)
 cc(beni, ya-6)
 cc(beni, ya-4)
 cc(beni, Ya-1)
 mwe(ya-6, da)
-</code></pre>
+~~~
 
-<p>See the relation <a href="">cc</a> for a few more examples.</p>
+See the relation [cc]() for a few more examples.
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_tr-dep/conj.md" target="#">edit conj</a></p>
 
-<p><a id="al-tr-dep/cop" class="al-dest"></a></p>
-<h2><code>cop</code>: copula</h2>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_tr-dep/conj.md" target="#">edit conj</a>
+</div>
 
-<p>A copula is the relation between a subject complement and a copular verb or copular suffix.
-We always mark copula as dependent of the subject complement.</p>
+<div about="#cop_tr" property="rdf:type" resource="#dep_tr">
+	<div property="rdf:type" resource="../../u/dep/all.html#cop" />
+	<a id="al-tr-dep/cop" class="al-dest" />
 
-<p>In Turkish, the auxiliary verb <em>ol-</em> 
-and in some constructions the negative particle <em>değil</em> act like a free copula.
+	<h2><code property="oliasystem:hasTag" lang="">cop</code>: <div property="rdfs:label">copula</div></h2>
+	<div property="rdfs:comment">
+
+A copula is the relation between a subject complement and a copular verb or copular suffix.
+We always mark copula as dependent of the subject complement.
+
+In Turkish, the auxiliary verb _ol-_ 
+and in some constructions the negative particle _değil_ act like a free copula.
 The main means of forming copular constructions, however, is through
-the bound morpheme <em>-(y)</em>,
-and (infrequently) its clitic form <em>i-</em>.
-Since the morpheme <em>-(y)</em> consists only of a “buffer” consonant,
-in some morphological contexts, it is not realized.</p>
+the bound morpheme _-(y)_,
+and (infrequently) its clitic form _i-_.
+Since the morpheme _-(y)_ consists only of a "buffer" consonant,
+in some morphological contexts, it is not realized.
 
-<p>Copular morphemes carry features, e.g., <a href="tr-feat/Number">Number</a>, <a href="tr-feat/Person">Person</a>,
+Copular morphemes carry features, e.g., [Number](tr-feat/Number), [Person](tr-feat/Person),
 that may conflict with the complement they are attached to.
 Furthermore, the copular suffixes can also attach to verbal nouns,
 causing conflicting dependency relations besides more feature conflicts.
 As a result, all copular markers, 
-including the “zero copula” are considered as a separate syntactic tokens.</p>
+including the "zero copula" are considered as a separate syntactic tokens.
 
-<pre><code class="language-sdparse">Güzel olacak . \n (He\/she\/it) will be beautiful
+~~~ sdparse
+Güzel olacak . \n (He\/she\/it) will be beautiful
 cop(Güzel, olacak)
-</code></pre>
+~~~
 
-<pre><code class="language-sdparse">Güzel idi . (He\/she\/it) was beautiful
+~~~ sdparse
+Güzel idi . (He\/she\/it) was beautiful
 cop(Güzel, idi)
-</code></pre>
+~~~
 
-<pre><code class="language-sdparse">Güzel –di . (He\/she\/it) was beautiful
+~~~ sdparse
+Güzel –di . (He\/she\/it) was beautiful
 cop(Güzel, –di)
-</code></pre>
+~~~
 
-<pre><code class="language-sdparse">Güzel –im . \n I am beautiful
+~~~ sdparse
+Güzel –im . \n I am beautiful
 cop(Güzel, –im)
-</code></pre>
+~~~
 
-<pre><code class="language-sdparse">Güzel –0 . \n He\/she\/it is beautiful (–0 represents the zero morpheme)
+~~~ sdparse
+Güzel –0 . \n He\/she\/it is beautiful (–0 represents the zero morpheme)
 cop(Güzel, –0)
-</code></pre>
+~~~
 
-<p>When an overt subject is present,
-it is headed by the subject complement (not the copula).</p>
+When an overt subject is present,
+it is headed by the subject complement (not the copula).
 
-<pre><code class="language-sdparse">Kitap güzel –0 . \n The book is nice\/beautiful 
+~~~ sdparse
+Kitap güzel –0 . \n The book is nice\/beautiful 
 cop(güzel, –0)
 nsubj(güzel, Kitap)
-</code></pre>
+~~~
 
-<pre><code class="language-sdparse">Kitap güzel olacak . \n The book will be nice\/beautiful
+~~~ sdparse
+Kitap güzel olacak . \n The book will be nice\/beautiful
 cop(güzel, olacak)
 nsubj(güzel, Kitap)
-</code></pre>
+~~~
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_tr-dep/cop.md" target="#">edit cop</a></p>
 
-<p><a id="al-tr-dep/csubj" class="al-dest"></a></p>
-<h2><code>csubj</code>: clausal subject</h2>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_tr-dep/cop.md" target="#">edit cop</a>
+</div>
 
-<p>A clausal subject is a clausal syntactic subject of a clause, i.e., the subject is itself a clause.</p>
+<div about="#csubj_tr" property="rdf:type" resource="#dep_tr">
+	<div property="rdf:type" resource="../../u/dep/all.html#csubj" />
+	<a id="al-tr-dep/csubj" class="al-dest" />
 
-<pre><code class="language-sdparse">Kitabı oku –manız gerek . \n You need to read the book (You reading the book is necessary)
+	<h2><code property="oliasystem:hasTag" lang="">csubj</code>: <div property="rdfs:label">clausal subject</div></h2>
+	<div property="rdfs:comment">
+
+A clausal subject is a clausal syntactic subject of a clause, i.e., the subject is itself a clause.
+
+~~~ sdparse
+Kitabı oku –manız gerek . \n You need to read the book (You reading the book is necessary)
 csubj(gerek, –manız)
-</code></pre>
+~~~
 
-<pre><code class="language-sdparse">Kitabı oku –mak gerek . \n You need to read the book (Reading the book is necessary)
+~~~ sdparse
+Kitabı oku –mak gerek . \n You need to read the book (Reading the book is necessary)
 csubj(gerek, –mak)
-</code></pre>
+~~~
 
-<p>TODO: link to the explanation of splitting of subordinating suffixes.</p>
+TODO: link to the explanation of splitting of subordinating suffixes.
 
-<p><strong>The following needs more discussion</strong>
-We also analyze the nominal predicates with clausal subjects formed by subordinating conjunction <em>ki</em> similarly.
-In the METU-Sabancı treebank they are marked (somewhat inconsistently) as modifiers rather than main predicates.</p>
+**The following needs more discussion**
+We also analyze the nominal predicates with clausal subjects formed by subordinating conjunction _ki_ similarly.
+In the METU-Sabancı treebank they are marked (somewhat inconsistently) as modifiers rather than main predicates.
 
-<pre><code class="language-sdparse">İyi ki okumuşsun . \n Good that you have read (that you read it is good)
+~~~ sdparse
+İyi ki okumuşsun . \n Good that you have read (that you read it is good)
 csubj(İyi, okumuşsun)
-</code></pre>
+~~~
 
-<pre><code class="language-sdparse">Tabii ki okudum . \n Of course I read it (that I read it is natural)
+~~~ sdparse
+Tabii ki okudum . \n Of course I read it (that I read it is natural)
 csubj(Tabii, okumuşsun)
-</code></pre>
+~~~
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_tr-dep/csubj.md" target="#">edit csubj</a></p>
 
-<p><a id="al-tr-dep/csubjpass" class="al-dest"></a></p>
-<h2><code>csubjpass</code>: clausal passive subject</h2>
 
-<p>A clausal passive subject is a clausal syntactic subject of a passive clause.</p>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_tr-dep/csubj.md" target="#">edit csubj</a>
+</div>
 
-<pre><code class="language-sdparse">Düya dönmüyor deniyordu . \n It was said "the earth is not rotating"
+<div about="#csubjpass_tr" property="rdf:type" resource="#dep_tr">
+	<div property="rdf:type" resource="../../u/dep/all.html#csubjpass" />
+	<a id="al-tr-dep/csubjpass" class="al-dest" />
+
+	<h2><code property="oliasystem:hasTag" lang="">csubjpass</code>: <div property="rdfs:label">clausal passive subject</div></h2>
+	<div property="rdfs:comment">
+
+A clausal passive subject is a clausal syntactic subject of a passive clause.
+
+~~~ sdparse
+Düya dönmüyor deniyordu . \n It was said "the earth is not rotating"
 csubjpass(deniyordu, dönmüyor)
-</code></pre>
+~~~
 
-<pre><code class="language-sdparse">Dünyanın dön –düğü biliniyor . \n (The fact that) the earth is rotating is known
+~~~ sdparse
+Dünyanın dön –düğü biliniyor . \n (The fact that) the earth is rotating is known
 csubjpass(biliniyor, –düğü)
-</code></pre>
+~~~
 
-<pre><code class="language-sdparse">Biliniyor ki dünya dönüyor . \n It is known that the earth is rotating
+~~~ sdparse
+Biliniyor ki dünya dönüyor . \n It is known that the earth is rotating
 csubjpass(Biliniyor, dönüyor)
-</code></pre>
+~~~
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_tr-dep/csubjpass.md" target="#">edit csubjpass</a></p>
 
-<p><a id="al-tr-dep/dep" class="al-dest"></a></p>
-<h2><code>dep</code>: unspecified dependency</h2>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_tr-dep/csubjpass.md" target="#">edit csubjpass</a>
+</div>
 
-<p>A dependency is labeled as <code>dep</code> when a system is unable to determine a more precise dependency relation between two words.</p>
+<div about="#dep_tr" property="rdf:type" resource="#dep_tr">
+	<div property="rdf:type" resource="../../u/dep/all.html#dep" />
+	<a id="al-tr-dep/dep" class="al-dest" />
 
-<p>We currently do not use the <code>dep</code> label.</p>
+	<h2><code property="oliasystem:hasTag" lang="">dep</code>: <div property="rdfs:label">unspecified dependency</div></h2>
+	<div property="rdfs:comment">
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_tr-dep/dep.md" target="#">edit dep</a></p>
+A dependency is labeled as `dep` when a system is unable to determine a more precise dependency relation between two words.
 
-<p><a id="al-tr-dep/det" class="al-dest"></a></p>
-<h2><code>det</code>: determiner</h2>
+We currently do not use the `dep` label.
 
-<p>The relation determiner (det) holds between a nominal head and its determiner.</p>
 
-<pre><code class="language-sdparse">Bütün kitapları okudu . \n (He\/she) have read all books
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_tr-dep/dep.md" target="#">edit dep</a>
+</div>
+
+<div about="#det_tr" property="rdf:type" resource="#dep_tr">
+	<div property="rdf:type" resource="../../u/dep/all.html#det" />
+	<a id="al-tr-dep/det" class="al-dest" />
+
+	<h2><code property="oliasystem:hasTag" lang="">det</code>: <div property="rdfs:label">determiner</div></h2>
+	<div property="rdfs:comment">
+
+The relation determiner (det) holds between a nominal head and its determiner.
+
+~~~ sdparse
+Bütün kitapları okudu . \n (He\/she) have read all books
 det(kitapları, Bütün)
-</code></pre>
+~~~
 
-<pre><code class="language-sdparse">Güzel bir kitap okudum . \n I read a nice book
+~~~ sdparse
+Güzel bir kitap okudum . \n I read a nice book
 det(kitap, bir)
 amod(kitap, Güzel)
-</code></pre>
+~~~
 
-<pre><code class="language-sdparse">Bu kitabı okumalısın . \n You should read this book
+~~~ sdparse
+Bu kitabı okumalısın . \n You should read this book
 det(kitabı, Bu)
-</code></pre>
+~~~
 
-<pre><code class="language-sdparse">Bazı kitaplar bombadan tehlikelidir . \n Some books are more dangerous than a bomb
+~~~ sdparse
+Bazı kitaplar bombadan tehlikelidir . \n Some books are more dangerous than a bomb
 det(kitaplar, Bazı)
-</code></pre>
+~~~
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_tr-dep/det.md" target="#">edit det</a></p>
 
-<p><a id="al-tr-dep/discourse" class="al-dest"></a></p>
-<h2><code>discourse</code>: discourse element</h2>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_tr-dep/det.md" target="#">edit det</a>
+</div>
 
-<p>This is used for interjections and other discourse particles and elements
-(which are not clearly linked to the structure of the sentence, except in an expressive way).</p>
+<div about="#discourse_tr" property="rdf:type" resource="#dep_tr">
+	<div property="rdf:type" resource="../../u/dep/all.html#discourse" />
+	<a id="al-tr-dep/discourse" class="al-dest" />
 
-<pre><code class="language-sdparse">Okudu mu acaba ? \n Did he\/she read (I wonder) ?
+	<h2><code property="oliasystem:hasTag" lang="">discourse</code>: <div property="rdfs:label">discourse element</div></h2>
+	<div property="rdfs:comment">
+
+This is used for interjections and other discourse particles and elements
+(which are not clearly linked to the structure of the sentence, except in an expressive way).
+
+~~~ sdparse
+Okudu mu acaba ? \n Did he\/she read (I wonder) ?
 discourse(Okudu, acaba)
-</code></pre>
+~~~
 
-<pre><code class="language-sdparse">Çabuk okusa bari . \n I wish he reads quickly 'bari'
+~~~ sdparse
+Çabuk okusa bari . \n I wish he reads quickly 'bari'
 discourse(okusa, bari)
-</code></pre>
+~~~
 
-<pre><code class="language-sdparse">Aferin , okumuşsun . \n Well done! You must have read it.
+~~~ sdparse
+Aferin , okumuşsun . \n Well done! You must have read it.
 discourse(okumuşsun, Aferin)
-</code></pre>
+~~~
 
-<pre><code class="language-sdparse">Bak , bu kitabı okumalısın . \n look, you need to read this book
+~~~ sdparse
+Bak , bu kitabı okumalısın . \n look, you need to read this book
 discourse(okumalısın, Bak)
-</code></pre>
+~~~
 
-<pre><code class="language-sdparse">Peki , kitabı okudun mu ? \n OK, have you read the book?
+~~~ sdparse
+Peki , kitabı okudun mu ? \n OK, have you read the book?
 discourse(okudun, Peki)
-</code></pre>
+~~~
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_tr-dep/discourse.md" target="#">edit discourse</a></p>
 
-<p><a id="al-tr-dep/dislocated" class="al-dest"></a></p>
-<h2><code>dislocated</code>: dislocated elements</h2>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_tr-dep/discourse.md" target="#">edit discourse</a>
+</div>
 
-<p>The <code>dislocated</code> relation is used for fronted or postposed elements that do not fulfill the usual core grammatical relations of a sentence.
+<div about="#dislocated_tr" property="rdf:type" resource="#dep_tr">
+	<div property="rdf:type" resource="../../u/dep/all.html#dislocated" />
+	<a id="al-tr-dep/dislocated" class="al-dest" />
+
+	<h2><code property="oliasystem:hasTag" lang="">dislocated</code>: <div property="rdfs:label">dislocated elements</div></h2>
+	<div property="rdfs:comment">
+
+The `dislocated` relation is used for fronted or postposed elements that do not fulfill the usual core grammatical relations of a sentence.
 These elements often appear to be in the periphery of the sentence,
-and may be separated off with a comma intonation.</p>
+and may be separated off with a comma intonation.
 
-<pre><code class="language-sdparse">Ali ki hızlı okur, o bile kitabı bitiremedi . \n Ali, who is a fast reader, even he could not finish the book .
+~~~ sdparse
+Ali ki hızlı okur, o bile kitabı bitiremedi . \n Ali, who is a fast reader, even he could not finish the book .
 dislocated(o, Ali)
-</code></pre>
+~~~
 
-<pre><code class="language-sdparse">Bir öğrenci ki yazım kurallarına dikkat etmez, ben onu dersten geçirmem . \n A student who does not pay attention to the spelling, I do not allow him/her to pass the course .
+~~~ sdparse
+Bir öğrenci ki yazım kurallarına dikkat etmez, ben onu dersten geçirmem . \n A student who does not pay attention to the spelling, I do not allow him/her to pass the course .
 dislocated(onu, öğrenci)
-</code></pre>
+~~~
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_tr-dep/dislocated.md" target="#">edit dislocated</a></p>
 
-<p><a id="al-tr-dep/dobj" class="al-dest"></a></p>
-<h2><code>dobj</code>: direct object</h2>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_tr-dep/dislocated.md" target="#">edit dislocated</a>
+</div>
 
-<p>The direct object of a verb is the noun phrase that denotes the entity acted upon.</p>
+<div about="#dobj_tr" property="rdf:type" resource="#dep_tr">
+	<div property="rdf:type" resource="../../u/dep/all.html#dobj" />
+	<a id="al-tr-dep/dobj" class="al-dest" />
 
-<p>In Turkish, direct objects take either nominative (unmarked), or accusative <a href="tr-feat/Case">cases</a>.
-We do not mark arguments of verbs in other cases with <code>dobj</code>.
-(<strong>NOTE:</strong> Kyrgiz treebank marks ablatives as in <em>pastadan aldı</em> ‘he took from the cake’. We may consider doing the same. At least we should try to unify the analyses.)
-Note also that we mark objects of intransitive causative verbs using <a href="dobj-cau">dobj:cau</a>.</p>
+	<h2><code property="oliasystem:hasTag" lang="">dobj</code>: <div property="rdfs:label">direct object</div></h2>
+	<div property="rdfs:comment">
 
-<pre><code class="language-sdparse">Hafta sonları kitap okurum . \n I read (books) during weekends
+The direct object of a verb is the noun phrase that denotes the entity acted upon.
+
+In Turkish, direct objects take either nominative (unmarked), or accusative [cases](tr-feat/Case).
+We do not mark arguments of verbs in other cases with `dobj`.
+(**NOTE:** Kyrgiz treebank marks ablatives as in _pastadan aldı_ 'he took from the cake'. We may consider doing the same. At least we should try to unify the analyses.)
+Note also that we mark objects of intransitive causative verbs using [dobj:cau](dobj-cau).
+
+~~~ sdparse
+Hafta sonları kitap okurum . \n I read (books) during weekends
 dobj(okurum, kitap)
-</code></pre>
+~~~
 
-<pre><code class="language-sdparse">Kitabı okudum . \n I read the book.
+~~~ sdparse
+Kitabı okudum . \n I read the book.
 dobj(okudum, Kitabı)
-</code></pre>
+~~~
 
-<p>We also mark the non-case marked or accusative noun phrases as <code>dobj</code> even if they are not the entities that are acted upon.</p>
+We also mark the non-case marked or accusative noun phrases as `dobj` even if they are not the entities that are acted upon.
 
-<pre><code class="language-sdparse">Dün 10 kilometre koştum . \n I ran 10 kilometers yesterday
+~~~ sdparse
+Dün 10 kilometre koştum . \n I ran 10 kilometers yesterday
 dobj(koştum, kilometre)
-</code></pre>
+~~~
 
-<pre><code class="language-sdparse">Dün 10 kilometreyi 35 dakikada koştum . \n  Yesterday, I ran 10 kilometers in 35 minutes
+~~~ sdparse
+Dün 10 kilometreyi 35 dakikada koştum . \n  Yesterday, I ran 10 kilometers in 35 minutes
 dobj(koştum, kilometreyi)
-</code></pre>
+~~~
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_tr-dep/dobj.md" target="#">edit dobj</a></p>
 
-<p><a id="al-tr-dep/dobj:cau" class="al-dest"></a></p>
-<h2><code>dobj:cau</code>: direct object of an intransitive causative verb</h2>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_tr-dep/dobj.md" target="#">edit dobj</a>
+</div>
 
-<p>This is a subtype of <a href="">dobj</a>.
-We mark direct objects of causative <a href="tr-dep/Voice">voice</a> intransitive verbs with this subtype,
+<div about="#dobj%3Acau_tr" property="rdf:type" resource="#dep_tr">
+	<div property="rdf:type" resource="../../u/dep/all.html#dobj" />
+	<a id="al-tr-dep/dobj:cau" class="al-dest" />
+
+	<h2><code property="oliasystem:hasTag" lang="">dobj:cau</code>: <div property="rdfs:label">direct object of an intransitive causative verb</div></h2>
+	<div property="rdfs:comment">
+
+This is a subtype of [dobj]().
+We mark direct objects of causative [voice](tr-dep/Voice) intransitive verbs with this subtype,
 since the interpretation is different in comparison to a direct object of a non-causative verb.
-In general, if the verb is intransitive, direct object indicates the “causee”,
+In general, if the verb is intransitive, direct object indicates the "causee",
 the subject of the content verb, or the entity that performs the action.
-If the verb is transitive the direct object is the entity that is acted upon as in the non-causative case (see <a href="nmod-cau">nmod:cau</a>).</p>
+If the verb is transitive the direct object is the entity that is acted upon as in the non-causative case (see [nmod:cau](nmod-cau)).
 
-<pre><code class="language-sdparse">Annesi bebeği giydirdi . \n His mother dressed (caused to dress) the baby
+~~~ sdparse
+Annesi bebeği giydirdi . \n His mother dressed (caused to dress) the baby
 dobj:cau(giydirdi, bebeği)
-</code></pre>
+~~~
 
-<pre><code class="language-sdparse">Bebek herkesi sevindirdi . \n The baby causes everyone to be happy
+~~~ sdparse
+Bebek herkesi sevindirdi . \n The baby causes everyone to be happy
 dobj:cau(sevindirdi, herkesi)
-</code></pre>
+~~~ 
 
-<pre><code class="language-sdparse">Öğretmen dersi kolaylaştırdı . \n The teacher made the course easier
+~~~ sdparse
+Öğretmen dersi kolaylaştırdı . \n The teacher made the course easier
 dobj:cau(kolaylaştırdı, dersi)
-</code></pre>
+~~~
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_tr-dep/dobj-cau.md" target="#">edit dobj:cau</a></p>
 
-<p><a id="al-tr-dep/expl" class="al-dest"></a></p>
-<h2><code>expl</code>: expletive</h2>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_tr-dep/dobj-cau.md" target="#">edit dobj:cau</a>
+</div>
 
-<p>Turkish does not have expletives.</p>
+<div about="#expl_tr" property="rdf:type" resource="#dep_tr">
+	<div property="rdf:type" resource="../../u/dep/all.html#expl" />
+	<a id="al-tr-dep/expl" class="al-dest" />
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_tr-dep/expl.md" target="#">edit expl</a></p>
+	<h2><code property="oliasystem:hasTag" lang="">expl</code>: <div property="rdfs:label">expletive</div></h2>
+	<div property="rdfs:comment">
 
-<p><a id="al-tr-dep/foreign" class="al-dest"></a></p>
-<h2><code>foreign</code>: foreign words</h2>
+Turkish does not have expletives.
 
-<p>We use foreign to label sequences of foreign words.
-These are given a linear analysis: the head is the first token in the foreign phrase.</p>
 
-<pre><code class="language-sdparse">Diplomat ve uzmanlarla off the record görüşmeler yaptım . \n I had off the record interviews with diplomats and experts .
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_tr-dep/expl.md" target="#">edit expl</a>
+</div>
+
+<div about="#foreign_tr" property="rdf:type" resource="#dep_tr">
+	<div property="rdf:type" resource="../../u/dep/all.html#foreign" />
+	<a id="al-tr-dep/foreign" class="al-dest" />
+
+	<h2><code property="oliasystem:hasTag" lang="">foreign</code>: <div property="rdfs:label">foreign words</div></h2>
+	<div property="rdfs:comment">
+
+We use foreign to label sequences of foreign words.
+These are given a linear analysis: the head is the first token in the foreign phrase.
+
+~~~ sdparse
+Diplomat ve uzmanlarla off the record görüşmeler yaptım . \n I had off the record interviews with diplomats and experts .
 amod(görüşmeler, off)
 foreign(off, the)
 foreign(off, record)
-</code></pre>
+~~~
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_tr-dep/foreign.md" target="#">edit foreign</a></p>
 
-<p><a id="al-tr-dep/goeswith" class="al-dest"></a></p>
-<h2><code>goeswith</code>: goes with</h2>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_tr-dep/foreign.md" target="#">edit foreign</a>
+</div>
 
-<p>This relation links two parts of a word that are separated in text that is not well edited. 
-The head is in some sense the “main” part, often the second part.</p>
+<div about="#goeswith_tr" property="rdf:type" resource="#dep_tr">
+	<div property="rdf:type" resource="../../u/dep/all.html#goeswith" />
+	<a id="al-tr-dep/goeswith" class="al-dest" />
 
-<pre><code class="language-sdparse">Bu kitap hiç bir işe yaramaz . \n This book is worth nothing.
+	<h2><code property="oliasystem:hasTag" lang="">goeswith</code>: <div property="rdfs:label">goes with</div></h2>
+	<div property="rdfs:comment">
+
+This relation links two parts of a word that are separated in text that is not well edited. 
+The head is in some sense the "main" part, often the second part.
+
+~~~ sdparse
+Bu kitap hiç bir işe yaramaz . \n This book is worth nothing.
 goeswith(bir, hiç)
 det(bir)
-</code></pre>
+~~~
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_tr-dep/goeswith.md" target="#">edit goeswith</a></p>
 
-<p><a id="al-tr-dep/iobj" class="al-dest"></a></p>
-<h2><code>iobj</code>: indirect object</h2>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_tr-dep/goeswith.md" target="#">edit goeswith</a>
+</div>
 
-<p>We do not use the dependency label <code>iobj</code>.</p>
+<div about="#iobj_tr" property="rdf:type" resource="#dep_tr">
+	<div property="rdf:type" resource="../../u/dep/all.html#iobj" />
+	<a id="al-tr-dep/iobj" class="al-dest" />
 
-<p>TODO: link to argument/adjunct discussion.</p>
+	<h2><code property="oliasystem:hasTag" lang="">iobj</code>: <div property="rdfs:label">indirect object</div></h2>
+	<div property="rdfs:comment">
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_tr-dep/iobj.md" target="#">edit iobj</a></p>
+We do not use the dependency label `iobj`.
 
-<p><a id="al-tr-dep/list" class="al-dest"></a></p>
-<h2><code>list</code>: list</h2>
+TODO: link to argument/adjunct discussion.
 
-<p>The <code>list</code> relation is used for chains of comparable items. In lists with more than two items, all items of the list should modify the first one. Informal and web text often contains passages which are meant to be interpreted as lists but are parsed as single sentences. Email signatures often contain these structures, in the form of contact information: the different contact information items are labeled as <code>list</code>; the key-value pair relations are labeled as <a href="">appos</a>.</p>
 
-<pre><code class="language-sdparse">Ali Yılmaz ,  tel : 555-55-55 , email : ali@example.com
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_tr-dep/iobj.md" target="#">edit iobj</a>
+</div>
+
+<div about="#list_tr" property="rdf:type" resource="#dep_tr">
+	<div property="rdf:type" resource="../../u/dep/all.html#list" />
+	<a id="al-tr-dep/list" class="al-dest" />
+
+	<h2><code property="oliasystem:hasTag" lang="">list</code>: <div property="rdfs:label">list</div></h2>
+	<div property="rdfs:comment">
+
+The `list` relation is used for chains of comparable items. In lists with more than two items, all items of the list should modify the first one. Informal and web text often contains passages which are meant to be interpreted as lists but are parsed as single sentences. Email signatures often contain these structures, in the form of contact information: the different contact information items are labeled as `list`; the key-value pair relations are labeled as [appos]().
+
+
+~~~ sdparse
+Ali Yılmaz ,  tel : 555-55-55 , email : ali@example.com
 name(Ali, Yılmaz)
 list(Ali, tel)
 list(Ali, email)
 appos(tel, 555-55-55)
 appos(email, ali@example.com)
-</code></pre>
+~~~
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_tr-dep/list.md" target="#">edit list</a></p>
 
-<p><a id="al-tr-dep/mark" class="al-dest"></a></p>
-<h2><code>mark</code>: marker</h2>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_tr-dep/list.md" target="#">edit list</a>
+</div>
 
-<p>A marker is the subordinating conjunction introducing a finite clause subordinate to another clause.
-The mark is a dependent of the subordinate clause head.</p>
+<div about="#mark_tr" property="rdf:type" resource="#dep_tr">
+	<div property="rdf:type" resource="../../u/dep/all.html#mark" />
+	<a id="al-tr-dep/mark" class="al-dest" />
 
-<pre><code class="language-sdparse">Okusun diye kitaplar aldım . \n I bought books for him to read .
+	<h2><code property="oliasystem:hasTag" lang="">mark</code>: <div property="rdfs:label">marker</div></h2>
+	<div property="rdfs:comment">
+
+A marker is the subordinating conjunction introducing a finite clause subordinate to another clause.
+The mark is a dependent of the subordinate clause head.
+
+~~~ sdparse
+Okusun diye kitaplar aldım . \n I bought books for him to read .
 mark(Okusun, diye)
-</code></pre>
+~~~
 
-<pre><code class="language-sdparse">Okudum ki öğreneyim . \n I read in order to learn.
+~~~ sdparse
+Okudum ki öğreneyim . \n I read in order to learn.
 mark(öğreneyim, ki)
-</code></pre>
+~~~
 
-<pre><code class="language-sdparse">Göründüğü kadar güzel mi ? \n Is it as good as it looks?
+~~~ sdparse
+Göründüğü kadar güzel mi ? \n Is it as good as it looks?
 mark(Göründüğü, kadar)
-</code></pre>
+~~~
 
-<pre><code class="language-sdparse">Başladın mı ,  gerisi gelir. \n Once you start, the rest would follow
+~~~ sdparse
+Başladın mı ,  gerisi gelir. \n Once you start, the rest would follow
 mark(Başladın, mı)
-</code></pre>
+~~~
 
-<pre><code class="language-sdparse">Okudum da anladım . \n I understood by reading
+~~~ sdparse
+Okudum da anladım . \n I understood by reading
 mark(Okudum, da)
-</code></pre>
+~~~
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_tr-dep/mark.md" target="#">edit mark</a></p>
 
-<p><a id="al-tr-dep/mwe" class="al-dest"></a></p>
-<h2><code>mwe</code>: multi-word expression</h2>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_tr-dep/mark.md" target="#">edit mark</a>
+</div>
 
-<p>The multi-word expression (modifier) relation is one of the three relations (<a href="">compound</a>, <code>mwe</code>, <a href="">name</a>) for compounding.
-It is used for certain fixed grammaticized expressions that behave like function words or short adverbials.</p>
+<div about="#mwe_tr" property="rdf:type" resource="#dep_tr">
+	<div property="rdf:type" resource="../../u/dep/all.html#mwe" />
+	<a id="al-tr-dep/mwe" class="al-dest" />
 
-<p>Note that, we mark most of the expressions that are marked <code>MWE</code> in METU-Sabancı treebank as <code>compound</code>. 
-<code>mwe</code> is only used for fixed expressions that do not show any morphological variation.</p>
+	<h2><code property="oliasystem:hasTag" lang="">mwe</code>: <div property="rdfs:label">multi-word expression</div></h2>
+	<div property="rdfs:comment">
 
-<pre><code class="language-sdparse">Ali ya da Ahmet  \n Ali or Ahmet
+The multi-word expression (modifier) relation is one of the three relations ([compound](), `mwe`, [name]()) for compounding.
+It is used for certain fixed grammaticized expressions that behave like function words or short adverbials.
+
+Note that, we mark most of the expressions that are marked `MWE` in METU-Sabancı treebank as `compound`. 
+`mwe` is only used for fixed expressions that do not show any morphological variation.
+
+~~~ sdparse
+Ali ya da Ahmet  \n Ali or Ahmet
 mwe(ya, da)
-</code></pre>
+~~~
 
-<pre><code class="language-sdparse">Bir tek Ali okumamış . \n Only Ali did not read
+~~~ sdparse
+Bir tek Ali okumamış . \n Only Ali did not read
 mwe(bir, tek)
-</code></pre>
+~~~
 
-<pre><code class="language-sdparse">Her ne kadar aradıysam da ulaşamadım . \n Despite calling many times, I could not reach (him\/her)
+~~~ sdparse
+Her ne kadar aradıysam da ulaşamadım . \n Despite calling many times, I could not reach (him\/her)
 mwe(Her, ne)
 mwe(Her, kadar)
-</code></pre>
+~~~
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_tr-dep/mwe.md" target="#">edit mwe</a></p>
 
-<p><a id="al-tr-dep/name" class="al-dest"></a></p>
-<h2><code>name</code>: name</h2>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_tr-dep/mwe.md" target="#">edit mwe</a>
+</div>
 
-<p><code>name</code> is one of the three relations for compounding in UD (together with <a href="">compound</a> and <a href="">mwe</a>).
+<div about="#name_tr" property="rdf:type" resource="#dep_tr">
+	<div property="rdf:type" resource="../../u/dep/all.html#name" />
+	<a id="al-tr-dep/name" class="al-dest" />
+
+	<h2><code property="oliasystem:hasTag" lang="">name</code>: <div property="rdfs:label">name</div></h2>
+	<div property="rdfs:comment">
+
+`name` is one of the three relations for compounding in UD (together with [compound]() and [mwe]()).
 It is used for proper nouns constituted of multiple nominal elements.
-For phrasal or clausal names the usual relations are used.</p>
+For phrasal or clausal names the usual relations are used.
 
-<pre><code class="language-sdparse">Mustafa Kemal
+~~~ sdparse
+Mustafa Kemal
 name(Kemal, Mustafa)
-</code></pre>
+~~~
 
-<pre><code class="language-sdparse">Mustafa Kemal Paşa
+~~~ sdparse
+Mustafa Kemal Paşa
 name(Kemal, Mustafa)
 nmod(Paşa, Kemal)
-</code></pre>
+~~~
 
-<pre><code class="language-sdparse">Necla Hanım
+~~~ sdparse
+Necla Hanım
 nmod(Hanım, Necla)
-</code></pre>
+~~~
 
-<pre><code class="language-sdparse">Mahmut öğretmen
+~~~ sdparse
+Mahmut öğretmen
 nmod(öğretmen, Mahmut)
-</code></pre>
+~~~
 
-<pre><code class="language-sdparse">Türkiye Büyük Millet Meclisi
+~~~ sdparse
+Türkiye Büyük Millet Meclisi
 nmod:poss(Meclisi, Millet)
 amod(Meclisi, Büyük)
 nmod:poss(Meclisi, Türkiye)
-</code></pre>
+~~~
 
-<pre><code class="language-sdparse">Van Gölü
+~~~ sdparse
+Van Gölü
 nmod:poss(Gölü, Van)
-</code></pre>
+~~~
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_tr-dep/name.md" target="#">edit name</a></p>
 
-<p><a id="al-tr-dep/neg" class="al-dest"></a></p>
-<h2><code>neg</code>: negation modifier</h2>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_tr-dep/name.md" target="#">edit name</a>
+</div>
 
-<p>The negation modifier is the relation between a negation word and the word it modifies.</p>
+<div about="#neg_tr" property="rdf:type" resource="#dep_tr">
+	<div property="rdf:type" resource="../../u/dep/all.html#neg" />
+	<a id="al-tr-dep/neg" class="al-dest" />
 
-<p>In Turkish, negation is typically done through suffixation.
-We use <code>neg</code> only if the non-predicative use of  the word <em>değil</em>.</p>
+	<h2><code property="oliasystem:hasTag" lang="">neg</code>: <div property="rdfs:label">negation modifier</div></h2>
+	<div property="rdfs:comment">
 
-<pre><code class="language-sdparse">Elma değil , armut al demiştim . \n I asked for pears, not for apples.
+The negation modifier is the relation between a negation word and the word it modifies.
+
+In Turkish, negation is typically done through suffixation.
+We use `neg` only if the non-predicative use of  the word _değil_.
+
+~~~ sdparse
+Elma değil , armut al demiştim . \n I asked for pears, not for apples.
 neg(Elma, değil)
-</code></pre>
+~~~
 
-<pre><code class="language-sdparse">En büyüğünü al dedim, küçük değil . \n I told you to get the biggest
+~~~ sdparse
+En büyüğünü al dedim, küçük değil . \n I told you to get the biggest
 not small(est)
 neg(küçük, değil)
-</code></pre>
+~~~
 
-<pre><code class="language-sdparse">Değil üniversite , orta okulu bile bitirmemiş . \n Let alone the university, he did not even finish the secondary school
+
+~~~ sdparse
+Değil üniversite , orta okulu bile bitirmemiş . \n Let alone the university, he did not even finish the secondary school
 neg(üniversite, Değil)
-</code></pre>
+~~~
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_tr-dep/neg.md" target="#">edit neg</a></p>
 
-<p><a id="al-tr-dep/nmod" class="al-dest"></a></p>
-<h2><code>nmod</code>: nominal modifier</h2>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_tr-dep/neg.md" target="#">edit neg</a>
+</div>
 
-<p>The <code>nmod</code> relation is used for nominal modifiers.
-They depend either on another noun (group “noun dependents”) or on a predicate (group “non-core dependents of clausal predicates”).</p>
+<div about="#nmod_tr" property="rdf:type" resource="#dep_tr">
+	<div property="rdf:type" resource="../../u/dep/all.html#nmod" />
+	<a id="al-tr-dep/nmod" class="al-dest" />
 
-<p><code>nmod</code> is a <a href="tr-pos/NOUN">noun</a> (or noun phrase) functioning as a non-core (oblique) argument or adjunct.
+	<h2><code property="oliasystem:hasTag" lang="">nmod</code>: <div property="rdfs:label">nominal modifier</div></h2>
+	<div property="rdfs:comment">
+
+The `nmod` relation is used for nominal modifiers.
+They depend either on another noun (group “noun dependents”) or on a predicate (group “non-core dependents of clausal predicates”).
+
+`nmod` is a [noun](tr-pos/NOUN) (or noun phrase) functioning as a non-core (oblique) argument or adjunct.
 This means that it functionally corresponds to an adverbial when it attaches to a verb, adjective or other adverb.
-But when attaching to a noun, it corresponds to an attribute, or genitive complement (the terms are less standardized here).</p>
+But when attaching to a noun, it corresponds to an attribute, or genitive complement (the terms are less standardized here).
 
-<p>The <code>nmod</code> relation is further specified by the <a href="tr-feat/Case">Case</a> feature or <a href="">case</a> relation.</p>
+The `nmod` relation is further specified by the [Case](tr-feat/Case) feature or [case]() relation.
 
-<p>We also use the following language-specific subtypes for nmod:</p>
+We also use the following language-specific subtypes for nmod:
 
-<ul>
-  <li><a href="nmod-cau">nomd:cau</a>: nominal modifier of a causative predicate that
-markes the <em>causee</em>.</li>
-  <li><a href="nmod-comp">nmod:comp</a>: a comparative nominal modifier</li>
-  <li><a href="nmod-pass">nmod:pass</a>: nominal modifier of a passive predicate that
-express the actor (subject of the active predicate)</li>
-  <li><a href="nmod-tmod">nmod:tmod</a>: nominal modifier that indicates time</li>
-  <li><a href="nmod-own">nmod:own</a>: owner in a possessive existential sentence</li>
-  <li><a href="nmod-poss">nmod:poss</a>: possessor in in a genitive-possessive construction</li>
-  <li><a href="nmod-part">nmod:part</a>: noun modifier specifying the whole-part relation</li>
-</ul>
+- [nomd:cau](nmod-cau): nominal modifier of a causative predicate that
+  markes the _causee_.
+- [nmod:comp](nmod-comp): a comparative nominal modifier
+- [nmod:pass](nmod-pass): nominal modifier of a passive predicate that
+  express the actor (subject of the active predicate)
+- [nmod:tmod](nmod-tmod): nominal modifier that indicates time
+- [nmod:own](nmod-own): owner in a possessive existential sentence
+- [nmod:poss](nmod-poss): possessor in in a genitive-possessive construction
+- [nmod:part](nmod-part): noun modifier specifying the whole-part relation
 
-<p>We do not currently distinguish between core arguments and adjuncts
-(TODO: link to discussion).</p>
+We do not currently distinguish between core arguments and adjuncts
+(TODO: link to discussion).
 
-<pre><code class="language-conllu"># I read the book on the plane
+~~~ conllu
+# I read the book on the plane
 1	Kitabı	kitap	NOUN	NOUN	Case=Acc	3	dobj
 2	uçakta	uçak	NOUN	NOUN	Case=Loc	3	nmod
 3	okudum	oku	VERB	VERB	Tense=Past|Person=1|Number=Sing	0	root
-</code></pre>
+~~~
 
-<pre><code class="language-conllu"># I read the book with the glasses
+~~~ conllu
+# I read the book with the glasses
 1	Kitabı	kitap	NOUN	NOUN	Case=Acc	3	dobj
 2	gözlükle	gözlük	NOUN	NOUN	Case=Ins	3	nmod
 3	okudum	oku	VERB	VERB	Tense=Past|Person=1|Number=Sing	0	root
-</code></pre>
+~~~
 
-<pre><code class="language-conllu"># I read the book out of curiosity
+~~~ conllu
+# I read the book out of curiosity
 1	Kitabı	kitap	NOUN	NOUN	Case=Acc	3	dobj
 2	meraktan	merak	NOUN	NOUN	Case=Abl	3	nmod
 3	okudum	oku	VERB	VERB	Tense=Past|Person=1|Number=Sing	0	root
-</code></pre>
+~~~
 
-<pre><code class="language-conllu"># I read the book to the children
+~~~ conllu
+# I read the book to the children
 1	Kitabı	kitap	NOUN	NOUN	Case=Acc	3	dobj
 2	çocuklara	çocuk	NOUN	NOUN	Case=Dat	3	nmod
 3	okudum	oku	VERB	VERB	Tense=Past|Person=1|Number=Sing	0	root
-</code></pre>
+~~~
 
-<pre><code class="language-sdparse">resim –li kitap \n (the\/a) book with illustrations
+~~~ sdparse
+resim –li kitap \n (the\/a) book with illustrations
 nmod(kitap, resim)
 case(resim, –li)
-</code></pre>
+~~~
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_tr-dep/nmod.md" target="#">edit nmod</a></p>
 
-<p><a id="al-tr-dep/nmod:cau" class="al-dest"></a></p>
-<h2><code>nmod:cau</code>: nominal modifier indicating the causee of a causative predicate</h2>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_tr-dep/nmod.md" target="#">edit nmod</a>
+</div>
 
-<p>This subtype of <a href="">nmod</a> is used for marking the performer of the real action, “causee”, in a causative predicate.
-The subject of the causative predicate is the actor who <em>causes</em> the action to be taken.
+<div about="#nmod%3Acau_tr" property="rdf:type" resource="#dep_tr">
+	<div property="rdf:type" resource="../../u/dep/all.html#nmod" />
+	<a id="al-tr-dep/nmod:cau" class="al-dest" />
+
+	<h2><code property="oliasystem:hasTag" lang="">nmod:cau</code>: <div property="rdfs:label">nominal modifier indicating the causee of a causative predicate</div></h2>
+	<div property="rdfs:comment">
+
+This subtype of [nmod]() is used for marking the performer of the real action, "causee", in a causative predicate.
+The subject of the causative predicate is the actor who _causes_ the action to be taken.
 Occasionally the performer of the action is also included in the phrase/sentence, and it is useful to mark it.
 The causee is predictable for intransitive verbs,
 since it is the object of the causative predicate.
-For transitive verbs, it is often marked with dative <a href="tr-feat/Case">Case</a>,
-but it is ambiguous as a dative nominal modifier also has the function of marking the “beneficiary” (and possibly others).</p>
+For transitive verbs, it is often marked with dative [Case](tr-feat/Case),
+but it is ambiguous as a dative nominal modifier also has the function of marking the "beneficiary" (and possibly others).
 
-<pre><code class="language-sdparse">Annesi bebeği uyuttu . \n Her mother caused the baby to sleep (=put the baby to sleep)
+
+~~~ sdparse
+Annesi bebeği uyuttu . \n Her mother caused the baby to sleep (=put the baby to sleep)
 nmod:cau(uyuttu, bebeği)
 nsubj(uyuttu, Annesi)
-</code></pre>
+~~~
 
-<pre><code class="language-sdparse">Öğretmen kitabı Ali'ye okuttu . \n The teacher caused (made) Ali to read the book
+~~~ sdparse
+Öğretmen kitabı Ali'ye okuttu . \n The teacher caused (made) Ali to read the book
 nmod:cau(okuttu, Ali'ye)
 nsubj(okuttu, Öğretmen)
-</code></pre>
-<p>Note that the above is ambiguous.
-It may also mean “The teacher made someone to read the book to/for Ali”.
-In that case <a href="">nmod</a> should be used.</p>
+~~~
+Note that the above is ambiguous.
+It may also mean "The teacher made someone to read the book to/for Ali".
+In that case [nmod]() should be used.
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_tr-dep/nmod-cau.md" target="#">edit nmod:cau</a></p>
 
-<p><a id="al-tr-dep/nmod:comp" class="al-dest"></a></p>
-<h2><code>nmod:comp</code>: comparative modifier of an adjective or adverb</h2>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_tr-dep/nmod-cau.md" target="#">edit nmod:cau</a>
+</div>
 
-<p>This subtype of <a href="">nmod</a> is used for marking comparative modifier of an <a href="tr-pos/Adj">adjective</a> or <a href="tr-pos/Adv">adverb</a>.</p>
+<div about="#nmod%3Acomp_tr" property="rdf:type" resource="#dep_tr">
+	<div property="rdf:type" resource="../../u/dep/all.html#nmod" />
+	<a id="al-tr-dep/nmod:comp" class="al-dest" />
 
-<pre><code class="language-sdparse">Türkiye'den sıcak bir ülke \n A country warmer than Turkey
+	<h2><code property="oliasystem:hasTag" lang="">nmod:comp</code>: <div property="rdfs:label">comparative modifier of an adjective or adverb</div></h2>
+	<div property="rdfs:comment">
+
+This subtype of [nmod]() is used for marking comparative modifier of an [adjective](tr-pos/Adj) or [adverb](tr-pos/Adv).
+
+
+~~~ sdparse
+Türkiye'den sıcak bir ülke \n A country warmer than Turkey
 nmod:comp(sıcak, Türkiye'den)
-</code></pre>
+~~~
 
-<pre><code class="language-sdparse">Benden çok okudu . \n He\/she read more than me (more than I did)
+~~~ sdparse
+Benden çok okudu . \n He\/she read more than me (more than I did)
 nmod:comp(çok, Benden)
-</code></pre>
+~~~
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_tr-dep/nmod-comp.md" target="#">edit nmod:comp</a></p>
 
-<p><a id="al-tr-dep/nmod:own" class="al-dest"></a></p>
-<h2><code>nmod:own</code>: owner in a possessive existential sentence</h2>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_tr-dep/nmod-comp.md" target="#">edit nmod:comp</a>
+</div>
 
-<p><strong>This needs more discussion</strong></p>
+<div about="#nmod%3Aown_tr" property="rdf:type" resource="#dep_tr">
+	<div property="rdf:type" resource="../../u/dep/all.html#nmod" />
+	<a id="al-tr-dep/nmod:own" class="al-dest" />
 
-<p>This subtype of <a href="">nmod</a> is used for marking the owner of a possessive existential sentence.</p>
+	<h2><code property="oliasystem:hasTag" lang="">nmod:own</code>: <div property="rdfs:label">owner in a possessive existential sentence</div></h2>
+	<div property="rdfs:comment">
 
-<p>In Turkish possessive sentences (e.g., “I have a book”) resemble existential sentences
-where the subject is the entity that “exists”, or “owned”.
-<code>nmod:own</code> relation marks the entity that “owns” the subject.
+**This needs more discussion**
+
+This subtype of [nmod]() is used for marking the owner of a possessive existential sentence.
+
+In Turkish possessive sentences (e.g., "I have a book") resemble existential sentences
+where the subject is the entity that "exists", or "owned".
+`nmod:own` relation marks the entity that "owns" the subject.
 The head of the relation is the predicate,
 as opposed to the subject noun phrase
 (this allows a uniform analysis in case the subject is dropped).
-It should not be confused with <a href="nmod-poss">nmod:poss</a>,
-which is used in (genitive-)possessive constructions.</p>
+It should not be confused with [nmod:poss](nmod-poss),
+which is used in (genitive-)possessive constructions.
 
-<pre><code class="language-sdparse">Benim bir kitabım var . \n I have a book
+~~~ sdparse
+Benim bir kitabım var . \n I have a book
 nmod:own(var, Benim)
 nsubj(var, kitabım)
-</code></pre>
+~~~
 
-<pre><code class="language-sdparse">Benim var , ama Ali'nin yok . \n I have (it\/something), but Ali doesn't
+~~~ sdparse
+Benim var , ama Ali'nin yok . \n I have (it\/something), but Ali doesn't
 nmod:own(var, Benim)
 nmod:own(yok, Ali'nin)
-</code></pre>
+~~~
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_tr-dep/nmod-own.md" target="#">edit nmod:own</a></p>
 
-<p><a id="al-tr-dep/nmod:part" class="al-dest"></a></p>
-<h2><code>nmod:part</code>: nominal modifier indicating part-whole relations</h2>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_tr-dep/nmod-own.md" target="#">edit nmod:own</a>
+</div>
 
-<p>This subtype of <a href="">nmod</a> is used for marking the part-whole relations.
-The structure is similar to <a href="nmod-poss">nmod:poss</a> in most cases,
-but the range structures expressing “part of” is diverse, 
-and distinction is often be useful.</p>
+<div about="#nmod%3Apart_tr" property="rdf:type" resource="#dep_tr">
+	<div property="rdf:type" resource="../../u/dep/all.html#nmod" />
+	<a id="al-tr-dep/nmod:part" class="al-dest" />
 
-<pre><code class="language-sdparse">Kitapların üçü \n three of the books
+	<h2><code property="oliasystem:hasTag" lang="">nmod:part</code>: <div property="rdfs:label">nominal modifier indicating part-whole relations</div></h2>
+	<div property="rdfs:comment">
+
+This subtype of [nmod]() is used for marking the part-whole relations.
+The structure is similar to [nmod:poss](nmod-poss) in most cases,
+but the range structures expressing "part of" is diverse, 
+and distinction is often be useful.
+
+~~~ sdparse
+Kitapların üçü \n three of the books
 nmod:part(üçü, Kitapların)
-</code></pre>
+~~~
 
-<pre><code class="language-sdparse">Kitapların hepsi \n All of the books
+~~~ sdparse
+Kitapların hepsi \n All of the books
 nmod:part(hepsi, Kitapların)
-</code></pre>
+~~~
 
-<pre><code class="language-sdparse">Sevidiğim kitaplardan biri \n One of the books I like
+~~~ sdparse
+Sevidiğim kitaplardan biri \n One of the books I like
 nmod:part(biri, kitaplardan)
-</code></pre>
+~~~
 
-<pre><code class="language-sdparse">Şu elmalardan bir kilo  \n A kilo of\/from those apples
+~~~ sdparse
+Şu elmalardan bir kilo  \n A kilo of\/from those apples
 nmod:part(kilo, elmalardan)
-</code></pre>
+~~~
 
-<pre><code class="language-sdparse">Öğrencilerden bir kız \n A girl from\/among the students 
+~~~ sdparse
+Öğrencilerden bir kız \n A girl from\/among the students 
 nmod:part(kız, Öğrencilerden)
-</code></pre>
+~~~
 
-<pre><code class="language-sdparse">Öğrenciler arasından bir kız \n A girl from\/among the students 
+~~~ sdparse
+Öğrenciler arasından bir kız \n A girl from\/among the students 
 nmod:part(kız, Öğrenciler)
 case(Öğrenciler, arasından)
-</code></pre>
+~~~
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_tr-dep/nmod-part.md" target="#">edit nmod:part</a></p>
 
-<p><a id="al-tr-dep/nmod:pass" class="al-dest"></a></p>
-<h2><code>nmod:pass</code>: nominal modifier indicating the actor of a passive predicate</h2>
 
-<p>This subtype of <a href="">nmod</a> is used for marking the performer of action (the subject in the corresponding active sentence) in a passive predicate.</p>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_tr-dep/nmod-part.md" target="#">edit nmod:part</a>
+</div>
 
-<pre><code class="language-sdparse">Kitap öğrenciler tarafından okundu . \n The book was read by the students
+<div about="#nmod%3Apass_tr" property="rdf:type" resource="#dep_tr">
+	<div property="rdf:type" resource="../../u/dep/all.html#nmod" />
+	<a id="al-tr-dep/nmod:pass" class="al-dest" />
+
+	<h2><code property="oliasystem:hasTag" lang="">nmod:pass</code>: <div property="rdfs:label">nominal modifier indicating the actor of a passive predicate</div></h2>
+	<div property="rdfs:comment">
+
+This subtype of [nmod]() is used for marking the performer of action (the subject in the corresponding active sentence) in a passive predicate.
+
+
+~~~ sdparse
+Kitap öğrenciler tarafından okundu . \n The book was read by the students
 nmod:pass(okundu, öğrenciler)
 case(öğrenciler, tarafından)
 nsubjpass(okundu, Kitap)
-</code></pre>
+~~~
 
-<pre><code class="language-sdparse">Kitap öğrenciler –ce okundu . \n The book was read by the students
+~~~ sdparse
+Kitap öğrenciler –ce okundu . \n The book was read by the students
 nmod:pass(okundu, öğrenciler)
 case(öğrenciler, –ce)
 nsubjpass(okundu, Kitap)
-</code></pre>
+~~~
 
-<pre><code class="language-sdparse">Araba aşırı sıcaktan bozulmuş . \n The car was broken by extreme heat
+~~~ sdparse
+Araba aşırı sıcaktan bozulmuş . \n The car was broken by extreme heat
 nmod:pass(bozulmuş, sıcaktan)
-</code></pre>
+~~~
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_tr-dep/nmod-pass.md" target="#">edit nmod:pass</a></p>
 
-<p><a id="al-tr-dep/nmod:poss" class="al-dest"></a></p>
-<h2><code>nmod:poss</code>: possessive nominal modifier</h2>
 
-<p>This subtype of <a href="">nmod</a> is used in (genitive-)possessive constructions.
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_tr-dep/nmod-pass.md" target="#">edit nmod:pass</a>
+</div>
+
+<div about="#nmod%3Aposs_tr" property="rdf:type" resource="#dep_tr">
+	<div property="rdf:type" resource="../../u/dep/all.html#nmod" />
+	<a id="al-tr-dep/nmod:poss" class="al-dest" />
+
+	<h2><code property="oliasystem:hasTag" lang="">nmod:poss</code>: <div property="rdfs:label">possessive nominal modifier</div></h2>
+	<div property="rdfs:comment">
+
+This subtype of [nmod]() is used in (genitive-)possessive constructions.
 Typically, the head of the construction is a possessive noun phrase,
-and the dependent is in genitive <a href="tr-feat/Case">case</a>.
-We also use <code>nmod:poss</code> in the alternative construction where the modifier is not in genitive case.
-So-called “bare noun compounds” are marked using the <a href="">compound</a> relation.</p>
+and the dependent is in genitive [case](tr-feat/Case).
+We also use `nmod:poss` in the alternative construction where the modifier is not in genitive case.
+So-called "bare noun compounds" are marked using the [compound]() relation.
 
-<pre><code class="language-sdparse">Ali'nin kitabı   \n Ali's book
+~~~ sdparse
+Ali'nin kitabı   \n Ali's book
 nmod:poss(kitabı, Ali'nin)
-</code></pre>
+~~~
 
-<pre><code class="language-sdparse">Sabah kahvesi \n Morning coffee
+~~~ sdparse
+Sabah kahvesi \n Morning coffee
 nmod:pos(kahvesi, Sabah)
-</code></pre>
+~~~
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_tr-dep/nmod-poss.md" target="#">edit nmod:poss</a></p>
 
-<p><a id="al-tr-dep/nmod:tmod" class="al-dest"></a></p>
-<h2><code>nmod:tmod</code>: temporal modifier</h2>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_tr-dep/nmod-poss.md" target="#">edit nmod:poss</a>
+</div>
 
-<p>A temporal modifier is a subtype of the <a href="">nmod</a> relation: if the modifier is specifying time, it is labeled as <code>nmod:tmod</code>.</p>
+<div about="#nmod%3Atmod_tr" property="rdf:type" resource="#dep_tr">
+	<div property="rdf:type" resource="../../u/dep/all.html#nmod" />
+	<a id="al-tr-dep/nmod:tmod" class="al-dest" />
 
-<pre><code class="language-sdparse">Geçen hafta bir kitap okudum . \n Las week I read a book
+	<h2><code property="oliasystem:hasTag" lang="">nmod:tmod</code>: <div property="rdfs:label">temporal modifier</div></h2>
+	<div property="rdfs:comment">
+
+A temporal modifier is a subtype of the [nmod]() relation: if the modifier is specifying time, it is labeled as `nmod:tmod`.
+
+~~~ sdparse
+Geçen hafta bir kitap okudum . \n Las week I read a book
 nmod:tmod(okudum, hafta)
-</code></pre>
+~~~
 
-<pre><code class="language-sdparse">Üç ay –dır okumuyorum . \n I haven't been reading for three months
+~~~ sdparse
+Üç ay –dır okumuyorum . \n I haven't been reading for three months
 case(ay, –dır)
 nmod:tmod(okumuyorum, ay)
-</code></pre>
+~~~
 
-<pre><code class="language-sdparse">Öğleden sonra okuyacağım . \n I will read (it) in the afternoon
+~~~ sdparse
+Öğleden sonra okuyacağım . \n I will read (it) in the afternoon
 case(Öğleden, sonra)
 nmod:tmod(okuyacağım, Öğleden)
-</code></pre>
+~~~
 
-<pre><code class="language-sdparse">Her yıl aynı yere gidiyoruz . \n We go to the same place every year
+~~~ sdparse
+Her yıl aynı yere gidiyoruz . \n We go to the same place every year
 nmod:tmod(gidiyoruz, yıl)
-</code></pre>
+~~~
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_tr-dep/nmod-tmod.md" target="#">edit nmod:tmod</a></p>
 
-<p><a id="al-tr-dep/nsubj" class="al-dest"></a></p>
-<h2><code>nsubj</code>: nominal subject</h2>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_tr-dep/nmod-tmod.md" target="#">edit nmod:tmod</a>
+</div>
 
-<p>A nominal subject is a noun phrase which is the syntactic subject of a clause.</p>
+<div about="#nsubj_tr" property="rdf:type" resource="#dep_tr">
+	<div property="rdf:type" resource="../../u/dep/all.html#nsubj" />
+	<a id="al-tr-dep/nsubj" class="al-dest" />
 
-<pre><code class="language-sdparse">Ali okuyor . \n Ali is reading
+	<h2><code property="oliasystem:hasTag" lang="">nsubj</code>: <div property="rdfs:label">nominal subject</div></h2>
+	<div property="rdfs:comment">
+
+A nominal subject is a noun phrase which is the syntactic subject of a clause. 
+
+~~~ sdparse
+Ali okuyor . \n Ali is reading
 nsubj(okuyor, Ali)
-</code></pre>
+~~~
 
-<p>For existential sentences, “the thing that exists” is the subject.
-This includes possessive existentials.</p>
+For existential sentences, "the thing that exists" is the subject.
+This includes possessive existentials.
 
-<pre><code class="language-sdparse">Üç kitap var . \n There are three books
+~~~ sdparse
+Üç kitap var . \n There are three books
 nsubj(var, kitap)
-</code></pre>
+~~~
 
-<pre><code class="language-sdparse">Benim üç kitabım var . \n I have three books
+~~~ sdparse
+Benim üç kitabım var . \n I have three books
 nsubj(var, kitabım)
-</code></pre>
+~~~
 
-<p>Although we currently mark the head of the verbal nouns as nouns,
-we use <a href="">csubj</a> when they are in the subject position.</p>
+Although we currently mark the head of the verbal nouns as nouns,
+we use [csubj]() when they are in the subject position.
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_tr-dep/nsubj.md" target="#">edit nsubj</a></p>
 
-<p><a id="al-tr-dep/nsubjpass" class="al-dest"></a></p>
-<h2><code>nsubjpass</code>: passive nominal subject</h2>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_tr-dep/nsubj.md" target="#">edit nsubj</a>
+</div>
 
-<p>A passive nominal subject is a noun phrase which is the syntactic subject of a passive clause.</p>
+<div about="#nsubjpass_tr" property="rdf:type" resource="#dep_tr">
+	<div property="rdf:type" resource="../../u/dep/all.html#nsubjpass" />
+	<a id="al-tr-dep/nsubjpass" class="al-dest" />
 
-<p>The distinction between <a href="">nsubj</a> and <code>nsubjpass</code> is not strictly necessary in Turkish,
-since the predicate will always be morphologically marked as passive.</p>
+	<h2><code property="oliasystem:hasTag" lang="">nsubjpass</code>: <div property="rdfs:label">passive nominal subject</div></h2>
+	<div property="rdfs:comment">
 
-<pre><code class="language-sdparse">Kitap okundu . \n The book was read
+A passive nominal subject is a noun phrase which is the syntactic subject of a passive clause.
+
+The distinction between [nsubj]() and `nsubjpass` is not strictly necessary in Turkish,
+since the predicate will always be morphologically marked as passive.
+
+~~~ sdparse
+Kitap okundu . \n The book was read
 nsubjpass(okundu, Kitap)
-</code></pre>
+~~~
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_tr-dep/nsubjpass.md" target="#">edit nsubjpass</a></p>
 
-<p><a id="al-tr-dep/nummod" class="al-dest"></a></p>
-<h2><code>nummod</code>: numeric modifier</h2>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_tr-dep/nsubjpass.md" target="#">edit nsubjpass</a>
+</div>
 
-<p>A numeric modifier of a noun is any number phrase that serves to modify the meaning of the noun with a quantity.</p>
+<div about="#nummod_tr" property="rdf:type" resource="#dep_tr">
+	<div property="rdf:type" resource="../../u/dep/all.html#nummod" />
+	<a id="al-tr-dep/nummod" class="al-dest" />
 
-<pre><code class="language-sdparse">Üç kitap aldım \n I bought three books
+	<h2><code property="oliasystem:hasTag" lang="">nummod</code>: <div property="rdfs:label">numeric modifier</div></h2>
+	<div property="rdfs:comment">
+
+A numeric modifier of a noun is any number phrase that serves to modify the meaning of the noun with a quantity.
+
+~~~ sdparse
+Üç kitap aldım \n I bought three books
 nummod(kitap, Üç)
-</code></pre>
+~~~
 
-<pre><code class="language-sdparse">Üçüncü kitabı da bitirdim . \n I finished third book as well
+~~~ sdparse
+Üçüncü kitabı da bitirdim . \n I finished third book as well
 nummod(kitap, Üçüncü)
-</code></pre>
+~~~
 
-<pre><code class="language-sdparse">Üçer kitap aldık . \n We boot three books each
+~~~ sdparse
+Üçer kitap aldık . \n We boot three books each
 nummod(kitap, Üçer)
-</code></pre>
+~~~
 
-<pre><code class="language-sdparse">1500 lira harcadı \n He\/she spent 1500 liras
+~~~ sdparse
+1500 lira harcadı \n He\/she spent 1500 liras
 nummod(lira, 1500)
-</code></pre>
+~~~
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_tr-dep/nummod.md" target="#">edit nummod</a></p>
 
-<p><a id="al-tr-dep/parataxis" class="al-dest"></a></p>
-<h2><code>parataxis</code>: parataxis</h2>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_tr-dep/nummod.md" target="#">edit nummod</a>
+</div>
 
-<p>The parataxis relation (from Greek for “place side by side”) is a relation between the main verb of a clause and other sentential elements, 
+<div about="#parataxis_tr" property="rdf:type" resource="#dep_tr">
+	<div property="rdf:type" resource="../../u/dep/all.html#parataxis" />
+	<a id="al-tr-dep/parataxis" class="al-dest" />
+
+	<h2><code property="oliasystem:hasTag" lang="">parataxis</code>: <div property="rdfs:label">parataxis</div></h2>
+	<div property="rdfs:comment">
+
+The parataxis relation (from Greek for “place side by side”) is a relation between the main verb of a clause and other sentential elements, 
 such as a sentential parenthetical, a clause after a “:” or a “;”, 
-or two sentences placed side by side without any explicit coordination or subordination.</p>
+or two sentences placed side by side without any explicit coordination or subordination.
 
-<pre><code class="language-sdparse">Kitabı okudum , uyudum . \n I read the book , slept.
+~~~ sdparse
+Kitabı okudum , uyudum . \n I read the book , slept.
 parataxis(uyudum, okudum)
-</code></pre>
+~~~
 
-<pre><code class="language-sdparse">Kitabı okudun , değil mi ? \n You read the book , aren't you ?
+~~~ sdparse
+Kitabı okudun , değil mi ? \n You read the book , aren't you ?
 parataxis(okudun, değil)
-</code></pre>
+~~~
 
-<pre><code class="language-sdparse">Sabah , babam diyor ki , erken kalkacakmışız . \n In the morning, my father says, we have to get up early
+~~~ sdparse
+Sabah , babam diyor ki , erken kalkacakmışız . \n In the morning, my father says, we have to get up early
 parataxis(kalkacakmışız, diyor)
-</code></pre>
+~~~
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_tr-dep/parataxis.md" target="#">edit parataxis</a></p>
 
-<p><a id="al-tr-dep/punct" class="al-dest"></a></p>
-<h2><code>punct</code>: punctuation</h2>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_tr-dep/parataxis.md" target="#">edit parataxis</a>
+</div>
 
-<p>This is used for any piece of punctuation in a clause. See
-<a href="">u-dep/punct</a> for details.</p>
+<div about="#punct_tr" property="rdf:type" resource="#dep_tr">
+	<div property="rdf:type" resource="../../u/dep/all.html#punct" />
+	<a id="al-tr-dep/punct" class="al-dest" />
 
-<pre><code class="language-sdparse">Kitabı okudum . \n I read the book
+	<h2><code property="oliasystem:hasTag" lang="">punct</code>: <div property="rdfs:label">punctuation</div></h2>
+	<div property="rdfs:comment">
+
+This is used for any piece of punctuation in a clause. See
+[u-dep/punct]() for details.
+
+~~~ sdparse
+Kitabı okudum . \n I read the book
 punct(okudum, .)
-</code></pre>
+~~~
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_tr-dep/punct.md" target="#">edit punct</a></p>
 
-<p><a id="al-tr-dep/remnant" class="al-dest"></a></p>
-<h2><code>remnant</code>: remnant in ellipsis</h2>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_tr-dep/punct.md" target="#">edit punct</a>
+</div>
 
-<p>The remnant relation is used to provide a satisfactory treatment of certain instances of ellipsis.</p>
+<div about="#remnant_tr" property="rdf:type" resource="#dep_tr">
+	<div property="rdf:type" resource="../../u/dep/all.html#remnant" />
+	<a id="al-tr-dep/remnant" class="al-dest" />
 
-<pre><code class="language-sdparse">Ali kitabı okudu , Ahmet de . \n Ali read the book, Ahmet too.
+	<h2><code property="oliasystem:hasTag" lang="">remnant</code>: <div property="rdfs:label">remnant in ellipsis</div></h2>
+	<div property="rdfs:comment">
+
+The remnant relation is used to provide a satisfactory treatment of certain instances of ellipsis.
+
+~~~ sdparse
+Ali kitabı okudu , Ahmet de . \n Ali read the book, Ahmet too.
 nsubj(okudu, Ali)
 remnant(Ali, Ahmet)
-</code></pre>
+~~~
 
-<pre><code class="language-sdparse">Ali okudu kitabı , Ahmet değil . \n Ali read the book, not Ahmet.
+~~~ sdparse
+Ali okudu kitabı , Ahmet değil . \n Ali read the book, not Ahmet.
 nsubj(okudu, Ali)
 remnant(Ali, Ahmet)
-</code></pre>
+~~~
 
-<pre><code class="language-sdparse">Ali kitap , Ahmet gazete okudu . \n Mehmet read newspapers, Ahmet books.
+~~~ sdparse
+Ali kitap , Ahmet gazete okudu . \n Mehmet read newspapers, Ahmet books.
 nsubj(okudu, Ahmet)
 dobj(okudu, gazete)
 remnant(Ahmet, Ali)
 remnant(gazete, kitap)
-</code></pre>
+~~~
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_tr-dep/remnant.md" target="#">edit remnant</a></p>
 
-<p><a id="al-tr-dep/reparandum" class="al-dest"></a></p>
-<h2><code>reparandum</code>: overridden disfluency</h2>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_tr-dep/remnant.md" target="#">edit remnant</a>
+</div>
 
-<p>We use <code>reparandum</code> to indicate disfluencies overridden in a speech repair.
-The disfluency is the dependent of the repair.</p>
+<div about="#reparandum_tr" property="rdf:type" resource="#dep_tr">
+	<div property="rdf:type" resource="../../u/dep/all.html#reparandum" />
+	<a id="al-tr-dep/reparandum" class="al-dest" />
 
-<pre><code class="language-sdparse">Sağa– sola dön . \n Turn right- left .
+	<h2><code property="oliasystem:hasTag" lang="">reparandum</code>: <div property="rdfs:label">overridden disfluency</div></h2>
+	<div property="rdfs:comment">
+
+We use `reparandum` to indicate disfluencies overridden in a speech repair.
+The disfluency is the dependent of the repair.
+
+~~~ sdparse
+Sağa– sola dön . \n Turn right- left .
 nmod(dön, sola)
 reparandum(sola, Sağa–)
-</code></pre>
+~~~
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_tr-dep/reparandum.md" target="#">edit reparandum</a></p>
 
-<p><a id="al-tr-dep/root" class="al-dest"></a></p>
-<h2><code>root</code>: root</h2>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_tr-dep/reparandum.md" target="#">edit reparandum</a>
+</div>
 
-<p>The <code>root</code> grammatical relation points to the root of the sentence.
-A fake node “ROOT” is used as the governor.
-The ROOT node is indexed with “0”, since the indexation of real words in the sentence starts at 1.</p>
+<div about="#root_tr" property="rdf:type" resource="#dep_tr">
+	<div property="rdf:type" resource="../../u/dep/all.html#root" />
+	<a id="al-tr-dep/root" class="al-dest" />
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_tr-dep/root.md" target="#">edit root</a></p>
+	<h2><code property="oliasystem:hasTag" lang="">root</code>: <div property="rdfs:label">root</div></h2>
+	<div property="rdfs:comment">
 
-<p><a id="al-tr-dep/vocative" class="al-dest"></a></p>
-<h2><code>vocative</code>: vocative</h2>
+The `root` grammatical relation points to the root of the sentence.
+A fake node "ROOT" is used as the governor.
+The ROOT node is indexed with "0", since the indexation of real words in the sentence starts at 1.
 
-<p>The vocative relation is used to mark dialogue participant addressed in text.
-The relation links the addressee’s name to its host sentence.</p>
 
-<pre><code class="language-sdparse">Ali , gel . \n Ali, come here!
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_tr-dep/root.md" target="#">edit root</a>
+</div>
+
+<div about="#vocative_tr" property="rdf:type" resource="#dep_tr">
+	<div property="rdf:type" resource="../../u/dep/all.html#vocative" />
+	<a id="al-tr-dep/vocative" class="al-dest" />
+
+	<h2><code property="oliasystem:hasTag" lang="">vocative</code>: <div property="rdfs:label">vocative</div></h2>
+	<div property="rdfs:comment">
+
+The vocative relation is used to mark dialogue participant addressed in text.
+The relation links the addressee’s name to its host sentence.
+
+~~~ sdparse
+Ali , gel . \n Ali, come here!
 vocative(gel, Ali)
-</code></pre>
+~~~
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_tr-dep/vocative.md" target="#">edit vocative</a></p>
 
-<p><a id="al-tr-dep/xcomp" class="al-dest"></a></p>
-<h2><code>xcomp</code>: open clausal complement</h2>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_tr-dep/vocative.md" target="#">edit vocative</a>
+</div>
 
-<p>An open clausal complement of a predicate is a predicative or clausal complement without its own subject.
+<div about="#xcomp_tr" property="rdf:type" resource="#dep_tr">
+	<div property="rdf:type" resource="../../u/dep/all.html#xcomp" />
+	<a id="al-tr-dep/xcomp" class="al-dest" />
+
+	<h2><code property="oliasystem:hasTag" lang="">xcomp</code>: <div property="rdfs:label">open clausal complement</div></h2>
+	<div property="rdfs:comment">
+
+An open clausal complement of a predicate is a predicative or clausal complement without its own subject.
 The reference of the subject is necessarily determined by an argument external to the xcomp (normally by the object of the next higher clause, if there is one, or else by the subject of the next higher clause.
-These complements are always non-finite, and they are complements (arguments of the higher predicate) rather than adjuncts/modifiers, such as a purpose clause.</p>
+These complements are always non-finite, and they are complements (arguments of the higher predicate) rather than adjuncts/modifiers, such as a purpose clause.
 
-<p>In majority of the cases, we use <code>xcomp</code> for the verbal nouns formed by the suffix <em>-mAk</em>.
+In majority of the cases, we use `xcomp` for the verbal nouns formed by the suffix _-mAk_.
 Note that we split the nominal part, and mark the noun as the head of the predicate.
-(TODO: link to the subordination discussion)</p>
+(TODO: link to the subordination discussion)
 
-<pre><code class="language-sdparse">Oku/VERB –mak/NOUN istiyor/VERB . \n He wants to read
+~~~ sdparse
+Oku/VERB –mak/NOUN istiyor/VERB . \n He wants to read
 xcomp(istiyor, –mak)
 acl(–mak, Oku)
-</code></pre>
+~~~
 
-<p>In addition, we also use <code>xcomp</code> for secondary predicates, 
-or in general, what Göksel &amp; Kerslake (2005) calls “small clauses”.
+In addition, we also use `xcomp` for secondary predicates, 
+or in general, what Göksel &amp; Kerslake (2005) calls "small clauses".
 The decision between a secondary predicate or adverb analysis is often diffcult,
-since most adjectives also function as adverbs.</p>
+since most adjectives also function as adverbs.
 
-<pre><code class="language-sdparse">Ali çayını soğuk içer . \n Ali drinks his tea cold
+~~~ sdparse
+Ali çayını soğuk içer . \n Ali drinks his tea cold
 xcomp(içer, soğuk)
-</code></pre>
+~~~
 
-<pre><code class="language-sdparse">Bu kitap bir baş yapıt sayılır . \n This book is considered a master piece
+~~~ sdparse
+Bu kitap bir baş yapıt sayılır . \n This book is considered a master piece
 xcomp(sayılır, yapıt)
-</code></pre>
+~~~
 
-<pre><code class="language-sdparse">Onu İstanbul'da sanıyordum . \n I tought he\/she was in Istanbul
+~~~ sdparse
+Onu İstanbul'da sanıyordum . \n I tought he\/she was in Istanbul
 xcomp(sanıyordum, İstanbul'da)
-</code></pre>
+~~~
 
-<h3 id="references">References</h3>
-<p>Aslı Göksel and Celia Kerslake. <em>Turkish: A Comprehensive Grammar</em>.
-London: Routledge, 2005.</p>
+### References
+Aslı Göksel and Celia Kerslake. _Turkish: A Comprehensive Grammar_.
+London: Routledge, 2005.
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_tr-dep/xcomp.md" target="#">edit xcomp</a></p>
 
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_tr-dep/xcomp.md" target="#">edit xcomp</a>
+</div>
 
 
       </div>

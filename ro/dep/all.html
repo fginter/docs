@@ -43,7 +43,12 @@
 	  </div>
 	</noscript>
 
-          <h1 id="dependencies">Dependencies</h1>
+          
+<h1 id="dependencies">Dependencies</h1>
+
+<p><span about="." property="rdf:type" resource="owl:Ontology">
+	<span property="owl:imports" resource=" https://www.w3.org/2012/pyRdfa/extract?uri=http://universaldependencies.org/docs/u/dep/all.html&amp;format=xml&amp;rdfagraph=output&amp;vocab_expansion=false&amp;rdfa_lite=false&amp;embedded_rdf=true&amp;space_preserve=false&amp;vocab_cache=true&amp;vocab_cache_report=false&amp;vocab_cache_refresh=false"></span>
+</span></p>
 
 <p>Note: <i>nmod</i>, <i>neg</i>, and <i>punct</i> appear
 in two places.</p>
@@ -228,111 +233,168 @@ in two places.</p>
   </tr>
 </table>
 
+<p><span about="#dep_ro" property="rdfs:label" style="visibility: hidden">Dependencies</span>
+<span about="#dep_ro" property="rdfs:subClassOf" resource="_:ro">
+	<span about="_:ro" property="rdf:type" resource="owl:Restriction">
+		<span property="owl:onProperty" resource="http://purl.org/dc/terms/language"></span>
+		<span property="owl:hasValue" lang="" style="visibility: hidden">ro</span>
+	</span>
+</span></p>
+
 <hr />
 
-<p><a id="al-ro-dep/acl" class="al-dest"></a></p>
-<h2><code>acl</code>: clausal modifier of noun</h2>
+<div about="#acl_ro" property="rdf:type" resource="#dep_ro">
+	<div property="rdf:type" resource="../../u/dep/all.html#acl" />
+	<a id="al-ro-dep/acl" class="al-dest" />
 
-<p><code>acl</code> stands for finite and non-finite clauses that modify a nominal.</p>
+	<h2><code property="oliasystem:hasTag" lang="">acl</code>: <div property="rdfs:label">clausal modifier of noun</div></h2>
+	<div property="rdfs:comment">
 
-<pre><code class="language-sdparse">Mă impresionează un copil plângând . \n Me impresses a child crying. (A crying child impresses me.)
+`acl` stands for finite and non-finite clauses that modify a nominal.
+
+~~~ sdparse
+Mă impresionează un copil plângând . \n Me impresses a child crying. (A crying child impresses me.)
 acl(copil, plângând)
-</code></pre>
+~~~
 
-<pre><code class="language-sdparse">Am închis fereastra deschisă de Ion . \n Have-I closed window-the opened by John. (I closed the window opened by John.)
+~~~ sdparse
+Am închis fereastra deschisă de Ion . \n Have-I closed window-the opened by John. (I closed the window opened by John.)
 acl(fereastra, deschisă)
-</code></pre>
+~~~
 
-<pre><code class="language-sdparse">L-a ajutat un prieten care locuiește la Paris . \n Him-has helped a friend who lives at Paris. (A friend who lives in Paris helped him.)
+~~~ sdparse
+L-a ajutat un prieten care locuiește la Paris . \n Him-has helped a friend who lives at Paris. (A friend who lives in Paris helped him.)
 acl(prieten, locuiește)
-</code></pre>
+~~~
 
-<pre><code class="language-sdparse">Dorința să trăiască l-a ajutat să învingă boala . \n Desire-the SĂ live him-has helped SĂ defeat disease-the. (The desire to live helped him to defeat the desease.)
+~~~ sdparse
+Dorința să trăiască l-a ajutat să învingă boala . \n Desire-the SĂ live him-has helped SĂ defeat disease-the. (The desire to live helped him to defeat the desease.)
 acl(Dorința, trăiască)
-</code></pre>
+~~~
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_ro-dep/acl.md" target="#">edit acl</a></p>
 
-<p><a id="al-ro-dep/advcl" class="al-dest"></a></p>
-<h2><code>advcl</code>: adverbial clause modifier</h2>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_ro-dep/acl.md" target="#">edit acl</a>
+</div>
 
-<p>An adverbial clause modifier is a clause which modifies a verb or other predicate (adjective, etc.), as a modifier not as a core complement. This includes things such as a temporal clause, consequence, conditional clause, purpose clause, etc. The dependent must be clausal (or else it is an advmod) and the dependent is the main predicate of the clause.</p>
+<div about="#advcl_ro" property="rdf:type" resource="#dep_ro">
+	<div property="rdf:type" resource="../../u/dep/all.html#advcl" />
+	<a id="al-ro-dep/advcl" class="al-dest" />
 
-<pre><code class="language-sdparse">Sunt bucuros pentru că am luat examenul . \n Am glad because have-I passed exam-the. (I am glad because I passed the exam.)
+	<h2><code property="oliasystem:hasTag" lang="">advcl</code>: <div property="rdfs:label">adverbial clause modifier</div></h2>
+	<div property="rdfs:comment">
+
+An adverbial clause modifier is a clause which modifies a verb or other predicate (adjective, etc.), as a modifier not as a core complement. This includes things such as a temporal clause, consequence, conditional clause, purpose clause, etc. The dependent must be clausal (or else it is an advmod) and the dependent is the main predicate of the clause.
+
+~~~ sdparse
+Sunt bucuros pentru că am luat examenul . \n Am glad because have-I passed exam-the. (I am glad because I passed the exam.)
 advcl(bucuros, luat)
-</code></pre>
+~~~
 
-<pre><code class="language-sdparse">Ajungând la birou, a observat că îi lipsește cheia . \n Arriving at office, has noticed that to-him lacks key-the . (When arriving at the office, he noticed that didn't have the key.)
+~~~ sdparse
+Ajungând la birou, a observat că îi lipsește cheia . \n Arriving at office, has noticed that to-him lacks key-the . (When arriving at the office, he noticed that didn't have the key.)
 advcl(observat, Ajungând)
-</code></pre>
+~~~
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_ro-dep/advcl.md" target="#">edit advcl</a></p>
 
-<p><a id="al-ro-dep/advmod" class="al-dest"></a></p>
-<h2><code>advmod</code>: adverbial modifier</h2>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_ro-dep/advcl.md" target="#">edit advcl</a>
+</div>
 
-<p>An adverbial modifier of a word is an adverb or adverbial phrase that serves to modify the meaning of the word.</p>
+<div about="#advmod_ro" property="rdf:type" resource="#dep_ro">
+	<div property="rdf:type" resource="../../u/dep/all.html#advmod" />
+	<a id="al-ro-dep/advmod" class="al-dest" />
 
-<pre><code class="language-sdparse">Merg la munte mâine . \n Go-I at mountain tomorrow . (I am going into the mountains tomorrow.)
+	<h2><code property="oliasystem:hasTag" lang="">advmod</code>: <div property="rdfs:label">adverbial modifier</div></h2>
+	<div property="rdfs:comment">
+
+An adverbial modifier of a word is an adverb or adverbial phrase that serves to modify the meaning of the word.
+
+~~~ sdparse
+Merg la munte mâine . \n Go-I at mountain tomorrow . (I am going into the mountains tomorrow.)
 advmod(Merg, mâine)
-</code></pre>
+~~~
 
-<pre><code class="language-sdparse">Cititul noaptea nu este sănătos . \n Reading night not is healthy . (It is not healthy to read at night.)
+~~~ sdparse
+Cititul noaptea nu este sănătos . \n Reading night not is healthy . (It is not healthy to read at night.)
 advmod(Cititul, noaptea)
-</code></pre>
+~~~
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_ro-dep/advmod.md" target="#">edit advmod</a></p>
 
-<p><a id="al-ro-dep/amod" class="al-dest"></a></p>
-<h2><code>amod</code>: adjectival modifier</h2>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_ro-dep/advmod.md" target="#">edit advmod</a>
+</div>
 
-<p>An adjectival modifier of a noun is any adjectival phrase that serves to modify the meaning of the noun.</p>
+<div about="#amod_ro" property="rdf:type" resource="#dep_ro">
+	<div property="rdf:type" resource="../../u/dep/all.html#amod" />
+	<a id="al-ro-dep/amod" class="al-dest" />
 
-<pre><code class="language-sdparse">Sunt o persoană timidă . \n Am a person shy . (I am a shy person .)
+	<h2><code property="oliasystem:hasTag" lang="">amod</code>: <div property="rdfs:label">adjectival modifier</div></h2>
+	<div property="rdfs:comment">
+
+An adjectival modifier of a noun is any adjectival phrase that serves to modify the meaning of the noun.
+
+~~~ sdparse
+Sunt o persoană timidă . \n Am a person shy . (I am a shy person .)
 amod(persoană, timidă)
-</code></pre>
+~~~
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_ro-dep/amod.md" target="#">edit amod</a></p>
 
-<p><a id="al-ro-dep/appos" class="al-dest"></a></p>
-<h2><code>appos</code>: appositional modifier</h2>
 
-<p>An appositional modifier serves to identify its head in a different way. This relation is usually established between noun phrases.</p>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_ro-dep/amod.md" target="#">edit amod</a>
+</div>
 
-<pre><code class="language-sdparse">Am plecat cu Alexandru , vărul meu . \n Have-I left with Alexandru , cousin-the my . 
+<div about="#appos_ro" property="rdf:type" resource="#dep_ro">
+	<div property="rdf:type" resource="../../u/dep/all.html#appos" />
+	<a id="al-ro-dep/appos" class="al-dest" />
+
+	<h2><code property="oliasystem:hasTag" lang="">appos</code>: <div property="rdfs:label">appositional modifier</div></h2>
+	<div property="rdfs:comment">
+
+An appositional modifier serves to identify its head in a different way. This relation is usually established between noun phrases.
+
+~~~ sdparse
+Am plecat cu Alexandru , vărul meu . \n Have-I left with Alexandru , cousin-the my . 
 appos(Alexandru, vărul)
-</code></pre>
+~~~
 
-<p>However, other parts of speech and even clauses can also be involved in the relation:</p>
+However, other parts of speech and even clauses can also be involved in the relation:
 
-<pre><code class="language-sdparse">Gustul fructului era ciudat , adică dulce-amărui . \n  . Taste-the fruit-the-of was strange , that_is sweet-bitter .
+~~~ sdparse
+Gustul fructului era ciudat , adică dulce-amărui . \n  . Taste-the fruit-the-of was strange , that_is sweet-bitter .
 appos(ciudat, dulce-amărui)
-</code></pre>
+~~~
 
-<pre><code class="language-sdparse">Ne-am întâlnit aici , unde am stabilit . \n Us-have met here , where have-we established .
+~~~ sdparse
+Ne-am întâlnit aici , unde am stabilit . \n Us-have met here , where have-we established .
 appos(aici, stabilit)
-</code></pre>
+~~~
 
-<p>The apposition can be introduced by an adverb (e.g. ‘adică’, ‘anume’, ‘respectiv’, ‘alias’, etc.), which is analysed as a ‘mark’ for the apposotion:</p>
+The apposition can be introduced by an adverb (e.g. 'adică', 'anume', 'respectiv', 'alias', etc.), which is analysed as a 'mark' for the apposotion:
 
-<pre><code class="language-sdparse">A reușind muncind , adică asudând . \n Has succeeded working , that_is sweating .
+~~~ sdparse
+A reușind muncind , adică asudând . \n Has succeeded working , that_is sweating .
 appos(muncind, asudând)
 mark(asudând, adică)
-</code></pre>
+~~~
 
-<p>It includes parenthesized examples, as well as defining abbreviations in one of these structures.</p>
+It includes parenthesized examples, as well as defining abbreviations in one of these structures.
 
-<pre><code class="language-sdparse">Venerabilul ( adică eu ) merge diseară la întrunire . \n Honorable-the ( that_is I ) goes tonight at meeting. 
+~~~ sdparse
+Venerabilul ( adică eu ) merge diseară la întrunire . \n Honorable-the ( that_is I ) goes tonight at meeting. 
 appos(Venerabilul, eu)
-</code></pre>
+~~~
 
-<pre><code class="language-sdparse">Banca Comercială Română ( BCR ) \n Bank-the Commercial Romanian ( BCR )  
+~~~ sdparse
+Banca Comercială Română ( BCR ) \n Bank-the Commercial Romanian ( BCR )  
 appos(Banca, BCR)
-</code></pre>
+~~~
 
-<p>‘appos’ is also used to link key-value pairs in addresses, signatures, etc.:</p>
+'appos' is also used to link key-value pairs in addresses, signatures, etc.:
 
-<pre><code class="language-sdparse">Ana Ionescu , Str Rozelor , tel : 0245.756.547 , email : ana@yahoo.com
+~~~ sdparse
+Ana Ionescu , Str Rozelor , tel : 0245.756.547 , email : ana@yahoo.com
 name(Ana, Ionescu)
 list(Ana, Str)
 appos(Str, Rozelor)
@@ -340,507 +402,795 @@ list(Ana, tel)
 appos(tel, 0245.756.547)
 list(Ana, email)
 appos(email, ana@yahoo.com)
-</code></pre>
+~~~
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_ro-dep/appos.md" target="#">edit appos</a></p>
 
-<p><a id="al-ro-dep/aux" class="al-dest"></a></p>
-<h2><code>aux</code>: auxiliary</h2>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_ro-dep/appos.md" target="#">edit appos</a>
+</div>
 
-<p>An auxiliary of a clause is a non-main verb of the clause.</p>
+<div about="#aux_ro" property="rdf:type" resource="#dep_ro">
+	<div property="rdf:type" resource="../../u/dep/all.html#aux" />
+	<a id="al-ro-dep/aux" class="al-dest" />
 
-<pre><code class="language-sdparse">Aș vrea o portocală . \n Would-I want an orange . 
+	<h2><code property="oliasystem:hasTag" lang="">aux</code>: <div property="rdfs:label">auxiliary</div></h2>
+	<div property="rdfs:comment">
+
+An auxiliary of a clause is a non-main verb of the clause.
+
+~~~ sdparse
+Aș vrea o portocală . \n Would-I want an orange . 
 aux(vrea, Aș)
-</code></pre>
+~~~
 
-<p>Exception: The auxiliary verb used to construct the passive voice is not labeled ‘aux’, but ‘auxpass’.</p>
+Exception: The auxiliary verb used to construct the passive voice is not labeled 'aux', but 'auxpass'.
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_ro-dep/aux_.md" target="#">edit aux</a></p>
 
-<p><a id="al-ro-dep/auxpass" class="al-dest"></a></p>
-<h2><code>auxpass</code>: passive auxiliary</h2>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_ro-dep/aux_.md" target="#">edit aux</a>
+</div>
 
-<p>A passive auxiliary of a clause is a non-main verb of the clause which contains the passive information.</p>
+<div about="#auxpass_ro" property="rdf:type" resource="#dep_ro">
+	<div property="rdf:type" resource="../../u/dep/all.html#auxpass" />
+	<a id="al-ro-dep/auxpass" class="al-dest" />
 
-<pre><code class="language-sdparse">A fost spânzurat . \n Has been hanged . 
+	<h2><code property="oliasystem:hasTag" lang="">auxpass</code>: <div property="rdfs:label">passive auxiliary</div></h2>
+	<div property="rdfs:comment">
+
+A passive auxiliary of a clause is a non-main verb of the clause which contains the passive information.
+
+~~~ sdparse
+A fost spânzurat . \n Has been hanged . 
 auxpass(spânzurat, fost)
-</code></pre>
+~~~
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_ro-dep/auxpass.md" target="#">edit auxpass</a></p>
 
-<p><a id="al-ro-dep/case" class="al-dest"></a></p>
-<h2><code>case</code>: case marking</h2>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_ro-dep/auxpass.md" target="#">edit auxpass</a>
+</div>
 
-<p>The <code>case</code> relation is used for linking prepositions to their heads:</p>
+<div about="#case_ro" property="rdf:type" resource="#dep_ro">
+	<div property="rdf:type" resource="../../u/dep/all.html#case" />
+	<a id="al-ro-dep/case" class="al-dest" />
 
-<pre><code class="language-sdparse">O văd pe Maria . \n Her see-I PE Mary . (I can see Mary.)
+	<h2><code property="oliasystem:hasTag" lang="">case</code>: <div property="rdfs:label">case marking</div></h2>
+	<div property="rdfs:comment">
+
+The `case` relation is used for linking prepositions to their heads:
+
+~~~ sdparse
+O văd pe Maria . \n Her see-I PE Mary . (I can see Mary.)
 case(Maria, pe)
-</code></pre>
+~~~
 
-<pre><code class="language-sdparse">Pun cartea pe masă . \n Put-I book-the on table .
+~~~ sdparse
+Pun cartea pe masă . \n Put-I book-the on table .
 case(masă, pe)
-</code></pre>
+~~~
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_ro-dep/case.md" target="#">edit case</a></p>
 
-<p><a id="al-ro-dep/cc" class="al-dest"></a></p>
-<h2><code>cc</code>: coordinating conjunction</h2>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_ro-dep/case.md" target="#">edit case</a>
+</div>
 
-<p>A <code>cc</code> is the relation between the first conjunct and the coordinating conjunction delimiting another conjunct:</p>
+<div about="#cc_ro" property="rdf:type" resource="#dep_ro">
+	<div property="rdf:type" resource="../../u/dep/all.html#cc" />
+	<a id="al-ro-dep/cc" class="al-dest" />
 
-<pre><code class="language-sdparse">Maria și Ion tocmai au sosit . \n Mary and John just have arrived .
+	<h2><code property="oliasystem:hasTag" lang="">cc</code>: <div property="rdfs:label">coordinating conjunction</div></h2>
+	<div property="rdfs:comment">
+
+A `cc` is the relation between the first conjunct and the coordinating conjunction delimiting another conjunct:
+
+~~~ sdparse
+Maria și Ion tocmai au sosit . \n Mary and John just have arrived .
 cc(Maria, și)
 conj(Maria, Ion)
-</code></pre>
+~~~
 
-<p>A coordinating conjunction may also appear at the beginning of a sentence. This is also called a <code>cc</code>, and it depends on the root predicate of the sentence. (In fact there is a coordination that spans multiple sentences. We cannot attach a word to the first conjunct because it is in another sentence. Thus we attach it to the first conjunct available in the current sentence: its main predicate.)</p>
+A coordinating conjunction may also appear at the beginning of a sentence. This is also called a `cc`, and it depends on the root predicate of the sentence. (In fact there is a coordination that spans multiple sentences. We cannot attach a word to the first conjunct because it is in another sentence. Thus we attach it to the first conjunct available in the current sentence: its main predicate.)
 
-<pre><code class="language-sdparse">Și au salutat gazda . \n And have greeted host-the
+~~~ sdparse
+Și au salutat gazda . \n And have greeted host-the
 cc(salutat, Și)
-</code></pre>
+~~~
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_ro-dep/cc.md" target="#">edit cc</a></p>
 
-<p><a id="al-ro-dep/ccomp" class="al-dest"></a></p>
-<h2><code>ccomp</code>: clausal complement</h2>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_ro-dep/cc.md" target="#">edit cc</a>
+</div>
 
-<p>A clausal complement of a verb or adjective is a dependent clause which is a core argument. That is, it functions like an object of the verb, or adjective.
-Such clausal complements may be finite or nonfinite.</p>
+<div about="#ccomp_ro" property="rdf:type" resource="#dep_ro">
+	<div property="rdf:type" resource="../../u/dep/all.html#ccomp" />
+	<a id="al-ro-dep/ccomp" class="al-dest" />
 
-<pre><code class="language-sdparse">Înțeleg că ești obosit . \n Understand-I that are-you tired .
+	<h2><code property="oliasystem:hasTag" lang="">ccomp</code>: <div property="rdfs:label">clausal complement</div></h2>
+	<div property="rdfs:comment">
+
+A clausal complement of a verb or adjective is a dependent clause which is a core argument. That is, it functions like an object of the verb, or adjective.
+Such clausal complements may be finite or nonfinite. 
+
+~~~ sdparse
+Înțeleg că ești obosit . \n Understand-I that are-you tired .
 ccomp(Înțeleg, obosit)
-</code></pre>
+~~~
 
-<pre><code class="language-sdparse">Noi putem schia . \n We can ski .
+~~~ sdparse
+Noi putem schia . \n We can ski .
 ccomp(putem, schia)
-</code></pre>
+~~~
 
-<p>The clausal predicative of the copula verb <code>a fi</code> is also analysed as ccomp. NB: This is the only case when the copula verb <code>a fi</code> is treated as a head.</p>
+The clausal predicative of the copula verb `a fi` is also analysed as ccomp. NB: This is the only case when the copula verb `a fi` is treated as a head.
 
-<pre><code class="language-sdparse">ROOT Noi suntem cum ne știi . \n We are how us know-you .
+~~~ sdparse
+ROOT Noi suntem cum ne știi . \n We are how us know-you .
 root(ROOT, suntem)
 ccomp(suntem, știi)
-</code></pre>
+~~~
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_ro-dep/ccomp.md" target="#">edit ccomp</a></p>
 
-<p><a id="al-ro-dep/compound" class="al-dest"></a></p>
-<h2><code>compound</code>: compound</h2>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_ro-dep/ccomp.md" target="#">edit ccomp</a>
+</div>
 
-<p><code>compound</code> is used for linking compound words of any part of speech:</p>
+<div about="#compound_ro" property="rdf:type" resource="#dep_ro">
+	<div property="rdf:type" resource="../../u/dep/all.html#compound" />
+	<a id="al-ro-dep/compound" class="al-dest" />
 
-<pre><code class="language-sdparse">Am patru mii de lei . \n Have-I four thousand of lei .
+	<h2><code property="oliasystem:hasTag" lang="">compound</code>: <div property="rdfs:label">compound</div></h2>
+	<div property="rdfs:comment">
+
+`compound` is used for linking compound words of any part of speech:
+
+~~~ sdparse
+Am patru mii de lei . \n Have-I four thousand of lei .
 compound(mii, patru)
-</code></pre>
+~~~
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_ro-dep/compound.md" target="#">edit compound</a></p>
 
-<p><a id="al-ro-dep/conj" class="al-dest"></a></p>
-<h2><code>conj</code>: conjunct</h2>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_ro-dep/compound.md" target="#">edit compound</a>
+</div>
 
-<p>A conjunct is the relation between two elements connected by a coordinating conjunction, such as and, or, etc. We treat conjunctions asymmetrically: the head of the relation is the first conjunct and all the other conjuncts depend on it via the conj relation.</p>
+<div about="#conj_ro" property="rdf:type" resource="#dep_ro">
+	<div property="rdf:type" resource="../../u/dep/all.html#conj" />
+	<a id="al-ro-dep/conj" class="al-dest" />
 
-<pre><code class="language-sdparse">Ion și Maria au sosit . \n John and Mary have arrived .
+	<h2><code property="oliasystem:hasTag" lang="">conj</code>: <div property="rdfs:label">conjunct</div></h2>
+	<div property="rdfs:comment">
+
+A conjunct is the relation between two elements connected by a coordinating conjunction, such as and, or, etc. We treat conjunctions asymmetrically: the head of the relation is the first conjunct and all the other conjuncts depend on it via the conj relation.
+
+~~~ sdparse
+Ion și Maria au sosit . \n John and Mary have arrived .
 conj(Ion, Maria)
-</code></pre>
+~~~
 
-<p>Coordinate clauses are treated the same way as coordination of other constituent types:</p>
+Coordinate clauses are treated the same way as coordination of other constituent types:
 
-<pre><code class="language-sdparse">Ion a sosit , dar Maria întârzie . \n John has arrived , but Mary is_late .
+~~~ sdparse
+Ion a sosit , dar Maria întârzie . \n John has arrived , but Mary is_late .
 conj(sosit, întârzie)
-</code></pre>
+~~~
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_ro-dep/conj.md" target="#">edit conj</a></p>
 
-<p><a id="al-ro-dep/cop" class="al-dest"></a></p>
-<h2><code>cop</code>: copula</h2>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_ro-dep/conj.md" target="#">edit conj</a>
+</div>
 
-<p>A copula is the relation between the complement of a copular verb and the copular verb <code>a fi</code> (only). (We normally take a copula as a dependent of its complement.)</p>
+<div about="#cop_ro" property="rdf:type" resource="#dep_ro">
+	<div property="rdf:type" resource="../../u/dep/all.html#cop" />
+	<a id="al-ro-dep/cop" class="al-dest" />
 
-<pre><code class="language-sdparse">Maria este fericită . \n Maria is happy .
+	<h2><code property="oliasystem:hasTag" lang="">cop</code>: <div property="rdfs:label">copula</div></h2>
+	<div property="rdfs:comment">
+
+A copula is the relation between the complement of a copular verb and the copular verb `a fi` (only). (We normally take a copula as a dependent of its complement.)
+
+~~~ sdparse
+Maria este fericită . \n Maria is happy .
 cop(fericită, este)
-</code></pre>
+~~~
 
-<p>All other copula verbs are heads of clauses and their complements are in <code>xcomp</code> relation to them:</p>
+All other copula verbs are heads of clauses and their complements are in `xcomp` relation to them:
 
-<pre><code class="language-sdparse">Maria a devenit designer . \n Mary has become designer .
+~~~ sdparse
+Maria a devenit designer . \n Mary has become designer .
 xcomp(devenit, designer)
-</code></pre>
+~~~
 
-<p>When the copula verb has auxiliaries, they are also dependents of the lexical predicate:</p>
+When the copula verb has auxiliaries, they are also dependents of the lexical predicate:
 
-<pre><code class="language-sdparse">Maria va fi campioană . \n Mary will be champion .
+~~~ sdparse
+Maria va fi campioană . \n Mary will be champion .
 cop(campioană, fi)
 aux(campioană, va)
-</code></pre>
+~~~
 
-<p>When the complement of the copula verb <code>a fi</code> is a clause, the copula is the head, and the subordinate clause is in <code>ccomp</code> relation with it:</p>
+When the complement of the copula verb `a fi` is a clause, the copula is the head, and the subordinate clause is in `ccomp` relation with it:
 
-<pre><code class="language-sdparse">ROOT Noi suntem cum ne știi . \n We are how us know-you .
+~~~ sdparse
+ROOT Noi suntem cum ne știi . \n We are how us know-you .
 root(ROOT, suntem)
 ccomp(suntem, știi)
-</code></pre>
+~~~
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_ro-dep/cop.md" target="#">edit cop</a></p>
 
-<p><a id="al-ro-dep/csubj" class="al-dest"></a></p>
-<h2><code>csubj</code>: clausal subject</h2>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_ro-dep/cop.md" target="#">edit cop</a>
+</div>
 
-<p>A clausal subject is a clausal syntactic subject of a clause, i.e., the subject is itself a clause.</p>
+<div about="#csubj_ro" property="rdf:type" resource="#dep_ro">
+	<div property="rdf:type" resource="../../u/dep/all.html#csubj" />
+	<a id="al-ro-dep/csubj" class="al-dest" />
 
-<pre><code class="language-sdparse">Cine aleargă după doi iepuri nu prinde nici_unul . \n Who runs after two rabbits not catches none .
+	<h2><code property="oliasystem:hasTag" lang="">csubj</code>: <div property="rdfs:label">clausal subject</div></h2>
+	<div property="rdfs:comment">
+
+A clausal subject is a clausal syntactic subject of a clause, i.e., the subject is itself a clause. 
+
+~~~ sdparse
+Cine aleargă după doi iepuri nu prinde nici_unul . \n Who runs after two rabbits not catches none .
 csubj(prinde, aleargă)
-</code></pre>
+~~~
 
-<pre><code class="language-sdparse">A greși e omenesc . \n To err is human .
+~~~ sdparse
+A greși e omenesc . \n To err is human .
 csubj(omenesc, greși)
-</code></pre>
+~~~
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_ro-dep/csubj.md" target="#">edit csubj</a></p>
 
-<p><a id="al-ro-dep/csubjpass" class="al-dest"></a></p>
-<h2><code>csubjpass</code>: clausal passive subject</h2>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_ro-dep/csubj.md" target="#">edit csubj</a>
+</div>
 
-<p>A clausal passive subject is a clausal syntactic subject of a passive clause:</p>
+<div about="#csubjpass_ro" property="rdf:type" resource="#dep_ro">
+	<div property="rdf:type" resource="../../u/dep/all.html#csubjpass" />
+	<a id="al-ro-dep/csubjpass" class="al-dest" />
 
-<pre><code class="language-sdparse">Cine a încălcat legea a fost pedepsit de instanță . \n Who has broken law-the has been punished by court .
+	<h2><code property="oliasystem:hasTag" lang="">csubjpass</code>: <div property="rdfs:label">clausal passive subject</div></h2>
+	<div property="rdfs:comment">
+
+A clausal passive subject is a clausal syntactic subject of a passive clause:
+
+~~~ sdparse
+Cine a încălcat legea a fost pedepsit de instanță . \n Who has broken law-the has been punished by court .
 csubjpass(pedepsit, încălcat)
-</code></pre>
+~~~
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_ro-dep/csubjpass.md" target="#">edit csubjpass</a></p>
 
-<p><a id="al-ro-dep/dep" class="al-dest"></a></p>
-<h2><code>dep</code>: unspecified dependency</h2>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_ro-dep/csubjpass.md" target="#">edit csubjpass</a>
+</div>
 
-<p>This document is a placeholder for the language-specific documentation
-for <code>dep</code>.</p>
+<div about="#dep_ro" property="rdf:type" resource="#dep_ro">
+	<div property="rdf:type" resource="../../u/dep/all.html#dep" />
+	<a id="al-ro-dep/dep" class="al-dest" />
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_ro-dep/dep.md" target="#">edit dep</a></p>
+	<h2><code property="oliasystem:hasTag" lang="">dep</code>: <div property="rdfs:label">unspecified dependency</div></h2>
+	<div property="rdfs:comment">
 
-<p><a id="al-ro-dep/det" class="al-dest"></a></p>
-<h2><code>det</code>: determiner</h2>
+This document is a placeholder for the language-specific documentation
+for `dep`.
 
-<p>The relation determiner (<code>det</code>) holds between a nominal head and its determiner:</p>
 
-<pre><code class="language-sdparse">Am văzut un okapi . \n Have-I seen an okapi .
+
+
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_ro-dep/dep.md" target="#">edit dep</a>
+</div>
+
+<div about="#det_ro" property="rdf:type" resource="#dep_ro">
+	<div property="rdf:type" resource="../../u/dep/all.html#det" />
+	<a id="al-ro-dep/det" class="al-dest" />
+
+	<h2><code property="oliasystem:hasTag" lang="">det</code>: <div property="rdfs:label">determiner</div></h2>
+	<div property="rdfs:comment">
+
+The relation determiner (`det`) holds between a nominal head and its determiner:
+
+~~~ sdparse
+Am văzut un okapi . \n Have-I seen an okapi .
 det(okapi, un)
-</code></pre>
+~~~
 
-<pre><code class="language-sdparse">Spune-i lui Ion . \n Tell-him the-Dative  John.
+~~~ sdparse
+Spune-i lui Ion . \n Tell-him the-Dative  John.
 det(Ion, lui)
-</code></pre>
+~~~
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_ro-dep/det.md" target="#">edit det</a></p>
 
-<p><a id="al-ro-dep/discourse" class="al-dest"></a></p>
-<h2><code>discourse</code>: discourse element</h2>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_ro-dep/det.md" target="#">edit det</a>
+</div>
 
-<p>This document is a placeholder for the language-specific documentation
-for <code>discourse</code>.</p>
+<div about="#discourse_ro" property="rdf:type" resource="#dep_ro">
+	<div property="rdf:type" resource="../../u/dep/all.html#discourse" />
+	<a id="al-ro-dep/discourse" class="al-dest" />
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_ro-dep/discourse.md" target="#">edit discourse</a></p>
+	<h2><code property="oliasystem:hasTag" lang="">discourse</code>: <div property="rdfs:label">discourse element</div></h2>
+	<div property="rdfs:comment">
 
-<p><a id="al-ro-dep/dislocated" class="al-dest"></a></p>
-<h2><code>dislocated</code>: dislocated elements</h2>
+This document is a placeholder for the language-specific documentation
+for `discourse`.
 
-<p>This document is a placeholder for the language-specific documentation
-for <code>dislocated</code>.</p>
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_ro-dep/dislocated.md" target="#">edit dislocated</a></p>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_ro-dep/discourse.md" target="#">edit discourse</a>
+</div>
 
-<p><a id="al-ro-dep/dobj" class="al-dest"></a></p>
-<h2><code>dobj</code>: direct object</h2>
+<div about="#dislocated_ro" property="rdf:type" resource="#dep_ro">
+	<div property="rdf:type" resource="../../u/dep/all.html#dislocated" />
+	<a id="al-ro-dep/dislocated" class="al-dest" />
 
-<p>The direct object of a verb is the noun phrase that denotes the entity acted upon.</p>
+	<h2><code property="oliasystem:hasTag" lang="">dislocated</code>: <div property="rdfs:label">dislocated elements</div></h2>
+	<div property="rdfs:comment">
 
-<pre><code class="language-sdparse">Citesc o carte . \n Read-I a book .
+This document is a placeholder for the language-specific documentation
+for `dislocated`.
+
+
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_ro-dep/dislocated.md" target="#">edit dislocated</a>
+</div>
+
+<div about="#dobj_ro" property="rdf:type" resource="#dep_ro">
+	<div property="rdf:type" resource="../../u/dep/all.html#dobj" />
+	<a id="al-ro-dep/dobj" class="al-dest" />
+
+	<h2><code property="oliasystem:hasTag" lang="">dobj</code>: <div property="rdfs:label">direct object</div></h2>
+	<div property="rdfs:comment">
+
+The direct object of a verb is the noun phrase that denotes the entity acted upon. 
+
+~~~ sdparse
+Citesc o carte . \n Read-I a book .
 dobj(Citesc, carte)
-</code></pre>
+~~~
 
-<pre><code class="language-sdparse">O văd . \n Her see-I .
+~~~ sdparse
+O văd . \n Her see-I .
 dobj(văd, O)
-</code></pre>
+~~~
 
-<p>When the direct object is doubled by a pronoun, this is marked as <code>expl</code>.</p>
+When the direct object is doubled by a pronoun, this is marked as `expl`. 
 
-<pre><code class="language-sdparse">O văd pe Mara . \n Her see-I PE Mara .
+~~~ sdparse
+O văd pe Mara . \n Her see-I PE Mara .
 dobj(văd, Mara)
 expl(văd, O)
-</code></pre>
+~~~
 
-<p>Romanian allows for the occurrence of two Accusative objects with some (uses of certain) verbs: the [+Animate] object (the direct object in traditional grammar terms) is anlysed here as <code>iobj</code>, while the other Accusative object (the secondary object in traditional grammar terms) is <code>dobj</code>:</p>
+Romanian allows for the occurrence of two Accusative objects with some (uses of certain) verbs: the [+Animate] object (the direct object in traditional grammar terms) is anlysed here as `iobj`, while the other Accusative object (the secondary object in traditional grammar terms) is `dobj`:
 
-<pre><code class="language-sdparse">Bunica i-a învățat pe copii o poezie . \n Grandmother-the them-has taught PE children a poem .
+~~~ sdparse
+Bunica i-a învățat pe copii o poezie . \n Grandmother-the them-has taught PE children a poem .
 dobj(învățat, poezie)
 iobj(învățat, copii)
-</code></pre>
+~~~
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_ro-dep/dobj.md" target="#">edit dobj</a></p>
 
-<p><a id="al-ro-dep/expl" class="al-dest"></a></p>
-<h2><code>expl</code>: expletive</h2>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_ro-dep/dobj.md" target="#">edit dobj</a>
+</div>
 
-<p>Romanian does not have expletives of the English sort.
-However, we use the <code>expl</code> label for the following situations:</p>
+<div about="#expl_ro" property="rdf:type" resource="#dep_ro">
+	<div property="rdf:type" resource="../../u/dep/all.html#expl" />
+	<a id="al-ro-dep/expl" class="al-dest" />
 
-<ul>
-  <li>clitic doubling:</li>
-</ul>
+	<h2><code property="oliasystem:hasTag" lang="">expl</code>: <div property="rdfs:label">expletive</div></h2>
+	<div property="rdfs:comment">
 
-<pre><code class="language-sdparse">O văd pe Mara . \n Her see-I PE Mara .
+Romanian does not have expletives of the English sort.
+However, we use the `expl` label for the following situations:
+
+- clitic doubling:
+
+~~~ sdparse
+O văd pe Mara . \n Her see-I PE Mara .
 dobj(văd, Mara)
 expl(văd, O)
-</code></pre>
+~~~
 
-<ul>
-  <li>non-referential use of pronouns:</li>
-</ul>
+- non-referential use of pronouns:
 
-<pre><code class="language-sdparse">Am apucat - o la stânga . \n Have-I turned-her to left .
+~~~ sdparse
+Am apucat - o la stânga . \n Have-I turned-her to left .
 expl(apucat, o)
-</code></pre>
+~~~
 
-<ul>
-  <li>expletive negation:</li>
-</ul>
+- expletive negation:
 
-<pre><code class="language-sdparse">Cine nu știe că Pământul se învârtește în jurul Soarelui ? \n Who not knows that Earth-the SE spins around Sun-the ?
+~~~ sdparse
+Cine nu știe că Pământul se învârtește în jurul Soarelui ? \n Who not knows that Earth-the SE spins around Sun-the ?
 expl(știe, nu)
-</code></pre>
+~~~
 
-<ul>
-  <li>possession:</li>
-</ul>
+- possession:
 
-<pre><code class="language-sdparse">Mi- am vândut mașina .
+~~~ sdparse
+Mi- am vândut mașina .
 expl:poss(vândut, Mi-)
-</code></pre>
+~~~
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_ro-dep/expl.md" target="#">edit expl</a></p>
 
-<p><a id="al-ro-dep/foreign" class="al-dest"></a></p>
-<h2><code>foreign</code>: foreign words</h2>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_ro-dep/expl.md" target="#">edit expl</a>
+</div>
 
-<p>This document is a placeholder for the language-specific documentation
-for <code>foreign</code>.</p>
+<div about="#foreign_ro" property="rdf:type" resource="#dep_ro">
+	<div property="rdf:type" resource="../../u/dep/all.html#foreign" />
+	<a id="al-ro-dep/foreign" class="al-dest" />
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_ro-dep/foreign.md" target="#">edit foreign</a></p>
+	<h2><code property="oliasystem:hasTag" lang="">foreign</code>: <div property="rdfs:label">foreign words</div></h2>
+	<div property="rdfs:comment">
 
-<p><a id="al-ro-dep/goeswith" class="al-dest"></a></p>
-<h2><code>goeswith</code>: goes with</h2>
+This document is a placeholder for the language-specific documentation
+for `foreign`.
 
-<p>This document is a placeholder for the language-specific documentation
-for <code>goeswith</code>.</p>
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_ro-dep/goeswith.md" target="#">edit goeswith</a></p>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_ro-dep/foreign.md" target="#">edit foreign</a>
+</div>
 
-<p><a id="al-ro-dep/iobj" class="al-dest"></a></p>
-<h2><code>iobj</code>: indirect object</h2>
+<div about="#goeswith_ro" property="rdf:type" resource="#dep_ro">
+	<div property="rdf:type" resource="../../u/dep/all.html#goeswith" />
+	<a id="al-ro-dep/goeswith" class="al-dest" />
 
-<p>The indirect object of a verb is any nominal phrase that is a core argument of the verb, usually expressing the recipient, the addressee or beneficiary of the predicate:</p>
+	<h2><code property="oliasystem:hasTag" lang="">goeswith</code>: <div property="rdfs:label">goes with</div></h2>
+	<div property="rdfs:comment">
 
-<pre><code class="language-sdparse">Îi dau Marei un trandafir . \n Her give-I Mara-Dat a rose .
+This document is a placeholder for the language-specific documentation
+for `goeswith`.
+
+
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_ro-dep/goeswith.md" target="#">edit goeswith</a>
+</div>
+
+<div about="#iobj_ro" property="rdf:type" resource="#dep_ro">
+	<div property="rdf:type" resource="../../u/dep/all.html#iobj" />
+	<a id="al-ro-dep/iobj" class="al-dest" />
+
+	<h2><code property="oliasystem:hasTag" lang="">iobj</code>: <div property="rdfs:label">indirect object</div></h2>
+	<div property="rdfs:comment">
+
+The indirect object of a verb is any nominal phrase that is a core argument of the verb, usually expressing the recipient, the addressee or beneficiary of the predicate:
+
+~~~ sdparse
+Îi dau Marei un trandafir . \n Her give-I Mara-Dat a rose .
 iobj(dau, Marei)
-</code></pre>
+~~~
 
-<pre><code class="language-sdparse">Acesta este un concurs deschis elevilor din clasele a patra. \n This is a contest opened pupils-to-the from grades the fourth .
+~~~ sdparse
+Acesta este un concurs deschis elevilor din clasele a patra. \n This is a contest opened pupils-to-the from grades the fourth .
 iobj(deschis, elevilor)
-</code></pre>
+~~~
 
-<pre><code class="language-sdparse">Conjunctura nu -mi este favorabilă . \n Conjuncture-the not -me-to is favourable .
+~~~sdparse
+Conjunctura nu -mi este favorabilă . \n Conjuncture-the not -me-to is favourable .
 iobj(favorabilă, -mi)
-</code></pre>
+~~~
 
-<p>We also analyse as <code>iobj</code> the [+Animate] object (the direct object in traditional grammar terms) of verbs with two Accusative objects, whereas the other object (the secondary object in traditional grammar terms) is <code>dobj</code>:</p>
+We also analyse as `iobj` the [+Animate] object (the direct object in traditional grammar terms) of verbs with two Accusative objects, whereas the other object (the secondary object in traditional grammar terms) is `dobj`:
 
-<pre><code class="language-sdparse">Bunica i-a învățat pe copii o poezie . \n Grandmother-the them-has taught PE children a poem .
+~~~ sdparse
+Bunica i-a învățat pe copii o poezie . \n Grandmother-the them-has taught PE children a poem .
 dobj(învățat, poezie)
 iobj(învățat, copii)
-</code></pre>
+~~~
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_ro-dep/iobj.md" target="#">edit iobj</a></p>
 
-<p><a id="al-ro-dep/list" class="al-dest"></a></p>
-<h2><code>list</code>: list</h2>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_ro-dep/iobj.md" target="#">edit iobj</a>
+</div>
 
-<p>This document is a placeholder for the language-specific documentation
-for <code>list</code>.</p>
+<div about="#list_ro" property="rdf:type" resource="#dep_ro">
+	<div property="rdf:type" resource="../../u/dep/all.html#list" />
+	<a id="al-ro-dep/list" class="al-dest" />
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_ro-dep/list.md" target="#">edit list</a></p>
+	<h2><code property="oliasystem:hasTag" lang="">list</code>: <div property="rdfs:label">list</div></h2>
+	<div property="rdfs:comment">
 
-<p><a id="al-ro-dep/mark" class="al-dest"></a></p>
-<h2><code>mark</code>: marker</h2>
+This document is a placeholder for the language-specific documentation
+for `list`.
 
-<p>A marker is the word introducing a finite clause subordinate to another clause:</p>
 
-<pre><code class="language-sdparse">Văd că plouă . \n See-I that rains .
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_ro-dep/list.md" target="#">edit list</a>
+</div>
+
+<div about="#mark_ro" property="rdf:type" resource="#dep_ro">
+	<div property="rdf:type" resource="../../u/dep/all.html#mark" />
+	<a id="al-ro-dep/mark" class="al-dest" />
+
+	<h2><code property="oliasystem:hasTag" lang="">mark</code>: <div property="rdfs:label">marker</div></h2>
+	<div property="rdfs:comment">
+
+A marker is the word introducing a finite clause subordinate to another clause:
+
+~~~sdparse
+Văd că plouă . \n See-I that rains .
 mark(plouă, că)
-</code></pre>
+~~~
 
-<pre><code class="language-sdparse">Vin , dacă pot . \n Come-I , if can-I .
+~~~sdparse
+Vin , dacă pot . \n Come-I , if can-I .
 mark(pot, dacă)
-</code></pre>
+~~~
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_ro-dep/mark.md" target="#">edit mark</a></p>
 
-<p><a id="al-ro-dep/mwe" class="al-dest"></a></p>
-<h2><code>mwe</code>: multi-word expression</h2>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_ro-dep/mark.md" target="#">edit mark</a>
+</div>
 
-<p>This document is a placeholder for the language-specific documentation
-for <code>mwe</code>.</p>
+<div about="#mwe_ro" property="rdf:type" resource="#dep_ro">
+	<div property="rdf:type" resource="../../u/dep/all.html#mwe" />
+	<a id="al-ro-dep/mwe" class="al-dest" />
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_ro-dep/mwe.md" target="#">edit mwe</a></p>
+	<h2><code property="oliasystem:hasTag" lang="">mwe</code>: <div property="rdfs:label">multi-word expression</div></h2>
+	<div property="rdfs:comment">
 
-<p><a id="al-ro-dep/name" class="al-dest"></a></p>
-<h2><code>name</code>: name</h2>
+This document is a placeholder for the language-specific documentation
+for `mwe`.
 
-<p>This document is a placeholder for the language-specific documentation
-for <code>name</code>.</p>
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_ro-dep/name.md" target="#">edit name</a></p>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_ro-dep/mwe.md" target="#">edit mwe</a>
+</div>
 
-<p><a id="al-ro-dep/neg" class="al-dest"></a></p>
-<h2><code>neg</code>: negation modifier</h2>
+<div about="#name_ro" property="rdf:type" resource="#dep_ro">
+	<div property="rdf:type" resource="../../u/dep/all.html#name" />
+	<a id="al-ro-dep/name" class="al-dest" />
 
-<p>The negation modifier is the relation between a negation word and the word it modifies.</p>
+	<h2><code property="oliasystem:hasTag" lang="">name</code>: <div property="rdfs:label">name</div></h2>
+	<div property="rdfs:comment">
 
-<p>Modifiers labeled neg depend either on a noun (group “noun dependents”) or on a predicate (group “non-core dependents of clausal predicates”).</p>
+This document is a placeholder for the language-specific documentation
+for `name`.
 
-<pre><code class="language-sdparse">Copilul nu scrie frumos . Child-the not writes neatly .
+
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_ro-dep/name.md" target="#">edit name</a>
+</div>
+
+<div about="#neg_ro" property="rdf:type" resource="#dep_ro">
+	<div property="rdf:type" resource="../../u/dep/all.html#neg" />
+	<a id="al-ro-dep/neg" class="al-dest" />
+
+	<h2><code property="oliasystem:hasTag" lang="">neg</code>: <div property="rdfs:label">negation modifier</div></h2>
+	<div property="rdfs:comment">
+
+The negation modifier is the relation between a negation word and the word it modifies.
+
+Modifiers labeled neg depend either on a noun (group “noun dependents”) or on a predicate (group “non-core dependents of clausal predicates”).
+
+~~~sdparse
+Copilul nu scrie frumos . Child-the not writes neatly .
 neg(scrie, nu)
-</code></pre>
+~~~
 
-<pre><code class="language-sdparse">Maria a cumpărat nu trandafiri , ci lalele . Mary has bought not roses , but tulips .
+~~~sdparse
+Maria a cumpărat nu trandafiri , ci lalele . Mary has bought not roses , but tulips .
 neg(trandafiri, nu)
-</code></pre>
+~~~
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_ro-dep/neg.md" target="#">edit neg</a></p>
 
-<p><a id="al-ro-dep/nmod" class="al-dest"></a></p>
-<h2><code>nmod</code>: nominal modifier</h2>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_ro-dep/neg.md" target="#">edit neg</a>
+</div>
 
-<p>The <code>nmod</code> relation is used for nominal modifiers. They depend either on another noun (group “noun dependents”) or on a predicate (group “non-core dependents of clausal predicates”).</p>
+<div about="#nmod_ro" property="rdf:type" resource="#dep_ro">
+	<div property="rdf:type" resource="../../u/dep/all.html#nmod" />
+	<a id="al-ro-dep/nmod" class="al-dest" />
 
-<p><code>nmod</code> is a noun (or noun phrase) functioning as a non-core (oblique) argument or adjunct. This means that it functionally corresponds to an adverbial when it attaches to a verb, adjective or other adverb. But when attaching to a noun, it corresponds to an attribute.</p>
+	<h2><code property="oliasystem:hasTag" lang="">nmod</code>: <div property="rdfs:label">nominal modifier</div></h2>
+	<div property="rdfs:comment">
 
-<pre><code class="language-sdparse">Prietena fetei o așteaptă la masă . \n Friend-the girl-the-genitive her waits at table .
+The `nmod` relation is used for nominal modifiers. They depend either on another noun (group “noun dependents”) or on a predicate (group “non-core dependents of clausal predicates”).
+
+`nmod` is a noun (or noun phrase) functioning as a non-core (oblique) argument or adjunct. This means that it functionally corresponds to an adverbial when it attaches to a verb, adjective or other adverb. But when attaching to a noun, it corresponds to an attribute.
+
+~~~sdparse
+Prietena fetei o așteaptă la masă . \n Friend-the girl-the-genitive her waits at table .
 nmod(Prietena, fetei)
 nmod(așteaptă, masă)
-</code></pre>
+~~~
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_ro-dep/nmod.md" target="#">edit nmod</a></p>
 
-<p><a id="al-ro-dep/nsubj" class="al-dest"></a></p>
-<h2><code>nsubj</code>: nominal subject</h2>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_ro-dep/nmod.md" target="#">edit nmod</a>
+</div>
 
-<p>A nominal subject is a nominal phrase which is the syntactic subject of a clause.</p>
+<div about="#nsubj_ro" property="rdf:type" resource="#dep_ro">
+	<div property="rdf:type" resource="../../u/dep/all.html#nsubj" />
+	<a id="al-ro-dep/nsubj" class="al-dest" />
 
-<pre><code class="language-sdparse">El citește . \n He reads .
+	<h2><code property="oliasystem:hasTag" lang="">nsubj</code>: <div property="rdfs:label">nominal subject</div></h2>
+	<div property="rdfs:comment">
+
+A nominal subject is a nominal phrase which is the syntactic subject of a clause.
+
+~~~sdparse
+El citește . \n He reads .
 nsubj(citește, El)
-</code></pre>
+~~~
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_ro-dep/nsubj.md" target="#">edit nsubj</a></p>
 
-<p><a id="al-ro-dep/nsubjpass" class="al-dest"></a></p>
-<h2><code>nsubjpass</code>: passive nominal subject</h2>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_ro-dep/nsubj.md" target="#">edit nsubj</a>
+</div>
 
-<p>A passive nominal subject is a noun phrase which is the syntactic subject of a passive clause.</p>
+<div about="#nsubjpass_ro" property="rdf:type" resource="#dep_ro">
+	<div property="rdf:type" resource="../../u/dep/all.html#nsubjpass" />
+	<a id="al-ro-dep/nsubjpass" class="al-dest" />
 
-<pre><code class="language-sdparse">Cântecul a fost compus de interpret . \n Song-the has been composed by singer .
+	<h2><code property="oliasystem:hasTag" lang="">nsubjpass</code>: <div property="rdfs:label">passive nominal subject</div></h2>
+	<div property="rdfs:comment">
+
+A passive nominal subject is a noun phrase which is the syntactic subject of a passive clause.
+
+~~~sdparse
+Cântecul a fost compus de interpret . \n Song-the has been composed by singer .
 nsubjpass(compus, Cântecul)
-</code></pre>
+~~~
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_ro-dep/nsubjpass.md" target="#">edit nsubjpass</a></p>
 
-<p><a id="al-ro-dep/nummod" class="al-dest"></a></p>
-<h2><code>nummod</code>: numeric modifier</h2>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_ro-dep/nsubjpass.md" target="#">edit nsubjpass</a>
+</div>
 
-<p>This document is a placeholder for the language-specific documentation
-for <code>nummod</code>.</p>
+<div about="#nummod_ro" property="rdf:type" resource="#dep_ro">
+	<div property="rdf:type" resource="../../u/dep/all.html#nummod" />
+	<a id="al-ro-dep/nummod" class="al-dest" />
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_ro-dep/nummod.md" target="#">edit nummod</a></p>
+	<h2><code property="oliasystem:hasTag" lang="">nummod</code>: <div property="rdfs:label">numeric modifier</div></h2>
+	<div property="rdfs:comment">
 
-<p><a id="al-ro-dep/parataxis" class="al-dest"></a></p>
-<h2><code>parataxis</code>: parataxis</h2>
+This document is a placeholder for the language-specific documentation
+for `nummod`.
 
-<p>This document is a placeholder for the language-specific documentation
-for <code>parataxis</code>.</p>
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_ro-dep/parataxis.md" target="#">edit parataxis</a></p>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_ro-dep/nummod.md" target="#">edit nummod</a>
+</div>
 
-<p><a id="al-ro-dep/punct" class="al-dest"></a></p>
-<h2><code>punct</code>: punctuation</h2>
+<div about="#parataxis_ro" property="rdf:type" resource="#dep_ro">
+	<div property="rdf:type" resource="../../u/dep/all.html#parataxis" />
+	<a id="al-ro-dep/parataxis" class="al-dest" />
 
-<p>This document is a placeholder for the language-specific documentation
-for <code>punct</code>.</p>
+	<h2><code property="oliasystem:hasTag" lang="">parataxis</code>: <div property="rdfs:label">parataxis</div></h2>
+	<div property="rdfs:comment">
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_ro-dep/punct.md" target="#">edit punct</a></p>
+This document is a placeholder for the language-specific documentation
+for `parataxis`.
 
-<p><a id="al-ro-dep/remnant" class="al-dest"></a></p>
-<h2><code>remnant</code>: remnant in ellipsis</h2>
 
-<pre><code class="language-sdparse">Dan a desenat o casă , iar Maria un copac .
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_ro-dep/parataxis.md" target="#">edit parataxis</a>
+</div>
+
+<div about="#punct_ro" property="rdf:type" resource="#dep_ro">
+	<div property="rdf:type" resource="../../u/dep/all.html#punct" />
+	<a id="al-ro-dep/punct" class="al-dest" />
+
+	<h2><code property="oliasystem:hasTag" lang="">punct</code>: <div property="rdfs:label">punctuation</div></h2>
+	<div property="rdfs:comment">
+
+This document is a placeholder for the language-specific documentation
+for `punct`.
+
+
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_ro-dep/punct.md" target="#">edit punct</a>
+</div>
+
+<div about="#remnant_ro" property="rdf:type" resource="#dep_ro">
+	<div property="rdf:type" resource="../../u/dep/all.html#remnant" />
+	<a id="al-ro-dep/remnant" class="al-dest" />
+
+	<h2><code property="oliasystem:hasTag" lang="">remnant</code>: <div property="rdfs:label">remnant in ellipsis</div></h2>
+	<div property="rdfs:comment">
+
+~~~ sdparse
+Dan a desenat o casă , iar Maria un copac .
 remnant(Dan, Maria)
 remnant(casă, copac)
-</code></pre>
+~~~
 
-<pre><code class="language-sdparse">ROOT Când a intrat preotul , toți în genunchi .
+~~~ sdparse
+ROOT Când a intrat preotul , toți în genunchi .
 root(ROOT, genunchi)
 nsubj(genunchi, toți)
-</code></pre>
+~~~
 
-<p>This document is a placeholder for the language-specific documentation
-for <code>remnant</code>.</p>
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_ro-dep/remnant.md" target="#">edit remnant</a></p>
+This document is a placeholder for the language-specific documentation
+for `remnant`.
 
-<p><a id="al-ro-dep/reparandum" class="al-dest"></a></p>
-<h2><code>reparandum</code>: overridden disfluency</h2>
 
-<p>This document is a placeholder for the language-specific documentation
-for <code>reparandum</code>.</p>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_ro-dep/remnant.md" target="#">edit remnant</a>
+</div>
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_ro-dep/reparandum.md" target="#">edit reparandum</a></p>
+<div about="#reparandum_ro" property="rdf:type" resource="#dep_ro">
+	<div property="rdf:type" resource="../../u/dep/all.html#reparandum" />
+	<a id="al-ro-dep/reparandum" class="al-dest" />
 
-<p><a id="al-ro-dep/root" class="al-dest"></a></p>
-<h2><code>root</code>: root</h2>
+	<h2><code property="oliasystem:hasTag" lang="">reparandum</code>: <div property="rdfs:label">overridden disfluency</div></h2>
+	<div property="rdfs:comment">
 
-<p>The <code>root</code> grammatical relation points to the root of the sentence. A fake node “ROOT” is used as the governor. The ROOT node is indexed with “0”, since the indexation of real words in the sentence starts at 1.</p>
+This document is a placeholder for the language-specific documentation
+for `reparandum`.
 
-<pre><code class="language-sdparse">ROOT Copilul aleargă . \n ROOT Child-the runs .
+
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_ro-dep/reparandum.md" target="#">edit reparandum</a>
+</div>
+
+<div about="#root_ro" property="rdf:type" resource="#dep_ro">
+	<div property="rdf:type" resource="../../u/dep/all.html#root" />
+	<a id="al-ro-dep/root" class="al-dest" />
+
+	<h2><code property="oliasystem:hasTag" lang="">root</code>: <div property="rdfs:label">root</div></h2>
+	<div property="rdfs:comment">
+
+The `root` grammatical relation points to the root of the sentence. A fake node "ROOT" is used as the governor. The ROOT node is indexed with "0", since the indexation of real words in the sentence starts at 1. 
+
+~~~ sdparse
+ROOT Copilul aleargă . \n ROOT Child-the runs .
 root(ROOT, aleargă)
-</code></pre>
+~~~
 
-<pre><code class="language-sdparse">ROOT Vin imediat . \n ROOT Come-I immediately .
+~~~ sdparse
+ROOT Vin imediat . \n ROOT Come-I immediately .
 root(ROOT, Vin)
-</code></pre>
+~~~
 
-<pre><code class="language-sdparse">ROOT Fata este frumoasă . \n ROOT Girl-the is beautiful .
+~~~ sdparse
+ROOT Fata este frumoasă . \n ROOT Girl-the is beautiful .
 root(ROOT, frumoasă)
-</code></pre>
+~~~
 
-<pre><code class="language-sdparse">ROOT Este bine să mănânci de dimineață . \n ROOT Is well SA eat in morning.
+~~~ sdparse
+ROOT Este bine să mănânci de dimineață . \n ROOT Is well SA eat in morning.
 root(ROOT, bine)
-</code></pre>
+~~~
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_ro-dep/root.md" target="#">edit root</a></p>
 
-<p><a id="al-ro-dep/vocative" class="al-dest"></a></p>
-<h2><code>vocative</code>: vocative</h2>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_ro-dep/root.md" target="#">edit root</a>
+</div>
 
-<p>This document is a placeholder for the language-specific documentation
-for <code>vocative</code>.</p>
+<div about="#vocative_ro" property="rdf:type" resource="#dep_ro">
+	<div property="rdf:type" resource="../../u/dep/all.html#vocative" />
+	<a id="al-ro-dep/vocative" class="al-dest" />
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_ro-dep/vocative.md" target="#">edit vocative</a></p>
+	<h2><code property="oliasystem:hasTag" lang="">vocative</code>: <div property="rdfs:label">vocative</div></h2>
+	<div property="rdfs:comment">
 
-<p><a id="al-ro-dep/xcomp" class="al-dest"></a></p>
-<h2><code>xcomp</code>: open clausal complement</h2>
+This document is a placeholder for the language-specific documentation
+for `vocative`.
 
-<p>This document is a placeholder for the language-specific documentation
-for <code>xcomp</code>.</p>
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_ro-dep/xcomp.md" target="#">edit xcomp</a></p>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_ro-dep/vocative.md" target="#">edit vocative</a>
+</div>
 
+<div about="#xcomp_ro" property="rdf:type" resource="#dep_ro">
+	<div property="rdf:type" resource="../../u/dep/all.html#xcomp" />
+	<a id="al-ro-dep/xcomp" class="al-dest" />
+
+	<h2><code property="oliasystem:hasTag" lang="">xcomp</code>: <div property="rdfs:label">open clausal complement</div></h2>
+	<div property="rdfs:comment">
+
+This document is a placeholder for the language-specific documentation
+for `xcomp`.
+
+
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_ro-dep/xcomp.md" target="#">edit xcomp</a>
+</div>
 
 
       </div>

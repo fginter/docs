@@ -43,7 +43,20 @@
 	  </div>
 	</noscript>
 
-          <h1 id="features">Features</h1>
+          
+<h1 id="features">Features</h1>
+
+<p><span about="." property="rdf:type" resource="owl:Ontology">
+	<span property="owl:imports" resource=" https://www.w3.org/2012/pyRdfa/extract?uri=http://universaldependencies.org/docs/u/feat/all.html&amp;format=xml&amp;rdfagraph=output&amp;vocab_expansion=false&amp;rdfa_lite=false&amp;embedded_rdf=true&amp;space_preserve=false&amp;vocab_cache=true&amp;vocab_cache_report=false&amp;vocab_cache_refresh=false"></span>
+</span></p>
+
+<p><span about="#feat_tr" property="rdfs:label" style="visibility: hidden">Features</span>
+<span about="#feat_tr" property="rdfs:subClassOf" resource="_:tr">
+	<span about="_:tr" property="rdf:type" resource="owl:Restriction">
+		<span property="owl:onProperty" resource="http://purl.org/dc/terms/language"></span>
+		<span property="owl:hasValue" lang="" style="visibility: hidden">tr</span>
+	</span>
+</span></p>
 
 <table class="typeindex">
   <tr>
@@ -106,15 +119,177 @@
 
 <hr />
 
-<p><a id="al-tr-feat/Animacy" class="al-dest"></a></p>
-<h2><code>Animacy</code>: animacy</h2>
+<div about="#Animacy_tr" property="rdfs:subClassOf" resource="#feat_tr">
+	<a id="al-tr-feat/Animacy" class="al-dest" />
+	<h2><code property="rdfs:label" lang="">Animacy</code>: <span property="rdfs:label">animacy</span>
+	<code>[</code> 
+	
+	
+		
+		
+			
+		
+	
+	<code>]</code>
+	</h2>
+	<div about="#Animacy_tr" property="rdfs:comment">	
 
 <p>Animacy is not used.</p>
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_tr-feat/Animacy.md" target="#">edit Animacy</a></p>
 
-<p><a id="al-tr-feat/Aspect" class="al-dest"></a></p>
-<h2><code>Aspect</code>: aspect</h2>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_tr-feat/Animacy.md" target="#">edit Animacy</a>
+</div>
+
+<div about="#Aspect_tr" property="rdfs:subClassOf" resource="#feat_tr">
+	<a id="al-tr-feat/Aspect" class="al-dest" />
+	<h2><code property="rdfs:label" lang="">Aspect</code>: <span property="rdfs:label">aspect</span>
+	<code>[</code> 
+	
+	
+		
+		
+			
+				
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#AspectPerf_tr" property="rdf:type" resource="#Aspect_tr">
+						<span property="rdf:type" resource="../../u/feat/all.html#AspectPerf" />
+						<code property="oliasystem:hasTagContaining" lang="">Aspect=Perf</code>
+					</span>
+				
+			
+		
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#AspectProg_tr" property="rdf:type" resource="#Aspect_tr">
+						<span property="rdf:type" resource="../../u/feat/all.html#AspectProg" />
+						<code property="oliasystem:hasTagContaining" lang="">Aspect=Prog</code>
+					</span>
+				
+			
+		
+			
+				
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#AspectHab_tr" property="rdf:type" resource="#Aspect_tr">
+						<span property="rdf:type" resource="../../u/feat/all.html#AspectHab" />
+						<code property="oliasystem:hasTagContaining" lang="">Aspect=Hab</code>
+					</span>
+				
+			
+		
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#AspectRapid_tr" property="rdf:type" resource="#Aspect_tr">
+						<span property="rdf:type" resource="../../u/feat/all.html#AspectRapid" />
+						<code property="oliasystem:hasTagContaining" lang="">Aspect=Rapid</code>
+					</span>
+				
+			
+		
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#AspectDur_tr" property="rdf:type" resource="#Aspect_tr">
+						<span property="rdf:type" resource="../../u/feat/all.html#AspectDur" />
+						<code property="oliasystem:hasTagContaining" lang="">Aspect=Dur</code>
+					</span>
+				
+			
+		
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#AspectPro_tr" property="rdf:type" resource="#Aspect_tr">
+						<span property="rdf:type" resource="../../u/feat/all.html#AspectPro" />
+						<code property="oliasystem:hasTagContaining" lang="">Aspect=Pro</code>
+					</span>
+				
+			
+		
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+		
+			
+		
+			
+		
+			
+		
+	
+	<code>]</code>
+	</h2>
+	<div about="#Aspect_tr" property="rdfs:comment">	
 
 <p>Aspect is a feature that specifies duration of the action in time, whether the action has been completed, ongoing etc.</p>
 
@@ -220,10 +395,193 @@ and it only combines with the past tense forms.</p>
   <li>Jaklin Kornfilt. <em>Turkish</em>. London and New York: Routledge, 1997.</li>
 </ul>
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_tr-feat/Aspect.md" target="#">edit Aspect</a></p>
 
-<p><a id="al-tr-feat/Case" class="al-dest"></a></p>
-<h2><code>Case</code>: case</h2>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_tr-feat/Aspect.md" target="#">edit Aspect</a>
+</div>
+
+<div about="#Case_tr" property="rdfs:subClassOf" resource="#feat_tr">
+	<a id="al-tr-feat/Case" class="al-dest" />
+	<h2><code property="rdfs:label" lang="">Case</code>: <span property="rdfs:label">case</span>
+	<code>[</code> 
+	
+	
+		
+		
+			
+		
+			
+				
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#CaseNom_tr" property="rdf:type" resource="#Case_tr">
+						<span property="rdf:type" resource="../../u/feat/all.html#CaseNom" />
+						<code property="oliasystem:hasTagContaining" lang="">Case=Nom</code>
+					</span>
+				
+			
+		
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#CaseAcc_tr" property="rdf:type" resource="#Case_tr">
+						<span property="rdf:type" resource="../../u/feat/all.html#CaseAcc" />
+						<code property="oliasystem:hasTagContaining" lang="">Case=Acc</code>
+					</span>
+				
+			
+		
+			
+				
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#CaseDat_tr" property="rdf:type" resource="#Case_tr">
+						<span property="rdf:type" resource="../../u/feat/all.html#CaseDat" />
+						<code property="oliasystem:hasTagContaining" lang="">Case=Dat</code>
+					</span>
+				
+			
+		
+			
+				
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#CaseGen_tr" property="rdf:type" resource="#Case_tr">
+						<span property="rdf:type" resource="../../u/feat/all.html#CaseGen" />
+						<code property="oliasystem:hasTagContaining" lang="">Case=Gen</code>
+					</span>
+				
+			
+		
+			
+				
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#CaseLoc_tr" property="rdf:type" resource="#Case_tr">
+						<span property="rdf:type" resource="../../u/feat/all.html#CaseLoc" />
+						<code property="oliasystem:hasTagContaining" lang="">Case=Loc</code>
+					</span>
+				
+			
+		
+			
+				
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#CaseIns_tr" property="rdf:type" resource="#Case_tr">
+						<span property="rdf:type" resource="../../u/feat/all.html#CaseIns" />
+						<code property="oliasystem:hasTagContaining" lang="">Case=Ins</code>
+					</span>
+				
+			
+		
+			
+				
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#CaseCom_tr" property="rdf:type" resource="#Case_tr">
+						<span property="rdf:type" resource="../../u/feat/all.html#CaseCom" />
+						<code property="oliasystem:hasTagContaining" lang="">Case=Com</code>
+					</span>
+				
+			
+		
+			
+				
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#CaseAbl_tr" property="rdf:type" resource="#Case_tr">
+						<span property="rdf:type" resource="../../u/feat/all.html#CaseAbl" />
+						<code property="oliasystem:hasTagContaining" lang="">Case=Abl</code>
+					</span>
+				
+			
+		
+			
+		
+			
+		
+	
+		
+		
+			
+		
+	
+	<code>]</code>
+	</h2>
+	<div about="#Case_tr" property="rdfs:comment">	
 
 <p>Case helps specify the role of the noun phrase in the sentence.
 For example, the nominative and accusative cases often distinguish subject and object of the verb,
@@ -338,10 +696,66 @@ The oblique arguments of some verbs and complements (noun phrases) of some postp
   <li><em>Bunlar Akara’dakiler<b>den</b> dolayı oluyor</em> “All these are happening because of people in Ankara”</li>
 </ul>
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_tr-feat/Case.md" target="#">edit Case</a></p>
 
-<p><a id="al-tr-feat/Definite" class="al-dest"></a></p>
-<h2><code>Definite</code>: definiteness or state</h2>
+
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_tr-feat/Case.md" target="#">edit Case</a>
+</div>
+
+<div about="#Definite_tr" property="rdfs:subClassOf" resource="#feat_tr">
+	<a id="al-tr-feat/Definite" class="al-dest" />
+	<h2><code property="rdfs:label" lang="">Definite</code>: <span property="rdfs:label">definiteness or state</span>
+	<code>[</code> 
+	
+	
+		
+		
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#DefiniteInd_tr" property="rdf:type" resource="#Definite_tr">
+						<span property="rdf:type" resource="../../u/feat/all.html#DefiniteInd" />
+						<code property="oliasystem:hasTagContaining" lang="">Definite=Ind</code>
+					</span>
+				
+			
+		
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#DefiniteDef_tr" property="rdf:type" resource="#Definite_tr">
+						<span property="rdf:type" resource="../../u/feat/all.html#DefiniteDef" />
+						<code property="oliasystem:hasTagContaining" lang="">Definite=Def</code>
+					</span>
+				
+			
+		
+			
+		
+	
+		
+		
+			
+		
+	
+	<code>]</code>
+	</h2>
+	<div about="#Definite_tr" property="rdfs:comment">	
 
 <p>Definiteness is typically a feature of determiners.
 Its value distinguishes whether we are talking about something known and concrete, or something general or unknown.</p>
@@ -366,10 +780,67 @@ Its value distinguishes whether we are talking about something known and concret
   <li><em>her</em> “all/each”</li>
 </ul>
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_tr-feat/Definite.md" target="#">edit Definite</a></p>
 
-<p><a id="al-tr-feat/Degree" class="al-dest"></a></p>
-<h2><code>Degree</code>: degree of comparison</h2>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_tr-feat/Definite.md" target="#">edit Definite</a>
+</div>
+
+<div about="#Degree_tr" property="rdfs:subClassOf" resource="#feat_tr">
+	<a id="al-tr-feat/Degree" class="al-dest" />
+	<h2><code property="rdfs:label" lang="">Degree</code>: <span property="rdfs:label">degree of comparison</span>
+	<code>[</code> 
+	
+	
+		
+		
+			
+				
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#DegreeCmp_tr" property="rdf:type" resource="#Degree_tr">
+						<span property="rdf:type" resource="../../u/feat/all.html#DegreeCmp" />
+						<code property="oliasystem:hasTagContaining" lang="">Degree=Cmp</code>
+					</span>
+				
+			
+		
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#DegreeSup_tr" property="rdf:type" resource="#Degree_tr">
+						<span property="rdf:type" resource="../../u/feat/all.html#DegreeSup" />
+						<code property="oliasystem:hasTagContaining" lang="">Degree=Sup</code>
+					</span>
+				
+			
+		
+			
+		
+	
+		
+		
+			
+		
+	
+	<code>]</code>
+	</h2>
+	<div about="#Degree_tr" property="rdfs:comment">	
 
 <p>Degree of comparison is typically an inflectional feature of some <a href="u-pos/ADJ">adjectives</a> and <a href="u-pos/ADV">adverbs</a>.</p>
 
@@ -398,10 +869,69 @@ We only annotate these two adverbs with the <code>Degree</code> feature.</p>
   <li><em>en çabuk</em>  “quickest/fastest”</li>
 </ul>
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_tr-feat/Degree.md" target="#">edit Degree</a></p>
 
-<p><a id="al-tr-feat/Evidential" class="al-dest"></a></p>
-<h2><code>Evidential</code>: evidential</h2>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_tr-feat/Degree.md" target="#">edit Degree</a>
+</div>
+
+<div about="#Evidential_tr" property="rdfs:subClassOf" resource="#feat_tr">
+	<a id="al-tr-feat/Evidential" class="al-dest" />
+	<h2><code property="rdfs:label" lang="">Evidential</code>: <span property="rdfs:label">evidential</span>
+	<code>[</code> 
+	
+	
+		
+		
+			
+				
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#EvidentialFh_tr" property="rdf:type" resource="#Evidential_tr">
+						<span property="rdf:type" resource="../../u/feat/all.html#EvidentialFh" />
+						<code property="oliasystem:hasTagContaining" lang="">Evidential=Fh</code>
+					</span>
+				
+			
+		
+			
+		
+	
+		
+		
+			
+				
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#EvidentialNfh_tr" property="rdf:type" resource="#Evidential_tr">
+						<span property="rdf:type" resource="../../u/feat/all.html#EvidentialNfh" />
+						<code property="oliasystem:hasTagContaining" lang="">Evidential=Nfh</code>
+					</span>
+				
+			
+		
+			
+		
+	
+		
+		
+			
+		
+	
+	<code>]</code>
+	</h2>
+	<div about="#Evidential_tr" property="rdfs:comment">	
 
 <p>(<strong>New proposal</strong>)</p>
 
@@ -444,17 +974,256 @@ The speaker has first-hand evidence for the statement/event.</p>
   <li><em>eve gitmemişmiş</em> ‘(evidently) she had gone home (by the time I arrived)’</li>
 </ul>
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_tr-feat/Evidential.md" target="#">edit Evidential</a></p>
 
-<p><a id="al-tr-feat/Gender" class="al-dest"></a></p>
-<h2><code>Gender</code>: gender</h2>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_tr-feat/Evidential.md" target="#">edit Evidential</a>
+</div>
+
+<div about="#Gender_tr" property="rdfs:subClassOf" resource="#feat_tr">
+	<a id="al-tr-feat/Gender" class="al-dest" />
+	<h2><code property="rdfs:label" lang="">Gender</code>: <span property="rdfs:label">gender</span>
+	<code>[</code> 
+	
+	
+		
+		
+			
+				
+			
+		
+	
+	<code>]</code>
+	</h2>
+	<div about="#Gender_tr" property="rdfs:comment">	
 
 <p><code>Gender</code> is not used in Turkish.</p>
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_tr-feat/Gender.md" target="#">edit Gender</a></p>
 
-<p><a id="al-tr-feat/Mood" class="al-dest"></a></p>
-<h2><code>Mood</code>: mood</h2>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_tr-feat/Gender.md" target="#">edit Gender</a>
+</div>
+
+<div about="#Mood_tr" property="rdfs:subClassOf" resource="#feat_tr">
+	<a id="al-tr-feat/Mood" class="al-dest" />
+	<h2><code property="rdfs:label" lang="">Mood</code>: <span property="rdfs:label">mood</span>
+	<code>[</code> 
+	
+	
+		
+		
+			
+				
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#MoodInd_tr" property="rdf:type" resource="#Mood_tr">
+						<span property="rdf:type" resource="../../u/feat/all.html#MoodInd" />
+						<code property="oliasystem:hasTagContaining" lang="">Mood=Ind</code>
+					</span>
+				
+			
+		
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#MoodImp_tr" property="rdf:type" resource="#Mood_tr">
+						<span property="rdf:type" resource="../../u/feat/all.html#MoodImp" />
+						<code property="oliasystem:hasTagContaining" lang="">Mood=Imp</code>
+					</span>
+				
+			
+		
+			
+				
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#MoodPrs_tr" property="rdf:type" resource="#Mood_tr">
+						<span property="rdf:type" resource="../../u/feat/all.html#MoodPrs" />
+						<code property="oliasystem:hasTagContaining" lang="">Mood=Prs</code>
+					</span>
+				
+			
+		
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#MoodCnd_tr" property="rdf:type" resource="#Mood_tr">
+						<span property="rdf:type" resource="../../u/feat/all.html#MoodCnd" />
+						<code property="oliasystem:hasTagContaining" lang="">Mood=Cnd</code>
+					</span>
+				
+			
+		
+			
+				
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#MoodDes_tr" property="rdf:type" resource="#Mood_tr">
+						<span property="rdf:type" resource="../../u/feat/all.html#MoodDes" />
+						<code property="oliasystem:hasTagContaining" lang="">Mood=Des</code>
+					</span>
+				
+			
+		
+			
+				
+			
+		
+			
+		
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#MoodOpt_tr" property="rdf:type" resource="#Mood_tr">
+						<span property="rdf:type" resource="../../u/feat/all.html#MoodOpt" />
+						<code property="oliasystem:hasTagContaining" lang="">Mood=Opt</code>
+					</span>
+				
+			
+		
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#MoodNec_tr" property="rdf:type" resource="#Mood_tr">
+						<span property="rdf:type" resource="../../u/feat/all.html#MoodNec" />
+						<code property="oliasystem:hasTagContaining" lang="">Mood=Nec</code>
+					</span>
+				
+			
+		
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#MoodGen_tr" property="rdf:type" resource="#Mood_tr">
+						<span property="rdf:type" resource="../../u/feat/all.html#MoodGen" />
+						<code property="oliasystem:hasTagContaining" lang="">Mood=Gen</code>
+					</span>
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#MoodAbil_tr" property="rdf:type" resource="#Mood_tr">
+						<span property="rdf:type" resource="../../u/feat/all.html#MoodAbil" />
+						<code property="oliasystem:hasTagContaining" lang="">Mood=Abil</code>
+					</span>
+				
+			
+		
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+		
+			
+		
+			
+		
+	
+	<code>]</code>
+	</h2>
+	<div about="#Mood_tr" property="rdfs:comment">	
 
 <p><code>Mood</code> expresses the modality, a speaker’s perspective, in finite verbs.
 Turkish verbs may carry a wide range of mood information.
@@ -587,10 +1356,72 @@ However, it is also very difficult to disambiguate between these two moods.</p>
 London: Routledge, 2005.</li>
 </ul>
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_tr-feat/Mood.md" target="#">edit Mood</a></p>
 
-<p><a id="al-tr-feat/Negative" class="al-dest"></a></p>
-<h2><code>Negative</code>: whether the word can be or is negated</h2>
+
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_tr-feat/Mood.md" target="#">edit Mood</a>
+</div>
+
+<div about="#Negative_tr" property="rdfs:subClassOf" resource="#feat_tr">
+	<a id="al-tr-feat/Negative" class="al-dest" />
+	<h2><code property="rdfs:label" lang="">Negative</code>: <span property="rdfs:label">whether the word can be or is negated</span>
+	<code>[</code> 
+	
+	
+		
+		
+			
+				
+			
+		
+			
+				
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#NegativePos_tr" property="rdf:type" resource="#Negative_tr">
+						<span property="rdf:type" resource="../../u/feat/all.html#NegativePos" />
+						<code property="oliasystem:hasTagContaining" lang="">Negative=Pos</code>
+					</span>
+				
+			
+		
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#NegativeNeg_tr" property="rdf:type" resource="#Negative_tr">
+						<span property="rdf:type" resource="../../u/feat/all.html#NegativeNeg" />
+						<code property="oliasystem:hasTagContaining" lang="">Negative=Neg</code>
+					</span>
+				
+			
+		
+			
+		
+	
+		
+		
+			
+		
+	
+	<code>]</code>
+	</h2>
+	<div about="#Negative_tr" property="rdfs:comment">	
 
 <p>In Turkish <a href="tr-pos/VERB">verbs</a> are negated with the suffix <em>-mA</em> (and its allomorphs).
 Only exception is the verb/particle <em>değil</em> which functions as an auxiliary or copula
@@ -623,10 +1454,88 @@ We (currently) do not mark adjectives for the <code>Negative</code> feature.</p>
   <li><em>Ali doktor <b>değil</b></em> “Ali is not a doctor”</li>
 </ul>
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_tr-feat/Negative.md" target="#">edit Negative</a></p>
 
-<p><a id="al-tr-feat/NumType" class="al-dest"></a></p>
-<h2><code>NumType</code>: numeral type</h2>
+
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_tr-feat/Negative.md" target="#">edit Negative</a>
+</div>
+
+<div about="#NumType_tr" property="rdfs:subClassOf" resource="#feat_tr">
+	<a id="al-tr-feat/NumType" class="al-dest" />
+	<h2><code property="rdfs:label" lang="">NumType</code>: <span property="rdfs:label">numeral type</span>
+	<code>[</code> 
+	
+	
+		
+		
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#NumTypeCard_tr" property="rdf:type" resource="#NumType_tr">
+						<span property="rdf:type" resource="../../u/feat/all.html#NumTypeCard" />
+						<code property="oliasystem:hasTagContaining" lang="">NumType=Card</code>
+					</span>
+				
+			
+		
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#NumTypeOrd_tr" property="rdf:type" resource="#NumType_tr">
+						<span property="rdf:type" resource="../../u/feat/all.html#NumTypeOrd" />
+						<code property="oliasystem:hasTagContaining" lang="">NumType=Ord</code>
+					</span>
+				
+			
+		
+			
+				
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#NumTypeDist_tr" property="rdf:type" resource="#NumType_tr">
+						<span property="rdf:type" resource="../../u/feat/all.html#NumTypeDist" />
+						<code property="oliasystem:hasTagContaining" lang="">NumType=Dist</code>
+					</span>
+				
+			
+		
+			
+		
+	
+		
+		
+			
+		
+	
+	<code>]</code>
+	</h2>
+	<div about="#NumType_tr" property="rdfs:comment">	
 
 <p>In Turkish <a href="tr-pos/NUM">numbers</a> can be cardinal, ordinal or distributive.
 We also mark the interrogative <em>kaç</em> “how many” as a number,
@@ -671,10 +1580,68 @@ A period following a numeral may also indicate ordinal use of the number.</p>
   <li><em>kaç<b>ar</b> kitap okudunuz</em> “how many books have you each read”</li>
 </ul>
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_tr-feat/NumType.md" target="#">edit NumType</a></p>
 
-<p><a id="al-tr-feat/Number" class="al-dest"></a></p>
-<h2><code>Number</code>: number</h2>
+
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_tr-feat/NumType.md" target="#">edit NumType</a>
+</div>
+
+<div about="#Number_tr" property="rdfs:subClassOf" resource="#feat_tr">
+	<a id="al-tr-feat/Number" class="al-dest" />
+	<h2><code property="rdfs:label" lang="">Number</code>: <span property="rdfs:label">number</span>
+	<code>[</code> 
+	
+	
+		
+		
+			
+				
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#NumberSing_tr" property="rdf:type" resource="#Number_tr">
+						<span property="rdf:type" resource="../../u/feat/all.html#NumberSing" />
+						<code property="oliasystem:hasTagContaining" lang="">Number=Sing</code>
+					</span>
+				
+			
+		
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#NumberPlur_tr" property="rdf:type" resource="#Number_tr">
+						<span property="rdf:type" resource="../../u/feat/all.html#NumberPlur" />
+						<code property="oliasystem:hasTagContaining" lang="">Number=Plur</code>
+					</span>
+				
+			
+		
+			
+		
+	
+		
+		
+			
+		
+	
+	<code>]</code>
+	</h2>
+	<div about="#Number_tr" property="rdfs:comment">	
 
 <p><code>Number</code> is an inflectional feature of nouns and other parts of speech (adjectives, verbs) that mark agreement with nouns.</p>
 
@@ -721,10 +1688,72 @@ Plurality on verbs is indicated by a set of person/number suffixes which vary de
   <li><em>Kitap okuyacak<b>lar</b></em> ‘(They) will read books’ – Plurality of the subject is inferred from the agreement marker on the verb</li>
 </ul>
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_tr-feat/Number.md" target="#">edit Number</a></p>
 
-<p><a id="al-tr-feat/Number[psor]" class="al-dest"></a></p>
-<h2><code>Number[psor]</code>: possessor’s number</h2>
+
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_tr-feat/Number.md" target="#">edit Number</a>
+</div>
+
+<div about="#Number%5Bpsor%5D_tr" property="rdfs:subClassOf" resource="#feat_tr">
+	<a id="al-tr-feat/Number[psor]" class="al-dest" />
+	<h2><code property="rdfs:label" lang="">Number[psor]</code>: <span property="rdfs:label">possessor’s number</span>
+	<code>[</code> 
+	
+	
+		
+		
+			
+				
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#Number%5Bpsor%5DSing_tr" property="rdf:type" resource="#Number%5Bpsor%5D_tr">
+						<span property="rdf:type" resource="../../u/feat/all.html#Number[psor]Sing" />
+						<code property="oliasystem:hasTagContaining" lang="">Number[psor]=Sing</code>
+					</span>
+				
+			
+		
+			
+		
+	
+		
+		
+			
+				
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#Number%5Bpsor%5DPlur_tr" property="rdf:type" resource="#Number%5Bpsor%5D_tr">
+						<span property="rdf:type" resource="../../u/feat/all.html#Number[psor]Plur" />
+						<code property="oliasystem:hasTagContaining" lang="">Number[psor]=Plur</code>
+					</span>
+				
+			
+		
+			
+		
+	
+		
+		
+			
+				
+			
+		
+	
+	<code>]</code>
+	</h2>
+	<div about="#Number%5Bpsor%5D_tr" property="rdfs:comment">	
 
 <p><code>Number[psor]</code> feature captures the possessor’s number.</p>
 
@@ -746,10 +1775,88 @@ Plurality on verbs is indicated by a set of person/number suffixes which vary de
   <li><em>kitabımız</em> “our book” <code>Number[psor]=Plur|Number=Sing</code></li>
 </ul>
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_tr-feat/Number-psor.md" target="#">edit Number[psor]</a></p>
 
-<p><a id="al-tr-feat/Person" class="al-dest"></a></p>
-<h2><code>Person</code>: person</h2>
+
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_tr-feat/Number-psor.md" target="#">edit Number[psor]</a>
+</div>
+
+<div about="#Person_tr" property="rdfs:subClassOf" resource="#feat_tr">
+	<a id="al-tr-feat/Person" class="al-dest" />
+	<h2><code property="rdfs:label" lang="">Person</code>: <span property="rdfs:label">person</span>
+	<code>[</code> 
+	
+	
+		
+		
+			
+				
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#Person1_tr" property="rdf:type" resource="#Person_tr">
+						<span property="rdf:type" resource="../../u/feat/all.html#Person1" />
+						<code property="oliasystem:hasTagContaining" lang="">Person=1</code>
+					</span>
+				
+			
+		
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#Person2_tr" property="rdf:type" resource="#Person_tr">
+						<span property="rdf:type" resource="../../u/feat/all.html#Person2" />
+						<code property="oliasystem:hasTagContaining" lang="">Person=2</code>
+					</span>
+				
+			
+		
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#Person3_tr" property="rdf:type" resource="#Person_tr">
+						<span property="rdf:type" resource="../../u/feat/all.html#Person3" />
+						<code property="oliasystem:hasTagContaining" lang="">Person=3</code>
+					</span>
+				
+			
+		
+			
+		
+	
+		
+		
+			
+		
+	
+	<code>]</code>
+	</h2>
+	<div about="#Person_tr" property="rdfs:comment">	
 
 <p>In Turkish, <code>Person</code> is a feature of personal <a href="tr-pos/PRON">pronouns</a>, and <a href="tr-pos/VERB">verbs</a>.
 <code>Person</code> marking on verbs are obligatory in Turkish for all finite verb forms.
@@ -820,10 +1927,87 @@ speakers nor addressees.</p>
   <li><em>okudu<b>lar</b></em> ‘they read-PAST’</li>
 </ul>
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_tr-feat/Person.md" target="#">edit Person</a></p>
 
-<p><a id="al-tr-feat/Person[psor]" class="al-dest"></a></p>
-<h2><code>Person[psor]</code>: person of possessor</h2>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_tr-feat/Person.md" target="#">edit Person</a>
+</div>
+
+<div about="#Person%5Bpsor%5D_tr" property="rdfs:subClassOf" resource="#feat_tr">
+	<a id="al-tr-feat/Person[psor]" class="al-dest" />
+	<h2><code property="rdfs:label" lang="">Person[psor]</code>: <span property="rdfs:label">person of possessor</span>
+	<code>[</code> 
+	
+	
+		
+		
+			
+				
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#Person%5Bpsor%5D1_tr" property="rdf:type" resource="#Person%5Bpsor%5D_tr">
+						<span property="rdf:type" resource="../../u/feat/all.html#Person[psor]1" />
+						<code property="oliasystem:hasTagContaining" lang="">Person[psor]=1</code>
+					</span>
+				
+			
+		
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#Person%5Bpsor%5D2_tr" property="rdf:type" resource="#Person%5Bpsor%5D_tr">
+						<span property="rdf:type" resource="../../u/feat/all.html#Person[psor]2" />
+						<code property="oliasystem:hasTagContaining" lang="">Person[psor]=2</code>
+					</span>
+				
+			
+		
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#Person%5Bpsor%5D3_tr" property="rdf:type" resource="#Person%5Bpsor%5D_tr">
+						<span property="rdf:type" resource="../../u/feat/all.html#Person[psor]3" />
+						<code property="oliasystem:hasTagContaining" lang="">Person[psor]=3</code>
+					</span>
+				
+			
+		
+			
+		
+	
+		
+		
+			
+		
+	
+	<code>]</code>
+	</h2>
+	<div about="#Person%5Bpsor%5D_tr" property="rdfs:comment">	
 
 <p><code>Number[psor]</code> feature captures the possessor’s person.</p>
 
@@ -862,20 +2046,158 @@ speakers nor addressees.</p>
 
 <p>(note that last three forms are ambiguous)</p>
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_tr-feat/Person-psor.md" target="#">edit Person[psor]</a></p>
 
-<p><a id="al-tr-feat/Poss" class="al-dest"></a></p>
-<h2><code>Poss</code>: possessive</h2>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_tr-feat/Person-psor.md" target="#">edit Person[psor]</a>
+</div>
+
+<div about="#Poss_tr" property="rdfs:subClassOf" resource="#feat_tr">
+	<a id="al-tr-feat/Poss" class="al-dest" />
+	<h2><code property="rdfs:label" lang="">Poss</code>: <span property="rdfs:label">possessive</span>
+	<code>[</code> 
+	
+	
+		
+		
+			
+				
+			
+		
+	
+	<code>]</code>
+	</h2>
+	<div about="#Poss_tr" property="rdfs:comment">	
 
 <p>We do not use <code>Poss</code> in Turkish.
 Possessive use of a pronoun (similar to English <em>my</em>, <em>your</em>)
 corresponds pronouns with <em>genitive</em> <a href="Case">case</a> suffix, e.g.,
 <em>ben<b>im</b></em> “my”.</p>
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_tr-feat/Poss.md" target="#">edit Poss</a></p>
 
-<p><a id="al-tr-feat/PronType" class="al-dest"></a></p>
-<h2><code>PronType</code>: pronominal type</h2>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_tr-feat/Poss.md" target="#">edit Poss</a>
+</div>
+
+<div about="#PronType_tr" property="rdfs:subClassOf" resource="#feat_tr">
+	<a id="al-tr-feat/PronType" class="al-dest" />
+	<h2><code property="rdfs:label" lang="">PronType</code>: <span property="rdfs:label">pronominal type</span>
+	<code>[</code> 
+	
+	
+		
+		
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#PronTypePrs_tr" property="rdf:type" resource="#PronType_tr">
+						<span property="rdf:type" resource="../../u/feat/all.html#PronTypePrs" />
+						<code property="oliasystem:hasTagContaining" lang="">PronType=Prs</code>
+					</span>
+				
+			
+		
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#PronTypeRcp_tr" property="rdf:type" resource="#PronType_tr">
+						<span property="rdf:type" resource="../../u/feat/all.html#PronTypeRcp" />
+						<code property="oliasystem:hasTagContaining" lang="">PronType=Rcp</code>
+					</span>
+				
+			
+		
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#PronTypeInt_tr" property="rdf:type" resource="#PronType_tr">
+						<span property="rdf:type" resource="../../u/feat/all.html#PronTypeInt" />
+						<code property="oliasystem:hasTagContaining" lang="">PronType=Int</code>
+					</span>
+				
+			
+		
+			
+		
+	
+		
+		
+			
+		
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#PronTypeDem_tr" property="rdf:type" resource="#PronType_tr">
+						<span property="rdf:type" resource="../../u/feat/all.html#PronTypeDem" />
+						<code property="oliasystem:hasTagContaining" lang="">PronType=Dem</code>
+					</span>
+				
+			
+		
+			
+		
+	
+		
+		
+			
+		
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#PronTypeLoc_tr" property="rdf:type" resource="#PronType_tr">
+						<span property="rdf:type" resource="../../u/feat/all.html#PronTypeLoc" />
+						<code property="oliasystem:hasTagContaining" lang="">PronType=Loc</code>
+					</span>
+				
+			
+		
+			
+		
+	
+		
+		
+			
+		
+			
+		
+	
+	<code>]</code>
+	</h2>
+	<div about="#PronType_tr" property="rdfs:comment">	
 
 <p>This feature typically applies to <a href="u-pos/PRON">pronouns</a>, <a href="u-pos/DET">determiners</a>, pronominal <a href="u-pos/NUM">numerals</a> (quantifiers) and pronominal <a href="u-pos/ADV">adverbs</a>.</p>
 
@@ -936,10 +2258,47 @@ forms.</p>
   <li><em>ora</em> “there”</li>
 </ul>
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_tr-feat/PronType.md" target="#">edit PronType</a></p>
 
-<p><a id="al-tr-feat/Reflex" class="al-dest"></a></p>
-<h2><code>Reflex</code>: reflexive</h2>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_tr-feat/PronType.md" target="#">edit PronType</a>
+</div>
+
+<div about="#Reflex_tr" property="rdfs:subClassOf" resource="#feat_tr">
+	<a id="al-tr-feat/Reflex" class="al-dest" />
+	<h2><code property="rdfs:label" lang="">Reflex</code>: <span property="rdfs:label">reflexive</span>
+	<code>[</code> 
+	
+	
+		
+		
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#ReflexYes_tr" property="rdf:type" resource="#Reflex_tr">
+						<span property="rdf:type" resource="../../u/feat/all.html#ReflexYes" />
+						<code property="oliasystem:hasTagContaining" lang="">Reflex=Yes</code>
+					</span>
+				
+			
+		
+			
+				
+			
+		
+	
+		
+		
+			
+		
+	
+	<code>]</code>
+	</h2>
+	<div about="#Reflex_tr" property="rdfs:comment">	
 
 <p>It tells whether the word is reflexive, i.e. refers to the subject of its clause.</p>
 
@@ -959,10 +2318,118 @@ column. (Which means that empty value has the <code>No</code> meaning.)</p>
   <li><em>kendimiz</em> “ourselves”</li>
 </ul>
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_tr-feat/Reflex.md" target="#">edit Reflex</a></p>
 
-<p><a id="al-tr-feat/Tense" class="al-dest"></a></p>
-<h2><code>Tense</code>: tense</h2>
+
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_tr-feat/Reflex.md" target="#">edit Reflex</a>
+</div>
+
+<div about="#Tense_tr" property="rdfs:subClassOf" resource="#feat_tr">
+	<a id="al-tr-feat/Tense" class="al-dest" />
+	<h2><code property="rdfs:label" lang="">Tense</code>: <span property="rdfs:label">tense</span>
+	<code>[</code> 
+	
+	
+		
+		
+			
+				
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#TensePast_tr" property="rdf:type" resource="#Tense_tr">
+						<span property="rdf:type" resource="../../u/feat/all.html#TensePast" />
+						<code property="oliasystem:hasTagContaining" lang="">Tense=Past</code>
+					</span>
+				
+			
+		
+			
+				
+			
+		
+	
+		
+		
+			
+		
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#TenseFut_tr" property="rdf:type" resource="#Tense_tr">
+						<span property="rdf:type" resource="../../u/feat/all.html#TenseFut" />
+						<code property="oliasystem:hasTagContaining" lang="">Tense=Fut</code>
+					</span>
+				
+			
+		
+			
+				
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#TensePres_tr" property="rdf:type" resource="#Tense_tr">
+						<span property="rdf:type" resource="../../u/feat/all.html#TensePres" />
+						<code property="oliasystem:hasTagContaining" lang="">Tense=Pres</code>
+					</span>
+				
+			
+		
+			
+		
+	
+		
+		
+			
+				
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#TensePqp_tr" property="rdf:type" resource="#Tense_tr">
+						<span property="rdf:type" resource="../../u/feat/all.html#TensePqp" />
+						<code property="oliasystem:hasTagContaining" lang="">Tense=Pqp</code>
+					</span>
+				
+			
+		
+			
+				
+			
+		
+	
+		
+		
+			
+		
+	
+	<code>]</code>
+	</h2>
+	<div about="#Tense_tr" property="rdfs:comment">	
 
 <p>Turkish has a complex tense/aspect/modality system.</p>
 
@@ -1032,10 +2499,64 @@ Hence, we only mark verbal predicates with double past indicators as <code>Pqp</
   <li><em>eve gittiydi</em> ‘she had gone home’ (colloquial)</li>
 </ul>
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_tr-feat/Tense.md" target="#">edit Tense</a></p>
 
-<p><a id="al-tr-feat/VerbForm" class="al-dest"></a></p>
-<h2><code>VerbForm</code>: form of verb or deverbative</h2>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_tr-feat/Tense.md" target="#">edit Tense</a>
+</div>
+
+<div about="#VerbForm_tr" property="rdfs:subClassOf" resource="#feat_tr">
+	<a id="al-tr-feat/VerbForm" class="al-dest" />
+	<h2><code property="rdfs:label" lang="">VerbForm</code>: <span property="rdfs:label">form of verb or deverbative</span>
+	<code>[</code> 
+	
+	
+		
+		
+			
+				
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#VerbFormPart_tr" property="rdf:type" resource="#VerbForm_tr">
+						<span property="rdf:type" resource="../../u/feat/all.html#VerbFormPart" />
+						<code property="oliasystem:hasTagContaining" lang="">VerbForm=Part</code>
+					</span>
+				
+			
+		
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#VerbFormTrans_tr" property="rdf:type" resource="#VerbForm_tr">
+						<span property="rdf:type" resource="../../u/feat/all.html#VerbFormTrans" />
+						<code property="oliasystem:hasTagContaining" lang="">VerbForm=Trans</code>
+					</span>
+				
+			
+		
+			
+				
+			
+		
+	
+	<code>]</code>
+	</h2>
+	<div about="#VerbForm_tr" property="rdfs:comment">	
 
 <p>We use <code>VerbForm</code> with non-finite verbs that function as heads of adjectival and adverbial clauses.</p>
 
@@ -1074,10 +2595,115 @@ we use the same label.</p>
   <li><em>okuyunca anlayacaksın</em> “You will understand when you read it”</li>
 </ul>
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_tr-feat/VerbForm.md" target="#">edit VerbForm</a></p>
 
-<p><a id="al-tr-feat/Voice" class="al-dest"></a></p>
-<h2><code>Voice</code>: voice</h2>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_tr-feat/VerbForm.md" target="#">edit VerbForm</a>
+</div>
+
+<div about="#Voice_tr" property="rdfs:subClassOf" resource="#feat_tr">
+	<a id="al-tr-feat/Voice" class="al-dest" />
+	<h2><code property="rdfs:label" lang="">Voice</code>: <span property="rdfs:label">voice</span>
+	<code>[</code> 
+	
+	
+		
+		
+			
+		
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#VoicePass_tr" property="rdf:type" resource="#Voice_tr">
+						<span property="rdf:type" resource="../../u/feat/all.html#VoicePass" />
+						<code property="oliasystem:hasTagContaining" lang="">Voice=Pass</code>
+					</span>
+				
+			
+		
+			
+		
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#VoiceRcp_tr" property="rdf:type" resource="#Voice_tr">
+						<span property="rdf:type" resource="../../u/feat/all.html#VoiceRcp" />
+						<code property="oliasystem:hasTagContaining" lang="">Voice=Rcp</code>
+					</span>
+				
+			
+		
+			
+		
+	
+		
+		
+			
+		
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#VoiceCau_tr" property="rdf:type" resource="#Voice_tr">
+						<span property="rdf:type" resource="../../u/feat/all.html#VoiceCau" />
+						<code property="oliasystem:hasTagContaining" lang="">Voice=Cau</code>
+					</span>
+				
+			
+		
+			
+		
+			
+		
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+				
+					
+					<span about="#VoiceRfl_tr" property="rdf:type" resource="#Voice_tr">
+						<span property="rdf:type" resource="../../u/feat/all.html#VoiceRfl" />
+						<code property="oliasystem:hasTagContaining" lang="">Voice=Rfl</code>
+					</span>
+				
+			
+		
+			
+		
+	
+		
+		
+			
+		
+	
+	<code>]</code>
+	</h2>
+	<div about="#Voice_tr" property="rdfs:comment">	
 
 <p>(<strong>This feature, as defined currently, cannot correctly handle voice features on Turkish verbs.</strong>) See https://github.com/UniversalDependencies/docs/issues/197 for the discussion.</p>
 
@@ -1153,7 +2779,10 @@ Like reciprocal, reflexive is rather unproductive, and a very limited set of ver
   <li><em>giy<b>in</b></em> “to dress oneself”</li>
 </ul>
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_tr-feat/Voice.md" target="#">edit Voice</a></p>
+
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_tr-feat/Voice.md" target="#">edit Voice</a>
+</div>
 
 
 

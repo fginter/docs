@@ -43,7 +43,19 @@
 	  </div>
 	</noscript>
 
-          <h1 id="pos-tags">POS tags</h1>
+          
+<h1 id="pos-tags">POS tags</h1>
+
+<p><span about="." property="rdf:type" resource="owl:Ontology">
+	<span property="owl:imports" resource=" https://www.w3.org/2012/pyRdfa/extract?uri=http://universaldependencies.org/docs/u/pos/all.html&amp;format=xml&amp;rdfagraph=output&amp;vocab_expansion=false&amp;rdfa_lite=false&amp;embedded_rdf=true&amp;space_preserve=false&amp;vocab_cache=true&amp;vocab_cache_report=false&amp;vocab_cache_refresh=false"></span>
+	</span>
+<span about="#pos_fr" property="rdfs:label" style="visibility: hidden">POS tags</span>
+<span about="#pos_fr" property="rdfs:subClassOf" resource="_:fr">
+	<span about="_:fr" property="rdf:type" resource="owl:Restriction">
+		<span property="owl:onProperty" resource="http://purl.org/dc/terms/language"></span>
+		<span property="owl:hasValue" lang="" style="visibility: hidden">fr</span>
+	</span>
+</span></p>
 
 <table class="typeindex">
   <thead>
@@ -99,300 +111,393 @@
 
 <hr />
 
-<p><a id="al-fr-pos/ADJ" class="al-dest"></a></p>
-<h2><code>ADJ</code>: adjective</h2>
+<div about="#ADJ_fr" property="rdf:type" resource="#pos_fr">
+	<div property="rdf:type" resource="../../u/pos/all.html#ADJ" />
+	<a id="al-fr-pos/ADJ" class="al-dest" />
 
-<h3 id="definition">Definition</h3>
+	<h2><code property="oliasystem:hasTag" lang="">ADJ</code>: <div property="rdfs:label">adjective</div></h2>
+	<div property="rdfs:comment">
 
-<p>Adjectives are words that typically modify nouns and specify their properties or attributes. Adjectives in French agree in gender and number with the noun they modify (both in attributive and predicative position).</p>
+### Definition
 
-<h3 id="examples">Examples</h3>
+Adjectives are words that typically modify nouns and specify their properties or attributes. Adjectives in French agree in gender and number with the noun they modify (both in attributive and predicative position).
 
-<ul>
-  <li><em>grand/grande/grands/grandes</em> “big”</li>
-  <li><em>vieux/vieille/vieilles</em> “old”</li>
-</ul>
+### Examples
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_fr-pos/ADJ.md" target="#">edit ADJ</a></p>
+- _grand/grande/grands/grandes_ "big"
+- _vieux/vieille/vieilles_ "old"
 
-<p><a id="al-fr-pos/ADP" class="al-dest"></a></p>
-<h2><code>ADP</code>: adposition</h2>
 
-<h3 id="definition">Definition</h3>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_fr-pos/ADJ.md" target="#">edit ADJ</a>
 
-<p>Adposition is a cover term for prepositions and postpositions. French has only prepositions.</p>
 
-<h3 id="examples">Examples</h3>
+<div about="#ADP_fr" property="rdf:type" resource="#pos_fr">
+	<div property="rdf:type" resource="../../u/pos/all.html#ADP" />
+	<a id="al-fr-pos/ADP" class="al-dest" />
 
-<ul>
-  <li><em>pour</em> “for”</li>
-  <li><em>de</em> “of, to”</li>
-  <li><em>à</em> “to”</li>
-  <li><em>dans</em> “in”</li>
-</ul>
+	<h2><code property="oliasystem:hasTag" lang="">ADP</code>: <div property="rdfs:label">adposition</div></h2>
+	<div property="rdfs:comment">
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_fr-pos/ADP.md" target="#">edit ADP</a></p>
+### Definition
 
-<p><a id="al-fr-pos/ADV" class="al-dest"></a></p>
-<h2><code>ADV</code>: adverb</h2>
+Adposition is a cover term for prepositions and postpositions. French has only prepositions.
 
-<h3 id="definition">Definition</h3>
+### Examples
 
-<p>Adverbs are words that typically modify <a href="ADJ">adjectives</a>,
-<a href="VERB">verbs</a> or other adverbs for such categories as time, place, direction or manner.</p>
+- _pour_ "for"
+- _de_ "of, to"
+- _à_ "to"
+- _dans_ "in"
 
-<h3 id="examples">Examples</h3>
-<ul>
-  <li><em><b>très</b> joli</em> “<b>very</b> nice”</li>
-  <li><em>fondues <b>ensemble</b></em> “melted <b>together</b>”</li>
-</ul>
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_fr-pos/ADV.md" target="#">edit ADV</a></p>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_fr-pos/ADP.md" target="#">edit ADP</a>
 
-<p><a id="al-fr-pos/AUX" class="al-dest"></a></p>
-<h2><code>AUX</code>: auxiliary verb</h2>
 
-<h3 id="definition">Definition</h3>
+<div about="#ADV_fr" property="rdf:type" resource="#pos_fr">
+	<div property="rdf:type" resource="../../u/pos/all.html#ADV" />
+	<a id="al-fr-pos/ADV" class="al-dest" />
 
-<p>An auxiliary verb is a verb that accompanies the lexical verb of a verb phrase and expresses grammatical distinctions not carried by the lexical verb, such as person, number, tense, mood, aspect, and voice.</p>
+	<h2><code property="oliasystem:hasTag" lang="">ADV</code>: <div property="rdfs:label">adverb</div></h2>
+	<div property="rdfs:comment">
 
-<p>French auxiliary verbs can be divided into tense auxiliaries, modal auxiliaries and passive auxiliaries.</p>
+### Definition
 
-<h3 id="delimitation">Delimitation</h3>
+Adverbs are words that typically modify [adjectives](ADJ),
+[verbs](VERB) or other adverbs for such categories as time, place, direction or manner.
 
-<p>The exact delimitation of auxiliaries in French is not completely clear-cut, especially for the category of modal auxiliaries. In the French UD treebank, we have adopted a consensus solution based on the original Google annotation and the universal UD guidelines. Below we list the verbs that may appear in each group:</p>
+### Examples
+- _<b>très</b> joli_ "<b>very</b> nice"
+- _fondues <b>ensemble</b>_ "melted <b>together</b>"
 
-<ul>
-  <li>Tense auxiliary: <em>aller</em> (future périphrastique), <em>être</em>, <em>avoir</em></li>
-  <li>Modal auxiliary (+ infinitive): <em>savoir</em>, <em>pouvoir</em>, <em>devoir</em>, <em>vouloir</em>, <em>falloir</em>, <em>voir</em>, <em>aimer</em>, <em>souhaiter</em></li>
-  <li>Passive auxiliary: <em>être</em>, <em>aller</em></li>
-</ul>
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_fr-pos/AUX_.md" target="#">edit AUX</a></p>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_fr-pos/ADV.md" target="#">edit ADV</a>
 
-<p><a id="al-fr-pos/CONJ" class="al-dest"></a></p>
-<h2><code>CONJ</code>: coordinating conjunction</h2>
 
-<h3 id="definition">Definition</h3>
-<p>A coordinating conjunction is a word that links words or larger constituents without syntactically subordinating one to the other and expresses a semantic relationship between them.</p>
+<div about="#AUX_fr" property="rdf:type" resource="#pos_fr">
+	<div property="rdf:type" resource="../../u/pos/all.html#AUX" />
+	<a id="al-fr-pos/AUX" class="al-dest" />
 
-<h3 id="examples">Examples</h3>
+	<h2><code property="oliasystem:hasTag" lang="">AUX</code>: <div property="rdfs:label">auxiliary verb</div></h2>
+	<div property="rdfs:comment">
 
-<ul>
-  <li><em>mais</em> “but”</li>
-  <li><em>ou</em> “or”</li>
-  <li><em>et</em> “and”</li>
-  <li><em>donc</em> “thus”</li>
-  <li><em>or</em> “however”</li>
-  <li><em>ni</em> “nor”</li>
-  <li><em>car</em> “because”</li>
-</ul>
+### Definition
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_fr-pos/CONJ.md" target="#">edit CONJ</a></p>
+An auxiliary verb is a verb that accompanies the lexical verb of a verb phrase and expresses grammatical distinctions not carried by the lexical verb, such as person, number, tense, mood, aspect, and voice.
 
-<p><a id="al-fr-pos/DET" class="al-dest"></a></p>
-<h2><code>DET</code>: determiner</h2>
+French auxiliary verbs can be divided into tense auxiliaries, modal auxiliaries and passive auxiliaries.
 
-<h3 id="definition">Definition</h3>
-<p>We follow the definition for <code>DET</code> proposed in the universal scheme.</p>
+### Delimitation
 
-<p>However note that at the moment numerals are not consistently annotated as <code>NUM</code>, and are sometimes marked as <code>DET</code>.</p>
+The exact delimitation of auxiliaries in French is not completely clear-cut, especially for the category of modal auxiliaries. In the French UD treebank, we have adopted a consensus solution based on the original Google annotation and the universal UD guidelines. Below we list the verbs that may appear in each group:
 
-<p>For demonstratives such as <em>ce …-là, ce …-ci</em> (as in <em>cet homme-ci, cette femme-là</em> “this man, that women”), the first part of the determiner is annotated as <code>DET</code> and the clitic <em>ci, là</em> (which are split from the noun) are marked as <code>PART</code>.</p>
+- Tense auxiliary: _aller_ (future périphrastique), _être_, _avoir_
+- Modal auxiliary (+ infinitive): _savoir_, _pouvoir_, _devoir_, _vouloir_, _falloir_, _voir_, _aimer_, _souhaiter_
+- Passive auxiliary: _être_, _aller_
 
-<h3 id="examples">Examples</h3>
 
-<ul>
-  <li>articles (a closed class indicating definiteness, specificity or givenness): <em>le, la, les</em></li>
-  <li>possessive determiners: <em>mon, ton, son, ma, ta, sa, mes, tes, ses, notre, votre, leur, nos, vos, leurs</em></li>
-  <li>demonstrative determiners: e.g., <em>ce, cet, cette</em> as in <em>J’ai vu <b>ce</b> vélo hier.</em></li>
-  <li>interrogative determiners: <em>quel, quelle</em> as in <em>“<b>Quelle</b> couleur aimez-vous?”</em></li>
-  <li>relative determiners: <em>quel, quelle</em> as in <em>“Je me demande <b>quelle</b> couleur vous aimez.”</em></li>
-  <li>quantity/quantifier determiners: <em>aucun</em>, <em>tous</em> (as in “tous les”).</li>
-</ul>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_fr-pos/AUX_.md" target="#">edit AUX</a>
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_fr-pos/DET.md" target="#">edit DET</a></p>
 
-<p><a id="al-fr-pos/INTJ" class="al-dest"></a></p>
-<h2><code>INTJ</code>: interjection</h2>
+<div about="#CONJ_fr" property="rdf:type" resource="#pos_fr">
+	<div property="rdf:type" resource="../../u/pos/all.html#CONJ" />
+	<a id="al-fr-pos/CONJ" class="al-dest" />
 
-<h3 id="definition">Definition</h3>
+	<h2><code property="oliasystem:hasTag" lang="">CONJ</code>: <div property="rdfs:label">coordinating conjunction</div></h2>
+	<div property="rdfs:comment">
 
-<p>An interjection is a word that is used most often as an exclamation or part of an exclamation.</p>
+### Definition
+A coordinating conjunction is a word that links words or larger constituents without syntactically subordinating one to the other and expresses a semantic relationship between them.
 
-<h3 id="examples">Examples</h3>
+### Examples
 
-<ul>
-  <li><em>bref</em></li>
-  <li><em>bon</em> “well”</li>
-  <li><em>enfin</em>
-_ <em>attention</em></li>
-</ul>
+- _mais_ "but"
+- _ou_ "or"
+- _et_ "and"
+- _donc_ "thus"
+- _or_ "however"
+- _ni_ "nor"
+- _car_ "because"
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_fr-pos/INTJ.md" target="#">edit INTJ</a></p>
 
-<p><a id="al-fr-pos/NOUN" class="al-dest"></a></p>
-<h2><code>NOUN</code>: noun</h2>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_fr-pos/CONJ.md" target="#">edit CONJ</a>
 
-<h3 id="definition">Definition</h3>
 
-<p>Nouns are a part of speech typically denoting a person, place, thing, animal or idea. Common nouns are tagged as <code>NOUN</code>.</p>
+<div about="#DET_fr" property="rdf:type" resource="#pos_fr">
+	<div property="rdf:type" resource="../../u/pos/all.html#DET" />
+	<a id="al-fr-pos/DET" class="al-dest" />
 
-<h3 id="examples">Examples</h3>
+	<h2><code property="oliasystem:hasTag" lang="">DET</code>: <div property="rdfs:label">determiner</div></h2>
+	<div property="rdfs:comment">
 
-<ul>
-  <li><em>fille</em> “girl”</li>
-  <li><em>chat</em> “cat”</li>
-  <li><em>arbre</em> “tree”</li>
-  <li><em>air</em> “air”</li>
-  <li><em>beauté</em> “beauty”</li>
-</ul>
+### Definition
+We follow the definition for `DET` proposed in the universal scheme.
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_fr-pos/NOUN.md" target="#">edit NOUN</a></p>
+However note that at the moment numerals are not consistently annotated as `NUM`, and are sometimes marked as `DET`.
 
-<p><a id="al-fr-pos/NUM" class="al-dest"></a></p>
-<h2><code>NUM</code>: numeral</h2>
+For demonstratives such as _ce ...-là, ce ...-ci_ (as in _cet homme-ci, cette femme-là_ "this man, that women"), the first part of the determiner is annotated as `DET` and the clitic _ci, là_ (which are split from the noun) are marked as `PART`.
 
-<h3 id="definition">Definition</h3>
+### Examples
 
-<p>A numeral is a word, functioning most typically as a determiner, a pronoun or an adjective, that expresses a number and a relation to the number, such as quantity, sequence, frequency or fraction.</p>
+- articles (a closed class indicating definiteness, specificity or givenness): _le, la, les_
+- possessive determiners: _mon, ton, son, ma, ta, sa, mes, tes, ses, notre, votre, leur, nos, vos, leurs_
+- demonstrative determiners: e.g., _ce, cet, cette_ as in _J'ai vu <b>ce</b> vélo hier._
+- interrogative determiners: _quel, quelle_ as in _"<b>Quelle</b> couleur aimez-vous?"_
+- relative determiners: _quel, quelle_ as in _"Je me demande <b>quelle</b> couleur vous aimez."_
+- quantity/quantifier determiners: _aucun_, _tous_ (as in "tous les").
 
-<p>Cardinal numerals are covered by <code>NUM</code> regardless of syntactic function and regardless of whether they are expressed as words (<em>quatre</em> “four”), digits (4) or Roman numerals (IV). By contrast, ordinal numerals are always tagged <code>ADJ</code>.</p>
 
-<p><b>Note:</b> Numerals are not yet consistently annotated in the French UD treebank, and sometimes appear as <code>ADJ</code> or <code>DET</code>.</p>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_fr-pos/DET.md" target="#">edit DET</a>
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_fr-pos/NUM.md" target="#">edit NUM</a></p>
 
-<p><a id="al-fr-pos/PART" class="al-dest"></a></p>
-<h2><code>PART</code>: particle</h2>
+<div about="#INTJ_fr" property="rdf:type" resource="#pos_fr">
+	<div property="rdf:type" resource="../../u/pos/all.html#INTJ" />
+	<a id="al-fr-pos/INTJ" class="al-dest" />
 
-<h3 id="definition">Definition</h3>
+	<h2><code property="oliasystem:hasTag" lang="">INTJ</code>: <div property="rdfs:label">interjection</div></h2>
+	<div property="rdfs:comment">
 
-<p>Particles are function words that must be associated with another word or phrase to impart meaning and that do not satisfy definitions of other universal parts of speech (e.g., <a href="ADP">adpositions</a>, <a href="CONJ">coordinating conjunctions</a>, <a href="SCONJ">subordinating conjunctions</a> or <a href="AUX">auxiliary verbs</a>).</p>
+### Definition
 
-<h3 id="examples">Examples</h3>
-<ul>
-  <li><em>ci,là</em> in demonstrative determiners such as <em>ce gars-<b>ci</b></em> “this guy”</li>
-  <li>euphonic <em>t</em> in “a-<b>t</b>-il” for example</li>
-  <li><em>ne,n’</em> in the double negation marker “ne … pas” (<em>pas</em> is tagged as <code>ADV</code>)</li>
-</ul>
+An interjection is a word that is used most often as an exclamation or part of an exclamation.
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_fr-pos/PART.md" target="#">edit PART</a></p>
+### Examples
 
-<p><a id="al-fr-pos/PRON" class="al-dest"></a></p>
-<h2><code>PRON</code>: pronoun</h2>
+- _bref_
+- _bon_ "well"
+- _enfin_
+_ _attention_
 
-<h3 id="definition">Definition</h3>
 
-<p>Pronouns are words that substitute for nouns or noun phrases. Their meaning is recoverable from the linguistic or extralinguistic context.</p>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_fr-pos/INTJ.md" target="#">edit INTJ</a>
 
-<h3 id="examples">Examples</h3>
-<ul>
-  <li>personal pronouns: <em>je</em>, <em>tu</em>, <em>il</em></li>
-  <li>demonstrative pronouns: <em>ceux</em></li>
-  <li>reflexive pronous: <em>me</em>, <em>se</em></li>
-  <li>interrogative/relative pronouns: <em>qui</em>, <em>que</em></li>
-</ul>
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_fr-pos/PRON.md" target="#">edit PRON</a></p>
+<div about="#NOUN_fr" property="rdf:type" resource="#pos_fr">
+	<div property="rdf:type" resource="../../u/pos/all.html#NOUN" />
+	<a id="al-fr-pos/NOUN" class="al-dest" />
 
-<p><a id="al-fr-pos/PROPN" class="al-dest"></a></p>
-<h2><code>PROPN</code>: proper noun</h2>
+	<h2><code property="oliasystem:hasTag" lang="">NOUN</code>: <div property="rdfs:label">noun</div></h2>
+	<div property="rdfs:comment">
 
-<h3 id="definition">Definition</h3>
+### Definition
 
-<p>A proper noun is a noun (or nominal content word) that is the name (or part of the name) of a specific individual, place, or object.
-The names of people living in a place (such as <em>Les Américains</em> “The Americans”) should be tagged as <code>NOUN</code> (but this is not yet done consistently in the French data).</p>
+Nouns are a part of speech typically denoting a person, place, thing, animal or idea. Common nouns are tagged as `NOUN`.
 
-<h3 id="examples">Examples</h3>
+### Examples
 
-<ul>
-  <li><em>Pierre</em></li>
-  <li><em>ONU</em></li>
-  <li><em>Mexique</em></li>
-</ul>
+- _fille_ "girl"
+- _chat_ "cat"
+- _arbre_ "tree"
+- _air_ "air"
+- _beauté_ "beauty"
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_fr-pos/PROPN.md" target="#">edit PROPN</a></p>
 
-<p><a id="al-fr-pos/PUNCT" class="al-dest"></a></p>
-<h2><code>PUNCT</code>: punctuation</h2>
 
-<h3 id="definition">Definition</h3>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_fr-pos/NOUN.md" target="#">edit NOUN</a>
 
-<p>Punctuation marks are non-alphabetical characters and character groups used to delimit linguistic units in printed text. They are tagged <code>PUNCT</code> regardless of their function.</p>
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_fr-pos/PUNCT.md" target="#">edit PUNCT</a></p>
+<div about="#NUM_fr" property="rdf:type" resource="#pos_fr">
+	<div property="rdf:type" resource="../../u/pos/all.html#NUM" />
+	<a id="al-fr-pos/NUM" class="al-dest" />
 
-<p><a id="al-fr-pos/SCONJ" class="al-dest"></a></p>
-<h2><code>SCONJ</code>: subordinating conjunction</h2>
+	<h2><code property="oliasystem:hasTag" lang="">NUM</code>: <div property="rdfs:label">numeral</div></h2>
+	<div property="rdfs:comment">
 
-<h3 id="definition">Definition</h3>
+### Definition
 
-<p>A subordinating conjunction is a conjunction that links constructions by making one of them a constituent of the other.</p>
+A numeral is a word, functioning most typically as a determiner, a pronoun or an adjective, that expresses a number and a relation to the number, such as quantity, sequence, frequency or fraction.
 
-<h3 id="examples">Examples</h3>
+Cardinal numerals are covered by `NUM` regardless of syntactic function and regardless of whether they are expressed as words (_quatre_ "four"), digits (4) or Roman numerals (IV). By contrast, ordinal numerals are always tagged `ADJ`.
 
-<ul>
-  <li><em>quand</em> “when”</li>
-  <li><em>parce que</em> “because”: for multiword subordinating conjunction of the sort (e.g., <em>afin que</em>, <em>avant que</em>), <em>que</em> is tagged as <code>SCONJ</code> and the first term is tagged as <code>ADV</code>.</li>
-</ul>
+<b>Note:</b> Numerals are not yet consistently annotated in the French UD treebank, and sometimes appear as `ADJ` or `DET`. 
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_fr-pos/SCONJ.md" target="#">edit SCONJ</a></p>
 
-<p><a id="al-fr-pos/SYM" class="al-dest"></a></p>
-<h2><code>SYM</code>: symbol</h2>
 
-<h3 id="definition">Definition</h3>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_fr-pos/NUM.md" target="#">edit NUM</a>
 
-<p>A symbol is a word-like entity that differs from ordinary words by form, function, or both.</p>
 
-<h3 id="examples">Examples</h3>
+<div about="#PART_fr" property="rdf:type" resource="#pos_fr">
+	<div property="rdf:type" resource="../../u/pos/all.html#PART" />
+	<a id="al-fr-pos/PART" class="al-dest" />
 
-<ul>
-  <li><em>$, %, §, ©</em></li>
-  <li><em>+, −, ×, ÷, =, &lt;, &gt;</em></li>
-  <li>:), ♥‿♥, 😝</li>
-  <li><em>john.doe@universal.org, http://universaldependencies.org/, 1-800-COMPANY</em></li>
-</ul>
+	<h2><code property="oliasystem:hasTag" lang="">PART</code>: <div property="rdfs:label">particle</div></h2>
+	<div property="rdfs:comment">
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_fr-pos/SYM.md" target="#">edit SYM</a></p>
+### Definition
 
-<p><a id="al-fr-pos/VERB" class="al-dest"></a></p>
-<h2><code>VERB</code>: verb</h2>
+Particles are function words that must be associated with another word or phrase to impart meaning and that do not satisfy definitions of other universal parts of speech (e.g., [adpositions](ADP), [coordinating conjunctions](CONJ), [subordinating conjunctions](SCONJ) or [auxiliary verbs](AUX)).
 
-<h3 id="definition">Definition</h3>
+### Examples
+- _ci,là_ in demonstrative determiners such as _ce gars-<b>ci</b>_ "this guy"
+- euphonic _t_ in "a-<b>t</b>-il" for example
+- _ne,n'_ in the double negation marker "ne ... pas" (_pas_ is tagged as `ADV`) 
 
-<p>A verb is a member of the syntactic class of words that typically signal events and actions, can constitute a minimal predicate in a clause, and govern the number and types of other constituents which may occur in the clause.</p>
 
-<p>The tag <code>VERB</code> is reserved for full lexical verbs, while auxiliary verbs are tagged <code>AUX</code>.</p>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_fr-pos/PART.md" target="#">edit PART</a>
 
-<h3 id="examples">Examples</h3>
 
-<ul>
-  <li><em>je <b>vois</b></em> “I <b>see</b>”</li>
-  <li><em>à <b>lire</b></em> “to <b>read</b>”</li>
-  <li><em>en <b>marchant</b></em> “<b>walking</b>”</li>
-</ul>
+<div about="#PRON_fr" property="rdf:type" resource="#pos_fr">
+	<div property="rdf:type" resource="../../u/pos/all.html#PRON" />
+	<a id="al-fr-pos/PRON" class="al-dest" />
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_fr-pos/VERB.md" target="#">edit VERB</a></p>
+	<h2><code property="oliasystem:hasTag" lang="">PRON</code>: <div property="rdfs:label">pronoun</div></h2>
+	<div property="rdfs:comment">
 
-<p><a id="al-fr-pos/X" class="al-dest"></a></p>
-<h2><code>X</code>: other</h2>
+### Definition
 
-<h3 id="definition">Definition</h3>
+Pronouns are words that substitute for nouns or noun phrases. Their meaning is recoverable from the linguistic or extralinguistic context.
 
-<p>The tag X is used for words that for some reason cannot be assigned a real part-of-speech category.</p>
+### Examples
+- personal pronouns: _je_, _tu_, _il_
+- demonstrative pronouns: _ceux_
+- reflexive pronous: _me_, _se_
+- interrogative/relative pronouns: _qui_, _que_
 
-<p><b>Note:</b> Some acronyms and foreign words which could be assigned a real part-of-speech category have not yet been fixed and are still marked as <code>X</code>.</p>
 
-<h3 id="examples">Examples</h3>
 
-<ul>
-  <li><em>etc</em></li>
-</ul>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_fr-pos/PRON.md" target="#">edit PRON</a>
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_fr-pos/X.md" target="#">edit X</a></p>
 
+<div about="#PROPN_fr" property="rdf:type" resource="#pos_fr">
+	<div property="rdf:type" resource="../../u/pos/all.html#PROPN" />
+	<a id="al-fr-pos/PROPN" class="al-dest" />
+
+	<h2><code property="oliasystem:hasTag" lang="">PROPN</code>: <div property="rdfs:label">proper noun</div></h2>
+	<div property="rdfs:comment">
+
+### Definition
+
+A proper noun is a noun (or nominal content word) that is the name (or part of the name) of a specific individual, place, or object.
+The names of people living in a place (such as _Les Américains_ "The Americans") should be tagged as `NOUN` (but this is not yet done consistently in the French data).
+
+### Examples
+
+- _Pierre_
+- _ONU_
+- _Mexique_
+
+
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_fr-pos/PROPN.md" target="#">edit PROPN</a>
+
+
+<div about="#PUNCT_fr" property="rdf:type" resource="#pos_fr">
+	<div property="rdf:type" resource="../../u/pos/all.html#PUNCT" />
+	<a id="al-fr-pos/PUNCT" class="al-dest" />
+
+	<h2><code property="oliasystem:hasTag" lang="">PUNCT</code>: <div property="rdfs:label">punctuation</div></h2>
+	<div property="rdfs:comment">
+
+### Definition
+
+Punctuation marks are non-alphabetical characters and character groups used to delimit linguistic units in printed text. They are tagged `PUNCT` regardless of their function.
+
+
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_fr-pos/PUNCT.md" target="#">edit PUNCT</a>
+
+
+<div about="#SCONJ_fr" property="rdf:type" resource="#pos_fr">
+	<div property="rdf:type" resource="../../u/pos/all.html#SCONJ" />
+	<a id="al-fr-pos/SCONJ" class="al-dest" />
+
+	<h2><code property="oliasystem:hasTag" lang="">SCONJ</code>: <div property="rdfs:label">subordinating conjunction</div></h2>
+	<div property="rdfs:comment">
+
+### Definition
+
+A subordinating conjunction is a conjunction that links constructions by making one of them a constituent of the other.
+
+### Examples
+
+- _quand_ "when"
+- _parce que_ "because": for multiword subordinating conjunction of the sort (e.g., _afin que_, _avant que_), _que_ is tagged as `SCONJ` and the first term is tagged as `ADV`.
+
+
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_fr-pos/SCONJ.md" target="#">edit SCONJ</a>
+
+
+<div about="#SYM_fr" property="rdf:type" resource="#pos_fr">
+	<div property="rdf:type" resource="../../u/pos/all.html#SYM" />
+	<a id="al-fr-pos/SYM" class="al-dest" />
+
+	<h2><code property="oliasystem:hasTag" lang="">SYM</code>: <div property="rdfs:label">symbol</div></h2>
+	<div property="rdfs:comment">
+
+### Definition
+
+A symbol is a word-like entity that differs from ordinary words by form, function, or both.
+
+### Examples
+
+- _$, %, §, ©_
+- _+, −, ×, ÷, =, &lt;, &gt;_
+- :), ♥‿♥, 😝
+- _john.doe@universal.org, http://universaldependencies.org/, 1-800-COMPANY_
+
+
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_fr-pos/SYM.md" target="#">edit SYM</a>
+
+
+<div about="#VERB_fr" property="rdf:type" resource="#pos_fr">
+	<div property="rdf:type" resource="../../u/pos/all.html#VERB" />
+	<a id="al-fr-pos/VERB" class="al-dest" />
+
+	<h2><code property="oliasystem:hasTag" lang="">VERB</code>: <div property="rdfs:label">verb</div></h2>
+	<div property="rdfs:comment">
+
+### Definition
+
+A verb is a member of the syntactic class of words that typically signal events and actions, can constitute a minimal predicate in a clause, and govern the number and types of other constituents which may occur in the clause.
+
+The tag `VERB` is reserved for full lexical verbs, while auxiliary verbs are tagged `AUX`.
+
+### Examples
+
+- _je <b>vois</b>_ "I <b>see</b>"
+- _à <b>lire</b>_ "to <b>read</b>"
+- _en <b>marchant</b>_ "<b>walking</b>"
+
+
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_fr-pos/VERB.md" target="#">edit VERB</a>
+
+
+<div about="#X_fr" property="rdf:type" resource="#pos_fr">
+	<div property="rdf:type" resource="../../u/pos/all.html#X" />
+	<a id="al-fr-pos/X" class="al-dest" />
+
+	<h2><code property="oliasystem:hasTag" lang="">X</code>: <div property="rdfs:label">other</div></h2>
+	<div property="rdfs:comment">
+
+### Definition
+
+The tag X is used for words that for some reason cannot be assigned a real part-of-speech category.
+
+<b>Note:</b> Some acronyms and foreign words which could be assigned a real part-of-speech category have not yet been fixed and are still marked as `X`.
+
+
+### Examples
+
+- _etc_ 
+
+
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_fr-pos/X.md" target="#">edit X</a>
+
+</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div>
 
 
       </div>

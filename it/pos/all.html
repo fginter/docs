@@ -43,7 +43,19 @@
 	  </div>
 	</noscript>
 
-          <h1 id="pos-tags">POS tags</h1>
+          
+<h1 id="pos-tags">POS tags</h1>
+
+<p><span about="." property="rdf:type" resource="owl:Ontology">
+	<span property="owl:imports" resource=" https://www.w3.org/2012/pyRdfa/extract?uri=http://universaldependencies.org/docs/u/pos/all.html&amp;format=xml&amp;rdfagraph=output&amp;vocab_expansion=false&amp;rdfa_lite=false&amp;embedded_rdf=true&amp;space_preserve=false&amp;vocab_cache=true&amp;vocab_cache_report=false&amp;vocab_cache_refresh=false"></span>
+	</span>
+<span about="#pos_it" property="rdfs:label" style="visibility: hidden">POS tags</span>
+<span about="#pos_it" property="rdfs:subClassOf" resource="_:it">
+	<span about="_:it" property="rdf:type" resource="owl:Restriction">
+		<span property="owl:onProperty" resource="http://purl.org/dc/terms/language"></span>
+		<span property="owl:hasValue" lang="" style="visibility: hidden">it</span>
+	</span>
+</span></p>
 
 <table class="typeindex">
   <thead>
@@ -99,564 +111,641 @@
 
 <hr />
 
-<p><a id="al-it-pos/ADJ" class="al-dest"></a></p>
-<h2><code>ADJ</code>: adjective</h2>
+<div about="#ADJ_it" property="rdf:type" resource="#pos_it">
+	<div property="rdf:type" resource="../../u/pos/all.html#ADJ" />
+	<a id="al-it-pos/ADJ" class="al-dest" />
 
-<h3 id="definition">Definition</h3>
+	<h2><code property="oliasystem:hasTag" lang="">ADJ</code>: <div property="rdfs:label">adjective</div></h2>
+	<div property="rdfs:comment">
 
-<p>Adjectives are words that typically modify nouns and specify their properties or attributes. In Italian, adjectives can be used predicatively (as in <em>La casa è gialla</em> “The house is yellow”) and attributively (as in <em>La casa gialla è a destra</em> “The yellow house is on the right side”).</p>
+### Definition
 
-<p>Adjectives in Italian normally agree in number and gender with the noun they modify (both in attributive and predicative position), e.g. <em>la casa gialla</em> (feminine singular), <em>le case gialle</em> (feminine plural).</p>
+Adjectives are words that typically modify nouns and specify their properties or attributes. In Italian, adjectives can be used predicatively (as in _La casa è gialla_ "The house is yellow") and attributively (as in _La casa gialla è a destra_ "The yellow house is on the right side").
 
-<p>The class of adjectives in Italian UD also includes ordinal numbers and participial adjectives, both behaving as adjectives morphologically and syntactically.</p>
+Adjectives in Italian normally agree in number and gender with the noun they modify (both in attributive and predicative position), e.g. _la casa gialla_ (feminine singular), _le case gialle_ (feminine plural).
 
-<p>To conform to the UD guidelines, possessive adjectives are handled as determiners <a href="">DET</a>.</p>
+The class of adjectives in Italian UD also includes ordinal numbers and participial adjectives, both behaving as adjectives morphologically and syntactically.
 
-<h3 id="corresponding-language-specific-part-of-speech-tags">Corresponding language-specific part-of-speech tags</h3>
+To conform to the UD guidelines, possessive adjectives are handled as determiners [DET]().
 
-<p>A:  Adjective</p>
 
-<p>NO: Ordinal Number</p>
+###Corresponding language-specific part-of-speech tags
 
-<h3 id="examples">Examples</h3>
+A:  Adjective
 
-<ul>
-  <li><em>grande</em> “big”</li>
-  <li><em>vecchio</em> “old”</li>
-  <li><em>verde</em> “green”</li>
-  <li>Un <em>caro</em> amico_ “a dear friend”</li>
-  <li>Un libro <em>interessante</em> “An interesting book”</li>
-  <li>Il cancello è <em>aperto</em> “The gate is open”</li>
-  <li>È stato <em>illuminante</em> “It has been illuminating”</li>
-  <li><em>primo</em> “first”, <em>secondo</em> “second”, <em>terzo</em> “third”, <em>IV</em> “fourth”, <em>ennesimo</em> “nth”, <em>ultimo</em> “last”</li>
-</ul>
+NO: Ordinal Number
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_it-pos/ADJ.md" target="#">edit ADJ</a></p>
 
-<p><a id="al-it-pos/ADP" class="al-dest"></a></p>
-<h2><code>ADP</code>: adposition</h2>
+### Examples
 
-<h3 id="definition">Definition</h3>
+* _grande_ "big"
+* _vecchio_ "old"
+* _verde_ "green"
+* Un _caro_ amico_ "a dear friend"
+* Un libro _interessante_ "An interesting book"
+* Il cancello è _aperto_ "The gate is open"
+* È stato _illuminante_ "It has been illuminating"
+* _primo_ "first", _secondo_ "second", _terzo_ "third", _IV_ "fourth", _ennesimo_ "nth", _ultimo_ "last"
 
-<p>Adposition is a cover term for prepositions and postpositions.
-In Italian, there are only <em>prepositions</em>.</p>
 
-<p>Italian prepositions can take the form of fixed multi-word
-expressions, such as <em>invece di</em> “instead of”, <em>a causa di</em> “because of”, <em>davanti a</em> “in front of”. The
+
+
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_it-pos/ADJ.md" target="#">edit ADJ</a>
+
+
+<div about="#ADP_it" property="rdf:type" resource="#pos_it">
+	<div property="rdf:type" resource="../../u/pos/all.html#ADP" />
+	<a id="al-it-pos/ADP" class="al-dest" />
+
+	<h2><code property="oliasystem:hasTag" lang="">ADP</code>: <div property="rdfs:label">adposition</div></h2>
+	<div property="rdfs:comment">
+
+### Definition
+
+Adposition is a cover term for prepositions and postpositions.
+In Italian, there are only _prepositions_.
+
+Italian prepositions can take the form of fixed multi-word
+expressions, such as _invece di_ "instead of", _a causa di_ "because of", _davanti a_ "in front of". The
 component words are then still tagged according to their basic use
-(i.e. <em>a</em> is <code>ADP</code>, <em>causa</em> is <a href="">NOUN</a>, <em>di</em> is <code>ADP</code>) and their status as a
+(i.e. _a_ is `ADP`, _causa_ is [NOUN](), _di_ is `ADP`) and their status as a
 multi-word expression is accounted for at the level of syntactic annotation.
-See <a href="">mwe</a> for more details on the representation of multi-word expressions.</p>
+See [mwe]() for more details on the representation of multi-word expressions.
 
-<p>Italian prepositions are also used for introducing non-finite clausal complements, as in <em>Maria ha deciso <b>di</b> partire</em> “Mary decided to leave” or <em>Maria è andata <b>a</b> congratularsi con loro</em> “Mary went to congratulate them”.</p>
+Italian prepositions are also used for introducing non-finite clausal complements, as in _Maria ha deciso <b>di</b> partire_ "Mary decided to leave" or _Maria è andata <b>a</b> congratularsi con loro_ "Mary went to congratulate them".
 
-<p>Italian distinguishes between simple and articulated prepositions: note however that to comply with the UD <a href="">Tokenization</a> guidelines the latter are systematically splitted into the following sequence of part-of-speech tags, <code>ADP</code> and <code>DET</code> (e.g. <em>nello</em> “in the” is splitted into <em>in</em> <code>ADP</code> <em>lo</em> <code>DET</code>).</p>
+Italian distinguishes between simple and articulated prepositions: note however that to comply with the UD [Tokenization]() guidelines the latter are systematically splitted into the following sequence of part-of-speech tags, `ADP` and `DET` (e.g. _nello_ "in the" is splitted into _in_ `ADP` _lo_ `DET`).
 
-<h3 id="corresponding-language-specific-part-of-speech-tags">Corresponding language-specific part-of-speech tags</h3>
+###Corresponding language-specific part-of-speech tags
 
-<p>E:  Preposition</p>
+E:  Preposition 
 
-<h3 id="examples">Examples</h3>
+### Examples
 
-<ul>
-  <li><em><b>in</b> casa</em> “at home”</li>
-  <li><em><b>a</b> Milano</em> “in Milan”</li>
-  <li><em><b>durante</b> la notte</em> “during the night”</li>
-  <li><em><b>davanti al</b> cancello</em> “in front of the gate”</li>
-  <li><em>ha promesso <b>di</b> invitarlo a cena</em> “he promised to invite him to dinner”</li>
-</ul>
+- _<b>in</b> casa_ "at home"
+- _<b>a</b> Milano_ "in Milan"
+- _<b>durante</b> la notte_ "during the night"
+- _<b>davanti al</b> cancello_ "in front of the gate"
+- _ha promesso <b>di</b> invitarlo a cena_ "he promised to invite him to dinner"
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_it-pos/ADP.md" target="#">edit ADP</a></p>
 
-<p><a id="al-it-pos/ADV" class="al-dest"></a></p>
-<h2><code>ADV</code>: adverb</h2>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_it-pos/ADP.md" target="#">edit ADP</a>
 
-<h3 id="definition">Definition</h3>
 
-<p>Adverbs are words that typically modify <a href="VERB">verbs</a> for such categories as time, place, direction or manner. In Italian, they may also modify <a href="ADJ">adjectives</a> (as in <em><b>palesemente</b> falso</em> “clearly fake”), other adverbs (as in <em><b>molto</b> bene</em> “very well”), or even <a href="NOUN">nouns</a> / <a href="PRON">pronouns</a> (as in <em><b>proprio</b> lui</em> “exactly him”).</p>
+<div about="#ADV_it" property="rdf:type" resource="#pos_it">
+	<div property="rdf:type" resource="../../u/pos/all.html#ADV" />
+	<a id="al-it-pos/ADV" class="al-dest" />
 
-<p>Since in traditional Italian grammars there is no clear consensus on the existence of <em>pronominal adverbs</em> as an independent morpho-syntactic category, we decided to avoid using the <code>ADV</code> postag to deal with potential pronominal adverbs which are rather treated as <a href="">PRON</a>.</p>
+	<h2><code property="oliasystem:hasTag" lang="">ADV</code>: <div property="rdfs:label">adverb</div></h2>
+	<div property="rdfs:comment">
 
-<h3 id="corresponding-language-specific-part-of-speech-tags">Corresponding language-specific part-of-speech tags</h3>
+### Definition
 
-<p>B: 	Adverb</p>
+Adverbs are words that typically modify [verbs](VERB) for such categories as time, place, direction or manner. In Italian, they may also modify [adjectives](ADJ) (as in _<b>palesemente</b> falso_ "clearly fake"), other adverbs (as in _<b>molto</b> bene_ "very well"), or even [nouns](NOUN) / [pronouns](PRON) (as in _<b>proprio</b> lui_ "exactly him").
+		       
+Since in traditional Italian grammars there is no clear consensus on the existence of _pronominal adverbs_ as an independent morpho-syntactic category, we decided to avoid using the `ADV` postag to deal with potential pronominal adverbs which are rather treated as [PRON](). 
 
-<p>BN:	Negation adverb</p>
+###Corresponding language-specific part-of-speech tags
 
-<h3 id="examples">Examples</h3>
+B: 	Adverb
 
-<ul>
-  <li><em>molto</em></li>
-  <li><em>bene</em></li>
-  <li><em>esattamente</em></li>
-  <li><em>domani</em></li>
-  <li><em>sù, giù</em></li>
-  <li>interrogative adverbs: <em>dove, quando, come, perché</em></li>
-  <li>demonstrative adverbs: <em>qui, là, ora, adesso, poi</em></li>
-  <li>indefinite adverbs: <em>talvolta</em></li>
-  <li>totality adverbs: <em>dovunque, sempre</em></li>
-  <li>negation adverbs: <em>no, mica, non, nemmeno, neanche, neppure</em></li>
-</ul>
+BN:	Negation adverb
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_it-pos/ADV.md" target="#">edit ADV</a></p>
+### Examples
 
-<p><a id="al-it-pos/AUX" class="al-dest"></a></p>
-<h2><code>AUX</code>: auxiliary verb</h2>
+* _molto_
+* _bene_
+* _esattamente_
+* _domani_
+* _sù, giù_
+* interrogative adverbs: _dove, quando, come, perché_
+* demonstrative adverbs: _qui, là, ora, adesso, poi_
+* indefinite adverbs: _talvolta_
+* totality adverbs: _dovunque, sempre_
+* negation adverbs: _no, mica, non, nemmeno, neanche, neppure_
 
-<h3 id="definition">Definition</h3>
 
-<p>Italian auxiliary verbs can be divided into:</p>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_it-pos/ADV.md" target="#">edit ADV</a>
 
-<ul>
-  <li>tense auxiliaries, used to form compound tenses represented by <em>avere</em> “to have” and <em>essere</em> “to be”;</li>
-  <li>passive auxiliaries, used to form passive verb forms represented by <em>essere</em> “to be” and <em>venire</em> lit. “to come”.</li>
-</ul>
 
-<p>Following the UD guidelines, Italian modal verbs are handled as modal auxiliaries (e.g. <em>potere</em> “can”, <em>dovere</em> “must”).</p>
+<div about="#AUX_it" property="rdf:type" resource="#pos_it">
+	<div property="rdf:type" resource="../../u/pos/all.html#AUX" />
+	<a id="al-it-pos/AUX" class="al-dest" />
 
-<h3 id="corresponding-language-specific-part-of-speech-tags">Corresponding language-specific part-of-speech tags</h3>
+	<h2><code property="oliasystem:hasTag" lang="">AUX</code>: <div property="rdfs:label">auxiliary verb</div></h2>
+	<div property="rdfs:comment">
 
-<p>VA: Auxiliary verb</p>
+### Definition
 
-<p>VM: Modal verb</p>
+Italian auxiliary verbs can be divided into:
 
-<h3 id="examples">Examples</h3>
+- tense auxiliaries, used to form compound tenses represented by _avere_ "to have" and _essere_ "to be";
+- passive auxiliaries, used to form passive verb forms represented by _essere_ "to be" and _venire_ lit. "to come".
 
-<ul>
-  <li>Tense auxiliaries: <em><b>ha</b> fatto</em> “he has done”, <em><b>è</b> arrivato</em> “he has arrived”, <em><b>sarà</b> finito</em> “it will be finished”</li>
-  <li>Passive auxiliaries: <em><b>fu</b> distrutto</em> “it was destroyed”, <em><b>è stato</b> comprato</em> “it has been bought”</li>
-  <li>Modal auxiliaries: <em><b>dovrebbe</b> fare</em> “he should do”, <em><b>può</b> avere successo</em> “he can have success”</li>
-</ul>
+Following the UD guidelines, Italian modal verbs are handled as modal auxiliaries (e.g. _potere_ "can", _dovere_ "must").
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_it-pos/AUX_.md" target="#">edit AUX</a></p>
+###Corresponding language-specific part-of-speech tags
 
-<p><a id="al-it-pos/CONJ" class="al-dest"></a></p>
-<h2><code>CONJ</code>: coordinating conjunction</h2>
+VA: Auxiliary verb
 
-<h3 id="definition">Definition</h3>
+VM: Modal verb	
 
-<p>A coordinating conjunction is a word that links words or larger
+
+### Examples
+
+- Tense auxiliaries: _<b>ha</b> fatto_ "he has done", _<b>è</b> arrivato_ "he has arrived", _<b>sarà</b> finito_ "it will be finished"
+- Passive auxiliaries: _<b>fu</b> distrutto_ "it was destroyed", _<b>è stato</b> comprato_ "it has been bought"
+- Modal auxiliaries: _<b>dovrebbe</b> fare_ "he should do", _<b>può</b> avere successo_ "he can have success"
+
+
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_it-pos/AUX_.md" target="#">edit AUX</a>
+
+
+<div about="#CONJ_it" property="rdf:type" resource="#pos_it">
+	<div property="rdf:type" resource="../../u/pos/all.html#CONJ" />
+	<a id="al-it-pos/CONJ" class="al-dest" />
+
+	<h2><code property="oliasystem:hasTag" lang="">CONJ</code>: <div property="rdfs:label">coordinating conjunction</div></h2>
+	<div property="rdfs:comment">
+
+### Definition
+
+A coordinating conjunction is a word that links words or larger
 constituents without syntactically subordinating one to the other and
-expresses a semantic relationship between them.</p>
+expresses a semantic relationship between them.
 
-<p>For <em>subordinating conjunctions</em> see <a href="">SCONJ</a>.</p>
+For _subordinating conjunctions_ see [SCONJ]().
 
-<h3 id="examples">Examples</h3>
+### Examples
 
-<ul>
-  <li><em>e</em> “and”</li>
-  <li><em>o</em>, <em>oppure</em>, <em>ovvero</em> “or”</li>
-  <li><em>ma</em> “but”</li>
-  <li><em>sia</em> … <em>sia</em> “both … and”</li>
-  <li><em>né</em> … <em>né</em>  “neither … nor”</li>
-</ul>
+- _e_ "and"
+- _o_, _oppure_, _ovvero_ "or"
+- _ma_ "but"
+- _sia_ ... _sia_ "both ... and"
+- _né_ ... _né_  "neither ... nor"
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_it-pos/CONJ.md" target="#">edit CONJ</a></p>
 
-<p><a id="al-it-pos/DET" class="al-dest"></a></p>
-<h2><code>DET</code>: determiner</h2>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_it-pos/CONJ.md" target="#">edit CONJ</a>
 
-<h3 id="definition">Definition</h3>
 
-<p>Determiners are words that modify <a href="NOUN">nouns</a> or noun phrases and
+<div about="#DET_it" property="rdf:type" resource="#pos_it">
+	<div property="rdf:type" resource="../../u/pos/all.html#DET" />
+	<a id="al-it-pos/DET" class="al-dest" />
+
+	<h2><code property="oliasystem:hasTag" lang="">DET</code>: <div property="rdfs:label">determiner</div></h2>
+	<div property="rdfs:comment">
+
+### Definition
+
+Determiners are words that modify [nouns](NOUN) or noun phrases and
 express the reference of the noun phrase in context. 
-Like adjectives, Italian determiners typically agree with the noun they modify for gender and number, e.g. <em>questo libro</em> “this book” (masculin singular), <em>i libri</em> “the books” (masculin plural), <em>la carta</em> “the paper” (feminine singular).</p>
+Like adjectives, Italian determiners typically agree with the noun they modify for gender and number, e.g. _questo libro_ “this book” (masculin singular), _i libri_ “the books” (masculin plural), _la carta_ “the paper” (feminine singular). 
 
-<p>In Italian, usually a nominal allows for one DET modifier only, with the following exceptions:</p>
+In Italian, usually a nominal allows for one DET modifier only, with the following exceptions:
 
-<ul>
-  <li>predeterminers (or addeterminers), which are also tagged <code>DET</code>. For example:
-<em><b>Tutti</b> gli amici</em> “<b>All</b> the friends”.</li>
-  <li>possessive adjectives, which following the UD guidelines are also tagged as <code>DET</code>. For example:
-<em>Mio padre</em> “my father”, <em>la mia macchina</em> lit. “the my car”, <em>la figlia mia</em> lit. “the daughter my”</li>
-</ul>
+- predeterminers (or addeterminers), which are also tagged `DET`. For example:
+_<b>Tutti</b> gli amici_ "<b>All</b> the friends".
+- possessive adjectives, which following the UD guidelines are also tagged as `DET`. For example:
+_Mio padre_ "my father", _la mia macchina_ lit. "the my car", _la figlia mia_ lit. "the daughter my" 
 
-<h3 id="corresponding-language-specific-part-of-speech-tags">Corresponding language-specific part-of-speech tags</h3>
+###Corresponding language-specific part-of-speech tags
 
-<p>RD:	Definite article</p>
+RD:	Definite article
 
-<p>RI:	Indefinite article</p>
+RI:	Indefinite article
 
-<p>DE: Exclamative determiner</p>
+DE: Exclamative determiner 
 
-<p>DI:	Indefinite determiner</p>
+DI:	Indefinite determiner	 
 
-<p>DQ:	Interrogative determiner</p>
+DQ:	Interrogative determiner
 
-<p>DR:	Relative determiner</p>
+DR:	Relative determiner
 
-<p>DD:	Demonstrative determiner</p>
+DD:	Demonstrative determiner
 
-<p>T:  Predeterminer</p>
+T:  Predeterminer
 
-<p>AP:	Possessive adjective</p>
+AP:	Possessive adjective
 
-<h3 id="examples">Examples</h3>
 
-<ul>
-  <li>definite articles: <em>il, lo, la, gli</em> “the”</li>
-  <li>indefinite articles: <em>un, uno, una</em> “a, an”</li>
-  <li>demonstrative determiners: <em>questo</em> “this”, e.g. <em>Ho visto <b>questa</b> macchina ieri.</em> “I saw <b>this</b> car yesterday”</li>
-  <li>interrogative determiners: <em>quale</em> “which”, e.g. <em><b>Quale</b> macchina ti piace?</em> “<b>Which</b> car do you like?”</li>
-  <li>relative determiners: <em>quale</em> “which”, e.g. <em>Mi chiedo <b>quale</b> macchina ti piace.</em> “I wonder <b>which</b> car you like”</li>
-  <li>indefinite determiners: <em>ogni</em> “any”, <em>tutti</em> “all”, <em>alcuni</em> “some”, <em>nessuno, nessuna</em> “no”, e.g. <em>Non abbiamo <b>nessuna</b> macchina disponibile</em> “We have <b>no</b> car available”</li>
-  <li>exclamative determiners: <em>quale</em> in <em><b>Quale</b> disastro!</em> “What a mess!”</li>
-</ul>
+### Examples
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_it-pos/DET.md" target="#">edit DET</a></p>
+- definite articles: _il, lo, la, gli_ "the"
+- indefinite articles: _un, uno, una_ "a, an"
+- demonstrative determiners: _questo_ "this", e.g. _Ho visto <b>questa</b> macchina ieri._ "I saw <b>this</b> car yesterday"
+- interrogative determiners: _quale_ "which", e.g. _<b>Quale</b> macchina ti piace?_ "<b>Which</b> car do you like?"
+- relative determiners: _quale_ "which", e.g. _Mi chiedo <b>quale</b> macchina ti piace._ "I wonder <b>which</b> car you like"
+- indefinite determiners: _ogni_ "any", _tutti_ "all", _alcuni_ "some", _nessuno, nessuna_ "no", e.g. _Non abbiamo <b>nessuna</b> macchina disponibile_ "We have <b>no</b> car available"
+- exclamative determiners: _quale_ in _<b>Quale</b> disastro!_ "What a mess!"
 
-<p><a id="al-it-pos/INTJ" class="al-dest"></a></p>
-<h2><code>INTJ</code>: interjection</h2>
 
-<p>An interjection is a form, typically brief, which is used most often as an exclamation or part of an exclamation.</p>
 
-<p>As a special case of interjections, we recognize feedback particles
-such as: <em>sì</em> “yes” and <em>no</em> “no”. Note that uses of <em>sì</em> and <em>no</em> syntactically related to other accompanying expressions in a sentence are recognized as <a href="">ADV</a>.</p>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_it-pos/DET.md" target="#">edit DET</a>
 
-<h3 id="corresponding-language-specific-part-of-speech-tags">Corresponding language-specific part-of-speech tags</h3>
 
-<p>I:	Interjection</p>
+<div about="#INTJ_it" property="rdf:type" resource="#pos_it">
+	<div property="rdf:type" resource="../../u/pos/all.html#INTJ" />
+	<a id="al-it-pos/INTJ" class="al-dest" />
 
-<h3 id="examples">Examples</h3>
+	<h2><code property="oliasystem:hasTag" lang="">INTJ</code>: <div property="rdfs:label">interjection</div></h2>
+	<div property="rdfs:comment">
 
-<p>Marked as interjections:</p>
+An interjection is a form, typically brief, which is used most often as an exclamation or part of an exclamation.
 
-<ul>
-  <li><em>vabbè</em></li>
-  <li><em>oddio</em></li>
-  <li><em>ah</em></li>
-  <li><em>ecco</em></li>
-  <li><em>ciao</em></li>
-  <li><em>sì</em>, e.g. <em>Sì, perché …</em> “Yes, because …”, <em>Sì, proprio l’Italia</em> “Yes, Italy indeed”</li>
-  <li><em>no</em>, e.g. <em>No, non lo credo</em> “No, I don’t believe it”</li>
-</ul>
+As a special case of interjections, we recognize feedback particles
+such as: _sì_ "yes" and _no_ "no". Note that uses of _sì_ and _no_ syntactically related to other accompanying expressions in a sentence are recognized as [ADV]().
 
-<p>Marked as adverbs:</p>
+###Corresponding language-specific part-of-speech tags
 
-<ul>
-  <li><em>Elezioni sì, elezioni no</em> “Elections <b>yes</b>, elections <b>no</b>”</li>
-  <li><em>Voteremo <b>sì</b></em> “We will vote <b>yes</b>”</li>
-</ul>
+I:	Interjection
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_it-pos/INTJ.md" target="#">edit INTJ</a></p>
 
-<p><a id="al-it-pos/NOUN" class="al-dest"></a></p>
-<h2><code>NOUN</code>: noun</h2>
+### Examples
 
-<h3 id="definition">Definition</h3>
+Marked as interjections:
 
-<p>Nouns are a part of speech typically denoting a person, place, thing, animal or idea.</p>
+- _vabbè_
+- _oddio_
+- _ah_
+- _ecco_
+- _ciao_
+- _sì_, e.g. _Sì, perché ..._ "Yes, because ...", _Sì, proprio l'Italia_ "Yes, Italy indeed"
+- _no_, e.g. _No, non lo credo_ "No, I don't believe it"
 
-<p>The <code>NOUN</code> tag is intended for common nouns only. See <a href="">PROPN</a> for
-proper nouns and <a href="">PRON</a> for pronouns.</p>
+Marked as adverbs:
 
-<h3 id="corresponding-language-specific-part-of-speech-tags">Corresponding language-specific part-of-speech tags</h3>
+- _Elezioni sì, elezioni no_ "Elections <b>yes</b>, elections <b>no</b>"
+- _Voteremo <b>sì</b>_ "We will vote <b>yes</b>"
 
-<p>S:	Common noun</p>
 
-<h3 id="examples">Examples</h3>
 
-<ul>
-  <li><em>ragazza</em> “girl”</li>
-  <li><em>gatto</em> “cat”</li>
-  <li><em>albero</em> “tree”</li>
-  <li><em>aria</em> “air”</li>
-  <li><em>bellezza</em> “beauty”</li>
-</ul>
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_it-pos/NOUN.md" target="#">edit NOUN</a></p>
 
-<p><a id="al-it-pos/NUM" class="al-dest"></a></p>
-<h2><code>NUM</code>: numeral</h2>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_it-pos/INTJ.md" target="#">edit INTJ</a>
 
-<h3 id="definition">Definition</h3>
 
-<p>A numeral is a word, functioning most typically as a determiner,
+<div about="#NOUN_it" property="rdf:type" resource="#pos_it">
+	<div property="rdf:type" resource="../../u/pos/all.html#NOUN" />
+	<a id="al-it-pos/NOUN" class="al-dest" />
+
+	<h2><code property="oliasystem:hasTag" lang="">NOUN</code>: <div property="rdfs:label">noun</div></h2>
+	<div property="rdfs:comment">
+
+### Definition
+
+Nouns are a part of speech typically denoting a person, place, thing, animal or idea.
+
+The `NOUN` tag is intended for common nouns only. See [PROPN]() for
+proper nouns and [PRON]() for pronouns.
+
+
+###Corresponding language-specific part-of-speech tags
+
+S:	Common noun
+
+
+### Examples
+
+- _ragazza_ "girl"
+- _gatto_ "cat"
+- _albero_ "tree"
+- _aria_ "air"
+- _bellezza_ "beauty"
+
+
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_it-pos/NOUN.md" target="#">edit NOUN</a>
+
+
+<div about="#NUM_it" property="rdf:type" resource="#pos_it">
+	<div property="rdf:type" resource="../../u/pos/all.html#NUM" />
+	<a id="al-it-pos/NUM" class="al-dest" />
+
+	<h2><code property="oliasystem:hasTag" lang="">NUM</code>: <div property="rdfs:label">numeral</div></h2>
+	<div property="rdfs:comment">
+
+### Definition
+
+A numeral is a word, functioning most typically as a determiner,
 adjective or pronoun, that expresses a number and a relation to the
-number, such as quantity, sequence, frequency or fraction.</p>
+number, such as quantity, sequence, frequency or fraction.
 
-<p>Cardinal numerals are covered by <code>NUM</code> whether they are used
-as determiners or not (as in <em>Windows <b>Seven</b></em>) and whether they
-are expressed as words <em>(four)</em>, or digits <em>(4)</em>.</p>
+Cardinal numerals are covered by `NUM` whether they are used
+as determiners or not (as in _Windows <b>Seven</b>_) and whether they
+are expressed as words _(four)_, or digits _(4)_.
 
-<p>There are numerals belonging to other parts of speech in the universal
+There are numerals belonging to other parts of speech in the universal
 tagging scheme, based mainly on syntactic criteria: e.g. ordinal numerals
-are tagged as <a href="ADJ">adjectives</a> or <a href="PRON">pronouns</a> <em>(first, second, third, …)</em>. 
-In Italian there are no adverbial numerals like [cs] <em>poprvé</em> “for the first time” nor multiplicative numerals such as [en] <em>(once, twice)</em>.</p>
+are tagged as [adjectives](ADJ) or [pronouns](PRON) _(first, second, third, ...)_. 
+In Italian there are no adverbial numerals like [cs] _poprvé_ "for the first time" nor multiplicative numerals such as [en] _(once, twice)_.
 
-<p>Note that, since Roman numerals <em>(IV)</em> are only used as ordinal numerals in Italian (Enciclopedia Treccani), are tagged <a href="">ADJ</a> for coherence with other ordinal numerals. 
-In this case we specify <code>NumType=Ord</code> as morphological feature. 
-A similar treatment is reserved to a cardinal with a suffix such as <em>a</em>, <em>o</em>, <em>esimo</em>, <em>esima</em>, or the symbol <em>°</em> (similar to the English use of the suffix “th”).</p>
+Note that, since Roman numerals _(IV)_ are only used as ordinal numerals in Italian (Enciclopedia Treccani), are tagged [ADJ]() for coherence with other ordinal numerals. 
+In this case we specify `NumType=Ord` as morphological feature. 
+A similar treatment is reserved to a cardinal with a suffix such as *a*, *o*, *esimo*, *esima*, or the symbol *°* (similar to the English use of the suffix "th").
 
-<p>Other words functioning as determiners (including quantifiers such as <em>many</em> and <em>few</em>) are tagged <a href="">DET</a>.</p>
+Other words functioning as determiners (including quantifiers such as _many_ and _few_) are tagged [DET]().
 
-<h3 id="examples">Examples</h3>
+### Examples
 
-<p>Tagged as <code>NUM</code>:</p>
+Tagged as `NUM`:
 
-<ul>
-  <li><em>0</em>, <em>1</em>, <em>2</em>, <em>2014</em>, <em>1000000</em>, <em>3,14159265359</em></li>
-  <li><em>zero</em>, <em>uno</em>, <em>due</em>, <em>settantasette</em></li>
-</ul>
+- _0_, _1_, _2_, _2014_, _1000000_, _3,14159265359_
+- _zero_, _uno_, _due_, _settantasette_
 
-<p>Tagged as <a href="">ADJ</a>:</p>
+Tagged as [ADJ]():
 
-<ul>
-  <li><em><b>XX</b> secolo</em></li>
-  <li><em>48esimo</em></li>
-  <li><em>primo</em>, <em>secondo</em>, <em>ultima</em></li>
-  <li><em>20°</em></li>
-</ul>
+- _<b>XX</b> secolo_ 
+- _48esimo_
+- _primo_, _secondo_, _ultima_
+- _20°_
 
-<p>Tagged as <a href="">PRON</a>:</p>
+Tagged as [PRON]():
 
-<ul>
-  <li><em>il terzo ad arrivare</em> “the third to arrive”</li>
-</ul>
+- _il terzo ad arrivare_ "the third to arrive"
 
-<h3 id="references">References</h3>
+### References
 
-<p><a href="http://www.treccani.it/enciclopedia/aggettivi-numerali-ordinali_%28La_grammatica_italiana%29/">Enciclopedia Treccani</a></p>
+[Enciclopedia Treccani](http://www.treccani.it/enciclopedia/aggettivi-numerali-ordinali_%28La_grammatica_italiana%29/)
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_it-pos/NUM.md" target="#">edit NUM</a></p>
 
-<p><a id="al-it-pos/PART" class="al-dest"></a></p>
-<h2><code>PART</code>: particle</h2>
 
-<p>The use of <code>PART</code> is limited to possessive markers, in English names: [en] ‘s.</p>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_it-pos/NUM.md" target="#">edit NUM</a>
 
-<p>According to the UD guidelines, particles may also encode grammatical
-categories such as negation, e.g.</p>
 
-<ul>
-  <li>Negation particle: [en] <em>not;</em> [de] <em>nicht;</em> [tr] <em>mu</em></li>
-</ul>
+<div about="#PART_it" property="rdf:type" resource="#pos_it">
+	<div property="rdf:type" resource="../../u/pos/all.html#PART" />
+	<a id="al-it-pos/PART" class="al-dest" />
 
-<p>In Italian however we tag negation particles, such as <em>non</em>, as a negation 
-adverb. See <a href="">ADV</a>.</p>
+	<h2><code property="oliasystem:hasTag" lang="">PART</code>: <div property="rdfs:label">particle</div></h2>
+	<div property="rdfs:comment">
 
-<h2 id="examples">Examples</h2>
+The use of `PART` is limited to possessive markers, in English names: [en] ‘s.
 
-<ul>
-  <li>Wendy ‘s</li>
-  <li>McDonald ‘s</li>
-</ul>
+According to the UD guidelines, particles may also encode grammatical
+categories such as negation, e.g. 
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_it-pos/PART.md" target="#">edit PART</a></p>
+- Negation particle: [en] _not;_ [de] _nicht;_ [tr] _mu_
 
-<p><a id="al-it-pos/PRON" class="al-dest"></a></p>
-<h2><code>PRON</code>: pronoun</h2>
+In Italian however we tag negation particles, such as _non_, as a negation 
+adverb. See [ADV]().
 
-<h3 id="definition">Definition</h3>
+## Examples
 
-<p>Pronouns are words that substitute for <a href="NOUN">nouns</a> or noun phrases,
+* Wendy 's
+* McDonald 's
+
+
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_it-pos/PART.md" target="#">edit PART</a>
+
+
+<div about="#PRON_it" property="rdf:type" resource="#pos_it">
+	<div property="rdf:type" resource="../../u/pos/all.html#PRON" />
+	<a id="al-it-pos/PRON" class="al-dest" />
+
+	<h2><code property="oliasystem:hasTag" lang="">PRON</code>: <div property="rdfs:label">pronoun</div></h2>
+	<div property="rdfs:comment">
+
+### Definition
+
+Pronouns are words that substitute for [nouns](NOUN) or noun phrases,
 whose meaning is recoverable from the linguistic or extralinguistic
-context.</p>
+context.
 
-<p>Specializations of pronouns correspond to different language specific PoS leading to different values for the <a href="">PronType</a> feature.</p>
+Specializations of pronouns correspond to different language specific PoS leading to different values for the [PronType]() feature.
 
-<h3 id="correspondance-between-language-specific-pos-and-prontypes">Correspondance between language specific PoS and PronTypes</h3>
+### Correspondance between language specific PoS and PronTypes
 
-<ul>
-  <li>PC (clitic pronouns) → PronType=Clit</li>
-  <li>PD (demonstrative pronouns) → PronType=Dem</li>
-  <li>PE (personal pronouns) → PronType=Prs</li>
-  <li>PI (indefinite pronouns) → PronType=Ind</li>
-  <li>
-    <table>
-      <tbody>
-        <tr>
-          <td>PP (possessive pronouns) → PronType=Prs</td>
-          <td>Poss=Yes</td>
-        </tr>
-      </tbody>
-    </table>
-  </li>
-  <li>PQ (interrogative pronouns) → PronType=Int</li>
-  <li>PR (relative pronouns) → PronType=Rel</li>
-</ul>
+- PC (clitic pronouns) &#8594; PronType=Clit
+- PD (demonstrative pronouns) &#8594; PronType=Dem
+- PE (personal pronouns) &#8594; PronType=Prs
+- PI (indefinite pronouns) &#8594; PronType=Ind
+- PP (possessive pronouns) &#8594; PronType=Prs|Poss=Yes
+- PQ (interrogative pronouns) &#8594; PronType=Int
+- PR (relative pronouns) &#8594; PronType=Rel 
 
-<p>Note: the PronType=Clit feature is specific for Italian.</p>
+Note: the PronType=Clit feature is specific for Italian.
 
-<h3 id="examples">Examples</h3>
+### Examples
 
-<ul>
-  <li>clitic pronouns: <em>ci, si, vi, la, lo, gli</em>, including reflexive pronouns</li>
-  <li>demonstrative pronouns: <em>questo, codesto, coloro, medesimo, quello, ciò</em> as in <em><b>Questo</b> è strano</em> “This is strange”</li>
-  <li>personal pronouns: <em>io, tu, te, lui, lei, egli, esso, noi, loro</em></li>
-  <li>indefinite pronouns: <em>uno, altri, qualcuno, qualcosa, ciascuno</em></li>
-  <li>possessive pronouns: <em>mio, suo, loro</em></li>
-  <li>interrogative pronouns: <em>chi, che, cosa, quanto, quale</em> as in <em><b>Cosa</b> pensi?</em> “What do you think?”</li>
-  <li>relative pronouns: <em>che, cui, quale</em> as in <em>Il film <b>che</b> ho visto.</em> “The movie that I have seen”</li>
-  <li>totality pronouns: <em>tutti, tutto</em></li>
-  <li>negative pronouns: <em>nessuno, niente, nulla</em></li>
-</ul>
+- clitic pronouns: _ci, si, vi, la, lo, gli_, including reflexive pronouns
+- demonstrative pronouns: _questo, codesto, coloro, medesimo, quello, ciò_ as in _<b>Questo</b> è strano_ "This is strange"
+- personal pronouns: _io, tu, te, lui, lei, egli, esso, noi, loro_
+- indefinite pronouns: _uno, altri, qualcuno, qualcosa, ciascuno_
+- possessive pronouns: _mio, suo, loro_
+- interrogative pronouns: _chi, che, cosa, quanto, quale_ as in _<b>Cosa</b> pensi?_ "What do you think?"
+- relative pronouns: _che, cui, quale_ as in _Il film <b>che</b> ho visto._ "The movie that I have seen"
+- totality pronouns: _tutti, tutto_
+- negative pronouns: _nessuno, niente, nulla_
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_it-pos/PRON.md" target="#">edit PRON</a></p>
 
-<p><a id="al-it-pos/PROPN" class="al-dest"></a></p>
-<h2><code>PROPN</code>: proper noun</h2>
 
-<h3 id="definition">Definition</h3>
 
-<p>A proper noun is a noun that is the name (or part of the name) of a unique entity, be it an individual, a place, or an object.</p>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_it-pos/PRON.md" target="#">edit PRON</a>
 
-<p>Acronyms of proper nouns, such as <em>UN</em> and <em>NATO</em>, are also tagged as <code>PROPN</code>.</p>
 
-<h3 id="corresponding-language-specific-part-of-speech-tags">Corresponding language-specific part-of-speech tags</h3>
+<div about="#PROPN_it" property="rdf:type" resource="#pos_it">
+	<div property="rdf:type" resource="../../u/pos/all.html#PROPN" />
+	<a id="al-it-pos/PROPN" class="al-dest" />
 
-<p>SP:	Proper noun</p>
+	<h2><code property="oliasystem:hasTag" lang="">PROPN</code>: <div property="rdfs:label">proper noun</div></h2>
+	<div property="rdfs:comment">
 
-<h3 id="examples">Examples</h3>
+### Definition
 
-<ul>
-  <li><em>Maria</em>, <em>Michelangelo</em></li>
-  <li><em>Londra</em></li>
-  <li><em>Ansaldo Energia</em></li>
-  <li><em>Kim Il Sung</em></li>
-  <li><em>NATO</em>, <em>HBO</em>, <em>U.S.A.</em></li>
-</ul>
+A proper noun is a noun that is the name (or part of the name) of a unique entity, be it an individual, a place, or an object.
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_it-pos/PROPN.md" target="#">edit PROPN</a></p>
+Acronyms of proper nouns, such as _UN_ and _NATO_, are also tagged as `PROPN`.
 
-<p><a id="al-it-pos/PUNCT" class="al-dest"></a></p>
-<h2><code>PUNCT</code>: punctuation</h2>
+###Corresponding language-specific part-of-speech tags
 
-<h3 id="definition">Definition</h3>
+SP:	Proper noun
 
-<p>Punctuation marks are non-alphabetical characters and character groups
-used to delimit linguistic units in printed text.</p>
+### Examples
 
-<p>Punctuation is not taken to include logograms such as <em>$</em>, <em>%</em>, and
-<em>§</em>, which are instead tagged as <a href="">SYM</a>.</p>
+- _Maria_, _Michelangelo_
+- _Londra_
+- _Ansaldo Energia_
+- _Kim Il Sung_
+- _NATO_, _HBO_, _U.S.A._
 
-<h3 id="examples">Examples</h3>
 
-<ul>
-  <li>Period: <em><b>.</b></em></li>
-  <li>Comma: <em><b>,</b></em></li>
-  <li>Parentheses: <em><b>(, )</b></em></li>
-</ul>
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_it-pos/PUNCT.md" target="#">edit PUNCT</a></p>
 
-<p><a id="al-it-pos/SCONJ" class="al-dest"></a></p>
-<h2><code>SCONJ</code>: subordinating conjunction</h2>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_it-pos/PROPN.md" target="#">edit PROPN</a>
 
-<h3 id="definition">Definition</h3>
 
-<p>A subordinating conjunction is a conjunction that links constructions
+<div about="#PUNCT_it" property="rdf:type" resource="#pos_it">
+	<div property="rdf:type" resource="../../u/pos/all.html#PUNCT" />
+	<a id="al-it-pos/PUNCT" class="al-dest" />
+
+	<h2><code property="oliasystem:hasTag" lang="">PUNCT</code>: <div property="rdfs:label">punctuation</div></h2>
+	<div property="rdfs:comment">
+
+### Definition
+
+Punctuation marks are non-alphabetical characters and character groups
+used to delimit linguistic units in printed text.
+
+Punctuation is not taken to include logograms such as _$_, _%_, and
+_§_, which are instead tagged as [SYM]().
+
+### Examples
+
+- Period: _<b>.</b>_
+- Comma: _<b>,</b>_
+- Parentheses: _<b>(, )</b>_
+
+
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_it-pos/PUNCT.md" target="#">edit PUNCT</a>
+
+
+<div about="#SCONJ_it" property="rdf:type" resource="#pos_it">
+	<div property="rdf:type" resource="../../u/pos/all.html#SCONJ" />
+	<a id="al-it-pos/SCONJ" class="al-dest" />
+
+	<h2><code property="oliasystem:hasTag" lang="">SCONJ</code>: <div property="rdfs:label">subordinating conjunction</div></h2>
+	<div property="rdfs:comment">
+
+### Definition
+
+A subordinating conjunction is a conjunction that links constructions
 by making one of them a constituent of the other. The subordinating
 conjunction typically marks the incorporated constituent which has the
-status of a (subordinate) clause.</p>
+status of a (subordinate) clause.
 
-<p>We recognize these two subclasses as subordinating conjunctions:</p>
+We recognize these two subclasses as subordinating conjunctions:
 
-<ul>
-  <li>Complementizers, <em>come</em> “like”, <em>che</em> “that”, <em>mentre</em> “while”, <em>se</em> “if”</li>
-  <li>Adverbial clause introducers, <em>come</em> “like”, <em>quando</em> “when”, <em>poiché, perché</em> “since”, or <em>prima</em> “before” (when introducing a clause not a nominal)</li>
-</ul>
+* Complementizers, _come_ "like", _che_ "that", _mentre_ "while", _se_ "if"
+* Adverbial clause introducers, _come_ "like", _quando_ "when", _poiché, perché_ "since", or _prima_ "before" (when introducing a clause not a nominal)
 
-<p>For <em>coordinating conjunctions</em> see <a href="">CONJ</a>.</p>
+For _coordinating conjunctions_ see [CONJ]().
 
-<h3 id="examples">Examples</h3>
+### Examples
 
-<ul>
-  <li><em>Credo <b>che</b> verrà.</em> “I believe that he will come”</li>
-  <li><em>È successo <b>mentre</b> ero al lavoro.</em> “It happened while I was at work”</li>
-  <li><em>Vado a casa <b>prima che</b> piova.</em> “I go home before it starts raining”</li>
-</ul>
+- _Credo <b>che</b> verrà._ "I believe that he will come" 
+- _È successo <b>mentre</b> ero al lavoro._ "It happened while I was at work"
+- _Vado a casa <b>prima che</b> piova._ "I go home before it starts raining"
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_it-pos/SCONJ.md" target="#">edit SCONJ</a></p>
 
-<p><a id="al-it-pos/SYM" class="al-dest"></a></p>
-<h2><code>SYM</code>: symbol</h2>
 
-<h3 id="definition">Definition</h3>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_it-pos/SCONJ.md" target="#">edit SCONJ</a>
 
-<p>A symbol is a word-like entity that differs from ordinary words by
-form, function, or both.</p>
 
-<p>We recognize as symbols:</p>
+<div about="#SYM_it" property="rdf:type" resource="#pos_it">
+	<div property="rdf:type" resource="../../u/pos/all.html#SYM" />
+	<a id="al-it-pos/SYM" class="al-dest" />
 
-<ul>
-  <li>currency symbols: <em>$</em></li>
-  <li>mathematical operators:  <em>µg <b>/</b> m3</em></li>
-  <li>’/’ used a separator: <em>2001 <b>/</b> 923 <b>/</b> CE</em></li>
-  <li>emoticons and emoji: :-)</li>
-  <li>URL’s and emails</li>
-</ul>
+	<h2><code property="oliasystem:hasTag" lang="">SYM</code>: <div property="rdfs:label">symbol</div></h2>
+	<div property="rdfs:comment">
 
-<p>The following are not symbols:</p>
+### Definition
 
-<ul>
-  <li>Proper nouns with numbers and special characters: <em>130XE</em>, <em>DC10</em>,  <em>DC-10</em> are tagged <a href="">PROPN</a>.</li>
-  <li>Acronyms for proper nouns:  <em>UN</em>, <em>NATO</em> are tagged as <a href="">PROPN</a>.</li>
-  <li>Abbreviated words: <em>Sig.</em> (signore), <em>kg</em> (chilogrammo), <em>km</em> (chilometro), <em>dott</em> (dottore) are tagged <a href="">NOUN</a>.</li>
-  <li>Characters used as bullets in itemized lists <em>(*, •, ‣)</em> are <a href="">PUNCT</a>.</li>
-</ul>
+A symbol is a word-like entity that differs from ordinary words by
+form, function, or both.
 
-<h3 id="examples">Examples</h3>
+We recognize as symbols:
 
-<ul>
-  <li><em>$, %, §, ©</em></li>
-  <li><em>+, −, ×, ÷, =, &lt;, &gt;</em></li>
-  <li>:), ♥‿♥, 😝</li>
-  <li><em>john.doe@universal.org, http://universaldependencies.org/</em></li>
-</ul>
+* currency symbols: _$_
+* mathematical operators:  _µg <b>/</b> m3_
+* '/' used a separator: _2001 <b>/</b> 923 <b>/</b> CE_
+* emoticons and emoji: :-)
+* URL's and emails
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_it-pos/SYM.md" target="#">edit SYM</a></p>
+The following are not symbols:
 
-<p><a id="al-it-pos/VERB" class="al-dest"></a></p>
-<h2><code>VERB</code>: verb</h2>
+* Proper nouns with numbers and special characters: _130XE_, _DC10_,  _DC-10_ are tagged [PROPN]().
+* Acronyms for proper nouns:  _UN_, _NATO_ are tagged as [PROPN]().
+* Abbreviated words: _Sig._ (signore), _kg_ (chilogrammo), _km_ (chilometro), _dott_ (dottore) are tagged [NOUN](). 
+* Characters used as bullets in itemized lists _(*, •, ‣)_ are [PUNCT]().
 
-<h3 id="definition">Definition</h3>
+### Examples
 
-<p>A verb is a member of the syntactic class of words typically denoting events and actions, constituting a minimal predicate in a clause, governing the number and types of dependents which may occur in the clause. In Italian verbs are associated with the following grammatical categories: tense, mood and voice, which can either be expressed inflectionally or using auxilliary verbs or particles.</p>
+- _$, %, §, ©_
+- _+, −, ×, ÷, =, &lt;, &gt;_
+- :), ♥‿♥, 😝
+- _john.doe@universal.org, http://universaldependencies.org/_
 
-<p>Note that the <code>VERB</code> tag covers main verbs (content verbs) and copulas but it does not cover auxiliary verbs, for which the <a href="">AUX</a> tag is used.</p>
 
-<p>Participles used as adjectives are classified as <a href="">ADJ</a>.</p>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_it-pos/SYM.md" target="#">edit SYM</a>
 
-<h3 id="corresponding-language-specific-part-of-speech-tags">Corresponding language-specific part-of-speech tags</h3>
 
-<p>V:	Main verb</p>
+<div about="#VERB_it" property="rdf:type" resource="#pos_it">
+	<div property="rdf:type" resource="../../u/pos/all.html#VERB" />
+	<a id="al-it-pos/VERB" class="al-dest" />
 
-<h3 id="examples">Examples</h3>
+	<h2><code property="oliasystem:hasTag" lang="">VERB</code>: <div property="rdfs:label">verb</div></h2>
+	<div property="rdfs:comment">
 
-<ul>
-  <li><em>correre</em> “run”, <em>mangiare</em> “eat”</li>
-  <li><em>corse, mangiò</em></li>
-  <li><em>correndo, mangiando</em></li>
-  <li>è <em>stata mangiata</em></li>
-</ul>
+### Definition
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_it-pos/VERB.md" target="#">edit VERB</a></p>
+A verb is a member of the syntactic class of words typically denoting events and actions, constituting a minimal predicate in a clause, governing the number and types of dependents which may occur in the clause. In Italian verbs are associated with the following grammatical categories: tense, mood and voice, which can either be expressed inflectionally or using auxilliary verbs or particles.
 
-<p><a id="al-it-pos/X" class="al-dest"></a></p>
-<h2><code>X</code>: other</h2>
+Note that the `VERB` tag covers main verbs (content verbs) and copulas but it does not cover auxiliary verbs, for which the [AUX]() tag is used. 
 
-<h3 id="definition">Definition</h3>
+Participles used as adjectives are classified as [ADJ]().
 
-<p>The tag <code>X</code> is used for words that for some reason cannot be assigned
-a real part-of-speech category.</p>
 
-<p>Note that the universal guidelines recommend the usage of <code>X</code> for cases of code-switching where it is not possible (or meaningful) to analyze the intervening language grammatically (and where the dependency relation <em>foreign</em> is
-typically used in the syntactic analysis). The PoS tag for Italian in such cases is SW (foreign noun) and is mapped into <code>X</code> in the conversion.</p>
+### Corresponding language-specific part-of-speech tags
 
-<p>This usage does not extend to ordinary loan words where it is assigned a normal
-part-of-speech.</p>
+V:	Main verb
 
-<h3 id="examples">Examples</h3>
 
-<ul>
-  <li><b>tout court</b></li>
-  <li><b>res nullius</b></li>
-  <li><b>pro capite</b></li>
-</ul>
+### Examples
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_it-pos/X.md" target="#">edit X</a></p>
+- _correre_ "run", _mangiare_ "eat"
+- _corse, mangiò_
+- _correndo, mangiando_
+- è _stata mangiata_
 
+
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_it-pos/VERB.md" target="#">edit VERB</a>
+
+
+<div about="#X_it" property="rdf:type" resource="#pos_it">
+	<div property="rdf:type" resource="../../u/pos/all.html#X" />
+	<a id="al-it-pos/X" class="al-dest" />
+
+	<h2><code property="oliasystem:hasTag" lang="">X</code>: <div property="rdfs:label">other</div></h2>
+	<div property="rdfs:comment">
+
+### Definition
+
+The tag `X` is used for words that for some reason cannot be assigned
+a real part-of-speech category.
+
+Note that the universal guidelines recommend the usage of `X` for cases of code-switching where it is not possible (or meaningful) to analyze the intervening language grammatically (and where the dependency relation _foreign_ is
+typically used in the syntactic analysis). The PoS tag for Italian in such cases is SW (foreign noun) and is mapped into `X` in the conversion.
+
+This usage does not extend to ordinary loan words where it is assigned a normal
+part-of-speech. 
+
+### Examples
+
+* <b>tout court</b>
+* <b>res nullius</b>
+* <b>pro capite</b>
+
+
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_it-pos/X.md" target="#">edit X</a>
+
+</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div>
 
 
       </div>

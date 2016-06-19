@@ -43,7 +43,19 @@
 	  </div>
 	</noscript>
 
-          <h1 id="pos-tags">POS tags</h1>
+          
+<h1 id="pos-tags">POS tags</h1>
+
+<p><span about="." property="rdf:type" resource="owl:Ontology">
+	<span property="owl:imports" resource=" https://www.w3.org/2012/pyRdfa/extract?uri=http://universaldependencies.org/docs/u/pos/all.html&amp;format=xml&amp;rdfagraph=output&amp;vocab_expansion=false&amp;rdfa_lite=false&amp;embedded_rdf=true&amp;space_preserve=false&amp;vocab_cache=true&amp;vocab_cache_report=false&amp;vocab_cache_refresh=false"></span>
+	</span>
+<span about="#pos_eu" property="rdfs:label" style="visibility: hidden">POS tags</span>
+<span about="#pos_eu" property="rdfs:subClassOf" resource="_:eu">
+	<span about="_:eu" property="rdf:type" resource="owl:Restriction">
+		<span property="owl:onProperty" resource="http://purl.org/dc/terms/language"></span>
+		<span property="owl:hasValue" lang="" style="visibility: hidden">eu</span>
+	</span>
+</span></p>
 
 <table class="typeindex">
   <thead>
@@ -99,196 +111,303 @@
 
 <hr />
 
-<p><a id="al-eu-pos/ADJ" class="al-dest"></a></p>
-<h2><code>ADJ</code>: adjective</h2>
+<div about="#ADJ_eu" property="rdf:type" resource="#pos_eu">
+	<div property="rdf:type" resource="../../u/pos/all.html#ADJ" />
+	<a id="al-eu-pos/ADJ" class="al-dest" />
 
-<h4 id="description">Description</h4>
+	<h2><code property="oliasystem:hasTag" lang="">ADJ</code>: <div property="rdfs:label">adjective</div></h2>
+	<div property="rdfs:comment">
 
-<p>Adjectives typically modify nouns. In Basque, the adjective follows the noun, although some of them precede it.</p>
+#### Description
 
-<h4 id="examples">Examples</h4>
+Adjectives typically modify nouns. In Basque, the adjective follows the noun, although some of them precede it.
 
-<ul>
-  <li>Following the noun: <em>etxe</em> <b><em>handia</em></b>  “big house”</li>
-  <li>Preceding the noun: <b>goiko</b>  <em>etxea</em>  “the upper house”</li>
-</ul>
+#### Examples
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_eu-pos/ADJ.md" target="#">edit ADJ</a></p>
+* Following the noun: _etxe_ <b>_handia_</b>  "big house"   
+* Preceding the noun: <b>goiko</b>  _etxea_  "the upper house"   
 
-<p><a id="al-eu-pos/ADP" class="al-dest"></a></p>
-<h2><code>ADP</code>: adposition</h2>
 
-<p>This document is a placeholder for the language-specific documentation
-for <code>ADP</code>.</p>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_eu-pos/ADJ.md" target="#">edit ADJ</a>
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_eu-pos/ADP.md" target="#">edit ADP</a></p>
 
-<p><a id="al-eu-pos/ADV" class="al-dest"></a></p>
-<h2><code>ADV</code>: adverb</h2>
+<div about="#ADP_eu" property="rdf:type" resource="#pos_eu">
+	<div property="rdf:type" resource="../../u/pos/all.html#ADP" />
+	<a id="al-eu-pos/ADP" class="al-dest" />
 
-<h4 id="description">Description</h4>
-<p>Adverbs are words that typically modify adjectives, verbs or other adverbs for such categories as time, place, direction or manner. In Basque, the free word order allows the averbs to appear on either side of the verb.</p>
+	<h2><code property="oliasystem:hasTag" lang="">ADP</code>: <div property="rdfs:label">adposition</div></h2>
+	<div property="rdfs:comment">
 
-<h4 id="examples">Examples</h4>
+This document is a placeholder for the language-specific documentation
+for `ADP`.
 
-<ul>
-  <li>Following the verb: <b><em>azkar</em></b> <em>doa</em>  “fast goes”</li>
-  <li>Preceding the verb:  <em>darama</em> <b>sarritan</b>  “carries frequently”</li>
-  <li><b>oso</b> <em>azkar</em>  “very fast”</li>
-</ul>
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_eu-pos/ADV.md" target="#">edit ADV</a></p>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_eu-pos/ADP.md" target="#">edit ADP</a>
 
-<p><a id="al-eu-pos/AUX" class="al-dest"></a></p>
-<h2><code>AUX</code>: auxiliary verb</h2>
 
-<p>This document is a placeholder for the language-specific documentation
-for <code>AUX</code>.</p>
+<div about="#ADV_eu" property="rdf:type" resource="#pos_eu">
+	<div property="rdf:type" resource="../../u/pos/all.html#ADV" />
+	<a id="al-eu-pos/ADV" class="al-dest" />
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_eu-pos/AUX_.md" target="#">edit AUX</a></p>
+	<h2><code property="oliasystem:hasTag" lang="">ADV</code>: <div property="rdfs:label">adverb</div></h2>
+	<div property="rdfs:comment">
 
-<p><a id="al-eu-pos/CONJ" class="al-dest"></a></p>
-<h2><code>CONJ</code>: coordinating conjunction</h2>
+#### Description
+Adverbs are words that typically modify adjectives, verbs or other adverbs for such categories as time, place, direction or manner. In Basque, the free word order allows the averbs to appear on either side of the verb.
 
-<p>This document is a placeholder for the language-specific documentation
-for <code>CONJ</code>.</p>
+#### Examples
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_eu-pos/CONJ.md" target="#">edit CONJ</a></p>
+* Following the verb: <b>_azkar_</b> _doa_  "fast goes"   
+* Preceding the verb:  _darama_ <b>sarritan</b>  "carries frequently"
+* <b>oso</b> _azkar_  "very fast"
 
-<p><a id="al-eu-pos/DET" class="al-dest"></a></p>
-<h2><code>DET</code>: determiner</h2>
 
-<p>This document is a placeholder for the language-specific documentation
-for <code>DET</code>.</p>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_eu-pos/ADV.md" target="#">edit ADV</a>
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_eu-pos/DET.md" target="#">edit DET</a></p>
 
-<p><a id="al-eu-pos/INTJ" class="al-dest"></a></p>
-<h2><code>INTJ</code>: interjection</h2>
+<div about="#AUX_eu" property="rdf:type" resource="#pos_eu">
+	<div property="rdf:type" resource="../../u/pos/all.html#AUX" />
+	<a id="al-eu-pos/AUX" class="al-dest" />
 
-<p>This document is a placeholder for the language-specific documentation
-for <code>INTJ</code>.</p>
+	<h2><code property="oliasystem:hasTag" lang="">AUX</code>: <div property="rdfs:label">auxiliary verb</div></h2>
+	<div property="rdfs:comment">
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_eu-pos/INTJ.md" target="#">edit INTJ</a></p>
+This document is a placeholder for the language-specific documentation
+for `AUX`.
 
-<p><a id="al-eu-pos/NOUN" class="al-dest"></a></p>
-<h2><code>NOUN</code>: noun</h2>
 
-<h3 id="definition">Definition</h3>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_eu-pos/AUX_.md" target="#">edit AUX</a>
 
-<p>Nouns are a part of speech typically denoting a person, place, thing,
-animal or idea.</p>
 
-<h3 id="examples">Examples</h3>
+<div about="#CONJ_eu" property="rdf:type" resource="#pos_eu">
+	<div property="rdf:type" resource="../../u/pos/all.html#CONJ" />
+	<a id="al-eu-pos/CONJ" class="al-dest" />
 
-<ul>
-  <li><em>neska</em> “girl”</li>
-  <li><em>katu</em> “cat”</li>
-  <li><em>zuhaitz</em> “tree”</li>
-  <li><em>aire</em> “air”</li>
-  <li><em>edertasun</em> “beauty”</li>
-</ul>
+	<h2><code property="oliasystem:hasTag" lang="">CONJ</code>: <div property="rdfs:label">coordinating conjunction</div></h2>
+	<div property="rdfs:comment">
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_eu-pos/NOUN.md" target="#">edit NOUN</a></p>
+This document is a placeholder for the language-specific documentation
+for `CONJ`.
 
-<p><a id="al-eu-pos/NUM" class="al-dest"></a></p>
-<h2><code>NUM</code>: numeral</h2>
 
-<p>This document is a placeholder for the language-specific documentation
-for <code>NUM</code>.</p>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_eu-pos/CONJ.md" target="#">edit CONJ</a>
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_eu-pos/NUM.md" target="#">edit NUM</a></p>
 
-<p><a id="al-eu-pos/PART" class="al-dest"></a></p>
-<h2><code>PART</code>: particle</h2>
+<div about="#DET_eu" property="rdf:type" resource="#pos_eu">
+	<div property="rdf:type" resource="../../u/pos/all.html#DET" />
+	<a id="al-eu-pos/DET" class="al-dest" />
 
-<p>This document is a placeholder for the language-specific documentation
-for <code>PART</code>.</p>
+	<h2><code property="oliasystem:hasTag" lang="">DET</code>: <div property="rdfs:label">determiner</div></h2>
+	<div property="rdfs:comment">
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_eu-pos/PART.md" target="#">edit PART</a></p>
+This document is a placeholder for the language-specific documentation
+for `DET`.
 
-<p><a id="al-eu-pos/PRON" class="al-dest"></a></p>
-<h2><code>PRON</code>: pronoun</h2>
 
-<p>This document is a placeholder for the language-specific documentation
-for <code>PRON</code>.</p>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_eu-pos/DET.md" target="#">edit DET</a>
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_eu-pos/PRON.md" target="#">edit PRON</a></p>
 
-<p><a id="al-eu-pos/PROPN" class="al-dest"></a></p>
-<h2><code>PROPN</code>: proper noun</h2>
+<div about="#INTJ_eu" property="rdf:type" resource="#pos_eu">
+	<div property="rdf:type" resource="../../u/pos/all.html#INTJ" />
+	<a id="al-eu-pos/INTJ" class="al-dest" />
 
-<h3 id="definition">Definition</h3>
+	<h2><code property="oliasystem:hasTag" lang="">INTJ</code>: <div property="rdfs:label">interjection</div></h2>
+	<div property="rdfs:comment">
 
-<p>A proper noun is a noun (or nominal content word) that is the name (or
-part of the name) of a specific individual, place, or object.</p>
+This document is a placeholder for the language-specific documentation
+for `INTJ`.
 
-<h3 id="examples">Examples</h3>
 
-<ul>
-  <li><em>Jon</em>, <em>Jon</em></li>
-  <li><em>Ukrainia</em>, <em>Ucraine</em></li>
-  <li><em>Madril</em>, <em>Madrid</em></li>
-</ul>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_eu-pos/INTJ.md" target="#">edit INTJ</a>
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_eu-pos/PROPN.md" target="#">edit PROPN</a></p>
 
-<p><a id="al-eu-pos/PUNCT" class="al-dest"></a></p>
-<h2><code>PUNCT</code>: punctuation</h2>
+<div about="#NOUN_eu" property="rdf:type" resource="#pos_eu">
+	<div property="rdf:type" resource="../../u/pos/all.html#NOUN" />
+	<a id="al-eu-pos/NOUN" class="al-dest" />
 
-<p>This document is a placeholder for the language-specific documentation
-for <code>PUNCT</code>.</p>
+	<h2><code property="oliasystem:hasTag" lang="">NOUN</code>: <div property="rdfs:label">noun</div></h2>
+	<div property="rdfs:comment">
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_eu-pos/PUNCT.md" target="#">edit PUNCT</a></p>
+### Definition
 
-<p><a id="al-eu-pos/SCONJ" class="al-dest"></a></p>
-<h2><code>SCONJ</code>: subordinating conjunction</h2>
+Nouns are a part of speech typically denoting a person, place, thing,
+animal or idea.
 
-<p>This document is a placeholder for the language-specific documentation
-for <code>SCONJ</code>.</p>
+### Examples
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_eu-pos/SCONJ.md" target="#">edit SCONJ</a></p>
+- _neska_ "girl"
+- _katu_ "cat"
+- _zuhaitz_ "tree"
+- _aire_ "air"
+- _edertasun_ "beauty"
 
-<p><a id="al-eu-pos/SYM" class="al-dest"></a></p>
-<h2><code>SYM</code>: symbol</h2>
 
-<p>This document is a placeholder for the language-specific documentation
-for <code>SYM</code>.</p>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_eu-pos/NOUN.md" target="#">edit NOUN</a>
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_eu-pos/SYM.md" target="#">edit SYM</a></p>
 
-<p><a id="al-eu-pos/VERB" class="al-dest"></a></p>
-<h2><code>VERB</code>: verb</h2>
+<div about="#NUM_eu" property="rdf:type" resource="#pos_eu">
+	<div property="rdf:type" resource="../../u/pos/all.html#NUM" />
+	<a id="al-eu-pos/NUM" class="al-dest" />
 
-<p>A verb is a member of the syntactic class of words that typically
+	<h2><code property="oliasystem:hasTag" lang="">NUM</code>: <div property="rdfs:label">numeral</div></h2>
+	<div property="rdfs:comment">
+
+This document is a placeholder for the language-specific documentation
+for `NUM`.
+
+
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_eu-pos/NUM.md" target="#">edit NUM</a>
+
+
+<div about="#PART_eu" property="rdf:type" resource="#pos_eu">
+	<div property="rdf:type" resource="../../u/pos/all.html#PART" />
+	<a id="al-eu-pos/PART" class="al-dest" />
+
+	<h2><code property="oliasystem:hasTag" lang="">PART</code>: <div property="rdfs:label">particle</div></h2>
+	<div property="rdfs:comment">
+
+This document is a placeholder for the language-specific documentation
+for `PART`.
+
+
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_eu-pos/PART.md" target="#">edit PART</a>
+
+
+<div about="#PRON_eu" property="rdf:type" resource="#pos_eu">
+	<div property="rdf:type" resource="../../u/pos/all.html#PRON" />
+	<a id="al-eu-pos/PRON" class="al-dest" />
+
+	<h2><code property="oliasystem:hasTag" lang="">PRON</code>: <div property="rdfs:label">pronoun</div></h2>
+	<div property="rdfs:comment">
+
+This document is a placeholder for the language-specific documentation
+for `PRON`.
+
+
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_eu-pos/PRON.md" target="#">edit PRON</a>
+
+
+<div about="#PROPN_eu" property="rdf:type" resource="#pos_eu">
+	<div property="rdf:type" resource="../../u/pos/all.html#PROPN" />
+	<a id="al-eu-pos/PROPN" class="al-dest" />
+
+	<h2><code property="oliasystem:hasTag" lang="">PROPN</code>: <div property="rdfs:label">proper noun</div></h2>
+	<div property="rdfs:comment">
+
+### Definition
+
+A proper noun is a noun (or nominal content word) that is the name (or
+part of the name) of a specific individual, place, or object.
+
+### Examples
+
+- _Jon_, _Jon_
+- _Ukrainia_, _Ucraine_
+- _Madril_, _Madrid_
+
+
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_eu-pos/PROPN.md" target="#">edit PROPN</a>
+
+
+<div about="#PUNCT_eu" property="rdf:type" resource="#pos_eu">
+	<div property="rdf:type" resource="../../u/pos/all.html#PUNCT" />
+	<a id="al-eu-pos/PUNCT" class="al-dest" />
+
+	<h2><code property="oliasystem:hasTag" lang="">PUNCT</code>: <div property="rdfs:label">punctuation</div></h2>
+	<div property="rdfs:comment">
+
+This document is a placeholder for the language-specific documentation
+for `PUNCT`.
+
+
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_eu-pos/PUNCT.md" target="#">edit PUNCT</a>
+
+
+<div about="#SCONJ_eu" property="rdf:type" resource="#pos_eu">
+	<div property="rdf:type" resource="../../u/pos/all.html#SCONJ" />
+	<a id="al-eu-pos/SCONJ" class="al-dest" />
+
+	<h2><code property="oliasystem:hasTag" lang="">SCONJ</code>: <div property="rdfs:label">subordinating conjunction</div></h2>
+	<div property="rdfs:comment">
+
+This document is a placeholder for the language-specific documentation
+for `SCONJ`.
+
+
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_eu-pos/SCONJ.md" target="#">edit SCONJ</a>
+
+
+<div about="#SYM_eu" property="rdf:type" resource="#pos_eu">
+	<div property="rdf:type" resource="../../u/pos/all.html#SYM" />
+	<a id="al-eu-pos/SYM" class="al-dest" />
+
+	<h2><code property="oliasystem:hasTag" lang="">SYM</code>: <div property="rdfs:label">symbol</div></h2>
+	<div property="rdfs:comment">
+
+This document is a placeholder for the language-specific documentation
+for `SYM`.
+
+
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_eu-pos/SYM.md" target="#">edit SYM</a>
+
+
+<div about="#VERB_eu" property="rdf:type" resource="#pos_eu">
+	<div property="rdf:type" resource="../../u/pos/all.html#VERB" />
+	<a id="al-eu-pos/VERB" class="al-dest" />
+
+	<h2><code property="oliasystem:hasTag" lang="">VERB</code>: <div property="rdfs:label">verb</div></h2>
+	<div property="rdfs:comment">
+
+A verb is a member of the syntactic class of words that typically
 signal events and actions, can constitute a minimal predicate in a
 clause, and govern the number and types of other constituents which
-may occur in the clause.</p>
+may occur in the clause. 
 
-<p>The tag VERB is reserved for full lexical verbs, while auxiliary verbs are tagged [AUX]. In Basque, there are two types of main verbs:</p>
+The tag VERB is reserved for full lexical verbs, while auxiliary verbs are tagged [AUX]. In Basque, there are two types of main verbs: 
 
-<ul>
-  <li>Complete: verbs with aspect, tense, and agreement features</li>
-  <li>Incomplete: verbs with aspect and tense features (future tense)</li>
-</ul>
+* Complete: verbs with aspect, tense, and agreement features
+* Incomplete: verbs with aspect and tense features (future tense)
 
-<h3 id="examples">Examples</h3>
+### Examples
 
-<ul>
-  <li>Complete: <em><b>daramat</b></em> “(I) <b>carry</b> (it)”, <em><b>dakarkio</b></em> “(he) <b>brings</b>(present-tense) (it) (to him)”</li>
-  <li>Incomplete: <em><b>ekarri</b> du(AUX)</em> “<b>carry</b> him-it-present-tense(AUX)”,</li>
-</ul>
+- Complete: _<b>daramat</b>_ "(I) <b>carry</b> (it)", _<b>dakarkio</b>_ "(he) <b>brings</b>(present-tense) (it) (to him)"
+- Incomplete: _<b>ekarri</b> du(AUX)_ "<b>carry</b> him-it-present-tense(AUX)", 
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_eu-pos/VERB.md" target="#">edit VERB</a></p>
 
-<p><a id="al-eu-pos/X" class="al-dest"></a></p>
-<h2><code>X</code>: other</h2>
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_eu-pos/VERB.md" target="#">edit VERB</a>
 
-<p>This document is a placeholder for the language-specific documentation
-for <code>X</code>.</p>
 
-<p><a href="https://github.com/universaldependencies/docs/edit/pages-source/_eu-pos/X.md" target="#">edit X</a></p>
+<div about="#X_eu" property="rdf:type" resource="#pos_eu">
+	<div property="rdf:type" resource="../../u/pos/all.html#X" />
+	<a id="al-eu-pos/X" class="al-dest" />
 
+	<h2><code property="oliasystem:hasTag" lang="">X</code>: <div property="rdfs:label">other</div></h2>
+	<div property="rdfs:comment">
+
+This document is a placeholder for the language-specific documentation
+for `X`.
+
+
+	</div>
+	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_eu-pos/X.md" target="#">edit X</a>
+
+</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div>
 
 
       </div>
