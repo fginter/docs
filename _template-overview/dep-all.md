@@ -31,7 +31,7 @@ https://www.w3.org/2012/pyRdfa/extract?uri=http://universaldependencies.org/docs
 {% capture concept %}{{ p.title | split:':' | first }}{% endcapture %}
 <div about="#{{ p.title | url_encode }}_{{ lcode }}" property="rdf:type" resource="#dep_{{ lcode }}">
 	<div property="rdf:type" resource="../../u/dep/all.html#{{ concept }}"/>
-	<a id="al-template-dep/{{ p.title }}" class="al-dest"/>
+	<a id="al-{{ lcode }}-dep/{{ p.title }}" class="al-dest"/>
 
 	<h2><code property="oliasystem:hasTag" lang="">{{ p.title }}</code>: <div property="rdfs:label">{{ p.shortdef }}</div></h2>
 	<div property="rdfs:comment">

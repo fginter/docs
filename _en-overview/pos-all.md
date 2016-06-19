@@ -25,8 +25,6 @@ https://www.w3.org/2012/pyRdfa/extract?uri=http://universaldependencies.org/docs
 
 ----------
 
-no recursive lcode
-
 {% assign sorted = site.en-pos | sort: 'title' %}
 {% for p in sorted %}
 {% capture concept %}{{ p.title | split:':' | first }}{% endcapture %}

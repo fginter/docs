@@ -29,7 +29,7 @@ https://www.w3.org/2012/pyRdfa/extract?uri=http://universaldependencies.org/docs
 {% assign sorted = site.template-feat | sort: 'title' %}
 {% for p in sorted %}
 <div about="#{{ p.title | url_encode }}_{{ lcode }}" property="rdfs:subClassOf" resource="#feat_{{ lcode }}">
-	<a id="al-template-feat/{{ p.title }}" class="al-dest"/>
+	<a id="al-{{ lcode }}-feat/{{ p.title }}" class="al-dest"/>
 	<h2><code property="rdfs:label" lang="">{{ p.title }}</code>: <span property="rdfs:label">{{ p.shortdef }}</span>
 	<code>[</code> 
 	{% assign pars = p.content | split: "### " %}
