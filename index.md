@@ -13,18 +13,12 @@ title:  'Universal Dependencies'
 * Morphology
   * [General principles](u/overview/morphology.html)
   * [Universal POS tags](u/pos/index.html) ([single document](u/pos/all.html)) 
-  <a
- property="owl:imports" 
- href="https://www.w3.org/2012/pyRdfa/extract?uri=http://universaldependencies.org/docs/u/pos/all.html&format=xml&rdfagraph=output&vocab_expansion=false&rdfa_lite=false&embedded_rdf=true&space_preserve=false&vocab_cache=true&vocab_cache_report=false&vocab_cache_refresh=false"
- title="RDF model"> <img border="0"
- src="http://www.w3.org/RDF/icons/rdf_flyer.24"
- alt="RDF model"/></a>
  [<a
  property="owl:imports" 
  href="https://www.w3.org/2012/pyRdfa/extract?uri=http://fginter.github.io/docs/u/pos/all.html&format=xml&rdfagraph=output&vocab_expansion=false&rdfa_lite=false&embedded_rdf=true&space_preserve=false&vocab_cache=true&vocab_cache_report=false&vocab_cache_refresh=false"
  title="RDF model"> <img border="0"
  src="http://www.w3.org/RDF/icons/rdf_flyer.24"
- alt="RDF model"/></a>]
+ alt="RDF model" height="15pt"/></a>]
   * [Universal features](u/feat/index.html) ([single document](u/feat/all.html))
   * [Language-specific features](ext-feat-index.html)
   * [Conversion from other tagsets](tagset-conversion/index.html)
