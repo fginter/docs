@@ -42,10 +42,10 @@ Marneffe and Manning 2008), but have been updated for UD.
 	<h2><code property="oliasystem:hasTag" lang="">{{ p.title }}</code>: <div property="rdfs:label">{{ p.shortdef }}</div></h2>
 	<div property="rdfs:comment">
 {% if p.content contains "<!--details-->" %}    
-{{ p.content | split:"<!--details-->" | first }}
+{{ p.content | split:"<!--details-->" | first | markdownify }}
 	<a property="rdfs:seeAlso" href="{{ p.title }}" class="al-doc">See details</a>
 {% else %}
-{{ p.content }}
+{{ p.content | markdownify }}
 {% endif %}
 	</div>
 	<a href="{{ site.git_edit }}/{% if p.collection %}{{ p.relative_path }}{% else %}{{ p.path }}{% endif %}" target="#">edit {{ p.title }}</a>
