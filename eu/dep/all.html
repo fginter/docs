@@ -250,33 +250,34 @@ in two places.</p>
 	<h2><code property="oliasystem:hasTag" lang="">acl</code>: <div property="rdfs:label">clausal modifier of noun</div></h2>
 	<div property="rdfs:comment">
 
-`acl` stands for finite and non-finite clauses that modify a nominal. A relative clause is an instance of acl, characterized by finiteness and usually omission of the modified noun in the embedded clause. The head of the acl relation is the noun that is modified, and the dependent is the head of the clause that modifies the noun.
+<p><code>acl</code> stands for finite and non-finite clauses that modify a nominal. A relative clause is an instance of acl, characterized by finiteness and usually omission of the modified noun in the embedded clause. The head of the acl relation is the noun that is modified, and the dependent is the head of the clause that modifies the noun.</p>
 
-* With a synthetic verb:
+<ul>
+  <li>With a synthetic verb:</li>
+</ul>
 
-*Hori diote futbolaz **dakiten** entrenatzaileek .*
+<p><em>Hori diote futbolaz <strong>dakiten</strong> entrenatzaileek .</em></p>
 
-*The coaches **who know** about football say that .* 
+<p><em>The coaches <strong>who know</strong> about football say that .</em></p>
 
-~~~ sdparse
-Hori diote futbolaz dakiten entrenatzaileek . \n That say football_about know_who coaches_the .
+<pre><code class="language-sdparse">Hori diote futbolaz dakiten entrenatzaileek . \n That say football_about know_who coaches_the .
 
 dobj(diote-2, Hori-1)
 nsubj(diote-2, entrenatzaileek-5)
 nmod(dakiten-4, futbolaz-3)
 acl(entrenatzaileek-5, dakiten-4)
 punct(diote-2, .-6)
-~~~
+</code></pre>
 
+<ul>
+  <li>With a compound/periphrastic verb:</li>
+</ul>
 
-* With a compound/periphrastic verb:
+<p><em>Hura da haurraren etorkizuna erabaki <strong>dezakeen</strong> bakarra .</em></p>
 
-*Hura da haurraren etorkizuna erabaki **dezakeen** bakarra .*
+<p><em>He/she is the only one <strong>who can</strong> decide the child’s future .</em></p>
 
-*He/she is the only one **who can** decide the child's future .*
-
-~~~ sdparse
-Hura da haurraren etorkizuna erabaki dezakeen bakarra . \n He/she is child_the_'s future decide can_who the_only_one .
+<pre><code class="language-sdparse">Hura da haurraren etorkizuna erabaki dezakeen bakarra . \n He/she is child_the_'s future decide can_who the_only_one .
 
 nsubj(bakarra-7, Hura-1)
 nmod(etorkizuna-4, haurraren-3)
@@ -285,7 +286,7 @@ aux(erabaki-5, dezakeen-6)
 acl(bakarra-7, erabaki-5)
 cop(bakarra-7, da-2)
 punct(bakarra-7, .-8)
-~~~
+</code></pre>
 
 
 	</div>
@@ -299,37 +300,33 @@ punct(bakarra-7, .-8)
 	<h2><code property="oliasystem:hasTag" lang="">advcl</code>: <div property="rdfs:label">adverbial clause modifier</div></h2>
 	<div property="rdfs:comment">
 
-An adverbial clause modifier (`advcl`) is a clause which modifies a verb or other predicate (adjective, etc.),
-as a modifier, not as a core complement. This includes temporal clauses, consequences, conditional clauses, purpose clause, etc. The dependent must be clausal (otherwise, it is an [advmod]()) and the dependent is the main predicate of the clause.
+<p>An adverbial clause modifier (<code>advcl</code>) is a clause which modifies a verb or other predicate (adjective, etc.),
+as a modifier, not as a core complement. This includes temporal clauses, consequences, conditional clauses, purpose clause, etc. The dependent must be clausal (otherwise, it is an <a href="">advmod</a>) and the dependent is the main predicate of the clause.</p>
 
-*Askatasunean **oinarritutako** alternatiba bat ematea .* 
+<p><em>Askatasunean <strong>oinarritutako</strong> alternatiba bat ematea .</em></p>
 
-*To give an alternative **based on** freedom  .*
+<p><em>To give an alternative <strong>based on</strong> freedom  .</em></p>
 
-~~~ sdparse
-Askatasunean oinarritutako alternatiba bat ematea . \n  Freedom based_on alternative_an to give .
+<pre><code class="language-sdparse">Askatasunean oinarritutako alternatiba bat ematea . \n  Freedom based_on alternative_an to give .
 
 nmod(oinarritutako-2, Askatasunean-1)
 advcl(alternatiba-3, oinarritutako-2)
 nummod(aternatiba-3, bat-4)
 dobj(ematea-5, alternatiba-3) 
 punct(ematea-5, .-6)
-~~~
+</code></pre>
 
+<p><em>Lapurdin <strong>sorturiko</strong> lehenbiziko euskal idazle-taldea .</em></p>
 
+<p><em>The first Basque writer-group <strong>created</strong> in Lapurdi .</em></p>
 
-*Lapurdin **sorturiko** lehenbiziko euskal idazle-taldea .*
-
-*The first Basque writer-group **created** in Lapurdi .* 
-
-~~~ sdparse
-Lapurdin sorturiko lehenbiziko euskal idazle-taldea . \n  The first Basque writer-group created in Lapurdi . 
+<pre><code class="language-sdparse">Lapurdin sorturiko lehenbiziko euskal idazle-taldea . \n  The first Basque writer-group created in Lapurdi . 
 
 nmod(sorturiko-2, Lapurdin-1)
 advcl(idazle-taldea-5, sorturiko-2)
 amod(idazle-taldea-5, lehenbiziko-3)
 nmod(idazle-taldea-5, euskal) 
-~~~
+</code></pre>
 
 
 	</div>
@@ -343,38 +340,35 @@ nmod(idazle-taldea-5, euskal)
 	<h2><code property="oliasystem:hasTag" lang="">advmod</code>: <div property="rdfs:label">adverbial modifier</div></h2>
 	<div property="rdfs:comment">
 
-An adverbial modifier of a word (`advmod`) is a (non-clausal) adverb or adverbial phrase that serves to modify the meaning of the word.
+<p>An adverbial modifier of a word (<code>advmod</code>) is a (non-clausal) adverb or adverbial phrase that serves to modify the meaning of the word.</p>
 
-We differentiate adverbials realized as adverbs _(advmod)_ and adverbials realized by noun phrases or adpositional phrases _(nmod)_ .
+<p>We differentiate adverbials realized as adverbs <em>(advmod)</em> and adverbials realized by noun phrases or adpositional phrases <em>(nmod)</em> .</p>
 
-*Rich, **ordea**, ez dago **bakarrik** .* 
+<p><em>Rich, <strong>ordea</strong>, ez dago <strong>bakarrik</strong> .</em></p>
 
-*Rich, **however**, is not **alone** .*
+<p><em>Rich, <strong>however</strong>, is not <strong>alone</strong> .</em></p>
 
-~~~ sdparse
-Rich, ordea, ez dago bakarrik . \n Rich, however, is not alone .
+<pre><code class="language-sdparse">Rich, ordea, ez dago bakarrik . \n Rich, however, is not alone .
 
 nsubj(dago-4, Rich-1)
 advmod(dago-4, ordea-2)
 neg(dago-4, ez-3)
 advmod(dago-4, bakarrik-5)
 punct(dago-4, .-6)
-~~~
+</code></pre>
 
+<p><em><strong>Han</strong> ez zen ezer mugitzen .</em></p>
 
-***Han** ez zen ezer mugitzen .*
+<p><em>Nothing was moved <strong>there</strong> .</em></p>
 
-*Nothing was moved **there** .*
-
-~~~ sdparse
-Han ez zen ezer mugitzen . \n There was nothing moved . 
+<pre><code class="language-sdparse">Han ez zen ezer mugitzen . \n There was nothing moved . 
 
 advmod(mugitzen-5, Han-1)
 neg(mugitzen-5, ez-2)
 aux(mugitzen-5, zen-3)
 nsubj(mugitzen-5, ezer-4)
 punct(mugitzen-5, .-6)
-~~~
+</code></pre>
 
 
 	</div>
@@ -388,14 +382,13 @@ punct(mugitzen-5, .-6)
 	<h2><code property="oliasystem:hasTag" lang="">amod</code>: <div property="rdfs:label">adjectival modifier</div></h2>
 	<div property="rdfs:comment">
 
-Nouns may take adjectival modifiers, which are marked with the dependency type `amod`. Most of the adjectives appear after the noun they modify, though some of them may appear before.
+<p>Nouns may take adjectival modifiers, which are marked with the dependency type <code>amod</code>. Most of the adjectives appear after the noun they modify, though some of them may appear before.</p>
 
-*Epaiketa horrek kezka **handia** piztu du .* 
+<p><em>Epaiketa horrek kezka <strong>handia</strong> piztu du .</em></p>
 
-*That trial has caused a **big** concern .*
+<p><em>That trial has caused a <strong>big</strong> concern .</em></p>
 
-~~~ sdparse
-Epaiketa horrek kezka handia piztu du . \n Trial that concern big_a caused has .
+<pre><code class="language-sdparse">Epaiketa horrek kezka handia piztu du . \n Trial that concern big_a caused has .
 
 nsubj(piztu-5, Epaiketa-1)
 det(Epaiketa-1, horrek-2)
@@ -403,15 +396,13 @@ amod(kezka-3, handia-4)
 dobj(piztu-5, kezka-3)
 aux(piztu-5, du-6)
 punct(piztu-5, .-7)
-~~~
+</code></pre>
 
+<p><em>Mutikoak heldu ditun dantzaldira atorra <strong>urdin argi</strong> batekin .</em></p>
 
-*Mutikoak heldu ditun dantzaldira atorra **urdin argi** batekin .*
+<p><em>The boys have arrived to the ball with a <strong>light blue</strong> shirt .</em></p>
 
-*The boys have arrived to the ball with a **light blue** shirt .*
-
-~~~ sdparse
-Mutikoak heldu ditun dantzaldira atorra urdin argi batekin . \n Boys_the arrived have ball_the_to shirt blue light one_with .
+<pre><code class="language-sdparse">Mutikoak heldu ditun dantzaldira atorra urdin argi batekin . \n Boys_the arrived have ball_the_to shirt blue light one_with .
 
 nsubj(Mutikoak-1, heldu-2)
 aux(heldu-2, ditun-3)
@@ -421,14 +412,13 @@ amod(atorra-5, urdin-6)
 amod(urdin-6, argi-7)
 det(atorra-5, batekin-8)
 punct(heldu-2, .-9)
-~~~
+</code></pre>
 
-***Azkeneko** 400 metroak minutu batean osatu zituen Derartu Tuluk .*
+<p><em><strong>Azkeneko</strong> 400 metroak minutu batean osatu zituen Derartu Tuluk .</em></p>
 
-*Derartu Tulu made the **last** 400 meters in one minute .* 
+<p><em>Derartu Tulu made the <strong>last</strong> 400 meters in one minute .</em></p>
 
-~~~ sdparse
-Azkeneko 400 metroak minutu batean osatu zituen Derartu Tuluk . \n Last 400 meters_the minute one_in made Derartu Tulu .
+<pre><code class="language-sdparse">Azkeneko 400 metroak minutu batean osatu zituen Derartu Tuluk . \n Last 400 meters_the minute one_in made Derartu Tulu .
 
 amod(metroak-3, Azkeneko-1)
 nummod(metroak-3, 400-2)
@@ -439,7 +429,7 @@ aux(osatu-6, zituen-7)
 name(Derartu-8, Tuluk-9)
 nsubj(osatu-6, Derartu-8)
 punct(osatu-6, .-10)
-~~~
+</code></pre>
 
 
 	</div>
@@ -453,14 +443,13 @@ punct(osatu-6, .-10)
 	<h2><code property="oliasystem:hasTag" lang="">appos</code>: <div property="rdfs:label">appositional modifier</div></h2>
 	<div property="rdfs:comment">
 
-An appositional modifier of a noun (`appos`) is a nominal immediately following the first noun that serves to define or modify that noun. It includes parenthesized examples, as well as defining abbreviations in one of these structures.
+<p>An appositional modifier of a noun (<code>appos</code>) is a nominal immediately following the first noun that serves to define or modify that noun. It includes parenthesized examples, as well as defining abbreviations in one of these structures.</p>
 
-*Bikote bat hil zuten Chinanin, Taref **probintzian** .*
+<p><em>Bikote bat hil zuten Chinanin, Taref <strong>probintzian</strong> .</em></p>
 
-*They killed a couple in Chinani, in the Taref **province** .* 
+<p><em>They killed a couple in Chinani, in the Taref <strong>province</strong> .</em></p>
 
-~~~ sdparse
-Bikote bat hil zuten Chinanin, Taref probintzian . \n Couple a killed Chinani_in, Taref province_the_in . 
+<pre><code class="language-sdparse">Bikote bat hil zuten Chinanin, Taref probintzian . \n Couple a killed Chinani_in, Taref province_the_in . 
 
 dobj(hil-3, Bikote-1)
 nummod(Bikote-1, bat-2)
@@ -470,15 +459,13 @@ punct(hil-3, ,-6)
 nmod(probintzian-8, Taref-7)
 appos(Chinanin-5, probintzian-8)
 punct(hil-3, .-9)
-~~~
+</code></pre>
 
+<p><em>Azkenengo asanbladan, martxoaren 10ean <strong>eginikoa</strong>, adierazi zuten .</em></p>
 
-*Azkenengo asanbladan, martxoaren 10ean **eginikoa**, adierazi zuten .*
+<p><em>They explained it in the last assembly, in <strong>the one made</strong> in the 10th march .</em></p>
 
-*They explained it in the last assembly, in **the one made** in the 10th march .*
-
-~~~ sdparse
-Azkenengo asanbladan, martxoaren 10ean eginikoa, adierazi zuten . \n They explained it in the last assembly, in the one made in the 10th march .
+<pre><code class="language-sdparse">Azkenengo asanbladan, martxoaren 10ean eginikoa, adierazi zuten . \n They explained it in the last assembly, in the one made in the 10th march .
 
 amod(asanbladan-2, Azkenengo-1)
 nmod(adierazi-6, asanbladan-2)
@@ -487,15 +474,13 @@ nmod(eginikoa-5, 10ean-4)
 appos(asanbladan-2, eginikoa-5)
 aux(adierazi-6, zuten-7) 
 punct(adierazi-6, .-8)
-~~~
-	
+</code></pre>
 
-*Nekazaritza eta abeltzaintza **(esnea, haragia eta txerriak)** dira bertako iharduera ekonomiko nagusiak .* 
+<p><em>Nekazaritza eta abeltzaintza <strong>(esnea, haragia eta txerriak)</strong> dira bertako iharduera ekonomiko nagusiak .</em></p>
 
-*Agriculture and stockbreeding **(milk, meat and pork)** are the main autochthonous economic activities .* 
+<p><em>Agriculture and stockbreeding <strong>(milk, meat and pork)</strong> are the main autochthonous economic activities .</em></p>
 
-~~~ sdparse
-Nekazaritza eta abeltzaintza (esnea, haragia eta txerriak) dira bertako iharduera ekonomiko nagusiak . n\ Agriculture and stockbreeding (milk, meat and pork) are autochthonous activities economic main_the .
+<pre><code class="language-sdparse">Nekazaritza eta abeltzaintza (esnea, haragia eta txerriak) dira bertako iharduera ekonomiko nagusiak . n\ Agriculture and stockbreeding (milk, meat and pork) are autochthonous activities economic main_the .
 
 nsubj(iharduera-13, Nekazaritza)
 cc(Nekazaritza-1, eta-2)
@@ -511,15 +496,13 @@ amod(iharduera-11, bertako-10)
 amod(iharduera-11, ekonomiko-12)
 amod(iharduera-11, nagusiak-13)
 punct(iharduera-11, .-14)
-~~~
+</code></pre>
 
+<p><em>Francesco Casagrandre italiarrak Nazioarteko Txirrindularitza Elkarteko <strong>(UCI)</strong> lehen postuan jarraitzen du .</em></p>
 
-*Francesco Casagrandre italiarrak Nazioarteko Txirrindularitza Elkarteko **(UCI)** lehen postuan jarraitzen du .*
+<p><em>The italian Francesco Casagrandre continues in the first position of the Union Cycliste Internationale <strong>(UCI)</strong> .</em></p>
 
-*The italian Francesco Casagrandre continues in the first position of the Union Cycliste Internationale **(UCI)** .*  
-
-~~~ sdparse
-Francesco Casagrandre italiarrak Nazioarteko Txirrindularitza Elkarteko (UCI) lehen postuan jarraitzen du . n\ Francesco Casagrandre italian_the Internationale_the_of Cycliste Union (UCI) first position_the_in continues .  
+<pre><code class="language-sdparse">Francesco Casagrandre italiarrak Nazioarteko Txirrindularitza Elkarteko (UCI) lehen postuan jarraitzen du . n\ Francesco Casagrandre italian_the Internationale_the_of Cycliste Union (UCI) first position_the_in continues .  
 
 nmod(italiarrak-3, Francesco-1)
 name(Francesco-1, Casagrandre-2)
@@ -532,8 +515,7 @@ det(postuan-9, lehen-8)
 nmod(jarraitzen-11, postuan)
 aux(jarraitzen-11, du-12)
 punct(jarraitzen-11, .-13)
-~~~
-
+</code></pre>
 
 
 
@@ -548,21 +530,21 @@ punct(jarraitzen-11, .-13)
 	<h2><code property="oliasystem:hasTag" lang="">aux</code>: <div property="rdfs:label">auxiliary</div></h2>
 	<div property="rdfs:comment">
 
-The `aux` relation occurs between a verb and and auxiliary. In general, Basque verbs encode only aspect, while temporal and agreement features show up in the auxiliary, as well as transitivity.
- 
- There are mainly two auxiliary lemmas *izan* (*to be*) corresponding to intransitives and *ukan* (*to have*) corresponding to transitives.
+<p>The <code>aux</code> relation occurs between a verb and and auxiliary. In general, Basque verbs encode only aspect, while temporal and agreement features show up in the auxiliary, as well as transitivity.</p>
 
-Even if Basque word order is quite free, the auxiliary can only appear right after the verb in non-negative sentences, and right after the negation in negative sentences.
+<p>There are mainly two auxiliary lemmas <em>izan</em> (<em>to be</em>) corresponding to intransitives and <em>ukan</em> (<em>to have</em>) corresponding to transitives.</p>
 
+<p>Even if Basque word order is quite free, the auxiliary can only appear right after the verb in non-negative sentences, and right after the negation in negative sentences.</p>
 
-* Example of an auxiliary in an intransitive sentence (auxiliary lemma *izan*/*to be*):
+<ul>
+  <li>Example of an auxiliary in an intransitive sentence (auxiliary lemma <em>izan</em>/<em>to be</em>):</li>
+</ul>
 
-*Bi zati hauek markaturik dauden tokietatik tolesten **dira** .*
+<p><em>Bi zati hauek markaturik dauden tokietatik tolesten <strong>dira</strong> .</em></p>
 
-*These two parts fold by the places that **are** marked .*
+<p><em>These two parts fold by the places that <strong>are</strong> marked .</em></p>
 
-~~~ sdparse
-Bi zati hauek markaturik dauden tokietatik tolesten dira .\n Two parts these marked are_that sites_the_by fold .
+<pre><code class="language-sdparse">Bi zati hauek markaturik dauden tokietatik tolesten dira .\n Two parts these marked are_that sites_the_by fold .
 
 det(zati-2, Bi-1)
 nsubj(tolesten-7, zati-2)
@@ -572,24 +554,24 @@ cop(markaturik-4, dauden-5)
 nmod(tolesten-7, tokietatik-6)
 aux(tolesten-7, dira-8)
 punct(tolesten-7, .-9)
-~~~
+</code></pre>
 
+<ul>
+  <li>Example of an auxiliary in a transitive sentence (auxiliary lemma <em>ukan</em>/<em>to have</em>):</li>
+</ul>
 
-* Example of an auxiliary in a transitive sentence (auxiliary lemma *ukan*/*to have*):
+<p><em>Eztabaida handia sortu <strong>du</strong> aldaketak .</em></p>
 
-*Eztabaida handia sortu **du** aldaketak .*
+<p><em>The change <strong>has</strong> caused a huge discussion .</em></p>
 
-*The change **has** caused a huge discussion .* 
-
-~~~ sdparse
-Eztabaida handia sortu du aldaketak .\n Discussion huge_a caused has change_the .  
+<pre><code class="language-sdparse">Eztabaida handia sortu du aldaketak .\n Discussion huge_a caused has change_the .  
 
 amod(Eztabaida-1, handia-2)
 nobj(sortu-3, Eztabaida-1)
 aux(sortu-3, du-4)
 nsubj(sortu-3, aldaketak-5)
 punct(sortu-3, .-6)
-~~~
+</code></pre>
 
 
 	</div>
@@ -603,8 +585,8 @@ punct(sortu-3, .-6)
 	<h2><code property="oliasystem:hasTag" lang="">auxpass</code>: <div property="rdfs:label">passive auxiliary</div></h2>
 	<div property="rdfs:comment">
 
-This document is a placeholder for the language-specific documentation
-for `auxpass`.
+<p>This document is a placeholder for the language-specific documentation
+for <code>auxpass</code>.</p>
 
 
 	</div>
@@ -618,8 +600,8 @@ for `auxpass`.
 	<h2><code property="oliasystem:hasTag" lang="">case</code>: <div property="rdfs:label">case marking</div></h2>
 	<div property="rdfs:comment">
 
-This document is a placeholder for the language-specific documentation
-for `case`.
+<p>This document is a placeholder for the language-specific documentation
+for <code>case</code>.</p>
 
 
 	</div>
@@ -633,16 +615,15 @@ for `case`.
 	<h2><code property="oliasystem:hasTag" lang="">cc</code>: <div property="rdfs:label">coordinating conjunction</div></h2>
 	<div property="rdfs:comment">
 
-`cc` relation is used to annotate the relation between the conjunction complementizer and the head of the coordination structure.
+<p><code>cc</code> relation is used to annotate the relation between the conjunction complementizer and the head of the coordination structure.</p>
 
-Coordination in the Basque UD annotation follows the general schema where the first element of the conjunction is the head, and each conjunct, conjunction complementizer or puntuation mark acting as a conjunction should be attached to the first conjunct::
+<p>Coordination in the Basque UD annotation follows the general schema where the first element of the conjunction is the head, and each conjunct, conjunction complementizer or puntuation mark acting as a conjunction should be attached to the first conjunct::</p>
 
-***Zidane, Henry, Barthez, Deschamps, Blanc eta enparauek** Europako Talde sendoena osatzen dute aditu gehienentzat .*
+<p><em><strong>Zidane, Henry, Barthez, Deschamps, Blanc eta enparauek</strong> Europako Talde sendoena osatzen dute aditu gehienentzat .</em></p>
 
-***Zidane, Henry, Barthez, Deschamps, Blanc and the rest** form the most robust team of Europe according to most experts .*
+<p><em><strong>Zidane, Henry, Barthez, Deschamps, Blanc and the rest</strong> form the most robust team of Europe according to most experts .</em></p>
 
-~~~ sdparse
-Zidane, Henry, Barthez, Deschamps, Blanc eta enparauek Europako Talde sendoena osatzen dute aditu gehienentzat . \n Zidane, Henry, Barthez, Deschamps, Blanc and rest_the Europe_of team robust_the_most experts most_according_to .
+<pre><code class="language-sdparse">Zidane, Henry, Barthez, Deschamps, Blanc eta enparauek Europako Talde sendoena osatzen dute aditu gehienentzat . \n Zidane, Henry, Barthez, Deschamps, Blanc and rest_the Europe_of team robust_the_most experts most_according_to .
 
 Zidane , Henry , Barthez , Deschamps , Blanc eta enparauek Europako talde sendoena osatzen dute aditu gehienentzat .
 punct(Zidane-1, ,-2)
@@ -662,9 +643,9 @@ aux(osatzen-15, dute-16)
 nmod(osatzen-15, aditu-17)
 det(aditu-17, gehienentzat-18)
 punct(osatzen-15, .-19)
-~~~ 
+</code></pre>
 
-Note that it is the last conjunct the element showing the ergative case. The ergative case corresponds to subjects of transitive verbs. In this case *to form*
+<p>Note that it is the last conjunct the element showing the ergative case. The ergative case corresponds to subjects of transitive verbs. In this case <em>to form</em></p>
 
 
 	</div>
@@ -678,14 +659,13 @@ Note that it is the last conjunct the element showing the ergative case. The erg
 	<h2><code property="oliasystem:hasTag" lang="">ccomp</code>: <div property="rdfs:label">clausal complement</div></h2>
 	<div property="rdfs:comment">
 
-A clausal complement of a verb or adjective (`ccomp`) is a dependent clause which is a core argument, that is, it functions like an object of the verb, or adjective. Such clausal complements need to be finite (the relation that corresponds to non finite clausal complements is xcomp).
+<p>A clausal complement of a verb or adjective (<code>ccomp</code>) is a dependent clause which is a core argument, that is, it functions like an object of the verb, or adjective. Such clausal complements need to be finite (the relation that corresponds to non finite clausal complements is xcomp).</p>
 
-*Arazoa da ez **daudela** instituzioak arau horiek **betetzen** diren bermatzeko .*
+<p><em>Arazoa da ez <strong>daudela</strong> instituzioak arau horiek <strong>betetzen</strong> diren bermatzeko .</em></p>
 
-*The problem is **that** there are not institutions to guarantee **whether** those rules are observed .*
- 
-~~~ sdparse
-Arazoa da ez daudela instituzioak arau horiek betetzen diren bermatzeko . \n Problem_the is not there_are_that institutions rules those are_observed_whether to_guarantee .
+<p><em>The problem is <strong>that</strong> there are not institutions to guarantee <strong>whether</strong> those rules are observed .</em></p>
+
+<pre><code class="language-sdparse">Arazoa da ez daudela instituzioak arau horiek betetzen diren bermatzeko . \n Problem_the is not there_are_that institutions rules those are_observed_whether to_guarantee .
 
 nsubj(da-2, Arazoa-1)
 neg(daudela-4, ez-3)
@@ -697,7 +677,7 @@ aux(betetzen-8, diren-9)
 ccomp(bermatzeko-10, betetzen-8)
 advcl(daudela-4, bermatzeko-10)
 punct(da-2, .-11)
-~~~
+</code></pre>
 
 
 
@@ -712,14 +692,13 @@ punct(da-2, .-11)
 	<h2><code property="oliasystem:hasTag" lang="">compound</code>: <div property="rdfs:label">compound</div></h2>
 	<div property="rdfs:comment">
 
-`compound` is one of the three relations in UD for compounding. It is used for noun compounds (e.g., *phone book*), but also for verb and adjective compounds as well as for “phrasal verb” constructions (e.g., *throw up*), which in Basque are expressions such as *gora egin* (*go up*), for example:
+<p><code>compound</code> is one of the three relations in UD for compounding. It is used for noun compounds (e.g., <em>phone book</em>), but also for verb and adjective compounds as well as for “phrasal verb” constructions (e.g., <em>throw up</em>), which in Basque are expressions such as <em>gora egin</em> (<em>go up</em>), for example:</p>
 
-*Kazetariak aztoratuta ibili ziren atzo **Euskadi Fundazioak** Derion duen egoitzaren atarian .*
+<p><em>Kazetariak aztoratuta ibili ziren atzo <strong>Euskadi Fundazioak</strong> Derion duen egoitzaren atarian .</em></p>
 
-*Journalists were rowdy yesterday in the entrace of the officce that **Euskadi Foundation** has in Derio .* 
+<p><em>Journalists were rowdy yesterday in the entrace of the officce that <strong>Euskadi Foundation</strong> has in Derio .</em></p>
 
-~~~ sdparse
-Kazetariak aztoratuta ibili ziren atzo Euskadi Fundazioak Derion duen egoitzaren atarian .\n Journalists rowdy were yesterday Euskadi Foundation Derio_in has_that officce_of entrace_the_in . 
+<pre><code class="language-sdparse">Kazetariak aztoratuta ibili ziren atzo Euskadi Fundazioak Derion duen egoitzaren atarian .\n Journalists rowdy were yesterday Euskadi Foundation Derio_in has_that officce_of entrace_the_in . 
 
 nsubj(aztoratuta-2, Kazetariak-1)
 cop(aztoratuta-2, ibili-3)
@@ -732,14 +711,13 @@ acl(egoitzaren-10, duen-9)
 nmod(atarian-11, egoitzaren-10)
 nmo(ibili-3, atarian-11)
 punct(ibili-3, .-12)
-~~~
+</code></pre>
 
-***Izan ere** zerbait gehiago behar da nirekin bukatzeko .*
+<p><em><strong>Izan ere</strong> zerbait gehiago behar da nirekin bukatzeko .</em></p>
 
-***In fact** something esle is needed in order to end with me .* 
+<p><em><strong>In fact</strong> something esle is needed in order to end with me .</em></p>
 
-~~~ sdparse
-Izan ere zerbait gehiago behar da nirekin bukatzeko . \n In fact something esle needed is me_with end_in_order_to  . 
+<pre><code class="language-sdparse">Izan ere zerbait gehiago behar da nirekin bukatzeko . \n In fact something esle needed is me_with end_in_order_to  . 
 
 compound(ere-2, Izan-1)
 nmod(da-6, ere-2)
@@ -749,7 +727,7 @@ compound(da-6, behar-5)
 nmod(bukatzeko-8, nirekin-7)
 advcl(da-6, bukatzeko-8)
 punct(da-6, .-)
-~~~
+</code></pre>
 
 
 	</div>
@@ -763,17 +741,15 @@ punct(da-6, .-)
 	<h2><code property="oliasystem:hasTag" lang="">conj</code>: <div property="rdfs:label">conjunct</div></h2>
 	<div property="rdfs:comment">
 
-`conj` relation is used to annotate the different conjuncts in a coordination structure.
+<p><code>conj</code> relation is used to annotate the different conjuncts in a coordination structure.</p>
 
-Coordination in the Basque UD annotation follows the general schema where the first element of the conjunction is the head, and each conjunct, conjunction complementizer or puntuation mark acting as a conjunction should be attached to the first conjunct:
+<p>Coordination in the Basque UD annotation follows the general schema where the first element of the conjunction is the head, and each conjunct, conjunction complementizer or puntuation mark acting as a conjunction should be attached to the first conjunct:</p>
 
-***Zidane, Henry, Barthez, Deschamps, Blanc eta enparauek** Europako Talde sendoena osatzen dute aditu gehienentzat .*
+<p><em><strong>Zidane, Henry, Barthez, Deschamps, Blanc eta enparauek</strong> Europako Talde sendoena osatzen dute aditu gehienentzat .</em></p>
 
-***Zidane, Henry, Barthez, Deschamps, Blanc and the rest** form the most robust team of Europe according to most experts .*
+<p><em><strong>Zidane, Henry, Barthez, Deschamps, Blanc and the rest</strong> form the most robust team of Europe according to most experts .</em></p>
 
-
-~~~ sdparse
-Zidane, Henry, Barthez, Deschamps, Blanc eta enparauek Europako Talde sendoena osatzen dute aditu gehienentzat . \n Zidane, Henry, Barthez, Deschamps, Blanc and rest_the Europe_of team robust_the_most experts most_according_to .
+<pre><code class="language-sdparse">Zidane, Henry, Barthez, Deschamps, Blanc eta enparauek Europako Talde sendoena osatzen dute aditu gehienentzat . \n Zidane, Henry, Barthez, Deschamps, Blanc and rest_the Europe_of team robust_the_most experts most_according_to .
 
 Zidane , Henry , Barthez , Deschamps , Blanc eta enparauek Europako talde sendoena osatzen dute aditu gehienentzat .
 punct(Zidane-1, ,-2)
@@ -793,7 +769,7 @@ aux(osatzen-15, dute-16)
 nmod(osatzen-15, aditu-17)
 det(aditu-17, gehienentzat-18)
 punct(osatzen-15, .-19)
-~~~ 
+</code></pre>
 
 
 
@@ -808,35 +784,32 @@ punct(osatzen-15, .-19)
 	<h2><code property="oliasystem:hasTag" lang="">cop</code>: <div property="rdfs:label">copula</div></h2>
 	<div property="rdfs:comment">
 
-The `cop` relation is used with copulative verbs. The main difference between the general UD schema and the Basque annotation follows form the fact that English *to be* corresponds to several  in Basque verbs. More precisely, *izan* (to be), *egon* (to be), *ukan* (to have), *geratu* (to stay keep), *ibili* (to be).
+<p>The <code>cop</code> relation is used with copulative verbs. The main difference between the general UD schema and the Basque annotation follows form the fact that English <em>to be</em> corresponds to several  in Basque verbs. More precisely, <em>izan</em> (to be), <em>egon</em> (to be), <em>ukan</em> (to have), <em>geratu</em> (to stay keep), <em>ibili</em> (to be).</p>
 
-*Eizagirre **izan** zen onena Galarretan .* 
+<p><em>Eizagirre <strong>izan</strong> zen onena Galarretan .</em></p>
 
-*Eizagirre **was** the best one in Galarreta .*
+<p><em>Eizagirre <strong>was</strong> the best one in Galarreta .</em></p>
 
-~~~ sdparse
-Eizagirre izan zen onena Galarretan . \n Eizagirre was one_best_the Galarreta_in . 
+<pre><code class="language-sdparse">Eizagirre izan zen onena Galarretan . \n Eizagirre was one_best_the Galarreta_in . 
 
 nsubj(onena-4, Eizagirre-1)
 cop(onena-4, izan-2)
 aux(izan-2, zen-3)
 nmod(izan-2, Galarretan-5)
 punct(onena-4, .-6)
-~~~
+</code></pre>
 
+<p><em>Beti ito beldur <strong>nabil</strong> .</em></p>
 
-*Beti ito beldur **nabil** .*
+<p><em>I <strong>am</strong> always scared to drown .</em></p>
 
-*I **am** always scared to drown .* 
-
-~~~ sdparse
-Beti ito beldur nabil . \n always to_drown scared I_am. 
+<pre><code class="language-sdparse">Beti ito beldur nabil . \n always to_drown scared I_am. 
 
 advmod(nabil-4, Beti-1)
 advcl(nabil-4, ito-2)
 cop(beldur-3, nabil-4)
 punct(beldur-3, .-5)
-~~~
+</code></pre>
 
 
 	</div>
@@ -850,28 +823,25 @@ punct(beldur-3, .-5)
 	<h2><code property="oliasystem:hasTag" lang="">csubj</code>: <div property="rdfs:label">clausal subject</div></h2>
 	<div property="rdfs:comment">
 
-A clausal subject (`csubj`) is a clausal syntactic subject of a clause, i.e., the subject is itself a clause. The governor of this relation might not always be a verb: when the verb is a copular verb, the root of the clause is the complement of the copular verb. The dependent is the main lexical verb or other predicate of the subject clause. 
+<p>A clausal subject (<code>csubj</code>) is a clausal syntactic subject of a clause, i.e., the subject is itself a clause. The governor of this relation might not always be a verb: when the verb is a copular verb, the root of the clause is the complement of the copular verb. The dependent is the main lexical verb or other predicate of the subject clause.</p>
 
-*Orain ezinezkoa da **engainatzea** .*
+<p><em>Orain ezinezkoa da <strong>engainatzea</strong> .</em></p>
 
-*It is now impossible **to deceive** .*
+<p><em>It is now impossible <strong>to deceive</strong> .</em></p>
 
-~~~ sdparse
-Orain ezinezkoa da engainatzea .\n Now impossible is to_deceive 
+<pre><code class="language-sdparse">Orain ezinezkoa da engainatzea .\n Now impossible is to_deceive 
 
 advmod(da-3, Orain-1)
 cop(ezinezkoa-2, da-3)
 csubj(ezinezkoa-2,engainatzea)
 punct(ezinezkoa-2, .-5)
-~~~
+</code></pre>
 
+<p><em>Hemen inor etxekotzat <strong>hartzea</strong> zail egiten da .</em></p>
 
-*Hemen inor etxekotzat **hartzea** zail egiten da .*
+<p><em>Here it is difficult <strong>to take</strong> someone as relative .</em></p>
 
-*Here it is difficult **to take** someone as relative .*
-
-~~~ sdparse
-Hemen inor etxekotzat hartzea zail egiten da .\n Here someone relative_as to_take difficult is .
+<pre><code class="language-sdparse">Hemen inor etxekotzat hartzea zail egiten da .\n Here someone relative_as to_take difficult is .
 
 adv(egiten-6, Hemen-1)
 dobj(hartzea-4,inor-2)
@@ -879,7 +849,7 @@ xcomp(hartzea-4, etxekotzat-3)
 xcomp(egiten-6, zail-5)
 aux(egiten-6, da-7)
 punct(egiten-6, .-8)
-~~~
+</code></pre>
 
 
 	</div>
@@ -893,8 +863,8 @@ punct(egiten-6, .-8)
 	<h2><code property="oliasystem:hasTag" lang="">csubjpass</code>: <div property="rdfs:label">clausal passive subject</div></h2>
 	<div property="rdfs:comment">
 
-This document is a placeholder for the language-specific documentation
-for `csubjpass`.
+<p>This document is a placeholder for the language-specific documentation
+for <code>csubjpass</code>.</p>
 
 
 	</div>
@@ -908,8 +878,8 @@ for `csubjpass`.
 	<h2><code property="oliasystem:hasTag" lang="">dep</code>: <div property="rdfs:label">unspecified dependency</div></h2>
 	<div property="rdfs:comment">
 
-This document is a placeholder for the language-specific documentation
-for `dep`.
+<p>This document is a placeholder for the language-specific documentation
+for <code>dep</code>.</p>
 
 
 	</div>
@@ -923,20 +893,21 @@ for `dep`.
 	<h2><code property="oliasystem:hasTag" lang="">det</code>: <div property="rdfs:label">determiner</div></h2>
 	<div property="rdfs:comment">
 
-The relation determiner (`det`) holds between a nominal head and its
+<p>The relation determiner (<code>det</code>) holds between a nominal head and its
 [determiner]. 
-Determiners are words that modify nouns or noun phrases and express the reference of the noun phrase in context. That is, a determiner may indicate whether the noun is referring to a definite or indefinite element of a class, to a closer or more distant element, to an element belonging to a specified person or thing, to a particular number or quantity, etc.
+Determiners are words that modify nouns or noun phrases and express the reference of the noun phrase in context. That is, a determiner may indicate whether the noun is referring to a definite or indefinite element of a class, to a closer or more distant element, to an element belonging to a specified person or thing, to a particular number or quantity, etc.</p>
 
-Note that cardinal numerals (one, five, hundred) are not tagged DET but nummod.
+<p>Note that cardinal numerals (one, five, hundred) are not tagged DET but nummod.</p>
 
-* Ordinal numbers are considered det in Basque:
+<ul>
+  <li>Ordinal numbers are considered det in Basque:</li>
+</ul>
 
-***Lehen** partiduan hiru puntuak eskuratzea ez da ezinbestekoa .*
+<p><em><strong>Lehen</strong> partiduan hiru puntuak eskuratzea ez da ezinbestekoa .</em></p>
 
-*To get the three points in the **first** match is not essential .*
+<p><em>To get the three points in the <strong>first</strong> match is not essential .</em></p>
 
-~~~ sdparse
-Lehen partiduan hiru puntuak eskuratzea ez da ezinbestekoa . \n First match_the_in three points_the to_get not is essential . 
+<pre><code class="language-sdparse">Lehen partiduan hiru puntuak eskuratzea ez da ezinbestekoa . \n First match_the_in three points_the to_get not is essential . 
 
 det(partiduan-2, Lehen-1)
 nmod(eskuratzea-5, partiduan-2)
@@ -946,16 +917,17 @@ neg(da-7, ez-6)
 cop(ezinbestekoa-8, da-7)
 csubj(ezinbestekoa-8, eskuratzea-5)
 punct(ezinbestekoa-8, .-9)
-~~~
+</code></pre>
 
-* Quantifiers (such as *all*, *many*, *few*...) are also tagged as det:
+<ul>
+  <li>Quantifiers (such as <em>all</em>, <em>many</em>, <em>few</em>…) are also tagged as det:</li>
+</ul>
 
-*Hortxe biltzen da mota **guztietako** jendea .*
+<p><em>Hortxe biltzen da mota <strong>guztietako</strong> jendea .</em></p>
 
-***All** kind of people are met there .*
+<p><em><strong>All</strong> kind of people are met there .</em></p>
 
-~~~ sdparse
-Hortxe biltzen da mota guztietako jendea . \n There met are kind all_of people .
+<pre><code class="language-sdparse">Hortxe biltzen da mota guztietako jendea . \n There met are kind all_of people .
 
 advmod(biltzen-2, Hortxe-1)
 aux(biltzen-2, da-3)
@@ -963,60 +935,58 @@ det(mota-4, guztietako-5)
 nmod(jendea-6, mota-4)
 ncubj(biltzen-2, jendea-6)
 punct(biltzen-2, .-7)
-~~~
+</code></pre>
 
+<p><em>Aukera <strong>asko</strong> daude .</em></p>
 
-*Aukera **asko** daude .*
+<p><em>There are <strong>many</strong> options .</em></p>
 
-*There are **many** options .*
-
-~~~ sdparse
-Aukera asko daude . \n Options many there_are .
+<pre><code class="language-sdparse">Aukera asko daude . \n Options many there_are .
 
 det(Aukera-1, asko-2)
 cop(Aukera-1, daude-3)
 punct(Aukera-1-2, .-4)
-~~~
+</code></pre>
 
+<p><em>Oso harreman <strong>gutxi</strong> dute gurekin .</em></p>
 
-*Oso harreman **gutxi** dute gurekin .* 
+<p><em>They have very <strong>few</strong> relation with us .</em></p>
 
-*They have very **few** relation with us .*
-
-~~~ sdparse
-Oso harreman gutxi dute gurekin . \n Very relation few have us_with .
+<pre><code class="language-sdparse">Oso harreman gutxi dute gurekin . \n Very relation few have us_with .
 
 advmod(harreman-2, Oso-1)
 det(harreman-2, gutxi-3)
 dobj(dute-4, harreman-2)
 nmod(dute-4, gurekin-5)
 punct(dute-4, .-6)
-~~~
+</code></pre>
 
-* Interrogative determiners:
+<ul>
+  <li>Interrogative determiners:</li>
+</ul>
 
-***Zeintzu** proiektu dituzu epe laburrera ?* 
+<p><em><strong>Zeintzu</strong> proiektu dituzu epe laburrera ?</em></p>
 
-***Which** projects do you have in the near future ?*
+<p><em><strong>Which</strong> projects do you have in the near future ?</em></p>
 
-~~~ sdparse
-Zeintzu proiektu dituzu epe laburrera ? \n Which projects do you have in the near future ?
+<pre><code class="language-sdparse">Zeintzu proiektu dituzu epe laburrera ? \n Which projects do you have in the near future ?
 
 det(proiektu-2, Zeintzu-1)
 dobj(dituzu-3, proiektu-2)
 nmod(dituzu-3, epe-4)
 amod(epe-4, laburrera-5)
 punct(dituzu-3, ?-6)
-~~~
+</code></pre>
 
-* Demonstrative determiners are also det:
+<ul>
+  <li>Demonstrative determiners are also det:</li>
+</ul>
 
-*Euroaren kotizazio **hau** azken lau asteetako altuena da .*
+<p><em>Euroaren kotizazio <strong>hau</strong> azken lau asteetako altuena da .</em></p>
 
-***This** price of the euro is the highest one in the last four weeks .*
+<p><em><strong>This</strong> price of the euro is the highest one in the last four weeks .</em></p>
 
-~~~ sdparse
-Euroaren kotizazio hau azken lau asteetako altuena da . \n Euro_the_of price this last four week_the_of highest_the is .*
+<pre><code class="language-sdparse">Euroaren kotizazio hau azken lau asteetako altuena da . \n Euro_the_of price this last four week_the_of highest_the is .*
 
 nmod(kotizazio-2, Euroaren-1)
 det(kotizazio-2, hau-3)
@@ -1026,10 +996,11 @@ nummod(asteetako-6, lau-5)
 nmod(altuena-7, asteetako-6)
 cop(altuena-7, da-8)
 punct(altuena-7, .-9)
-~~~
+</code></pre>
 
-
-* Possessive determiners, are not tagged with det but with nmod (see nmod section).  
+<ul>
+  <li>Possessive determiners, are not tagged with det but with nmod (see nmod section).</li>
+</ul>
 
 
 	</div>
@@ -1043,37 +1014,33 @@ punct(altuena-7, .-9)
 	<h2><code property="oliasystem:hasTag" lang="">discourse</code>: <div property="rdfs:label">discourse element</div></h2>
 	<div property="rdfs:comment">
 
-`discourse` is used for [interjections](u-pos/INTJ) and other discourse [particles](u-pos/PART). The guidelines of what the Penn Treebanks count as an INTJ have been followed in this case, which inlcude interjections, fillers and discourse markers.
+<p><code>discourse</code> is used for <a href="u-pos/INTJ">interjections</a> and other discourse <a href="u-pos/PART">particles</a>. The guidelines of what the Penn Treebanks count as an INTJ have been followed in this case, which inlcude interjections, fillers and discourse markers.</p>
 
+<p><em><strong>Ez</strong>, ez naiz bakarrik egoiten e !</em></p>
 
-***Ez**, ez naiz bakarrik egoiten e !*
+<p><em><strong>No</strong>, I will not be alone eh !</em></p>
 
-***No**, I will not be alone eh !*
-
-~~~ sdparse
-Ez, ez naiz bakarrik egoiten e ! \n No, I will not be alone eh !
+<pre><code class="language-sdparse">Ez, ez naiz bakarrik egoiten e ! \n No, I will not be alone eh !
 
 discourse(egoiten-6, Ez-1)
 neg(egoiten-6, ez-3)
 aux(egoiten-6, naiz-4)
 vocative(egoiten-6, e-7)
 punct(egoiten-6, !-8)
-~~~
+</code></pre>
 
+<p><em><strong>Ba</strong> ez da hori, <strong>ez</strong> .</em></p>
 
-***Ba** ez da hori, **ez** .*
+<p><em><strong>So</strong> it is not that, <strong>no</strong> .</em></p>
 
-***So** it is not that, **no** .* 
-
-~~~ sdparse
-Ba ez da hori, ez . \n So it is not that, no . 
+<pre><code class="language-sdparse">Ba ez da hori, ez . \n So it is not that, no . 
 
 discourse(da-3, Ba-1)
 neg(da-3, ez-2)
 nsubj(da-3, hori-4)
 discourse(da-3, ez-5)
 punct(da-3, .-6)
-~~~
+</code></pre>
 
 
 	</div>
@@ -1087,8 +1054,8 @@ punct(da-3, .-6)
 	<h2><code property="oliasystem:hasTag" lang="">dislocated</code>: <div property="rdfs:label">dislocated elements</div></h2>
 	<div property="rdfs:comment">
 
-This document is a placeholder for the language-specific documentation
-for `dislocated`.
+<p>This document is a placeholder for the language-specific documentation
+for <code>dislocated</code>.</p>
 
 
 	</div>
@@ -1102,14 +1069,13 @@ for `dislocated`.
 	<h2><code property="oliasystem:hasTag" lang="">dobj</code>: <div property="rdfs:label">direct object</div></h2>
 	<div property="rdfs:comment">
 
-The direct object (`dobj`) of a verb is the noun phrase that denotes the entity acted upon. Basque is a morphologically ergative language , and the direct object is always marked with the absolutive case. 
+<p>The direct object (<code>dobj</code>) of a verb is the noun phrase that denotes the entity acted upon. Basque is a morphologically ergative language , and the direct object is always marked with the absolutive case.</p>
 
-*Euskal	gizarteak **Konstituzioa** errefusatu zuela oroitarazi zuen .*
+<p><em>Euskal	gizarteak <strong>Konstituzioa</strong> errefusatu zuela oroitarazi zuen .</em></p>
 
-*(He/she) reminded that Basque society refused the **Constitution** .*
+<p><em>(He/she) reminded that Basque society refused the <strong>Constitution</strong> .</em></p>
 
-~~~ sdparse
-Euskal gizarteak Konstituzioa errefusatu zuela oroitarazi zuen .\n Basque society Constitution_the refused_that reminded . 
+<pre><code class="language-sdparse">Euskal gizarteak Konstituzioa errefusatu zuela oroitarazi zuen .\n Basque society Constitution_the refused_that reminded . 
 
 nmod(Euskal-1, gizarteak-2)
 nsubj(errefusatu-4, gizarteak-2)
@@ -1118,8 +1084,7 @@ aux(errefusatu-4, zuela-5)
 ccomp(oroitarazi-6,errefusatu-4)
 aux(oroitarazi-6, zuen-7)
 punct(oroitarazi-6, .-8)
-~~~
-
+</code></pre>
 
 
 
@@ -1134,8 +1099,8 @@ punct(oroitarazi-6, .-8)
 	<h2><code property="oliasystem:hasTag" lang="">expl</code>: <div property="rdfs:label">expletive</div></h2>
 	<div property="rdfs:comment">
 
-This document is a placeholder for the language-specific documentation
-for `expl`.
+<p>This document is a placeholder for the language-specific documentation
+for <code>expl</code>.</p>
 
 
 	</div>
@@ -1149,8 +1114,8 @@ for `expl`.
 	<h2><code property="oliasystem:hasTag" lang="">foreign</code>: <div property="rdfs:label">foreign words</div></h2>
 	<div property="rdfs:comment">
 
-This document is a placeholder for the language-specific documentation
-for `foreign`.
+<p>This document is a placeholder for the language-specific documentation
+for <code>foreign</code>.</p>
 
 
 	</div>
@@ -1164,8 +1129,8 @@ for `foreign`.
 	<h2><code property="oliasystem:hasTag" lang="">goeswith</code>: <div property="rdfs:label">goes with</div></h2>
 	<div property="rdfs:comment">
 
-This document is a placeholder for the language-specific documentation
-for `goeswith`.
+<p>This document is a placeholder for the language-specific documentation
+for <code>goeswith</code>.</p>
 
 
 	</div>
@@ -1179,14 +1144,13 @@ for `goeswith`.
 	<h2><code property="oliasystem:hasTag" lang="">iobj</code>: <div property="rdfs:label">indirect object</div></h2>
 	<div property="rdfs:comment">
 
-The indirect object (`iobj`) of a verb is any nominal phrase that is a core argument of the verb but is not its subject or direct object. As Basque is a language that distinguishes morphological cases, the indirect object is marked by the dative case. 
+<p>The indirect object (<code>iobj</code>) of a verb is any nominal phrase that is a core argument of the verb but is not its subject or direct object. As Basque is a language that distinguishes morphological cases, the indirect object is marked by the dative case.</p>
 
-***Ikasleei** esan zien arratsaldean ikasi behar zutela .* 
+<p><em><strong>Ikasleei</strong> esan zien arratsaldean ikasi behar zutela .</em></p>
 
-*(He/she told **the students** that they needed to study in the evening .*
+<p><em>(He/she told <strong>the students</strong> that they needed to study in the evening .</em></p>
 
-~~~ sdparse
-Ikasleei esan zien arratsaldean ikasi behar zutela .\n Students_the_to told evening_the_in to_study needed_that
+<pre><code class="language-sdparse">Ikasleei esan zien arratsaldean ikasi behar zutela .\n Students_the_to told evening_the_in to_study needed_that
 
 iobj(esan-2, Ikasleei-1)
 aux(esan-2, zien-3)
@@ -1194,15 +1158,13 @@ nmod(esan-2, arratsaldean-4)
 xcomp(behar_zutela-6, ikasi-5)
 ccomp(esan-2, behar_zutela-6)
 punct(esan-2, .-8)
-~~~
+</code></pre>
 
+<p><em>Ahalegin haundia egin du <strong>guri</strong> geografia irakasten .</em></p>
 
-*Ahalegin haundia egin du **guri** geografia irakasten .* 
+<p><em>(He/she) has made a great effort teaching <strong>us</strong> geography .</em></p>
 
-*(He/she) has made a great effort teaching **us** geography .*
-
-~~~ sdparse
-Ahalegin haundia egin du guri geografia irakasten .\n  Effort great_a made has us geography teaching . 
+<pre><code class="language-sdparse">Ahalegin haundia egin du guri geografia irakasten .\n  Effort great_a made has us geography teaching . 
 
 amod(Ahalegin-1, haundia-2)
 dobj(egin-3, Ahalegin-1)
@@ -1211,15 +1173,13 @@ advcl(egin-3, irakasten-7)
 dobj(irakasten-7, geografia-6)
 iobj(irakasten-7, guri-5)
 punct(egin-3, .-8)
-~~~
+</code></pre>
 
+<p><em>Djukanovicek aldaketa handia eman dio bere <strong>ildo</strong> politikoari .</em></p>
 
-*Djukanovicek aldaketa handia eman dio bere **ildo** politikoari .*
+<p><em>Djukanovic has given a big change to his political <strong>course</strong> .</em></p>
 
-*Djukanovic has given a big change to his political **course** .*
-
-~~~ sdparse
-Djukanovicek aldaketa handia eman dio bere ildo politikoari .\n Djukanovic change big_a given has his course political_to .
+<pre><code class="language-sdparse">Djukanovicek aldaketa handia eman dio bere ildo politikoari .\n Djukanovic change big_a given has his course political_to .
 
 nsubj(eman-4, Djukanovicek-1)
 dobj(eman-4, aldaketa-2)
@@ -1229,7 +1189,7 @@ nmod(ildo-7, bere-6)
 amod(ildo-7, politikoari-8)
 iobj(eman-4, ildo-7)
 punct(eman-4, .-9)
-~~~
+</code></pre>
 
 
 	</div>
@@ -1243,8 +1203,8 @@ punct(eman-4, .-9)
 	<h2><code property="oliasystem:hasTag" lang="">list</code>: <div property="rdfs:label">list</div></h2>
 	<div property="rdfs:comment">
 
-This document is a placeholder for the language-specific documentation
-for `list`.
+<p>This document is a placeholder for the language-specific documentation
+for <code>list</code>.</p>
 
 
 	</div>
@@ -1258,33 +1218,29 @@ for `list`.
 	<h2><code property="oliasystem:hasTag" lang="">mark</code>: <div property="rdfs:label">marker</div></h2>
 	<div property="rdfs:comment">
 
-This document is a placeholder for the language-specific documentation
-for `mark`.
+<p>This document is a placeholder for the language-specific documentation
+for <code>mark</code>.</p>
 
-A marker is the word introducing a finite or non-finite clause subordinate to another clause. The tag  `mark` in related to dependent of the subordinate clause head. Although in some languages such as English it is used in [complement clauses](ccomp) or [adverbial clauses](advcl), in Basque, in those cases, we do not need the marker, since being an agglutinative language those marks are suffixed to words. 
+<p>A marker is the word introducing a finite or non-finite clause subordinate to another clause. The tag  <code>mark</code> in related to dependent of the subordinate clause head. Although in some languages such as English it is used in <a href="ccomp">complement clauses</a> or <a href="advcl">adverbial clauses</a>, in Basque, in those cases, we do not need the marker, since being an agglutinative language those marks are suffixed to words.</p>
 
-*neskak solasa hausnartzen zuen **bitartean** .* 
+<p><em>neskak solasa hausnartzen zuen <strong>bitartean</strong> .</em></p>
 
-***while** the girl was thinking about the conversation .*
+<p><em><strong>while</strong> the girl was thinking about the conversation .</em></p>
 
-~~~ sdparse
-neskak solasa hausnartzen zuen bitartean . \n girl_the conversation_the thinking_about while . 
+<pre><code class="language-sdparse">neskak solasa hausnartzen zuen bitartean . \n girl_the conversation_the thinking_about while . 
 
 nsubj(hausnartzen-3, neskak-1)
 dobj(hausnartzen-3, solasa-2)
 aux(hausnartzen-3, zuen-4)
 mark(hausnartzen-3, bitartean-5)
 punct(hausnartzen-3, .-6)
-~~~
+</code></pre>
 
+<p><em>Orio eta Castro garaipena lortzeko hautagaiak ziren <strong>arren</strong>, maila makala erakutsi zuten estropada hasieratik .</em></p>
 
-*Orio eta Castro garaipena lortzeko hautagaiak ziren **arren**, maila makala erakutsi zuten estropada hasieratik .*
+<p><em><strong>Although</strong> Orio and Castro were the candidates to obtain the victory, they showed a low level from the beginning of the regatta .</em></p>
 
-***Although** Orio and Castro were the candidates to obtain the victory, they showed a low level from the beginning of the regatta .*
-
-
-~~~ sdparse
-Orio eta Castro garaipena lortzeko hautagaiak ziren arren, maila makala erakutsi zuten estropada hasieratik . \n  Orio and Castro victory_the obtain_to candidates_the were Although, level low_a showed regata_the_of beginning_the_from  . 
+<pre><code class="language-sdparse">Orio eta Castro garaipena lortzeko hautagaiak ziren arren, maila makala erakutsi zuten estropada hasieratik . \n  Orio and Castro victory_the obtain_to candidates_the were Although, level low_a showed regata_the_of beginning_the_from  . 
 
 nsubj(hautagaiak-6, Orio-1)
 cc(Orio-1, eta-2)
@@ -1300,16 +1256,13 @@ aux(erakutsi-12, zuten-13)
 nmod(hasieratik-15, estropada-14)
 nmod(erakutsi-12, hasieratik-15)
 punct(erakutsi-12, .-16)
-~~~
+</code></pre>
 
+<p><em>ez dugu hemen azalduko, Mirande eta Kristautasuna saioan egina dago <strong>eta</strong> gehienbat .</em></p>
 
-*ez dugu hemen azalduko, Mirande eta Kristautasuna saioan egina dago **eta** gehienbat .* 
+<p><em>We will not show it here, mainly <strong>because</strong> it is done in the session Mirande and Cristianity .</em></p>
 
-*We will not show it here, mainly **because** it is done in the session Mirande and Cristianity .* 
-
-
-~~~ sdparse
-ez dugu hemen azalduko, Mirande eta Kristautasuna saioan egina dago eta gehienbat . \nWe will not show it here, mainly because it is done in the session Mirande and Cristianity . 
+<pre><code class="language-sdparse">ez dugu hemen azalduko, Mirande eta Kristautasuna saioan egina dago eta gehienbat . \nWe will not show it here, mainly because it is done in the session Mirande and Cristianity . 
 
 neg(azalduko-4, ez-1)
 aux(azalduko-4, dugu-2)
@@ -1323,7 +1276,7 @@ cop(egina-9, dago-10)
 mark(dago-10, eta-11)
 advmod(dago-10, gehienbat-12)
 punct(azalduko-4, .-13)
-~~~
+</code></pre>
 
 
 
@@ -1338,14 +1291,13 @@ punct(azalduko-4, .-13)
 	<h2><code property="oliasystem:hasTag" lang="">mwe</code>: <div property="rdfs:label">multi-word expression</div></h2>
 	<div property="rdfs:comment">
 
-`mwe`, the multi-word expression (modifier) relation, is one of the three relations (compound, mwe, name) for compounding. It is used for certain fixed grammaticized expressions that behave like function words or short adverbials.
+<p><code>mwe</code>, the multi-word expression (modifier) relation, is one of the three relations (compound, mwe, name) for compounding. It is used for certain fixed grammaticized expressions that behave like function words or short adverbials.</p>
 
-*Eskolatik irten ondoren, beste hainbat gauza ikasten dituzte, **besteak beste** pianoa eta artea .*
+<p><em>Eskolatik irten ondoren, beste hainbat gauza ikasten dituzte, <strong>besteak beste</strong> pianoa eta artea .</em></p>
 
-*After leaving school, he/she learns some other things, **among others** piano and art .*
+<p><em>After leaving school, he/she learns some other things, <strong>among others</strong> piano and art .</em></p>
 
-~~~ sdparse
-Eskolatik irten ondoren, beste hainbat gauza ikasten dituzte, besteak beste pianoa eta artea . \n After leaving school, he/she also learns some other things, among others piano and art .
+<pre><code class="language-sdparse">Eskolatik irten ondoren, beste hainbat gauza ikasten dituzte, besteak beste pianoa eta artea . \n After leaving school, he/she also learns some other things, among others piano and art .
 
 nmod(irten-2, Eskolatik-1)
 advcl(ikasten-7, irten-2)
@@ -1360,15 +1312,13 @@ conj(beste-10, pianoa-11)
 cc(pianoa-11, eta-12)
 conj(pianoa-11, artea-13)
 punct(besteak-9, .-14)
-~~~
+</code></pre>
 
+<p><em>Hakkinen baino sendoago ari da, <strong>argi eta garbi</strong> .</em></p>
 
-*Hakkinen baino sendoago ari da, **argi eta garbi** .* 
+<p><em>He/she is stronger than Hakkinen, <strong>as clear as water</strong> .</em></p>
 
-*He/she is stronger than Hakkinen, **as clear as water** .*
-
-~~~ sdparse
-Hakkinen baino sendoago ari da, argi eta garbi . \n Hakkinen than stronger is, as clear as water .
+<pre><code class="language-sdparse">Hakkinen baino sendoago ari da, argi eta garbi . \n Hakkinen than stronger is, as clear as water .
 
 nsubj(baino-2, Hakkinen-1)
 advmod(da-5, baino-2)
@@ -1378,10 +1328,7 @@ advmod(da-5, argi-6)
 mwe(argi-6, eta-7)
 mwe(argi-6, garbi-8)
 punct(sendoago-3, .-9)
-~~~
-
-
-
+</code></pre>
 
 
 
@@ -1396,16 +1343,15 @@ punct(sendoago-3, .-9)
 	<h2><code property="oliasystem:hasTag" lang="">name</code>: <div property="rdfs:label">name</div></h2>
 	<div property="rdfs:comment">
 
-`name` is one of the three relations for compounding in UD (together with [compound]() and [mwe]()). It is used for proper nouns constituted of multiple nominal elements. 
-Words joined by `name` should all be part of a minimal noun phrase; otherwise, regular syntactic relations should be used.  
-In general, names are annotated in a flat, head-initial structure, in which all words in the name modify the first one using the `name` label.
+<p><code>name</code> is one of the three relations for compounding in UD (together with <a href="">compound</a> and <a href="">mwe</a>). It is used for proper nouns constituted of multiple nominal elements. 
+Words joined by <code>name</code> should all be part of a minimal noun phrase; otherwise, regular syntactic relations should be used.<br />
+In general, names are annotated in a flat, head-initial structure, in which all words in the name modify the first one using the <code>name</code> label.</p>
 
-***Scottie Pippenek** polemika artean ekin zion norgehiagokari .*
+<p><em><strong>Scottie Pippenek</strong> polemika artean ekin zion norgehiagokari .</em></p>
 
-***Scottie Pippene** attacked to the competition among polemics .* 
+<p><em><strong>Scottie Pippene</strong> attacked to the competition among polemics .</em></p>
 
-~~~ sdparse
-Scottie Pippenek polemika artean ekin zion norgehiagokari . \n Scottie Pippene polemic among attacked competition_the_to . 
+<pre><code class="language-sdparse">Scottie Pippenek polemika artean ekin zion norgehiagokari . \n Scottie Pippene polemic among attacked competition_the_to . 
 
 nsubj(ekin-5, Scottie-1)
 name(Scottie-1, Pippenek-2)
@@ -1414,28 +1360,26 @@ case(polemika-3, artean-4)
 aux(ekin-5, zion-6)
 iobj(ekin-5, norgehiagokari-7)
 punct(ekin-5, .-8)
-~~~
+</code></pre>
 
-***Dan Eggen** gustora zegoen atzo .*
+<p><em><strong>Dan Eggen</strong> gustora zegoen atzo .</em></p>
 
-***Dan Eggen** was comfortably yesterday .*
+<p><em><strong>Dan Eggen</strong> was comfortably yesterday .</em></p>
 
-~~~ sdparse
-Dan Eggen gustora zegoen atzo . \n Dan Eggen comfortably was yesterday .
+<pre><code class="language-sdparse">Dan Eggen gustora zegoen atzo . \n Dan Eggen comfortably was yesterday .
 
 nsubj(zegoen-4, Dan-1)
 name(Dan-1, Eggen-2)
 advmod(zegoen-4, gustora-3)
 advmod(zegoen-4, atzo-5)
 punct(zegoen-4, .-6)
-~~~
+</code></pre>
 
-*Hego Koreako gobernuak **Hyundai Motor** enpresaren salmenta baimendu du .*
+<p><em>Hego Koreako gobernuak <strong>Hyundai Motor</strong> enpresaren salmenta baimendu du .</em></p>
 
-*South Korea's government has authorized the sale of **Hyundai Motor** enterprise .* 
+<p><em>South Korea’s government has authorized the sale of <strong>Hyundai Motor</strong> enterprise .</em></p>
 
-~~~ sdparse
-Hego Koreako gobernuak Hyundai Motor enpresaren salmenta baimendu du . \n South Korea's government Hyundai Motor enterprise_of sale_the authorized has . 
+<pre><code class="language-sdparse">Hego Koreako gobernuak Hyundai Motor enpresaren salmenta baimendu du . \n South Korea's government Hyundai Motor enterprise_of sale_the authorized has . 
 
 compound(Koreako-2, Hego-1)
 nmod(gobernuak-3, Koreako-2)
@@ -1446,9 +1390,7 @@ nmod(salmenta-7, enpresaren-6)
 dobj(baimendu-8, salmenta-7)
 aux(baimendu-8, du-9)
 punct(baimendu-8, .-10)
-~~~
-
-
+</code></pre>
 
 
 
@@ -1463,16 +1405,17 @@ punct(baimendu-8, .-10)
 	<h2><code property="oliasystem:hasTag" lang="">neg</code>: <div property="rdfs:label">negation modifier</div></h2>
 	<div property="rdfs:comment">
 
-The negation modifier (`neg`) is the relation between a negation word and the word it modifies. Modifiers labeled neg depend either on a noun (group “noun dependents”) or on a predicate (group “non-core dependents of clausal predicates”).
+<p>The negation modifier (<code>neg</code>) is the relation between a negation word and the word it modifies. Modifiers labeled neg depend either on a noun (group “noun dependents”) or on a predicate (group “non-core dependents of clausal predicates”).</p>
 
-* Predicate negation:
+<ul>
+  <li>Predicate negation:</li>
+</ul>
 
-***Ez** da inolako hazkunderik antzematen euskararen erabileran .*
+<p><em><strong>Ez</strong> da inolako hazkunderik antzematen euskararen erabileran .</em></p>
 
-*It has **not** perceived any growth in the use of Basque .*
+<p><em>It has <strong>not</strong> perceived any growth in the use of Basque .</em></p>
 
-~~~ sdparse
-Ez da inolako hazkunderik antzematen euskararen erabileran .\n  Not has any growth perceived Basque_of use_the_in .
+<pre><code class="language-sdparse">Ez da inolako hazkunderik antzematen euskararen erabileran .\n  Not has any growth perceived Basque_of use_the_in .
 
 neg(antzematen-5, Ez-1)
 aux(antzematen-5, da-2)
@@ -1481,38 +1424,37 @@ nsubj(antzematen-5, hazkunderik-4)
 nmod(erabileran-7, euskararen-6)
 nmod(antzematen-5, erabileran-7)
 punct(antzematen-5, .-6)
-~~~
+</code></pre>
 
-*Agian **ez** zela hain beharrezkoa .*
+<p><em>Agian <strong>ez</strong> zela hain beharrezkoa .</em></p>
 
-*That maybe it was **not** so necessary .*
+<p><em>That maybe it was <strong>not</strong> so necessary .</em></p>
 
-~~~ sdparse
-Agian ez zela hain beharrezkoa .\n  Maybe not was_that so necessary .
+<pre><code class="language-sdparse">Agian ez zela hain beharrezkoa .\n  Maybe not was_that so necessary .
 
 advmod(zela-3, Agian-1)
 neg(zela-3, ez-2)
 adv(beharrezkoa-5, hain-4)
 cop(beharrezkoa-5, zela-3)
 punct(zela-3, .-6)
-~~~
+</code></pre>
 
+<ul>
+  <li>Noun negation:</li>
+</ul>
 
-* Noun negation:
+<p><em>Gune <strong>ez</strong> hiritarretan bizi dira nagusiki .</em></p>
 
-*Gune **ez** hiritarretan bizi dira nagusiki .*
+<p><em>(They) mainly live in <strong>non</strong> urban areas .</em></p>
 
-*(They) mainly live in **non** urban areas .*
-
-~~~ sdparse
-Gune ez hiritarretan bizi_dira nagusiki .\n  Areas non_urban_in live imainly .
+<pre><code class="language-sdparse">Gune ez hiritarretan bizi_dira nagusiki .\n  Areas non_urban_in live imainly .
 
 nmod(bizi_dira-4, Gune-1)
 neg(hiritarretan-3, ez-2)
 amod(Gune-1, hiritarretan-3)
 advmod(bizi_dira-4, nagusiki-5)
 punct(bizi_dira-4, .-6)
-~~~
+</code></pre>
 
 
 
@@ -1527,16 +1469,14 @@ punct(bizi_dira-4, .-6)
 	<h2><code property="oliasystem:hasTag" lang="">nmod</code>: <div property="rdfs:label">nominal modifier</div></h2>
 	<div property="rdfs:comment">
 
-The nmod relation (`nmod`) is used for nominal modifiers. They depend either on another noun (group “noun dependents”) or on a predicate (group “non-core dependents of clausal predicates”).
-nmod is a noun (or noun phrase) functioning as a non-core (oblique) argument or adjunct. This means that it functionally corresponds to an adverbial when it attaches to a verb, adjective or other adverb. But when attaching to a noun, it corresponds to an attribute, or genitive complement.
+<p>The nmod relation (<code>nmod</code>) is used for nominal modifiers. They depend either on another noun (group “noun dependents”) or on a predicate (group “non-core dependents of clausal predicates”).
+nmod is a noun (or noun phrase) functioning as a non-core (oblique) argument or adjunct. This means that it functionally corresponds to an adverbial when it attaches to a verb, adjective or other adverb. But when attaching to a noun, it corresponds to an attribute, or genitive complement.</p>
 
+<p><em>Hegazkin <strong>txiki</strong> bat zain zegoen <strong>Findeleko</strong> <strong>aireportuan</strong> .</em></p>
 
-*Hegazkin **txiki** bat zain zegoen **Findeleko** **aireportuan** .*
+<p><em>A <strong>small</strong> plane was waiting <strong>in the airport</strong> <strong>of Findel</strong> .</em></p>
 
-*A **small** plane was waiting **in the airport** **of Findel** .*
-
-~~~ sdparse
-Hegazkin txiki bat zain zegoen Findeleko aireportuan . \n Plane small_a waiting was Findel_of airport_the_in .
+<pre><code class="language-sdparse">Hegazkin txiki bat zain zegoen Findeleko aireportuan . \n Plane small_a waiting was Findel_of airport_the_in .
 
 nmod(Hegazkin-1, txiki-2)
 nummod(Hegazkin-1, bat-3)
@@ -1545,15 +1485,13 @@ nsubj(zegoen-5, Hegazkin-1)
 nmod(aireportuan-7, Findeleko-6)
 nmod(zegoen-5, aireportuan-7)
 punct(zegoen-5, .-8)
-~~~
+</code></pre>
 
+<p><em>Partidutxoa egin zuten <strong>hamarreko</strong> bi <strong>taldetan</strong> .</em></p>
 
-*Partidutxoa egin zuten **hamarreko** bi **taldetan** .*
+<p><em>They played a match in two <strong>groups</strong> <strong>of ten</strong> .</em></p>
 
-*They played a match in two **groups** **of ten** .*
-
-~~~ sdparse
-Partidutxoa egin zuten hamarreko bi taldetan . \n Match_a played ten_of two match_in  .
+<pre><code class="language-sdparse">Partidutxoa egin zuten hamarreko bi taldetan . \n Match_a played ten_of two match_in  .
 
 dobj(egin-2, Partidutxoa)
 aux(egin-2, zuten-3)
@@ -1561,24 +1499,24 @@ nmod(taldetan-6, hamarreko-4)
 nummod(taldetan-6, bi-5)
 nmod(egin-2, taldetan-6)
 punct(egin-2, .-7)
-~~~
+</code></pre>
 
+<ul>
+  <li>Possessive determiners, are not tagged with det but with nmod.</li>
+</ul>
 
-* Possessive determiners, are not tagged with det but with nmod.
+<p><em>Hori izango da <strong>gure</strong> zigorra .</em></p>
 
-*Hori izango da **gure** zigorra .*
+<p><em>That will be our punishment .</em></p>
 
-*That will be our punishment .* 
-
-~~~ sdparse
-Hori izango da gure zigorra . \n That will be our punishment . 
+<pre><code class="language-sdparse">Hori izango da gure zigorra . \n That will be our punishment . 
 
 nsubj(zigorra-5, Hori-1)
 cop(zigorra-5, izango-2)
 aux(izango-2, da-3)
 nmod(zigorra-5, gure-4)
 punct(zigorra-5, .-6)
-~~~
+</code></pre>
 
 
 	</div>
@@ -1592,16 +1530,15 @@ punct(zigorra-5, .-6)
 	<h2><code property="oliasystem:hasTag" lang="">nsubj</code>: <div property="rdfs:label">nominal subject</div></h2>
 	<div property="rdfs:comment">
 
-The `nsubj` marks nominal subjects of the non-copular clause. Being Basque a morphologically ergative language, subjects of transitive verbs are marked with the ergative case, while subjects of intransitive verbs are marked with the absolutive case.
+<p>The <code>nsubj</code> marks nominal subjects of the non-copular clause. Being Basque a morphologically ergative language, subjects of transitive verbs are marked with the ergative case, while subjects of intransitive verbs are marked with the absolutive case.</p>
 
-Example of a subject in an intransitive sentence (ABS case):
+<p>Example of a subject in an intransitive sentence (ABS case):</p>
 
-*Bi **zati** hauek markaturik dauden tokietatik tolesten dira .*
+<p><em>Bi <strong>zati</strong> hauek markaturik dauden tokietatik tolesten dira .</em></p>
 
-*These two **parts** fold by the sites that are marked .*
+<p><em>These two <strong>parts</strong> fold by the sites that are marked .</em></p>
 
-~~~ sdparse
-Bi zati hauek markaturik dauden tokietatik tolesten dira .\n Two parts these marked are_that sites_the_by fold .
+<pre><code class="language-sdparse">Bi zati hauek markaturik dauden tokietatik tolesten dira .\n Two parts these marked are_that sites_the_by fold .
 
 det(zati-2, Bi-1)
 nsubj(tolesten-7, zati-2)
@@ -1611,44 +1548,37 @@ cop(markaturik-4, dauden-5)
 nmod(tolesten-7, tokietatik-6)
 aux(tolesten-7, dira-8)
 punct(tolesten-7, .-9)
-~~~
+</code></pre>
 
+<p>Example of a subject in a transitive sentence (ERG case):</p>
 
-Example of a subject in a transitive sentence (ERG case):
+<p><em>Eztabaida handia sortu du <strong>aldaketak</strong> .</em></p>
 
-*Eztabaida handia sortu du **aldaketak** .*
+<p><em>The <strong>change</strong> has caused a huge discussion .</em></p>
 
-*The **change** has caused a huge discussion .* 
-
-~~~ sdparse
-Eztabaida handia sortu du aldaketak .\n Discussion huge_a caused has change_the .  
+<pre><code class="language-sdparse">Eztabaida handia sortu du aldaketak .\n Discussion huge_a caused has change_the .  
 
 amod(Eztabaida-1, handia-2)
 nobj(sortu-3, Eztabaida-1)
 aux(sortu-3, du-4)
 nsubj(sortu-3, aldaketak-5)
 punct(sortu-3, .-6)
-~~~
+</code></pre>
 
+<p>Being Basque a free word order language, arguments of the verb can appear in different orders with respect to the verb.</p>
 
+<p><em><strong>Aldaketak</strong> eztabaida handia sortu du .</em></p>
 
-Being Basque a free word order language, arguments of the verb can appear in different orders with respect to the verb.
+<p><em>The <strong>change</strong> has caused a huge discussion .</em></p>
 
-***Aldaketak** eztabaida handia sortu du .*
-
-*The **change** has caused a huge discussion .*
-
-~~~ sdparse
-Aldaketak eztabaida handia sortu du .\n Change_the discussion huge_a caused has .
+<pre><code class="language-sdparse">Aldaketak eztabaida handia sortu du .\n Change_the discussion huge_a caused has .
 
 nsubj(sortu-4, Aldaketak-1)
 amod(eztabaida-2, handia-3)
 nobj(sortu-4, eztabaida-2)
 aux(sortu-4, du-5)
 punct(sortu-4, .-6)
-~~~
-
-
+</code></pre>
 
 
 
@@ -1663,8 +1593,8 @@ punct(sortu-4, .-6)
 	<h2><code property="oliasystem:hasTag" lang="">nsubjpass</code>: <div property="rdfs:label">passive nominal subject</div></h2>
 	<div property="rdfs:comment">
 
-This document is a placeholder for the language-specific documentation
-for `nsubjpass`.
+<p>This document is a placeholder for the language-specific documentation
+for <code>nsubjpass</code>.</p>
 
 
 	</div>
@@ -1678,14 +1608,13 @@ for `nsubjpass`.
 	<h2><code property="oliasystem:hasTag" lang="">nummod</code>: <div property="rdfs:label">numeric modifier</div></h2>
 	<div property="rdfs:comment">
 
-A numeric modifier of a noun (`nummod`) is any number phrase that serves to modify the meaning of the noun with a quantity.
+<p>A numeric modifier of a noun (<code>nummod</code>) is any number phrase that serves to modify the meaning of the noun with a quantity.</p>
 
-*Urrezko domina irabazi zuen atletak **23** urte ditu .* 
+<p><em>Urrezko domina irabazi zuen atletak <strong>23</strong> urte ditu .</em></p>
 
-*The athlete who won the gold medal is **23** years old .*
+<p><em>The athlete who won the gold medal is <strong>23</strong> years old .</em></p>
 
-~~~ sdparse
-Urrezko domina irabazi zuen atletak 23 urte ditu . \n Gold medal_the won_who athlete_the 23 years is .
+<pre><code class="language-sdparse">Urrezko domina irabazi zuen atletak 23 urte ditu . \n Gold medal_the won_who athlete_the 23 years is .
 
 nmod(domina-2, Urrezko-1)
 dobj(irabazi-3, domina-2)
@@ -1695,52 +1624,46 @@ nsubj(ditu-8, atletak-5)
 nummod(urte-7, 23-6)
 dobj(ditu-8, urte-7)
 punct(ditu-8, .-9)
-~~~
+</code></pre>
 
+<p><em><strong>Hiru</strong> puntuak lortu ditugu .</em></p>
 
-***Hiru** puntuak lortu ditugu .*
+<p><em>We have got the <strong>three</strong> points .</em></p>
 
-*We have got the **three** points .*
-
-~~~ sdparse
-Hiru puntuak lortu ditugu . \n Three points_the got have .
+<pre><code class="language-sdparse">Hiru puntuak lortu ditugu . \n Three points_the got have .
 
 nummod(puntuak-2, Hiru-1)
 dobj(lortu-3, puntuak-2)
 aux(lortu-3, ditugu-4)
 punct(lortu-3, .-5)
-~~~
+</code></pre>
 
+<p><em>Festa <strong>bat</strong> ospatu zuten .</em></p>
 
-*Festa **bat** ospatu zuten .*
+<p><em>They celebreated <strong>one</strong> party .</em></p>
 
-*They celebreated **one** party .*
-
-~~~ sdparse
-Festa bat ospatu zuten . \n Party one celebreated .
+<pre><code class="language-sdparse">Festa bat ospatu zuten . \n Party one celebreated .
 
 dobj(ospatu-3, Festa-1)
 nummod(Festa-1, bat-2)
 aux(ospatu-3, zuten-4)
 punct(ospatu-3, .-5)
-~~~
+</code></pre>
 
+<p><em>Saiatuko naiz <strong>bi</strong> maratoi egiten .</em></p>
 
-*Saiatuko naiz **bi** maratoi egiten .*
+<p><em>I will try to run <strong>two</strong> maratons .</em></p>
 
-*I will try to run **two** maratons .*
-
-~~~ sdparse
-Saiatuko naiz bi maratoi egiten . \n I will try to run two maratons .
+<pre><code class="language-sdparse">Saiatuko naiz bi maratoi egiten . \n I will try to run two maratons .
 
 aux(Saiatuko-1, naiz-2)
 nummod(maratoi-4, bi-3)
 dobj(egiten-5, maratoi-4)
 advcl(Saiatuko-1, egiten-5)
 punct(Saiatuko-1, .-6)
-~~~
+</code></pre>
 
-Note that indefinite quantifiers such as few, many are tagged DET rather than NUM. Therefore their relation to the quantified noun is not nummod but DET (see DET section).
+<p>Note that indefinite quantifiers such as few, many are tagged DET rather than NUM. Therefore their relation to the quantified noun is not nummod but DET (see DET section).</p>
 
 
 	</div>
@@ -1754,8 +1677,8 @@ Note that indefinite quantifiers such as few, many are tagged DET rather than NU
 	<h2><code property="oliasystem:hasTag" lang="">parataxis</code>: <div property="rdfs:label">parataxis</div></h2>
 	<div property="rdfs:comment">
 
-This document is a placeholder for the language-specific documentation
-for `parataxis`.
+<p>This document is a placeholder for the language-specific documentation
+for <code>parataxis</code>.</p>
 
 
 	</div>
@@ -1769,23 +1692,25 @@ for `parataxis`.
 	<h2><code property="oliasystem:hasTag" lang="">punct</code>: <div property="rdfs:label">punctuation</div></h2>
 	<div property="rdfs:comment">
 
-`punct` relation is used to annotate punctuation marks. 
+<p><code>punct</code> relation is used to annotate punctuation marks.</p>
 
-Two kinds of punctuations can be distinguished:
+<p>Two kinds of punctuations can be distinguished:</p>
 
-* Punctuation acting as a conjunction in coordinations
-* The rest of the punctuation marks
+<ul>
+  <li>Punctuation acting as a conjunction in coordinations</li>
+  <li>
+    <p>The rest of the punctuation marks</p>
+  </li>
+  <li>Punctuation in coordination</li>
+</ul>
 
-* Punctuation in coordination
+<p>Coordination in the Basque UD annotation follows the general schema where the first element of the conjunction is the head, and each conjunct, conjunction complementizer or puntuation mark acting as a conjunction should be attached to the first conjunct:</p>
 
-Coordination in the Basque UD annotation follows the general schema where the first element of the conjunction is the head, and each conjunct, conjunction complementizer or puntuation mark acting as a conjunction should be attached to the first conjunct:
+<p><em><strong>Zidane, Henry, Barthez, Deschamps, Blanc eta enparauek</strong> Europako Talde sendoena osatzen dute aditu gehienentzat .</em></p>
 
-***Zidane, Henry, Barthez, Deschamps, Blanc eta enparauek** Europako Talde sendoena osatzen dute aditu gehienentzat .*
+<p><em><strong>Zidane, Henry, Barthez, Deschamps, Blanc and the rest</strong> form the most robust team of Europe according to most experts .</em></p>
 
-***Zidane, Henry, Barthez, Deschamps, Blanc and the rest** form the most robust team of Europe according to most experts .*
-
-~~~ sdparse
-Zidane, Henry, Barthez, Deschamps, Blanc eta enparauek Europako Talde sendoena osatzen dute aditu gehienentzat . \n Zidane, Henry, Barthez, Deschamps, Blanc and rest_the Europe_of team robust_the_most experts most_according_to .
+<pre><code class="language-sdparse">Zidane, Henry, Barthez, Deschamps, Blanc eta enparauek Europako Talde sendoena osatzen dute aditu gehienentzat . \n Zidane, Henry, Barthez, Deschamps, Blanc and rest_the Europe_of team robust_the_most experts most_according_to .
 
 Zidane , Henry , Barthez , Deschamps , Blanc eta enparauek Europako talde sendoena osatzen dute aditu gehienentzat .
 punct(Zidane-1, ,-2)
@@ -1805,26 +1730,26 @@ aux(osatzen-15, dute-16)
 nmod(osatzen-15, aditu-17)
 det(aditu-17, gehienentzat-18)
 punct(osatzen-15, .-19)
-~~~ 
+</code></pre>
 
+<ul>
+  <li>The rest of the punctuation marks</li>
+</ul>
 
-* The rest of the punctuation marks
+<p>Full stop is linked to the head of the sentence.</p>
 
-Full stop is linked to the head of the sentence. 
+<p><em>Eztabaida handia sortu du <strong>aldaketak</strong> .</em></p>
 
-*Eztabaida handia sortu du **aldaketak** .*
+<p><em><strong>The change</strong> has caused a huge discussion .</em></p>
 
-***The change** has caused a huge discussion .* 
-
-~~~ sdparse
-Eztabaida handia sortu du aldaketak .\n Discussion huge_a caused has change_the .  
+<pre><code class="language-sdparse">Eztabaida handia sortu du aldaketak .\n Discussion huge_a caused has change_the .  
 
 amod(Eztabaida-1, handia-2)
 nobj(sortu-3, Eztabaida-1)
 aux(sortu-3, du-4)
 nsubj(sortu-3, aldaketak-5)
 punct(sortu-3, .-6)
-~~~
+</code></pre>
 
 
 	</div>
@@ -1838,8 +1763,8 @@ punct(sortu-3, .-6)
 	<h2><code property="oliasystem:hasTag" lang="">remnant</code>: <div property="rdfs:label">remnant in ellipsis</div></h2>
 	<div property="rdfs:comment">
 
-This document is a placeholder for the language-specific documentation
-for `remnant`.
+<p>This document is a placeholder for the language-specific documentation
+for <code>remnant</code>.</p>
 
 
 	</div>
@@ -1853,8 +1778,8 @@ for `remnant`.
 	<h2><code property="oliasystem:hasTag" lang="">reparandum</code>: <div property="rdfs:label">overridden disfluency</div></h2>
 	<div property="rdfs:comment">
 
-This document is a placeholder for the language-specific documentation
-for `reparandum`.
+<p>This document is a placeholder for the language-specific documentation
+for <code>reparandum</code>.</p>
 
 
 	</div>
@@ -1868,8 +1793,8 @@ for `reparandum`.
 	<h2><code property="oliasystem:hasTag" lang="">root</code>: <div property="rdfs:label">root</div></h2>
 	<div property="rdfs:comment">
 
-This document is a placeholder for the language-specific documentation
-for `root`.
+<p>This document is a placeholder for the language-specific documentation
+for <code>root</code>.</p>
 
 
 	</div>
@@ -1883,33 +1808,30 @@ for `root`.
 	<h2><code property="oliasystem:hasTag" lang="">vocative</code>: <div property="rdfs:label">vocative</div></h2>
 	<div property="rdfs:comment">
 
-The `vocative` relation is used to mark dialogue participant addressed in text (common in conversations, emails and newsgroup postings). The relation links the addressee's name to its host sentence.
+<p>The <code>vocative</code> relation is used to mark dialogue participant addressed in text (common in conversations, emails and newsgroup postings). The relation links the addressee’s name to its host sentence.</p>
 
-***Ganix**, etorri !*
+<p><em><strong>Ganix</strong>, etorri !</em></p>
 
-***Ganix**, come !*
+<p><em><strong>Ganix</strong>, come !</em></p>
 
-~~~ sdparse
-Ganix, etorri! \n Ganix, come!
+<pre><code class="language-sdparse">Ganix, etorri! \n Ganix, come!
 
 vocative(etorri-3, Ganix-1)
 punct(etorri-3, ,-2)
 punct(etorri-3, !-4)
-~~~
+</code></pre>
 
+<p><em>Nora zoaz, <strong>Kurt</strong> ?</em></p>
 
-*Nora zoaz, **Kurt** ?*
+<p><em>Where are you going, <strong>Kurt</strong> ?</em></p>
 
-*Where are you going, **Kurt** ?*
-
-~~~ sdparse
-Nora zoaz, Kurt ? \n Where you_are_going, Kurt ?
+<pre><code class="language-sdparse">Nora zoaz, Kurt ? \n Where you_are_going, Kurt ?
 
 vocative(zoaz-2, Kurt-4)
 punct(zoaz-2, ,-3)
 advmod(zoaz-2, Nora-1)
 punct(zoaz-2, ?-5)
-~~~
+</code></pre>
 
 
 	</div>
@@ -1923,15 +1845,14 @@ punct(zoaz-2, ?-5)
 	<h2><code property="oliasystem:hasTag" lang="">xcomp</code>: <div property="rdfs:label">open clausal complement</div></h2>
 	<div property="rdfs:comment">
 
-An open clausal complement (`xcomp`) of a verb or an adjective is a predicative or clausal complement without its own subject (“without its own subject” does not mean that a clause is an xcomp just because its subject is not overt). The reference of the subject is necessarily determined by an argument external to the xcomp (normally by the object of the next higher clause, if there is one, or else by the subject of the next higher clause). 
-These clauses are non-finite in Basque (although in some languages can be finite).
+<p>An open clausal complement (<code>xcomp</code>) of a verb or an adjective is a predicative or clausal complement without its own subject (“without its own subject” does not mean that a clause is an xcomp just because its subject is not overt). The reference of the subject is necessarily determined by an argument external to the xcomp (normally by the object of the next higher clause, if there is one, or else by the subject of the next higher clause). 
+These clauses are non-finite in Basque (although in some languages can be finite).</p>
 
-*Atzo entrenamendua **uztea** erabaki zuen .*
+<p><em>Atzo entrenamendua <strong>uztea</strong> erabaki zuen .</em></p>
 
-*Yesterday (he/she) decided **to leave** the training .* 
+<p><em>Yesterday (he/she) decided <strong>to leave</strong> the training .</em></p>
 
-~~~ sdparse
-Atzo entrenamendua uztea erabaki zuen .\n  Yesterday training_the to_leave decided .
+<pre><code class="language-sdparse">Atzo entrenamendua uztea erabaki zuen .\n  Yesterday training_the to_leave decided .
 
 advmod(erabaki-4, Atzo-1)
 dobj(uztea-3, entrenamendua-2)
@@ -1952,38 +1873,33 @@ nsubj(nahi_dute-2, Alkateek-1)
 xcomp(nahi_dute-2, biltzea-4)
 adv(biltzea-4, lehenbailehen-3)
 punct(nahi_dute-2, .-5)
-~~~ 
+</code></pre>
 
+<p><em>Mentalki <strong>irmo</strong> ikusi ditut haiek .</em></p>
 
-*Mentalki **irmo** ikusi ditut haiek .*
+<p><em>I have seen them mentally <strong>firm</strong> .</em></p>
 
-*I have seen them mentally **firm** .*
-
-~~~ sdparse
-Mentalki irmo ikusi ditut haiek .\n Mentally firm seen have them .
+<pre><code class="language-sdparse">Mentalki irmo ikusi ditut haiek .\n Mentally firm seen have them .
 
 adv(ikusi-3, Mentalki-1)
 xcomp(ikusi-3, irmo-2)
 aux(ikusi-3, ditut-4)
 dobj(ikusi-3, haiek-5)
 punct(ikusi-3, .-6)
-~~~ 
+</code></pre>
 
+<p><em>Madrilera ez <strong>joatea</strong> erabaki zuen .</em></p>
 
+<p><em>(He/she) decided not <strong>to go</strong> to Madrid .</em></p>
 
-*Madrilera ez **joatea** erabaki zuen .*
-
-*(He/she) decided not **to go** to Madrid .*
-
-~~~ sdparse
-Madrilera ez joatea erabaki zuen .\n  Madrid_to not to_go decided .
+<pre><code class="language-sdparse">Madrilera ez joatea erabaki zuen .\n  Madrid_to not to_go decided .
 
 nmod(joatea-3, Madrilera-1)
 neg(joatea-3, ez-2)
 xcomp(erabaki-4, joatea-3)
 aux(erabaki-4, zuen-5)
 punct(erabaki-4, .-6)
-~~~ 
+</code></pre>
 
 
 	</div>

@@ -257,17 +257,15 @@ in two places.</p>
 	<h2><code property="oliasystem:hasTag" lang="">acl</code>: <div property="rdfs:label">clausal modifier of noun</div></h2>
 	<div property="rdfs:comment">
 
-`acl` marks finite and non-finite clauses that modify a noun except for relative clauses which get the relation [acl:relcl]().
+<p><code>acl</code> marks finite and non-finite clauses that modify a noun except for relative clauses which get the relation <a href="">acl:relcl</a>.</p>
 
-~~~ sdparse
-Haben Sie den Eindruck , daß das Licht heller geworden ist ? \n Do you have the impression that the light got brighter ?
+<pre><code class="language-sdparse">Haben Sie den Eindruck , daß das Licht heller geworden ist ? \n Do you have the impression that the light got brighter ?
 acl(Eindruck, geworden)
-~~~
+</code></pre>
 
-~~~ sdparse
-Tatsächlich gibt es Bestrebungen , den Straßenverkehr sicherer zu machen . \n There are indeed efforts to make the traffic safer .
+<pre><code class="language-sdparse">Tatsächlich gibt es Bestrebungen , den Straßenverkehr sicherer zu machen . \n There are indeed efforts to make the traffic safer .
 acl(Bestrebungen, machen)
-~~~
+</code></pre>
 
 
 	</div>
@@ -281,31 +279,28 @@ acl(Bestrebungen, machen)
 	<h2><code property="oliasystem:hasTag" lang="">acl:relcl</code>: <div property="rdfs:label">relative clause modifier</div></h2>
 	<div property="rdfs:comment">
 
-A relative clause is a clause that modifies a noun. Relative clauses
+<p>A relative clause is a clause that modifies a noun. Relative clauses
 are finite and are introduced with a relative pronoun that refers back to the noun.
-`acl:relcl` is a subtype of the [acl]() relation.
+<code>acl:relcl</code> is a subtype of the <a href="">acl</a> relation.</p>
 
-~~~ sdparse
-Er legt das Buch auf den Tisch , der dort drüben steht . \n Put the book on the table that stands over there .
+<pre><code class="language-sdparse">Er legt das Buch auf den Tisch , der dort drüben steht . \n Put the book on the table that stands over there .
 acl:relcl(Tisch, steht)
 nsubj(steht, der)
-~~~
+</code></pre>
 
-~~~ sdparse
-Er stellt den Teller auf den Tisch , auf dem schon das Buch liegt . \n Put the plate on the table on which the book lies already .
+<pre><code class="language-sdparse">Er stellt den Teller auf den Tisch , auf dem schon das Buch liegt . \n Put the plate on the table on which the book lies already .
 acl:relcl(Tisch, liegt)
 nmod(liegt, dem)
-~~~
+</code></pre>
 
-Extraposed relative clauses often introduce non-projective structures.
+<p>Extraposed relative clauses often introduce non-projective structures.</p>
 
-~~~ sdparse
-Petra hat diese Frau angerufen , die er gestern getroffen hat . \n Petra called this woman who she met yesterday .
+<pre><code class="language-sdparse">Petra hat diese Frau angerufen , die er gestern getroffen hat . \n Petra called this woman who she met yesterday .
 acl:relcl(Frau, getroffen)
 dobj(angerufen, Frau)
 aux(angerufen, hat)
 nsubj(getroffen, die)
-~~~
+</code></pre>
 
 
 	</div>
@@ -319,8 +314,8 @@ nsubj(getroffen, die)
 	<h2><code property="oliasystem:hasTag" lang="">advcl</code>: <div property="rdfs:label">adverbial clause modifier</div></h2>
 	<div property="rdfs:comment">
 
-This document is a placeholder for the language-specific documentation
-for `advcl`.
+<p>This document is a placeholder for the language-specific documentation
+for <code>advcl</code>.</p>
 
 
 	</div>
@@ -334,8 +329,8 @@ for `advcl`.
 	<h2><code property="oliasystem:hasTag" lang="">advmod</code>: <div property="rdfs:label">adverbial modifier</div></h2>
 	<div property="rdfs:comment">
 
-This document is a placeholder for the language-specific documentation
-for `advmod`.
+<p>This document is a placeholder for the language-specific documentation
+for <code>advmod</code>.</p>
 
 
 	</div>
@@ -349,17 +344,15 @@ for `advmod`.
 	<h2><code property="oliasystem:hasTag" lang="">amod</code>: <div property="rdfs:label">adjectival modifier</div></h2>
 	<div property="rdfs:comment">
 
-`amod` marks adjectival modifiers that modify the meaning of a noun.
+<p><code>amod</code> marks adjectival modifiers that modify the meaning of a noun.</p>
 
-~~~ sdparse
-Er ißt rohes Fleisch . \n He eats raw meat .
+<pre><code class="language-sdparse">Er ißt rohes Fleisch . \n He eats raw meat .
 amod(Fleisch, rohes)
-~~~
+</code></pre>
 
-~~~ sdparse
-die Rheintaler Bauern \n the farmers from the Rhine valley
+<pre><code class="language-sdparse">die Rheintaler Bauern \n the farmers from the Rhine valley
 amod(Bauern, Rheintaler)
-~~~
+</code></pre>
 
 
 	</div>
@@ -373,18 +366,16 @@ amod(Bauern, Rheintaler)
 	<h2><code property="oliasystem:hasTag" lang="">appos</code>: <div property="rdfs:label">appositional modifier</div></h2>
 	<div property="rdfs:comment">
 
-`appos` marks nominal appositions to noun phrases. This includes parenthesized noun phrases and abbreviations that specify the modified noun.
+<p><code>appos</code> marks nominal appositions to noun phrases. This includes parenthesized noun phrases and abbreviations that specify the modified noun.</p>
 
-~~~ sdparse
-Die neue Senatorin für Stadtentwicklung , Traute Müller , tritt heute ihren Dienst an . \n The new senator for city development , Traute Müller , assumes her office today . 
+<pre><code class="language-sdparse">Die neue Senatorin für Stadtentwicklung , Traute Müller , tritt heute ihren Dienst an . \n The new senator for city development , Traute Müller , assumes her office today . 
 appos(Senatorin, Traute)
 name(Traute, Müller)
-~~~
+</code></pre>
 
-~~~ sdparse
-das Niedersächsische Landeskriminalamt ( LKA ) \n the Lower-Saxonian state police office ( LKA ) 
+<pre><code class="language-sdparse">das Niedersächsische Landeskriminalamt ( LKA ) \n the Lower-Saxonian state police office ( LKA ) 
 appos(Landeskriminalamt, LKA)
-~~~
+</code></pre>
 
 
 
@@ -399,8 +390,8 @@ appos(Landeskriminalamt, LKA)
 	<h2><code property="oliasystem:hasTag" lang="">aux</code>: <div property="rdfs:label">auxiliary</div></h2>
 	<div property="rdfs:comment">
 
-This document is a placeholder for the language-specific documentation
-for `aux`.
+<p>This document is a placeholder for the language-specific documentation
+for <code>aux</code>.</p>
 
 
 	</div>
@@ -414,8 +405,8 @@ for `aux`.
 	<h2><code property="oliasystem:hasTag" lang="">auxpass</code>: <div property="rdfs:label">passive auxiliary</div></h2>
 	<div property="rdfs:comment">
 
-This document is a placeholder for the language-specific documentation
-for `auxpass`.
+<p>This document is a placeholder for the language-specific documentation
+for <code>auxpass</code>.</p>
 
 
 	</div>
@@ -429,29 +420,25 @@ for `auxpass`.
 	<h2><code property="oliasystem:hasTag" lang="">case</code>: <div property="rdfs:label">case marking</div></h2>
 	<div property="rdfs:comment">
 
-`case` marks mostly prepositions in prepositional phrases. Prepositions are considered dependents of the noun whose case value they govern. The `case` relation aims at providing a uniform analysis of prepositions and case in morphologically rich languages.
+<p><code>case</code> marks mostly prepositions in prepositional phrases. Prepositions are considered dependents of the noun whose case value they govern. The <code>case</code> relation aims at providing a uniform analysis of prepositions and case in morphologically rich languages.</p>
 
-~~~ sdparse
-Sie stehen an der Straße . \n They stand on the street .
+<pre><code class="language-sdparse">Sie stehen an der Straße . \n They stand on the street .
 case(Straße, an)
-~~~
+</code></pre>
 
-~~~ sdparse
-Sie warten auf den Bus . \n They wait for the bus .
+<pre><code class="language-sdparse">Sie warten auf den Bus . \n They wait for the bus .
 case(Bus, auf)
-~~~
+</code></pre>
 
-`case` is also used to mark the comparative marker in comparative constructions that involve noun phrases, prepositional phrases, or adjectives.
+<p><code>case</code> is also used to mark the comparative marker in comparative constructions that involve noun phrases, prepositional phrases, or adjectives.</p>
 
-~~~ sdparse
-Der Bus ist schneller als die Straßenbahn . \n The bus is faster than the tram .
+<pre><code class="language-sdparse">Der Bus ist schneller als die Straßenbahn . \n The bus is faster than the tram .
 case(Straßenbahn, als)
-~~~
+</code></pre>
 
-~~~ sdparse
-Das sieht alles andere als einfach aus . \n This looks anything but simple .
+<pre><code class="language-sdparse">Das sieht alles andere als einfach aus . \n This looks anything but simple .
 case(einfach, als)
-~~~
+</code></pre>
 
 
 	</div>
@@ -465,8 +452,8 @@ case(einfach, als)
 	<h2><code property="oliasystem:hasTag" lang="">cc</code>: <div property="rdfs:label">coordinating conjunction</div></h2>
 	<div property="rdfs:comment">
 
-This document is a placeholder for the language-specific documentation
-for `cc`.
+<p>This document is a placeholder for the language-specific documentation
+for <code>cc</code>.</p>
 
 
 	</div>
@@ -480,23 +467,20 @@ for `cc`.
 	<h2><code property="oliasystem:hasTag" lang="">ccomp</code>: <div property="rdfs:label">clausal complement</div></h2>
 	<div property="rdfs:comment">
 
-`ccomp` marks clausal dependents of verbs that function like a complement of that verb. The complement clause has its own internal subject.
+<p><code>ccomp</code> marks clausal dependents of verbs that function like a complement of that verb. The complement clause has its own internal subject.</p>
 
-~~~ sdparse
-Jeder hier glaubt , daß er eine Chance hat . \n Everyone here thinks that he has a chance .
+<pre><code class="language-sdparse">Jeder hier glaubt , daß er eine Chance hat . \n Everyone here thinks that he has a chance .
 ccomp(glaubt, hat)
 nsubj(hat, er)
-~~~
+</code></pre>
 
-~~~ sdparse
-Es heißt , die Arbeiter würden streiken . \n People say the workers are on strike .
+<pre><code class="language-sdparse">Es heißt , die Arbeiter würden streiken . \n People say the workers are on strike .
 ccomp(heißt, streiken)
-~~~
+</code></pre>
 
-~~~ sdparse
-Wann kann ich mir anschauen , was du gemacht hast ? \n When will I see what you have done .
+<pre><code class="language-sdparse">Wann kann ich mir anschauen , was du gemacht hast ? \n When will I see what you have done .
 ccomp(anschauen, gemacht)
-~~~
+</code></pre>
 
 
 	</div>
@@ -510,8 +494,8 @@ ccomp(anschauen, gemacht)
 	<h2><code property="oliasystem:hasTag" lang="">compound</code>: <div property="rdfs:label">compound</div></h2>
 	<div property="rdfs:comment">
 
-This document is a placeholder for the language-specific documentation
-for `compound`.
+<p>This document is a placeholder for the language-specific documentation
+for <code>compound</code>.</p>
 
 
 	</div>
@@ -525,20 +509,18 @@ for `compound`.
 	<h2><code property="oliasystem:hasTag" lang="">compound:prt</code>: <div property="rdfs:label">separable verb particle</div></h2>
 	<div property="rdfs:comment">
 
-Depending on the clause type in German, particles and verb stems of particle verbs either stand together or separate in the sentence. `compound:prt` is used to mark the separated particles of particle verbs. It is a subtype of the [compound]() relation.
+<p>Depending on the clause type in German, particles and verb stems of particle verbs either stand together or separate in the sentence. <code>compound:prt</code> is used to mark the separated particles of particle verbs. It is a subtype of the <a href="">compound</a> relation.</p>
 
-In main clauses, particles appear in sentence-final position separate from their verb stem, which stands in second position.
+<p>In main clauses, particles appear in sentence-final position separate from their verb stem, which stands in second position.</p>
 
-~~~ sdparse
-Der Koch schlägt die Eier auf . \n The chef breaks the eggs .
+<pre><code class="language-sdparse">Der Koch schlägt die Eier auf . \n The chef breaks the eggs .
 compound:prt(schlägt, auf)
-~~~
+</code></pre>
 
-In subordinate clauses, particle verbs appear with their particles in sentence-final position. In this case, they form a single token.
+<p>In subordinate clauses, particle verbs appear with their particles in sentence-final position. In this case, they form a single token.</p>
 
-~~~ sdparse
-... , weil der Koch die Eier aufschlägt . \n ... , because the chef breaks the eggs .
-~~~
+<pre><code class="language-sdparse">... , weil der Koch die Eier aufschlägt . \n ... , because the chef breaks the eggs .
+</code></pre>
 
 
 	</div>
@@ -552,8 +534,8 @@ In subordinate clauses, particle verbs appear with their particles in sentence-f
 	<h2><code property="oliasystem:hasTag" lang="">conj</code>: <div property="rdfs:label">conjunct</div></h2>
 	<div property="rdfs:comment">
 
-This document is a placeholder for the language-specific documentation
-for `conj`.
+<p>This document is a placeholder for the language-specific documentation
+for <code>conj</code>.</p>
 
 
 	</div>
@@ -567,8 +549,8 @@ for `conj`.
 	<h2><code property="oliasystem:hasTag" lang="">cop</code>: <div property="rdfs:label">copula</div></h2>
 	<div property="rdfs:comment">
 
-This document is a placeholder for the language-specific documentation
-for `cop`.
+<p>This document is a placeholder for the language-specific documentation
+for <code>cop</code>.</p>
 
 
 	</div>
@@ -582,19 +564,17 @@ for `cop`.
 	<h2><code property="oliasystem:hasTag" lang="">csubj</code>: <div property="rdfs:label">clausal subject</div></h2>
 	<div property="rdfs:comment">
 
-`csubj` marks a clausal subject of a sentence.
+<p><code>csubj</code> marks a clausal subject of a sentence.</p>
 
-~~~ sdparse
-Aber warum nur so wenige Frauen ein Polizeipräsidium leiten , hat verschiedene Gründe . \n But why only so few women lead a police department has different reasons .
+<pre><code class="language-sdparse">Aber warum nur so wenige Frauen ein Polizeipräsidium leiten , hat verschiedene Gründe . \n But why only so few women lead a police department has different reasons .
 csubj(hat, leiten)
-~~~
+</code></pre>
 
-For copula constructions, the head of the clausal subject is the predicative complement of the copula.
+<p>For copula constructions, the head of the clausal subject is the predicative complement of the copula.</p>
 
-~~~ sdparse
-Ob dies die Unzufriedenheit zu zügeln vermag , ist zweifelhaft \n Whether this can control the unrest is dubious .
+<pre><code class="language-sdparse">Ob dies die Unzufriedenheit zu zügeln vermag , ist zweifelhaft \n Whether this can control the unrest is dubious .
 csubj(zweifelhaft, vermag)
-~~~
+</code></pre>
 
 
 
@@ -609,12 +589,11 @@ csubj(zweifelhaft, vermag)
 	<h2><code property="oliasystem:hasTag" lang="">csubjpass</code>: <div property="rdfs:label">clausal passive subject</div></h2>
 	<div property="rdfs:comment">
 
-`csubjpass` marks clausal subjects of passive clauses.
+<p><code>csubjpass</code> marks clausal subjects of passive clauses.</p>
 
-~~~ sdparse
-Hier kann nicht mehr eingeschätzt werden, wann es anfängt zu brennen . \n It cannot be estimated anymore when it starts burning .
+<pre><code class="language-sdparse">Hier kann nicht mehr eingeschätzt werden, wann es anfängt zu brennen . \n It cannot be estimated anymore when it starts burning .
 csubjpass(eingeschätzt, anfängt)
-~~~
+</code></pre>
 
 
 
@@ -629,8 +608,8 @@ csubjpass(eingeschätzt, anfängt)
 	<h2><code property="oliasystem:hasTag" lang="">dep</code>: <div property="rdfs:label">unspecified dependency</div></h2>
 	<div property="rdfs:comment">
 
-This document is a placeholder for the language-specific documentation
-for `dep`.
+<p>This document is a placeholder for the language-specific documentation
+for <code>dep</code>.</p>
 
 
 	</div>
@@ -644,20 +623,18 @@ for `dep`.
 	<h2><code property="oliasystem:hasTag" lang="">det</code>: <div property="rdfs:label">determiner</div></h2>
 	<div property="rdfs:comment">
 
-`det` marks the relation between a noun and its determiner. Attributively used indefinite, demonstrative, or interrogative pronouns are also marked with `det`.
+<p><code>det</code> marks the relation between a noun and its determiner. Attributively used indefinite, demonstrative, or interrogative pronouns are also marked with <code>det</code>.</p>
 
-~~~ sdparse
-Der Mann betrat eine Küche . \n The man entered a kitchen .
+<pre><code class="language-sdparse">Der Mann betrat eine Küche . \n The man entered a kitchen .
 det(Mann, Der)
 det(Küche, eine)
-~~~
+</code></pre>
 
-~~~ sdparse
-Dieses Mädchen erfuhr wenige Sekunden später, welche Note sie bekommen hatte . \n This girl found out only few seconds later which grade she had gotten.
+<pre><code class="language-sdparse">Dieses Mädchen erfuhr wenige Sekunden später, welche Note sie bekommen hatte . \n This girl found out only few seconds later which grade she had gotten.
 det(Mädchen, Dieses)
 det(Sekunden, wenige)
 det(Note, welche)
-~~~
+</code></pre>
 
 
 	</div>
@@ -671,8 +648,8 @@ det(Note, welche)
 	<h2><code property="oliasystem:hasTag" lang="">discourse</code>: <div property="rdfs:label">discourse element</div></h2>
 	<div property="rdfs:comment">
 
-This document is a placeholder for the language-specific documentation
-for `discourse`.
+<p>This document is a placeholder for the language-specific documentation
+for <code>discourse</code>.</p>
 
 
 	</div>
@@ -686,8 +663,8 @@ for `discourse`.
 	<h2><code property="oliasystem:hasTag" lang="">dislocated</code>: <div property="rdfs:label">dislocated elements</div></h2>
 	<div property="rdfs:comment">
 
-This document is a placeholder for the language-specific documentation
-for `dislocated`.
+<p>This document is a placeholder for the language-specific documentation
+for <code>dislocated</code>.</p>
 
 
 	</div>
@@ -701,12 +678,11 @@ for `dislocated`.
 	<h2><code property="oliasystem:hasTag" lang="">dobj</code>: <div property="rdfs:label">direct object</div></h2>
 	<div property="rdfs:comment">
 
-`dobj` marks a noun phrase that is the direct object of a verb. The direct object is in accusative case.
+<p><code>dobj</code> marks a noun phrase that is the direct object of a verb. The direct object is in accusative case.</p>
 
-~~~ sdparse
-Die Frau gibt dem Kind einen Apfel . \n The woman gives the child an apple .
+<pre><code class="language-sdparse">Die Frau gibt dem Kind einen Apfel . \n The woman gives the child an apple .
 dobj(gibt, Apfel)
-~~~
+</code></pre>
 
 
 
@@ -721,8 +697,8 @@ dobj(gibt, Apfel)
 	<h2><code property="oliasystem:hasTag" lang="">expl</code>: <div property="rdfs:label">expletive</div></h2>
 	<div property="rdfs:comment">
 
-This document is a placeholder for the language-specific documentation
-for `expl`.
+<p>This document is a placeholder for the language-specific documentation
+for <code>expl</code>.</p>
 
 
 	</div>
@@ -736,8 +712,8 @@ for `expl`.
 	<h2><code property="oliasystem:hasTag" lang="">foreign</code>: <div property="rdfs:label">foreign words</div></h2>
 	<div property="rdfs:comment">
 
-This document is a placeholder for the language-specific documentation
-for `foreign`.
+<p>This document is a placeholder for the language-specific documentation
+for <code>foreign</code>.</p>
 
 
 	</div>
@@ -751,8 +727,8 @@ for `foreign`.
 	<h2><code property="oliasystem:hasTag" lang="">goeswith</code>: <div property="rdfs:label">goes with</div></h2>
 	<div property="rdfs:comment">
 
-This document is a placeholder for the language-specific documentation
-for `goeswith`.
+<p>This document is a placeholder for the language-specific documentation
+for <code>goeswith</code>.</p>
 
 
 	</div>
@@ -766,12 +742,11 @@ for `goeswith`.
 	<h2><code property="oliasystem:hasTag" lang="">iobj</code>: <div property="rdfs:label">indirect object</div></h2>
 	<div property="rdfs:comment">
 
-`iobj` marks a noun phrase that is the indirect object of a verb. The indirect object is in dative case.
+<p><code>iobj</code> marks a noun phrase that is the indirect object of a verb. The indirect object is in dative case.</p>
 
-~~~ sdparse
-Die Frau gibt dem Kind einen Apfel . \n The woman gives the child an apple .
+<pre><code class="language-sdparse">Die Frau gibt dem Kind einen Apfel . \n The woman gives the child an apple .
 iobj(gibt, Kind)
-~~~
+</code></pre>
 
 
 
@@ -786,8 +761,8 @@ iobj(gibt, Kind)
 	<h2><code property="oliasystem:hasTag" lang="">list</code>: <div property="rdfs:label">list</div></h2>
 	<div property="rdfs:comment">
 
-This document is a placeholder for the language-specific documentation
-for `list`.
+<p>This document is a placeholder for the language-specific documentation
+for <code>list</code>.</p>
 
 
 	</div>
@@ -801,8 +776,8 @@ for `list`.
 	<h2><code property="oliasystem:hasTag" lang="">mark</code>: <div property="rdfs:label">marker</div></h2>
 	<div property="rdfs:comment">
 
-This document is a placeholder for the language-specific documentation
-for `mark`.
+<p>This document is a placeholder for the language-specific documentation
+for <code>mark</code>.</p>
 
 
 	</div>
@@ -816,8 +791,8 @@ for `mark`.
 	<h2><code property="oliasystem:hasTag" lang="">mwe</code>: <div property="rdfs:label">multi-word expression</div></h2>
 	<div property="rdfs:comment">
 
-This document is a placeholder for the language-specific documentation
-for `mwe`.
+<p>This document is a placeholder for the language-specific documentation
+for <code>mwe</code>.</p>
 
 
 	</div>
@@ -831,23 +806,21 @@ for `mwe`.
 	<h2><code property="oliasystem:hasTag" lang="">name</code>: <div property="rdfs:label">name</div></h2>
 	<div property="rdfs:comment">
 
-The `name` relation is one of the three relations for compounding in UD (together with [compound]() and [mwe]()). It is used for proper nouns constituted of multiple nominal elements. For example, `name` would be used between the words of _Hillary Rodham Clinton_, _New York_, or _Carl XVI Gustaf_ but not to replace the usual relations in a phrasal or clausal name like _The king of Sweden_ or the novels _The Lord of the Rings_ and _Captured By Aliens_. 
+<p>The <code>name</code> relation is one of the three relations for compounding in UD (together with <a href="">compound</a> and <a href="">mwe</a>). It is used for proper nouns constituted of multiple nominal elements. For example, <code>name</code> would be used between the words of <em>Hillary Rodham Clinton</em>, <em>New York</em>, or <em>Carl XVI Gustaf</em> but not to replace the usual relations in a phrasal or clausal name like <em>The king of Sweden</em> or the novels <em>The Lord of the Rings</em> and <em>Captured By Aliens</em>.</p>
 
-Words joined by `name` should all be part of a minimal noun phrase; otherwise regular syntactic relations should be used. This is basically similar to the treatment of noun compounds with [compound](), except that in many cases parts of the name may be another nominal element such as an adjective (_United Airlines_).
+<p>Words joined by <code>name</code> should all be part of a minimal noun phrase; otherwise regular syntactic relations should be used. This is basically similar to the treatment of noun compounds with <a href="">compound</a>, except that in many cases parts of the name may be another nominal element such as an adjective (<em>United Airlines</em>).</p>
 
-In general, names are annotated in a flat, head-initial structure, in which all words in the name modify the first one using the `name` label.
+<p>In general, names are annotated in a flat, head-initial structure, in which all words in the name modify the first one using the <code>name</code> label.</p>
 
-~~~ sdparse
-Carl XVI Gustav
+<pre><code class="language-sdparse">Carl XVI Gustav
 name(Carl, XVI)
 name(Carl, Gustav)
-~~~
+</code></pre>
 
-~~~ sdparse
-Frankfurt am Main
+<pre><code class="language-sdparse">Frankfurt am Main
 nmod(Frankfurt, Main)
 case(Main, am)
-~~~
+</code></pre>
 
 
 	</div>
@@ -861,22 +834,19 @@ case(Main, am)
 	<h2><code property="oliasystem:hasTag" lang="">neg</code>: <div property="rdfs:label">negation modifier</div></h2>
 	<div property="rdfs:comment">
 
-`neg` marks the relation between a negation word and the word it modifies.
+<p><code>neg</code> marks the relation between a negation word and the word it modifies.</p>
 
-~~~ sdparse
-Er hat den Mann nicht gesehen . \n He didn't see the man .
+<pre><code class="language-sdparse">Er hat den Mann nicht gesehen . \n He didn't see the man .
 neg(gesehen, nicht)
-~~~
+</code></pre>
 
-~~~ sdparse
-Er will nicht mehr Fußball spielen . \n He doesn't want to play soccer anymore .
+<pre><code class="language-sdparse">Er will nicht mehr Fußball spielen . \n He doesn't want to play soccer anymore .
 neg(mehr, nicht)
-~~~
+</code></pre>
 
-~~~ sdparse
-Er hat keinen Regenschirm mitgebracht . \n He didn't bring an umbrella .
+<pre><code class="language-sdparse">Er hat keinen Regenschirm mitgebracht . \n He didn't bring an umbrella .
 neg(Regenschirm, keinen)
-~~~
+</code></pre>
 
 
 	</div>
@@ -890,8 +860,8 @@ neg(Regenschirm, keinen)
 	<h2><code property="oliasystem:hasTag" lang="">nmod</code>: <div property="rdfs:label">nominal modifier</div></h2>
 	<div property="rdfs:comment">
 
-This document is a placeholder for the language-specific documentation
-for `nmod`.
+<p>This document is a placeholder for the language-specific documentation
+for <code>nmod</code>.</p>
 
 
 	</div>
@@ -905,22 +875,19 @@ for `nmod`.
 	<h2><code property="oliasystem:hasTag" lang="">nsubj</code>: <div property="rdfs:label">nominal subject</div></h2>
 	<div property="rdfs:comment">
 
-`nsubj` marks noun phrases that are the subject of a finite clause. The head of `nsubj` is typically a verb, but can be another noun phrase or adjective, for example in copula constructions.
+<p><code>nsubj</code> marks noun phrases that are the subject of a finite clause. The head of <code>nsubj</code> is typically a verb, but can be another noun phrase or adjective, for example in copula constructions.</p>
 
-~~~ sdparse
-Die Frau schläft . \n The woman sleeps .
+<pre><code class="language-sdparse">Die Frau schläft . \n The woman sleeps .
 nsubj(schläft, Frau)
-~~~
+</code></pre>
 
-~~~ sdparse
-Die Frau ist Ärztin . \n The woman is a doctor .
+<pre><code class="language-sdparse">Die Frau ist Ärztin . \n The woman is a doctor .
 nsubj(Ärztin, Frau)
-~~~
+</code></pre>
 
-~~~ sdparse
-Die Frau ist müde . \n The woman is tired .
+<pre><code class="language-sdparse">Die Frau ist müde . \n The woman is tired .
 nsubj(müde, Frau)
-~~~
+</code></pre>
 
 
 
@@ -935,12 +902,11 @@ nsubj(müde, Frau)
 	<h2><code property="oliasystem:hasTag" lang="">nsubjpass</code>: <div property="rdfs:label">passive nominal subject</div></h2>
 	<div property="rdfs:comment">
 
-`nsubjpass` marks the subject of a passive clause.
+<p><code>nsubjpass</code> marks the subject of a passive clause.</p>
 
-~~~ sdparse
-Das Bild wurde von Picasso gemalt . \n The painting was painted by Picasso .
+<pre><code class="language-sdparse">Das Bild wurde von Picasso gemalt . \n The painting was painted by Picasso .
 nsubjpass(gemalt, Bild)
-~~~
+</code></pre>
 
 
 
@@ -955,17 +921,15 @@ nsubjpass(gemalt, Bild)
 	<h2><code property="oliasystem:hasTag" lang="">nummod</code>: <div property="rdfs:label">numeric modifier</div></h2>
 	<div property="rdfs:comment">
 
-`nummod` marks numeric modifiers that modify the meaning of a noun with a quantity.
+<p><code>nummod</code> marks numeric modifiers that modify the meaning of a noun with a quantity.</p>
 
-~~~ sdparse
-eine Milliarde Menschen \n one billion people
+<pre><code class="language-sdparse">eine Milliarde Menschen \n one billion people
 nummod(Menschen, Milliarde)
-~~~
+</code></pre>
 
-~~~ sdparse
-Er bezahlte 50 Euro . \n He paid 50 Euros .
+<pre><code class="language-sdparse">Er bezahlte 50 Euro . \n He paid 50 Euros .
 nummod(Euro, 50)
-~~~
+</code></pre>
 
 
 	</div>
@@ -979,8 +943,8 @@ nummod(Euro, 50)
 	<h2><code property="oliasystem:hasTag" lang="">parataxis</code>: <div property="rdfs:label">parataxis</div></h2>
 	<div property="rdfs:comment">
 
-This document is a placeholder for the language-specific documentation
-for `parataxis`.
+<p>This document is a placeholder for the language-specific documentation
+for <code>parataxis</code>.</p>
 
 
 	</div>
@@ -994,8 +958,8 @@ for `parataxis`.
 	<h2><code property="oliasystem:hasTag" lang="">punct</code>: <div property="rdfs:label">punctuation</div></h2>
 	<div property="rdfs:comment">
 
-This document is a placeholder for the language-specific documentation
-for `punct`.
+<p>This document is a placeholder for the language-specific documentation
+for <code>punct</code>.</p>
 
 
 	</div>
@@ -1009,8 +973,8 @@ for `punct`.
 	<h2><code property="oliasystem:hasTag" lang="">remnant</code>: <div property="rdfs:label">remnant in ellipsis</div></h2>
 	<div property="rdfs:comment">
 
-This document is a placeholder for the language-specific documentation
-for `remnant`.
+<p>This document is a placeholder for the language-specific documentation
+for <code>remnant</code>.</p>
 
 
 	</div>
@@ -1024,8 +988,8 @@ for `remnant`.
 	<h2><code property="oliasystem:hasTag" lang="">reparandum</code>: <div property="rdfs:label">overridden disfluency</div></h2>
 	<div property="rdfs:comment">
 
-This document is a placeholder for the language-specific documentation
-for `reparandum`.
+<p>This document is a placeholder for the language-specific documentation
+for <code>reparandum</code>.</p>
 
 
 	</div>
@@ -1039,8 +1003,8 @@ for `reparandum`.
 	<h2><code property="oliasystem:hasTag" lang="">root</code>: <div property="rdfs:label">root</div></h2>
 	<div property="rdfs:comment">
 
-This document is a placeholder for the language-specific documentation
-for `root`.
+<p>This document is a placeholder for the language-specific documentation
+for <code>root</code>.</p>
 
 
 	</div>
@@ -1054,8 +1018,8 @@ for `root`.
 	<h2><code property="oliasystem:hasTag" lang="">vocative</code>: <div property="rdfs:label">vocative</div></h2>
 	<div property="rdfs:comment">
 
-This document is a placeholder for the language-specific documentation
-for `vocative`.
+<p>This document is a placeholder for the language-specific documentation
+for <code>vocative</code>.</p>
 
 
 	</div>
@@ -1069,8 +1033,8 @@ for `vocative`.
 	<h2><code property="oliasystem:hasTag" lang="">xcomp</code>: <div property="rdfs:label">open clausal complement</div></h2>
 	<div property="rdfs:comment">
 
-This document is a placeholder for the language-specific documentation
-for `xcomp`.
+<p>This document is a placeholder for the language-specific documentation
+for <code>xcomp</code>.</p>
 
 
 	</div>

@@ -257,33 +257,28 @@ in two places.</p>
 	<h2><code property="oliasystem:hasTag" lang="">acl</code>: <div property="rdfs:label">clausal modifier of noun</div></h2>
 	<div property="rdfs:comment">
 
-`acl` is used for finite and non-finite clauses that modify a noun, including cases of secondary predication. 
-Note that in French relative clauses get assigned a specific relation [acl:relcl](), a subtype of `acl`.
+<p><code>acl</code> is used for finite and non-finite clauses that modify a noun, including cases of secondary predication. 
+Note that in French relative clauses get assigned a specific relation <a href="">acl:relcl</a>, a subtype of <code>acl</code>.</p>
 
-Non-relative clausal dependents of nouns are limited to complement clauses with a subset of nouns like *fait (fact)*.  We analyze them as `acl` (parallel to the analysis of this class as "content clauses" in Huddleston and Pullum 2002).
+<p>Non-relative clausal dependents of nouns are limited to complement clauses with a subset of nouns like <em>fait (fact)</em>.  We analyze them as <code>acl</code> (parallel to the analysis of this class as “content clauses” in Huddleston and Pullum 2002).</p>
 
-~~~ sdparse
-Comment est-ce que cela peut être réconcilié avec le fait que beaucoup de mariages cassent ? \n How can that be reconciled with the fact that many marriages break up?
+<pre><code class="language-sdparse">Comment est-ce que cela peut être réconcilié avec le fait que beaucoup de mariages cassent ? \n How can that be reconciled with the fact that many marriages break up?
 acl(fait, cassent) 
-~~~
+</code></pre>
 
-~~~ sdparse
-Une photo de ce qui s'est passé \n A picture of what happens
+<pre><code class="language-sdparse">Une photo de ce qui s'est passé \n A picture of what happens
 acl(photo, passé)
-~~~
+</code></pre>
 
-~~~ sdparse
-Un culte nourri d'influences d'anciens mythes \n A cult nourrished with influences from old myths
+<pre><code class="language-sdparse">Un culte nourri d'influences d'anciens mythes \n A cult nourrished with influences from old myths
 acl(culte, nourri)
-~~~
+</code></pre>
 
+<p>The <code>acl</code> relation is also used for secondary predicates modifying a nominal:</p>
 
-The `acl` relation is also used for secondary predicates modifying a nominal:
-
-~~~ sdparse
-Il quitta la pièce pleurant . \n He left the room crying .
+<pre><code class="language-sdparse">Il quitta la pièce pleurant . \n He left the room crying .
 acl(Il, pleurant)
-~~~
+</code></pre>
 
 
 	</div>
@@ -297,16 +292,15 @@ acl(Il, pleurant)
 	<h2><code property="oliasystem:hasTag" lang="">acl:relcl</code>: <div property="rdfs:label">relative clause modifier</div></h2>
 	<div property="rdfs:comment">
 
-The `acl:relcl` relation is used for relative clauses modifying
+<p>The <code>acl:relcl</code> relation is used for relative clauses modifying
 a nominal. The relation points from the head of the nominal to the
-head of the relative clause.
+head of the relative clause.</p>
 
-~~~ sdparse
-J'ai vu l' homme qui t' aime \n I saw the man who loves you
+<pre><code class="language-sdparse">J'ai vu l' homme qui t' aime \n I saw the man who loves you
 acl:relcl(homme, aime)
 nsubj(aime, qui)
 dobj(aime, t')
-~~~
+</code></pre>
 
 
 	</div>
@@ -320,24 +314,21 @@ dobj(aime, t')
 	<h2><code property="oliasystem:hasTag" lang="">advcl</code>: <div property="rdfs:label">adverbial clause modifier</div></h2>
 	<div property="rdfs:comment">
 
-An adverbial clause modifier is a clause which modifies a verb or other predicate (adjective, etc.),
+<p>An adverbial clause modifier is a clause which modifies a verb or other predicate (adjective, etc.),
 as a modifier not as a core complement. This includes things such as a temporal clause, consequence, conditional clause, purpose
-clause, etc. The dependent must be clausal (or else it is an [advmod]()) and the dependent is the main predicate of the clause.
+clause, etc. The dependent must be clausal (or else it is an <a href="">advmod</a>) and the dependent is the main predicate of the clause.</p>
 
-~~~ sdparse
-L'accident s'est produit quand il faisait noir \n The accident happened when it was dark
+<pre><code class="language-sdparse">L'accident s'est produit quand il faisait noir \n The accident happened when it was dark
 advcl(produit, faisait)
-~~~
+</code></pre>
 
-~~~ sdparse
-Si tu sais qui l'a fait, tu devrais le dire au professeur \n If you know who did it, you should tell the teacher
+<pre><code class="language-sdparse">Si tu sais qui l'a fait, tu devrais le dire au professeur \n If you know who did it, you should tell the teacher
 advcl(dire, sais)
-~~~
+</code></pre>
 
-~~~ sdparse
-Il faut venir tôt pour avoir de la place \n One needs to get there early to have a seat
+<pre><code class="language-sdparse">Il faut venir tôt pour avoir de la place \n One needs to get there early to have a seat
 advcl(venir, avoir)
-~~~
+</code></pre>
 
 
 	</div>
@@ -351,23 +342,20 @@ advcl(venir, avoir)
 	<h2><code property="oliasystem:hasTag" lang="">advmod</code>: <div property="rdfs:label">adverbial modifier</div></h2>
 	<div property="rdfs:comment">
 
-An adverbial modifier of a word is a (non-clausal) adverb or adverbial
-phrase that serves to modify the meaning of the word.
+<p>An adverbial modifier of a word is a (non-clausal) adverb or adverbial
+phrase that serves to modify the meaning of the word.</p>
 
-~~~ sdparse
-Ca devrait être fortement souligné \n It should be strongly emphasised
+<pre><code class="language-sdparse">Ca devrait être fortement souligné \n It should be strongly emphasised
 advmod(souligné, fortement)
-~~~
+</code></pre>
 
-~~~ sdparse
-moins souvent \n less often
+<pre><code class="language-sdparse">moins souvent \n less often
 advmod(souvent, moins)
-~~~
+</code></pre>
 
-~~~ sdparse
-le jour le plus long \n the longest day
+<pre><code class="language-sdparse">le jour le plus long \n the longest day
 advmod(long, plus)
-~~~
+</code></pre>
 
 
 	</div>
@@ -381,13 +369,12 @@ advmod(long, plus)
 	<h2><code property="oliasystem:hasTag" lang="">amod</code>: <div property="rdfs:label">adjectival modifier</div></h2>
 	<div property="rdfs:comment">
 
-An adjectival modifier of a nominal is any adjectival phrase that serves
-to modify the meaning of the nominal head.
+<p>An adjectival modifier of a nominal is any adjectival phrase that serves
+to modify the meaning of the nominal head.</p>
 
-~~~ sdparse
-Marc boit du vin rouge \n Marc drinks red wine
+<pre><code class="language-sdparse">Marc boit du vin rouge \n Marc drinks red wine
 amod(vin, rouge)
-~~~
+</code></pre>
 
 
 	</div>
@@ -401,20 +388,18 @@ amod(vin, rouge)
 	<h2><code property="oliasystem:hasTag" lang="">appos</code>: <div property="rdfs:label">appositional modifier</div></h2>
 	<div property="rdfs:comment">
 
-An appositional modifier of a noun is a nominal immediately following
+<p>An appositional modifier of a noun is a nominal immediately following
 the first noun that serves to define or modify that noun. It includes
 parenthesized examples, as well as defining abbreviations in one of
-these structures.
+these structures.</p>
 
-~~~ sdparse
-Sam , mon frère , est arrivé \n Sam , my brother , arrived
+<pre><code class="language-sdparse">Sam , mon frère , est arrivé \n Sam , my brother , arrived
 appos(Sam, frère)
-~~~
+</code></pre>
 
-~~~ sdparse
-Appelation d'origine contrôlée  ( AOC )
+<pre><code class="language-sdparse">Appelation d'origine contrôlée  ( AOC )
 appos(Appelation, AOC)
-~~~
+</code></pre>
 
 
 	</div>
@@ -428,21 +413,19 @@ appos(Appelation, AOC)
 	<h2><code property="oliasystem:hasTag" lang="">aux</code>: <div property="rdfs:label">auxiliary</div></h2>
 	<div property="rdfs:comment">
 
-An auxiliary of a clause is a [non-main verb](sv-pos/AUX) of the
-clause.
+<p>An auxiliary of a clause is a <a href="sv-pos/AUX">non-main verb</a> of the
+clause.</p>
 
-Exception: An auxiliary verb used to construct the passive
-[voice](sv-feat/Voice) is not labeled `aux` but [auxpass]().
+<p>Exception: An auxiliary verb used to construct the passive
+<a href="sv-feat/Voice">voice</a> is not labeled <code>aux</code> but <a href="">auxpass</a>.</p>
 
-~~~ sdparse
-On peut nager dans le lac \n One can swim in the lake
+<pre><code class="language-sdparse">On peut nager dans le lac \n One can swim in the lake
 aux(nager, peut)
-~~~
+</code></pre>
 
-~~~ sdparse
-Quelles conséquences cela a - t - il eu ? \n What consequences did this have ?
+<pre><code class="language-sdparse">Quelles conséquences cela a - t - il eu ? \n What consequences did this have ?
 aux(eu, a)
-~~~
+</code></pre>
 
 
 	</div>
@@ -456,22 +439,19 @@ aux(eu, a)
 	<h2><code property="oliasystem:hasTag" lang="">auxpass</code>: <div property="rdfs:label">passive auxiliary</div></h2>
 	<div property="rdfs:comment">
 
-A passive auxiliary of a clause is a non-main verb of the clause which
-contains the passive information.
+<p>A passive auxiliary of a clause is a non-main verb of the clause which
+contains the passive information.</p>
 
-~~~ sdparse
-Kennedy fut assassiné \n Kennedy was murdered
+<pre><code class="language-sdparse">Kennedy fut assassiné \n Kennedy was murdered
 auxpass(assassiné, fut)
-~~~
+</code></pre>
 
+<p>Other auxiliaries associated with the same main verb are not labeled <code>auxpass</code> but <code>aux</code> since they do not themselves indicate passive voice.</p>
 
-Other auxiliaries associated with the same main verb are not labeled `auxpass` but `aux` since they do not themselves indicate passive voice.
-
-~~~ sdparse
-Kennedy a été assassiné \n Kennedy has been murdered
+<pre><code class="language-sdparse">Kennedy a été assassiné \n Kennedy has been murdered
 auxpass(assassiné, été)
 aux(assassiné, a)
-~~~
+</code></pre>
 
 
 	</div>
@@ -485,17 +465,15 @@ aux(assassiné, a)
 	<h2><code property="oliasystem:hasTag" lang="">case</code>: <div property="rdfs:label">case marking</div></h2>
 	<div property="rdfs:comment">
 
-The `case` relation is used for any preposition in French. Prepositions are treated as dependents of the noun they attach to or introduce in an "extended nominal projection". Thus, UD does not treat a preposition as a mediator between a modified word and its object. The `case` relation aims at providing a uniform analysis of prepositions and case in morphologically rich languages. 
+<p>The <code>case</code> relation is used for any preposition in French. Prepositions are treated as dependents of the noun they attach to or introduce in an “extended nominal projection”. Thus, UD does not treat a preposition as a mediator between a modified word and its object. The <code>case</code> relation aims at providing a uniform analysis of prepositions and case in morphologically rich languages.</p>
 
-~~~ sdparse
-Taxation individuelle de rentrée salariale \n Individual taxation of employment income
+<pre><code class="language-sdparse">Taxation individuelle de rentrée salariale \n Individual taxation of employment income
 case(rentrée, de)
-~~~
+</code></pre>
 
-~~~ sdparse
-En attendant , asseyez-vous ici \n While waiting, seat down here
+<pre><code class="language-sdparse">En attendant , asseyez-vous ici \n While waiting, seat down here
 case(attendant, En)
-~~~
+</code></pre>
 
 
 	</div>
@@ -509,18 +487,16 @@ case(attendant, En)
 	<h2><code property="oliasystem:hasTag" lang="">cc</code>: <div property="rdfs:label">coordinating conjunction</div></h2>
 	<div property="rdfs:comment">
 
-A coordinating conjunction relation holds between the head conjunct of a coordinate structure and any of the coordinating conjunction involved in the structure. This also includes the first element in paired conjunctions like _ni ... ni_ "nor ... nor". Note that we never treat punctuation as coordinating conjunctions. For more on coordination, see the French [conj]() relation as well as the universal dependency page ([u-dep/conj]()). 
+<p>A coordinating conjunction relation holds between the head conjunct of a coordinate structure and any of the coordinating conjunction involved in the structure. This also includes the first element in paired conjunctions like <em>ni … ni</em> “nor … nor”. Note that we never treat punctuation as coordinating conjunctions. For more on coordination, see the French <a href="">conj</a> relation as well as the universal dependency page (<a href="">u-dep/conj</a>).</p>
 
-~~~ sdparse
-1500 euros par an et par enfant \n 1500 euros per child and per year
+<pre><code class="language-sdparse">1500 euros par an et par enfant \n 1500 euros per child and per year
 cc(an, et)
 conj(an, enfant)
-~~~
+</code></pre>
 
-~~~ sdparse
-Et ce n'est pas la peine d'insister \n And it is not worth insisting
+<pre><code class="language-sdparse">Et ce n'est pas la peine d'insister \n And it is not worth insisting
 cc(peine, Et)
-~~~
+</code></pre>
 
 
 	</div>
@@ -534,17 +510,15 @@ cc(peine, Et)
 	<h2><code property="oliasystem:hasTag" lang="">ccomp</code>: <div property="rdfs:label">clausal complement</div></h2>
 	<div property="rdfs:comment">
 
-A clausal complement of a verb or adjective is a dependent clause where the subject is not determined by obligatory control, either because the clause has its own overt subject or because the subject is arbitrary or determined anaphorically. (This contrasts with the _xcomp_ relation, which is used for clausal complements with obligatory control.)
+<p>A clausal complement of a verb or adjective is a dependent clause where the subject is not determined by obligatory control, either because the clause has its own overt subject or because the subject is arbitrary or determined anaphorically. (This contrasts with the <em>xcomp</em> relation, which is used for clausal complements with obligatory control.)</p>
 
-~~~ sdparse
-Il dit que tu aimes nager \n He says that you like to swim
+<pre><code class="language-sdparse">Il dit que tu aimes nager \n He says that you like to swim
 ccomp(dit, aimes)
-~~~
+</code></pre>
 
-~~~ sdparse
-Je suis certain qu'il l'a fait \n I am certain that he did it 
+<pre><code class="language-sdparse">Je suis certain qu'il l'a fait \n I am certain that he did it 
 ccomp(certain, fait) 
-~~~
+</code></pre>
 
 
 	</div>
@@ -558,17 +532,15 @@ ccomp(certain, fait)
 	<h2><code property="oliasystem:hasTag" lang="">compound</code>: <div property="rdfs:label">compound</div></h2>
 	<div property="rdfs:comment">
 
-`compound` in French is used for compounds like the following:
+<p><code>compound</code> in French is used for compounds like the following:</p>
 
-~~~ sdparse
-ambiance chalet \n
+<pre><code class="language-sdparse">ambiance chalet \n
 compound(ambiance, chalet)
-~~~
+</code></pre>
 
-~~~ sdparse
-début décembre  \n beginning (of) December
+<pre><code class="language-sdparse">début décembre  \n beginning (of) December
 compound(début, décembre)
-~~~
+</code></pre>
 
 
 	</div>
@@ -582,20 +554,18 @@ compound(début, décembre)
 	<h2><code property="oliasystem:hasTag" lang="">conj</code>: <div property="rdfs:label">conjunct</div></h2>
 	<div property="rdfs:comment">
 
-The conjunct relation holds between coordinated elements. We treat
+<p>The conjunct relation holds between coordinated elements. We treat
 coordination asymmetrically: The head of the relation is the first
-conjunct and other conjuncts depend on it via the `conj` relation.
+conjunct and other conjuncts depend on it via the <code>conj</code> relation.</p>
 
-~~~ sdparse
-1500 euros par an et par enfant \n 1500 euros per child and per year
+<pre><code class="language-sdparse">1500 euros par an et par enfant \n 1500 euros per child and per year
 conj(an, enfant)
-~~~
+</code></pre>
 
-~~~ sdparse
-Une seconde d' hésitation , d' inattention ou de retard  \n A second of hesitation, carelessness or delay
+<pre><code class="language-sdparse">Une seconde d' hésitation , d' inattention ou de retard  \n A second of hesitation, carelessness or delay
 conj(hésitation, inattention)
 conj(hésitation, retard)
-~~~
+</code></pre>
 
 
 	</div>
@@ -609,18 +579,17 @@ conj(hésitation, retard)
 	<h2><code property="oliasystem:hasTag" lang="">cop</code>: <div property="rdfs:label">copula</div></h2>
 	<div property="rdfs:comment">
 
-A copula is the relation between the complement of a copular verb and
-the copular verb. Copular heads are avoided when possible. For more on the `cop` relation, see the universal dependency description ([u-dep/cop]())
+<p>A copula is the relation between the complement of a copular verb and
+the copular verb. Copular heads are avoided when possible. For more on the <code>cop</code> relation, see the universal dependency description (<a href="">u-dep/cop</a>)</p>
 
-~~~ sdparse
-Bill est un homme honnête \n Bill is an honest man
+<pre><code class="language-sdparse">Bill est un homme honnête \n Bill is an honest man
 cop(homme, est)
 nsubj(homme, Bill)
 amod(homme, honnête)
 det(homme, un)
-~~~
+</code></pre>
 
-In the current French treebank, the following verbs are treated as copular ones: _être_, _devenir_, _rester_, _demeurer_, as well as in some constructions _appeler_, _intituler_, _nommer_, _réputer_, _élir_
+<p>In the current French treebank, the following verbs are treated as copular ones: <em>être</em>, <em>devenir</em>, <em>rester</em>, <em>demeurer</em>, as well as in some constructions <em>appeler</em>, <em>intituler</em>, <em>nommer</em>, <em>réputer</em>, <em>élir</em></p>
 
 
 
@@ -635,12 +604,11 @@ In the current French treebank, the following verbs are treated as copular ones:
 	<h2><code property="oliasystem:hasTag" lang="">csubj</code>: <div property="rdfs:label">clausal subject</div></h2>
 	<div property="rdfs:comment">
 
-A clausal subject is a clausal syntactic subject of a clause, i.e., the subject is itself a clause. The governor of this relation might not always be a verb: when the verb is a copular verb, the root of the clause is the complement of the copular verb.
+<p>A clausal subject is a clausal syntactic subject of a clause, i.e., the subject is itself a clause. The governor of this relation might not always be a verb: when the verb is a copular verb, the root of the clause is the complement of the copular verb.</p>
 
-~~~ sdparse
-Ce qu'il dit m' embête . \n What he says bothers me .
+<pre><code class="language-sdparse">Ce qu'il dit m' embête . \n What he says bothers me .
 csubj(embête, dit)
-~~~
+</code></pre>
 
 
 	</div>
@@ -654,13 +622,12 @@ csubj(embête, dit)
 	<h2><code property="oliasystem:hasTag" lang="">csubjpass</code>: <div property="rdfs:label">clausal passive subject</div></h2>
 	<div property="rdfs:comment">
 
-A clausal passive subject is a clausal syntactic subject of a passive
-clause. It is not a very common construction in French. In the example below, _qu'il avait triché_ is the clausal subject.
+<p>A clausal passive subject is a clausal syntactic subject of a passive
+clause. It is not a very common construction in French. In the example below, <em>qu’il avait triché</em> is the clausal subject.</p>
 
-~~~ sdparse
-Qu'il avait triché était cru par tout le monde . \n That he cheated was believed by everyone .
+<pre><code class="language-sdparse">Qu'il avait triché était cru par tout le monde . \n That he cheated was believed by everyone .
 csubjpass(cru, triché)
-~~~
+</code></pre>
 
 
 	</div>
@@ -674,7 +641,7 @@ csubjpass(cru, triché)
 	<h2><code property="oliasystem:hasTag" lang="">dep</code>: <div property="rdfs:label">unspecified dependency</div></h2>
 	<div property="rdfs:comment">
 
-A dependency is labeled as `dep` when a more precise dependency relation between two words cannot be determined. This may be because of a weird grammatical construction, a limitation in software, a parser error, or because of an unresolved long distance dependency.
+<p>A dependency is labeled as <code>dep</code> when a more precise dependency relation between two words cannot be determined. This may be because of a weird grammatical construction, a limitation in software, a parser error, or because of an unresolved long distance dependency.</p>
 
 
 	</div>
@@ -688,24 +655,21 @@ A dependency is labeled as `dep` when a more precise dependency relation between
 	<h2><code property="oliasystem:hasTag" lang="">det</code>: <div property="rdfs:label">determiner</div></h2>
 	<div property="rdfs:comment">
 
-A determiner is the relation between the head of a nominal phrase and its determiner. 
+<p>A determiner is the relation between the head of a nominal phrase and its determiner.</p>
 
-~~~ sdparse
-Les fleurs sont magnifiques \n The flowers are beautiful
+<pre><code class="language-sdparse">Les fleurs sont magnifiques \n The flowers are beautiful
 det(fleurs, Les)
-~~~
+</code></pre>
 
-~~~ sdparse
-Quel livre préfères-tu ? \n Which book do you prefer ?
+<pre><code class="language-sdparse">Quel livre préfères-tu ? \n Which book do you prefer ?
 det(livre, Quel)
-~~~
+</code></pre>
 
-A possessive determiner is marked with the [nmod:poss]() relation:
+<p>A possessive determiner is marked with the <a href="">nmod:poss</a> relation:</p>
 
-~~~ sdparse
-Mon ami  \n My friend
+<pre><code class="language-sdparse">Mon ami  \n My friend
 nmod:poss(ami, Mon)
-~~~
+</code></pre>
 
 
 	</div>
@@ -719,18 +683,16 @@ nmod:poss(ami, Mon)
 	<h2><code property="oliasystem:hasTag" lang="">discourse</code>: <div property="rdfs:label">discourse element</div></h2>
 	<div property="rdfs:comment">
 
-This is used for interjections and other discourse particles and elements, which are not clearly linked to the structure of the sentence except in an expressive way.
+<p>This is used for interjections and other discourse particles and elements, which are not clearly linked to the structure of the sentence except in an expressive way.</p>
 
-~~~ sdparse
-Waouh , c' était fun :) \n Wow , that was fun :)
+<pre><code class="language-sdparse">Waouh , c' était fun :) \n Wow , that was fun :)
 discourse(fun, :)-6)
 discourse(fun, Waouh)
-~~~
+</code></pre>
 
-~~~ sdparse
-Bref , une occasion à ne pas laisser passer \n In short, an opportunity that should not be passed on
+<pre><code class="language-sdparse">Bref , une occasion à ne pas laisser passer \n In short, an opportunity that should not be passed on
 discourse(occasion, Bref)
-~~~
+</code></pre>
 
 
 
@@ -745,17 +707,16 @@ discourse(occasion, Bref)
 	<h2><code property="oliasystem:hasTag" lang="">dislocated</code>: <div property="rdfs:label">dislocated elements</div></h2>
 	<div property="rdfs:comment">
 
-The `dislocated` relation is used for fronted or postposed elements
+<p>The <code>dislocated</code> relation is used for fronted or postposed elements
 that do not fulfill the usual core grammatical relations of a
-sentence. Dislocated elements are attached to the same governor as the dependent that they double for.
+sentence. Dislocated elements are attached to the same governor as the dependent that they double for.</p>
 
-This construction is quite frequent is spoken French. It has not been yet annotated in the French treebank.
+<p>This construction is quite frequent is spoken French. It has not been yet annotated in the French treebank.</p>
 
-~~~ sdparse
-Pierre je ne l' aime pas beaucoup  \n Peter I don't like him much
+<pre><code class="language-sdparse">Pierre je ne l' aime pas beaucoup  \n Peter I don't like him much
 dislocated(l', Pierre)
 dobj(aime, l')
-~~~
+</code></pre>
 
 
 	</div>
@@ -769,19 +730,17 @@ dobj(aime, l')
 	<h2><code property="oliasystem:hasTag" lang="">dobj</code>: <div property="rdfs:label">direct object</div></h2>
 	<div property="rdfs:comment">
 
-A direct object is a nominal which is the (accusative) object of the verbal predicate. 
+<p>A direct object is a nominal which is the (accusative) object of the verbal predicate.</p>
 
-~~~ sdparse
-Il mange un sandwich . \n He eats a sandwich .
+<pre><code class="language-sdparse">Il mange un sandwich . \n He eats a sandwich .
 dobj(mange, sandwich)
-~~~
+</code></pre>
 
-The `dobj` relation is also used for a reflexive pronoun in pronominal verb when the pronoun is a direct object of the verb. When the grammatical relation of the pronoun is not a direct object nor an indirect object (as in _se douter_ "to suspect"), the pronoun gets analyzed as `expl`.
+<p>The <code>dobj</code> relation is also used for a reflexive pronoun in pronominal verb when the pronoun is a direct object of the verb. When the grammatical relation of the pronoun is not a direct object nor an indirect object (as in <em>se douter</em> “to suspect”), the pronoun gets analyzed as <code>expl</code>.</p>
 
-~~~ sdparse
-Il se lave . \n He washes himself .
+<pre><code class="language-sdparse">Il se lave . \n He washes himself .
 dobj(lave, se)
-~~~
+</code></pre>
 
 
 
@@ -796,16 +755,15 @@ dobj(lave, se)
 	<h2><code property="oliasystem:hasTag" lang="">expl</code>: <div property="rdfs:label">expletive</div></h2>
 	<div property="rdfs:comment">
 
-This relation captures expletive or pleonastic nominals. These are nominals that appear in an argument position of a predicate but which do not themselves satisfy any of the semantic roles of the predicate. There is further discussion and examples on the universal dependency page ([u-dep/expl]()).
+<p>This relation captures expletive or pleonastic nominals. These are nominals that appear in an argument position of a predicate but which do not themselves satisfy any of the semantic roles of the predicate. There is further discussion and examples on the universal dependency page (<a href="">u-dep/expl</a>).</p>
 
-~~~ sdparse
-C' est la seule manière de réussir \n It' s the only way to succeed
+<pre><code class="language-sdparse">C' est la seule manière de réussir \n It' s the only way to succeed
 expl(manière, C')
-~~~
+</code></pre>
 
-In Romance languages, pronouns in prominal verbs which do not have a semantic role are marked as `expl` such as _se_ in _se douter_. In French the `expl` relation is also used for euphonic elements, such as _l'_ in e.g. _et que l'on retrouve_ or _t_ in _a-t-il reçu mon email?_
+<p>In Romance languages, pronouns in prominal verbs which do not have a semantic role are marked as <code>expl</code> such as <em>se</em> in <em>se douter</em>. In French the <code>expl</code> relation is also used for euphonic elements, such as <em>l’</em> in e.g. <em>et que l’on retrouve</em> or <em>t</em> in <em>a-t-il reçu mon email?</em></p>
 
-Note that currenlty expletives are not annotated consistently in the French treebank.
+<p>Note that currenlty expletives are not annotated consistently in the French treebank.</p>
 
 
 	</div>
@@ -819,14 +777,13 @@ Note that currenlty expletives are not annotated consistently in the French tree
 	<h2><code property="oliasystem:hasTag" lang="">foreign</code>: <div property="rdfs:label">foreign words</div></h2>
 	<div property="rdfs:comment">
 
-The `foreign` relation can be used to label sequences of foreign words. These are given
-a linear analysis: the head is the first token in the foreign phrase.
+<p>The <code>foreign</code> relation can be used to label sequences of foreign words. These are given
+a linear analysis: the head is the first token in the foreign phrase.</p>
 
-~~~ sdparse
-Cet homme était persona non grata \n This man was persona non grata
+<pre><code class="language-sdparse">Cet homme était persona non grata \n This man was persona non grata
 foreign(persona, non)
 foreign(persona, grata)
-~~~
+</code></pre>
 
 
 	</div>
@@ -840,15 +797,14 @@ foreign(persona, grata)
 	<h2><code property="oliasystem:hasTag" lang="">goeswith</code>: <div property="rdfs:label">goes with</div></h2>
 	<div property="rdfs:comment">
 
-This relation links two parts of a word that are separated in text
-that is not well edited, or due to tokenization errors. The head is in some sense the *main* part.
+<p>This relation links two parts of a word that are separated in text
+that is not well edited, or due to tokenization errors. The head is in some sense the <em>main</em> part.</p>
 
-This relation is not used in the French treebank.
+<p>This relation is not used in the French treebank.</p>
 
-~~~ sdparse
-Ils sont partis aujourd' hui  \n They left today
+<pre><code class="language-sdparse">Ils sont partis aujourd' hui  \n They left today
 goeswith(aujourd', hui)
-~~~
+</code></pre>
 
 
 	</div>
@@ -862,27 +818,24 @@ goeswith(aujourd', hui)
 	<h2><code property="oliasystem:hasTag" lang="">iobj</code>: <div property="rdfs:label">indirect object</div></h2>
 	<div property="rdfs:comment">
 
-An indirect object is a nominal which corresponds to a dative object.
+<p>An indirect object is a nominal which corresponds to a dative object.</p>
 
-~~~ sdparse
-Il m' envoie une lettre . \n He sends me a letter .
+<pre><code class="language-sdparse">Il m' envoie une lettre . \n He sends me a letter .
 iobj(envoie, m')
-~~~
+</code></pre>
 
-When the indirect object is realized with a preposition, it gets analyzed with the _nmod_ relation:
+<p>When the indirect object is realized with a preposition, it gets analyzed with the <em>nmod</em> relation:</p>
 
-~~~ sdparse
-Il envoie la lettre à la présidente . \n He sends the letter to the president .
+<pre><code class="language-sdparse">Il envoie la lettre à la présidente . \n He sends the letter to the president .
 nmod(envoie, présidente)
 case(présidente, à)
-~~~
+</code></pre>
 
-The _iobj_ relation is also used for pronouns in prononimal verbs which are indirect objects:
+<p>The <em>iobj</em> relation is also used for pronouns in prononimal verbs which are indirect objects:</p>
 
-~~~ sdparse
-Il se parle tout haut. \n He speaks to himself out loud .
+<pre><code class="language-sdparse">Il se parle tout haut. \n He speaks to himself out loud .
 iobj(parle, se)
-~~~
+</code></pre>
 
 
 
@@ -897,20 +850,19 @@ iobj(parle, se)
 	<h2><code property="oliasystem:hasTag" lang="">list</code>: <div property="rdfs:label">list</div></h2>
 	<div property="rdfs:comment">
 
-The `list` relation is used for chains of comparable items. It is not currently attested in the French treebank.
+<p>The <code>list</code> relation is used for chains of comparable items. It is not currently attested in the French treebank.</p>
 
-Web text often contains passages which are meant to be interpreted as lists but are parsed as single sentences. Email signatures in particular contain these structures, in the form of contact information: the different contact information items are labeled as `list`; the key-value pair relations are labeled as [appos]().
+<p>Web text often contains passages which are meant to be interpreted as lists but are parsed as single sentences. Email signatures in particular contain these structures, in the form of contact information: the different contact information items are labeled as <code>list</code>; the key-value pair relations are labeled as <a href="">appos</a>.</p>
 
-In lists with more than two items, all items of the list shoud modify the first one.
+<p>In lists with more than two items, all items of the list shoud modify the first one.</p>
 
-~~~ sdparse
-Steve Jones GSM: 555-9814 Email: jones@abc.edf
+<pre><code class="language-sdparse">Steve Jones GSM: 555-9814 Email: jones@abc.edf
 name(Steve-1, Jones-2)
 list(Steve-1, GSM:-3)
 list(Steve-1, Email:-5)
 appos(GSM:-3, 555-9814-4)
 appos(Email:-5, jones@abc.edf-6)
-~~~
+</code></pre>
 
 
 	</div>
@@ -924,24 +876,21 @@ appos(Email:-5, jones@abc.edf-6)
 	<h2><code property="oliasystem:hasTag" lang="">mark</code>: <div property="rdfs:label">marker</div></h2>
 	<div property="rdfs:comment">
 
-A marker is the word introducing a clause subordinate to another clause. The marker is a dependent of the subordinate clause head. 
+<p>A marker is the word introducing a clause subordinate to another clause. The marker is a dependent of the subordinate clause head.</p>
 
-~~~ sdparse
-Il dit que tu aimes nager \n He says that you like to swim
+<pre><code class="language-sdparse">Il dit que tu aimes nager \n He says that you like to swim
 mark(aimes, que)
-~~~
+</code></pre>
 
-~~~ sdparse
-S' il pleut, on sera mouillé \n If it rains, we will get wet
+<pre><code class="language-sdparse">S' il pleut, on sera mouillé \n If it rains, we will get wet
 mark(pleut, S')
-~~~
+</code></pre>
 
-Prepositions introducing infinitives are also analyzed as `mark`.
+<p>Prepositions introducing infinitives are also analyzed as <code>mark</code>.</p>
 
-~~~ sdparse
-Il faut arriver tôt pour avoir de la place \n One needs to get there early to have a seat
+<pre><code class="language-sdparse">Il faut arriver tôt pour avoir de la place \n One needs to get there early to have a seat
 mark(avoir, pour)
-~~~
+</code></pre>
 
 
 	</div>
@@ -955,26 +904,23 @@ mark(avoir, pour)
 	<h2><code property="oliasystem:hasTag" lang="">mwe</code>: <div property="rdfs:label">multi-word expression</div></h2>
 	<div property="rdfs:comment">
 
-The multi-word expression (modifier) relation is one of the three
-relations ([compound](), `mwe`, [name]()) for compounding.
+<p>The multi-word expression (modifier) relation is one of the three
+relations (<a href="">compound</a>, <code>mwe</code>, <a href="">name</a>) for compounding.
 It is used for certain fixed grammaticized expressions that behave
-like function words or short adverbials. 
+like function words or short adverbials.</p>
 
-~~~ sdparse
-de toutes façons \n in any case
+<pre><code class="language-sdparse">de toutes façons \n in any case
 mwe(façons, de)
 mwe(toutes, façons)
-~~~
+</code></pre>
 
-~~~ sdparse
-ainsi que \n 
+<pre><code class="language-sdparse">ainsi que \n 
 mwe(que, ainsi)
-~~~
+</code></pre>
 
-~~~ sdparse
-avant de \n 
+<pre><code class="language-sdparse">avant de \n 
 mwe(de, avant)
-~~~
+</code></pre>
 
 
 	</div>
@@ -988,40 +934,38 @@ mwe(de, avant)
 	<h2><code property="oliasystem:hasTag" lang="">name</code>: <div property="rdfs:label">name</div></h2>
 	<div property="rdfs:comment">
 
-The name relation is one of the three relations for compounding in UD (together
-with [compound]() and [mwe]()).
+<p>The name relation is one of the three relations for compounding in UD (together
+with <a href="">compound</a> and <a href="">mwe</a>).
 It is used for proper nouns constituted of multiple nominal
-elements. For example, `name` would be used between the words of
-_Hillary Rodham Clinton, New York,_ or _Carl XVI Gustaf_ but not to
-replace the usual relations in a phrasal or clausal name like _The
-king of Belgium_ or the novels _The Lord of the Rings_ and _Captured By
-Aliens._
+elements. For example, <code>name</code> would be used between the words of
+<em>Hillary Rodham Clinton, New York,</em> or <em>Carl XVI Gustaf</em> but not to
+replace the usual relations in a phrasal or clausal name like <em>The
+king of Belgium</em> or the novels <em>The Lord of the Rings</em> and <em>Captured By
+Aliens.</em></p>
 
-Words joined by `name` should all be part of a minimal noun phrase;
+<p>Words joined by <code>name</code> should all be part of a minimal noun phrase;
 otherwise regular syntactic relations should be used.  This is
 basically similar to the treatment of noun compounds with
-[compound](), except that in many cases parts of the name may be
-another nominal element such as an adjective _(United Airlines)._
+<a href="">compound</a>, except that in many cases parts of the name may be
+another nominal element such as an adjective <em>(United Airlines).</em></p>
 
-In general, names are annotated in a flat, head-initial structure, in
-which all words in the name modify the head using the `name`
-label.
+<p>In general, names are annotated in a flat, head-initial structure, in
+which all words in the name modify the head using the <code>name</code>
+label.</p>
 
-~~~ sdparse
-Cervélo Test Team
+<pre><code class="language-sdparse">Cervélo Test Team
 name(Team, Cervélo)
 name(Team, Test)
-~~~
+</code></pre>
 
-For names with a clear syntactic modification structure, the dependencies should instead reflect the syntactic modification structure using regular syntactic relations, as in:
+<p>For names with a clear syntactic modification structure, the dependencies should instead reflect the syntactic modification structure using regular syntactic relations, as in:</p>
 
-~~~ sdparse
-&lt;&lt; La Belle et la Bête &gt;&gt; \n The Beauty and the Beast
+<pre><code class="language-sdparse">&lt;&lt; La Belle et la Bête &gt;&gt; \n The Beauty and the Beast
 conj(Belle, Bête)
 cc(Belle, et)
 det(Belle, La)
 det(Bête, la)
-~~~
+</code></pre>
 
 
 	</div>
@@ -1035,19 +979,17 @@ det(Bête, la)
 	<h2><code property="oliasystem:hasTag" lang="">neg</code>: <div property="rdfs:label">negation modifier</div></h2>
 	<div property="rdfs:comment">
 
-The negation modifier is the relation between a negation word and the word it modifies. Both elements of double negation are marked as `neg`. Note that in colloquial French, the first element of the double negation is often not present.
+<p>The negation modifier is the relation between a negation word and the word it modifies. Both elements of double negation are marked as <code>neg</code>. Note that in colloquial French, the first element of the double negation is often not present.</p>
 
-~~~ sdparse
-L'homme parfait n' existe pas \n The perfect man does not exist
+<pre><code class="language-sdparse">L'homme parfait n' existe pas \n The perfect man does not exist
 neg(existe, pas)
 neg(existe, n')
-~~~
+</code></pre>
 
-~~~ sdparse
-On ne le lâchera plus \n We will not let it go anymore
+<pre><code class="language-sdparse">On ne le lâchera plus \n We will not let it go anymore
 neg(lâchera, plus)
 neg(lâchera, ne)
-~~~
+</code></pre>
 
 
 	</div>
@@ -1061,38 +1003,33 @@ neg(lâchera, ne)
 	<h2><code property="oliasystem:hasTag" lang="">nmod</code>: <div property="rdfs:label">nominal modifier</div></h2>
 	<div property="rdfs:comment">
 
-The `nmod` relation is used for nominal modifiers of nouns or clausal
-predicates. `nmod` is a noun functioning as a non-core (oblique)
-argument or adjunct. In French, `nmod` is used for prepositional complements as well as for temporal complements not introduced by a preposition.
+<p>The <code>nmod</code> relation is used for nominal modifiers of nouns or clausal
+predicates. <code>nmod</code> is a noun functioning as a non-core (oblique)
+argument or adjunct. In French, <code>nmod</code> is used for prepositional complements as well as for temporal complements not introduced by a preposition.</p>
 
-~~~ sdparse
-Le résultat de la course \n The result of the race
+<pre><code class="language-sdparse">Le résultat de la course \n The result of the race
 nmod(résultat, course)
 case(course, de)
-~~~
+</code></pre>
 
-~~~ sdparse
-Maman prend bien soin de ses enfants \n Mother takes good care of her children
+<pre><code class="language-sdparse">Maman prend bien soin de ses enfants \n Mother takes good care of her children
 nmod(soin, enfants)
 case(enfants, de)
-~~~
+</code></pre>
 
-~~~ sdparse
-Il a grandi en Afrique \n He grew up in Africa
+<pre><code class="language-sdparse">Il a grandi en Afrique \n He grew up in Africa
 nmod(grandi, Afrique)
 case(Afrique, en)
-~~~
+</code></pre>
 
-~~~ sdparse
-Il est utilisé pour le service \n It is used for the service
+<pre><code class="language-sdparse">Il est utilisé pour le service \n It is used for the service
 nmod(utilisé, service)
 case(service, pour)
-~~~
+</code></pre>
 
-~~~ sdparse
-L' an passé, la compagnie a fait pas mal de bénéfices \n Last year, the company made quite a lot of benefit
+<pre><code class="language-sdparse">L' an passé, la compagnie a fait pas mal de bénéfices \n Last year, the company made quite a lot of benefit
 nmod(fait, an)
-~~~
+</code></pre>
 
 
 	</div>
@@ -1106,13 +1043,11 @@ nmod(fait, an)
 	<h2><code property="oliasystem:hasTag" lang="">nmod:poss</code>: <div property="rdfs:label">possessive nominal modifier</div></h2>
 	<div property="rdfs:comment">
 
-The relation `nmod:poss` is used for a possessive nominal modifier expressed by a possessive determiner (_mon_, _ton_, _son_, _ma_, _ta_, _sa_, _mes_, _tes_, _ses_, _notre_, _votre_, _leur_, _nos_, _vos_, _leurs_).
+<p>The relation <code>nmod:poss</code> is used for a possessive nominal modifier expressed by a possessive determiner (<em>mon</em>, <em>ton</em>, <em>son</em>, <em>ma</em>, <em>ta</em>, <em>sa</em>, <em>mes</em>, <em>tes</em>, <em>ses</em>, <em>notre</em>, <em>votre</em>, <em>leur</em>, <em>nos</em>, <em>vos</em>, <em>leurs</em>).</p>
 
-
-~~~ sdparse
-Toute notre vie  \n All our life
+<pre><code class="language-sdparse">Toute notre vie  \n All our life
 nmod:poss(vie, notre)
-~~~
+</code></pre>
 
 
 	</div>
@@ -1126,22 +1061,19 @@ nmod:poss(vie, notre)
 	<h2><code property="oliasystem:hasTag" lang="">nsubj</code>: <div property="rdfs:label">nominal subject</div></h2>
 	<div property="rdfs:comment">
 
-The dependency type `nsubj` marks nominal subjects of a clause. Subjects are direct dependents of the main predicate of the clause, which may be a verb, noun or adjective.
+<p>The dependency type <code>nsubj</code> marks nominal subjects of a clause. Subjects are direct dependents of the main predicate of the clause, which may be a verb, noun or adjective.</p>
 
-~~~ sdparse
-Le plus jeune participant a gagné la course . \n The youngest participant won the race .
+<pre><code class="language-sdparse">Le plus jeune participant a gagné la course . \n The youngest participant won the race .
 nsubj(gagné, participant)
-~~~
+</code></pre>
 
-~~~ sdparse
-Papa est malade . \n Dad is sick .
+<pre><code class="language-sdparse">Papa est malade . \n Dad is sick .
 nsubj(malade, Papa)
-~~~
+</code></pre>
 
-~~~ sdparse
-Maman est une bonne cuisinière . \n Mom is a good cook .
+<pre><code class="language-sdparse">Maman est une bonne cuisinière . \n Mom is a good cook .
 nsubj(cuisinière, Maman)
-~~~
+</code></pre>
 
 
 	</div>
@@ -1155,13 +1087,12 @@ nsubj(cuisinière, Maman)
 	<h2><code property="oliasystem:hasTag" lang="">nsubjpass</code>: <div property="rdfs:label">passive nominal subject</div></h2>
 	<div property="rdfs:comment">
 
-A passive nominal subject is a noun phrase which is the syntactic
-subject of a passive clause.
+<p>A passive nominal subject is a noun phrase which is the syntactic
+subject of a passive clause.</p>
 
-~~~ sdparse
-La course a été gagnée par le plus jeune participant . \n The race got won by the youngest participant .
+<pre><code class="language-sdparse">La course a été gagnée par le plus jeune participant . \n The race got won by the youngest participant .
 nsubjpass(gagnée, participant)
-~~~
+</code></pre>
 
 
 	</div>
@@ -1175,28 +1106,25 @@ nsubjpass(gagnée, participant)
 	<h2><code property="oliasystem:hasTag" lang="">nummod</code>: <div property="rdfs:label">numeric modifier</div></h2>
 	<div property="rdfs:comment">
 
-A numeric modifier of a noun is any number phrase that serves to
-modify the meaning of the noun with a quantity.
+<p>A numeric modifier of a noun is any number phrase that serves to
+modify the meaning of the noun with a quantity.</p>
 
-~~~ sdparse
-Sam mangea 3 bonbons \n Sam ate 3 candies
+<pre><code class="language-sdparse">Sam mangea 3 bonbons \n Sam ate 3 candies
 nummod(bonbons, 3)
-~~~
+</code></pre>
 
-~~~ sdparse
-Il perdit presque 13 pourcent  \n He lost almost 14 percent
+<pre><code class="language-sdparse">Il perdit presque 13 pourcent  \n He lost almost 14 percent
 nummod(pourcent, 13)
-~~~
+</code></pre>
 
-Dates are annotated as follows: if present the month is the head, the day is _nummod_, and the year is _nmod_
+<p>Dates are annotated as follows: if present the month is the head, the day is <em>nummod</em>, and the year is <em>nmod</em></p>
 
-~~~ sdparse
-Elle est née le 12 décembre 2011  \n She was born on December 12 2011
+<pre><code class="language-sdparse">Elle est née le 12 décembre 2011  \n She was born on December 12 2011
 nmod(née, décembre)
 nummod(décembre, 12)
 nmod(décembre, 2011)
 det(27, le)
-~~~
+</code></pre>
 
 
 	</div>
@@ -1210,22 +1138,19 @@ det(27, le)
 	<h2><code property="oliasystem:hasTag" lang="">parataxis</code>: <div property="rdfs:label">parataxis</div></h2>
 	<div property="rdfs:comment">
 
-The parataxis relation (from Greek for "place side by side") is a relation between the main verb of a clause and other sentential elements, such as a sentential parenthetical, a clause after a ":" or a ";", or two sentences placed side by side without any explicit coordination or subordination. More information can be found on the universal dependency page ([u-dep/parataxis]())
+<p>The parataxis relation (from Greek for “place side by side”) is a relation between the main verb of a clause and other sentential elements, such as a sentential parenthetical, a clause after a “:” or a “;”, or two sentences placed side by side without any explicit coordination or subordination. More information can be found on the universal dependency page (<a href="">u-dep/parataxis</a>)</p>
 
-~~~ sdparse
-Les enfants jouent tout le temps, jouer est leur travail \n Children play all the time , play is their work  
+<pre><code class="language-sdparse">Les enfants jouent tout le temps, jouer est leur travail \n Children play all the time , play is their work  
 parataxis(jouent, travail)
-~~~
+</code></pre>
 
-~~~ sdparse
-Les enfants ont le droit d'avoir du temps libre ( voir ci-dessous ) \n Children have a right to free time ( see below )
+<pre><code class="language-sdparse">Les enfants ont le droit d'avoir du temps libre ( voir ci-dessous ) \n Children have a right to free time ( see below )
 parataxis(ont, voir)
-~~~
+</code></pre>
 
-~~~ sdparse
-C'est l' idée : les enfants sont le futur \n That is the thought : children are the future
+<pre><code class="language-sdparse">C'est l' idée : les enfants sont le futur \n That is the thought : children are the future
 parataxis(idée, futur)
-~~~
+</code></pre>
 
 
 	</div>
@@ -1239,18 +1164,16 @@ parataxis(idée, futur)
 	<h2><code property="oliasystem:hasTag" lang="">punct</code>: <div property="rdfs:label">punctuation</div></h2>
 	<div property="rdfs:comment">
 
-This is used for any piece of punctuation in a clause, regardless of its function. The punctuation mark is attached to the head of the phrase or clause to which it belongs unless this introduces a non-projective dependency. More discussion on punctuation can be found on the universal dependency page ([u-dep/punct]()).
+<p>This is used for any piece of punctuation in a clause, regardless of its function. The punctuation mark is attached to the head of the phrase or clause to which it belongs unless this introduces a non-projective dependency. More discussion on punctuation can be found on the universal dependency page (<a href="">u-dep/punct</a>).</p>
 
-~~~ sdparse
-Tous les bénéfices sont hors-taxe ! \n All profits are tax-free !
+<pre><code class="language-sdparse">Tous les bénéfices sont hors-taxe ! \n All profits are tax-free !
 punct(hors-taxe, !)
-~~~
+</code></pre>
 
-~~~ sdparse
-S' il pleut , on sera mouillé . \n If it rains , we will get wet .
+<pre><code class="language-sdparse">S' il pleut , on sera mouillé . \n If it rains , we will get wet .
 punct(pleut, ,)
 punct(mouillé, .)
-~~~
+</code></pre>
 
 
 	</div>
@@ -1264,12 +1187,11 @@ punct(mouillé, .)
 	<h2><code property="oliasystem:hasTag" lang="">remnant</code>: <div property="rdfs:label">remnant in ellipsis</div></h2>
 	<div property="rdfs:comment">
 
-The remnant relation is used to analyze cases of ellipsis where there is no function word that can be promoted to take the place of the elided content word. For a full discussion of its use, see the universal dependency description ([u-dep/remnant]()).
+<p>The remnant relation is used to analyze cases of ellipsis where there is no function word that can be promoted to take the place of the elided content word. For a full discussion of its use, see the universal dependency description (<a href="">u-dep/remnant</a>).</p>
 
-Currently this construction is not correctly annotated in the French treebank.
+<p>Currently this construction is not correctly annotated in the French treebank.</p>
 
-~~~ sdparse
-Marie a été à Paris et Miriam à Prague \n Marie went to Paris and Miriam to Prague
+<pre><code class="language-sdparse">Marie a été à Paris et Miriam à Prague \n Marie went to Paris and Miriam to Prague
 nsubj(été-3, Marie-1)
 nmod(été-3, Paris-5)
 case(Paris-5, à-4)
@@ -1277,7 +1199,7 @@ cc(été-3, et-6)
 remnant(Marie-1, Miriam-7)
 case(Prague-9, à-8)
 remnant(Paris-5, Prague-9)
-~~~
+</code></pre>
 
 
 	</div>
@@ -1291,17 +1213,16 @@ remnant(Paris-5, Prague-9)
 	<h2><code property="oliasystem:hasTag" lang="">reparandum</code>: <div property="rdfs:label">overridden disfluency</div></h2>
 	<div property="rdfs:comment">
 
-The `reparandum` relation is used to indicate disfluencies overridden in a speech
-repair. The disfluency is the dependent of the repair.
+<p>The <code>reparandum</code> relation is used to indicate disfluencies overridden in a speech
+repair. The disfluency is the dependent of the repair.</p>
 
-Currently this construction is not annotated in the French treebank (but there are probably no attested uses).
+<p>Currently this construction is not annotated in the French treebank (but there are probably no attested uses).</p>
 
-~~~ sdparse
-Va à-2 droi- à-4 gauche . \n Go to the righ- to the left .
+<pre><code class="language-sdparse">Va à-2 droi- à-4 gauche . \n Go to the righ- to the left .
 nmod(Va, gauche)
 reparandum(gauche, droi-)
 case(droi-, à-2)
-~~~
+</code></pre>
 
 
 	</div>
@@ -1315,19 +1236,17 @@ case(droi-, à-2)
 	<h2><code property="oliasystem:hasTag" lang="">root</code>: <div property="rdfs:label">root</div></h2>
 	<div property="rdfs:comment">
 
-The `root` grammatical relation points to the root of the sentence. A
-fake node `ROOT` is used as the governor. The `ROOT` node is indexed
-with 0, since the indexing of real words in the sentence starts at 1.
+<p>The <code>root</code> grammatical relation points to the root of the sentence. A
+fake node <code>ROOT</code> is used as the governor. The <code>ROOT</code> node is indexed
+with 0, since the indexing of real words in the sentence starts at 1.</p>
 
-~~~ sdparse
-ROOT J' aime les frites . \n I love French fries .
+<pre><code class="language-sdparse">ROOT J' aime les frites . \n I love French fries .
 root(ROOT, aime)
-~~~
+</code></pre>
 
-~~~ sdparse
-ROOT Il est grand . \n He is tall .
+<pre><code class="language-sdparse">ROOT Il est grand . \n He is tall .
 root(ROOT, grand)
-~~~
+</code></pre>
 
 
 	</div>
@@ -1341,19 +1260,17 @@ root(ROOT, grand)
 	<h2><code property="oliasystem:hasTag" lang="">vocative</code>: <div property="rdfs:label">vocative</div></h2>
 	<div property="rdfs:comment">
 
-The `vocative` relation is used to mark a dialogue participant addressed in text (common in conversations, emails and newsgroup postings). The relation links the addressee's name to its host sentence.
+<p>The <code>vocative</code> relation is used to mark a dialogue participant addressed in text (common in conversations, emails and newsgroup postings). The relation links the addressee’s name to its host sentence.</p>
 
-~~~ sdparse
-Les gars , faites attention ! \n Guys , be careful !
+<pre><code class="language-sdparse">Les gars , faites attention ! \n Guys , be careful !
 vocative(faites, gars)
-~~~
+</code></pre>
 
-~~~ sdparse
-David , comment ça va ? \n David, how 's it going ?
+<pre><code class="language-sdparse">David , comment ça va ? \n David, how 's it going ?
 vocative(va, David)
-~~~
+</code></pre>
 
-Note: the `vocative` relation is not currently annotated in the French data.
+<p>Note: the <code>vocative</code> relation is not currently annotated in the French data.</p>
 
 
 	</div>
@@ -1367,22 +1284,19 @@ Note: the `vocative` relation is not currently annotated in the French data.
 	<h2><code property="oliasystem:hasTag" lang="">xcomp</code>: <div property="rdfs:label">open clausal complement</div></h2>
 	<div property="rdfs:comment">
 
-An open clausal complement (`xcomp`) of a verb or an adjective is a predicative or clausal complement without its own subject. The reference of the subject is necessarily determined by an argument external to the xcomp (normally by the object of the next higher clause, if there is one, or else by the subject of the next higher clause). These complements are always non-finite, and they are complements (arguments of the higher verb or adjective) rather than adjuncts/modifiers. The name `xcomp` is borrowed from Lexical-Functional Grammar. 
+<p>An open clausal complement (<code>xcomp</code>) of a verb or an adjective is a predicative or clausal complement without its own subject. The reference of the subject is necessarily determined by an argument external to the xcomp (normally by the object of the next higher clause, if there is one, or else by the subject of the next higher clause). These complements are always non-finite, and they are complements (arguments of the higher verb or adjective) rather than adjuncts/modifiers. The name <code>xcomp</code> is borrowed from Lexical-Functional Grammar.</p>
 
-~~~ sdparse
-Il dit que tu aimes nager \n He says that you like to swim
+<pre><code class="language-sdparse">Il dit que tu aimes nager \n He says that you like to swim
 xcomp(aimes, nager)
-~~~
+</code></pre>
 
-~~~ sdparse
-Je compte y retourner \n I am planning to go back there
+<pre><code class="language-sdparse">Je compte y retourner \n I am planning to go back there
 xcomp(compte, retourner)
-~~~
+</code></pre>
 
-~~~ sdparse
-Je le considère comme un ami \n I consider him as a friend
+<pre><code class="language-sdparse">Je le considère comme un ami \n I consider him as a friend
 xcomp(considère, ami)
-~~~
+</code></pre>
 
 
 	</div>

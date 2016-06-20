@@ -250,52 +250,53 @@ in two places.</p>
 	<h2><code property="oliasystem:hasTag" lang="">acl</code>: <div property="rdfs:label">clausal modifier of noun</div></h2>
 	<div property="rdfs:comment">
 
-`acl` is used for finite and non-finite clauses that modify a nominal (either a noun or a pronoun). The head of the `acl` relation is the noun/pronoun that is modified, and the dependent is the head of the clause that modifies the noun/pronoun.
+<p><code>acl</code> is used for finite and non-finite clauses that modify a nominal (either a noun or a pronoun). The head of the <code>acl</code> relation is the noun/pronoun that is modified, and the dependent is the head of the clause that modifies the noun/pronoun.</p>
 
-`acl` is used in the following cases:
+<p><code>acl</code> is used in the following cases:</p>
 
-* participial modifiers of nouns 
+<ul>
+  <li>participial modifiers of nouns</li>
+</ul>
 
-~~~ sdparse
-Commossa , Fiona May ha parlato
+<pre><code class="language-sdparse">Commossa , Fiona May ha parlato
 acl(Fiona, Commossa)
 nsubj(parlato, Fiona)
 name(Fiona, May)
 aux(parlato, ha)
-~~~
-~~~ sdparse
-Due persone armate di pistola
+</code></pre>
+<pre><code class="language-sdparse">Due persone armate di pistola
 acl(persone, armate)
-~~~
+</code></pre>
 
-* relative clauses, also including free relatives. Note that in Italian relative clauses are assigned a specific relation `acl:relcl`, which is a subtype of `acl`
+<ul>
+  <li>relative clauses, also including free relatives. Note that in Italian relative clauses are assigned a specific relation <code>acl:relcl</code>, which is a subtype of <code>acl</code></li>
+</ul>
 
-~~~ sdparse
-L' inchiesta che coinvolge Bernard Tapie
+<pre><code class="language-sdparse">L' inchiesta che coinvolge Bernard Tapie
 acl:relcl(inchiesta, coinvolge)
-~~~
-~~~ sdparse
-La vita , in cui il mutamento avviene
+</code></pre>
+<pre><code class="language-sdparse">La vita , in cui il mutamento avviene
 acl:relcl(vita, avviene)
-~~~
+</code></pre>
 
-* finite clausal complements of nouns like fatto _fact_, considerazione _consideration_, bisogno _need_
+<ul>
+  <li>finite clausal complements of nouns like fatto <em>fact</em>, considerazione <em>consideration</em>, bisogno <em>need</em></li>
+</ul>
 
-~~~ sdparse
-il fatto che Gianni faccia l' attore
+<pre><code class="language-sdparse">il fatto che Gianni faccia l' attore
 acl(fatto, faccia)
-~~~
+</code></pre>
 
-* infinitival modifiers of nouns
+<ul>
+  <li>infinitival modifiers of nouns</li>
+</ul>
 
-~~~ sdparse
-non è il caso di pensare
+<pre><code class="language-sdparse">non è il caso di pensare
 acl(caso, pensare)
-~~~
-~~~ sdparse
-quello di agevolare l' accesso
+</code></pre>
+<pre><code class="language-sdparse">quello di agevolare l' accesso
 acl(quello, agevolare)
-~~~
+</code></pre>
 
 
 	</div>
@@ -309,37 +310,41 @@ acl(quello, agevolare)
 	<h2><code property="oliasystem:hasTag" lang="">advcl</code>: <div property="rdfs:label">adverbial clause modifier</div></h2>
 	<div property="rdfs:comment">
 
-An adverbial clause modifier is a clause which modifies a verb or other predicate (adjective, etc.), as a modifier not as a core complement. This includes things such as a temporal clause, consequence, conditional clause, purpose clause, etc. The dependent must be clausal (or else it is an advmod) and the dependent is the main predicate of the clause.
+<p>An adverbial clause modifier is a clause which modifies a verb or other predicate (adjective, etc.), as a modifier not as a core complement. This includes things such as a temporal clause, consequence, conditional clause, purpose clause, etc. The dependent must be clausal (or else it is an advmod) and the dependent is the main predicate of the clause.</p>
 
-`advcl` cover the following typology of cases:
+<p><code>advcl</code> cover the following typology of cases:</p>
 
-* participial modifiers
+<ul>
+  <li>participial modifiers</li>
+</ul>
 
-~~~ sdparse
-Muore folgorata sotto la doccia
+<pre><code class="language-sdparse">Muore folgorata sotto la doccia
 advcl(Muore, folgorata)
-~~~
+</code></pre>
 
-* finite clausal modifiers
+<ul>
+  <li>finite clausal modifiers</li>
+</ul>
 
-~~~ sdparse
-Quando lui muore l' azienda sbanda paurosamente
+<pre><code class="language-sdparse">Quando lui muore l' azienda sbanda paurosamente
 advcl(muore, sbanda)
-~~~
+</code></pre>
 
-* infinitival modifiers
+<ul>
+  <li>infinitival modifiers</li>
+</ul>
 
-~~~ sdparse
-Mi fecero pagare gli hezbollah per liberare due ostaggi
+<pre><code class="language-sdparse">Mi fecero pagare gli hezbollah per liberare due ostaggi
 advcl(pagare, liberare)
-~~~
+</code></pre>
 
-* gerundival modifiers
+<ul>
+  <li>gerundival modifiers</li>
+</ul>
 
-~~~ sdparse
-risolvere i problemi di approvvigionamento alimentare acquistando una fazenda
+<pre><code class="language-sdparse">risolvere i problemi di approvvigionamento alimentare acquistando una fazenda
 advcl(risolvere, acquistando)
-~~~
+</code></pre>
 
 
 	</div>
@@ -353,34 +358,33 @@ advcl(risolvere, acquistando)
 	<h2><code property="oliasystem:hasTag" lang="">advmod</code>: <div property="rdfs:label">adverbial modifier</div></h2>
 	<div property="rdfs:comment">
 
-An adverbial modifier of a word is a (non-clausal) adverb or adverbial phrase that serves to modify the meaning of the word. In Italian adverbial modifiers, cover all adverbs functioning as modifiers as well as pronominal adverbs here marked as clitic pronouns.
+<p>An adverbial modifier of a word is a (non-clausal) adverb or adverbial phrase that serves to modify the meaning of the word. In Italian adverbial modifiers, cover all adverbs functioning as modifiers as well as pronominal adverbs here marked as clitic pronouns.</p>
 
-* adverbial modifiers of different types of parts of speech
+<ul>
+  <li>adverbial modifiers of different types of parts of speech</li>
+</ul>
 
-~~~ sdparse
-Si abbatte indistintamente su uomini e donne
+<pre><code class="language-sdparse">Si abbatte indistintamente su uomini e donne
 advmod(abbatte, indistintamente)
-~~~
-~~~ sdparse
-Poco dopo li fucilarono
+</code></pre>
+<pre><code class="language-sdparse">Poco dopo li fucilarono
 advmod(dopo, poco)
 advmod(fucilarono, dopo)
-~~~
-~~~ sdparse
-una strada abbastanza frequentata
+</code></pre>
+<pre><code class="language-sdparse">una strada abbastanza frequentata
 advmod(frequentata, abbastanza)
-~~~
-~~~ sdparse
-cinque anni fa
+</code></pre>
+<pre><code class="language-sdparse">cinque anni fa
 advmod(anni, fa)
-~~~
+</code></pre>
 
-* pronominal adverbs modifying verbs
+<ul>
+  <li>pronominal adverbs modifying verbs</li>
+</ul>
 
-~~~ sdparse
-di questi problemi se ne occupano i preti
+<pre><code class="language-sdparse">di questi problemi se ne occupano i preti
 advmod(occupano, ne)
-~~~
+</code></pre>
 
 
 
@@ -395,20 +399,17 @@ advmod(occupano, ne)
 	<h2><code property="oliasystem:hasTag" lang="">amod</code>: <div property="rdfs:label">adjectival modifier</div></h2>
 	<div property="rdfs:comment">
 
-An adjectival modifier is any adjective that serves to modify the meaning of a nominal head. In Italian, adjectival modifiers can occur both in pre- and post-nominal position. Note that in Italian the class of adjectives also includes ordinal numerals which thus can be adjectival modifiers.
+<p>An adjectival modifier is any adjective that serves to modify the meaning of a nominal head. In Italian, adjectival modifiers can occur both in pre- and post-nominal position. Note that in Italian the class of adjectives also includes ordinal numerals which thus can be adjectival modifiers.</p>
 
-~~~ sdparse
-la magistratura militare
+<pre><code class="language-sdparse">la magistratura militare
 amod(magistratura, militare)
-~~~
-~~~ sdparse
-i prossimi giorni
+</code></pre>
+<pre><code class="language-sdparse">i prossimi giorni
 amod(giorni, prossimi)
-~~~
-~~~ sdparse
-la prima segnalazione
+</code></pre>
+<pre><code class="language-sdparse">la prima segnalazione
 amod(segnalazione, prima)
-~~~
+</code></pre>
 
 
 	</div>
@@ -422,24 +423,20 @@ amod(segnalazione, prima)
 	<h2><code property="oliasystem:hasTag" lang="">appos</code>: <div property="rdfs:label">appositional modifier</div></h2>
 	<div property="rdfs:comment">
 
-An appositional modifier of a noun is a nominal immediately following the first noun that serves to define or modify that noun. It includes parenthesized examples, as well as defining abbreviations in one of these structures.
+<p>An appositional modifier of a noun is a nominal immediately following the first noun that serves to define or modify that noun. It includes parenthesized examples, as well as defining abbreviations in one of these structures.</p>
 
-~~~ sdparse
-una società italo libica , la Gatoil
+<pre><code class="language-sdparse">una società italo libica , la Gatoil
 appos(società, Gatoil)
-~~~
-~~~ sdparse
-la ragazza , figlia dei custodi del caseggiato dove abita
+</code></pre>
+<pre><code class="language-sdparse">la ragazza , figlia dei custodi del caseggiato dove abita
 appos(ragazza, figlia)
-~~~
-~~~ sdparse
-" Mondo Giusto " , una organizzazione non governativa
+</code></pre>
+<pre><code class="language-sdparse">" Mondo Giusto " , una organizzazione non governativa
 appos(Mondo, organizzazione)
-~~~
-~~~ sdparse
-una giovane turista , Tiziana Amone di 20 anni
+</code></pre>
+<pre><code class="language-sdparse">una giovane turista , Tiziana Amone di 20 anni
 appos(turista, Tiziana)
-~~~
+</code></pre>
 
 
 	</div>
@@ -453,39 +450,42 @@ appos(turista, Tiziana)
 	<h2><code property="oliasystem:hasTag" lang="">aux</code>: <div property="rdfs:label">auxiliary</div></h2>
 	<div property="rdfs:comment">
 
-An auxiliary of a clause is a non-main verb of the clause, e.g., a modal auxiliary (potere _to can_ or dovere _must_), or a form of essere _to be_, avere _to have_ or stare in a periphrastic tense. Note that the auxiliary verb used to construct the passive voice (essere or venire) is not labeled aux but auxpass.
+<p>An auxiliary of a clause is a non-main verb of the clause, e.g., a modal auxiliary (potere <em>to can</em> or dovere <em>must</em>), or a form of essere <em>to be</em>, avere <em>to have</em> or stare in a periphrastic tense. Note that the auxiliary verb used to construct the passive voice (essere or venire) is not labeled aux but auxpass.</p>
 
-* auxiliary avere
+<ul>
+  <li>auxiliary avere</li>
+</ul>
 
-~~~ sdparse
-hanno sparato a sangue freddo
+<pre><code class="language-sdparse">hanno sparato a sangue freddo
 aux(sparato, hanno)
-~~~
+</code></pre>
 
-* auxiliary essere
+<ul>
+  <li>auxiliary essere</li>
+</ul>
 
-~~~ sdparse
-il sequestro era avvenuto
+<pre><code class="language-sdparse">il sequestro era avvenuto
 aux(avvenuto, era)
-~~~
+</code></pre>
 
-* auxiliary stare
+<ul>
+  <li>auxiliary stare</li>
+</ul>
 
-~~~ sdparse
-stavano realizzando un serbatoio
+<pre><code class="language-sdparse">stavano realizzando un serbatoio
 aux(realizzando, stavano)
-~~~
+</code></pre>
 
-* modal auxiliaries
+<ul>
+  <li>modal auxiliaries</li>
+</ul>
 
-~~~ sdparse
-non l' hanno potuto ascoltare
+<pre><code class="language-sdparse">non l' hanno potuto ascoltare
 aux(ascoltare, potuto)
-~~~
-~~~ sdparse
-dovrà sparire la figura
+</code></pre>
+<pre><code class="language-sdparse">dovrà sparire la figura
 aux(sparire, dovrà)
-~~~
+</code></pre>
 
 
 	</div>
@@ -499,26 +499,23 @@ aux(sparire, dovrà)
 	<h2><code property="oliasystem:hasTag" lang="">auxpass</code>: <div property="rdfs:label">passive auxiliary</div></h2>
 	<div property="rdfs:comment">
 
-A passive auxiliary (essere / venire) of a clause is a non-main verb of the clause which contains the passive information.
+<p>A passive auxiliary (essere / venire) of a clause is a non-main verb of the clause which contains the passive information.</p>
 
-~~~ sdparse
-L' escursione era guidata da Castiglioni
+<pre><code class="language-sdparse">L' escursione era guidata da Castiglioni
 auxpass(guidata, era)
-~~~
+</code></pre>
 
-Note that periphrastic tenses in passive constructions are marked as follows, by distinguishing between the passive auxiliary (i.e. that immediately preceding the verbal head) which is marked as auxpass and the tense auxiliaries (the preceding ones) which are marked as aux.
+<p>Note that periphrastic tenses in passive constructions are marked as follows, by distinguishing between the passive auxiliary (i.e. that immediately preceding the verbal head) which is marked as auxpass and the tense auxiliaries (the preceding ones) which are marked as aux.</p>
 
-~~~ sdparse
-è stato trovato
+<pre><code class="language-sdparse">è stato trovato
 auxpass(trovato, stato)
 aux(trovato, è)
-~~~
-~~~ sdparse
-potrebbe essere stato trovato
+</code></pre>
+<pre><code class="language-sdparse">potrebbe essere stato trovato
 auxpass(trovato, stato)
 aux(trovato, essere)
 aux(trovato, potrebbe)
-~~~
+</code></pre>
 
 
 	</div>
@@ -532,21 +529,19 @@ aux(trovato, potrebbe)
 	<h2><code property="oliasystem:hasTag" lang="">case</code>: <div property="rdfs:label">case marking</div></h2>
 	<div property="rdfs:comment">
 
-In Italian, the case relation is used for any preposition introducing a noun, pronoun, adjective, adverb. Prepositions are treated as dependents of the noun they attach to or introduce in an “extended nominal projection”. Thus, contrary to previous versions of the Italian Treebank, UD does not treat a preposition as a mediator between a modified word and its object. The case relation aims at providing a more uniform analysis of prepositions and case in morphologically rich languages.
+<p>In Italian, the case relation is used for any preposition introducing a noun, pronoun, adjective, adverb. Prepositions are treated as dependents of the noun they attach to or introduce in an “extended nominal projection”. Thus, contrary to previous versions of the Italian Treebank, UD does not treat a preposition as a mediator between a modified word and its object. The case relation aims at providing a more uniform analysis of prepositions and case in morphologically rich languages.</p>
 
-~~~ sdparse
-Sono d' accordo su il principio
+<pre><code class="language-sdparse">Sono d' accordo su il principio
 case(principio, su)
 det(principio, il)
 nmod(Sono, accordo)
 nmod(accordo, principio)
-~~~
-~~~ sdparse
-il ministro di l' Interno
+</code></pre>
+<pre><code class="language-sdparse">il ministro di l' Interno
 case(Interno, di)
 det(Interno, l')
 nmod(ministro, Interno)
-~~~
+</code></pre>
 
 
 	</div>
@@ -560,25 +555,21 @@ nmod(ministro, Interno)
 	<h2><code property="oliasystem:hasTag" lang="">cc</code>: <div property="rdfs:label">coordinating conjunction</div></h2>
 	<div property="rdfs:comment">
 
-A coordinating conjunction relation (cc) holds between the head conjunct of a coordinate structure (which is taken to be the first conjunct) and any of the coordinating conjunctions involved in the structure. This also includes the first element in paired conjunctions like sia … sia “both … and”. cc also marks the relation between a sentence initial coordinating conjunction and the sentence root. Note that punctuation is never treated as coordinating conjunction. For more on coordination, see the conj relation.
+<p>A coordinating conjunction relation (cc) holds between the head conjunct of a coordinate structure (which is taken to be the first conjunct) and any of the coordinating conjunctions involved in the structure. This also includes the first element in paired conjunctions like sia … sia “both … and”. cc also marks the relation between a sentence initial coordinating conjunction and the sentence root. Note that punctuation is never treated as coordinating conjunction. For more on coordination, see the conj relation.</p>
 
-~~~ sdparse
-Due bambini e quattro tecnici
+<pre><code class="language-sdparse">Due bambini e quattro tecnici
 cc(bambini, e)
-~~~
-~~~ sdparse
-a il mare e su le strade
+</code></pre>
+<pre><code class="language-sdparse">a il mare e su le strade
 cc(mare, e)
-~~~
-~~~ sdparse
-né auspicabile né fattibile
+</code></pre>
+<pre><code class="language-sdparse">né auspicabile né fattibile
 cc(auspicabile, né)
 cc(auspicabile, né)
-~~~
-~~~ sdparse
-Ma non è il caso di pensare
+</code></pre>
+<pre><code class="language-sdparse">Ma non è il caso di pensare
 cc(caso, Ma)
-~~~
+</code></pre>
 
 
 	</div>
@@ -592,59 +583,60 @@ cc(caso, Ma)
 	<h2><code property="oliasystem:hasTag" lang="">ccomp</code>: <div property="rdfs:label">clausal complement</div></h2>
 	<div property="rdfs:comment">
 
-A clausal complement (ccomp) of a verb or adjective is a dependent clause which is a core argument. Such clausal complements may be finite or nonfinite. If the subject of the clausal complement is controlled (that is, must be the same as the higher subject, object or indirect object, with no other possible interpretation) the appropriate relation is xcomp.
+<p>A clausal complement (ccomp) of a verb or adjective is a dependent clause which is a core argument. Such clausal complements may be finite or nonfinite. If the subject of the clausal complement is controlled (that is, must be the same as the higher subject, object or indirect object, with no other possible interpretation) the appropriate relation is xcomp.</p>
 
-* finite clausal complement of verbal head
+<ul>
+  <li>finite clausal complement of verbal head</li>
+</ul>
 
-~~~ sdparse
-Le ha detto che il rapimento era avvenuto a scopo di furto
+<pre><code class="language-sdparse">Le ha detto che il rapimento era avvenuto a scopo di furto
 ccomp(detto, avvenuto)
 nsubj(avvenuto, rapimento)
 mark(avvenuto, che)
-~~~
-~~~ sdparse
-Non so se qualche agenzia organizza viaggi
+</code></pre>
+<pre><code class="language-sdparse">Non so se qualche agenzia organizza viaggi
 ccomp(so, organizza)
 nsubj(organizza, agenzia)
 mark(organizza, se)
-~~~
-~~~ sdparse
-zio Adelio avrebbe preferito studiassero in Italia
+</code></pre>
+<pre><code class="language-sdparse">zio Adelio avrebbe preferito studiassero in Italia
 ccomp(preferito, studiassero)
 aux(preferito, avrebbe)
 nsubj(preferito, zio)
-~~~
+</code></pre>
 
-* finite clausal complement of adjectival head
+<ul>
+  <li>finite clausal complement of adjectival head</li>
+</ul>
 
-~~~ sdparse
-era sicuro che non ci fossero pericoli
+<pre><code class="language-sdparse">era sicuro che non ci fossero pericoli
 ccomp(sicuro, fossero)
 mark(fossero, che)
 nsubj(fossero, pericoli)
-~~~
+</code></pre>
 
-* infinite clausal complement of verbal head
+<ul>
+  <li>infinite clausal complement of verbal head</li>
+</ul>
 
-~~~ sdparse
-bisogna avviare un dialogo
+<pre><code class="language-sdparse">bisogna avviare un dialogo
 ccomp(bisogna, avviare)
 dobj(avviare, dialogo)
-~~~
-~~~ sdparse
-si fa per dire
+</code></pre>
+<pre><code class="language-sdparse">si fa per dire
 ccomp(fa, dire)
 mark(dire, per)
-~~~
+</code></pre>
 
-* infinite clausal complement of essere. In this case, the copula is treated as a head
+<ul>
+  <li>infinite clausal complement of essere. In this case, the copula is treated as a head</li>
+</ul>
 
-~~~ sdparse
-il problema allora non è domandar si
+<pre><code class="language-sdparse">il problema allora non è domandar si
 ccomp(è, domandar)
 expl(domandar, si)
 neg(è, non)
-~~~
+</code></pre>
 
 
 	</div>
@@ -658,32 +650,27 @@ neg(è, non)
 	<h2><code property="oliasystem:hasTag" lang="">compound</code>: <div property="rdfs:label">compound</div></h2>
 	<div property="rdfs:comment">
 
-`compound` in Italian is used for noun compounds and numbers (e.g. numbers expressed alphabetically).
+<p><code>compound</code> in Italian is used for noun compounds and numbers (e.g. numbers expressed alphabetically).</p>
 
-Examples:
+<p>Examples:</p>
 
-~~~ sdparse
-gli uffici leva
+<pre><code class="language-sdparse">gli uffici leva
 compound(uffici, leva)
-~~~
-~~~ sdparse
-tra donne deputate
+</code></pre>
+<pre><code class="language-sdparse">tra donne deputate
 compound(donne, deputate)
-~~~
-~~~ sdparse
-la parola chiave
+</code></pre>
+<pre><code class="language-sdparse">la parola chiave
 compound(parola, chiave)
-~~~
-~~~ sdparse
-Oggi la 10 km donne
+</code></pre>
+<pre><code class="language-sdparse">Oggi la 10 km donne
 compound(km, donne)
 det(km, la)
 nummod(km, 10)
-~~~
-~~~ sdparse
-200 mila
+</code></pre>
+<pre><code class="language-sdparse">200 mila
 compound(mila, 200)
-~~~
+</code></pre>
 
 
 
@@ -698,47 +685,47 @@ compound(mila, 200)
 	<h2><code property="oliasystem:hasTag" lang="">conj</code>: <div property="rdfs:label">conjunct</div></h2>
 	<div property="rdfs:comment">
 
-A conjunct is the relation between two elements connected by a coordinating conjunction, such as and, or, etc. The head of the relation is the first conjunct and all the other conjuncts depend on it via the conj relation.
+<p>A conjunct is the relation between two elements connected by a coordinating conjunction, such as and, or, etc. The head of the relation is the first conjunct and all the other conjuncts depend on it via the conj relation.</p>
 
-* coordination with conjunctions
+<ul>
+  <li>coordination with conjunctions</li>
+</ul>
 
-~~~ sdparse
-Siamo andati alla stazione Termini e lo abbiamo chiesto
+<pre><code class="language-sdparse">Siamo andati alla stazione Termini e lo abbiamo chiesto
 con(andati, e)
 conj(andati, chiesto)
-~~~
-~~~ sdparse
-sparatorie e rapine
+</code></pre>
+<pre><code class="language-sdparse">sparatorie e rapine
 con(sparatorie, e)
 conj(sparatorie, rapine)
-~~~
-~~~ sdparse
-qua e là
+</code></pre>
+<pre><code class="language-sdparse">qua e là
 con(qua, e)
 conj(qua, là)
-~~~
+</code></pre>
 
-* Asyndetic coordination with omitted conjunction. Commas or other punctuation symbols delimit the conjuncts. 
+<ul>
+  <li>Asyndetic coordination with omitted conjunction. Commas or other punctuation symbols delimit the conjuncts.</li>
+</ul>
 
-~~~ sdparse
-Per il fratello di Luigi , la cognata , i nipoti
+<pre><code class="language-sdparse">Per il fratello di Luigi , la cognata , i nipoti
 conj(fratello, cognata)
 conj(fratello, nipoti)
-~~~
-~~~ sdparse
-quanto gli piaceva , quanto ne era innamorato
+</code></pre>
+<pre><code class="language-sdparse">quanto gli piaceva , quanto ne era innamorato
 conj(piaceva, innamorato)
 aux(innamorato, era)
-~~~
+</code></pre>
 
-* mixed coordination
+<ul>
+  <li>mixed coordination</li>
+</ul>
 
-~~~ sdparse
-l' ho vista brutta , ma poi si è ripreso
+<pre><code class="language-sdparse">l' ho vista brutta , ma poi si è ripreso
 conj(vista, ripreso)
 punct(vista, , )
 con(vista, ma)
-~~~
+</code></pre>
 
 
 
@@ -753,45 +740,40 @@ con(vista, ma)
 	<h2><code property="oliasystem:hasTag" lang="">cop</code>: <div property="rdfs:label">copula</div></h2>
 	<div property="rdfs:comment">
 
-A copula is the relation between the complement of a copular verb and the copular verb essere (only). The copula be is not treated as the head of a clause, but rather as the dependent of a lexical predicate, as exemplified below. 
+<p>A copula is the relation between the complement of a copular verb and the copular verb essere (only). The copula be is not treated as the head of a clause, but rather as the dependent of a lexical predicate, as exemplified below.</p>
 
-~~~ sdparse
-I cinque sarebbero tutti immigrati clandestini
+<pre><code class="language-sdparse">I cinque sarebbero tutti immigrati clandestini
 nsubj(immigrati, cinque)
 cop(immigrati, sarebbero)
-~~~
-~~~ sdparse
-Per questo sono ambiziosi
+</code></pre>
+<pre><code class="language-sdparse">Per questo sono ambiziosi
 cop(ambiziosi, sono)
-~~~
-~~~ sdparse
-Secondo l' Onu sono 200 mila le persone
+</code></pre>
+<pre><code class="language-sdparse">Secondo l' Onu sono 200 mila le persone
 nsubj(persone, mila)
 compound(mila, 200)
 cop(mila, sono)
-~~~
+</code></pre>
 
-This analysis is generally not adopted when the predicate is a prepositional phrase, in which case the nominal part of the prepositional phrase is the head of the clause, with a few exception in case of idiomatic forms, such as _in forma_ *in shape*, expressing a property.
+<p>This analysis is generally not adopted when the predicate is a prepositional phrase, in which case the nominal part of the prepositional phrase is the head of the clause, with a few exception in case of idiomatic forms, such as <em>in forma</em> <em>in shape</em>, expressing a property.</p>
 
-~~~ sdparse
-La scultura è di il pachistano Hamad Butt
+<pre><code class="language-sdparse">La scultura è di il pachistano Hamad Butt
 nsubj(è, scultura)
 case(Hamad, di)
 det(Hamad, il)
 nmod(è, Hamad)
 amod(Hamad, pachistano)
 name(Hamad, Butt)
-~~~
+</code></pre>
 
-If the copula is accompanied by other verbal auxiliaries (e.g. for tense), they are taken as dependents of the lexical predicate:
+<p>If the copula is accompanied by other verbal auxiliaries (e.g. for tense), they are taken as dependents of the lexical predicate:</p>
 
-~~~ sdparse
-Non venne mai chiarito quale formazione era stata responsabile
+<pre><code class="language-sdparse">Non venne mai chiarito quale formazione era stata responsabile
 det(formazione, quale)
 nsubj(responsabile, formazione)
 aux(responsabile, era)
 cop(responsabile, stata)
-~~~
+</code></pre>
 
 
 
@@ -806,28 +788,25 @@ cop(responsabile, stata)
 	<h2><code property="oliasystem:hasTag" lang="">csubj</code>: <div property="rdfs:label">clausal subject</div></h2>
 	<div property="rdfs:comment">
 
-A clausal subject is a clausal syntactic subject of a clause, i.e., the subject is itself a clause. The governor of this relation might not always be a verb: when the verb is a copular verb, the root of the clause is the complement of the copular verb. The dependent is the main lexical verb or other predicate of the subject clause. 
+<p>A clausal subject is a clausal syntactic subject of a clause, i.e., the subject is itself a clause. The governor of this relation might not always be a verb: when the verb is a copular verb, the root of the clause is the complement of the copular verb. The dependent is the main lexical verb or other predicate of the subject clause.</p>
 
-Examples:
+<p>Examples:</p>
 
-~~~ sdparse
-È ora che il divario con l' uomo venga salvato
+<pre><code class="language-sdparse">È ora che il divario con l' uomo venga salvato
 csubj(ora, salvato)
 aux(salvato, venga)
-~~~
+</code></pre>
 
-~~~ sdparse
-È stato facile ricostruire le telefonate
+<pre><code class="language-sdparse">È stato facile ricostruire le telefonate
 csubj(facile, ricostruire)
 aux(facile, È)
 cop(facile, stato)
-~~~
+</code></pre>
 
-~~~ sdparse
-Sbarcare a l' aeroporto di Kinshasa è una vera e propria avventura
+<pre><code class="language-sdparse">Sbarcare a l' aeroporto di Kinshasa è una vera e propria avventura
 csubj(avventura, Sbarcare)
 cop(avventura, è)
-~~~
+</code></pre>
 
 
 
@@ -842,8 +821,8 @@ cop(avventura, è)
 	<h2><code property="oliasystem:hasTag" lang="">csubjpass</code>: <div property="rdfs:label">clausal passive subject</div></h2>
 	<div property="rdfs:comment">
 
-This document is a placeholder for the language-specific documentation
-for `csubjpass`.
+<p>This document is a placeholder for the language-specific documentation
+for <code>csubjpass</code>.</p>
 
 
 	</div>
@@ -857,8 +836,8 @@ for `csubjpass`.
 	<h2><code property="oliasystem:hasTag" lang="">dep</code>: <div property="rdfs:label">unspecified dependency</div></h2>
 	<div property="rdfs:comment">
 
-This document is a placeholder for the language-specific documentation
-for `dep`.
+<p>This document is a placeholder for the language-specific documentation
+for <code>dep</code>.</p>
 
 
 	</div>
@@ -872,8 +851,8 @@ for `dep`.
 	<h2><code property="oliasystem:hasTag" lang="">det</code>: <div property="rdfs:label">determiner</div></h2>
 	<div property="rdfs:comment">
 
-This document is a placeholder for the language-specific documentation
-for `det`.
+<p>This document is a placeholder for the language-specific documentation
+for <code>det</code>.</p>
 
 
 	</div>
@@ -887,8 +866,8 @@ for `det`.
 	<h2><code property="oliasystem:hasTag" lang="">discourse</code>: <div property="rdfs:label">discourse element</div></h2>
 	<div property="rdfs:comment">
 
-This document is a placeholder for the language-specific documentation
-for `discourse`.
+<p>This document is a placeholder for the language-specific documentation
+for <code>discourse</code>.</p>
 
 
 	</div>
@@ -902,7 +881,7 @@ for `discourse`.
 	<h2><code property="oliasystem:hasTag" lang="">dislocated</code>: <div property="rdfs:label">dislocated elements</div></h2>
 	<div property="rdfs:comment">
 
-`dislocated` is not used.
+<p><code>dislocated</code> is not used.</p>
 
 
 	</div>
@@ -916,8 +895,8 @@ for `discourse`.
 	<h2><code property="oliasystem:hasTag" lang="">dobj</code>: <div property="rdfs:label">direct object</div></h2>
 	<div property="rdfs:comment">
 
-This document is a placeholder for the language-specific documentation
-for `dobj`.
+<p>This document is a placeholder for the language-specific documentation
+for <code>dobj</code>.</p>
 
 
 	</div>
@@ -931,8 +910,8 @@ for `dobj`.
 	<h2><code property="oliasystem:hasTag" lang="">expl</code>: <div property="rdfs:label">expletive</div></h2>
 	<div property="rdfs:comment">
 
-This document is a placeholder for the language-specific documentation
-for `expl`.
+<p>This document is a placeholder for the language-specific documentation
+for <code>expl</code>.</p>
 
 
 	</div>
@@ -946,8 +925,8 @@ for `expl`.
 	<h2><code property="oliasystem:hasTag" lang="">foreign</code>: <div property="rdfs:label">foreign words</div></h2>
 	<div property="rdfs:comment">
 
-This document is a placeholder for the language-specific documentation
-for `foreign`.
+<p>This document is a placeholder for the language-specific documentation
+for <code>foreign</code>.</p>
 
 
 	</div>
@@ -961,7 +940,7 @@ for `foreign`.
 	<h2><code property="oliasystem:hasTag" lang="">goeswith</code>: <div property="rdfs:label">goes with</div></h2>
 	<div property="rdfs:comment">
 
-`goeswith` is not used.
+<p><code>goeswith</code> is not used.</p>
 
 
 	</div>
@@ -975,8 +954,8 @@ for `foreign`.
 	<h2><code property="oliasystem:hasTag" lang="">iobj</code>: <div property="rdfs:label">indirect object</div></h2>
 	<div property="rdfs:comment">
 
-This document is a placeholder for the language-specific documentation
-for `iobj`.
+<p>This document is a placeholder for the language-specific documentation
+for <code>iobj</code>.</p>
 
 
 	</div>
@@ -990,7 +969,7 @@ for `iobj`.
 	<h2><code property="oliasystem:hasTag" lang="">list</code>: <div property="rdfs:label">list</div></h2>
 	<div property="rdfs:comment">
 
-`list` is not used. We analyse items in a list as separate sentences or conjunctions.
+<p><code>list</code> is not used. We analyse items in a list as separate sentences or conjunctions.</p>
 
 
 	</div>
@@ -1004,8 +983,8 @@ for `iobj`.
 	<h2><code property="oliasystem:hasTag" lang="">mark</code>: <div property="rdfs:label">marker</div></h2>
 	<div property="rdfs:comment">
 
-This document is a placeholder for the language-specific documentation
-for `mark`.
+<p>This document is a placeholder for the language-specific documentation
+for <code>mark</code>.</p>
 
 
 	</div>
@@ -1019,8 +998,8 @@ for `mark`.
 	<h2><code property="oliasystem:hasTag" lang="">mwe</code>: <div property="rdfs:label">multi-word expression</div></h2>
 	<div property="rdfs:comment">
 
-This document is a placeholder for the language-specific documentation
-for `mwe`.
+<p>This document is a placeholder for the language-specific documentation
+for <code>mwe</code>.</p>
 
 
 	</div>
@@ -1034,8 +1013,8 @@ for `mwe`.
 	<h2><code property="oliasystem:hasTag" lang="">name</code>: <div property="rdfs:label">name</div></h2>
 	<div property="rdfs:comment">
 
-This document is a placeholder for the language-specific documentation
-for `name`.
+<p>This document is a placeholder for the language-specific documentation
+for <code>name</code>.</p>
 
 
 	</div>
@@ -1049,8 +1028,8 @@ for `name`.
 	<h2><code property="oliasystem:hasTag" lang="">neg</code>: <div property="rdfs:label">negation modifier</div></h2>
 	<div property="rdfs:comment">
 
-This document is a placeholder for the language-specific documentation
-for `neg`.
+<p>This document is a placeholder for the language-specific documentation
+for <code>neg</code>.</p>
 
 
 	</div>
@@ -1064,8 +1043,8 @@ for `neg`.
 	<h2><code property="oliasystem:hasTag" lang="">nmod</code>: <div property="rdfs:label">nominal modifier</div></h2>
 	<div property="rdfs:comment">
 
-This document is a placeholder for the language-specific documentation
-for `nmod`.
+<p>This document is a placeholder for the language-specific documentation
+for <code>nmod</code>.</p>
 
 
 	</div>
@@ -1079,8 +1058,8 @@ for `nmod`.
 	<h2><code property="oliasystem:hasTag" lang="">nsubj</code>: <div property="rdfs:label">nominal subject</div></h2>
 	<div property="rdfs:comment">
 
-This document is a placeholder for the language-specific documentation
-for `nsubj`.
+<p>This document is a placeholder for the language-specific documentation
+for <code>nsubj</code>.</p>
 
 
 	</div>
@@ -1094,8 +1073,8 @@ for `nsubj`.
 	<h2><code property="oliasystem:hasTag" lang="">nsubjpass</code>: <div property="rdfs:label">passive nominal subject</div></h2>
 	<div property="rdfs:comment">
 
-This document is a placeholder for the language-specific documentation
-for `nsubjpass`.
+<p>This document is a placeholder for the language-specific documentation
+for <code>nsubjpass</code>.</p>
 
 
 	</div>
@@ -1109,8 +1088,8 @@ for `nsubjpass`.
 	<h2><code property="oliasystem:hasTag" lang="">nummod</code>: <div property="rdfs:label">numeric modifier</div></h2>
 	<div property="rdfs:comment">
 
-This document is a placeholder for the language-specific documentation
-for `nummod`.
+<p>This document is a placeholder for the language-specific documentation
+for <code>nummod</code>.</p>
 
 
 	</div>
@@ -1124,8 +1103,8 @@ for `nummod`.
 	<h2><code property="oliasystem:hasTag" lang="">parataxis</code>: <div property="rdfs:label">parataxis</div></h2>
 	<div property="rdfs:comment">
 
-This document is a placeholder for the language-specific documentation
-for `parataxis`.
+<p>This document is a placeholder for the language-specific documentation
+for <code>parataxis</code>.</p>
 
 
 	</div>
@@ -1139,8 +1118,8 @@ for `parataxis`.
 	<h2><code property="oliasystem:hasTag" lang="">punct</code>: <div property="rdfs:label">punctuation</div></h2>
 	<div property="rdfs:comment">
 
-This document is a placeholder for the language-specific documentation
-for `punct`.
+<p>This document is a placeholder for the language-specific documentation
+for <code>punct</code>.</p>
 
 
 	</div>
@@ -1154,7 +1133,7 @@ for `punct`.
 	<h2><code property="oliasystem:hasTag" lang="">remnant</code>: <div property="rdfs:label">remnant in ellipsis</div></h2>
 	<div property="rdfs:comment">
 
-`remnant` is not used.
+<p><code>remnant</code> is not used.</p>
 
 
 	</div>
@@ -1168,7 +1147,7 @@ for `punct`.
 	<h2><code property="oliasystem:hasTag" lang="">reparandum</code>: <div property="rdfs:label">overridden disfluency</div></h2>
 	<div property="rdfs:comment">
 
-`reparandum` is not used.
+<p><code>reparandum</code> is not used.</p>
 
 
 	</div>
@@ -1182,8 +1161,8 @@ for `punct`.
 	<h2><code property="oliasystem:hasTag" lang="">root</code>: <div property="rdfs:label">root</div></h2>
 	<div property="rdfs:comment">
 
-This document is a placeholder for the language-specific documentation
-for `root`.
+<p>This document is a placeholder for the language-specific documentation
+for <code>root</code>.</p>
 
 
 	</div>
@@ -1197,8 +1176,8 @@ for `root`.
 	<h2><code property="oliasystem:hasTag" lang="">vocative</code>: <div property="rdfs:label">vocative</div></h2>
 	<div property="rdfs:comment">
 
-This document is a placeholder for the language-specific documentation
-for `vocative`.
+<p>This document is a placeholder for the language-specific documentation
+for <code>vocative</code>.</p>
 
 
 	</div>
@@ -1212,8 +1191,8 @@ for `vocative`.
 	<h2><code property="oliasystem:hasTag" lang="">xcomp</code>: <div property="rdfs:label">open clausal complement</div></h2>
 	<div property="rdfs:comment">
 
-This document is a placeholder for the language-specific documentation
-for `xcomp`.
+<p>This document is a placeholder for the language-specific documentation
+for <code>xcomp</code>.</p>
 
 
 	</div>

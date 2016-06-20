@@ -250,8 +250,8 @@ in two places.</p>
 	<h2><code property="oliasystem:hasTag" lang="">acl</code>: <div property="rdfs:label">clausal modifier of noun</div></h2>
 	<div property="rdfs:comment">
 
-This document is a placeholder for the language-specific documentation
-for `acl`.
+<p>This document is a placeholder for the language-specific documentation
+for <code>acl</code>.</p>
 
 
 	</div>
@@ -265,8 +265,8 @@ for `acl`.
 	<h2><code property="oliasystem:hasTag" lang="">advcl</code>: <div property="rdfs:label">adverbial clause modifier</div></h2>
 	<div property="rdfs:comment">
 
-This document is a placeholder for the language-specific documentation
-for `advcl`.
+<p>This document is a placeholder for the language-specific documentation
+for <code>advcl</code>.</p>
 
 
 	</div>
@@ -280,8 +280,8 @@ for `advcl`.
 	<h2><code property="oliasystem:hasTag" lang="">advmod</code>: <div property="rdfs:label">adverbial modifier</div></h2>
 	<div property="rdfs:comment">
 
-This document is a placeholder for the language-specific documentation
-for `advmod`.
+<p>This document is a placeholder for the language-specific documentation
+for <code>advmod</code>.</p>
 
 
 	</div>
@@ -295,8 +295,8 @@ for `advmod`.
 	<h2><code property="oliasystem:hasTag" lang="">amod</code>: <div property="rdfs:label">adjectival modifier</div></h2>
 	<div property="rdfs:comment">
 
-This document is a placeholder for the language-specific documentation
-for `amod`.
+<p>This document is a placeholder for the language-specific documentation
+for <code>amod</code>.</p>
 
 
 	</div>
@@ -310,19 +310,18 @@ for `amod`.
 	<h2><code property="oliasystem:hasTag" lang="">appos</code>: <div property="rdfs:label">appositional modifier</div></h2>
 	<div property="rdfs:comment">
 
-This document is a placeholder for the language-specific documentation
-for `appos`.
+<p>This document is a placeholder for the language-specific documentation
+for <code>appos</code>.</p>
 
-An appositional modifier of a noun is a nominal immediately following
+<p>An appositional modifier of a noun is a nominal immediately following
 the first noun that serves to define or modify that noun. It includes
 parenthesized examples, as well as defining abbreviations in one of
-these structures.
+these structures.</p>
 
-~~~ sdparse
-Като стигнаха до шосето , майката - жълта и сломена от тегло жена - още отдалеч загледа мъжа си . \n When reached-they to highway-the , mother-the - yellow and crushed woman - yet distantly looked husband her.REFL .
+<pre><code class="language-sdparse">Като стигнаха до шосето , майката - жълта и сломена от тегло жена - още отдалеч загледа мъжа си . \n When reached-they to highway-the , mother-the - yellow and crushed woman - yet distantly looked husband her.REFL .
 appos(майката, жена)
 appos(mother-the, woman)
-~~~
+</code></pre>
 
 
 	</div>
@@ -336,8 +335,8 @@ appos(mother-the, woman)
 	<h2><code property="oliasystem:hasTag" lang="">aux</code>: <div property="rdfs:label">auxiliary</div></h2>
 	<div property="rdfs:comment">
 
-This document is a placeholder for the language-specific documentation
-for `aux`.
+<p>This document is a placeholder for the language-specific documentation
+for <code>aux</code>.</p>
 
 
 	</div>
@@ -351,8 +350,8 @@ for `aux`.
 	<h2><code property="oliasystem:hasTag" lang="">auxpass</code>: <div property="rdfs:label">passive auxiliary</div></h2>
 	<div property="rdfs:comment">
 
-This document is a placeholder for the language-specific documentation
-for `auxpass`.
+<p>This document is a placeholder for the language-specific documentation
+for <code>auxpass</code>.</p>
 
 
 	</div>
@@ -366,8 +365,8 @@ for `auxpass`.
 	<h2><code property="oliasystem:hasTag" lang="">case</code>: <div property="rdfs:label">case marking</div></h2>
 	<div property="rdfs:comment">
 
-This document is a placeholder for the language-specific documentation
-for `case`.
+<p>This document is a placeholder for the language-specific documentation
+for <code>case</code>.</p>
 
 
 	</div>
@@ -381,8 +380,8 @@ for `case`.
 	<h2><code property="oliasystem:hasTag" lang="">cc</code>: <div property="rdfs:label">coordinating conjunction</div></h2>
 	<div property="rdfs:comment">
 
-This document is a placeholder for the language-specific documentation
-for `cc`.
+<p>This document is a placeholder for the language-specific documentation
+for <code>cc</code>.</p>
 
 
 	</div>
@@ -396,43 +395,39 @@ for `cc`.
 	<h2><code property="oliasystem:hasTag" lang="">ccomp</code>: <div property="rdfs:label">clausal complement</div></h2>
 	<div property="rdfs:comment">
 
-This document is a placeholder for the language-specific documentation
-for `ccomp`.
+<p>This document is a placeholder for the language-specific documentation
+for <code>ccomp</code>.</p>
 
-A clausal complement of a verb or adjective is a dependent clause 
+<p>A clausal complement of a verb or adjective is a dependent clause 
 which is a core argument. That is, it functions like an object of the verb, or
-adjective.
+adjective.</p>
 
-~~~ sdparse
-Виждам , че идва често . \n See-I that comes-he often .
+<pre><code class="language-sdparse">Виждам , че идва често . \n See-I that comes-he often .
 ccomp(Виждам, идва)
 ccomp(See-I, comes-he)
-~~~
+</code></pre>
 
-Such clausal complements may be finite or nonfinite. However, if the
+<p>Such clausal complements may be finite or nonfinite. However, if the
 subject of the clausal complement is controlled (that is, must be the same
 as the higher subject or object, with no other possible interpretation)
-the appropriate relation is [xcomp]().
+the appropriate relation is <a href="">xcomp</a>.</p>
 
-~~~ sdparse
-Аз обичах да разговарям с него . \n I liked to speak with him .
+<pre><code class="language-sdparse">Аз обичах да разговарям с него . \n I liked to speak with him .
 ccomp(обичах, разговарям)
 ccomp(liked, speak)
-~~~
+</code></pre>
 
-~~~ sdparse
-Невеста Нена престана да вика . \n Aunt Nena stopped to shout .
+<pre><code class="language-sdparse">Невеста Нена престана да вика . \n Aunt Nena stopped to shout .
 xcomp(престана, вика)
 xcomp(stopped, shout)
-~~~
+</code></pre>
 
-Example with copula:
+<p>Example with copula:</p>
 
-~~~ sdparse
-Трудно е да я накараш да признае . \n Difficult-it is to her make confess .
+<pre><code class="language-sdparse">Трудно е да я накараш да признае . \n Difficult-it is to her make confess .
 ccomp(Трудно, накараш)
 ccomp(Difficult-it, make)
-~~~
+</code></pre>
 
 
 	</div>
@@ -446,8 +441,8 @@ ccomp(Difficult-it, make)
 	<h2><code property="oliasystem:hasTag" lang="">compound</code>: <div property="rdfs:label">compound</div></h2>
 	<div property="rdfs:comment">
 
-This document is a placeholder for the language-specific documentation
-for `compound`.
+<p>This document is a placeholder for the language-specific documentation
+for <code>compound</code>.</p>
 
 
 	</div>
@@ -461,8 +456,8 @@ for `compound`.
 	<h2><code property="oliasystem:hasTag" lang="">conj</code>: <div property="rdfs:label">conjunct</div></h2>
 	<div property="rdfs:comment">
 
-This document is a placeholder for the language-specific documentation
-for `conj`.
+<p>This document is a placeholder for the language-specific documentation
+for <code>conj</code>.</p>
 
 
 	</div>
@@ -476,8 +471,8 @@ for `conj`.
 	<h2><code property="oliasystem:hasTag" lang="">cop</code>: <div property="rdfs:label">copula</div></h2>
 	<div property="rdfs:comment">
 
-This document is a placeholder for the language-specific documentation
-for `cop`.
+<p>This document is a placeholder for the language-specific documentation
+for <code>cop</code>.</p>
 
 
 	</div>
@@ -491,30 +486,28 @@ for `cop`.
 	<h2><code property="oliasystem:hasTag" lang="">csubj</code>: <div property="rdfs:label">clausal subject</div></h2>
 	<div property="rdfs:comment">
 
-This document is a placeholder for the language-specific documentation
-for `csubj`.
+<p>This document is a placeholder for the language-specific documentation
+for <code>csubj</code>.</p>
 
-A clausal subject is a clausal syntactic subject of a clause, i.e.,
+<p>A clausal subject is a clausal syntactic subject of a clause, i.e.,
 the subject is itself a clause. The governor of this relation might
 not always be a verb: when the verb is a copular verb, the root of the
 clause is the complement of the copular verb. The dependent is the main lexical verb or other 
-predicate of the subject clause. 
+predicate of the subject clause.</p>
 
-Example 1: The clausal subject is the relative clause, which has a main verb.
+<p>Example 1: The clausal subject is the relative clause, which has a main verb.</p>
 
-~~~ sdparse
-Който е закъснял , ще чака . \n Who is late , will wait-he .
+<pre><code class="language-sdparse">Който е закъснял , ще чака . \n Who is late , will wait-he .
 csubj(чака, закъснял)
 csubj(wait-he, late)
-~~~
+</code></pre>
 
-Example 2: The clausal subject is the to-clause (да се срещнем)
+<p>Example 2: The clausal subject is the to-clause (да се срещнем)</p>
 
-~~~ sdparse
-Предстои да се срещнем . \n Coming-it-is to REFL.meet-each-other .
+<pre><code class="language-sdparse">Предстои да се срещнем . \n Coming-it-is to REFL.meet-each-other .
 csubj(Предстои, срещнем)
 csubj(Coming-it-is, REFL.meet-each-other)
-~~~
+</code></pre>
 
 
 	</div>
@@ -528,28 +521,26 @@ csubj(Coming-it-is, REFL.meet-each-other)
 	<h2><code property="oliasystem:hasTag" lang="">csubjpass</code>: <div property="rdfs:label">clausal passive subject</div></h2>
 	<div property="rdfs:comment">
 
-This document is a placeholder for the language-specific documentation
-for `csubjpass`.
+<p>This document is a placeholder for the language-specific documentation
+for <code>csubjpass</code>.</p>
 
-A clausal passive subject is a clausal syntactic subject of a passive
+<p>A clausal passive subject is a clausal syntactic subject of a passive
 clause (or more generally, any voice where the proto-agent argument does not become the subject 
-of the clause).
+of the clause).</p>
 
-Participle passive (the meaning is “It is said that belief will save us.”)
+<p>Participle passive (the meaning is “It is said that belief will save us.”)</p>
 
-~~~ sdparse
-Казано е, вярата ще ни спаси . \n Said is, belief will us save .
+<pre><code class="language-sdparse">Казано е, вярата ще ни спаси . \n Said is, belief will us save .
 csubjpass(Казано, спаси)
 csubjpass(Said, save)
-~~~
+</code></pre>
 
-Reflexive passive (the meaning is “It is costly for one on our Earth to be a human.”)
+<p>Reflexive passive (the meaning is “It is costly for one on our Earth to be a human.”)</p>
 
-~~~ sdparse
-Скъпо се плаща на тая земя да бъдеш човек . \n Costly REFL.pay at this land to be a-human .
+<pre><code class="language-sdparse">Скъпо се плаща на тая земя да бъдеш човек . \n Costly REFL.pay at this land to be a-human .
 csubjpass(плаща, бъдеш)
 csubjpass(REFL.pay, be)
-~~~
+</code></pre>
 
 
 	</div>
@@ -563,8 +554,8 @@ csubjpass(REFL.pay, be)
 	<h2><code property="oliasystem:hasTag" lang="">dep</code>: <div property="rdfs:label">unspecified dependency</div></h2>
 	<div property="rdfs:comment">
 
-This document is a placeholder for the language-specific documentation
-for `dep`.
+<p>This document is a placeholder for the language-specific documentation
+for <code>dep</code>.</p>
 
 
 	</div>
@@ -578,8 +569,8 @@ for `dep`.
 	<h2><code property="oliasystem:hasTag" lang="">det</code>: <div property="rdfs:label">determiner</div></h2>
 	<div property="rdfs:comment">
 
-This document is a placeholder for the language-specific documentation
-for `det`.
+<p>This document is a placeholder for the language-specific documentation
+for <code>det</code>.</p>
 
 
 	</div>
@@ -593,15 +584,14 @@ for `det`.
 	<h2><code property="oliasystem:hasTag" lang="">discourse</code>: <div property="rdfs:label">discourse element</div></h2>
 	<div property="rdfs:comment">
 
-## Yes-No question particle 
+<h2 id="yes-no-question-particle">Yes-No question particle</h2>
 
-In Bulgarian the Yes-No questions are formed with the question particle ли (li). At the moment this particle is annotated with the [cs-dep/discourse]() relation.
+<p>In Bulgarian the Yes-No questions are formed with the question particle ли (li). At the moment this particle is annotated with the <a href="">cs-dep/discourse</a> relation.</p>
 
-~~~ sdparse
-Върна ли книгата на Петър ? \n Returned PART.li book-the to Peter ?
+<pre><code class="language-sdparse">Върна ли книгата на Петър ? \n Returned PART.li book-the to Peter ?
 discourse(Върна, ли)
 discourse(Returned, PART.li)
-~~~
+</code></pre>
 
 
 	</div>
@@ -615,8 +605,8 @@ discourse(Returned, PART.li)
 	<h2><code property="oliasystem:hasTag" lang="">dislocated</code>: <div property="rdfs:label">dislocated elements</div></h2>
 	<div property="rdfs:comment">
 
-This document is a placeholder for the language-specific documentation
-for `dislocated`.
+<p>This document is a placeholder for the language-specific documentation
+for <code>dislocated</code>.</p>
 
 
 	</div>
@@ -630,21 +620,19 @@ for `dislocated`.
 	<h2><code property="oliasystem:hasTag" lang="">dobj</code>: <div property="rdfs:label">direct object</div></h2>
 	<div property="rdfs:comment">
 
-This document is a placeholder for the language-specific documentation
-for `dobj`.
+<p>This document is a placeholder for the language-specific documentation
+for <code>dobj</code>.</p>
 
+<p>The direct object of a verb is the noun phrase that denotes the entity acted upon.
+The direct object in Bulgarian corresponds to the position of the “Accusative” case, 
+since nominals in Bulgarian do not have declension.</p>
 
-The direct object of a verb is the noun phrase that denotes the entity acted upon.
-The direct object in Bulgarian corresponds to the position of the "Accusative" case, 
-since nominals in Bulgarian do not have declension.
+<p>Accusative example:</p>
 
-Accusative example:
-
-~~~ sdparse
-Купувам му къща . \n Buy-I him house .
+<pre><code class="language-sdparse">Купувам му къща . \n Buy-I him house .
 dobj(Купувам, къща)
 dobj(Buy-I, house)
-~~~
+</code></pre>
 
 
 
@@ -659,8 +647,8 @@ dobj(Buy-I, house)
 	<h2><code property="oliasystem:hasTag" lang="">expl</code>: <div property="rdfs:label">expletive</div></h2>
 	<div property="rdfs:comment">
 
-This document is a placeholder for the language-specific documentation
-for `expl`.
+<p>This document is a placeholder for the language-specific documentation
+for <code>expl</code>.</p>
 
 
 	</div>
@@ -674,8 +662,8 @@ for `expl`.
 	<h2><code property="oliasystem:hasTag" lang="">foreign</code>: <div property="rdfs:label">foreign words</div></h2>
 	<div property="rdfs:comment">
 
-This document is a placeholder for the language-specific documentation
-for `foreign`.
+<p>This document is a placeholder for the language-specific documentation
+for <code>foreign</code>.</p>
 
 
 	</div>
@@ -689,8 +677,8 @@ for `foreign`.
 	<h2><code property="oliasystem:hasTag" lang="">goeswith</code>: <div property="rdfs:label">goes with</div></h2>
 	<div property="rdfs:comment">
 
-This document is a placeholder for the language-specific documentation
-for `goeswith`.
+<p>This document is a placeholder for the language-specific documentation
+for <code>goeswith</code>.</p>
 
 
 	</div>
@@ -704,28 +692,26 @@ for `goeswith`.
 	<h2><code property="oliasystem:hasTag" lang="">iobj</code>: <div property="rdfs:label">indirect object</div></h2>
 	<div property="rdfs:comment">
 
-This document is a placeholder for the language-specific documentation
-for `iobj`.
+<p>This document is a placeholder for the language-specific documentation
+for <code>iobj</code>.</p>
 
-The indirect object of a verb is any nominal phrase that is a core
-argument of the verb but is not its subject or [direct object](dobj).
+<p>The indirect object of a verb is any nominal phrase that is a core
+argument of the verb but is not its subject or <a href="dobj">direct object</a>.
 A prototypical example is the recipient of ditransitive verbs of
-speaking:
+speaking:</p>
 
-~~~ sdparse
-Говореше на всички като началник . \n Spoke-he to everybody like a-boss .
+<pre><code class="language-sdparse">Говореше на всички като началник . \n Spoke-he to everybody like a-boss .
 iobj(Говореше, всички)
 iobj(Spoke-he, everybody)
-~~~
+</code></pre>
 
-The other examples include all arguments of a head that are not direct objects or subjects, and
-are PPs introduced by various prepositions. These cases are handled in the valency dictionary:
+<p>The other examples include all arguments of a head that are not direct objects or subjects, and
+are PPs introduced by various prepositions. These cases are handled in the valency dictionary:</p>
 
-~~~ sdparse
-Ще те питам за нещо . \n Will you ask-I for something .
+<pre><code class="language-sdparse">Ще те питам за нещо . \n Will you ask-I for something .
 iobj(питам, нещо)
 iobj(ask-I, something)
-~~~
+</code></pre>
 
 
 	</div>
@@ -739,8 +725,8 @@ iobj(ask-I, something)
 	<h2><code property="oliasystem:hasTag" lang="">list</code>: <div property="rdfs:label">list</div></h2>
 	<div property="rdfs:comment">
 
-This document is a placeholder for the language-specific documentation
-for `list`.
+<p>This document is a placeholder for the language-specific documentation
+for <code>list</code>.</p>
 
 
 	</div>
@@ -754,8 +740,8 @@ for `list`.
 	<h2><code property="oliasystem:hasTag" lang="">mark</code>: <div property="rdfs:label">marker</div></h2>
 	<div property="rdfs:comment">
 
-This document is a placeholder for the language-specific documentation
-for `mark`.
+<p>This document is a placeholder for the language-specific documentation
+for <code>mark</code>.</p>
 
 
 	</div>
@@ -769,8 +755,8 @@ for `mark`.
 	<h2><code property="oliasystem:hasTag" lang="">mwe</code>: <div property="rdfs:label">multi-word expression</div></h2>
 	<div property="rdfs:comment">
 
-This document is a placeholder for the language-specific documentation
-for `mwe`.
+<p>This document is a placeholder for the language-specific documentation
+for <code>mwe</code>.</p>
 
 
 	</div>
@@ -784,8 +770,8 @@ for `mwe`.
 	<h2><code property="oliasystem:hasTag" lang="">name</code>: <div property="rdfs:label">name</div></h2>
 	<div property="rdfs:comment">
 
-This document is a placeholder for the language-specific documentation
-for `name`.
+<p>This document is a placeholder for the language-specific documentation
+for <code>name</code>.</p>
 
 
 	</div>
@@ -799,8 +785,8 @@ for `name`.
 	<h2><code property="oliasystem:hasTag" lang="">neg</code>: <div property="rdfs:label">negation modifier</div></h2>
 	<div property="rdfs:comment">
 
-This document is a placeholder for the language-specific documentation
-for `neg`.
+<p>This document is a placeholder for the language-specific documentation
+for <code>neg</code>.</p>
 
 
 	</div>
@@ -814,47 +800,50 @@ for `neg`.
 	<h2><code property="oliasystem:hasTag" lang="">nmod</code>: <div property="rdfs:label">nominal modifier</div></h2>
 	<div property="rdfs:comment">
 
-The `nmod` relation is used for nominal modifiers. They depend either
+<p>The <code>nmod</code> relation is used for nominal modifiers. They depend either
 on another noun (group “noun dependents”) or on a predicate (group
-“non-core dependents of clausal predicates”).
+“non-core dependents of clausal predicates”).</p>
 
-`nmod` is a [noun](u-pos/NOUN) (or noun phrase) functioning as a
+<p><code>nmod</code> is a <a href="u-pos/NOUN">noun</a> (or noun phrase) functioning as a
 non-core (oblique) argument or adjunct.
 This means that it functionally corresponds to an adverbial when it attaches to a verb, adjective or other adverb.
-But when attaching to a noun, it corresponds to an attribute, or genitive complement (the terms are less standardized here).
+But when attaching to a noun, it corresponds to an attribute, or genitive complement (the terms are less standardized here).</p>
 
+<ul>
+  <li>the possessive alternation:</li>
+</ul>
 
-- the possessive alternation:
-
-~~~ sdparse
-Купих й плат за рокля . \n Bought-I her.CLITIC cloth for dress  .
+<pre><code class="language-sdparse">Купих й плат за рокля . \n Bought-I her.CLITIC cloth for dress  .
 nmod(плат, рокля)
 nmod(cloth, dress)
-~~~
+</code></pre>
 
-- `nmod` is also used for temporal nominal modifiers:
+<ul>
+  <li><code>nmod</code> is also used for temporal nominal modifiers:</li>
+</ul>
 
-~~~ sdparse
-Валя цяла нощ . \n Rained-it all night .
+<pre><code class="language-sdparse">Валя цяла нощ . \n Rained-it all night .
 nmod(Валя, нощ)
 nmod(Rained-it, night)
-~~~
+</code></pre>
 
-- predicate modification:
+<ul>
+  <li>predicate modification:</li>
+</ul>
 
-~~~ sdparse
-От всички маси ги следяха враждебни погледи . \n From all tables them.CLITIC followed hostile gazes  .
+<pre><code class="language-sdparse">От всички маси ги следяха враждебни погледи . \n From all tables them.CLITIC followed hostile gazes  .
 nmod(следяха, маси)
 nmod(followed, tables)
-~~~
+</code></pre>
 
-- noun-noun modification:
+<ul>
+  <li>noun-noun modification:</li>
+</ul>
 
-~~~ sdparse
-Най-често Йовка мислеше за стринка си Елка . \n More-often Yovka was-thinking about aunt her.REFL Elka  .
+<pre><code class="language-sdparse">Най-често Йовка мислеше за стринка си Елка . \n More-often Yovka was-thinking about aunt her.REFL Elka  .
 nmod(стринка, Елка)
 nmod(aunt, Elka)
-~~~
+</code></pre>
 
 
 	</div>
@@ -868,28 +857,26 @@ nmod(aunt, Elka)
 	<h2><code property="oliasystem:hasTag" lang="">nsubj</code>: <div property="rdfs:label">nominal subject</div></h2>
 	<div property="rdfs:comment">
 
-This document is a placeholder for the language-specific documentation
-for `nsubj`.
+<p>This document is a placeholder for the language-specific documentation
+for <code>nsubj</code>.</p>
 
-A nominal subject is a nominal phrase which is the syntactic subject of a clause;
+<p>A nominal subject is a nominal phrase which is the syntactic subject of a clause;
 in Bulgarian, the phrase is condsidered to be in nominative (in spite of the fact that nouns in Bulgarian do not have declension) .
-(See [csubj]() for when the subject is clausal.
-See [nsubjpass]() and [csubjpass]() for when the subject is not the proto-agent argument due to valence changing operations.)
-The governor of the `nsubj` relation might not always be a verb: when
+(See <a href="">csubj</a> for when the subject is clausal.
+See <a href="">nsubjpass</a> and <a href="">csubjpass</a> for when the subject is not the proto-agent argument due to valence changing operations.)
+The governor of the <code>nsubj</code> relation might not always be a verb: when
 the verb is a copular verb, the root of the clause is the complement
-of the copular verb, which can be an adjective or noun.
+of the copular verb, which can be an adjective or noun.</p>
 
-~~~ sdparse
-В небето наизскачаха звезди . \n In-sky-the dashed stars .
+<pre><code class="language-sdparse">В небето наизскачаха звезди . \n In-sky-the dashed stars .
 nsubj(наизскачаха, звезди)
 nsubj(dashed, stars)
-~~~
+</code></pre>
 
-~~~ sdparse
-Лепо беше хубаво момче . \n Lepo was a-pretty boy .
+<pre><code class="language-sdparse">Лепо беше хубаво момче . \n Lepo was a-pretty boy .
 nsubj(момче, Лепо)
 nsubj(boy, Lepo)
-~~~
+</code></pre>
 
 
 
@@ -904,25 +891,23 @@ nsubj(boy, Lepo)
 	<h2><code property="oliasystem:hasTag" lang="">nsubjpass</code>: <div property="rdfs:label">passive nominal subject</div></h2>
 	<div property="rdfs:comment">
 
-This document is a placeholder for the language-specific documentation
-for `nsubjpass`.
+<p>This document is a placeholder for the language-specific documentation
+for <code>nsubjpass</code>.</p>
 
-A passive nominal subject is a noun phrase which is the syntactic
+<p>A passive nominal subject is a noun phrase which is the syntactic
 subject of a passive clause. Similarly to Czech, in Bulgarian there are
 two kinds of passive: participle-based
-and reflexive(se)-based:
+and reflexive(se)-based:</p>
 
-~~~ sdparse
-Биячите не бяха разкрити . \n Bullies-the not-were detected .
+<pre><code class="language-sdparse">Биячите не бяха разкрити . \n Bullies-the not-were detected .
 nsubjpass(разкрити, Биячите)
 nsubjpass(detected, Bullies-the)
-~~~
+</code></pre>
 
-~~~ sdparse
-Черквата се затопли от свещите . \n Church-the REFL.got-warm from candles-the .
+<pre><code class="language-sdparse">Черквата се затопли от свещите . \n Church-the REFL.got-warm from candles-the .
 nsubjpass(затопли, Черквата)
 nsubjpass(REFL.got-warm, Church-the)
-~~~
+</code></pre>
 
 
 	</div>
@@ -936,35 +921,31 @@ nsubjpass(REFL.got-warm, Church-the)
 	<h2><code property="oliasystem:hasTag" lang="">nummod</code>: <div property="rdfs:label">numeric modifier</div></h2>
 	<div property="rdfs:comment">
 
-This document is a placeholder for the language-specific documentation
-for `nummod`.
+<p>This document is a placeholder for the language-specific documentation
+for <code>nummod</code>.</p>
 
-A numeric modifier of a noun is any [number](u-pos/NUM) phrase
-that serves to modify the meaning of the noun with a quantity.
+<p>A numeric modifier of a noun is any <a href="u-pos/NUM">number</a> phrase
+that serves to modify the meaning of the noun with a quantity.</p>
 
-
-~~~ sdparse
-Къщата ни беше на два етажа . \n House-the our was at two floors  .
+<pre><code class="language-sdparse">Къщата ни беше на два етажа . \n House-the our was at two floors  .
 nummod(етажа, два)
 nummod(floors, two)
-~~~
+</code></pre>
 
-~~~ sdparse
-Бензинът поевтинява средно с десет стотинки . \n Petrol-the gets-cheap average with deset stotinki  .
+<pre><code class="language-sdparse">Бензинът поевтинява средно с десет стотинки . \n Petrol-the gets-cheap average with deset stotinki  .
 nummod(стотинки, десет)
 nummod(stotinki, deset)
-~~~
+</code></pre>
 
-Note that indefinite quantifiers such as _few, many_ are tagged
-[u-pos/DET]() rather than [u-pos/NUM](). 
-Therefore their relation to the quantified noun is not `nummod` but
-[det]():
+<p>Note that indefinite quantifiers such as <em>few, many</em> are tagged
+<a href="">u-pos/DET</a> rather than <a href="">u-pos/NUM</a>. 
+Therefore their relation to the quantified noun is not <code>nummod</code> but
+<a href="">det</a>:</p>
 
-~~~ sdparse
-Ако бях поет , аз бих написал много стихове . \n If was-I poet , I would written many poems  .
+<pre><code class="language-sdparse">Ако бях поет , аз бих написал много стихове . \n If was-I poet , I would written many poems  .
 det(стихове, много)
 det(poems, many)
-~~~
+</code></pre>
 
 
 
@@ -979,8 +960,8 @@ det(poems, many)
 	<h2><code property="oliasystem:hasTag" lang="">parataxis</code>: <div property="rdfs:label">parataxis</div></h2>
 	<div property="rdfs:comment">
 
-This document is a placeholder for the language-specific documentation
-for `parataxis`.
+<p>This document is a placeholder for the language-specific documentation
+for <code>parataxis</code>.</p>
 
 
 	</div>
@@ -994,8 +975,8 @@ for `parataxis`.
 	<h2><code property="oliasystem:hasTag" lang="">punct</code>: <div property="rdfs:label">punctuation</div></h2>
 	<div property="rdfs:comment">
 
-This document is a placeholder for the language-specific documentation
-for `punct`.
+<p>This document is a placeholder for the language-specific documentation
+for <code>punct</code>.</p>
 
 
 	</div>
@@ -1009,8 +990,8 @@ for `punct`.
 	<h2><code property="oliasystem:hasTag" lang="">remnant</code>: <div property="rdfs:label">remnant in ellipsis</div></h2>
 	<div property="rdfs:comment">
 
-This document is a placeholder for the language-specific documentation
-for `remnant`.
+<p>This document is a placeholder for the language-specific documentation
+for <code>remnant</code>.</p>
 
 
 	</div>
@@ -1024,8 +1005,8 @@ for `remnant`.
 	<h2><code property="oliasystem:hasTag" lang="">reparandum</code>: <div property="rdfs:label">overridden disfluency</div></h2>
 	<div property="rdfs:comment">
 
-This document is a placeholder for the language-specific documentation
-for `reparandum`.
+<p>This document is a placeholder for the language-specific documentation
+for <code>reparandum</code>.</p>
 
 
 	</div>
@@ -1039,8 +1020,8 @@ for `reparandum`.
 	<h2><code property="oliasystem:hasTag" lang="">root</code>: <div property="rdfs:label">root</div></h2>
 	<div property="rdfs:comment">
 
-This document is a placeholder for the language-specific documentation
-for `root`.
+<p>This document is a placeholder for the language-specific documentation
+for <code>root</code>.</p>
 
 
 	</div>
@@ -1054,8 +1035,8 @@ for `root`.
 	<h2><code property="oliasystem:hasTag" lang="">vocative</code>: <div property="rdfs:label">vocative</div></h2>
 	<div property="rdfs:comment">
 
-This document is a placeholder for the language-specific documentation
-for `vocative`.
+<p>This document is a placeholder for the language-specific documentation
+for <code>vocative</code>.</p>
 
 
 	</div>
@@ -1069,43 +1050,40 @@ for `vocative`.
 	<h2><code property="oliasystem:hasTag" lang="">xcomp</code>: <div property="rdfs:label">open clausal complement</div></h2>
 	<div property="rdfs:comment">
 
-This document is a placeholder for the language-specific documentation
-for `xcomp`.
+<p>This document is a placeholder for the language-specific documentation
+for <code>xcomp</code>.</p>
 
-An open clausal complement (`xcomp`) of a verb or an adjective is a
+<p>An open clausal complement (<code>xcomp</code>) of a verb or an adjective is a
 predicative or clausal complement without its own subject. The
 reference of the subject is necessarily determined by an argument
 external to the xcomp (normally by the subject of the next higher
-clause). This is often referred to as *obligatory control*. 
+clause). This is often referred to as <em>obligatory control</em>. 
 These complements are always non-finite, and they are
 complements (arguments of the higher verb or adjective) rather than
-adjuncts/modifiers, such as a purpose clause. The name `xcomp` is
-borrowed from Lexical-Functional Grammar.
+adjuncts/modifiers, such as a purpose clause. The name <code>xcomp</code> is
+borrowed from Lexical-Functional Grammar.</p>
 
-~~~ sdparse
-Можеш ли да плуваш ? \n Can PART to swim ?
+<pre><code class="language-sdparse">Можеш ли да плуваш ? \n Can PART to swim ?
 xcomp(Можеш, плуваш)
 xcomp(Can, swim)
-~~~
+</code></pre>
 
-~~~ sdparse
-Двете сестри започнаха да си шепнат още по-ниско . \n Two-the sisters started to REFL whisper even lower .
+<pre><code class="language-sdparse">Двете сестри започнаха да си шепнат още по-ниско . \n Two-the sisters started to REFL whisper even lower .
 xcomp(започнаха, шепнат)
 xcomp(started, whisper)
-~~~
+</code></pre>
 
-Note that the above condition “without its own subject” does not mean that a 
-clause is an `xcomp` just because its subject is not _overt._
+<p>Note that the above condition “without its own subject” does not mean that a 
+clause is an <code>xcomp</code> just because its subject is not <em>overt.</em>
 The subject must be necessarily inherited from a fixed position in the higher clause.
 That is, there should be no available interpretation where the subject of the lower clause may be distinct from the specified role of the upper clause.
 In cases where the missing subject may or must be distinct from a fixed role in the higher clause,
-[ccomp]() should be used instead, as below.  This includes cases of arbitrary subjects and anaphoric control.
+<a href="">ccomp</a> should be used instead, as below.  This includes cases of arbitrary subjects and anaphoric control.</p>
 
-~~~ sdparse
-Каза да не се-шегувам . \n Said-he to not REFL.kid-I  .
+<pre><code class="language-sdparse">Каза да не се-шегувам . \n Said-he to not REFL.kid-I  .
 ccomp(Каза, се-шегувам)
 ccomp(Said-he, REFL.kid-I)
-~~~
+</code></pre>
 
 
 	</div>

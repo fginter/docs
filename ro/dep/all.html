@@ -250,27 +250,23 @@ in two places.</p>
 	<h2><code property="oliasystem:hasTag" lang="">acl</code>: <div property="rdfs:label">clausal modifier of noun</div></h2>
 	<div property="rdfs:comment">
 
-`acl` stands for finite and non-finite clauses that modify a nominal.
+<p><code>acl</code> stands for finite and non-finite clauses that modify a nominal.</p>
 
-~~~ sdparse
-Mă impresionează un copil plângând . \n Me impresses a child crying. (A crying child impresses me.)
+<pre><code class="language-sdparse">Mă impresionează un copil plângând . \n Me impresses a child crying. (A crying child impresses me.)
 acl(copil, plângând)
-~~~
+</code></pre>
 
-~~~ sdparse
-Am închis fereastra deschisă de Ion . \n Have-I closed window-the opened by John. (I closed the window opened by John.)
+<pre><code class="language-sdparse">Am închis fereastra deschisă de Ion . \n Have-I closed window-the opened by John. (I closed the window opened by John.)
 acl(fereastra, deschisă)
-~~~
+</code></pre>
 
-~~~ sdparse
-L-a ajutat un prieten care locuiește la Paris . \n Him-has helped a friend who lives at Paris. (A friend who lives in Paris helped him.)
+<pre><code class="language-sdparse">L-a ajutat un prieten care locuiește la Paris . \n Him-has helped a friend who lives at Paris. (A friend who lives in Paris helped him.)
 acl(prieten, locuiește)
-~~~
+</code></pre>
 
-~~~ sdparse
-Dorința să trăiască l-a ajutat să învingă boala . \n Desire-the SĂ live him-has helped SĂ defeat disease-the. (The desire to live helped him to defeat the desease.)
+<pre><code class="language-sdparse">Dorința să trăiască l-a ajutat să învingă boala . \n Desire-the SĂ live him-has helped SĂ defeat disease-the. (The desire to live helped him to defeat the desease.)
 acl(Dorința, trăiască)
-~~~
+</code></pre>
 
 
 	</div>
@@ -284,17 +280,15 @@ acl(Dorința, trăiască)
 	<h2><code property="oliasystem:hasTag" lang="">advcl</code>: <div property="rdfs:label">adverbial clause modifier</div></h2>
 	<div property="rdfs:comment">
 
-An adverbial clause modifier is a clause which modifies a verb or other predicate (adjective, etc.), as a modifier not as a core complement. This includes things such as a temporal clause, consequence, conditional clause, purpose clause, etc. The dependent must be clausal (or else it is an advmod) and the dependent is the main predicate of the clause.
+<p>An adverbial clause modifier is a clause which modifies a verb or other predicate (adjective, etc.), as a modifier not as a core complement. This includes things such as a temporal clause, consequence, conditional clause, purpose clause, etc. The dependent must be clausal (or else it is an advmod) and the dependent is the main predicate of the clause.</p>
 
-~~~ sdparse
-Sunt bucuros pentru că am luat examenul . \n Am glad because have-I passed exam-the. (I am glad because I passed the exam.)
+<pre><code class="language-sdparse">Sunt bucuros pentru că am luat examenul . \n Am glad because have-I passed exam-the. (I am glad because I passed the exam.)
 advcl(bucuros, luat)
-~~~
+</code></pre>
 
-~~~ sdparse
-Ajungând la birou, a observat că îi lipsește cheia . \n Arriving at office, has noticed that to-him lacks key-the . (When arriving at the office, he noticed that didn't have the key.)
+<pre><code class="language-sdparse">Ajungând la birou, a observat că îi lipsește cheia . \n Arriving at office, has noticed that to-him lacks key-the . (When arriving at the office, he noticed that didn't have the key.)
 advcl(observat, Ajungând)
-~~~
+</code></pre>
 
 
 	</div>
@@ -308,17 +302,15 @@ advcl(observat, Ajungând)
 	<h2><code property="oliasystem:hasTag" lang="">advmod</code>: <div property="rdfs:label">adverbial modifier</div></h2>
 	<div property="rdfs:comment">
 
-An adverbial modifier of a word is an adverb or adverbial phrase that serves to modify the meaning of the word.
+<p>An adverbial modifier of a word is an adverb or adverbial phrase that serves to modify the meaning of the word.</p>
 
-~~~ sdparse
-Merg la munte mâine . \n Go-I at mountain tomorrow . (I am going into the mountains tomorrow.)
+<pre><code class="language-sdparse">Merg la munte mâine . \n Go-I at mountain tomorrow . (I am going into the mountains tomorrow.)
 advmod(Merg, mâine)
-~~~
+</code></pre>
 
-~~~ sdparse
-Cititul noaptea nu este sănătos . \n Reading night not is healthy . (It is not healthy to read at night.)
+<pre><code class="language-sdparse">Cititul noaptea nu este sănătos . \n Reading night not is healthy . (It is not healthy to read at night.)
 advmod(Cititul, noaptea)
-~~~
+</code></pre>
 
 
 	</div>
@@ -332,12 +324,11 @@ advmod(Cititul, noaptea)
 	<h2><code property="oliasystem:hasTag" lang="">amod</code>: <div property="rdfs:label">adjectival modifier</div></h2>
 	<div property="rdfs:comment">
 
-An adjectival modifier of a noun is any adjectival phrase that serves to modify the meaning of the noun.
+<p>An adjectival modifier of a noun is any adjectival phrase that serves to modify the meaning of the noun.</p>
 
-~~~ sdparse
-Sunt o persoană timidă . \n Am a person shy . (I am a shy person .)
+<pre><code class="language-sdparse">Sunt o persoană timidă . \n Am a person shy . (I am a shy person .)
 amod(persoană, timidă)
-~~~
+</code></pre>
 
 
 
@@ -352,49 +343,42 @@ amod(persoană, timidă)
 	<h2><code property="oliasystem:hasTag" lang="">appos</code>: <div property="rdfs:label">appositional modifier</div></h2>
 	<div property="rdfs:comment">
 
-An appositional modifier serves to identify its head in a different way. This relation is usually established between noun phrases.
+<p>An appositional modifier serves to identify its head in a different way. This relation is usually established between noun phrases.</p>
 
-~~~ sdparse
-Am plecat cu Alexandru , vărul meu . \n Have-I left with Alexandru , cousin-the my . 
+<pre><code class="language-sdparse">Am plecat cu Alexandru , vărul meu . \n Have-I left with Alexandru , cousin-the my . 
 appos(Alexandru, vărul)
-~~~
+</code></pre>
 
-However, other parts of speech and even clauses can also be involved in the relation:
+<p>However, other parts of speech and even clauses can also be involved in the relation:</p>
 
-~~~ sdparse
-Gustul fructului era ciudat , adică dulce-amărui . \n  . Taste-the fruit-the-of was strange , that_is sweet-bitter .
+<pre><code class="language-sdparse">Gustul fructului era ciudat , adică dulce-amărui . \n  . Taste-the fruit-the-of was strange , that_is sweet-bitter .
 appos(ciudat, dulce-amărui)
-~~~
+</code></pre>
 
-~~~ sdparse
-Ne-am întâlnit aici , unde am stabilit . \n Us-have met here , where have-we established .
+<pre><code class="language-sdparse">Ne-am întâlnit aici , unde am stabilit . \n Us-have met here , where have-we established .
 appos(aici, stabilit)
-~~~
+</code></pre>
 
-The apposition can be introduced by an adverb (e.g. 'adică', 'anume', 'respectiv', 'alias', etc.), which is analysed as a 'mark' for the apposotion:
+<p>The apposition can be introduced by an adverb (e.g. ‘adică’, ‘anume’, ‘respectiv’, ‘alias’, etc.), which is analysed as a ‘mark’ for the apposotion:</p>
 
-~~~ sdparse
-A reușind muncind , adică asudând . \n Has succeeded working , that_is sweating .
+<pre><code class="language-sdparse">A reușind muncind , adică asudând . \n Has succeeded working , that_is sweating .
 appos(muncind, asudând)
 mark(asudând, adică)
-~~~
+</code></pre>
 
-It includes parenthesized examples, as well as defining abbreviations in one of these structures.
+<p>It includes parenthesized examples, as well as defining abbreviations in one of these structures.</p>
 
-~~~ sdparse
-Venerabilul ( adică eu ) merge diseară la întrunire . \n Honorable-the ( that_is I ) goes tonight at meeting. 
+<pre><code class="language-sdparse">Venerabilul ( adică eu ) merge diseară la întrunire . \n Honorable-the ( that_is I ) goes tonight at meeting. 
 appos(Venerabilul, eu)
-~~~
+</code></pre>
 
-~~~ sdparse
-Banca Comercială Română ( BCR ) \n Bank-the Commercial Romanian ( BCR )  
+<pre><code class="language-sdparse">Banca Comercială Română ( BCR ) \n Bank-the Commercial Romanian ( BCR )  
 appos(Banca, BCR)
-~~~
+</code></pre>
 
-'appos' is also used to link key-value pairs in addresses, signatures, etc.:
+<p>‘appos’ is also used to link key-value pairs in addresses, signatures, etc.:</p>
 
-~~~ sdparse
-Ana Ionescu , Str Rozelor , tel : 0245.756.547 , email : ana@yahoo.com
+<pre><code class="language-sdparse">Ana Ionescu , Str Rozelor , tel : 0245.756.547 , email : ana@yahoo.com
 name(Ana, Ionescu)
 list(Ana, Str)
 appos(Str, Rozelor)
@@ -402,7 +386,7 @@ list(Ana, tel)
 appos(tel, 0245.756.547)
 list(Ana, email)
 appos(email, ana@yahoo.com)
-~~~
+</code></pre>
 
 
 	</div>
@@ -416,14 +400,13 @@ appos(email, ana@yahoo.com)
 	<h2><code property="oliasystem:hasTag" lang="">aux</code>: <div property="rdfs:label">auxiliary</div></h2>
 	<div property="rdfs:comment">
 
-An auxiliary of a clause is a non-main verb of the clause.
+<p>An auxiliary of a clause is a non-main verb of the clause.</p>
 
-~~~ sdparse
-Aș vrea o portocală . \n Would-I want an orange . 
+<pre><code class="language-sdparse">Aș vrea o portocală . \n Would-I want an orange . 
 aux(vrea, Aș)
-~~~
+</code></pre>
 
-Exception: The auxiliary verb used to construct the passive voice is not labeled 'aux', but 'auxpass'.
+<p>Exception: The auxiliary verb used to construct the passive voice is not labeled ‘aux’, but ‘auxpass’.</p>
 
 
 	</div>
@@ -437,12 +420,11 @@ Exception: The auxiliary verb used to construct the passive voice is not labeled
 	<h2><code property="oliasystem:hasTag" lang="">auxpass</code>: <div property="rdfs:label">passive auxiliary</div></h2>
 	<div property="rdfs:comment">
 
-A passive auxiliary of a clause is a non-main verb of the clause which contains the passive information.
+<p>A passive auxiliary of a clause is a non-main verb of the clause which contains the passive information.</p>
 
-~~~ sdparse
-A fost spânzurat . \n Has been hanged . 
+<pre><code class="language-sdparse">A fost spânzurat . \n Has been hanged . 
 auxpass(spânzurat, fost)
-~~~
+</code></pre>
 
 
 	</div>
@@ -456,17 +438,15 @@ auxpass(spânzurat, fost)
 	<h2><code property="oliasystem:hasTag" lang="">case</code>: <div property="rdfs:label">case marking</div></h2>
 	<div property="rdfs:comment">
 
-The `case` relation is used for linking prepositions to their heads:
+<p>The <code>case</code> relation is used for linking prepositions to their heads:</p>
 
-~~~ sdparse
-O văd pe Maria . \n Her see-I PE Mary . (I can see Mary.)
+<pre><code class="language-sdparse">O văd pe Maria . \n Her see-I PE Mary . (I can see Mary.)
 case(Maria, pe)
-~~~
+</code></pre>
 
-~~~ sdparse
-Pun cartea pe masă . \n Put-I book-the on table .
+<pre><code class="language-sdparse">Pun cartea pe masă . \n Put-I book-the on table .
 case(masă, pe)
-~~~
+</code></pre>
 
 
 	</div>
@@ -480,20 +460,18 @@ case(masă, pe)
 	<h2><code property="oliasystem:hasTag" lang="">cc</code>: <div property="rdfs:label">coordinating conjunction</div></h2>
 	<div property="rdfs:comment">
 
-A `cc` is the relation between the first conjunct and the coordinating conjunction delimiting another conjunct:
+<p>A <code>cc</code> is the relation between the first conjunct and the coordinating conjunction delimiting another conjunct:</p>
 
-~~~ sdparse
-Maria și Ion tocmai au sosit . \n Mary and John just have arrived .
+<pre><code class="language-sdparse">Maria și Ion tocmai au sosit . \n Mary and John just have arrived .
 cc(Maria, și)
 conj(Maria, Ion)
-~~~
+</code></pre>
 
-A coordinating conjunction may also appear at the beginning of a sentence. This is also called a `cc`, and it depends on the root predicate of the sentence. (In fact there is a coordination that spans multiple sentences. We cannot attach a word to the first conjunct because it is in another sentence. Thus we attach it to the first conjunct available in the current sentence: its main predicate.)
+<p>A coordinating conjunction may also appear at the beginning of a sentence. This is also called a <code>cc</code>, and it depends on the root predicate of the sentence. (In fact there is a coordination that spans multiple sentences. We cannot attach a word to the first conjunct because it is in another sentence. Thus we attach it to the first conjunct available in the current sentence: its main predicate.)</p>
 
-~~~ sdparse
-Și au salutat gazda . \n And have greeted host-the
+<pre><code class="language-sdparse">Și au salutat gazda . \n And have greeted host-the
 cc(salutat, Și)
-~~~
+</code></pre>
 
 
 	</div>
@@ -507,26 +485,23 @@ cc(salutat, Și)
 	<h2><code property="oliasystem:hasTag" lang="">ccomp</code>: <div property="rdfs:label">clausal complement</div></h2>
 	<div property="rdfs:comment">
 
-A clausal complement of a verb or adjective is a dependent clause which is a core argument. That is, it functions like an object of the verb, or adjective.
-Such clausal complements may be finite or nonfinite. 
+<p>A clausal complement of a verb or adjective is a dependent clause which is a core argument. That is, it functions like an object of the verb, or adjective.
+Such clausal complements may be finite or nonfinite.</p>
 
-~~~ sdparse
-Înțeleg că ești obosit . \n Understand-I that are-you tired .
+<pre><code class="language-sdparse">Înțeleg că ești obosit . \n Understand-I that are-you tired .
 ccomp(Înțeleg, obosit)
-~~~
+</code></pre>
 
-~~~ sdparse
-Noi putem schia . \n We can ski .
+<pre><code class="language-sdparse">Noi putem schia . \n We can ski .
 ccomp(putem, schia)
-~~~
+</code></pre>
 
-The clausal predicative of the copula verb `a fi` is also analysed as ccomp. NB: This is the only case when the copula verb `a fi` is treated as a head.
+<p>The clausal predicative of the copula verb <code>a fi</code> is also analysed as ccomp. NB: This is the only case when the copula verb <code>a fi</code> is treated as a head.</p>
 
-~~~ sdparse
-ROOT Noi suntem cum ne știi . \n We are how us know-you .
+<pre><code class="language-sdparse">ROOT Noi suntem cum ne știi . \n We are how us know-you .
 root(ROOT, suntem)
 ccomp(suntem, știi)
-~~~
+</code></pre>
 
 
 	</div>
@@ -540,12 +515,11 @@ ccomp(suntem, știi)
 	<h2><code property="oliasystem:hasTag" lang="">compound</code>: <div property="rdfs:label">compound</div></h2>
 	<div property="rdfs:comment">
 
-`compound` is used for linking compound words of any part of speech:
+<p><code>compound</code> is used for linking compound words of any part of speech:</p>
 
-~~~ sdparse
-Am patru mii de lei . \n Have-I four thousand of lei .
+<pre><code class="language-sdparse">Am patru mii de lei . \n Have-I four thousand of lei .
 compound(mii, patru)
-~~~
+</code></pre>
 
 
 	</div>
@@ -559,19 +533,17 @@ compound(mii, patru)
 	<h2><code property="oliasystem:hasTag" lang="">conj</code>: <div property="rdfs:label">conjunct</div></h2>
 	<div property="rdfs:comment">
 
-A conjunct is the relation between two elements connected by a coordinating conjunction, such as and, or, etc. We treat conjunctions asymmetrically: the head of the relation is the first conjunct and all the other conjuncts depend on it via the conj relation.
+<p>A conjunct is the relation between two elements connected by a coordinating conjunction, such as and, or, etc. We treat conjunctions asymmetrically: the head of the relation is the first conjunct and all the other conjuncts depend on it via the conj relation.</p>
 
-~~~ sdparse
-Ion și Maria au sosit . \n John and Mary have arrived .
+<pre><code class="language-sdparse">Ion și Maria au sosit . \n John and Mary have arrived .
 conj(Ion, Maria)
-~~~
+</code></pre>
 
-Coordinate clauses are treated the same way as coordination of other constituent types:
+<p>Coordinate clauses are treated the same way as coordination of other constituent types:</p>
 
-~~~ sdparse
-Ion a sosit , dar Maria întârzie . \n John has arrived , but Mary is_late .
+<pre><code class="language-sdparse">Ion a sosit , dar Maria întârzie . \n John has arrived , but Mary is_late .
 conj(sosit, întârzie)
-~~~
+</code></pre>
 
 
 	</div>
@@ -585,35 +557,31 @@ conj(sosit, întârzie)
 	<h2><code property="oliasystem:hasTag" lang="">cop</code>: <div property="rdfs:label">copula</div></h2>
 	<div property="rdfs:comment">
 
-A copula is the relation between the complement of a copular verb and the copular verb `a fi` (only). (We normally take a copula as a dependent of its complement.)
+<p>A copula is the relation between the complement of a copular verb and the copular verb <code>a fi</code> (only). (We normally take a copula as a dependent of its complement.)</p>
 
-~~~ sdparse
-Maria este fericită . \n Maria is happy .
+<pre><code class="language-sdparse">Maria este fericită . \n Maria is happy .
 cop(fericită, este)
-~~~
+</code></pre>
 
-All other copula verbs are heads of clauses and their complements are in `xcomp` relation to them:
+<p>All other copula verbs are heads of clauses and their complements are in <code>xcomp</code> relation to them:</p>
 
-~~~ sdparse
-Maria a devenit designer . \n Mary has become designer .
+<pre><code class="language-sdparse">Maria a devenit designer . \n Mary has become designer .
 xcomp(devenit, designer)
-~~~
+</code></pre>
 
-When the copula verb has auxiliaries, they are also dependents of the lexical predicate:
+<p>When the copula verb has auxiliaries, they are also dependents of the lexical predicate:</p>
 
-~~~ sdparse
-Maria va fi campioană . \n Mary will be champion .
+<pre><code class="language-sdparse">Maria va fi campioană . \n Mary will be champion .
 cop(campioană, fi)
 aux(campioană, va)
-~~~
+</code></pre>
 
-When the complement of the copula verb `a fi` is a clause, the copula is the head, and the subordinate clause is in `ccomp` relation with it:
+<p>When the complement of the copula verb <code>a fi</code> is a clause, the copula is the head, and the subordinate clause is in <code>ccomp</code> relation with it:</p>
 
-~~~ sdparse
-ROOT Noi suntem cum ne știi . \n We are how us know-you .
+<pre><code class="language-sdparse">ROOT Noi suntem cum ne știi . \n We are how us know-you .
 root(ROOT, suntem)
 ccomp(suntem, știi)
-~~~
+</code></pre>
 
 
 	</div>
@@ -627,17 +595,15 @@ ccomp(suntem, știi)
 	<h2><code property="oliasystem:hasTag" lang="">csubj</code>: <div property="rdfs:label">clausal subject</div></h2>
 	<div property="rdfs:comment">
 
-A clausal subject is a clausal syntactic subject of a clause, i.e., the subject is itself a clause. 
+<p>A clausal subject is a clausal syntactic subject of a clause, i.e., the subject is itself a clause.</p>
 
-~~~ sdparse
-Cine aleargă după doi iepuri nu prinde nici_unul . \n Who runs after two rabbits not catches none .
+<pre><code class="language-sdparse">Cine aleargă după doi iepuri nu prinde nici_unul . \n Who runs after two rabbits not catches none .
 csubj(prinde, aleargă)
-~~~
+</code></pre>
 
-~~~ sdparse
-A greși e omenesc . \n To err is human .
+<pre><code class="language-sdparse">A greși e omenesc . \n To err is human .
 csubj(omenesc, greși)
-~~~
+</code></pre>
 
 
 	</div>
@@ -651,12 +617,11 @@ csubj(omenesc, greși)
 	<h2><code property="oliasystem:hasTag" lang="">csubjpass</code>: <div property="rdfs:label">clausal passive subject</div></h2>
 	<div property="rdfs:comment">
 
-A clausal passive subject is a clausal syntactic subject of a passive clause:
+<p>A clausal passive subject is a clausal syntactic subject of a passive clause:</p>
 
-~~~ sdparse
-Cine a încălcat legea a fost pedepsit de instanță . \n Who has broken law-the has been punished by court .
+<pre><code class="language-sdparse">Cine a încălcat legea a fost pedepsit de instanță . \n Who has broken law-the has been punished by court .
 csubjpass(pedepsit, încălcat)
-~~~
+</code></pre>
 
 
 	</div>
@@ -670,9 +635,8 @@ csubjpass(pedepsit, încălcat)
 	<h2><code property="oliasystem:hasTag" lang="">dep</code>: <div property="rdfs:label">unspecified dependency</div></h2>
 	<div property="rdfs:comment">
 
-This document is a placeholder for the language-specific documentation
-for `dep`.
-
+<p>This document is a placeholder for the language-specific documentation
+for <code>dep</code>.</p>
 
 
 
@@ -687,17 +651,15 @@ for `dep`.
 	<h2><code property="oliasystem:hasTag" lang="">det</code>: <div property="rdfs:label">determiner</div></h2>
 	<div property="rdfs:comment">
 
-The relation determiner (`det`) holds between a nominal head and its determiner:
+<p>The relation determiner (<code>det</code>) holds between a nominal head and its determiner:</p>
 
-~~~ sdparse
-Am văzut un okapi . \n Have-I seen an okapi .
+<pre><code class="language-sdparse">Am văzut un okapi . \n Have-I seen an okapi .
 det(okapi, un)
-~~~
+</code></pre>
 
-~~~ sdparse
-Spune-i lui Ion . \n Tell-him the-Dative  John.
+<pre><code class="language-sdparse">Spune-i lui Ion . \n Tell-him the-Dative  John.
 det(Ion, lui)
-~~~
+</code></pre>
 
 
 	</div>
@@ -711,8 +673,8 @@ det(Ion, lui)
 	<h2><code property="oliasystem:hasTag" lang="">discourse</code>: <div property="rdfs:label">discourse element</div></h2>
 	<div property="rdfs:comment">
 
-This document is a placeholder for the language-specific documentation
-for `discourse`.
+<p>This document is a placeholder for the language-specific documentation
+for <code>discourse</code>.</p>
 
 
 	</div>
@@ -726,8 +688,8 @@ for `discourse`.
 	<h2><code property="oliasystem:hasTag" lang="">dislocated</code>: <div property="rdfs:label">dislocated elements</div></h2>
 	<div property="rdfs:comment">
 
-This document is a placeholder for the language-specific documentation
-for `dislocated`.
+<p>This document is a placeholder for the language-specific documentation
+for <code>dislocated</code>.</p>
 
 
 	</div>
@@ -741,33 +703,29 @@ for `dislocated`.
 	<h2><code property="oliasystem:hasTag" lang="">dobj</code>: <div property="rdfs:label">direct object</div></h2>
 	<div property="rdfs:comment">
 
-The direct object of a verb is the noun phrase that denotes the entity acted upon. 
+<p>The direct object of a verb is the noun phrase that denotes the entity acted upon.</p>
 
-~~~ sdparse
-Citesc o carte . \n Read-I a book .
+<pre><code class="language-sdparse">Citesc o carte . \n Read-I a book .
 dobj(Citesc, carte)
-~~~
+</code></pre>
 
-~~~ sdparse
-O văd . \n Her see-I .
+<pre><code class="language-sdparse">O văd . \n Her see-I .
 dobj(văd, O)
-~~~
+</code></pre>
 
-When the direct object is doubled by a pronoun, this is marked as `expl`. 
+<p>When the direct object is doubled by a pronoun, this is marked as <code>expl</code>.</p>
 
-~~~ sdparse
-O văd pe Mara . \n Her see-I PE Mara .
+<pre><code class="language-sdparse">O văd pe Mara . \n Her see-I PE Mara .
 dobj(văd, Mara)
 expl(văd, O)
-~~~
+</code></pre>
 
-Romanian allows for the occurrence of two Accusative objects with some (uses of certain) verbs: the [+Animate] object (the direct object in traditional grammar terms) is anlysed here as `iobj`, while the other Accusative object (the secondary object in traditional grammar terms) is `dobj`:
+<p>Romanian allows for the occurrence of two Accusative objects with some (uses of certain) verbs: the [+Animate] object (the direct object in traditional grammar terms) is anlysed here as <code>iobj</code>, while the other Accusative object (the secondary object in traditional grammar terms) is <code>dobj</code>:</p>
 
-~~~ sdparse
-Bunica i-a învățat pe copii o poezie . \n Grandmother-the them-has taught PE children a poem .
+<pre><code class="language-sdparse">Bunica i-a învățat pe copii o poezie . \n Grandmother-the them-has taught PE children a poem .
 dobj(învățat, poezie)
 iobj(învățat, copii)
-~~~
+</code></pre>
 
 
 	</div>
@@ -781,37 +739,41 @@ iobj(învățat, copii)
 	<h2><code property="oliasystem:hasTag" lang="">expl</code>: <div property="rdfs:label">expletive</div></h2>
 	<div property="rdfs:comment">
 
-Romanian does not have expletives of the English sort.
-However, we use the `expl` label for the following situations:
+<p>Romanian does not have expletives of the English sort.
+However, we use the <code>expl</code> label for the following situations:</p>
 
-- clitic doubling:
+<ul>
+  <li>clitic doubling:</li>
+</ul>
 
-~~~ sdparse
-O văd pe Mara . \n Her see-I PE Mara .
+<pre><code class="language-sdparse">O văd pe Mara . \n Her see-I PE Mara .
 dobj(văd, Mara)
 expl(văd, O)
-~~~
+</code></pre>
 
-- non-referential use of pronouns:
+<ul>
+  <li>non-referential use of pronouns:</li>
+</ul>
 
-~~~ sdparse
-Am apucat - o la stânga . \n Have-I turned-her to left .
+<pre><code class="language-sdparse">Am apucat - o la stânga . \n Have-I turned-her to left .
 expl(apucat, o)
-~~~
+</code></pre>
 
-- expletive negation:
+<ul>
+  <li>expletive negation:</li>
+</ul>
 
-~~~ sdparse
-Cine nu știe că Pământul se învârtește în jurul Soarelui ? \n Who not knows that Earth-the SE spins around Sun-the ?
+<pre><code class="language-sdparse">Cine nu știe că Pământul se învârtește în jurul Soarelui ? \n Who not knows that Earth-the SE spins around Sun-the ?
 expl(știe, nu)
-~~~
+</code></pre>
 
-- possession:
+<ul>
+  <li>possession:</li>
+</ul>
 
-~~~ sdparse
-Mi- am vândut mașina .
+<pre><code class="language-sdparse">Mi- am vândut mașina .
 expl:poss(vândut, Mi-)
-~~~
+</code></pre>
 
 
 	</div>
@@ -825,8 +787,8 @@ expl:poss(vândut, Mi-)
 	<h2><code property="oliasystem:hasTag" lang="">foreign</code>: <div property="rdfs:label">foreign words</div></h2>
 	<div property="rdfs:comment">
 
-This document is a placeholder for the language-specific documentation
-for `foreign`.
+<p>This document is a placeholder for the language-specific documentation
+for <code>foreign</code>.</p>
 
 
 	</div>
@@ -840,8 +802,8 @@ for `foreign`.
 	<h2><code property="oliasystem:hasTag" lang="">goeswith</code>: <div property="rdfs:label">goes with</div></h2>
 	<div property="rdfs:comment">
 
-This document is a placeholder for the language-specific documentation
-for `goeswith`.
+<p>This document is a placeholder for the language-specific documentation
+for <code>goeswith</code>.</p>
 
 
 	</div>
@@ -855,30 +817,26 @@ for `goeswith`.
 	<h2><code property="oliasystem:hasTag" lang="">iobj</code>: <div property="rdfs:label">indirect object</div></h2>
 	<div property="rdfs:comment">
 
-The indirect object of a verb is any nominal phrase that is a core argument of the verb, usually expressing the recipient, the addressee or beneficiary of the predicate:
+<p>The indirect object of a verb is any nominal phrase that is a core argument of the verb, usually expressing the recipient, the addressee or beneficiary of the predicate:</p>
 
-~~~ sdparse
-Îi dau Marei un trandafir . \n Her give-I Mara-Dat a rose .
+<pre><code class="language-sdparse">Îi dau Marei un trandafir . \n Her give-I Mara-Dat a rose .
 iobj(dau, Marei)
-~~~
+</code></pre>
 
-~~~ sdparse
-Acesta este un concurs deschis elevilor din clasele a patra. \n This is a contest opened pupils-to-the from grades the fourth .
+<pre><code class="language-sdparse">Acesta este un concurs deschis elevilor din clasele a patra. \n This is a contest opened pupils-to-the from grades the fourth .
 iobj(deschis, elevilor)
-~~~
+</code></pre>
 
-~~~sdparse
-Conjunctura nu -mi este favorabilă . \n Conjuncture-the not -me-to is favourable .
+<pre><code class="language-sdparse">Conjunctura nu -mi este favorabilă . \n Conjuncture-the not -me-to is favourable .
 iobj(favorabilă, -mi)
-~~~
+</code></pre>
 
-We also analyse as `iobj` the [+Animate] object (the direct object in traditional grammar terms) of verbs with two Accusative objects, whereas the other object (the secondary object in traditional grammar terms) is `dobj`:
+<p>We also analyse as <code>iobj</code> the [+Animate] object (the direct object in traditional grammar terms) of verbs with two Accusative objects, whereas the other object (the secondary object in traditional grammar terms) is <code>dobj</code>:</p>
 
-~~~ sdparse
-Bunica i-a învățat pe copii o poezie . \n Grandmother-the them-has taught PE children a poem .
+<pre><code class="language-sdparse">Bunica i-a învățat pe copii o poezie . \n Grandmother-the them-has taught PE children a poem .
 dobj(învățat, poezie)
 iobj(învățat, copii)
-~~~
+</code></pre>
 
 
 	</div>
@@ -892,8 +850,8 @@ iobj(învățat, copii)
 	<h2><code property="oliasystem:hasTag" lang="">list</code>: <div property="rdfs:label">list</div></h2>
 	<div property="rdfs:comment">
 
-This document is a placeholder for the language-specific documentation
-for `list`.
+<p>This document is a placeholder for the language-specific documentation
+for <code>list</code>.</p>
 
 
 	</div>
@@ -907,17 +865,15 @@ for `list`.
 	<h2><code property="oliasystem:hasTag" lang="">mark</code>: <div property="rdfs:label">marker</div></h2>
 	<div property="rdfs:comment">
 
-A marker is the word introducing a finite clause subordinate to another clause:
+<p>A marker is the word introducing a finite clause subordinate to another clause:</p>
 
-~~~sdparse
-Văd că plouă . \n See-I that rains .
+<pre><code class="language-sdparse">Văd că plouă . \n See-I that rains .
 mark(plouă, că)
-~~~
+</code></pre>
 
-~~~sdparse
-Vin , dacă pot . \n Come-I , if can-I .
+<pre><code class="language-sdparse">Vin , dacă pot . \n Come-I , if can-I .
 mark(pot, dacă)
-~~~
+</code></pre>
 
 
 	</div>
@@ -931,8 +887,8 @@ mark(pot, dacă)
 	<h2><code property="oliasystem:hasTag" lang="">mwe</code>: <div property="rdfs:label">multi-word expression</div></h2>
 	<div property="rdfs:comment">
 
-This document is a placeholder for the language-specific documentation
-for `mwe`.
+<p>This document is a placeholder for the language-specific documentation
+for <code>mwe</code>.</p>
 
 
 	</div>
@@ -946,8 +902,8 @@ for `mwe`.
 	<h2><code property="oliasystem:hasTag" lang="">name</code>: <div property="rdfs:label">name</div></h2>
 	<div property="rdfs:comment">
 
-This document is a placeholder for the language-specific documentation
-for `name`.
+<p>This document is a placeholder for the language-specific documentation
+for <code>name</code>.</p>
 
 
 	</div>
@@ -961,19 +917,17 @@ for `name`.
 	<h2><code property="oliasystem:hasTag" lang="">neg</code>: <div property="rdfs:label">negation modifier</div></h2>
 	<div property="rdfs:comment">
 
-The negation modifier is the relation between a negation word and the word it modifies.
+<p>The negation modifier is the relation between a negation word and the word it modifies.</p>
 
-Modifiers labeled neg depend either on a noun (group “noun dependents”) or on a predicate (group “non-core dependents of clausal predicates”).
+<p>Modifiers labeled neg depend either on a noun (group “noun dependents”) or on a predicate (group “non-core dependents of clausal predicates”).</p>
 
-~~~sdparse
-Copilul nu scrie frumos . Child-the not writes neatly .
+<pre><code class="language-sdparse">Copilul nu scrie frumos . Child-the not writes neatly .
 neg(scrie, nu)
-~~~
+</code></pre>
 
-~~~sdparse
-Maria a cumpărat nu trandafiri , ci lalele . Mary has bought not roses , but tulips .
+<pre><code class="language-sdparse">Maria a cumpărat nu trandafiri , ci lalele . Mary has bought not roses , but tulips .
 neg(trandafiri, nu)
-~~~
+</code></pre>
 
 
 	</div>
@@ -987,15 +941,14 @@ neg(trandafiri, nu)
 	<h2><code property="oliasystem:hasTag" lang="">nmod</code>: <div property="rdfs:label">nominal modifier</div></h2>
 	<div property="rdfs:comment">
 
-The `nmod` relation is used for nominal modifiers. They depend either on another noun (group “noun dependents”) or on a predicate (group “non-core dependents of clausal predicates”).
+<p>The <code>nmod</code> relation is used for nominal modifiers. They depend either on another noun (group “noun dependents”) or on a predicate (group “non-core dependents of clausal predicates”).</p>
 
-`nmod` is a noun (or noun phrase) functioning as a non-core (oblique) argument or adjunct. This means that it functionally corresponds to an adverbial when it attaches to a verb, adjective or other adverb. But when attaching to a noun, it corresponds to an attribute.
+<p><code>nmod</code> is a noun (or noun phrase) functioning as a non-core (oblique) argument or adjunct. This means that it functionally corresponds to an adverbial when it attaches to a verb, adjective or other adverb. But when attaching to a noun, it corresponds to an attribute.</p>
 
-~~~sdparse
-Prietena fetei o așteaptă la masă . \n Friend-the girl-the-genitive her waits at table .
+<pre><code class="language-sdparse">Prietena fetei o așteaptă la masă . \n Friend-the girl-the-genitive her waits at table .
 nmod(Prietena, fetei)
 nmod(așteaptă, masă)
-~~~
+</code></pre>
 
 
 	</div>
@@ -1009,12 +962,11 @@ nmod(așteaptă, masă)
 	<h2><code property="oliasystem:hasTag" lang="">nsubj</code>: <div property="rdfs:label">nominal subject</div></h2>
 	<div property="rdfs:comment">
 
-A nominal subject is a nominal phrase which is the syntactic subject of a clause.
+<p>A nominal subject is a nominal phrase which is the syntactic subject of a clause.</p>
 
-~~~sdparse
-El citește . \n He reads .
+<pre><code class="language-sdparse">El citește . \n He reads .
 nsubj(citește, El)
-~~~
+</code></pre>
 
 
 	</div>
@@ -1028,12 +980,11 @@ nsubj(citește, El)
 	<h2><code property="oliasystem:hasTag" lang="">nsubjpass</code>: <div property="rdfs:label">passive nominal subject</div></h2>
 	<div property="rdfs:comment">
 
-A passive nominal subject is a noun phrase which is the syntactic subject of a passive clause.
+<p>A passive nominal subject is a noun phrase which is the syntactic subject of a passive clause.</p>
 
-~~~sdparse
-Cântecul a fost compus de interpret . \n Song-the has been composed by singer .
+<pre><code class="language-sdparse">Cântecul a fost compus de interpret . \n Song-the has been composed by singer .
 nsubjpass(compus, Cântecul)
-~~~
+</code></pre>
 
 
 	</div>
@@ -1047,8 +998,8 @@ nsubjpass(compus, Cântecul)
 	<h2><code property="oliasystem:hasTag" lang="">nummod</code>: <div property="rdfs:label">numeric modifier</div></h2>
 	<div property="rdfs:comment">
 
-This document is a placeholder for the language-specific documentation
-for `nummod`.
+<p>This document is a placeholder for the language-specific documentation
+for <code>nummod</code>.</p>
 
 
 	</div>
@@ -1062,8 +1013,8 @@ for `nummod`.
 	<h2><code property="oliasystem:hasTag" lang="">parataxis</code>: <div property="rdfs:label">parataxis</div></h2>
 	<div property="rdfs:comment">
 
-This document is a placeholder for the language-specific documentation
-for `parataxis`.
+<p>This document is a placeholder for the language-specific documentation
+for <code>parataxis</code>.</p>
 
 
 	</div>
@@ -1077,8 +1028,8 @@ for `parataxis`.
 	<h2><code property="oliasystem:hasTag" lang="">punct</code>: <div property="rdfs:label">punctuation</div></h2>
 	<div property="rdfs:comment">
 
-This document is a placeholder for the language-specific documentation
-for `punct`.
+<p>This document is a placeholder for the language-specific documentation
+for <code>punct</code>.</p>
 
 
 	</div>
@@ -1092,21 +1043,18 @@ for `punct`.
 	<h2><code property="oliasystem:hasTag" lang="">remnant</code>: <div property="rdfs:label">remnant in ellipsis</div></h2>
 	<div property="rdfs:comment">
 
-~~~ sdparse
-Dan a desenat o casă , iar Maria un copac .
+<pre><code class="language-sdparse">Dan a desenat o casă , iar Maria un copac .
 remnant(Dan, Maria)
 remnant(casă, copac)
-~~~
+</code></pre>
 
-~~~ sdparse
-ROOT Când a intrat preotul , toți în genunchi .
+<pre><code class="language-sdparse">ROOT Când a intrat preotul , toți în genunchi .
 root(ROOT, genunchi)
 nsubj(genunchi, toți)
-~~~
+</code></pre>
 
-
-This document is a placeholder for the language-specific documentation
-for `remnant`.
+<p>This document is a placeholder for the language-specific documentation
+for <code>remnant</code>.</p>
 
 
 	</div>
@@ -1120,8 +1068,8 @@ for `remnant`.
 	<h2><code property="oliasystem:hasTag" lang="">reparandum</code>: <div property="rdfs:label">overridden disfluency</div></h2>
 	<div property="rdfs:comment">
 
-This document is a placeholder for the language-specific documentation
-for `reparandum`.
+<p>This document is a placeholder for the language-specific documentation
+for <code>reparandum</code>.</p>
 
 
 	</div>
@@ -1135,27 +1083,23 @@ for `reparandum`.
 	<h2><code property="oliasystem:hasTag" lang="">root</code>: <div property="rdfs:label">root</div></h2>
 	<div property="rdfs:comment">
 
-The `root` grammatical relation points to the root of the sentence. A fake node "ROOT" is used as the governor. The ROOT node is indexed with "0", since the indexation of real words in the sentence starts at 1. 
+<p>The <code>root</code> grammatical relation points to the root of the sentence. A fake node “ROOT” is used as the governor. The ROOT node is indexed with “0”, since the indexation of real words in the sentence starts at 1.</p>
 
-~~~ sdparse
-ROOT Copilul aleargă . \n ROOT Child-the runs .
+<pre><code class="language-sdparse">ROOT Copilul aleargă . \n ROOT Child-the runs .
 root(ROOT, aleargă)
-~~~
+</code></pre>
 
-~~~ sdparse
-ROOT Vin imediat . \n ROOT Come-I immediately .
+<pre><code class="language-sdparse">ROOT Vin imediat . \n ROOT Come-I immediately .
 root(ROOT, Vin)
-~~~
+</code></pre>
 
-~~~ sdparse
-ROOT Fata este frumoasă . \n ROOT Girl-the is beautiful .
+<pre><code class="language-sdparse">ROOT Fata este frumoasă . \n ROOT Girl-the is beautiful .
 root(ROOT, frumoasă)
-~~~
+</code></pre>
 
-~~~ sdparse
-ROOT Este bine să mănânci de dimineață . \n ROOT Is well SA eat in morning.
+<pre><code class="language-sdparse">ROOT Este bine să mănânci de dimineață . \n ROOT Is well SA eat in morning.
 root(ROOT, bine)
-~~~
+</code></pre>
 
 
 	</div>
@@ -1169,8 +1113,8 @@ root(ROOT, bine)
 	<h2><code property="oliasystem:hasTag" lang="">vocative</code>: <div property="rdfs:label">vocative</div></h2>
 	<div property="rdfs:comment">
 
-This document is a placeholder for the language-specific documentation
-for `vocative`.
+<p>This document is a placeholder for the language-specific documentation
+for <code>vocative</code>.</p>
 
 
 	</div>
@@ -1184,8 +1128,8 @@ for `vocative`.
 	<h2><code property="oliasystem:hasTag" lang="">xcomp</code>: <div property="rdfs:label">open clausal complement</div></h2>
 	<div property="rdfs:comment">
 
-This document is a placeholder for the language-specific documentation
-for `xcomp`.
+<p>This document is a placeholder for the language-specific documentation
+for <code>xcomp</code>.</p>
 
 
 	</div>

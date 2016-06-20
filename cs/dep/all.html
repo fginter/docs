@@ -280,44 +280,40 @@ in two places.</p>
 	<h2><code property="oliasystem:hasTag" lang="">acl</code>: <div property="rdfs:label">clausal modifier of noun</div></h2>
 	<div property="rdfs:comment">
 
-`acl` stands for finite and non-finite clauses that modify a nominal.  The `acl` relation 
-contrasts with the [advcl]() relation, which is used for adverbial clauses
-that modify a predicate. The head of the `acl` relation is the noun
+<p><code>acl</code> stands for finite and non-finite clauses that modify a nominal.  The <code>acl</code> relation 
+contrasts with the <a href="">advcl</a> relation, which is used for adverbial clauses
+that modify a predicate. The head of the <code>acl</code> relation is the noun
 that is modified, and the dependent is the head of the clause that
-modifies the noun.
+modifies the noun.</p>
 
-~~~ sdparse
-muž , o kterém jsem mluvil \n man , about whom I-have talked
+<pre><code class="language-sdparse">muž , o kterém jsem mluvil \n man , about whom I-have talked
 acl(muž, mluvil)
 acl(man, talked)
-~~~
+</code></pre>
 
-This relation is also used for optional depictives.
+<p>This relation is also used for optional depictives.
 The adjective is taken to modify the nominal of which it provides a secondary predication.
-See [u-dep/xcomp]() for further discussion of resultatives and depictives.
+See <a href="">u-dep/xcomp</a> for further discussion of resultatives and depictives.</p>
 
-~~~ sdparse
-Alena vstoupila do místnosti smutná . \n Alena entered to room sad .
+<pre><code class="language-sdparse">Alena vstoupila do místnosti smutná . \n Alena entered to room sad .
 acl(Alena-1, smutná)
 acl(Alena-8, sad)
-~~~
+</code></pre>
 
-~~~ sdparse
-Namaloval svou ženu nahou . \n He-painted his wife naked .
+<pre><code class="language-sdparse">Namaloval svou ženu nahou . \n He-painted his wife naked .
 acl(ženu, nahou)
 acl(wife, naked)
-~~~
+</code></pre>
 
-Czech also allows finite clausal complements for nouns with 
-a subset of nouns like *fact* or *report*.
+<p>Czech also allows finite clausal complements for nouns with 
+a subset of nouns like <em>fact</em> or <em>report</em>.
 These look roughly like relative clauses, but do not have any omitted role in the dependent clause.
-These are also analyzed as `acl`.
+These are also analyzed as <code>acl</code>.</p>
 
-~~~ sdparse
-Příčinou není fakt , že by kina navštívilo víc diváků . \n Cause is-not the-fact , that would cinemas visit more filmgoers .
+<pre><code class="language-sdparse">Příčinou není fakt , že by kina navštívilo víc diváků . \n Cause is-not the-fact , that would cinemas visit more filmgoers .
 acl(fakt, navštívilo)
 acl(the-fact, visit)
-~~~
+</code></pre>
 
 
 	</div>
@@ -331,27 +327,24 @@ acl(the-fact, visit)
 	<h2><code property="oliasystem:hasTag" lang="">advcl</code>: <div property="rdfs:label">adverbial clause modifier</div></h2>
 	<div property="rdfs:comment">
 
-An adverbial clause modifier is a clause which modifies a verb or other predicate (adjective, etc.),
+<p>An adverbial clause modifier is a clause which modifies a verb or other predicate (adjective, etc.),
 as a modifier not as a core complement. This includes things such as a temporal clause, consequence, conditional clause, purpose
-clause, etc. The dependent must be clausal (or else it is an [advmod]()) and the dependent is the main predicate of the clause.
+clause, etc. The dependent must be clausal (or else it is an <a href="">advmod</a>) and the dependent is the main predicate of the clause.</p>
 
-~~~ sdparse
-K nehodě došlo , když přicházela noc . \n To accident it-came , when was-falling night .
+<pre><code class="language-sdparse">K nehodě došlo , když přicházela noc . \n To accident it-came , when was-falling night .
 advcl(došlo, přicházela)
 advcl(it-came, was-falling)
-~~~
+</code></pre>
 
-~~~ sdparse
-Jestliže víš , kdo to udělal , měl bys to říct učiteli . \n If you-know , who it did , should you it tell teacher .
+<pre><code class="language-sdparse">Jestliže víš , kdo to udělal , měl bys to říct učiteli . \n If you-know , who it did , should you it tell teacher .
 advcl(měl, víš)
 advcl(should, you-know)
-~~~
+</code></pre>
 
-~~~ sdparse
-Spěchal , aby přišel včas . \n He-rushed , in-order-to come in-time .
+<pre><code class="language-sdparse">Spěchal , aby přišel včas . \n He-rushed , in-order-to come in-time .
 advcl(Spěchal, přišel)
 advcl(He-rushed, come)
-~~~
+</code></pre>
 
 
 	</div>
@@ -365,36 +358,33 @@ advcl(He-rushed, come)
 	<h2><code property="oliasystem:hasTag" lang="">advmod</code>: <div property="rdfs:label">adverbial modifier</div></h2>
 	<div property="rdfs:comment">
 
-An adverbial modifier of a word is a (non-clausal) [adverb](cs-pos/ADV)
-or adverbial phrase that serves to modify the meaning of the word.
+<p>An adverbial modifier of a word is a (non-clausal) <a href="cs-pos/ADV">adverb</a>
+or adverbial phrase that serves to modify the meaning of the word.</p>
 
-Note that in the Czech grammatical tradition, the term _adverbial modifier_ covers
+<p>Note that in the Czech grammatical tradition, the term <em>adverbial modifier</em> covers
 constituents that function like adverbs regardless whether they are realized
 by adverbs, adpositional phrases, or nouns in particular morphological 
-[cases](cs-feat/Case).
-We differentiate adverbials realized as adverbs (`advmod`) and
+<a href="cs-feat/Case">cases</a>.
+We differentiate adverbials realized as adverbs (<code>advmod</code>) and
 adverbials realized by noun phrases or adpositional phrases
-([nmod]()).
+(<a href="">nmod</a>).</p>
 
-~~~ sdparse
-geneticky upravené potraviny \n genetically modified food
+<pre><code class="language-sdparse">geneticky upravené potraviny \n genetically modified food
 advmod(upravené, geneticky)
 advmod(modified, genetically)
-~~~
+</code></pre>
 
-~~~ sdparse
-méně často \n less often
+<pre><code class="language-sdparse">méně často \n less often
 advmod(často, méně)
 advmod(often, less)
-~~~
+</code></pre>
 
-~~~ sdparse
-Kam/ADV chcete/VERB jít/VERB zítra/ADV ?/PUNCT \n Where do-you-want to-go tomorrow ?
+<pre><code class="language-sdparse">Kam/ADV chcete/VERB jít/VERB zítra/ADV ?/PUNCT \n Where do-you-want to-go tomorrow ?
 advmod(jít, Kam)
 advmod(jít, zítra)
 advmod(to-go, Where)
 advmod(to-go, tomorrow)
-~~~
+</code></pre>
 
 
 	</div>
@@ -408,34 +398,34 @@ advmod(to-go, tomorrow)
 	<h2><code property="oliasystem:hasTag" lang="">advmod:emph</code>: <div property="rdfs:label">emphasizing word, intensifier</div></h2>
 	<div property="rdfs:comment">
 
-This is a special class of [adverbial modifiers](advmod).
-It corresponds to the words that are attached in the analytical layer of PDT with the label `AuxZ`.
-In the tectogrammatical layer they often get the label (functor) `RHEM` (rhematizers).
+<p>This is a special class of <a href="advmod">adverbial modifiers</a>.
+It corresponds to the words that are attached in the analytical layer of PDT with the label <code>AuxZ</code>.
+In the tectogrammatical layer they often get the label (functor) <code>RHEM</code> (rhematizers).</p>
 
-While other adverbial modifiers usually modify verbs, adjectives or adverbs, these emphasizers often modify noun phrases,
-including prepositional phrases.
+<p>While other adverbial modifiers usually modify verbs, adjectives or adverbs, these emphasizers often modify noun phrases,
+including prepositional phrases.</p>
 
-~~~ sdparse
-zvlášť v pondělí \n especially on Monday
+<pre><code class="language-sdparse">zvlášť v pondělí \n especially on Monday
 advmod:emph(pondělí, zvlášť)
 advmod:emph(Monday, especially)
-~~~
+</code></pre>
 
-~~~ sdparse
-jen 15 procent \n only 15 percent
+<pre><code class="language-sdparse">jen 15 procent \n only 15 percent
 advmod:emph(procent, jen)
 advmod:emph(percent, only)
-~~~
+</code></pre>
 
-Other examples:
+<p>Other examples:</p>
 
-* _Mohli by obvinit <b>i</b> některého ministra._ “They could prosecute <b>also/even</b> a minister.”
-* _Začnou <b>až</b> o měsíc později._ lit. _They-will-start <b>even</b> by month later._ “They will start one month later.” (_Až_ expresses that the speaker or the listener did not expect the thing to happen <b>that</b> late.)
-* _<b>Ani</b> vojáci o to nemají zájem._ “<b>Not even</b> soldiers are interested in it.”
-* _Hraje <b>už</b> v sobotu._ “He will play <b>already</b> on Saturday.”
-* _Chceme se sejít <b>ještě</b> tento týden._ lit. _We-want to meet <b>still</b> this week._ “We want to meet before this week ends.”
-* _u <b>asi</b> 20 titulů_ “by <b>around/approximately</b> 20 items”
-* _Dá se to dokumentovat <b>právě</b> na početné skupině dětí._ “It can be shown <b>just</b> on a large group of children.”
+<ul>
+  <li><em>Mohli by obvinit <b>i</b> některého ministra.</em> “They could prosecute <b>also/even</b> a minister.”</li>
+  <li><em>Začnou <b>až</b> o měsíc později.</em> lit. <em>They-will-start <b>even</b> by month later.</em> “They will start one month later.” (<em>Až</em> expresses that the speaker or the listener did not expect the thing to happen <b>that</b> late.)</li>
+  <li><em><b>Ani</b> vojáci o to nemají zájem.</em> “<b>Not even</b> soldiers are interested in it.”</li>
+  <li><em>Hraje <b>už</b> v sobotu.</em> “He will play <b>already</b> on Saturday.”</li>
+  <li><em>Chceme se sejít <b>ještě</b> tento týden.</em> lit. <em>We-want to meet <b>still</b> this week.</em> “We want to meet before this week ends.”</li>
+  <li><em>u <b>asi</b> 20 titulů</em> “by <b>around/approximately</b> 20 items”</li>
+  <li><em>Dá se to dokumentovat <b>právě</b> na početné skupině dětí.</em> “It can be shown <b>just</b> on a large group of children.”</li>
+</ul>
 
 
 	</div>
@@ -449,39 +439,35 @@ Other examples:
 	<h2><code property="oliasystem:hasTag" lang="">amod</code>: <div property="rdfs:label">adjectival modifier</div></h2>
 	<div property="rdfs:comment">
 
-An adjectival modifier of a noun is any adjectival phrase that serves
-to modify the meaning of the noun.
+<p>An adjectival modifier of a noun is any adjectival phrase that serves
+to modify the meaning of the noun.</p>
 
-Exception: if the modifying adjectival word is pronominal (i.e. tagged [cs-pos/DET]()),
-the relation is [det]() instead of `amod`.
+<p>Exception: if the modifying adjectival word is pronominal (i.e. tagged <a href="">cs-pos/DET</a>),
+the relation is <a href="">det</a> instead of <code>amod</code>.</p>
 
-~~~ sdparse
-Václav jí vepřové maso . \n Václav eats pork meat .
+<pre><code class="language-sdparse">Václav jí vepřové maso . \n Václav eats pork meat .
 amod(maso, vepřové)
 amod(meat, pork)
-~~~
+</code></pre>
 
-~~~ sdparse
-Václav si vzal třímiliónovou půjčku . \n Václav himself took-out three-million loan .
+<pre><code class="language-sdparse">Václav si vzal třímiliónovou půjčku . \n Václav himself took-out three-million loan .
 amod(půjčku, třímiliónovou)
 amod(loan, three-million)
-~~~
+</code></pre>
 
-~~~ sdparse
-První závodník byl rychlý . \n First racer was fast .
+<pre><code class="language-sdparse">První závodník byl rychlý . \n First racer was fast .
 amod(závodník, První)
 amod(racer, First)
 nsubj(rychlý, závodník)
 nsubj(fast, racer)
-~~~
+</code></pre>
 
-~~~ sdparse
-Rychlý závodník byl první . \n Fast racer was first .
+<pre><code class="language-sdparse">Rychlý závodník byl první . \n Fast racer was first .
 amod(závodník, Rychlý)
 amod(racer, Fast)
 nsubj(první, závodník)
 nsubj(first, racer)
-~~~
+</code></pre>
 
 
 	</div>
@@ -495,56 +481,51 @@ nsubj(first, racer)
 	<h2><code property="oliasystem:hasTag" lang="">appos</code>: <div property="rdfs:label">appositional modifier</div></h2>
 	<div property="rdfs:comment">
 
-An appositional modifier of a noun is a nominal immediately following
+<p>An appositional modifier of a noun is a nominal immediately following
 the first noun that serves to define or modify that noun. It includes
 parenthesized examples, as well as defining abbreviations in one of
-these structures.
+these structures.</p>
 
-~~~ sdparse
-Karel IV . , římský císař a český král , vládl ve 14 . století . \n Charles IV . , Roman Emperor and Czech king , ruled in 14 th century .
+<pre><code class="language-sdparse">Karel IV . , římský císař a český král , vládl ve 14 . století . \n Charles IV . , Roman Emperor and Czech king , ruled in 14 th century .
 appos(Karel, císař)
 appos(Charles, Emperor)
 conj(císař, král)
 conj(Emperor, king)
-~~~
+</code></pre>
 
-~~~ sdparse
-Občanská demokratická strana ( ODS ) \n Civic Democratic Party ( ODS )
+<pre><code class="language-sdparse">Občanská demokratická strana ( ODS ) \n Civic Democratic Party ( ODS )
 appos(strana, ODS-5)
 appos(Party, ODS-12)
-~~~
+</code></pre>
 
-There is a slight deviation from the [universal](u-dep/appos) standard in case of more than one appositive nominal.
+<p>There is a slight deviation from the <a href="u-dep/appos">universal</a> standard in case of more than one appositive nominal.
 Instead of attaching them all to the first noun, all the appositive modifiers are put together in coordination,
-then attached as `appos` to the modified noun.
-This is done regardless whether the appositives are joined by a coordinating conjunction or just a comma.
+then attached as <code>appos</code> to the modified noun.
+This is done regardless whether the appositives are joined by a coordinating conjunction or just a comma.</p>
 
-~~~ sdparse
-Přijel Michal , můj bratr a Davidův bratranec . \n Came Michal , my brother and David's cousin .
+<pre><code class="language-sdparse">Přijel Michal , můj bratr a Davidův bratranec . \n Came Michal , my brother and David's cousin .
 appos(Michal-2, bratr)
 appos(Michal-12, brother)
 conj(bratr, bratranec)
 conj(brother, cousin)
-~~~
+</code></pre>
 
-~~~ sdparse
-Michal , můj bratr , Davidův bratranec , přijede zítra . \n Michal , my brother , David's cousin , will-come tomorrow .
+<pre><code class="language-sdparse">Michal , můj bratr , Davidův bratranec , přijede zítra . \n Michal , my brother , David's cousin , will-come tomorrow .
 appos(Michal-1, bratr)
 appos(Michal-13, brother)
 conj(bratr, bratranec)
 conj(brother, cousin)
-~~~
+</code></pre>
 
-`appos` is also used to link key-value pairs in addresses, signatures, etc. (see also the [list]() label):
+<p><code>appos</code> is also used to link key-value pairs in addresses, signatures, etc. (see also the <a href="">list</a> label):</p>
 
-~~~ sdparse
-Jan Novák , tel . : 777-000-111 , e-mail : novak@ab.cz
+<pre><code class="language-sdparse">Jan Novák , tel . : 777-000-111 , e-mail : novak@ab.cz
 name(Novák, Jan)
 list(Novák, tel)
 list(Novák, e-mail)
 appos(tel, 777-000-111)
 appos(e-mail, novak@ab.cz)
-~~~
+</code></pre>
 
 
 	</div>
@@ -558,32 +539,29 @@ appos(e-mail, novak@ab.cz)
 	<h2><code property="oliasystem:hasTag" lang="">aux</code>: <div property="rdfs:label">auxiliary</div></h2>
 	<div property="rdfs:comment">
 
-An auxiliary of a clause is a form of the [auxiliary verb](cs-pos/AUX) _být_ “to be”
-used to construct the periphrastic future tense, past tense or conditional.
+<p>An auxiliary of a clause is a form of the <a href="cs-pos/AUX">auxiliary verb</a> <em>být</em> “to be”
+used to construct the periphrastic future tense, past tense or conditional.</p>
 
-Exception: Auxiliary verb used to construct the passive
-[voice](cs-feat/Voice) is not labeled `aux` but [auxpass]().
+<p>Exception: Auxiliary verb used to construct the passive
+<a href="cs-feat/Voice">voice</a> is not labeled <code>aux</code> but <a href="">auxpass</a>.</p>
 
-Note that besides `aux` and `auxpass`, the verb _být_ may also act as a [copula](cop)
-and as the main verb.
+<p>Note that besides <code>aux</code> and <code>auxpass</code>, the verb <em>být</em> may also act as a <a href="cop">copula</a>
+and as the main verb.</p>
 
-~~~ sdparse
-Přijel jsem včera . \n Arrived I-have yesterday .
+<pre><code class="language-sdparse">Přijel jsem včera . \n Arrived I-have yesterday .
 aux(Přijel, jsem)
 aux(Arrived, I-have)
-~~~
+</code></pre>
 
-~~~ sdparse
-Zítra budu přednášet na univerzitě . \n Tomorrow I-will give-a-talk at university .
+<pre><code class="language-sdparse">Zítra budu přednášet na univerzitě . \n Tomorrow I-will give-a-talk at university .
 aux(přednášet, budu)
 aux(give-a-talk, I-will)
-~~~
+</code></pre>
 
-~~~ sdparse
-Přišel bych dříve , ale ujel mi vlak . \n Come I-would earlier , but missed my train .
+<pre><code class="language-sdparse">Přišel bych dříve , ale ujel mi vlak . \n Come I-would earlier , but missed my train .
 aux(Přišel, bych)
 aux(Come, I-would)
-~~~
+</code></pre>
 
 
 	</div>
@@ -597,46 +575,45 @@ aux(Come, I-would)
 	<h2><code property="oliasystem:hasTag" lang="">auxpass</code>: <div property="rdfs:label">passive auxiliary</div></h2>
 	<div property="rdfs:comment">
 
-A passive auxiliary of a clause is a form of the [auxiliary verb](cs-pos/AUX) _být_ “to be”
-used to construct the periphrastic passive voice (in any tense or in the infinitive).
+<p>A passive auxiliary of a clause is a form of the <a href="cs-pos/AUX">auxiliary verb</a> <em>být</em> “to be”
+used to construct the periphrastic passive voice (in any tense or in the infinitive).</p>
 
-~~~ sdparse
-Kennedy byl zabit . \n Kennedy was killed .
+<pre><code class="language-sdparse">Kennedy byl zabit . \n Kennedy was killed .
 auxpass(zabit, byl)
 auxpass(killed, was)
-~~~
+</code></pre>
 
-~~~ sdparse
-Kennedy bude zabit . \n Kennedy will-be killed .
+<pre><code class="language-sdparse">Kennedy bude zabit . \n Kennedy will-be killed .
 auxpass(zabit, bude)
 auxpass(killed, will-be)
-~~~
+</code></pre>
 
-~~~ sdparse
-Kennedy netušil , že jeho osudem je být zabit . \n Kennedy did-not-anticipate that his fate is to-be killed .
+<pre><code class="language-sdparse">Kennedy netušil , že jeho osudem je být zabit . \n Kennedy did-not-anticipate that his fate is to-be killed .
 auxpass(zabit, být)
 auxpass(killed, to-be)
-~~~
+</code></pre>
 
-Note that the passive participle may be also used as nominal predicate with [copula](cop).
+<p>Note that the passive participle may be also used as nominal predicate with <a href="cop">copula</a>.
 Hence it may be difficult to distinguish a passive construction from a copula construction.
-The former focuses on the process while the latter emphasizes the result.
+The former focuses on the process while the latter emphasizes the result.</p>
 
-- Passive:
+<ul>
+  <li>Passive:</li>
+</ul>
 
-~~~ sdparse
-Smlouva byla podepsána v Bílém domě . \n Contract was signed in White House .
+<pre><code class="language-sdparse">Smlouva byla podepsána v Bílém domě . \n Contract was signed in White House .
 auxpass(podepsána, byla)
 auxpass(signed, was)
-~~~
+</code></pre>
 
-- Copula:
+<ul>
+  <li>Copula:</li>
+</ul>
 
-~~~ sdparse
-Smlouva byla podepsána červeným inkoustem . \n Contract was signed in-red ink .
+<pre><code class="language-sdparse">Smlouva byla podepsána červeným inkoustem . \n Contract was signed in-red ink .
 cop(podepsána, byla)
 cop(signed, was)
-~~~
+</code></pre>
 
 
 	</div>
@@ -650,16 +627,15 @@ cop(signed, was)
 	<h2><code property="oliasystem:hasTag" lang="">auxpass:reflex</code>: <div property="rdfs:label">reflexive pronoun used in reflexive passive</div></h2>
 	<div property="rdfs:comment">
 
-Reflexive pronouns (see the feature [cs-feat/Reflex]()) are used in various constructions in Czech,
-including so-called _reflexive passive._
-In PDT, their relation to the verb is labeled `AuxR`.
-The corresponding label in Czech UD is called `auxpass:reflex`.
+<p>Reflexive pronouns (see the feature <a href="">cs-feat/Reflex</a>) are used in various constructions in Czech,
+including so-called <em>reflexive passive.</em>
+In PDT, their relation to the verb is labeled <code>AuxR</code>.
+The corresponding label in Czech UD is called <code>auxpass:reflex</code>.</p>
 
-~~~ sdparse
-To se řekne snadno . \n It is said easily .
+<pre><code class="language-sdparse">To se řekne snadno . \n It is said easily .
 auxpass:reflex(řekne, se)
 auxpass:reflex(said, is)
-~~~
+</code></pre>
 
 
 	</div>
@@ -673,19 +649,18 @@ auxpass:reflex(said, is)
 	<h2><code property="oliasystem:hasTag" lang="">case</code>: <div property="rdfs:label">case marking</div></h2>
 	<div property="rdfs:comment">
 
-Czech uses a combination of oblique morphological cases and prepositions to express semantic case.
+<p>Czech uses a combination of oblique morphological cases and prepositions to express semantic case.
 Unlike in the original annotation of the Prague Dependency Treebank, prepositions in UD are treated as dependents
-of the noun they attach to. The relation between the noun and the preposition is labeled `case`.
+of the noun they attach to. The relation between the noun and the preposition is labeled <code>case</code>.</p>
 
-~~~ sdparse
-V pátek.Acc jsme si cestou.Ins do Francie.Gen povídali o té události.Loc . \n On Friday we-have ourselves during-the-journey to France talked about the event .
+<pre><code class="language-sdparse">V pátek.Acc jsme si cestou.Ins do Francie.Gen povídali o té události.Loc . \n On Friday we-have ourselves during-the-journey to France talked about the event .
 case(pátek.Acc, V)
 case(Friday, On)
 case(Francie.Gen, do)
 case(France, to)
 case(události.Loc, o)
 case(event, about)
-~~~
+</code></pre>
 
 
 	</div>
@@ -699,33 +674,30 @@ case(event, about)
 	<h2><code property="oliasystem:hasTag" lang="">cc</code>: <div property="rdfs:label">coordinating conjunction</div></h2>
 	<div property="rdfs:comment">
 
-For more on coordination, see the [conj]() relation.
-A `cc` is the relation between the first conjunct and
-the [coordinating conjunction](cs-pos/CONJ) delimiting another conjunct.
+<p>For more on coordination, see the <a href="">conj</a> relation.
+A <code>cc</code> is the relation between the first conjunct and
+the <a href="cs-pos/CONJ">coordinating conjunction</a> delimiting another conjunct.
 (Note: different dependency grammars have different treatments of coordination.
-We take the first conjunct as the head of the coordination.)
+We take the first conjunct as the head of the coordination.)</p>
 
-~~~ sdparse
-Je to starý a moudrý muž . \n Is he old and wise man .
+<pre><code class="language-sdparse">Je to starý a moudrý muž . \n Is he old and wise man .
 cc(starý, a)
 cc(old, and)
-~~~
+</code></pre>
 
-A coordinating conjunction may also appear at the beginning of a
-sentence. This is also called a `cc`, and it depends on the root
+<p>A coordinating conjunction may also appear at the beginning of a
+sentence. This is also called a <code>cc</code>, and it depends on the root
 predicate of the sentence.
 (In fact there is a coordination that spans multiple sentences.
 We cannot attach a word to the first conjunct because it is in another sentence.
-Thus we attach it to the first conjunct available in the current sentence: its main predicate.)
+Thus we attach it to the first conjunct available in the current sentence: its main predicate.)</p>
 
-~~~ sdparse
-A pak jsme odešli . \n And then we-have left .
+<pre><code class="language-sdparse">A pak jsme odešli . \n And then we-have left .
 cc(odešli, A)
 cc(left, And)
-~~~
+</code></pre>
 
-~~~ sdparse
-Máme jablka , hrušky , pomeranče a banány . \n We-have apples , pears , oranges and bananas .
+<pre><code class="language-sdparse">Máme jablka , hrušky , pomeranče a banány . \n We-have apples , pears , oranges and bananas .
 dobj(Máme, jablka)
 dobj(We-have, apples)
 conj(jablka, hrušky)
@@ -740,7 +712,7 @@ punct(jablka, ,-3)
 punct(jablka, ,-5)
 punct(apples, ,-13)
 punct(apples, ,-15)
-~~~
+</code></pre>
 
 
 	</div>
@@ -754,37 +726,34 @@ punct(apples, ,-15)
 	<h2><code property="oliasystem:hasTag" lang="">ccomp</code>: <div property="rdfs:label">clausal complement</div></h2>
 	<div property="rdfs:comment">
 
-A clausal complement of a verb or adjective is a dependent clause 
+<p>A clausal complement of a verb or adjective is a dependent clause 
 which is a core argument. That is, it functions like an object of the verb, or
-adjective.
+adjective.</p>
 
-~~~ sdparse
-Říká , že ráda plaveš . \n He-says , that like-to you-swim .
+<pre><code class="language-sdparse">Říká , že ráda plaveš . \n He-says , that like-to you-swim .
 ccomp(Říká, plaveš)
 ccomp(He-says, you-swim)
-~~~
+</code></pre>
 
-Such clausal complements may be finite or nonfinite. However, if the
+<p>Such clausal complements may be finite or nonfinite. However, if the
 subject of the clausal complement is controlled (that is, must be the same
 as the higher subject or object, with no other possible interpretation)
-the appropriate relation is [xcomp]().
+the appropriate relation is <a href="">xcomp</a>.</p>
 
-~~~ sdparse
-Šéf nám nařídil vykopat příkop . \n Boss us ordered to-dig ditch .
+<pre><code class="language-sdparse">Šéf nám nařídil vykopat příkop . \n Boss us ordered to-dig ditch .
 ccomp(nařídil, vykopat)
 ccomp(ordered, to-dig)
-~~~
+</code></pre>
 
-~~~ sdparse
-Začali jsme kopat příkop . \n Started we-have to-dig ditch .
+<pre><code class="language-sdparse">Začali jsme kopat příkop . \n Started we-have to-dig ditch .
 xcomp(Začali, kopat)
 xcomp(Started, to-dig)
-~~~
+</code></pre>
 
-The key difference here is that, while it is possible to interpret the first
+<p>The key difference here is that, while it is possible to interpret the first
 sentence to mean that the boss will not be doing any digging, in the second
-sentence it is clear that the subject of __digging__ can only be __we__. This is
-what distinguishes `ccomp` and `xcomp`.
+sentence it is clear that the subject of <strong>digging</strong> can only be <strong>we</strong>. This is
+what distinguishes <code>ccomp</code> and <code>xcomp</code>.</p>
 
 
 	</div>
@@ -798,27 +767,25 @@ what distinguishes `ccomp` and `xcomp`.
 	<h2><code property="oliasystem:hasTag" lang="">compound</code>: <div property="rdfs:label">compound</div></h2>
 	<div property="rdfs:comment">
 
-`compound` is one of the relations in UD for compounding.
+<p><code>compound</code> is one of the relations in UD for compounding.
 In Czech it is used only for compound numbers.
-The rightmost numeral is the head, the other numerals are attached as its modifiers.
+The rightmost numeral is the head, the other numerals are attached as its modifiers.</p>
 
-~~~ sdparse
-Bude to stát nanejvýš 50 tisíc korun . \n Will it cost at-most 50 thousand crowns .
+<pre><code class="language-sdparse">Bude to stát nanejvýš 50 tisíc korun . \n Will it cost at-most 50 thousand crowns .
 nummod:gov(korun, tisíc)
 nummod:gov(crowns, thousand)
 compound(tisíc, 50-5)
 compound(thousand, 50-14)
-~~~
+</code></pre>
 
-~~~ sdparse
-Bude to stát padesát pět tisíc korun . \n Will it cost fifty five thousand crowns .
+<pre><code class="language-sdparse">Bude to stát padesát pět tisíc korun . \n Will it cost fifty five thousand crowns .
 nummod:gov(korun, tisíc)
 nummod:gov(crowns, thousand)
 compound(tisíc, padesát)
 compound(thousand, fifty)
 compound(tisíc, pět)
 compound(thousand, five)
-~~~
+</code></pre>
 
 
 	</div>
@@ -832,20 +799,18 @@ compound(thousand, five)
 	<h2><code property="oliasystem:hasTag" lang="">conj</code>: <div property="rdfs:label">conjunct</div></h2>
 	<div property="rdfs:comment">
 
-A conjunct is the relation between two elements connected by a
-coordinating conjunction, such as _and, or,_ or a comma or other punctuation.
+<p>A conjunct is the relation between two elements connected by a
+coordinating conjunction, such as <em>and, or,</em> or a comma or other punctuation.
 We treat coordination asymmetrically in what is known as the Stanford style:
 The head of the relation is the first
-conjunct and all the other conjuncts depend on it via the `conj` relation.
+conjunct and all the other conjuncts depend on it via the <code>conj</code> relation.</p>
 
-~~~ sdparse
-Je to starý a moudrý muž . \n Is he old and wise man .
+<pre><code class="language-sdparse">Je to starý a moudrý muž . \n Is he old and wise man .
 conj(starý, moudrý)
 conj(old, wise)
-~~~
+</code></pre>
 
-~~~ sdparse
-Máme jablka , hrušky , pomeranče a banány . \n We-have apples , pears , oranges and bananas .
+<pre><code class="language-sdparse">Máme jablka , hrušky , pomeranče a banány . \n We-have apples , pears , oranges and bananas .
 dobj(Máme, jablka)
 dobj(We-have, apples)
 conj(jablka, hrušky)
@@ -860,12 +825,11 @@ punct(jablka, ,-3)
 punct(jablka, ,-5)
 punct(apples, ,-13)
 punct(apples, ,-15)
-~~~
+</code></pre>
 
-Coordinate clauses are treated the same way as coordination of other constituent types:
+<p>Coordinate clauses are treated the same way as coordination of other constituent types:</p>
 
-~~~ sdparse
-Přišel domů , osprchoval se a hned šel do postele . \n He-came home , showered himself and immediately went to bed .
+<pre><code class="language-sdparse">Přišel domů , osprchoval se a hned šel do postele . \n He-came home , showered himself and immediately went to bed .
 conj(Přišel, osprchoval)
 conj(Přišel, šel)
 conj(He-came, showered)
@@ -874,11 +838,11 @@ punct(Přišel, ,-3)
 punct(He-came, ,-15)
 cc(Přišel, a)
 cc(He-came, and)
-~~~
+</code></pre>
 
-See [universal/conj](u-dep/conj) for more details on various coordination-related issues.
+<p>See <a href="u-dep/conj">universal/conj</a> for more details on various coordination-related issues.
 Note that the present conversion procedure loses some annotations of shared modifiers and nested
-coordination.
+coordination.</p>
 
 
 	</div>
@@ -892,81 +856,81 @@ coordination.
 	<h2><code property="oliasystem:hasTag" lang="">cop</code>: <div property="rdfs:label">copula</div></h2>
 	<div property="rdfs:comment">
 
-A copula is the relation between the nominal predicate _(přísudek jmenný)_ and
-the copular verb _<b>být</b>_ “to be” (or its variants _bývat, bývávat_).
-The verb _stát se_ “to become”, despite being counted among copular verbs by some authors,
-is not analyzed as `cop`.
+<p>A copula is the relation between the nominal predicate <em>(přísudek jmenný)</em> and
+the copular verb <em><b>být</b></em> “to be” (or its variants <em>bývat, bývávat</em>).
+The verb <em>stát se</em> “to become”, despite being counted among copular verbs by some authors,
+is not analyzed as <code>cop</code>.</p>
 
-We normally take a copula as a dependent of its complement (the nominal predicate).
-The nominal predicate is usually a [noun](cs-pos/NOUN), an [adjective](cs-pos/ADJ)
-or a <a href="../feat/VerbForm.html#part-participle">participle</a>.
+<p>We normally take a copula as a dependent of its complement (the nominal predicate).
+The nominal predicate is usually a <a href="cs-pos/NOUN">noun</a>, an <a href="cs-pos/ADJ">adjective</a>
+or a <a href="../feat/VerbForm.html#part-participle">participle</a>.</p>
 
-~~~ sdparse
-Ondřej je čestný muž . \n Ondřej is honest man .
+<pre><code class="language-sdparse">Ondřej je čestný muž . \n Ondřej is honest man .
 cop(muž, je)
 cop(man, is)
-~~~
+</code></pre>
 
-~~~ sdparse
-Ondřej je čestný . \n Ondřej is honest .
+<pre><code class="language-sdparse">Ondřej je čestný . \n Ondřej is honest .
 cop(čestný, je)
 cop(honest, is)
-~~~
+</code></pre>
 
-Note that the passive participle may be also used as nominal predicate with copula.
+<p>Note that the passive participle may be also used as nominal predicate with copula.
 Hence it may be difficult to distinguish a passive construction from a copula construction.
-The former focuses on the process while the latter emphasizes the result.
+The former focuses on the process while the latter emphasizes the result.</p>
 
-- Passive: _Smlouva <b>byla</b>.`AUX` podepsána v&nbsp;Bílém domě._ &nbsp; “The contract was signed in the White House.”
-- Copula: _Smlouva <b>byla</b>.`VERB` podepsána červeným inkoustem._ &nbsp; “The contract was signed in red ink.”
+<ul>
+  <li>Passive: <em>Smlouva <b>byla</b>.<code>AUX</code> podepsána v Bílém domě.</em>   “The contract was signed in the White House.”</li>
+  <li>Copula: <em>Smlouva <b>byla</b>.<code>VERB</code> podepsána červeným inkoustem.</em>   “The contract was signed in red ink.”</li>
+</ul>
 
-~~~ sdparse
-Smlouva byla podepsána v Bílém domě . \n Contract was signed in White House .
+<pre><code class="language-sdparse">Smlouva byla podepsána v Bílém domě . \n Contract was signed in White House .
 auxpass(podepsána, byla)
 auxpass(signed, was)
-~~~
+</code></pre>
 
-~~~ sdparse
-Smlouva byla podepsána červeným inkoustem . \n Contract was signed in-red ink .
+<pre><code class="language-sdparse">Smlouva byla podepsána červeným inkoustem . \n Contract was signed in-red ink .
 cop(podepsána, byla)
 cop(signed, was)
-~~~
+</code></pre>
 
-The nominal predicate may also be expressed using a prepositional phrase.
-However, not every occurrence of _být_ “to be” with a prepositional phrase is a copula with a nominal predicate.
-Phrases expressing the state of the subject are predicates, e.g. _Lenka je v kondici_ “Lenka is in shape”.
+<p>The nominal predicate may also be expressed using a prepositional phrase.
+However, not every occurrence of <em>být</em> “to be” with a prepositional phrase is a copula with a nominal predicate.
+Phrases expressing the state of the subject are predicates, e.g. <em>Lenka je v kondici</em> “Lenka is in shape”.
 In contrast, prepositional phrases specifying location are not predicates.
-The verb _být_ is understood as the existential “to be” in such cases, and thus it itself is the predicate, not just a copula.
+The verb <em>být</em> is understood as the existential “to be” in such cases, and thus it itself is the predicate, not just a copula.</p>
 
-Thus the following two sentences receive parallel analyses:
+<p>Thus the following two sentences receive parallel analyses:</p>
 
-- _Lenka je skvělá._ “Lenka is brilliant.”
-- _Lenka je v kondici._ “Lenka is in shape.”
+<ul>
+  <li><em>Lenka je skvělá.</em> “Lenka is brilliant.”</li>
+  <li><em>Lenka je v kondici.</em> “Lenka is in shape.”</li>
+</ul>
 
-The following two will be parallel, too:
+<p>The following two will be parallel, too:</p>
 
-- _Lenka je v kuchyni._ “Lenka is in the kitchen.”
-- _Lenka zůstala v kuchyni._ “Lenka stayed in the kitchen.”
+<ul>
+  <li><em>Lenka je v kuchyni.</em> “Lenka is in the kitchen.”</li>
+  <li><em>Lenka zůstala v kuchyni.</em> “Lenka stayed in the kitchen.”</li>
+</ul>
 
-~~~ sdparse
-Lenka je v kondici . \n Lenka is in shape .
+<pre><code class="language-sdparse">Lenka je v kondici . \n Lenka is in shape .
 cop(kondici, je)
 cop(shape, is)
 case(kondici, v)
 case(shape, in)
 nsubj(kondici, Lenka-1)
 nsubj(shape, Lenka-7)
-~~~
+</code></pre>
 
-~~~ sdparse
-Lenka je v kuchyni . \n Lenka is in kitchen .
+<pre><code class="language-sdparse">Lenka je v kuchyni . \n Lenka is in kitchen .
 nsubj(je, Lenka-1)
 nsubj(is, Lenka-7)
 nmod(je, kuchyni)
 nmod(is, kitchen)
 case(kuchyni, v)
 case(kitchen, in)
-~~~
+</code></pre>
 
 
 	</div>
@@ -980,25 +944,23 @@ case(kitchen, in)
 	<h2><code property="oliasystem:hasTag" lang="">csubj</code>: <div property="rdfs:label">clausal subject</div></h2>
 	<div property="rdfs:comment">
 
-A clausal subject is a clausal syntactic subject of a clause, i.e.,
+<p>A clausal subject is a clausal syntactic subject of a clause, i.e.,
 the subject is itself a clause. The governor of this relation might
 not always be a verb: when the verb is a copular verb, the root of the
 clause is the complement of the copular verb. The dependent is the main lexical verb or other 
-predicate of the subject clause.
+predicate of the subject clause.</p>
 
-~~~ sdparse
-Obžalovanému přitížilo , že neměl alibi . \n To-indictee did-a-disservice , that he-did-not-have alibi .
+<pre><code class="language-sdparse">Obžalovanému přitížilo , že neměl alibi . \n To-indictee did-a-disservice , that he-did-not-have alibi .
 csubj(přitížilo, neměl)
 csubj(did-a-disservice, he-did-not-have)
-~~~
+</code></pre>
 
-~~~ sdparse
-Podstatou těchto vazeb je , že se děj rozloží na dvě složky . \n The-essence of-these constructions is , that one the-action splits to two parts .
+<pre><code class="language-sdparse">Podstatou těchto vazeb je , že se děj rozloží na dvě složky . \n The-essence of-these constructions is , that one the-action splits to two parts .
 csubj(Podstatou, rozloží)
 cop(Podstatou, je)
 csubj(The-essence, splits)
 cop(The-essence, is)
-~~~
+</code></pre>
 
 
 	</div>
@@ -1012,21 +974,19 @@ cop(The-essence, is)
 	<h2><code property="oliasystem:hasTag" lang="">csubjpass</code>: <div property="rdfs:label">clausal passive subject</div></h2>
 	<div property="rdfs:comment">
 
-A clausal passive subject is a clausal syntactic subject of a passive clause.
+<p>A clausal passive subject is a clausal syntactic subject of a passive clause.</p>
 
-~~~ sdparse
-Bylo mi doporučeno , abych to velmi dobře zvážil . \n It-has-been to-me recommended , that-I it very well weigh .
+<pre><code class="language-sdparse">Bylo mi doporučeno , abych to velmi dobře zvážil . \n It-has-been to-me recommended , that-I it very well weigh .
 csubjpass(doporučeno, zvážil)
 csubjpass(recommended, weigh)
-~~~
+</code></pre>
 
-Reflexive passive (the meaning is “You are not expected to come before nine o'clock.”)
+<p>Reflexive passive (the meaning is “You are not expected to come before nine o’clock.”)</p>
 
-~~~ sdparse
-Nepředpokládá se , že přijdete před devátou . \n It-does-not-expect itself , that you-will-come before nine .
+<pre><code class="language-sdparse">Nepředpokládá se , že přijdete před devátou . \n It-does-not-expect itself , that you-will-come before nine .
 csubjpass(Nepředpokládá, přijdete)
 csubjpass(It-does-not-expect, you-will-come)
-~~~
+</code></pre>
 
 
 	</div>
@@ -1040,22 +1000,21 @@ csubjpass(It-does-not-expect, you-will-come)
 	<h2><code property="oliasystem:hasTag" lang="">dep</code>: <div property="rdfs:label">unspecified dependency</div></h2>
 	<div property="rdfs:comment">
 
-A dependency is labeled as `dep` when a system is unable to
+<p>A dependency is labeled as <code>dep</code> when a system is unable to
 determine a more precise dependency relation between two words.  This
 may be because of a weird grammatical construction, a limitation in
 software, a parser error, or
-because of an unresolved long distance dependency.
+because of an unresolved long distance dependency.</p>
 
-Most `dep` instances in the current conversion of the PDT 3.0 data
-correspond to the PDT label `ExD`, which marks ellipsis.
+<p>Most <code>dep</code> instances in the current conversion of the PDT 3.0 data
+correspond to the PDT label <code>ExD</code>, which marks ellipsis.
 The current conversion software cannot produce the annotation conforming
-to the UD standard and using the [remnant]() relation.
+to the UD standard and using the <a href="">remnant</a> relation.</p>
 
-~~~ sdparse
-K čemu ovšem , to nebylo jasné . \n For what however , that was-not clear .
+<pre><code class="language-sdparse">K čemu ovšem , to nebylo jasné . \n For what however , that was-not clear .
 dep(jasné, čemu)
 dep(clear, what)
-~~~
+</code></pre>
 
 
 	</div>
@@ -1069,25 +1028,23 @@ dep(clear, what)
 	<h2><code property="oliasystem:hasTag" lang="">det</code>: <div property="rdfs:label">determiner</div></h2>
 	<div property="rdfs:comment">
 
-The relation determiner (`det`) holds between a nominal head and its
-[determiner](cs-pos/DET).
-This relation is used for pronominal adjectival modifiers of noun phrases; the `det` modifier has the POS tag [cs-pos/DET]() and vice versa.
-Non-pronominal adjectives are tagged [cs-pos/ADJ]() and the relation is labeled [amod]().
+<p>The relation determiner (<code>det</code>) holds between a nominal head and its
+<a href="cs-pos/DET">determiner</a>.
+This relation is used for pronominal adjectival modifiers of noun phrases; the <code>det</code> modifier has the POS tag <a href="">cs-pos/DET</a> and vice versa.
+Non-pronominal adjectives are tagged <a href="">cs-pos/ADJ</a> and the relation is labeled <a href="">amod</a>.</p>
 
-Pronominal quantifiers are tagged `DET` but their relation to their head is a subtype of the `det` relation:
-either [cs-dep/det:numgov]() or [cs-dep/det:nummod]().
+<p>Pronominal quantifiers are tagged <code>DET</code> but their relation to their head is a subtype of the <code>det</code> relation:
+either <a href="">cs-dep/det:numgov</a> or <a href="">cs-dep/det:nummod</a>.</p>
 
-~~~ sdparse
-Ten člověk už je tady . \n The man already is here .
+<pre><code class="language-sdparse">Ten člověk už je tady . \n The man already is here .
 det(člověk, Ten)
 det(man, The)
-~~~
+</code></pre>
 
-~~~ sdparse
-Která kniha se vám líbí nejvíc ? \n Which book is to-you nice the-most ?
+<pre><code class="language-sdparse">Která kniha se vám líbí nejvíc ? \n Which book is to-you nice the-most ?
 det(kniha, Která)
 det(book, Which)
-~~~
+</code></pre>
 
 
 	</div>
@@ -1101,20 +1058,19 @@ det(book, Which)
 	<h2><code property="oliasystem:hasTag" lang="">det:numgov</code>: <div property="rdfs:label">pronominal quantifier governing the case of the noun</div></h2>
 	<div property="rdfs:comment">
 
-Pronominal quantifiers are labeled `det:numgov` instead of [det]()
+<p>Pronominal quantifiers are labeled <code>det:numgov</code> instead of <a href="">det</a>
 because they normally do not agree with the quantified noun in case
-(unlike non-quantifying determiners).
+(unlike non-quantifying determiners).</p>
 
-The quantifier requires the counted noun to be in its genitive form.
+<p>The quantifier requires the counted noun to be in its genitive form.
 The whole phrase (quantifier + noun) is treated as a singular neuter noun phrase
-and it can fill roles where nominative, accusative or vocative noun phrases are expected.
+and it can fill roles where nominative, accusative or vocative noun phrases are expected.</p>
 
-Such situations are analyzed in PDT so that the quantifier (numeral) is the head and the noun depends on it.
-In UD the dependency direction is reversed and the `det:numgov` label is used to preserve
-the information about case conditions.
+<p>Such situations are analyzed in PDT so that the quantifier (numeral) is the head and the noun depends on it.
+In UD the dependency direction is reversed and the <code>det:numgov</code> label is used to preserve
+the information about case conditions.</p>
 
-~~~ conllu
-# This is not UD, it is Prague Dependency Treebank, and we want to clearly distinguish it from the UD examples.
+<pre><code class="language-conllu"># This is not UD, it is Prague Dependency Treebank, and we want to clearly distinguish it from the UD examples.
 # visual-style nodes yellow
 # visual-style arcs blue
 1   Kolik   kolik   NUM     _   Case=Nom                           3   Sb     _   How-many
@@ -1122,10 +1078,9 @@ the information about case conditions.
 3   hrálo   hrát    VERB    _   Gender=Neut|Number=Sing            0   Pred   _   played
 4   karty   karta   NOUN    _   Case=Acc|Gender=Fem|Number=Plur    3   Obj    _   cards
 5   ?       ?       PUNCT   _   _                                  0   AuxK   _   ?
-~~~
+</code></pre>
 
-~~~ sdparse
-Kolik mužů hrálo karty ? \n How-many men played cards ?
+<pre><code class="language-sdparse">Kolik mužů hrálo karty ? \n How-many men played cards ?
 det:numgov(mužů, Kolik)
 nsubj(hrálo, mužů)
 dobj(hrálo, karty)
@@ -1134,9 +1089,9 @@ det:numgov(men, How-many)
 nsubj(played, men)
 dobj(played, cards)
 punct(played, ?-11)
-~~~
+</code></pre>
 
-See [nummod]() for a broader discussion of the various situations with quantifiers.
+<p>See <a href="">nummod</a> for a broader discussion of the various situations with quantifiers.</p>
 
 
 	</div>
@@ -1150,15 +1105,14 @@ See [nummod]() for a broader discussion of the various situations with quantifie
 	<h2><code property="oliasystem:hasTag" lang="">det:nummod</code>: <div property="rdfs:label">pronominal quantifier agreeing in case with the noun</div></h2>
 	<div property="rdfs:comment">
 
-Pronominal quantifiers are labeled `det:nummod` or [det:numgov]() instead of [det]()
+<p>Pronominal quantifiers are labeled <code>det:nummod</code> or <a href="">det:numgov</a> instead of <a href="">det</a>
 because they normally do not agree with the quantified noun in case
 (unlike non-quantifying determiners).
 They do agree only if the whole phrase (quantifier + noun) fills a role where
 genitive, dative, locative or instrumental noun phrases are expected.
-In these situations they are labeled `det:nummod`.
+In these situations they are labeled <code>det:nummod</code>.</p>
 
-~~~ sdparse
-Nepamatuji si , s kolika muži jsem hrál karty . \n I-do-not-remember myself , with how-many men I-have played cards .
+<pre><code class="language-sdparse">Nepamatuji si , s kolika muži jsem hrál karty . \n I-do-not-remember myself , with how-many men I-have played cards .
 ccomp(Nepamatuji, hrál)
 compound:reflex(Nepamatuji, si)
 punct(hrál, ,-3)
@@ -1177,9 +1131,9 @@ iobj(played, men)
 case(men, with)
 det:nummod(men, how-many)
 punct(I-do-not-remember, .-21)
-~~~
+</code></pre>
 
-See [nummod]() for a broader discussion of the various situations with quantifiers.
+<p>See <a href="">nummod</a> for a broader discussion of the various situations with quantifiers.</p>
 
 
 	</div>
@@ -1193,15 +1147,14 @@ See [nummod]() for a broader discussion of the various situations with quantifie
 	<h2><code property="oliasystem:hasTag" lang="">discourse</code>: <div property="rdfs:label">discourse element</div></h2>
 	<div property="rdfs:comment">
 
-At present we use the `discourse` relation for what is labeled `AuxO` in the Prague Dependency Treebank:
-redundant or emotional items, redundant coreferential pronoun.
+<p>At present we use the <code>discourse</code> relation for what is labeled <code>AuxO</code> in the Prague Dependency Treebank:
+redundant or emotional items, redundant coreferential pronoun.</p>
 
-~~~ sdparse
-čemu že se to zpronevěřily \n what that themselves it they-betrayed
+<pre><code class="language-sdparse">čemu že se to zpronevěřily \n what that themselves it they-betrayed
 discourse(zpronevěřily, to)
 discourse(they-betrayed, it)
-~~~
-(meaning “… what they betrayed”)
+</code></pre>
+<p>(meaning “… what they betrayed”)</p>
 
 
 	</div>
@@ -1215,58 +1168,54 @@ discourse(they-betrayed, it)
 	<h2><code property="oliasystem:hasTag" lang="">dobj</code>: <div property="rdfs:label">direct object</div></h2>
 	<div property="rdfs:comment">
 
-The direct object of a verb is the noun phrase that denotes the entity acted upon.
-Most often the direct object is in the [accusative case](cs-feat/Case) but
+<p>The direct object of a verb is the noun phrase that denotes the entity acted upon.
+Most often the direct object is in the <a href="cs-feat/Case">accusative case</a> but
 there are verbs that require their objects be in other cases (except for
-nominative and vocative).
+nominative and vocative).</p>
 
-Accusative example:
+<p>Accusative example:</p>
 
-~~~ sdparse
-Koupil jsem auto . \n Bought I-have car .
+<pre><code class="language-sdparse">Koupil jsem auto . \n Bought I-have car .
 dobj(Koupil, auto)
 dobj(Bought, car)
-~~~
+</code></pre>
 
-Genitive example:
+<p>Genitive example:</p>
 
-~~~ sdparse
-Cením si vaší pomoci . \n I-appreciate REFLEX your help .
+<pre><code class="language-sdparse">Cením si vaší pomoci . \n I-appreciate REFLEX your help .
 dobj(Cením, pomoci)
 dobj(I-appreciate, help)
-~~~
+</code></pre>
 
-Dative example:
+<p>Dative example:</p>
 
-~~~ sdparse
-Čelíme velkým problémům . \n We-face big problems .
+<pre><code class="language-sdparse">Čelíme velkým problémům . \n We-face big problems .
 dobj(Čelíme, problémům)
 dobj(We-face, problems)
-~~~
+</code></pre>
 
-Instrumental example:
+<p>Instrumental example:</p>
 
-~~~ sdparse
-Univerzita nedisponuje takovým rozpočtem . \n University does-not-have-at-disposal such budget .
+<pre><code class="language-sdparse">Univerzita nedisponuje takovým rozpočtem . \n University does-not-have-at-disposal such budget .
 dobj(nedisponuje, rozpočtem)
 dobj(does-not-have-at-disposal, budget)
-~~~
+</code></pre>
 
-In general, if there is just one object, it should be labeled `dobj`,
+<p>In general, if there is just one object, it should be labeled <code>dobj</code>,
 regardless of the morphological case or semantic role that it bears. If there are two or more
-objects, one of them should be `dobj` and the others should be
-[iobj](). In such cases it is necessary to decide what is the most
-directly affected object _(patient)._ The one exception is when there is a clausal complement. Then the clausal complement is regarded as a “clausal direct object” and an object nominal will be an iobj.
+objects, one of them should be <code>dobj</code> and the others should be
+<a href="">iobj</a>. In such cases it is necessary to decide what is the most
+directly affected object <em>(patient).</em> The one exception is when there is a clausal complement. Then the clausal complement is regarded as a “clausal direct object” and an object nominal will be an iobj.</p>
 
-## Diffs
+<h2 id="diffs">Diffs</h2>
 
-### Prague Dependency Treebank
+<h3 id="prague-dependency-treebank">Prague Dependency Treebank</h3>
 
-The manual annotation of the PDT does not distinguish direct and indirect objects.
-Therefore all non-clausal dependents labeled `Obj` in PDT are currently labeled `dobj`
+<p>The manual annotation of the PDT does not distinguish direct and indirect objects.
+Therefore all non-clausal dependents labeled <code>Obj</code> in PDT are currently labeled <code>dobj</code>
 in the converted data, even if it results in two or more direct objects attached to one verb.
 In future, the valency lexicon <a href="http://ufal.mff.cuni.cz/vallex">Vallex</a>
-could be used to identify the main object.
+could be used to identify the main object.</p>
 
 
 	</div>
@@ -1280,20 +1229,19 @@ could be used to identify the main object.
 	<h2><code property="oliasystem:hasTag" lang="">expl</code>: <div property="rdfs:label">expletive: reflexive pronoun with an inherently reflexive verb</div></h2>
 	<div property="rdfs:comment">
 
-Reflexive pronouns (see the feature [cs-feat/Reflex]()) usually replace objects of verbs.
+<p>Reflexive pronouns (see the feature <a href="">cs-feat/Reflex</a>) usually replace objects of verbs.
 However, some verbs are inherently reflexive, i.e. the verb always occurs with a reflexive
-prounoun, and the pronoun cannot be replaced by a non-reflexive pronoun.
+prounoun, and the pronoun cannot be replaced by a non-reflexive pronoun.</p>
 
-With these verbs, the reflexive pronoun is attached as `expl` instead of [dobj]().
-(Note that the `expl` relation is first used for this purpose in the UD release 1.2,
+<p>With these verbs, the reflexive pronoun is attached as <code>expl</code> instead of <a href="">dobj</a>.
+(Note that the <code>expl</code> relation is first used for this purpose in the UD release 1.2,
 to increase parallelism with other languages. In the previous releases this usage of
-reflexive _se/si_ was labeled `compound:reflex`.)
+reflexive <em>se/si</em> was labeled <code>compound:reflex</code>.)</p>
 
-~~~ sdparse
-Martin se bojí zvířat . \n Martin REFLEX fears animals .
+<pre><code class="language-sdparse">Martin se bojí zvířat . \n Martin REFLEX fears animals .
 expl(bojí, se)
 expl(fears, REFLEX)
-~~~
+</code></pre>
 
 
 	</div>
@@ -1307,20 +1255,19 @@ expl(fears, REFLEX)
 	<h2><code property="oliasystem:hasTag" lang="">foreign</code>: <div property="rdfs:label">foreign words</div></h2>
 	<div property="rdfs:comment">
 
-We use `foreign` to label sequences of foreign words. These are given
-a linear analysis: the head is the first token in the foreign phrase.
+<p>We use <code>foreign</code> to label sequences of foreign words. These are given
+a linear analysis: the head is the first token in the foreign phrase.</p>
 
-`foreign` does not apply to loanwords or to foreign [names](name). 
+<p><code>foreign</code> does not apply to loanwords or to foreign <a href="name">names</a>. 
 It applies to quoted foreign text incorporated in a sentence/discourse
 of the host language (unless we want to and know how to annotate the
-internal structure according to the syntax of the foreign language).
+internal structure according to the syntax of the foreign language).</p>
 
-~~~ sdparse
-Jarmusch se objevil ve Wangově snímku Modrá ve tváři ( Blue in the Face ) .
+<pre><code class="language-sdparse">Jarmusch se objevil ve Wangově snímku Modrá ve tváři ( Blue in the Face ) .
 foreign(Blue, in)
 foreign(Blue, the)
 foreign(Blue, Face)
-~~~
+</code></pre>
 
 
 	</div>
@@ -1334,14 +1281,13 @@ foreign(Blue, Face)
 	<h2><code property="oliasystem:hasTag" lang="">goeswith</code>: <div property="rdfs:label">goes with</div></h2>
 	<div property="rdfs:comment">
 
-This relation links two parts of a word that are separated in text
+<p>This relation links two parts of a word that are separated in text
 that is not well edited.
-The head is in some sense the “main” part, often the second part.
+The head is in some sense the “main” part, often the second part.</p>
 
-~~~ sdparse
-Zastavil a z těžka oddychoval .
+<pre><code class="language-sdparse">Zastavil a z těžka oddychoval .
 goeswith(těžka, z)
-~~~
+</code></pre>
 
 
 	</div>
@@ -1355,81 +1301,75 @@ goeswith(těžka, z)
 	<h2><code property="oliasystem:hasTag" lang="">iobj</code>: <div property="rdfs:label">indirect object</div></h2>
 	<div property="rdfs:comment">
 
-The indirect object of a verb is any nominal phrase that is a core
-argument of the verb but is not its subject or [direct object](dobj).
+<p>The indirect object of a verb is any nominal phrase that is a core
+argument of the verb but is not its subject or <a href="dobj">direct object</a>.
 The prototypical example is the recipient of ditransitive verbs of
-exchange:
+exchange:</p>
 
-~~~ sdparse
-Pavel dal Petrovi dvě hrušky . \n Pavel gave Petr two pears .
+<pre><code class="language-sdparse">Pavel dal Petrovi dvě hrušky . \n Pavel gave Petr two pears .
 iobj(dal, Petrovi)
 iobj(gave, Petr)
-~~~
+</code></pre>
 
-However, Czech allows other semantic roles as additional objects.
-The morphological [cs-feat/Case]() of the objects is dictated by verb valency.
+<p>However, Czech allows other semantic roles as additional objects.
+The morphological <a href="">cs-feat/Case</a> of the objects is dictated by verb valency.</p>
 
-In the following Czech example, the verb takes two arguments, both are nouns in the accusative case. One of them is direct object (patient), the other is indirect (addressee). It is parallel to how the English translation would be annotated (where there is no morphological case marking) and also to verbs of giving (consider a similar sentence, _he gave my daughter a class of maths_).
+<p>In the following Czech example, the verb takes two arguments, both are nouns in the accusative case. One of them is direct object (patient), the other is indirect (addressee). It is parallel to how the English translation would be annotated (where there is no morphological case marking) and also to verbs of giving (consider a similar sentence, <em>he gave my daughter a class of maths</em>).</p>
 
-~~~ sdparse
-On učí mou dceru matematiku . \n He teaches my daughter.Acc maths.Acc .
+<pre><code class="language-sdparse">On učí mou dceru matematiku . \n He teaches my daughter.Acc maths.Acc .
 dobj(učí, matematiku)
 iobj(učí, dceru)
 dobj(teaches, maths.Acc)
 iobj(teaches, daughter.Acc)
-~~~
+</code></pre>
 
-In general, if there is just one object, it should be labeled
-[dobj](), regardless of the morphological case or semantic role.
-For example, _učit_ “to teach” can take either the subject matter or the recipient as the only object,
-and in both cases it would be analyzed as the [dobj]():
+<p>In general, if there is just one object, it should be labeled
+<a href="">dobj</a>, regardless of the morphological case or semantic role.
+For example, <em>učit</em> “to teach” can take either the subject matter or the recipient as the only object,
+and in both cases it would be analyzed as the <a href="">dobj</a>:</p>
 
-~~~ sdparse
-Učí úvod do logiky . \n He-teaches introduction to logic .
+<pre><code class="language-sdparse">Učí úvod do logiky . \n He-teaches introduction to logic .
 dobj(Učí, úvod)
 dobj(He-teaches, introduction)
-~~~
+</code></pre>
 
-~~~ sdparse
-Učí studenty prvního ročníku . \n He-teaches students of-first year .
+<pre><code class="language-sdparse">Učí studenty prvního ročníku . \n He-teaches students of-first year .
 dobj(Učí, studenty)
 dobj(He-teaches, students)
-~~~
+</code></pre>
 
-The one exception is when there is a clausal complement.
+<p>The one exception is when there is a clausal complement.
 Then the clausal complement is regarded as a “clausal direct object” and an object nominal will be an iobj, parallel to
-the simple ditransitive case:
+the simple ditransitive case:</p>
 
-~~~ sdparse
-Řekla studentům , že dnes večer musí studovat . \n She-told students , that today evening they-needed to-study .
+<pre><code class="language-sdparse">Řekla studentům , že dnes večer musí studovat . \n She-told students , that today evening they-needed to-study .
 iobj(Řekla, studentům)
 ccomp(Řekla, musí)
 iobj(She-told, students)
 ccomp(She-told, they-needed)
-~~~
+</code></pre>
 
-~~~ sdparse
-Řekla studentům svůj plán . \n She-told students her plan .
+<pre><code class="language-sdparse">Řekla studentům svůj plán . \n She-told students her plan .
 iobj(Řekla, studentům)
 dobj(Řekla, plán)
 iobj(She-told, students)
 dobj(She-told, plan)
-~~~
+</code></pre>
 
-If there are two or
-more objects, one of them should be [dobj]() and the others should be
-`iobj`. In such cases it is necessary to decide what is the
-most directly affected object _(patient)._
+<p>If there are two or
+more objects, one of them should be <a href="">dobj</a> and the others should be
+<code>iobj</code>. In such cases it is necessary to decide what is the
+most directly affected object <em>(patient).</em></p>
 
-## Diffs
+<h2 id="diffs">Diffs</h2>
 
-### Prague Dependency Treebank
+<h3 id="prague-dependency-treebank">Prague Dependency Treebank</h3>
 
-The manual annotation of the PDT does not distinguish direct and indirect objects.
-Therefore all non-clausal dependents labeled `Obj` in PDT are currently labeled `dobj`
+<p>The manual annotation of the PDT does not distinguish direct and indirect objects.
+Therefore all non-clausal dependents labeled <code>Obj</code> in PDT are currently labeled <code>dobj</code>
 in the converted data, even if it results in two or more direct objects attached to one verb.
 In future, the valency lexicon <a href="http://ufal.mff.cuni.cz/vallex">Vallex</a>
-could be used to identify the main object.
+could be used to identify the main object.</p>
 
 
 	</div>
@@ -1443,30 +1383,29 @@ could be used to identify the main object.
 	<h2><code property="oliasystem:hasTag" lang="">list</code>: <div property="rdfs:label">list</div></h2>
 	<div property="rdfs:comment">
 
-The `list` relation is used for chains of comparable items.
+<p>The <code>list</code> relation is used for chains of comparable items.
 In lists with more than two items, all items of the list should modify the first one.
 Informal and web text often contains passages which are meant to be interpreted as lists but are parsed as single sentences.
 Email signatures often contain these structures, in the form of contact information:
-the different contact information items are labeled as `list`; the key-value pair relations are labeled as [appos]().
+the different contact information items are labeled as <code>list</code>; the key-value pair relations are labeled as <a href="">appos</a>.</p>
 
-However, `list` should not be over-used. If a construction can be easily analyzed
+<p>However, <code>list</code> should not be over-used. If a construction can be easily analyzed
 using the grammatical relations of standard sentences, such as when there is overt coordination,
-then it should be analyzed with these more standard relations, even if it is laid out as a list typographically.
+then it should be analyzed with these more standard relations, even if it is laid out as a list typographically.</p>
 
-~~~ sdparse
-Steve Jones tel.: 555-9814 e-mail: jones@abc.edf
+<pre><code class="language-sdparse">Steve Jones tel.: 555-9814 e-mail: jones@abc.edf
 name(Steve-1, Jones-2)
 list(Steve-1, tel.:-3)
 list(Steve-1, e-mail:-5)
 appos(tel.:-3, 555-9814-4)
 appos(e-mail:-5, jones@abc.edf-6)
-~~~
+</code></pre>
 
-## Diffs
+<h2 id="diffs">Diffs</h2>
 
-### Prague Dependency Treebank
+<h3 id="prague-dependency-treebank">Prague Dependency Treebank</h3>
 
-The `list` relation is not used in the current conversion of the PDT data to UD.
+<p>The <code>list</code> relation is not used in the current conversion of the PDT data to UD.</p>
 
 
 	</div>
@@ -1480,30 +1419,27 @@ The `list` relation is not used in the current conversion of the PDT data to UD.
 	<h2><code property="oliasystem:hasTag" lang="">mark</code>: <div property="rdfs:label">marker</div></h2>
 	<div property="rdfs:comment">
 
-A marker is the subordinating conjunction introducing a finite clause subordinate to another clause.
-The mark is a dependent of the subordinate clause head.
+<p>A marker is the subordinating conjunction introducing a finite clause subordinate to another clause.
+The mark is a dependent of the subordinate clause head.</p>
 
-~~~ sdparse
-Nevěděl jsem , že umíš německy . \n Not-know I-did , that you-can-speak German .
+<pre><code class="language-sdparse">Nevěděl jsem , že umíš německy . \n Not-know I-did , that you-can-speak German .
 mark(umíš, že)
 mark(you-can-speak, that)
-~~~
+</code></pre>
 
-~~~ sdparse
-Zboží odešleme , jakmile peníze dorazí na náš účet . \n Goods we-will-dispatch , as-soon-as money arrive at our account .
+<pre><code class="language-sdparse">Zboží odešleme , jakmile peníze dorazí na náš účet . \n Goods we-will-dispatch , as-soon-as money arrive at our account .
 mark(dorazí, jakmile)
 mark(arrive, as-soon-as)
-~~~
+</code></pre>
 
-Note that the subordinating conjunction should not be confused with relative pronouns and adverbs.
+<p>Note that the subordinating conjunction should not be confused with relative pronouns and adverbs.
 These fill a valency slot in the frame of the subordinate predicate,
-and are labeled according to their role in the frame, they are not `mark`:
+and are labeled according to their role in the frame, they are not <code>mark</code>:</p>
 
-~~~ sdparse
-Rád bych věděl , kdy peníze dorazí na náš účet . \n Like-to I-would know , when money arrive at our account .
+<pre><code class="language-sdparse">Rád bych věděl , kdy peníze dorazí na náš účet . \n Like-to I-would know , when money arrive at our account .
 advmod(dorazí, kdy)
 advmod(arrive, when)
-~~~
+</code></pre>
 
 
 	</div>
@@ -1517,26 +1453,24 @@ advmod(arrive, when)
 	<h2><code property="oliasystem:hasTag" lang="">mwe</code>: <div property="rdfs:label">multi-word expression</div></h2>
 	<div property="rdfs:comment">
 
-The multi-word expression (modifier) relation is one of the
+<p>The multi-word expression (modifier) relation is one of the
 relations for compounding and it is intended for function words.
 In Czech it is used for multi-word prepositions.
-The leftmost word is the head and all the other words are attached as its `mwe` modifiers.
+The leftmost word is the head and all the other words are attached as its <code>mwe</code> modifiers.</p>
 
-~~~ sdparse
-Na rozdíl od tebe já se nemám zač stydět . \n In contrast to you I myself have-not of-what to-be-ashamed .
+<pre><code class="language-sdparse">Na rozdíl od tebe já se nemám zač stydět . \n In contrast to you I myself have-not of-what to-be-ashamed .
 mwe(Na, rozdíl)
 mwe(Na, od)
 case(tebe, Na)
 mwe(In, contrast)
 mwe(In, to)
 case(you, In)
-~~~
+</code></pre>
 
-Multi-word prepositions usually form a contiguous span of the sentence. In exceptional cases however, they can be interrupted
-by emphasizers and other words:
+<p>Multi-word prepositions usually form a contiguous span of the sentence. In exceptional cases however, they can be interrupted
+by emphasizers and other words:</p>
 
-~~~ sdparse
-ve srovnání například s úvěry \n in comparison for-example to loans
+<pre><code class="language-sdparse">ve srovnání například s úvěry \n in comparison for-example to loans
 mwe(ve, srovnání)
 mwe(ve, s)
 case(úvěry, ve)
@@ -1545,25 +1479,24 @@ mwe(in, comparison)
 mwe(in, to)
 case(loans, in)
 advmod:emph(loans, for-example)
-~~~
+</code></pre>
 
-Another type of interruption is caused by a possessive determiner. For instance, _na základě něčeho_ “based on something”
-contains the multi-word preposition _na základě_ “based on”, lit. _on the-basis-of_. This expression is etymologically
-a combination of a proper preposition _na_ “on” and the noun _základ_ “basis”; the argument _něčeho_ “something” is in
-genitive. If the phrase _na základě_ were not analyzed as a multi-word expression, we would have a normal genitive
-modification between two nominals: _základ něčeho_ “basis of-something”. A genitive modifier can be substituted by
+<p>Another type of interruption is caused by a possessive determiner. For instance, <em>na základě něčeho</em> “based on something”
+contains the multi-word preposition <em>na základě</em> “based on”, lit. <em>on the-basis-of</em>. This expression is etymologically
+a combination of a proper preposition <em>na</em> “on” and the noun <em>základ</em> “basis”; the argument <em>něčeho</em> “something” is in
+genitive. If the phrase <em>na základě</em> were not analyzed as a multi-word expression, we would have a normal genitive
+modification between two nominals: <em>základ něčeho</em> “basis of-something”. A genitive modifier can be substituted by
 a possessive determiner, and this is possible even within the partially frozen multi-word preposition, as with the
-relative possessive determiner in the following example:
+relative possessive determiner in the following example:</p>
 
-~~~ sdparse
-zákon , na jehož základě byl zřízen fond \n law , on whose basis was created fund
+<pre><code class="language-sdparse">zákon , na jehož základě byl zřízen fond \n law , on whose basis was created fund
 nmod(zřízen, jehož)
 nmod(created, whose)
 case(jehož, na)
 case(whose, on)
 mwe(na, základě)
 mwe(on, basis)
-~~~
+</code></pre>
 
 
 	</div>
@@ -1577,25 +1510,24 @@ mwe(on, basis)
 	<h2><code property="oliasystem:hasTag" lang="">name</code>: <div property="rdfs:label">personal name</div></h2>
 	<div property="rdfs:comment">
 
-`name` is one of the relations for compounding in UD.
-In Czech it is used to join the first (or middle) and the last name of a person.
+<p><code>name</code> is one of the relations for compounding in UD.
+In Czech it is used to join the first (or middle) and the last name of a person.</p>
 
-The leftmost name is always the head and the other name(s) are attached to it.
+<p>The leftmost name is always the head and the other name(s) are attached to it.
 In most cases this is the opposite to PDT where family names are heads and given names are dependents,
-and the family name is usually the last name.
+and the family name is usually the last name.</p>
 
-The relation is not used to attach adjectives to nouns within multi-word names of places, organizations etc.
-(e.g. _Český Krumlov_).
+<p>The relation is not used to attach adjectives to nouns within multi-word names of places, organizations etc.
+(e.g. <em>Český Krumlov</em>).</p>
 
-~~~ sdparse
-Prezident Václav Havel včera navštívil Český Krumlov . \n President Václav Havel yesterday visited Český Krumlov .
+<pre><code class="language-sdparse">Prezident Václav Havel včera navštívil Český Krumlov . \n President Václav Havel yesterday visited Český Krumlov .
 name(Václav-2, Havel-3)
 name(Václav-11, Havel-12)
 nmod(Václav-2, Prezident)
 nmod(Václav-11, President)
 amod(Krumlov-7, Český-6)
 amod(Krumlov-16, Český-15)
-~~~
+</code></pre>
 
 
 	</div>
@@ -1609,26 +1541,24 @@ amod(Krumlov-16, Český-15)
 	<h2><code property="oliasystem:hasTag" lang="">neg</code>: <div property="rdfs:label">negation modifier</div></h2>
 	<div property="rdfs:comment">
 
-The negation modifier is the relation between the negation word _ne_ and the
-word it modifies.
+<p>The negation modifier is the relation between the negation word <em>ne</em> and the
+word it modifies.</p>
 
-Negation in Czech is most of the time expressed using a bound morpheme (the prefix _ne-_).
+<p>Negation in Czech is most of the time expressed using a bound morpheme (the prefix <em>ne-</em>).
 Occurrences of the morpheme as a separate word are rare in comparison to other languages,
-yet they exist.
+yet they exist.</p>
 
-~~~ sdparse
-Potřeboval čtyřnohého a ne dvounohého přítele . \n He-needed quadrupedal and not bipedal friend .
+<pre><code class="language-sdparse">Potřeboval čtyřnohého a ne dvounohého přítele . \n He-needed quadrupedal and not bipedal friend .
 neg(dvounohého, ne)
 neg(bipedal, not)
-~~~
+</code></pre>
 
-Note that the negative determiners (pronouns) are attached as [det](), not `neg`:
+<p>Note that the negative determiners (pronouns) are attached as <a href="">det</a>, not <code>neg</code>:</p>
 
-~~~ sdparse
-Premiér není žádný hlupák . \n The-Prime-Minister is-not no fool .
+<pre><code class="language-sdparse">Premiér není žádný hlupák . \n The-Prime-Minister is-not no fool .
 det(hlupák, žádný)
 det(fool, no)
-~~~
+</code></pre>
 
 
 	</div>
@@ -1642,69 +1572,63 @@ det(fool, no)
 	<h2><code property="oliasystem:hasTag" lang="">nmod</code>: <div property="rdfs:label">nominal modifier</div></h2>
 	<div property="rdfs:comment">
 
-The `nmod` relation is used for nominal modifiers. They depend either
+<p>The <code>nmod</code> relation is used for nominal modifiers. They depend either
 on another noun (group “noun dependents”) or on a predicate (group
-“non-core dependents of clausal predicates”).
+“non-core dependents of clausal predicates”).</p>
 
-`nmod` is a [noun](cs-pos/NOUN) (or noun phrase) functioning as a
+<p><code>nmod</code> is a <a href="cs-pos/NOUN">noun</a> (or noun phrase) functioning as a
 non-core (oblique) argument or adjunct.
 This means that it functionally corresponds to an adverbial when it attaches to a verb, adjective or other adverb.
-But when attaching to a noun, it usually corresponds to a non-agreeing attribute _(přívlastek neshodný)_
-in genitive. (See below for an example of an agreeing attribute, _přívlastek shodný_.)
+But when attaching to a noun, it usually corresponds to a non-agreeing attribute <em>(přívlastek neshodný)</em>
+in genitive. (See below for an example of an agreeing attribute, <em>přívlastek shodný</em>.)</p>
 
-In Czech the `nmod` relation covers only those possessives that are expressed using the genitive [cs-feat/Case]().
-If a possessive adjective is used, the relation is labeled [amod]().
+<p>In Czech the <code>nmod</code> relation covers only those possessives that are expressed using the genitive <a href="">cs-feat/Case</a>.
+If a possessive adjective is used, the relation is labeled <a href="">amod</a>.</p>
 
-~~~ sdparse
-kancelář ředitele \n office of-the-director
+<pre><code class="language-sdparse">kancelář ředitele \n office of-the-director
 nmod(kancelář, ředitele)
 nmod(office, of-the-director)
-~~~
+</code></pre>
 
-~~~ sdparse
-ředitelova kancelář \n director's office
+<pre><code class="language-sdparse">ředitelova kancelář \n director's office
 amod(kancelář, ředitelova)
 amod(office, director's)
-~~~
+</code></pre>
 
-~~~ sdparse
-jeho kancelář \n his office
+<pre><code class="language-sdparse">jeho kancelář \n his office
 det(kancelář, jeho)
 det(office, his)
-~~~
+</code></pre>
 
-`nmod` is also used for temporal nominal modifiers:
+<p><code>nmod</code> is also used for temporal nominal modifiers:</p>
 
-~~~ sdparse
-Potkal jsem ho minulý čtvrtek . \n Met I-have him last Thursday .
+<pre><code class="language-sdparse">Potkal jsem ho minulý čtvrtek . \n Met I-have him last Thursday .
 nmod(Potkal, čtvrtek)
 nmod(Met, Thursday)
-~~~
+</code></pre>
 
-## Agreeing attribute of a noun
+<h2 id="agreeing-attribute-of-a-noun">Agreeing attribute of a noun</h2>
 
-`nmod` noun phrases attached to nouns are usually in the genitive [cs-feat/Case]() and follow the modified noun.
-However, there is also a different kind of `nmod` that precedes the modified noun and agrees with it in case and number.
-A typical example is a title attached to a name of a person. The relation is similar to the [name]() relation
-that links the first and the last name, but it is not labeled `name` because the title is not part of the name:
+<p><code>nmod</code> noun phrases attached to nouns are usually in the genitive <a href="">cs-feat/Case</a> and follow the modified noun.
+However, there is also a different kind of <code>nmod</code> that precedes the modified noun and agrees with it in case and number.
+A typical example is a title attached to a name of a person. The relation is similar to the <a href="">name</a> relation
+that links the first and the last name, but it is not labeled <code>name</code> because the title is not part of the name:</p>
 
-~~~ sdparse
-český prezident Václav Havel
+<pre><code class="language-sdparse">český prezident Václav Havel
 amod(prezident, český)
 nmod(Havel, prezident)
 name(Havel, Václav)
-~~~
+</code></pre>
 
-Note that the same thing can be also expressed using an [apposition](appos).
-In the case of apposition, the title follows the modified name and is separated by a punctuation symbol:
+<p>Note that the same thing can be also expressed using an <a href="appos">apposition</a>.
+In the case of apposition, the title follows the modified name and is separated by a punctuation symbol:</p>
 
-~~~ sdparse
-Václav Havel , český prezident
+<pre><code class="language-sdparse">Václav Havel , český prezident
 name(Havel, Václav)
 punct(prezident, ,-3)
 amod(prezident, český)
 appos(Havel, prezident)
-~~~
+</code></pre>
 
 
 	</div>
@@ -1718,25 +1642,23 @@ appos(Havel, prezident)
 	<h2><code property="oliasystem:hasTag" lang="">nsubj</code>: <div property="rdfs:label">nominal subject</div></h2>
 	<div property="rdfs:comment">
 
-A nominal subject is a nominal phrase which is the syntactic subject of a clause;
-in Czech, the phrase is in the nominative [cs-feat/Case]().
-(See [csubj]() for when the subject is clausal.
-See [nsubjpass]() and [csubjpass]() for when the subject is not the proto-agent argument due to valence changing operations.)
-The governor of the `nsubj` relation might not always be a verb: when
+<p>A nominal subject is a nominal phrase which is the syntactic subject of a clause;
+in Czech, the phrase is in the nominative <a href="">cs-feat/Case</a>.
+(See <a href="">csubj</a> for when the subject is clausal.
+See <a href="">nsubjpass</a> and <a href="">csubjpass</a> for when the subject is not the proto-agent argument due to valence changing operations.)
+The governor of the <code>nsubj</code> relation might not always be a verb: when
 the verb is a copular verb, the root of the clause is the complement
-of the copular verb, which can be an adjective or noun.
+of the copular verb, which can be an adjective or noun.</p>
 
-~~~ sdparse
-Novosvětskou symfonii napsal Antonín Dvořák . \n From-the-New-World Symphony wrote Antonín Dvořák .
+<pre><code class="language-sdparse">Novosvětskou symfonii napsal Antonín Dvořák . \n From-the-New-World Symphony wrote Antonín Dvořák .
 nsubj(napsal, Dvořák-5)
 nsubj(wrote, Dvořák-12)
-~~~
+</code></pre>
 
-~~~ sdparse
-Auto je červené . \n Car is red .
+<pre><code class="language-sdparse">Auto je červené . \n Car is red .
 nsubj(červené, Auto)
 nsubj(red, Car)
-~~~
+</code></pre>
 
 
 	</div>
@@ -1750,22 +1672,20 @@ nsubj(red, Car)
 	<h2><code property="oliasystem:hasTag" lang="">nsubjpass</code>: <div property="rdfs:label">passive nominal subject</div></h2>
 	<div property="rdfs:comment">
 
-A passive nominal subject is a noun phrase which is the syntactic
-subject of a passive clause.
+<p>A passive nominal subject is a noun phrase which is the syntactic
+subject of a passive clause.</p>
 
-~~~ sdparse
-Schwarzenberg byl poražen Zemanem . \n Schwarzenberg was defeated by-Zeman .
+<pre><code class="language-sdparse">Schwarzenberg byl poražen Zemanem . \n Schwarzenberg was defeated by-Zeman .
 nsubjpass(poražen, Schwarzenberg-1)
 nsubjpass(defeated, Schwarzenberg-7)
-~~~
+</code></pre>
 
-Reflexive passive (the meaning is “This will be solved tomorrow.”)
+<p>Reflexive passive (the meaning is “This will be solved tomorrow.”)</p>
 
-~~~ sdparse
-Tohle se bude řešit zítra . \n This itself will solve tomorrow .
+<pre><code class="language-sdparse">Tohle se bude řešit zítra . \n This itself will solve tomorrow .
 nsubjpass(řešit, Tohle)
 nsubjpass(solve, This)
-~~~
+</code></pre>
 
 
 	</div>
@@ -1779,56 +1699,55 @@ nsubjpass(solve, This)
 	<h2><code property="oliasystem:hasTag" lang="">nummod</code>: <div property="rdfs:label">numeric modifier</div></h2>
 	<div property="rdfs:comment">
 
-A numeric modifier of a noun is any [number](cs-pos/NUM) phrase
-that serves to modify the meaning of the noun with a quantity.
+<p>A numeric modifier of a noun is any <a href="cs-pos/NUM">number</a> phrase
+that serves to modify the meaning of the noun with a quantity.</p>
 
-~~~ sdparse
-Jan snědl tři řízky . \n Jan ate three steaks .
+<pre><code class="language-sdparse">Jan snědl tři řízky . \n Jan ate three steaks .
 nummod(řízky, tři)
 nummod(steaks, three)
-~~~
+</code></pre>
 
+<h2 id="agreement-and-government-with-czech-quantifiers">Agreement and government with Czech quantifiers</h2>
 
-
-## Agreement and government with Czech quantifiers
-
-The morphological and syntactic behavior of Czech numerals is a complex matter.
-Small cardinal numerals _jeden_ “one”, _dva_ “two”, _tři_ “three” and _čtyři_ “four” agree with the counted
-noun in [cs-feat/Case]() (_jeden_ also agrees in [cs-feat/Gender]() and [cs-feat/Number]();
-_dva_ also agrees in [cs-feat/Gender]()).
+<p>The morphological and syntactic behavior of Czech numerals is a complex matter.
+Small cardinal numerals <em>jeden</em> “one”, <em>dva</em> “two”, <em>tři</em> “three” and <em>čtyři</em> “four” agree with the counted
+noun in <a href="">cs-feat/Case</a> (<em>jeden</em> also agrees in <a href="">cs-feat/Gender</a> and <a href="">cs-feat/Number</a>;
+<em>dva</em> also agrees in <a href="">cs-feat/Gender</a>).
 They behave as if they modify the counted noun; they are similar to adjectives in this respect.
-Examples:
+Examples:</p>
 
-- _<b>Jeden</b> muž spal, <b>dva</b> muži hráli karty._ “One man slept, two men played cards.”
-- _<b>Jedna</b> žena spala, <b>dvě</b> ženy hrály karty._ “One woman slept, two women played cards.”
-- _<b>Jedno</b> kotě spalo, <b>dvě</b> koťata si hrála._ “One kitten slept, two kittens played.”
+<ul>
+  <li><em><b>Jeden</b> muž spal, <b>dva</b> muži hráli karty.</em> “One man slept, two men played cards.”</li>
+  <li><em><b>Jedna</b> žena spala, <b>dvě</b> ženy hrály karty.</em> “One woman slept, two women played cards.”</li>
+  <li><em><b>Jedno</b> kotě spalo, <b>dvě</b> koťata si hrála.</em> “One kitten slept, two kittens played.”</li>
+</ul>
 
-In PDT, these numerals are attached to their counted nouns as `Atr` (attribute).
-It is straightforward to convert such dependencies to `nummod`:
+<p>In PDT, these numerals are attached to their counted nouns as <code>Atr</code> (attribute).
+It is straightforward to convert such dependencies to <code>nummod</code>:</p>
 
-~~~ sdparse
-Jedno kotě spalo . \n One kitten slept .
+<pre><code class="language-sdparse">Jedno kotě spalo . \n One kitten slept .
 nummod(kotě, Jedno)
 nsubj(spalo, kotě)
 punct(spalo, .-4)
 nummod(kitten, One)
 nsubj(slept, kitten)
 punct(slept, .-9)
-~~~
+</code></pre>
 
-Larger cardinals behave differently.
+<p>Larger cardinals behave differently.
 They require that the counted noun be in the genitive case; this indicates that they actually govern the noun.
 Such constructions are parallel to nouns modified by other noun phrases in genitive.
 The whole phrase (numeral + counted noun) behaves as a noun phrase in neuter gender and singular number
-(which is important for subject-verb agreement).
+(which is important for subject-verb agreement).</p>
 
-- _<b>Pět</b> mužů hrálo karty._ “Five men played cards.”
-- _Skupina mužů hrála karty._ “A group of men played cards.”
+<ul>
+  <li><em><b>Pět</b> mužů hrálo karty.</em> “Five men played cards.”</li>
+  <li><em>Skupina mužů hrála karty.</em> “A group of men played cards.”</li>
+</ul>
 
-In PDT, these numerals are analyzed as heads of the counted nouns, which are attached to the numeral as `Atr`:
+<p>In PDT, these numerals are analyzed as heads of the counted nouns, which are attached to the numeral as <code>Atr</code>:</p>
 
-~~~ conllu
-# This is not UD, it is Prague Dependency Treebank, and we want to clearly distinguish it from the UD examples.
+<pre><code class="language-conllu"># This is not UD, it is Prague Dependency Treebank, and we want to clearly distinguish it from the UD examples.
 # visual-style nodes yellow
 # visual-style arcs blue
 1   Pět     pět     NUM     _   Case=Nom                           3   Sb     _   Five
@@ -1836,17 +1755,17 @@ In PDT, these numerals are analyzed as heads of the counted nouns, which are att
 3   hrálo   hrát    VERB    _   Gender=Neut|Number=Sing            0   Pred   _   played
 4   karty   karta   NOUN    _   Case=Acc|Gender=Fem|Number=Plur    3   Obj    _   cards
 5   .       .       PUNCT   _   _                                  0   AuxK   _   .
-~~~
+</code></pre>
 
-There are both advantages and drawbacks to this solution.
+<p>There are both advantages and drawbacks to this solution.
 On the one hand, it reflects well the agreement in case, gender and number.
 On the other hand, it is confusing that there are two different analyses of counted noun constructions,
-depending on the numeric value.
+depending on the numeric value.</p>
 
-Moreover, the numeral does not govern the noun in all morphological cases.
+<p>Moreover, the numeral does not govern the noun in all morphological cases.
 The following table shows the case of the whole phrase (numeral + noun; first column)
 and the consequences for the case of the parts (note that these numerals have only
-two distinct morphological forms, resulting in homonymy).
+two distinct morphological forms, resulting in homonymy).</p>
 
 <table>
 <tr><th>Phrase Case</th><th>Example</th><th>Numeral Case</th><th>Noun Case</th></tr>
@@ -1859,18 +1778,17 @@ two distinct morphological forms, resulting in homonymy).
 <tr><td>Ins</td><td>pěti muži</td>  <td>Ins</td><td>Ins</td></tr>
 </table>
 
-We can say that the noun has the case of the whole phrase if it is dative, locative or instrumental.
+<p>We can say that the noun has the case of the whole phrase if it is dative, locative or instrumental.
 The numeral then agrees with the noun in case.
 The numeral forces the noun to the genitive case if the whole phrase is nominative, accusative or vocative
 (but the vocative usage is rather hypothetical).
 In genitive, the noun and the numeral agree with each other; but note that the numeral uses its
-inflected form, as in the other cases where it agrees with the noun.
+inflected form, as in the other cases where it agrees with the noun.</p>
 
-In PDT, the genitive, dative, locative and instrumental cases are analyzed in parallel to the low-value numerals,
-i.e. the noun governs the numeral:
+<p>In PDT, the genitive, dative, locative and instrumental cases are analyzed in parallel to the low-value numerals,
+i.e. the noun governs the numeral:</p>
 
-~~~ conllu
-# This is not UD, it is Prague Dependency Treebank, and we want to clearly distinguish it from the UD examples.
+<pre><code class="language-conllu"># This is not UD, it is Prague Dependency Treebank, and we want to clearly distinguish it from the UD examples.
 # visual-style nodes yellow
 # visual-style arcs blue
 1   Hrál      hrát    VERB    _   Gender=Masc|Number=Sing            0   Pred   _   He-played
@@ -1880,24 +1798,27 @@ i.e. the noun governs the numeral:
 5   dalšími   další   ADJ     _   Case=Ins|Gender=Masc|Number=Plur   6   Atr    _   other
 6   muži      muž     NOUN    _   Case=Ins|Gender=Masc|Number=Plur   3   Obj    _   men
 7   .         .       PUNCT   _   _                                  0   AuxK   _   .
-~~~
+</code></pre>
 
-High-value numerals where the lowest-order digit is more than zero and less than five (e.g. 21, 22, 23, 24) may behave both ways:
+<p>High-value numerals where the lowest-order digit is more than zero and less than five (e.g. 21, 22, 23, 24) may behave both ways:</p>
 
-- _dvacet <b>dva</b> muži_ (noun governs numeral)
-- _dvacet <b>dva</b> mužů_ (numeral governs noun)
-- _<b>dvaadvacet</b> mužů_ (alternative form; it does not end with _dva_, thus the numeral governs the noun)
-- _<b>22</b> muži_ (assuming the reader will pronounce _22_ as _dvacet dva,_ not _dvaadvacet_)
-- _<b>22</b> mužů_ (pronounced either way)
+<ul>
+  <li><em>dvacet <b>dva</b> muži</em> (noun governs numeral)</li>
+  <li><em>dvacet <b>dva</b> mužů</em> (numeral governs noun)</li>
+  <li><em><b>dvaadvacet</b> mužů</em> (alternative form; it does not end with <em>dva</em>, thus the numeral governs the noun)</li>
+  <li><em><b>22</b> muži</em> (assuming the reader will pronounce <em>22</em> as <em>dvacet dva,</em> not <em>dvaadvacet</em>)</li>
+  <li><em><b>22</b> mužů</em> (pronounced either way)</li>
+</ul>
 
-Pronominal quantifiers behave as high-value numerals and govern the quantifed nouns:
+<p>Pronominal quantifiers behave as high-value numerals and govern the quantifed nouns:</p>
 
-- _<b>Kolik</b> mužů hrálo karty?_ “How many men played cards?”
-- _<b>Několik</b> (<b>mnoho</b>, <b>málo</b>) mužů hrálo karty._ “Several (many, few) men played cards.”
-- _<b>Tolik</b> mužů hrát karty jsem ještě neviděl._ “I have never seen so many men playing cards.”
+<ul>
+  <li><em><b>Kolik</b> mužů hrálo karty?</em> “How many men played cards?”</li>
+  <li><em><b>Několik</b> (<b>mnoho</b>, <b>málo</b>) mužů hrálo karty.</em> “Several (many, few) men played cards.”</li>
+  <li><em><b>Tolik</b> mužů hrát karty jsem ještě neviděl.</em> “I have never seen so many men playing cards.”</li>
+</ul>
 
-~~~ conllu
-# This is not UD, it is Prague Dependency Treebank, and we want to clearly distinguish it from the UD examples.
+<pre><code class="language-conllu"># This is not UD, it is Prague Dependency Treebank, and we want to clearly distinguish it from the UD examples.
 # visual-style nodes yellow
 # visual-style arcs blue
 1   Kolik   kolik   NUM     _   Case=Nom                           3   Sb     _   How-many
@@ -1905,15 +1826,15 @@ Pronominal quantifiers behave as high-value numerals and govern the quantifed no
 3   hrálo   hrát    VERB    _   Gender=Neut|Number=Sing            0   Pred   _   played
 4   karty   karta   NOUN    _   Case=Acc|Gender=Fem|Number=Plur    3   Obj    _   cards
 5   ?       ?       PUNCT   _   _                                  0   AuxK   _   ?
-~~~
+</code></pre>
 
-The UD conversion of the PDT data unifies analyses of counted noun phrases
+<p>The UD conversion of the PDT data unifies analyses of counted noun phrases
 and uses a structure that is parallel among all the above cases,
 and also with universal dependencies in other languages.
 The counted noun is always the head and the numeral is always attached as its modifier.
 Nevertheless, we use different relation labels to mark situations where the numeral (or quantifier)
 actually governs the morphological case of the noun.
-There are four labels used:
+There are four labels used:</p>
 
 <table>
 <tr><td></td><td><strong>Numeric</strong></td><td><strong>Pronominal</strong></td></tr>
@@ -1921,8 +1842,7 @@ There are four labels used:
 <tr><td><strong>Numeral governs</strong></td><td><tt><a href="nummod-gov.html">nummod:gov</a></tt></td><td><tt><a href="det-numgov.html">det:numgov</a></tt></td></tr>
 </table>
 
-~~~ sdparse
-Tři muži hráli karty . \n Three men played cards .
+<pre><code class="language-sdparse">Tři muži hráli karty . \n Three men played cards .
 nummod(muži, Tři)
 nsubj(hráli, muži)
 dobj(hráli, karty)
@@ -1931,10 +1851,9 @@ nummod(men, Three)
 nsubj(played, men)
 dobj(played, cards)
 punct(played, .-11)
-~~~
+</code></pre>
 
-~~~ sdparse
-Pět mužů hrálo karty . \n Five men played cards .
+<pre><code class="language-sdparse">Pět mužů hrálo karty . \n Five men played cards .
 nummod:gov(mužů, Pět)
 nsubj(hrálo, mužů)
 dobj(hrálo, karty)
@@ -1943,10 +1862,9 @@ nummod:gov(men, Five)
 nsubj(played, men)
 dobj(played, cards)
 punct(played, .-11)
-~~~
+</code></pre>
 
-~~~ sdparse
-Kolik mužů hrálo karty ? \n How-many men played cards ?
+<pre><code class="language-sdparse">Kolik mužů hrálo karty ? \n How-many men played cards ?
 det:numgov(mužů, Kolik)
 nsubj(hrálo, mužů)
 dobj(hrálo, karty)
@@ -1955,10 +1873,9 @@ det:numgov(men, How-many)
 nsubj(played, men)
 dobj(played, cards)
 punct(played, ?-11)
-~~~
+</code></pre>
 
-~~~ sdparse
-Hrál jsem karty s pěti muži . \n Played I-have cards with five men .
+<pre><code class="language-sdparse">Hrál jsem karty s pěti muži . \n Played I-have cards with five men .
 aux(Hrál, jsem)
 dobj(Hrál, karty)
 iobj(Hrál, muži)
@@ -1971,10 +1888,9 @@ iobj(Played, men)
 case(men, with)
 nummod(men, five)
 punct(Played, .-15)
-~~~
+</code></pre>
 
-~~~ sdparse
-Nepamatuji si , s kolika muži jsem hrál karty . \n I-do-not-remember myself , with how-many men I-have played cards .
+<pre><code class="language-sdparse">Nepamatuji si , s kolika muži jsem hrál karty . \n I-do-not-remember myself , with how-many men I-have played cards .
 ccomp(Nepamatuji, hrál)
 compound:reflex(Nepamatuji, si)
 punct(hrál, ,-3)
@@ -1993,82 +1909,74 @@ iobj(played, men)
 case(men, with)
 det:nummod(men, how-many)
 punct(I-do-not-remember, .-21)
-~~~
+</code></pre>
 
+<h2 id="additional-remarks">Additional remarks</h2>
 
-
-## Additional remarks
-
-In PDT the words _milión_ “million”, _miliarda_ “billion” and higher are usually tagged as [nouns](cs-pos/NOUN),
-not as [numerals](cs-pos/NUM).
+<p>In PDT the words <em>milión</em> “million”, <em>miliarda</em> “billion” and higher are usually tagged as <a href="cs-pos/NOUN">nouns</a>,
+not as <a href="cs-pos/NUM">numerals</a>.
 In the typical case, the million is in genitive, it is preceded by a smaller number,
-and it is not followed by smaller numerals (as it is in _million five hundred thousand_).
+and it is not followed by smaller numerals (as it is in <em>million five hundred thousand</em>).
 It is followed by the counted noun.
-Thus the following examples receive parallel analyses:
+Thus the following examples receive parallel analyses:</p>
 
-~~~ sdparse
-50 miliónů korun \n 50 millions of-crowns
+<pre><code class="language-sdparse">50 miliónů korun \n 50 millions of-crowns
 nummod:gov(miliónů, 50-1)
 nummod:gov(millions, 50-5)
 nmod(miliónů, korun)
 nmod(millions, of-crowns)
-~~~
+</code></pre>
 
-~~~ sdparse
-50 pytlů bankovek \n 50 sacks of-bills
+<pre><code class="language-sdparse">50 pytlů bankovek \n 50 sacks of-bills
 nummod:gov(pytlů, 50-1)
 nummod:gov(sacks, 50-5)
 nmod(pytlů, bankovek)
 nmod(sacks, of-bills)
-~~~
+</code></pre>
 
-On the other hand the word _tisíc_ “thousand” may be a noun
-(_na náměstí byly tisíce lidí_ “there were thousands of people in the square”)
-or a numeral:
+<p>On the other hand the word <em>tisíc</em> “thousand” may be a noun
+(<em>na náměstí byly tisíce lidí</em> “there were thousands of people in the square”)
+or a numeral:</p>
 
-~~~ sdparse
-nanejvýš 50 tisíc korun \n at-most 50 thousand crowns
+<pre><code class="language-sdparse">nanejvýš 50 tisíc korun \n at-most 50 thousand crowns
 advmod:emph(korun, nanejvýš)
 nummod:gov(korun, tisíc)
 compound(tisíc, 50-2)
 advmod:emph(crowns, at-most)
 nummod:gov(crowns, thousand)
 compound(thousand, 50-7)
-~~~
+</code></pre>
 
-Note that the two numeral words in the above example are joined using the [compound]() relation.
-Also note that the [intensifier](advmod:emph) _nanejvýš_ is attached to the head of the phrase _(korun)_ and not to the number.
+<p>Note that the two numeral words in the above example are joined using the <a href="">compound</a> relation.
+Also note that the <a href="advmod:emph">intensifier</a> <em>nanejvýš</em> is attached to the head of the phrase <em>(korun)</em> and not to the number.
 This is in accord both with the UD guidelines
-and with the original PDT annotation of agreeing numerals (e.g. _jen čtyři firmy, jen několik procent_).
+and with the original PDT annotation of agreeing numerals (e.g. <em>jen čtyři firmy, jen několik procent</em>).</p>
 
-Similarly there may be other nodes (such as punctuation) that are attached to the head of the phrase
-and they are related to the whole phrase rather than directly to the head noun:
+<p>Similarly there may be other nodes (such as punctuation) that are attached to the head of the phrase
+and they are related to the whole phrase rather than directly to the head noun:</p>
 
-~~~ sdparse
-( 9 dní ) \n ( 9 days )
+<pre><code class="language-sdparse">( 9 dní ) \n ( 9 days )
 punct(dní, (-1)
 nummod:gov(dní, 9-2)
 punct(dní, )-4)
 punct(days, (-6)
 nummod:gov(days, 9-7)
 punct(days, )-9)
-~~~
+</code></pre>
 
-~~~ sdparse
-5 minut včetně seřízení \n 5 minutes including adjustment
+<pre><code class="language-sdparse">5 minut včetně seřízení \n 5 minutes including adjustment
 nummod:gov(minut, 5-1)
 nmod(minut, seřízení)
 case(seřízení, včetně)
 nummod:gov(minutes, 5-6)
 nmod(minutes, adjustment)
 case(adjustment, including)
-~~~
+</code></pre>
 
-## Dates
+<h2 id="dates">Dates</h2>
 
 <!-- mf920922_027.a.gz (3/19) -->
-~~~ conllu
-# This is not UD, it is Prague Dependency Treebank, and we want to clearly distinguish it from the UD examples.
+<pre><code class="language-conllu"># This is not UD, it is Prague Dependency Treebank, and we want to clearly distinguish it from the UD examples.
 # visual-style nodes yellow
 # visual-style arcs blue
 1    Ředitel         ředitel         NOUN    _   _   2   Sb     _   The-director
@@ -2081,10 +1989,9 @@ case(adjustment, including)
 8    .               .               PUNCT   _   _   7   AuxG   _   th
 9    12              12              NUM     _   _   6   Adv    _   December
 10   .               .               PUNCT   _   _   9   AuxG   _   .
-~~~
+</code></pre>
 
-~~~ sdparse
-Ředitel navrhl zrušit profesionální scénu k 31 . 12 . \n Director proposed to-disband professional scene towards 31 st December .
+<pre><code class="language-sdparse">Ředitel navrhl zrušit profesionální scénu k 31 . 12 . \n Director proposed to-disband professional scene towards 31 st December .
 advmod(zrušit, 12)
 case(12, k)
 punct(12, .-10)
@@ -2095,14 +2002,13 @@ case(December, towards)
 punct(December, .-21)
 nummod(December, 31-18)
 punct(31-18, st)
-~~~
+</code></pre>
 
-Numerals expressed using digits are labeled `nummod` even if they represent ordinal numerals,
-which would be labeled `amod`:
+<p>Numerals expressed using digits are labeled <code>nummod</code> even if they represent ordinal numerals,
+which would be labeled <code>amod</code>:</p>
 
 <!-- ln95045_123.a.gz (8/8) -->
-~~~ conllu
-# This is not UD, it is Prague Dependency Treebank, and we want to clearly distinguish it from the UD examples.
+<pre><code class="language-conllu"># This is not UD, it is Prague Dependency Treebank, and we want to clearly distinguish it from the UD examples.
 # visual-style nodes yellow
 # visual-style arcs blue
 1    Letošní     letošní      ADJ     _   _   2   Atr    _   This-year's
@@ -2117,9 +2023,8 @@ which would be labeled `amod`:
 10   .           .            PUNCT   _   _   9   AuxG   _   th
 11   března      březen       NOUN    _   _   8   Adv    _   March
 12   .           .            PUNCT   _   _   0   AuxK   _   .
-~~~
-~~~ sdparse
-Letošní veletrh se uskuteční od 9 . do 12 . března . \n This-year's fair itself will-take-place from 9 th to 12 th March .
+</code></pre>
+<pre><code class="language-sdparse">Letošní veletrh se uskuteční od 9 . do 12 . března . \n This-year's fair itself will-take-place from 9 th to 12 th March .
 advmod(uskuteční, března)
 case(března, do)
 nummod(března, 12-9)
@@ -2130,21 +2035,20 @@ case(March, to)
 nummod(March, 12-22)
 remnant(12-22, 9-19)
 remnant(to, from)
-~~~
+</code></pre>
 
-## Numbered objects
+<h2 id="numbered-objects">Numbered objects</h2>
 
-House number in address is attached as `nummod` to the name of the street:
+<p>House number in address is attached as <code>nummod</code> to the name of the street:</p>
 
-~~~ sdparse
-v budově Na poříčí 12 \n in the-building Na poříčí 12
+<pre><code class="language-sdparse">v budově Na poříčí 12 \n in the-building Na poříčí 12
 nmod(budově, poříčí-4)
 case(poříčí-4, Na-3)
 nummod(poříčí-4, 12-5)
 nmod(the-building, poříčí-10)
 case(poříčí-10, Na-9)
 nummod(poříčí-10, 12-11)
-~~~
+</code></pre>
 
 
 	</div>
@@ -2158,17 +2062,16 @@ nummod(poříčí-10, 12-11)
 	<h2><code property="oliasystem:hasTag" lang="">nummod:gov</code>: <div property="rdfs:label">numeric modifier governing the case of the noun</div></h2>
 	<div property="rdfs:comment">
 
-`nummod:gov` differs from [nummod]()
+<p><code>nummod:gov</code> differs from <a href="">nummod</a>
 in that the numeral requires the counted noun to be in its genitive form.
 The whole phrase (numeral + noun) is treated as a singular neuter noun phrase
-and it can fill roles where nominative, accusative or vocative noun phrases are expected.
+and it can fill roles where nominative, accusative or vocative noun phrases are expected.</p>
 
-Such situations are analyzed in PDT so that the numeral is the head and the noun depends on it.
-In UD the dependency direction is reversed and the `nummod:gov` label is used to preserve
-the information about case conditions.
+<p>Such situations are analyzed in PDT so that the numeral is the head and the noun depends on it.
+In UD the dependency direction is reversed and the <code>nummod:gov</code> label is used to preserve
+the information about case conditions.</p>
 
-~~~ conllu
-# This is not UD, it is Prague Dependency Treebank, and we want to clearly distinguish it from the UD examples.
+<pre><code class="language-conllu"># This is not UD, it is Prague Dependency Treebank, and we want to clearly distinguish it from the UD examples.
 # visual-style nodes yellow
 # visual-style arcs blue
 1   Pět     pět     NUM     _   Case=Nom                           3   Sb     _   Five
@@ -2176,10 +2079,9 @@ the information about case conditions.
 3   hrálo   hrát    VERB    _   Gender=Neut|Number=Sing            0   Pred   _   played
 4   karty   karta   NOUN    _   Case=Acc|Gender=Fem|Number=Plur    3   Obj    _   cards
 5   .       .       PUNCT   _   _                                  0   AuxK   _   .
-~~~
+</code></pre>
 
-~~~ sdparse
-Pět mužů hrálo karty . \n Five men played cards .
+<pre><code class="language-sdparse">Pět mužů hrálo karty . \n Five men played cards .
 nummod:gov(mužů, Pět)
 nsubj(hrálo, mužů)
 dobj(hrálo, karty)
@@ -2188,9 +2090,9 @@ nummod:gov(men, Five)
 nsubj(played, men)
 dobj(played, cards)
 punct(played, .-11)
-~~~
+</code></pre>
 
-See [nummod]() for a broader discussion of the various situations with quantifiers.
+<p>See <a href="">nummod</a> for a broader discussion of the various situations with quantifiers.</p>
 
 
 	</div>
@@ -2204,87 +2106,80 @@ See [nummod]() for a broader discussion of the various situations with quantifie
 	<h2><code property="oliasystem:hasTag" lang="">parataxis</code>: <div property="rdfs:label">parataxis</div></h2>
 	<div property="rdfs:comment">
 
-The parataxis relation (from Greek for “place side by side”) is a
+<p>The parataxis relation (from Greek for “place side by side”) is a
 relation between a word (often the main predicate of a sentence) and other
 elements, such as a sentential parenthetical or a clause after a “:” or
 a “;”, placed side by side without any explicit
-coordination, subordination, or argument relation with the head word. Parataxis is a discourse-like equivalent of coordination, and so usually obeys an iconic ordering. Hence it is normal for the first part of a sentence to be the head and the second part to be the parataxis dependent, regardless of the headedness properties of the language.  But things do get more complicated, such as cases of parentheticals, which appear medially.
+coordination, subordination, or argument relation with the head word. Parataxis is a discourse-like equivalent of coordination, and so usually obeys an iconic ordering. Hence it is normal for the first part of a sentence to be the head and the second part to be the parataxis dependent, regardless of the headedness properties of the language.  But things do get more complicated, such as cases of parentheticals, which appear medially.</p>
 
-## An inventory of constructions to which parataxis has been applied
+<h2 id="an-inventory-of-constructions-to-which-parataxis-has-been-applied">An inventory of constructions to which parataxis has been applied</h2>
 
-### Treatment of reported speech
+<h3 id="treatment-of-reported-speech">Treatment of reported speech</h3>
 
-For this reported speech example:
+<p>For this reported speech example:</p>
 
-~~~ sdparse
-Ten člověk , řekl Honza , odjel brzy ráno . \n The guy , said Honza , left early in-the-morning .
+<pre><code class="language-sdparse">Ten člověk , řekl Honza , odjel brzy ráno . \n The guy , said Honza , left early in-the-morning .
 parataxis(odjel, řekl)
 parataxis(left, said)
-~~~
+</code></pre>
 
-there are paraphrases that convey essentially the same meaning but
+<p>there are paraphrases that convey essentially the same meaning but
 with a different syntactic structure. When the reported speech is embedded in a subordinate clause (with or 
-without an overt complementizer _že_ “that”), the subordinate clause is a [ccomp]() of the speech verb. When the
+without an overt complementizer <em>že</em> “that”), the subordinate clause is a <a href="">ccomp</a> of the speech verb. When the
 reported speech follows the speech verb and is separated by a colon, the reported speech forms a main clause
-that attaches to the preceding main clause with a [parataxis]() relation, hence with the speech verb as its head.
+that attaches to the preceding main clause with a <a href="">parataxis</a> relation, hence with the speech verb as its head.
 However, when the speech verb occurs as a medial or final parenthetical, the relation is reversed and the speech
-verb is treated as a [parataxis]() of the reported speech. 
+verb is treated as a <a href="">parataxis</a> of the reported speech. 
 This analysis is not uncontroversial but follows many authorities, such as Huddleston and Pullum (2002),
-_The Cambridge Grammar of the English Language_ (see chapter 11, section 9). 
+<em>The Cambridge Grammar of the English Language</em> (see chapter 11, section 9).</p>
 
-~~~ sdparse
-Honza řekl , že ten člověk odjel brzy ráno . \n Honza said , that the guy left early in-the-morning .
+<pre><code class="language-sdparse">Honza řekl , že ten člověk odjel brzy ráno . \n Honza said , that the guy left early in-the-morning .
 ccomp(řekl, odjel)
 ccomp(said, left)
-~~~
+</code></pre>
 
-~~~ sdparse
-Honza řekl : „ Ten člověk odjel brzy ráno . “ \n Honza said : “ The guy left early in-the-morning . ”
+<pre><code class="language-sdparse">Honza řekl : „ Ten člověk odjel brzy ráno . “ \n Honza said : “ The guy left early in-the-morning . ”
 parataxis(řekl, odjel)
 parataxis(said, left)
-~~~
+</code></pre>
 
-~~~ sdparse
-„ Ten člověk odjel brzy ráno , “ řekl Honza . \n “ The guy left early in-the-morning , ” said Honza .
+<pre><code class="language-sdparse">„ Ten člověk odjel brzy ráno , “ řekl Honza . \n “ The guy left early in-the-morning , ” said Honza .
 parataxis(odjel, řekl)
 parataxis(left, said)
-~~~
+</code></pre>
 
-~~~ sdparse
-„ Ten člověk , “ řekl Honza , „ odjel brzy ráno . “ \n “ The guy , ” said Honza , “ left early in-the-morning . ”
+<pre><code class="language-sdparse">„ Ten člověk , “ řekl Honza , „ odjel brzy ráno . “ \n “ The guy , ” said Honza , “ left early in-the-morning . ”
 parataxis(odjel, řekl)
 parataxis(left, said)
-~~~
+</code></pre>
 
-An argument for this analysis is that in the cases analyzed as embedding, the entire clause
-can be further embedded (_I was taken aback when John said the guy left early in the morning._),
+<p>An argument for this analysis is that in the cases analyzed as embedding, the entire clause
+can be further embedded (<em>I was taken aback when John said the guy left early in the morning.</em>),
 while this is not possible with medial or final placement of the speech verb 
-(_*I was taken aback when the guy left early this morning, John said._).
+(<em>*I was taken aback when the guy left early this morning, John said.</em>).</p>
 
-### News article bylines
+<h3 id="news-article-bylines">News article bylines</h3>
 
-The `parataxis` relation should be used to connect the parts of a news article byline.
-There does not seem to be a better relation to use.
+<p>The <code>parataxis</code> relation should be used to connect the parts of a news article byline.
+There does not seem to be a better relation to use.</p>
 
-~~~ sdparse
-Washington ( CNN ) :
+<pre><code class="language-sdparse">Washington ( CNN ) :
 parataxis(Washington, CNN)
-~~~
+</code></pre>
 
-### Interjected clauses and phrases
+<h3 id="interjected-clauses-and-phrases">Interjected clauses and phrases</h3>
 
-~~~ sdparse
-V posledních letech se srovnávání rozšiřuje , přinejmenším pokud jde o platy , na sousední státy . \n In recent years is comparison extended , at-least as concerns about salaries , to neighboring countries .
+<pre><code class="language-sdparse">V posledních letech se srovnávání rozšiřuje , přinejmenším pokud jde o platy , na sousední státy . \n In recent years is comparison extended , at-least as concerns about salaries , to neighboring countries .
 parataxis(rozšiřuje, jde)
 parataxis(extended, concerns)
-~~~
+</code></pre>
 
-## Diffs
+<h2 id="diffs">Diffs</h2>
 
-### Prague Dependency Treebank
+<h3 id="prague-dependency-treebank">Prague Dependency Treebank</h3>
 
-At present the PDT data converted to UD use `parataxis` only for interjected parentheticals.
-The other examples above are analyzed differently (legacy PDT structure).
+<p>At present the PDT data converted to UD use <code>parataxis</code> only for interjected parentheticals.
+The other examples above are analyzed differently (legacy PDT structure).</p>
 
 
 	</div>
@@ -2298,26 +2193,26 @@ The other examples above are analyzed differently (legacy PDT structure).
 	<h2><code property="oliasystem:hasTag" lang="">punct</code>: <div property="rdfs:label">punctuation</div></h2>
 	<div property="rdfs:comment">
 
-This is used for any piece of punctuation in a clause.
-See 
+<p>This is used for any piece of punctuation in a clause.
+See</p>
 
-~~~ sdparse
-Jdi domů ! \n Go home !
+<pre><code class="language-sdparse">Jdi domů ! \n Go home !
 punct(Jdi, !-3)
 punct(Go, !-7)
-~~~
+</code></pre>
 
-Tokens with the relation `punct` always attach to content words (except in cases of ellipsis) and can never have dependents.
-Since `punct` is not a normal dependency relation, the usual criteria for determining the head word do not apply. 
-Instead, we use the following principles:
+<p>Tokens with the relation <code>punct</code> always attach to content words (except in cases of ellipsis) and can never have dependents.
+Since <code>punct</code> is not a normal dependency relation, the usual criteria for determining the head word do not apply. 
+Instead, we use the following principles:</p>
 
-1. A punctuation mark separating coordinated units is attached to the first conjunct.
-2. A punctuation mark preceding or following a subordinated unit is attached to this unit.
-3. Within the relevant unit, a punctuation mark is attached at the highest possible node that preserves projectivity.
-4. Paired punctuation marks (quotes and brackets) should be attached to the same word unless that would create non-projectivity. This word is usually the head of the phrase enclosed in the paired punctuation.
+<ol>
+  <li>A punctuation mark separating coordinated units is attached to the first conjunct.</li>
+  <li>A punctuation mark preceding or following a subordinated unit is attached to this unit.</li>
+  <li>Within the relevant unit, a punctuation mark is attached at the highest possible node that preserves projectivity.</li>
+  <li>Paired punctuation marks (quotes and brackets) should be attached to the same word unless that would create non-projectivity. This word is usually the head of the phrase enclosed in the paired punctuation.</li>
+</ol>
 
-~~~ sdparse
-Máme jablka , hrušky , pomeranče a banány . \n We-have apples , pears , oranges and bananas .
+<pre><code class="language-sdparse">Máme jablka , hrušky , pomeranče a banány . \n We-have apples , pears , oranges and bananas .
 dobj(Máme, jablka)
 dobj(We-have, apples)
 conj(jablka, hrušky)
@@ -2332,20 +2227,18 @@ punct(jablka, ,-3)
 punct(jablka, ,-5)
 punct(apples, ,-13)
 punct(apples, ,-15)
-~~~
+</code></pre>
 
-~~~ sdparse
-Muž , kterého jste včera viděl , přišel zas . \n Man , whom you-have yesterday seen , came again .
+<pre><code class="language-sdparse">Muž , kterého jste včera viděl , přišel zas . \n Man , whom you-have yesterday seen , came again .
 punct(viděl, ,-2)
 punct(seen, ,-13)
 punct(viděl, ,-7)
 punct(seen, ,-18)
 punct(přišel, .-10)
 punct(came, .-21)
-~~~
+</code></pre>
 
-~~~ sdparse
-Zkratka např . znamená „ například “ . \n The-abbreviation eg . means “ for-example ” .
+<pre><code class="language-sdparse">Zkratka např . znamená „ například “ . \n The-abbreviation eg . means “ for-example ” .
 punct(např, .-3)
 punct(eg, .-12)
 punct(například, „-5)
@@ -2354,7 +2247,7 @@ punct(například, “-7)
 punct(for-example, ”-16)
 punct(znamená, .-8)
 punct(means, .-17)
-~~~
+</code></pre>
 
 
 	</div>
@@ -2368,13 +2261,12 @@ punct(means, .-17)
 	<h2><code property="oliasystem:hasTag" lang="">remnant</code>: <div property="rdfs:label">remnant in ellipsis</div></h2>
 	<div property="rdfs:comment">
 
-The `remnant` relation is used to provide a satisfactory treatment of certain instances of
-[ellipsis](http://universaldependencies.org/cs/overview/specific-syntax.html#ellipsis)
+<p>The <code>remnant</code> relation is used to provide a satisfactory treatment of certain instances of
+<a href="http://universaldependencies.org/cs/overview/specific-syntax.html#ellipsis">ellipsis</a>
 (in the case of gapping and stripping, where a predicational or verbal
-head gets elided).
+head gets elided).</p>
 
-~~~ sdparse
-Pavel si objednal hovězí a Markéta vepřové . \n Pavel himself ordered beef and Markéta pork .
+<pre><code class="language-sdparse">Pavel si objednal hovězí a Markéta vepřové . \n Pavel himself ordered beef and Markéta pork .
 nsubj(objednal, Pavel-1)
 nsubj(ordered, Pavel-10)
 dobj(objednal, hovězí)
@@ -2383,20 +2275,20 @@ remnant(Pavel-1, Markéta-6)
 remnant(Pavel-10, Markéta-15)
 remnant(hovězí, vepřové)
 remnant(beef, pork)
-~~~
+</code></pre>
 
-## Diffs
+<h2 id="diffs">Diffs</h2>
 
-### Prague Dependency Treebank
+<h3 id="prague-dependency-treebank">Prague Dependency Treebank</h3>
 
-At present the conversion of the PDT data to UD does not handle ellipsis properly
-and the `remnant` relation is not used.
+<p>At present the conversion of the PDT data to UD does not handle ellipsis properly
+and the <code>remnant</code> relation is not used.</p>
 
-In the analytical layer of PDT, ellipsis
-(together with some other issues, such as the [vocative]()) is signalled by the
-dependency relation `ExD` (ex-dependent).
-All the `ExD` relations that are not vocatives or comparatives are currently just re-labeled [dep]()
-or [root]().
+<p>In the analytical layer of PDT, ellipsis
+(together with some other issues, such as the <a href="">vocative</a>) is signalled by the
+dependency relation <code>ExD</code> (ex-dependent).
+All the <code>ExD</code> relations that are not vocatives or comparatives are currently just re-labeled <a href="">dep</a>
+or <a href="">root</a>.</p>
 
 
 	</div>
@@ -2410,14 +2302,13 @@ or [root]().
 	<h2><code property="oliasystem:hasTag" lang="">reparandum</code>: <div property="rdfs:label">overridden disfluency</div></h2>
 	<div property="rdfs:comment">
 
-We use `reparandum` to indicate disfluencies overridden in a speech
-repair. The disfluency is the dependent of the repair.
+<p>We use <code>reparandum</code> to indicate disfluencies overridden in a speech
+repair. The disfluency is the dependent of the repair.</p>
 
-~~~ sdparse
-Jděte dopra- doleva . \n Go to-the-righ- to-the-left .
+<pre><code class="language-sdparse">Jděte dopra- doleva . \n Go to-the-righ- to-the-left .
 reparandum(doleva, dopra-)
 reparandum(to-the-left, to-the-righ-)
-~~~
+</code></pre>
 
 
 	</div>
@@ -2431,30 +2322,28 @@ reparandum(to-the-left, to-the-righ-)
 	<h2><code property="oliasystem:hasTag" lang="">root</code>: <div property="rdfs:label">root</div></h2>
 	<div property="rdfs:comment">
 
-The `root` grammatical relation points to the root of the sentence. A
-fake node `ROOT` is used as the governor. The `ROOT` node is indexed
-with 0, since the indexing of real words in the sentence starts at 1.
+<p>The <code>root</code> grammatical relation points to the root of the sentence. A
+fake node <code>ROOT</code> is used as the governor. The <code>ROOT</code> node is indexed
+with 0, since the indexing of real words in the sentence starts at 1.</p>
 
-~~~ sdparse
-ROOT Miluju indická jídla . \n ROOT I-love Indian food .
+<pre><code class="language-sdparse">ROOT Miluju indická jídla . \n ROOT I-love Indian food .
 root(ROOT-1, Miluju)
 root(ROOT-7, I-love)
-~~~
+</code></pre>
 
-Since release 1.2 of the Czech UD treebank,
-there is just one node with the `root` dependency relation in every
+<p>Since release 1.2 of the Czech UD treebank,
+there is just one node with the <code>root</code> dependency relation in every
 tree. If the main predicate is not present (due to
-[ellipsis](http://universaldependencies.org/cs/overview/specific-syntax.html#ellipsis))
+<a href="http://universaldependencies.org/cs/overview/specific-syntax.html#ellipsis">ellipsis</a>)
 and there are
 multiple orphaned dependents, the leftmost dependent is promoted to
-the head (root) position and the other orphans are attached to it.
+the head (root) position and the other orphans are attached to it.</p>
 
-An example sentence-like segment that lacks the main verb:
-_A co na to [říká] MF?_
-“And what [does] MF [say] to it?”
+<p>An example sentence-like segment that lacks the main verb:
+<em>A co na to [říká] MF?</em>
+“And what [does] MF [say] to it?”</p>
 
-~~~ sdparse
-ROOT A co na to MF ? \n ROOT And what to it MF ?
+<pre><code class="language-sdparse">ROOT A co na to MF ? \n ROOT And what to it MF ?
 root(ROOT-1, A)
 root(ROOT-9, And)
 dobj(A, co)
@@ -2467,7 +2356,7 @@ nsubj(A, MF-6)
 nsubj(And, MF-14)
 punct(A, ?-7)
 punct(And, ?-15)
-~~~
+</code></pre>
 
 
 	</div>
@@ -2481,15 +2370,14 @@ punct(And, ?-15)
 	<h2><code property="oliasystem:hasTag" lang="">vocative</code>: <div property="rdfs:label">vocative</div></h2>
 	<div property="rdfs:comment">
 
-The `vocative` relation is used to mark dialogue participant addressed in text.
-The relation links the addressee's name to its host sentence.
-In Czech, the addressee's name must also appear in the vocative [cs-feat/Case]() form.
+<p>The <code>vocative</code> relation is used to mark dialogue participant addressed in text.
+The relation links the addressee’s name to its host sentence.
+In Czech, the addressee’s name must also appear in the vocative <a href="">cs-feat/Case</a> form.</p>
 
-~~~ sdparse
-Pane , jste blázen ! \n Sir , you-are a-fool !
+<pre><code class="language-sdparse">Pane , jste blázen ! \n Sir , you-are a-fool !
 vocative(jste, Pane)
 vocative(you-are, Sir)
-~~~
+</code></pre>
 
 
 	</div>
@@ -2503,59 +2391,54 @@ vocative(you-are, Sir)
 	<h2><code property="oliasystem:hasTag" lang="">xcomp</code>: <div property="rdfs:label">open clausal complement</div></h2>
 	<div property="rdfs:comment">
 
-An open clausal complement (`xcomp`) of a verb or an adjective is a
+<p>An open clausal complement (<code>xcomp</code>) of a verb or an adjective is a
 predicative or clausal complement without its own subject. The
 reference of the subject is necessarily determined by an argument
 external to the xcomp (normally by the subject of the next higher
-clause). This is often referred to as *obligatory control*. 
+clause). This is often referred to as <em>obligatory control</em>. 
 These complements are always non-finite, and they are
 complements (arguments of the higher verb or adjective) rather than
-adjuncts/modifiers, such as a purpose clause. The name `xcomp` is
-borrowed from Lexical-Functional Grammar.
+adjuncts/modifiers, such as a purpose clause. The name <code>xcomp</code> is
+borrowed from Lexical-Functional Grammar.</p>
 
-~~~ sdparse
-Nechceš si zaplavat ? \n Don't-you-want yourself to-swim ?
+<pre><code class="language-sdparse">Nechceš si zaplavat ? \n Don't-you-want yourself to-swim ?
 xcomp(Nechceš, zaplavat)
 xcomp(Don't-you-want, to-swim)
-~~~
+</code></pre>
 
-~~~ sdparse
-Začal jsem tam pracovat včera . \n Started I-have there to-work yesterday .
+<pre><code class="language-sdparse">Začal jsem tam pracovat včera . \n Started I-have there to-work yesterday .
 xcomp(Začal, pracovat)
 xcomp(Started, to-work)
-~~~
+</code></pre>
 
-Note that the above condition “without its own subject” does not mean that a 
-clause is an `xcomp` just because its subject is not _overt._
+<p>Note that the above condition “without its own subject” does not mean that a 
+clause is an <code>xcomp</code> just because its subject is not <em>overt.</em>
 The subject must be necessarily inherited from a fixed position in the higher clause.
 That is, there should be no available interpretation where the subject of the lower clause may be distinct
 from the specified role of the upper clause.
 In cases where the missing subject may or must be distinct from a fixed role in the higher clause,
-[ccomp]() should be used instead, as below.  This includes cases of arbitrary subjects and anaphoric control.
+<a href="">ccomp</a> should be used instead, as below.  This includes cases of arbitrary subjects and anaphoric control.</p>
 
-~~~ sdparse
-Šéf nařídil vykopat příkop . \n Boss ordered to-dig ditch .
+<pre><code class="language-sdparse">Šéf nařídil vykopat příkop . \n Boss ordered to-dig ditch .
 ccomp(nařídil, vykopat)
 ccomp(ordered, to-dig)
-~~~
+</code></pre>
 
-Pro-drop languages have clauses where the subject is not present as a separate word,
+<p>Pro-drop languages have clauses where the subject is not present as a separate word,
 yet it is inherently present (and often deducible from the form of the verb)
 and it does not depend on arguments from a higher clause.
 Thus in neither of the following two Czech examples is there any overt subject,
-yet only the second example contains an `xcomp`.
+yet only the second example contains an <code>xcomp</code>.</p>
 
-~~~ sdparse
-Píšu , protože jsem to slíbil . \n I-write , because I-have it promised .
+<pre><code class="language-sdparse">Píšu , protože jsem to slíbil . \n I-write , because I-have it promised .
 advcl(Píšu, slíbil)
 advcl(I-write, promised)
-~~~
+</code></pre>
 
-~~~ sdparse
-Slíbil jsem psát . \n Promised I-have to-write .
+<pre><code class="language-sdparse">Slíbil jsem psát . \n Promised I-have to-write .
 xcomp(Slíbil, psát)
 xcomp(Promised, to-write)
-~~~
+</code></pre>
 
 
 	</div>

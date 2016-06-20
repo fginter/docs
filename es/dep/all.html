@@ -257,21 +257,19 @@ in two places.</p>
 	<h2><code property="oliasystem:hasTag" lang="">acl</code>: <div property="rdfs:label">clausal modifier of noun</div></h2>
 	<div property="rdfs:comment">
 
-`acl` is used for finite and non-finite clauses that modify a
+<p><code>acl</code> is used for finite and non-finite clauses that modify a
 noun. Note that in Spanish relative clauses get assigned a specific
-relation [acl:relcl](), a subtype of `acl`.
+relation <a href="">acl:relcl</a>, a subtype of <code>acl</code>.</p>
 
-~~~ sdparse
-una buena opción a tener en cuenta \n a good option to take into account
+<pre><code class="language-sdparse">una buena opción a tener en cuenta \n a good option to take into account
 acl(opción, tener)
 acl(option, take)
-~~~
+</code></pre>
 
-~~~ sdparse
-una localidad situada en la región de Alta Normandía \n a location situated in the region of Upper Normandy
+<pre><code class="language-sdparse">una localidad situada en la región de Alta Normandía \n a location situated in the region of Upper Normandy
 acl(localidad, situada)
 acl(location, situated)
-~~~
+</code></pre>
 
 
 	</div>
@@ -285,23 +283,20 @@ acl(location, situated)
 	<h2><code property="oliasystem:hasTag" lang="">advcl</code>: <div property="rdfs:label">adverbial clause modifier</div></h2>
 	<div property="rdfs:comment">
 
-This document is a placeholder for the language-specific documentation
-for `advcl`.
+<p>This document is a placeholder for the language-specific documentation
+for <code>advcl</code>.</p>
 
-An adverbial clause modifier is a clause which modifies a verb or other predicate (adjective, etc.), as a modifier not as a core complement. This includes things such as a temporal clause, consequence, conditional clause, purpose clause, etc. The dependent must be clausal (or else it is an advmod) and the dependent is the main predicate of the clause.
+<p>An adverbial clause modifier is a clause which modifies a verb or other predicate (adjective, etc.), as a modifier not as a core complement. This includes things such as a temporal clause, consequence, conditional clause, purpose clause, etc. The dependent must be clausal (or else it is an advmod) and the dependent is the main predicate of the clause.</p>
 
-~~~ sdparse
-Me vió mientras lavaba los platos.
+<pre><code class="language-sdparse">Me vió mientras lavaba los platos.
 advcl(vió, lavaba)
-~~~
-~~~ sdparse
-Le habló para crear una cuenta 
+</code></pre>
+<pre><code class="language-sdparse">Le habló para crear una cuenta 
 advcl(habló, crear)
-~~~
-~~~ sdparse
-Estaba cansado cuando lo vi 
+</code></pre>
+<pre><code class="language-sdparse">Estaba cansado cuando lo vi 
 advcl(cansado, vi)
-~~~
+</code></pre>
 
 
 	</div>
@@ -315,16 +310,15 @@ advcl(cansado, vi)
 	<h2><code property="oliasystem:hasTag" lang="">advmod</code>: <div property="rdfs:label">adverbial modifier</div></h2>
 	<div property="rdfs:comment">
 
-This document is a placeholder for the language-specific documentation
-for `advmod`.
+<p>This document is a placeholder for the language-specific documentation
+for <code>advmod</code>.</p>
 
-An adverbial modifier of a word is a (non-clausal) adverb or adverbial phrase (ADVP) that serves to modify the meaning of the word.
+<p>An adverbial modifier of a word is a (non-clausal) adverb or adverbial phrase (ADVP) that serves to modify the meaning of the word.</p>
 
-~~~ sdparse
-Pedro habla demasiado rápido . \n Pedro speaks too fast .
+<pre><code class="language-sdparse">Pedro habla demasiado rápido . \n Pedro speaks too fast .
 advmod(habla, rápido)
 advmod(rápido, demasiado)
-~~~
+</code></pre>
 
 
 	</div>
@@ -338,16 +332,14 @@ advmod(rápido, demasiado)
 	<h2><code property="oliasystem:hasTag" lang="">amod</code>: <div property="rdfs:label">adjectival modifier</div></h2>
 	<div property="rdfs:comment">
 
-This document is a placeholder for the language-specific documentation
-for `amod`.
+<p>This document is a placeholder for the language-specific documentation
+for <code>amod</code>.</p>
 
+<p>An adjectival modifier of an NP is any adjectival phrase that serves to modify the meaning of the NP.</p>
 
-An adjectival modifier of an NP is any adjectival phrase that serves to modify the meaning of the NP.
-
-~~~ sdparse
-Encuentran materiales peligrosos .
+<pre><code class="language-sdparse">Encuentran materiales peligrosos .
 amod(materiales, peligrosos)
-~~~
+</code></pre>
 
 
 	</div>
@@ -361,16 +353,14 @@ amod(materiales, peligrosos)
 	<h2><code property="oliasystem:hasTag" lang="">appos</code>: <div property="rdfs:label">appositional modifier</div></h2>
 	<div property="rdfs:comment">
 
-This document is a placeholder for the language-specific documentation
-for `appos`.
+<p>This document is a placeholder for the language-specific documentation
+for <code>appos</code>.</p>
 
-An appositional modifier of an NP is an NP immediately to the right of the first NP that serves to define or modify that NP. It includes parenthesized examples, as well as defining abbreviations in one of these structures.
+<p>An appositional modifier of an NP is an NP immediately to the right of the first NP that serves to define or modify that NP. It includes parenthesized examples, as well as defining abbreviations in one of these structures.</p>
 
-
-~~~ sdparse
-Mi amigo Pedro ... \n My friend Pedro ...
+<pre><code class="language-sdparse">Mi amigo Pedro ... \n My friend Pedro ...
 appos(amigo, Pedro)
-~~~
+</code></pre>
 
 
 	</div>
@@ -384,25 +374,25 @@ appos(amigo, Pedro)
 	<h2><code property="oliasystem:hasTag" lang="">aux</code>: <div property="rdfs:label">auxiliary</div></h2>
 	<div property="rdfs:comment">
 
-This document is a placeholder for the language-specific documentation
-for `aux`.
+<p>This document is a placeholder for the language-specific documentation
+for <code>aux</code>.</p>
 
-An auxiliary of a clause is a non-main verb of the clause, e.g., a modal auxiliary, or a form of "estar", "ser" or "haber" in a periphrastic tense.
+<p>An auxiliary of a clause is a non-main verb of the clause, e.g., a modal auxiliary, or a form of “estar”, “ser” or “haber” in a periphrastic tense.</p>
 
-Spanish modal auxiliaries include (Butt and Benjamin, 2013):
+<p>Spanish modal auxiliaries include (Butt and Benjamin, 2013):</p>
 
-- poder
-- saber
-- querer
-- soler
-- deber
-- haber (que, de)
+<ul>
+  <li>poder</li>
+  <li>saber</li>
+  <li>querer</li>
+  <li>soler</li>
+  <li>deber</li>
+  <li>haber (que, de)</li>
+</ul>
 
-
-~~~ sdparse
-Regan ha muerto . \n Regan has died .
+<pre><code class="language-sdparse">Regan ha muerto . \n Regan has died .
 aux(muerto, ha)
-~~~
+</code></pre>
 
 
 	</div>
@@ -416,14 +406,12 @@ aux(muerto, ha)
 	<h2><code property="oliasystem:hasTag" lang="">auxpass</code>: <div property="rdfs:label">passive auxiliary</div></h2>
 	<div property="rdfs:comment">
 
-This document is a placeholder for the language-specific documentation
-for `auxpass`.
+<p>This document is a placeholder for the language-specific documentation
+for <code>auxpass</code>.</p>
 
-
-~~~ sdparse
-Kennedy fue asesinado . \n Kennedy was murdered .
+<pre><code class="language-sdparse">Kennedy fue asesinado . \n Kennedy was murdered .
 auxpass(asesinado, fue)
-~~~
+</code></pre>
 
 
 	</div>
@@ -437,8 +425,8 @@ auxpass(asesinado, fue)
 	<h2><code property="oliasystem:hasTag" lang="">case</code>: <div property="rdfs:label">case marking</div></h2>
 	<div property="rdfs:comment">
 
-This document is a placeholder for the language-specific documentation
-for `case`.
+<p>This document is a placeholder for the language-specific documentation
+for <code>case</code>.</p>
 
 
 	</div>
@@ -452,15 +440,14 @@ for `case`.
 	<h2><code property="oliasystem:hasTag" lang="">cc</code>: <div property="rdfs:label">coordinating conjunction</div></h2>
 	<div property="rdfs:comment">
 
-This document is a placeholder for the language-specific documentation
-for `cc`.
+<p>This document is a placeholder for the language-specific documentation
+for <code>cc</code>.</p>
 
-A coordination is the relation between an element of a conjunct and the coordinating conjunction word of the conjunct. (Note: different dependency grammars have different treatments of coordination. We take one conjunct of a conjunction as the head of the conjunction.) A conjunction may also appear at the beginning of a sentence. This is also called a cc, and it depends on the root predicate of the sentence.
+<p>A coordination is the relation between an element of a conjunct and the coordinating conjunction word of the conjunct. (Note: different dependency grammars have different treatments of coordination. We take one conjunct of a conjunction as the head of the conjunction.) A conjunction may also appear at the beginning of a sentence. This is also called a cc, and it depends on the root predicate of the sentence.</p>
 
-~~~ sdparse
-María es guapa y simpática . \n María is pretty and friendly .
+<pre><code class="language-sdparse">María es guapa y simpática . \n María is pretty and friendly .
 cc(guapa, y)
-~~~
+</code></pre>
 
 
 	</div>
@@ -474,15 +461,14 @@ cc(guapa, y)
 	<h2><code property="oliasystem:hasTag" lang="">ccomp</code>: <div property="rdfs:label">clausal complement</div></h2>
 	<div property="rdfs:comment">
 
-This document is a placeholder for the language-specific documentation
-for `ccomp`.
+<p>This document is a placeholder for the language-specific documentation
+for <code>ccomp</code>.</p>
 
-A clausal complement of a verb or adjective is a dependent clause with an internal subject (perhaps implicit) which functions like an object of the verb, or adjective.
+<p>A clausal complement of a verb or adjective is a dependent clause with an internal subject (perhaps implicit) which functions like an object of the verb, or adjective.</p>
 
-~~~ sdparse
-Explícame que estás haciendo . \n Explain me what you are doing .
+<pre><code class="language-sdparse">Explícame que estás haciendo . \n Explain me what you are doing .
 ccomp(Explícame, haciendo)
-~~~
+</code></pre>
 
 
 	</div>
@@ -496,8 +482,8 @@ ccomp(Explícame, haciendo)
 	<h2><code property="oliasystem:hasTag" lang="">compound</code>: <div property="rdfs:label">compound</div></h2>
 	<div property="rdfs:comment">
 
-This document is a placeholder for the language-specific documentation
-for `compound`.
+<p>This document is a placeholder for the language-specific documentation
+for <code>compound</code>.</p>
 
 
 	</div>
@@ -511,15 +497,14 @@ for `compound`.
 	<h2><code property="oliasystem:hasTag" lang="">conj</code>: <div property="rdfs:label">conjunct</div></h2>
 	<div property="rdfs:comment">
 
-This document is a placeholder for the language-specific documentation
-for `conj`.
+<p>This document is a placeholder for the language-specific documentation
+for <code>conj</code>.</p>
 
-A conjunct is the relation between two elements connected by a coordinating conjunction, such as "y", "o", etc. We treat conjunctions asymmetrically: The head of the relation is the first conjunct and other conjunctions depend on it via the conj relation.
+<p>A conjunct is the relation between two elements connected by a coordinating conjunction, such as “y”, “o”, etc. We treat conjunctions asymmetrically: The head of the relation is the first conjunct and other conjunctions depend on it via the conj relation.</p>
 
-~~~ sdparse
-María es guapa y simpática . \n Maria is pretty and friendly .
+<pre><code class="language-sdparse">María es guapa y simpática . \n Maria is pretty and friendly .
 conj(guapa, simpática)
-~~~
+</code></pre>
 
 
 	</div>
@@ -533,18 +518,16 @@ conj(guapa, simpática)
 	<h2><code property="oliasystem:hasTag" lang="">cop</code>: <div property="rdfs:label">copula</div></h2>
 	<div property="rdfs:comment">
 
-This document is a placeholder for the language-specific documentation
-for `cop`.
+<p>This document is a placeholder for the language-specific documentation
+for <code>cop</code>.</p>
 
-~~~ sdparse
-Juan es una buena persona . \n Juan is a good person .
+<pre><code class="language-sdparse">Juan es una buena persona . \n Juan is a good person .
 cop(es, persona)
-~~~
+</code></pre>
 
-~~~ sdparse
-Juan es alto . \n Juan is tall .
+<pre><code class="language-sdparse">Juan es alto . \n Juan is tall .
 cop(es, alto)
-~~~
+</code></pre>
 
 
 	</div>
@@ -558,15 +541,14 @@ cop(es, alto)
 	<h2><code property="oliasystem:hasTag" lang="">csubj</code>: <div property="rdfs:label">clausal subject</div></h2>
 	<div property="rdfs:comment">
 
-This document is a placeholder for the language-specific documentation
-for `csubj`.
+<p>This document is a placeholder for the language-specific documentation
+for <code>csubj</code>.</p>
 
-A clausal subject is a clausal syntactic subject of a clause, i.e., the subject is itself a clause. The governor of this relation might not always be a verb: when the verb is a copular verb, the root of the clause is the complement of the copular verb.
+<p>A clausal subject is a clausal syntactic subject of a clause, i.e., the subject is itself a clause. The governor of this relation might not always be a verb: when the verb is a copular verb, the root of the clause is the complement of the copular verb.</p>
 
-~~~ sdparse
-Le gusta comer tarde . \n He\/she likes to eat late .
+<pre><code class="language-sdparse">Le gusta comer tarde . \n He\/she likes to eat late .
 csubj(gusta, comer)
-~~~
+</code></pre>
 
 
 	</div>
@@ -580,14 +562,12 @@ csubj(gusta, comer)
 	<h2><code property="oliasystem:hasTag" lang="">csubjpass</code>: <div property="rdfs:label">clausal passive subject</div></h2>
 	<div property="rdfs:comment">
 
-This document is a placeholder for the language-specific documentation
-for `csubjpass`.
+<p>This document is a placeholder for the language-specific documentation
+for <code>csubjpass</code>.</p>
 
-
-~~~ sdparse
-Es sabido que Maria llega siempre tarde . \n It is known that Maria arrives always late .
+<pre><code class="language-sdparse">Es sabido que Maria llega siempre tarde . \n It is known that Maria arrives always late .
 csubjpass(sabido, llega)
-~~~
+</code></pre>
 
 
 	</div>
@@ -601,8 +581,8 @@ csubjpass(sabido, llega)
 	<h2><code property="oliasystem:hasTag" lang="">dep</code>: <div property="rdfs:label">unspecified dependency</div></h2>
 	<div property="rdfs:comment">
 
-This document is a placeholder for the language-specific documentation
-for `dep`.
+<p>This document is a placeholder for the language-specific documentation
+for <code>dep</code>.</p>
 
 
 	</div>
@@ -616,14 +596,12 @@ for `dep`.
 	<h2><code property="oliasystem:hasTag" lang="">det</code>: <div property="rdfs:label">determiner</div></h2>
 	<div property="rdfs:comment">
 
-This document is a placeholder for the language-specific documentation
-for `det`.
+<p>This document is a placeholder for the language-specific documentation
+for <code>det</code>.</p>
 
-
-~~~ sdparse
-Esta moneda está sucia . \n This coin is dirty .
+<pre><code class="language-sdparse">Esta moneda está sucia . \n This coin is dirty .
 dep(moneda, está)
-~~~
+</code></pre>
 
 
 	</div>
@@ -637,8 +615,8 @@ dep(moneda, está)
 	<h2><code property="oliasystem:hasTag" lang="">discourse</code>: <div property="rdfs:label">discourse element</div></h2>
 	<div property="rdfs:comment">
 
-This document is a placeholder for the language-specific documentation
-for `discourse`.
+<p>This document is a placeholder for the language-specific documentation
+for <code>discourse</code>.</p>
 
 
 	</div>
@@ -652,8 +630,8 @@ for `discourse`.
 	<h2><code property="oliasystem:hasTag" lang="">dislocated</code>: <div property="rdfs:label">dislocated elements</div></h2>
 	<div property="rdfs:comment">
 
-This document is a placeholder for the language-specific documentation
-for `dislocated`.
+<p>This document is a placeholder for the language-specific documentation
+for <code>dislocated</code>.</p>
 
 
 	</div>
@@ -667,14 +645,12 @@ for `dislocated`.
 	<h2><code property="oliasystem:hasTag" lang="">dobj</code>: <div property="rdfs:label">direct object</div></h2>
 	<div property="rdfs:comment">
 
-This document is a placeholder for the language-specific documentation
-for `dobj`.
+<p>This document is a placeholder for the language-specific documentation
+for <code>dobj</code>.</p>
 
-
-~~~ sdparse
-Hoy comeremos pescado . \n We will eat fish today .
+<pre><code class="language-sdparse">Hoy comeremos pescado . \n We will eat fish today .
 dobj(comeremos, pescado)
-~~~
+</code></pre>
 
 
 	</div>
@@ -688,8 +664,8 @@ dobj(comeremos, pescado)
 	<h2><code property="oliasystem:hasTag" lang="">expl</code>: <div property="rdfs:label">expletive</div></h2>
 	<div property="rdfs:comment">
 
-This document is a placeholder for the language-specific documentation
-for `expl`.
+<p>This document is a placeholder for the language-specific documentation
+for <code>expl</code>.</p>
 
 
 	</div>
@@ -703,8 +679,8 @@ for `expl`.
 	<h2><code property="oliasystem:hasTag" lang="">foreign</code>: <div property="rdfs:label">foreign words</div></h2>
 	<div property="rdfs:comment">
 
-This document is a placeholder for the language-specific documentation
-for `foreign`.
+<p>This document is a placeholder for the language-specific documentation
+for <code>foreign</code>.</p>
 
 
 	</div>
@@ -718,8 +694,8 @@ for `foreign`.
 	<h2><code property="oliasystem:hasTag" lang="">goeswith</code>: <div property="rdfs:label">goes with</div></h2>
 	<div property="rdfs:comment">
 
-This document is a placeholder for the language-specific documentation
-for `goeswith`.
+<p>This document is a placeholder for the language-specific documentation
+for <code>goeswith</code>.</p>
 
 
 	</div>
@@ -733,14 +709,12 @@ for `goeswith`.
 	<h2><code property="oliasystem:hasTag" lang="">iobj</code>: <div property="rdfs:label">indirect object</div></h2>
 	<div property="rdfs:comment">
 
-This document is a placeholder for the language-specific documentation
-for `iobj`.
+<p>This document is a placeholder for the language-specific documentation
+for <code>iobj</code>.</p>
 
-
-~~~ sdparse
-te voy a contar un cuento . \n I'm going to tell you a story .
+<pre><code class="language-sdparse">te voy a contar un cuento . \n I'm going to tell you a story .
 iobj(contar, te)
-~~~
+</code></pre>
 
 
 	</div>
@@ -754,8 +728,8 @@ iobj(contar, te)
 	<h2><code property="oliasystem:hasTag" lang="">list</code>: <div property="rdfs:label">list</div></h2>
 	<div property="rdfs:comment">
 
-This document is a placeholder for the language-specific documentation
-for `list`.
+<p>This document is a placeholder for the language-specific documentation
+for <code>list</code>.</p>
 
 
 	</div>
@@ -769,16 +743,14 @@ for `list`.
 	<h2><code property="oliasystem:hasTag" lang="">mark</code>: <div property="rdfs:label">marker</div></h2>
 	<div property="rdfs:comment">
 
-This document is a placeholder for the language-specific documentation
-for `mark`.
+<p>This document is a placeholder for the language-specific documentation
+for <code>mark</code>.</p>
 
-A marker is the word introducing a finite clause subordinate to another clause. For a complement clause, this will typically be "que" or "si". For an adverbial clause, the marker is typically a preposition like "mientras" or "aunque". The mark is a dependent of the subordinate clause head.
+<p>A marker is the word introducing a finite clause subordinate to another clause. For a complement clause, this will typically be “que” or “si”. For an adverbial clause, the marker is typically a preposition like “mientras” or “aunque”. The mark is a dependent of the subordinate clause head.</p>
 
-
-~~~ sdparse
-Escuchan música mientras comen . \n They listen to music while they eat .
+<pre><code class="language-sdparse">Escuchan música mientras comen . \n They listen to music while they eat .
 mark(comen, mientras)
-~~~
+</code></pre>
 
 
 	</div>
@@ -792,14 +764,12 @@ mark(comen, mientras)
 	<h2><code property="oliasystem:hasTag" lang="">mwe</code>: <div property="rdfs:label">multi-word expression</div></h2>
 	<div property="rdfs:comment">
 
-This document is a placeholder for the language-specific documentation
-for `mwe`.
+<p>This document is a placeholder for the language-specific documentation
+for <code>mwe</code>.</p>
 
-
-~~~ sdparse
-Tengo que estudiar . \n I have to study .
+<pre><code class="language-sdparse">Tengo que estudiar . \n I have to study .
 mwe(Tengo, que)
-~~~
+</code></pre>
 
 
 	</div>
@@ -813,8 +783,8 @@ mwe(Tengo, que)
 	<h2><code property="oliasystem:hasTag" lang="">name</code>: <div property="rdfs:label">name</div></h2>
 	<div property="rdfs:comment">
 
-This document is a placeholder for the language-specific documentation
-for `name`.
+<p>This document is a placeholder for the language-specific documentation
+for <code>name</code>.</p>
 
 
 	</div>
@@ -828,19 +798,16 @@ for `name`.
 	<h2><code property="oliasystem:hasTag" lang="">neg</code>: <div property="rdfs:label">negation modifier</div></h2>
 	<div property="rdfs:comment">
 
-This document is a placeholder for the language-specific documentation
-for `neg`.
+<p>This document is a placeholder for the language-specific documentation
+for <code>neg</code>.</p>
 
-
-~~~ sdparse
-María no canta . \n María does not sing .
+<pre><code class="language-sdparse">María no canta . \n María does not sing .
 neg(canta, no)
-~~~
+</code></pre>
 
-~~~ sdparse
-Nunca llueve . \n It never rains .
+<pre><code class="language-sdparse">Nunca llueve . \n It never rains .
 neg(llueve, Nunca)
-~~~
+</code></pre>
 
 
 	</div>
@@ -854,8 +821,8 @@ neg(llueve, Nunca)
 	<h2><code property="oliasystem:hasTag" lang="">nmod</code>: <div property="rdfs:label">nominal modifier</div></h2>
 	<div property="rdfs:comment">
 
-This document is a placeholder for the language-specific documentation
-for `nmod`.
+<p>This document is a placeholder for the language-specific documentation
+for <code>nmod</code>.</p>
 
 
 	</div>
@@ -869,16 +836,14 @@ for `nmod`.
 	<h2><code property="oliasystem:hasTag" lang="">nsubj</code>: <div property="rdfs:label">nominal subject</div></h2>
 	<div property="rdfs:comment">
 
-This document is a placeholder for the language-specific documentation
-for `nsubj`.
+<p>This document is a placeholder for the language-specific documentation
+for <code>nsubj</code>.</p>
 
-A nominal subject is a noun phrase which is the syntactic subject of a clause. The governor of this relation might not always be a verb: when the verb is a copular verb, the root of the clause is the complement of the copular verb, which can be an adjective or noun.
+<p>A nominal subject is a noun phrase which is the syntactic subject of a clause. The governor of this relation might not always be a verb: when the verb is a copular verb, the root of the clause is the complement of the copular verb, which can be an adjective or noun.</p>
 
-
-~~~ sdparse
-Juan ha invitado a Pedro . \n Juan has invited Pedro .
+<pre><code class="language-sdparse">Juan ha invitado a Pedro . \n Juan has invited Pedro .
 nsubj(invitado, Juan)
-~~~
+</code></pre>
 
 
 	</div>
@@ -892,14 +857,12 @@ nsubj(invitado, Juan)
 	<h2><code property="oliasystem:hasTag" lang="">nsubjpass</code>: <div property="rdfs:label">passive nominal subject</div></h2>
 	<div property="rdfs:comment">
 
-This document is a placeholder for the language-specific documentation
-for `nsubjpass`.
+<p>This document is a placeholder for the language-specific documentation
+for <code>nsubjpass</code>.</p>
 
-
-~~~ sdparse
-Pedro ha sido invitado por Juan . \n Pedro has been invited by Juan .
+<pre><code class="language-sdparse">Pedro ha sido invitado por Juan . \n Pedro has been invited by Juan .
 nsubjpass(invitado, Pedro)
-~~~
+</code></pre>
 
 
 	</div>
@@ -913,20 +876,17 @@ nsubjpass(invitado, Pedro)
 	<h2><code property="oliasystem:hasTag" lang="">nummod</code>: <div property="rdfs:label">numeric modifier</div></h2>
 	<div property="rdfs:comment">
 
-This document is a placeholder for the language-specific documentation
-for `nummod`.
+<p>This document is a placeholder for the language-specific documentation
+for <code>nummod</code>.</p>
 
-A numeric modifier of a noun is any number phrase that serves to modify the meaning of the noun with a quantity.
+<p>A numeric modifier of a noun is any number phrase that serves to modify the meaning of the noun with a quantity.</p>
 
-
-~~~ sdparse
-hay dos espacios \n There are two spaces
+<pre><code class="language-sdparse">hay dos espacios \n There are two spaces
 nummod(espacios, dos)
-~~~
-~~~ sdparse
-15 años \n 15 years 
+</code></pre>
+<pre><code class="language-sdparse">15 años \n 15 years 
 nummod(años, 15)
-~~~
+</code></pre>
 
 
 	</div>
@@ -940,13 +900,12 @@ nummod(años, 15)
 	<h2><code property="oliasystem:hasTag" lang="">parataxis</code>: <div property="rdfs:label">parataxis</div></h2>
 	<div property="rdfs:comment">
 
-This document is a placeholder for the language-specific documentation
-for `parataxis`.
+<p>This document is a placeholder for the language-specific documentation
+for <code>parataxis</code>.</p>
 
-~~~ sdparse
-Ya sé lo que llevaré a la fiesta: fruta y vino . \n I already know what I will bring to the party : fruit and wine .
+<pre><code class="language-sdparse">Ya sé lo que llevaré a la fiesta: fruta y vino . \n I already know what I will bring to the party : fruit and wine .
 parataxis(llevaré, fruta)
-~~~
+</code></pre>
 
 
 	</div>
@@ -960,13 +919,12 @@ parataxis(llevaré, fruta)
 	<h2><code property="oliasystem:hasTag" lang="">punct</code>: <div property="rdfs:label">punctuation</div></h2>
 	<div property="rdfs:comment">
 
-This document is a placeholder for the language-specific documentation
-for `punct`.
+<p>This document is a placeholder for the language-specific documentation
+for <code>punct</code>.</p>
 
-~~~ sdparse
-Cierra la puerta ! \n Close the door !
+<pre><code class="language-sdparse">Cierra la puerta ! \n Close the door !
 punct(Cierra, !)
-~~~
+</code></pre>
 
 
 	</div>
@@ -980,8 +938,8 @@ punct(Cierra, !)
 	<h2><code property="oliasystem:hasTag" lang="">remnant</code>: <div property="rdfs:label">remnant in ellipsis</div></h2>
 	<div property="rdfs:comment">
 
-This document is a placeholder for the language-specific documentation
-for `remnant`.
+<p>This document is a placeholder for the language-specific documentation
+for <code>remnant</code>.</p>
 
 
 	</div>
@@ -995,8 +953,8 @@ for `remnant`.
 	<h2><code property="oliasystem:hasTag" lang="">reparandum</code>: <div property="rdfs:label">overridden disfluency</div></h2>
 	<div property="rdfs:comment">
 
-This document is a placeholder for the language-specific documentation
-for `reparandum`.
+<p>This document is a placeholder for the language-specific documentation
+for <code>reparandum</code>.</p>
 
 
 	</div>
@@ -1010,20 +968,18 @@ for `reparandum`.
 	<h2><code property="oliasystem:hasTag" lang="">root</code>: <div property="rdfs:label">root</div></h2>
 	<div property="rdfs:comment">
 
-This document is a placeholder for the language-specific documentation
-for `root`.
+<p>This document is a placeholder for the language-specific documentation
+for <code>root</code>.</p>
 
-The root grammatical relation points to the root of the sentence. A fake node "ROOT" is used as the governor. The ROOT node is indexed with "0", since the indexation of real words in the sentence starts at 1.
+<p>The root grammatical relation points to the root of the sentence. A fake node “ROOT” is used as the governor. The ROOT node is indexed with “0”, since the indexation of real words in the sentence starts at 1.</p>
 
-~~~ sdparse
-ROOT Me gusta el cine . \n I like the cinema .
+<pre><code class="language-sdparse">ROOT Me gusta el cine . \n I like the cinema .
 root(ROOT, gusta)
-~~~
+</code></pre>
 
-~~~ sdparse
-ROOT María es simpática . \n María is friendly .
+<pre><code class="language-sdparse">ROOT María es simpática . \n María is friendly .
 root(ROOT, es)
-~~~
+</code></pre>
 
 
 	</div>
@@ -1037,8 +993,8 @@ root(ROOT, es)
 	<h2><code property="oliasystem:hasTag" lang="">vocative</code>: <div property="rdfs:label">vocative</div></h2>
 	<div property="rdfs:comment">
 
-This document is a placeholder for the language-specific documentation
-for `vocative`.
+<p>This document is a placeholder for the language-specific documentation
+for <code>vocative</code>.</p>
 
 
 	</div>
@@ -1052,13 +1008,12 @@ for `vocative`.
 	<h2><code property="oliasystem:hasTag" lang="">xcomp</code>: <div property="rdfs:label">open clausal complement</div></h2>
 	<div property="rdfs:comment">
 
-This document is a placeholder for the language-specific documentation
-for `xcomp`.
+<p>This document is a placeholder for the language-specific documentation
+for <code>xcomp</code>.</p>
 
-~~~ sdparse
-Quiero comprar un ordenador . \n I want to buy a computer  .
+<pre><code class="language-sdparse">Quiero comprar un ordenador . \n I want to buy a computer  .
 xcomp(Quiero, comprar)
-~~~
+</code></pre>
 
 
 	</div>

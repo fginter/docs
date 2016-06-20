@@ -250,21 +250,17 @@ in two places.</p>
 	<h2><code property="oliasystem:hasTag" lang="">acl</code>: <div property="rdfs:label">clausal modifier of noun</div></h2>
 	<div property="rdfs:comment">
 
-`acl` is used for finite and non-finite clauses that modify a noun, including cases of secondary predication. In Norwegian, relative clauses are assigned a language-specific subtype [acl:relcl](acl-relcl).
+<p><code>acl</code> is used for finite and non-finite clauses that modify a noun, including cases of secondary predication. In Norwegian, relative clauses are assigned a language-specific subtype <a href="acl-relcl">acl:relcl</a>.</p>
 
-~~~ sdparse
-Han har gitt militsen ordre om å omgruppere \n He has given the militia orders to regroup
+<pre><code class="language-sdparse">Han har gitt militsen ordre om å omgruppere \n He has given the militia orders to regroup
 acl(ordre, omgruppere)
-~~~
+</code></pre>
 
-The `acl` relation is also used for optional predicatives.
+<p>The <code>acl</code> relation is also used for optional predicatives.</p>
 
-~~~ sdparse
-En 12 år gammel gutt kommer inn døende \n A 12-year old boy comes in dying
+<pre><code class="language-sdparse">En 12 år gammel gutt kommer inn døende \n A 12-year old boy comes in dying
 acl(gutt, døende)
-~~~
-
-
+</code></pre>
 
 
 
@@ -279,44 +275,38 @@ acl(gutt, døende)
 	<h2><code property="oliasystem:hasTag" lang="">acl:relcl</code>: <div property="rdfs:label">relative clause</div></h2>
 	<div property="rdfs:comment">
 
-This language-specific relation is used for relative clauses in Norwegian and the `acl:relcl` relation is assigned to the main predicate of the relative clause. Relative clauses modify a nominal element and are often initiated by the relative pronoun *som* "that" which is assigned a nominal relation to the main predicate of the relative clause.
+<p>This language-specific relation is used for relative clauses in Norwegian and the <code>acl:relcl</code> relation is assigned to the main predicate of the relative clause. Relative clauses modify a nominal element and are often initiated by the relative pronoun <em>som</em> “that” which is assigned a nominal relation to the main predicate of the relative clause.</p>
 
-~~~ sdparse
-Jeg har en venn som kjenner deg \n I have a friend who knows you
+<pre><code class="language-sdparse">Jeg har en venn som kjenner deg \n I have a friend who knows you
 acl:relcl(venn,kjenner)
 nsubj(kjenner,som)
-~~~
+</code></pre>
 
-~~~ sdparse
-Jeg har en venn som du kjenner \n I have a friend whom you know
+<pre><code class="language-sdparse">Jeg har en venn som du kjenner \n I have a friend whom you know
 acl:relcl(venn,kjenner)
 dobj(kjenner,som)
-~~~
+</code></pre>
 
-~~~ sdparse
-Jeg kjenner han som du danset med \n I know he who you danced with
+<pre><code class="language-sdparse">Jeg kjenner han som du danset med \n I know he who you danced with
 acl:relcl(han,danset)
 nmod(danset,som)
-~~~
+</code></pre>
 
-The relative pronoun may be omitted when it stands in a non-subject relation to the predicate of the relative clause:
+<p>The relative pronoun may be omitted when it stands in a non-subject relation to the predicate of the relative clause:</p>
 
-~~~ sdparse
-Jeg har en venn du kjenner \n I have a friend you know
+<pre><code class="language-sdparse">Jeg har en venn du kjenner \n I have a friend you know
 acl:relcl(venn,kjenner)
-~~~
+</code></pre>
 
-Note that due to the analysis of the copula construction ([cop]()), the main predicate of a relative clause may also be an adjective or even a noun:
+<p>Note that due to the analysis of the copula construction (<a href="">cop</a>), the main predicate of a relative clause may also be an adjective or even a noun:</p>
 
-~~~ sdparse
-Jeg har en venn som er morsom \n I have a friend who is funny
+<pre><code class="language-sdparse">Jeg har en venn som er morsom \n I have a friend who is funny
 acl:relcl(venn,morsom)
-~~~
+</code></pre>
 
-~~~ sdparse
-Jeg har en venn som er en dyktig snekker \n I have a friend who is a good carpenter
+<pre><code class="language-sdparse">Jeg har en venn som er en dyktig snekker \n I have a friend who is a good carpenter
 acl:relcl(venn,snekker)
-~~~
+</code></pre>
 
 
 
@@ -331,17 +321,15 @@ acl:relcl(venn,snekker)
 	<h2><code property="oliasystem:hasTag" lang="">advcl</code>: <div property="rdfs:label">adverbial clause modifier</div></h2>
 	<div property="rdfs:comment">
 
-An adverbial clause modifier is a clause which modifies a verb or other predicate (adjective, etc.), as a modifier not as a core complement. This includes things such as a temporal clause, consequence, conditional clause, purpose clause, etc. The dependent must be clausal (or else it is an [advmod]()) and the dependent is the main predicate of the clause.
+<p>An adverbial clause modifier is a clause which modifies a verb or other predicate (adjective, etc.), as a modifier not as a core complement. This includes things such as a temporal clause, consequence, conditional clause, purpose clause, etc. The dependent must be clausal (or else it is an <a href="">advmod</a>) and the dependent is the main predicate of the clause.</p>
 
-~~~ sdparse
-Helt siden han tiltrådte har Kofi Annan talt de fattiges sak \n Ever since he started Kofi Annan has spoken the cause of the poor
+<pre><code class="language-sdparse">Helt siden han tiltrådte har Kofi Annan talt de fattiges sak \n Ever since he started Kofi Annan has spoken the cause of the poor
 advcl(talt, tiltrådte)
-~~~
+</code></pre>
 
-~~~ sdparse
-Mange blir HIV-smittet fordi de ikke vet hvordan man smittes \n Many are infected with HIV because they do not know how one is infected
+<pre><code class="language-sdparse">Mange blir HIV-smittet fordi de ikke vet hvordan man smittes \n Many are infected with HIV because they do not know how one is infected
 advcl(HIV-smittet, vet)
-~~~
+</code></pre>
 
 
 	</div>
@@ -355,17 +343,15 @@ advcl(HIV-smittet, vet)
 	<h2><code property="oliasystem:hasTag" lang="">advmod</code>: <div property="rdfs:label">adverbial modifier</div></h2>
 	<div property="rdfs:comment">
 
-An adverbial modifier of a word is a (non-clausal) adverb or adverbial phrase that serves to modify the meaning of the word.
+<p>An adverbial modifier of a word is a (non-clausal) adverb or adverbial phrase that serves to modify the meaning of the word.</p>
 
-~~~ sdparse
-var også fornøyd \n was also pleased
+<pre><code class="language-sdparse">var også fornøyd \n was also pleased
 advmod(fornøyd, også)
-~~~
+</code></pre>
 
-~~~ sdparse
-skal nå lede \n will now lead
+<pre><code class="language-sdparse">skal nå lede \n will now lead
 advmod(lede, nå)
-~~~
+</code></pre>
 
 
 	</div>
@@ -379,17 +365,15 @@ advmod(lede, nå)
 	<h2><code property="oliasystem:hasTag" lang="">amod</code>: <div property="rdfs:label">adjectival modifier</div></h2>
 	<div property="rdfs:comment">
 
-An adjectival modifier of a noun is any adjectival phrase that serves to modify the meaning of the noun. In Norwegian, adjectival modifiers are placed before the noun they modify.
+<p>An adjectival modifier of a noun is any adjectival phrase that serves to modify the meaning of the noun. In Norwegian, adjectival modifiers are placed before the noun they modify.</p>
 
-~~~ sdparse
-Den internasjonale domstolen har sete i Haag \n The international court is situated in Haag
+<pre><code class="language-sdparse">Den internasjonale domstolen har sete i Haag \n The international court is situated in Haag
 amod(domstolen,internasjonale)
-~~~
+</code></pre>
 
-~~~ sdparse
-Samtidig finnes det en åpenbar likhet \n At the same time there is an obvious similarity
+<pre><code class="language-sdparse">Samtidig finnes det en åpenbar likhet \n At the same time there is an obvious similarity
 amod(likhet,åpenbar)
-~~~
+</code></pre>
 
 
 	</div>
@@ -403,21 +387,17 @@ amod(likhet,åpenbar)
 	<h2><code property="oliasystem:hasTag" lang="">appos</code>: <div property="rdfs:label">appositional modifier</div></h2>
 	<div property="rdfs:comment">
 
-An appositional modifier of a noun is a nominal immediately following the first noun that serves to define or modify that noun. 
+<p>An appositional modifier of a noun is a nominal immediately following the first noun that serves to define or modify that noun.</p>
 
-~~~ sdparse
-Avtalen om et inkluderende arbeidsliv ( IA-avtalen ) skal redusere sykefravær \n The agreement on an including work place (the IA-agreement) will reduce sick leave
+<pre><code class="language-sdparse">Avtalen om et inkluderende arbeidsliv ( IA-avtalen ) skal redusere sykefravær \n The agreement on an including work place (the IA-agreement) will reduce sick leave
 appos(arbeidsliv,IA-avtalen)
-~~~
+</code></pre>
 
-In Norwegian, it is used also for titles which usually precede their head.
+<p>In Norwegian, it is used also for titles which usually precede their head.</p>
 
-~~~ sdparse
-Disse visdomsordene ble formet av forfatteren Günter Grass \n These words of wisdom were formed by the writer Günter Grass
+<pre><code class="language-sdparse">Disse visdomsordene ble formet av forfatteren Günter Grass \n These words of wisdom were formed by the writer Günter Grass
 appos(Günter,forfatteren)
-~~~
-
-
+</code></pre>
 
 
 
@@ -432,23 +412,20 @@ appos(Günter,forfatteren)
 	<h2><code property="oliasystem:hasTag" lang="">aux</code>: <div property="rdfs:label">auxiliary</div></h2>
 	<div property="rdfs:comment">
 
-An auxiliary of a clause is a non-main verb of the clause, e.g., a modal auxiliary, or a form of *ha* "have" or *være* "be" in a periphrastic tense.
-Exception: Auxiliary verb used to construct the passive voice is not labeled aux but [auxpass]().
+<p>An auxiliary of a clause is a non-main verb of the clause, e.g., a modal auxiliary, or a form of <em>ha</em> “have” or <em>være</em> “be” in a periphrastic tense.
+Exception: Auxiliary verb used to construct the passive voice is not labeled aux but <a href="">auxpass</a>.</p>
 
-~~~ sdparse
-Dette har vi i Norge merket \n This we have in Norway noticed
+<pre><code class="language-sdparse">Dette har vi i Norge merket \n This we have in Norway noticed
 aux(merket,har)
-~~~
+</code></pre>
 
-~~~ sdparse
-deres siste øyeblikk er kommet \n Their last moment has is come
+<pre><code class="language-sdparse">deres siste øyeblikk er kommet \n Their last moment has is come
 aux(kommet,er)
-~~~
+</code></pre>
 
-~~~ sdparse
-Helseadvarslene må være tydelige \n The health warnings must be clear
+<pre><code class="language-sdparse">Helseadvarslene må være tydelige \n The health warnings must be clear
 aux(tydelige, må)
-~~~
+</code></pre>
 
 
 
@@ -463,12 +440,11 @@ aux(tydelige, må)
 	<h2><code property="oliasystem:hasTag" lang="">auxpass</code>: <div property="rdfs:label">passive auxiliary</div></h2>
 	<div property="rdfs:comment">
 
-A passive auxiliary of a clause is a non-main verb of the clause which contains the passive information.
+<p>A passive auxiliary of a clause is a non-main verb of the clause which contains the passive information.</p>
 
-~~~ sdparse
-I sommer har jeg også blitt intervjuet \n This summer I have also been interviewed
+<pre><code class="language-sdparse">I sommer har jeg også blitt intervjuet \n This summer I have also been interviewed
 auxpass(intervjuet,blitt)
-~~~
+</code></pre>
 
 
 
@@ -483,22 +459,19 @@ auxpass(intervjuet,blitt)
 	<h2><code property="oliasystem:hasTag" lang="">case</code>: <div property="rdfs:label">case marking</div></h2>
 	<div property="rdfs:comment">
 
-The case relation is used for any case-marking element which is treated as a separate syntactic word, in Norwegian it is used to mark the relation between a preposition and what is traditionally known as its complement (its head in the UD scheme).
+<p>The case relation is used for any case-marking element which is treated as a separate syntactic word, in Norwegian it is used to mark the relation between a preposition and what is traditionally known as its complement (its head in the UD scheme).</p>
 
-~~~ sdparse
-25-åringen selv har tatt lærdom av angrepet \n The 25-year old has taken a lesson from the attack
+<pre><code class="language-sdparse">25-åringen selv har tatt lærdom av angrepet \n The 25-year old has taken a lesson from the attack
 case(angrepet,av)
-~~~
+</code></pre>
 
-~~~ sdparse
-effektivt mot røyking \n effective against smoking
+<pre><code class="language-sdparse">effektivt mot røyking \n effective against smoking
 case(røyking,mot)
-~~~
+</code></pre>
 
-~~~ sdparse
-Hun kom hit til Berlin \n She came here to Berlin
+<pre><code class="language-sdparse">Hun kom hit til Berlin \n She came here to Berlin
 case(Berlin,til)
-~~~
+</code></pre>
 
 
 
@@ -513,19 +486,17 @@ case(Berlin,til)
 	<h2><code property="oliasystem:hasTag" lang="">cc</code>: <div property="rdfs:label">coordinating conjunction</div></h2>
 	<div property="rdfs:comment">
 
-For more on coordination, see the [conj]() relation. A cc is the relation between the first conjunct and the coordinating conjunction delimiting another conjunct.
+<p>For more on coordination, see the <a href="">conj</a> relation. A cc is the relation between the first conjunct and the coordinating conjunction delimiting another conjunct.</p>
 
-~~~ sdparse
-Kamskjell , piggvar og lammefilet sto på menyen \n Scallops , turbot and lamb were on the menu
+<pre><code class="language-sdparse">Kamskjell , piggvar og lammefilet sto på menyen \n Scallops , turbot and lamb were on the menu
 cc(Kamskjell,og)
-~~~
+</code></pre>
 
-A coordinating conjunction may also appear at the beginning of a sentence. This is also called a cc, and it depends on the root predicate of the sentence.
+<p>A coordinating conjunction may also appear at the beginning of a sentence. This is also called a cc, and it depends on the root predicate of the sentence.</p>
 
-~~~ sdparse
-Og denne gangen gjorde hun det på engelsk \n And this time she did it in English
+<pre><code class="language-sdparse">Og denne gangen gjorde hun det på engelsk \n And this time she did it in English
 cc(gjorde,Og)
-~~~
+</code></pre>
 
 
 	</div>
@@ -539,14 +510,13 @@ cc(gjorde,Og)
 	<h2><code property="oliasystem:hasTag" lang="">ccomp</code>: <div property="rdfs:label">clausal complement</div></h2>
 	<div property="rdfs:comment">
 
-A clausal complement of a verb or adjective is a dependent clause which is a core argument. That is, it functions like an object of the verb, or adjective.
+<p>A clausal complement of a verb or adjective is a dependent clause which is a core argument. That is, it functions like an object of the verb, or adjective.</p>
 
-~~~ sdparse
-Mikko trodde jo at jeg skulle ta ham \n Mikko thought that I was going to get him
+<pre><code class="language-sdparse">Mikko trodde jo at jeg skulle ta ham \n Mikko thought that I was going to get him
 ccomp(trodde,ta)
-~~~
+</code></pre>
 
-Such clausal complements may be finite or nonfinite. However, if the subject of the clausal complement is controlled the appropriate relation is [xcomp]().
+<p>Such clausal complements may be finite or nonfinite. However, if the subject of the clausal complement is controlled the appropriate relation is <a href="">xcomp</a>.</p>
 
 
 	</div>
@@ -560,7 +530,7 @@ Such clausal complements may be finite or nonfinite. However, if the subject of 
 	<h2><code property="oliasystem:hasTag" lang="">compound</code>: <div property="rdfs:label">compound</div></h2>
 	<div property="rdfs:comment">
 
-For Norwegian the `compound` relation is used only for verbal particle constructions with the language-specific subtype [compound:prt](compound-prt).
+<p>For Norwegian the <code>compound</code> relation is used only for verbal particle constructions with the language-specific subtype <a href="compound-prt">compound:prt</a>.</p>
 
 
 	</div>
@@ -574,27 +544,24 @@ For Norwegian the `compound` relation is used only for verbal particle construct
 	<h2><code property="oliasystem:hasTag" lang="">compound:prt</code>: <div property="rdfs:label">compound:prt</div></h2>
 	<div property="rdfs:comment">
 
-This language-specific relation is used for verbal particles in Norwegian and describes the relation of the particle to its verbal head. 
+<p>This language-specific relation is used for verbal particles in Norwegian and describes the relation of the particle to its verbal head.</p>
 
-Particles exhibit a number of syntactic properties which sets them apart from regular prepositions. For instance, a pronominal object may intercede the verb and the preposition in the particle case *satte den på* "put it on", but not in the case of a regular preposition and its complement _\*lette den etter_ "\*looked it for",  and only complements of a preposition may occur in an impersonal passive *Det ble lett etter den nye boka* "It was looked for the new book", but an object in a particle construction may not _\*Det ble satt den på_ "\*It was put it on".
+<p>Particles exhibit a number of syntactic properties which sets them apart from regular prepositions. For instance, a pronominal object may intercede the verb and the preposition in the particle case <em>satte den på</em> “put it on”, but not in the case of a regular preposition and its complement <em>*lette den etter</em> “*looked it for”,  and only complements of a preposition may occur in an impersonal passive <em>Det ble lett etter den nye boka</em> “It was looked for the new book”, but an object in a particle construction may not <em>*Det ble satt den på</em> “*It was put it on”.</p>
 
-~~~ sdparse
-Den gang ble alt samlet inn \n That time all was collected
+<pre><code class="language-sdparse">Den gang ble alt samlet inn \n That time all was collected
 compound:prt(samlet,inn)
-~~~
+</code></pre>
 
-~~~ sdparse
-Regjeringen har lagt frem et raust statsbudsjett \n The government has put forward a generous budget
+<pre><code class="language-sdparse">Regjeringen har lagt frem et raust statsbudsjett \n The government has put forward a generous budget
 compound:prt(lagt,frem)
-~~~
+</code></pre>
 
-~~~ sdparse
-Forskningsrådet delte onsdag kveld ut to sentrale priser \n The research council handed out to central prizes Wednesday evening
+<pre><code class="language-sdparse">Forskningsrådet delte onsdag kveld ut to sentrale priser \n The research council handed out to central prizes Wednesday evening
 compound:prt(delte,ut)
-~~~
+</code></pre>
 
-**References**
-Kari Kinn, Per Erik Solberg and Pål Kristian Eriksen. "[NDT Guidelines for Morphological Annotation](http://www.nb.no/sbfil/dok/20140314_guidelines_ndt_english.pdf)". National Library Tech Report.
+<p><strong>References</strong>
+Kari Kinn, Per Erik Solberg and Pål Kristian Eriksen. “<a href="http://www.nb.no/sbfil/dok/20140314_guidelines_ndt_english.pdf">NDT Guidelines for Morphological Annotation</a>”. National Library Tech Report.</p>
 
 
 
@@ -609,20 +576,18 @@ Kari Kinn, Per Erik Solberg and Pål Kristian Eriksen. "[NDT Guidelines for Morp
 	<h2><code property="oliasystem:hasTag" lang="">conj</code>: <div property="rdfs:label">conjunct</div></h2>
 	<div property="rdfs:comment">
 
-A conjunct is the relation between two elements connected by a coordinating conjunction, such as *og* "and", *eller* "or", etc. We treat conjunctions asymmetrically: The head of the relation is the first conjunct and all the other conjuncts depend on it via the `conj` relation.
+<p>A conjunct is the relation between two elements connected by a coordinating conjunction, such as <em>og</em> “and”, <em>eller</em> “or”, etc. We treat conjunctions asymmetrically: The head of the relation is the first conjunct and all the other conjuncts depend on it via the <code>conj</code> relation.</p>
 
-~~~ sdparse
-Lam og piggvar på bryllupsmenyen \n Lamb and turbot on the wedding menu
+<pre><code class="language-sdparse">Lam og piggvar på bryllupsmenyen \n Lamb and turbot on the wedding menu
 conj(Lam,piggvar)
-~~~
+</code></pre>
 
-~~~ sdparse
-Kamskjell , piggvar og lammefilet sto på menyen \n Scallops, turbot and lamb were on the menu
+<pre><code class="language-sdparse">Kamskjell , piggvar og lammefilet sto på menyen \n Scallops, turbot and lamb were on the menu
 conj(Kamskjell-1,piggvar-3)
 punct(Kamskjell-1,,-2)
 conj(Kamskjell-1,lammefilet-5)
 cc(Kamskjell-1,og-4)
-~~~
+</code></pre>
 
 
 	</div>
@@ -636,16 +601,15 @@ cc(Kamskjell-1,og-4)
 	<h2><code property="oliasystem:hasTag" lang="">cop</code>: <div property="rdfs:label">copula</div></h2>
 	<div property="rdfs:comment">
 
-A copula is the relation between the complement of a copular verb and the copular verb *være* "to be". The copula is treated as a dependent of the lexical verb.
+<p>A copula is the relation between the complement of a copular verb and the copular verb <em>være</em> “to be”. The copula is treated as a dependent of the lexical verb.</p>
 
-~~~ sdparse
-Det er ovnsbakt piggvar \n It is ovenbaked turbot
+<pre><code class="language-sdparse">Det er ovnsbakt piggvar \n It is ovenbaked turbot
 cop(piggvar, er)
-~~~
+</code></pre>
 
-This analysis entails that in copula clauses, the main predicate is not verbal, but rather an adjectival or even nominal (as in the above example).
+<p>This analysis entails that in copula clauses, the main predicate is not verbal, but rather an adjectival or even nominal (as in the above example).</p>
 
-Note that there are occurrences of *være* "to be" which do not give rise to a copula analysis, such as in cleft constructions (see [expl](expl)).
+<p>Note that there are occurrences of <em>være</em> “to be” which do not give rise to a copula analysis, such as in cleft constructions (see <a href="expl">expl</a>).</p>
 
 
 
@@ -660,19 +624,17 @@ Note that there are occurrences of *være* "to be" which do not give rise to a c
 	<h2><code property="oliasystem:hasTag" lang="">csubj</code>: <div property="rdfs:label">clausal subject</div></h2>
 	<div property="rdfs:comment">
 
-A clausal subject is a clausal syntactic subject of a clause, i.e., the subject is itself a clause.
+<p>A clausal subject is a clausal syntactic subject of a clause, i.e., the subject is itself a clause.</p>
 
-~~~ sdparse
-Det vil ta lang tid å rette opp feilene \n It will take a long time to correct the errors
+<pre><code class="language-sdparse">Det vil ta lang tid å rette opp feilene \n It will take a long time to correct the errors
 csubj(ta,rette)
-~~~
+</code></pre>
 
-When the matrix clause is a copula construction, the head of the `csubj` may be an adjectival (or even nominal) predicate.
+<p>When the matrix clause is a copula construction, the head of the <code>csubj</code> may be an adjectival (or even nominal) predicate.</p>
 
-~~~ sdparse
-Det er rart at vi kom i mål i det hele tatt \n It is funny that we reached our goal at all
+<pre><code class="language-sdparse">Det er rart at vi kom i mål i det hele tatt \n It is funny that we reached our goal at all
 csubj(rart,kom)
-~~~
+</code></pre>
 
 
 	</div>
@@ -686,12 +648,11 @@ csubj(rart,kom)
 	<h2><code property="oliasystem:hasTag" lang="">csubjpass</code>: <div property="rdfs:label">clausal passive subject</div></h2>
 	<div property="rdfs:comment">
 
-A clausal passive subject is a clausal syntactic subject of a passive clause. In the example below, the clause *At de mener alvor* "That they are serious" is the `csubjpass` of the passive verb *illustreres* "illustrated-PASS".
+<p>A clausal passive subject is a clausal syntactic subject of a passive clause. In the example below, the clause <em>At de mener alvor</em> “That they are serious” is the <code>csubjpass</code> of the passive verb <em>illustreres</em> “illustrated-PASS”.</p>
 
-~~~ sdparse
-At de mener alvor, kan illustreres med følgende \n That they are serious can be illustrated by the following
+<pre><code class="language-sdparse">At de mener alvor, kan illustreres med følgende \n That they are serious can be illustrated by the following
 csubjpass(illustreres,mener)
-~~~
+</code></pre>
 
 
 	</div>
@@ -705,7 +666,7 @@ csubjpass(illustreres,mener)
 	<h2><code property="oliasystem:hasTag" lang="">dep</code>: <div property="rdfs:label">unspecified dependency</div></h2>
 	<div property="rdfs:comment">
 
-A dependency is labeled as dep when a system is unable to determine a more precise dependency relation between two words. This relation is not used for Norwegian.
+<p>A dependency is labeled as dep when a system is unable to determine a more precise dependency relation between two words. This relation is not used for Norwegian.</p>
 
 
 	</div>
@@ -719,25 +680,22 @@ A dependency is labeled as dep when a system is unable to determine a more preci
 	<h2><code property="oliasystem:hasTag" lang="">det</code>: <div property="rdfs:label">determiner</div></h2>
 	<div property="rdfs:comment">
 
-The relation determiner (`det`) holds between a nominal head and its determiner. Most commonly, a word of POS DET will have the relation `det` and vice versa. 
+<p>The relation determiner (<code>det</code>) holds between a nominal head and its determiner. Most commonly, a word of POS DET will have the relation <code>det</code> and vice versa.</p>
 
-~~~ sdparse
-denne viktige posten \n this important post
+<pre><code class="language-sdparse">denne viktige posten \n this important post
 det(posten,denne)
-~~~
+</code></pre>
 
-Other parts of speech than `DET` may in some cases be assigned a determiner relation to a nominal head. 
-For Norwegian the `det` relation is also used for genitive nouns, like *årets* "this year's" and quantity nouns like *rekke* "number-of".
+<p>Other parts of speech than <code>DET</code> may in some cases be assigned a determiner relation to a nominal head. 
+For Norwegian the <code>det</code> relation is also used for genitive nouns, like <em>årets</em> “this year’s” and quantity nouns like <em>rekke</em> “number-of”.</p>
 
-~~~ sdparse
-årets fredspris \n this year's peace prize
+<pre><code class="language-sdparse">årets fredspris \n this year's peace prize
 det(fredspris,årets)
-~~~
+</code></pre>
 
-~~~ sdparse
-en rekke saker \n a number-of cases
+<pre><code class="language-sdparse">en rekke saker \n a number-of cases
 det(saker,rekke)
-~~~
+</code></pre>
 
 
 
@@ -752,17 +710,15 @@ det(saker,rekke)
 	<h2><code property="oliasystem:hasTag" lang="">discourse</code>: <div property="rdfs:label">discourse element</div></h2>
 	<div property="rdfs:comment">
 
-This is used for interjections and other discourse particles and elements, which are not clearly linked to the structure of the sentence except in an expressive way.
+<p>This is used for interjections and other discourse particles and elements, which are not clearly linked to the structure of the sentence except in an expressive way.</p>
 
-~~~ sdparse
-Nei , det tror jeg ikke \n No, I don't think so
+<pre><code class="language-sdparse">Nei , det tror jeg ikke \n No, I don't think so
 discourse(tror,Nei)
-~~~
+</code></pre>
 
-~~~ sdparse
-Åhh , det er mye \n Oh , that is a lot
+<pre><code class="language-sdparse">Åhh , det er mye \n Oh , that is a lot
 discourse(mye,Åhh)
-~~~
+</code></pre>
 
 
 	</div>
@@ -776,7 +732,7 @@ discourse(mye,Åhh)
 	<h2><code property="oliasystem:hasTag" lang="">dislocated</code>: <div property="rdfs:label">dislocated elements</div></h2>
 	<div property="rdfs:comment">
 
-This relation is not used for Norwegian.
+<p>This relation is not used for Norwegian.</p>
 
 
 	</div>
@@ -790,12 +746,11 @@ This relation is not used for Norwegian.
 	<h2><code property="oliasystem:hasTag" lang="">dobj</code>: <div property="rdfs:label">direct object</div></h2>
 	<div property="rdfs:comment">
 
-A direct object is a nominal which is the (accusative) object of the verbal predicate.
+<p>A direct object is a nominal which is the (accusative) object of the verbal predicate.</p>
 
-~~~ sdparse
-Vi skal ikke gjøre samme feil \n We are not going to make the same mistake
+<pre><code class="language-sdparse">Vi skal ikke gjøre samme feil \n We are not going to make the same mistake
 dobj(gjøre,feil)
-~~~
+</code></pre>
 
 
 	</div>
@@ -809,66 +764,56 @@ dobj(gjøre,feil)
 	<h2><code property="oliasystem:hasTag" lang="">expl</code>: <div property="rdfs:label">expletive</div></h2>
 	<div property="rdfs:comment">
 
-This relation captures expletive nominals. These are nominals that appear in an argument position of a predicate but which do not themselves satisfy any of the semantic roles of the predicate. The main predicate of the clause (the verb or predicate adjective or noun) is the governor. 
+<p>This relation captures expletive nominals. These are nominals that appear in an argument position of a predicate but which do not themselves satisfy any of the semantic roles of the predicate. The main predicate of the clause (the verb or predicate adjective or noun) is the governor.</p>
 
-For Norwegian, the expletive element is expressed using the neuter pronoun *det* "it" and the `expl` relation is used for both expletive subjects and objects.
+<p>For Norwegian, the expletive element is expressed using the neuter pronoun <em>det</em> “it” and the <code>expl</code> relation is used for both expletive subjects and objects.</p>
 
-#####Presentational construction
-In Norwegian expletives occur in the presentational construction, which involves an expletive subject, an active verb and an indefinite subject (*en debatt* "a debate" in the example below).
+<h5 id="presentational-construction">Presentational construction</h5>
+<p>In Norwegian expletives occur in the presentational construction, which involves an expletive subject, an active verb and an indefinite subject (<em>en debatt</em> “a debate” in the example below).</p>
 
-~~~ sdparse
-Det eksisterer allerede en debatt \n There already exists a debate
+<pre><code class="language-sdparse">Det eksisterer allerede en debatt \n There already exists a debate
 expl(eksisterer-2,Det-1)
 nsubj(eksisterer-2,debatt-5)
-~~~
+</code></pre>
 
-#####Impersonal passive
-Norwegian employs the impersonal passive construction, where there is an expletive subject and the underlying subject is unexpressed.
+<h5 id="impersonal-passive">Impersonal passive</h5>
+<p>Norwegian employs the impersonal passive construction, where there is an expletive subject and the underlying subject is unexpressed.</p>
 
-~~~ sdparse
-Senere har det blitt fremsatt flere forslag \n Later has there been proposed several suggestions
+<pre><code class="language-sdparse">Senere har det blitt fremsatt flere forslag \n Later has there been proposed several suggestions
 expl(fremsatt,det)
-~~~
+</code></pre>
 
-#####Clause-anticipating constructions
-These constructions contain a finite or non-finite clause which semantically may be regarded as the subject, but where the subject position is occupied by an expletive.
+<h5 id="clause-anticipating-constructions">Clause-anticipating constructions</h5>
+<p>These constructions contain a finite or non-finite clause which semantically may be regarded as the subject, but where the subject position is occupied by an expletive.</p>
 
-~~~ sdparse
-Det er ønskelig at utvalget arbeider i dialog \n It is desirable that the committee works in dialogue
+<pre><code class="language-sdparse">Det er ønskelig at utvalget arbeider i dialog \n It is desirable that the committee works in dialogue
 expl(ønskelig-3,Det-1)
 csubj(ønskelig-3,arbeider-6)
-~~~
+</code></pre>
 
-~~~ sdparse
-Det er en offentlig oppgave å bidra økonomisk \n It is a public duty to contribute financially
+<pre><code class="language-sdparse">Det er en offentlig oppgave å bidra økonomisk \n It is a public duty to contribute financially
 expl(oppgave-5,Det-1)
 csubj(oppgave-5,bidra-7)
-~~~
-We also find clause-anticipating constructions with expletive objects.
+</code></pre>
+<p>We also find clause-anticipating constructions with expletive objects.</p>
 
-~~~ sdparse
-Retten finner det bevist at han handlet forsettlig \n The court finds it proven that he acted intentionally
+<pre><code class="language-sdparse">Retten finner det bevist at han handlet forsettlig \n The court finds it proven that he acted intentionally
 expl(finner-2,det-3)
 ccomp(finner-2,handlet-7)
-~~~
+</code></pre>
 
-#####Clefts
-Clefts are quite  common in Norwegian. They contain an expletive subject, a form of *være* "to be" and a relative clause. Note that in clefts we do not adopt a copula analysis of the verb *være* "er".
+<h5 id="clefts">Clefts</h5>
+<p>Clefts are quite  common in Norwegian. They contain an expletive subject, a form of <em>være</em> “to be” and a relative clause. Note that in clefts we do not adopt a copula analysis of the verb <em>være</em> “er”.</p>
 
-~~~ sdparse
-Det er forholdsvis få arter som har klart å tilpasse seg \n There are quite few species that have managed to adapt 
+<pre><code class="language-sdparse">Det er forholdsvis få arter som har klart å tilpasse seg \n There are quite few species that have managed to adapt 
 expl(er-2,Det-1)
 acl:relcl(arter-5,klart-8)
-~~~
+</code></pre>
 
+<h5 id="references">References</h5>
+<p>Kari Kinn, Per Erik Solberg and Pål Kristian Eriksen. <a href="http://www.nb.no/sbfil/dok/20140314_guidelines_ndt_english.pdf">NDT Guidelines for Morphological Annotation</a>”. National Library Tech Report.</p>
 
-#####References
-Kari Kinn, Per Erik Solberg and Pål Kristian Eriksen. [NDT Guidelines for Morphological Annotation](http://www.nb.no/sbfil/dok/20140314_guidelines_ndt_english.pdf)". National Library Tech Report.
-
-
-
-
-~~~
+<p>~~~</p>
 
 
 
@@ -883,14 +828,13 @@ Kari Kinn, Per Erik Solberg and Pål Kristian Eriksen. [NDT Guidelines for Morph
 	<h2><code property="oliasystem:hasTag" lang="">foreign</code>: <div property="rdfs:label">foreign words</div></h2>
 	<div property="rdfs:comment">
 
-We use `foreign` to label sequences of foreign words.
+<p>We use <code>foreign</code> to label sequences of foreign words.</p>
 
-~~~ sdparse
-Small is beautiful er det noe som heter \n Small is beautiful is something that is said
+<pre><code class="language-sdparse">Small is beautiful er det noe som heter \n Small is beautiful is something that is said
 foreign(Small-1,is-2)
 foreign(Small-1,beautiful-3)
 xcomp(heter-8,Small-1)
-~~~
+</code></pre>
 
 
 	</div>
@@ -904,12 +848,11 @@ xcomp(heter-8,Small-1)
 	<h2><code property="oliasystem:hasTag" lang="">goeswith</code>: <div property="rdfs:label">goes with</div></h2>
 	<div property="rdfs:comment">
 
-This relation links two parts of a word that are separated in text that is not well edited. It is used in Norwegian for elements that constitute syntactic errors and that otherwise are difficult to assign a relation in the analysis.
+<p>This relation links two parts of a word that are separated in text that is not well edited. It is used in Norwegian for elements that constitute syntactic errors and that otherwise are difficult to assign a relation in the analysis.</p>
 
-~~~ sdparse
-CNN har flere resultater fra fra valgdagsmålinger \n CNN have several results from from election polls
+<pre><code class="language-sdparse">CNN har flere resultater fra fra valgdagsmålinger \n CNN have several results from from election polls
 goeswith(har-2,fra-5)
-~~~
+</code></pre>
 
 
 	</div>
@@ -923,13 +866,12 @@ goeswith(har-2,fra-5)
 	<h2><code property="oliasystem:hasTag" lang="">iobj</code>: <div property="rdfs:label">indirect object</div></h2>
 	<div property="rdfs:comment">
 
-The indirect object of a verb is any nominal phrase that is a core argument of the verb but is not its subject or direct object. The `iobj` relation presupposes a `dobj` argument of the same word and is only used for nominal arguments. Note that nominals with a preposition such as *til* "to" which are semantically similar to indirect object in the expression of a recipient role are not analyzed as `iobj`.
+<p>The indirect object of a verb is any nominal phrase that is a core argument of the verb but is not its subject or direct object. The <code>iobj</code> relation presupposes a <code>dobj</code> argument of the same word and is only used for nominal arguments. Note that nominals with a preposition such as <em>til</em> “to” which are semantically similar to indirect object in the expression of a recipient role are not analyzed as <code>iobj</code>.</p>
 
-~~~ sdparse
-gi den ubehøvlede unge mannen en sjanse \n give the rude young man a chance
+<pre><code class="language-sdparse">gi den ubehøvlede unge mannen en sjanse \n give the rude young man a chance
 iobj(gi-1,mannen-5)
 dobj(gi-1,sjanse-7)
-~~~
+</code></pre>
 
 
 	</div>
@@ -943,7 +885,7 @@ dobj(gi-1,sjanse-7)
 	<h2><code property="oliasystem:hasTag" lang="">list</code>: <div property="rdfs:label">list</div></h2>
 	<div property="rdfs:comment">
 
-The `list` relation is not used for Norwegian.
+<p>The <code>list</code> relation is not used for Norwegian.</p>
 
 
 	</div>
@@ -957,18 +899,15 @@ The `list` relation is not used for Norwegian.
 	<h2><code property="oliasystem:hasTag" lang="">mark</code>: <div property="rdfs:label">marker</div></h2>
 	<div property="rdfs:comment">
 
-A marker is the word introducing a subordinate clause and the marker is a dependent of the subordinate clause head. In Norwegian it is used for both finite and non-finite subordinate clauses.
+<p>A marker is the word introducing a subordinate clause and the marker is a dependent of the subordinate clause head. In Norwegian it is used for both finite and non-finite subordinate clauses.</p>
 
-
-~~~ sdparse
-Jeg føler at vi blir lurt \n I feel that we are fooled
+<pre><code class="language-sdparse">Jeg føler at vi blir lurt \n I feel that we are fooled
 mark(lurt,at)
-~~~
+</code></pre>
 
-~~~ sdparse
-Dette arbeidet rakk han aldri å fullføre \n This worh, he never managed to finish
+<pre><code class="language-sdparse">Dette arbeidet rakk han aldri å fullføre \n This worh, he never managed to finish
 mark(fullføre,å)
-~~~
+</code></pre>
 
 
 
@@ -983,7 +922,7 @@ mark(fullføre,å)
 	<h2><code property="oliasystem:hasTag" lang="">mwe</code>: <div property="rdfs:label">multi-word expression</div></h2>
 	<div property="rdfs:comment">
 
-The `mwe` relation is not used for Norwegian.
+<p>The <code>mwe</code> relation is not used for Norwegian.</p>
 
 
 	</div>
@@ -997,22 +936,20 @@ The `mwe` relation is not used for Norwegian.
 	<h2><code property="oliasystem:hasTag" lang="">name</code>: <div property="rdfs:label">name</div></h2>
 	<div property="rdfs:comment">
 
-The `name` relation is used for proper nouns constituted of multiple nominal elements. 
-Names are annotated in a flat, head-initial structure, in which all words in the name modify the first one using the name label.
+<p>The <code>name</code> relation is used for proper nouns constituted of multiple nominal elements. 
+Names are annotated in a flat, head-initial structure, in which all words in the name modify the first one using the name label.</p>
 
-~~~ sdparse
-Sven O. Høiby 
+<pre><code class="language-sdparse">Sven O. Høiby 
 name(Sven-1,O.-2)
 name(Sven-1,Høiby-3)
-~~~
+</code></pre>
 
-A flat analysis is also adopted for names where there is a clear syntactic analysis (unlike the UD guidelines) due to the automated conversion procedure.
+<p>A flat analysis is also adopted for names where there is a clear syntactic analysis (unlike the UD guidelines) due to the automated conversion procedure.</p>
 
-~~~ sdparse
-Universitetet i Bergen
+<pre><code class="language-sdparse">Universitetet i Bergen
 name(Universitetet-1,i-2)
 name(Universitetet-1,Bergen-3)
-~~~
+</code></pre>
 
 
 	</div>
@@ -1026,18 +963,15 @@ name(Universitetet-1,Bergen-3)
 	<h2><code property="oliasystem:hasTag" lang="">neg</code>: <div property="rdfs:label">negation modifier</div></h2>
 	<div property="rdfs:comment">
 
-The negation modifier is the relation between a negation word and the word it modifies. For Norwegian, it is employed for the negative determiner *ingen* "no" and the negative adverb *ikke* "not".
+<p>The negation modifier is the relation between a negation word and the word it modifies. For Norwegian, it is employed for the negative determiner <em>ingen</em> “no” and the negative adverb <em>ikke</em> “not”.</p>
 
-~~~ sdparse
-Ingen gratis kvoter \n No free quotas
+<pre><code class="language-sdparse">Ingen gratis kvoter \n No free quotas
 neg(kvoter,Ingen)
-~~~
+</code></pre>
 
-~~~ sdparse
-Det betyr ikke så mye \n It does not mean so much
+<pre><code class="language-sdparse">Det betyr ikke så mye \n It does not mean so much
 neg(betyr,ikke)
-~~~
-
+</code></pre>
 
 
 
@@ -1052,31 +986,28 @@ neg(betyr,ikke)
 	<h2><code property="oliasystem:hasTag" lang="">nmod</code>: <div property="rdfs:label">nominal modifier</div></h2>
 	<div property="rdfs:comment">
 
-The nmod relation is used for nominal modifiers. They depend either on another noun (group “noun dependents”) or on a predicate (group “non-core dependents of clausal predicates”).
+<p>The nmod relation is used for nominal modifiers. They depend either on another noun (group “noun dependents”) or on a predicate (group “non-core dependents of clausal predicates”).</p>
 
-`nmod` is a noun (or noun phrase) functioning as a non-core (oblique) argument or adjunct. This means that it functionally corresponds to an adverbial when it attaches to a verb, adjective or other adverb. But when attaching to a noun, it corresponds to an attribute.
+<p><code>nmod</code> is a noun (or noun phrase) functioning as a non-core (oblique) argument or adjunct. This means that it functionally corresponds to an adverbial when it attaches to a verb, adjective or other adverb. But when attaching to a noun, it corresponds to an attribute.</p>
 
-`nmod` is used for nouns modified by a preposition.
+<p><code>nmod</code> is used for nouns modified by a preposition.</p>
 
-~~~ sdparse
-Og bak prosesjonen kom dagens hovedpersoner \n And behind the procession came the main people
+<pre><code class="language-sdparse">Og bak prosesjonen kom dagens hovedpersoner \n And behind the procession came the main people
 case(prosesjonen,bak)
 nmod(kom,prosesjonen)
-~~~
+</code></pre>
 
-~~~ sdparse
-Arbeiderpartiet får ledervervet i utenrikskomiteen \n Labour gets the leading role in the foreign committee
+<pre><code class="language-sdparse">Arbeiderpartiet får ledervervet i utenrikskomiteen \n Labour gets the leading role in the foreign committee
 case(utenrikskomiteen,i)
 nmod(ledervervet,utenrikskomiteen)
-~~~
+</code></pre>
 
-The `nmod` relation is also used for temporal modifiers expressed as nominals:
+<p>The <code>nmod</code> relation is also used for temporal modifiers expressed as nominals:</p>
 
-~~~ sdparse
-Stortinget ble mandag kveld enige \n Government agreed Monday evening
+<pre><code class="language-sdparse">Stortinget ble mandag kveld enige \n Government agreed Monday evening
 nmod(ble-2,mandag-3)
 nmod(mandag-3,kveld-4)
-~~~
+</code></pre>
 
 
 	</div>
@@ -1090,28 +1021,22 @@ nmod(mandag-3,kveld-4)
 	<h2><code property="oliasystem:hasTag" lang="">nsubj</code>: <div property="rdfs:label">nominal subject</div></h2>
 	<div property="rdfs:comment">
 
-A nominal subject is a nominal phrase which is the subject of a clause. The governor of the `nsubj` relation might not always be a verb: when the verb is a copular verb, the root of the clause is the complement of the copular verb, which can be an adjective or noun.
+<p>A nominal subject is a nominal phrase which is the subject of a clause. The governor of the <code>nsubj</code> relation might not always be a verb: when the verb is a copular verb, the root of the clause is the complement of the copular verb, which can be an adjective or noun.</p>
 
-~~~ sdparse
-Jeg har ingenting mer å si om det nå \n I have nothing more to say about that now
+<pre><code class="language-sdparse">Jeg har ingenting mer å si om det nå \n I have nothing more to say about that now
 nsubj(har,Jeg)
-~~~
+</code></pre>
 
-~~~ sdparse
-Dette svaret er viktig for Frp \n This answer is important for Frp
+<pre><code class="language-sdparse">Dette svaret er viktig for Frp \n This answer is important for Frp
 nsubj(viktig,svaret)
-~~~
+</code></pre>
 
-Note that in cases where there is an expletive subject ([expl](expl)), the `nsubj` relation is used to express the potential/postposed subject:
+<p>Note that in cases where there is an expletive subject (<a href="expl">expl</a>), the <code>nsubj</code> relation is used to express the potential/postposed subject:</p>
 
-~~~ sdparse
-Det eksisterer allerede en debatt \n There already exists a debate
+<pre><code class="language-sdparse">Det eksisterer allerede en debatt \n There already exists a debate
 expl(eksisterer-2,Det-1)
 nsubj(eksisterer-2,debatt-5)
-~~~
-
-
-
+</code></pre>
 
 
 
@@ -1126,18 +1051,16 @@ nsubj(eksisterer-2,debatt-5)
 	<h2><code property="oliasystem:hasTag" lang="">nsubjpass</code>: <div property="rdfs:label">passive nominal subject</div></h2>
 	<div property="rdfs:comment">
 
-A passive nominal subject is a noun phrase which is the syntactic subject of a passive clause. In Norwegian, the passive subject is the dependent of a verb with passive marking or a participle with a passive auxiliary attached.
+<p>A passive nominal subject is a noun phrase which is the syntactic subject of a passive clause. In Norwegian, the passive subject is the dependent of a verb with passive marking or a participle with a passive auxiliary attached.</p>
 
-~~~ sdparse
-freden bygges også dag for dag \n peace is being built day by day
+<pre><code class="language-sdparse">freden bygges også dag for dag \n peace is being built day by day
 nsubjpass(bygges,freden)
-~~~
+</code></pre>
 
-~~~ sdparse
-FN ble opprettet for å sikre verdensfreden \n FN was established to secure world peace
+<pre><code class="language-sdparse">FN ble opprettet for å sikre verdensfreden \n FN was established to secure world peace
 nsubjpass(opprettet,FN)
 auxpass(opprettet,ble)
-~~~
+</code></pre>
 
 
 	</div>
@@ -1151,17 +1074,15 @@ auxpass(opprettet,ble)
 	<h2><code property="oliasystem:hasTag" lang="">nummod</code>: <div property="rdfs:label">numeric modifier</div></h2>
 	<div property="rdfs:comment">
 
-A numeric modifier of a noun is any number phrase that serves to modify the meaning of the noun with a quantity.
+<p>A numeric modifier of a noun is any number phrase that serves to modify the meaning of the noun with a quantity.</p>
 
-~~~ sdparse
-I 100 år er Nobels fredspris blitt delt ut \n For 100 years the Nobel Peace Prize has been handed out
+<pre><code class="language-sdparse">I 100 år er Nobels fredspris blitt delt ut \n For 100 years the Nobel Peace Prize has been handed out
 nummod(år,100)
-~~~
+</code></pre>
 
-~~~ sdparse
-De tre partiene svarer likevel \n The three parties still answer
+<pre><code class="language-sdparse">De tre partiene svarer likevel \n The three parties still answer
 nummod(partiene,tre)
-~~~
+</code></pre>
 
 
 	</div>
@@ -1175,19 +1096,17 @@ nummod(partiene,tre)
 	<h2><code property="oliasystem:hasTag" lang="">parataxis</code>: <div property="rdfs:label">parataxis</div></h2>
 	<div property="rdfs:comment">
 
-The parataxis relation is a relation between a word (often the main predicate of a sentence) and other elements, such as a sentential parenthetical or a clause after a “:” or a “;”, placed side by side without any explicit coordination, subordination, or argument relation with the head word. 
+<p>The parataxis relation is a relation between a word (often the main predicate of a sentence) and other elements, such as a sentential parenthetical or a clause after a “:” or a “;”, placed side by side without any explicit coordination, subordination, or argument relation with the head word.</p>
 
-The Norwegian `parataxis` relation is largely used for reported speech and some other parentheticals.
+<p>The Norwegian <code>parataxis</code> relation is largely used for reported speech and some other parentheticals.</p>
 
-~~~ sdparse
-Det er skade for minst 400.000 , sa Solberg \n There are damages for at least 400.000 , said Solberg
+<pre><code class="language-sdparse">Det er skade for minst 400.000 , sa Solberg \n There are damages for at least 400.000 , said Solberg
 parataxis(er,sa)
-~~~
+</code></pre>
 
-~~~ sdparse
-Jeg skjønner den ikke men antar at den er kjempemorsom ( ironi ) \n I don't understand it but assume it is really funny ( irony )
+<pre><code class="language-sdparse">Jeg skjønner den ikke men antar at den er kjempemorsom ( ironi ) \n I don't understand it but assume it is really funny ( irony )
 parataxis(skjønner,ironi)
-~~~
+</code></pre>
 
 
 
@@ -1202,12 +1121,14 @@ parataxis(skjønner,ironi)
 	<h2><code property="oliasystem:hasTag" lang="">punct</code>: <div property="rdfs:label">punctuation</div></h2>
 	<div property="rdfs:comment">
 
-Tokens with the relation punct always attach to content words (except in cases of ellipsis) and can never have dependents. Since punct is not a normal dependency relation, the usual criteria for determining the head word do not apply. Instead, we use the following principles:
+<p>Tokens with the relation punct always attach to content words (except in cases of ellipsis) and can never have dependents. Since punct is not a normal dependency relation, the usual criteria for determining the head word do not apply. Instead, we use the following principles:</p>
 
-  * A punctuation mark separating coordinated units is attached to the first conjunct.
-  * A punctuation mark preceding or following a subordinated unit is attached to this unit.
-  * Within the relevant unit, a punctuation mark is attached at the highest possible node that preserves projectivity.
-  * Paired punctuation marks (quotes and brackets) should be attached to the same word unless that would create non-projectivity. This word is usually the head of the phrase enclosed in the paired punctuation.
+<ul>
+  <li>A punctuation mark separating coordinated units is attached to the first conjunct.</li>
+  <li>A punctuation mark preceding or following a subordinated unit is attached to this unit.</li>
+  <li>Within the relevant unit, a punctuation mark is attached at the highest possible node that preserves projectivity.</li>
+  <li>Paired punctuation marks (quotes and brackets) should be attached to the same word unless that would create non-projectivity. This word is usually the head of the phrase enclosed in the paired punctuation.</li>
+</ul>
 
 
 
@@ -1222,17 +1143,15 @@ Tokens with the relation punct always attach to content words (except in cases o
 	<h2><code property="oliasystem:hasTag" lang="">remnant</code>: <div property="rdfs:label">remnant in ellipsis</div></h2>
 	<div property="rdfs:comment">
 
-The `remnant` relation is used to provide a satisfactory treatment of ellipsis. In Norwegian, the remnant element is attached to the main predicate of the clause (and not to the correlate in the preceding context).
+<p>The <code>remnant</code> relation is used to provide a satisfactory treatment of ellipsis. In Norwegian, the remnant element is attached to the main predicate of the clause (and not to the correlate in the preceding context).</p>
 
-~~~ sdparse
-En prins er født, navnet klart til uken \n A prince is born, name ready next week
+<pre><code class="language-sdparse">En prins er født, navnet klart til uken \n A prince is born, name ready next week
 remnant(navnet,født)
-~~~
+</code></pre>
 
-~~~ sdparse
-Jeg er norsk i Norge, og fransk i Frankrike \n I am Norwegian in Norway and French in France
+<pre><code class="language-sdparse">Jeg er norsk i Norge, og fransk i Frankrike \n I am Norwegian in Norway and French in France
 remnant(norsk,fransk)
-~~~
+</code></pre>
 
 
 	</div>
@@ -1246,7 +1165,7 @@ remnant(norsk,fransk)
 	<h2><code property="oliasystem:hasTag" lang="">reparandum</code>: <div property="rdfs:label">overridden disfluency</div></h2>
 	<div property="rdfs:comment">
 
-This relation is not used for Norwegian.
+<p>This relation is not used for Norwegian.</p>
 
 
 	</div>
@@ -1260,12 +1179,11 @@ This relation is not used for Norwegian.
 	<h2><code property="oliasystem:hasTag" lang="">root</code>: <div property="rdfs:label">root</div></h2>
 	<div property="rdfs:comment">
 
-The root grammatical relation points to the root of the sentence.
+<p>The root grammatical relation points to the root of the sentence.</p>
 
-~~~ sdparse
-ROOT Men så smalt det igjen \n But then it said bang again
+<pre><code class="language-sdparse">ROOT Men så smalt det igjen \n But then it said bang again
 root(ROOT, smalt)
-~~~
+</code></pre>
 
 
 	</div>
@@ -1279,7 +1197,7 @@ root(ROOT, smalt)
 	<h2><code property="oliasystem:hasTag" lang="">vocative</code>: <div property="rdfs:label">vocative</div></h2>
 	<div property="rdfs:comment">
 
-This relation is not used in Norwegian.
+<p>This relation is not used in Norwegian.</p>
 
 
 	</div>
@@ -1293,28 +1211,25 @@ This relation is not used in Norwegian.
 	<h2><code property="oliasystem:hasTag" lang="">xcomp</code>: <div property="rdfs:label">open clausal complement</div></h2>
 	<div property="rdfs:comment">
 
-An open clausal complement (xcomp) of a verb or an adjective is a predicative or clausal complement without its own subject. The reference of the subject is necessarily determined by an argument external to the xcomp. This is often referred to as obligatory control. 
+<p>An open clausal complement (xcomp) of a verb or an adjective is a predicative or clausal complement without its own subject. The reference of the subject is necessarily determined by an argument external to the xcomp. This is often referred to as obligatory control.</p>
 
-In Norwegian `xcomp` is used for infinitival clauses
+<p>In Norwegian <code>xcomp</code> is used for infinitival clauses</p>
 
-~~~ sdparse
-Han har tidligere lovet å vende tilbake \n He has previously promised to return
+<pre><code class="language-sdparse">Han har tidligere lovet å vende tilbake \n He has previously promised to return
 xcomp(lovet,vende)
-~~~
+</code></pre>
 
-This relation is also used for cases of obligatory secondary predication
+<p>This relation is also used for cases of obligatory secondary predication</p>
 
-~~~ sdparse
-presidentens ambisiøse helseplan kjørte seg fullstendig fast \n the president's ambitious health plan got completely stuck
+<pre><code class="language-sdparse">presidentens ambisiøse helseplan kjørte seg fullstendig fast \n the president's ambitious health plan got completely stuck
 xcomp(kjørte,fast)
-~~~
+</code></pre>
 
-`xcomp` is also used for copula-like verbs such as `bli` "become", *kalle* "call", *hete* "named" in Norwegian.
+<p><code>xcomp</code> is also used for copula-like verbs such as <code>bli</code> “become”, <em>kalle</em> “call”, <em>hete</em> “named” in Norwegian.</p>
 
-~~~ sdparse
-Mennesket kan bli edelt \n Man can become noble
+<pre><code class="language-sdparse">Mennesket kan bli edelt \n Man can become noble
 xcomp(bli,edelt)
-~~~
+</code></pre>
 
 
 

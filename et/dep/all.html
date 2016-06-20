@@ -250,7 +250,7 @@ in two places.</p>
 	<h2><code property="oliasystem:hasTag" lang="">acl</code>: <div property="rdfs:label">clausal modifier of noun</div></h2>
 	<div property="rdfs:comment">
 
-The dependency relation  `acl` stands for finite and non-finite clauses that modify a nominal.
+<p>The dependency relation  <code>acl</code> stands for finite and non-finite clauses that modify a nominal.</p>
 
 
 	</div>
@@ -264,21 +264,19 @@ The dependency relation  `acl` stands for finite and non-finite clauses that mod
 	<h2><code property="oliasystem:hasTag" lang="">advcl</code>: <div property="rdfs:label">adverbial clause modifier</div></h2>
 	<div property="rdfs:comment">
 
-advcl: adverbial clause modifier
+<p>advcl: adverbial clause modifier</p>
 
-An adverbial clause modifier is a clause which modifies a verb or other predicate (adjective, etc.), as a modifier not as a core complement. This includes things such as a temporal clause, consequence, conditional clause, purpose clause, etc. Also comparative constructions are annotated using dependency relation advcl.
+<p>An adverbial clause modifier is a clause which modifies a verb or other predicate (adjective, etc.), as a modifier not as a core complement. This includes things such as a temporal clause, consequence, conditional clause, purpose clause, etc. Also comparative constructions are annotated using dependency relation advcl.</p>
 
-~~~ sdparse
-Ta jooksis karjudes .
+<pre><code class="language-sdparse">Ta jooksis karjudes .
 nsubj(jooksis-2, Ta-1)
 advcl(jooksis-2, karjudes-3)
 punct(jooksis-2, .-4)
-~~~
+</code></pre>
 
-He ran shouting.
+<p>He ran shouting.</p>
 
-~~~ sdparse
-Mulle pakuti süüa , kui õhtul koolist saabusin .
+<pre><code class="language-sdparse">Mulle pakuti süüa , kui õhtul koolist saabusin .
 nmod(pakuti-2, Mulle-1)
 xcomp(pakuti-2, süüa-3)
 punct(saabusin-8,-4)
@@ -287,9 +285,9 @@ advmod(saabusin-8, õhtul-6)
 nmod(saabusin-8, koolist-7)
 advcl(pakuti-2, saabusin-8)
 punct(saabusin-8, .-9)
-~~~
+</code></pre>
 
-I was offered something to eat, when I arrived from school in the evening
+<p>I was offered something to eat, when I arrived from school in the evening</p>
 
 
 
@@ -304,24 +302,22 @@ I was offered something to eat, when I arrived from school in the evening
 	<h2><code property="oliasystem:hasTag" lang="">advmod</code>: <div property="rdfs:label">adverbial modifier</div></h2>
 	<div property="rdfs:comment">
 
-Adverbial modifier advmod is an adverbial modifying an adverb, a verb, an adjective or a nominal. 
+<p>Adverbial modifier advmod is an adverbial modifying an adverb, a verb, an adjective or a nominal.</p>
 
-~~~ sdparse
-jooksis väga kiiresti
+<pre><code class="language-sdparse">jooksis väga kiiresti
 advmod(kiiresti-3, väga-2)
 advmod(jooksis-1, kiiresti-3)
-~~~
+</code></pre>
 
-ran very quickly
+<p>ran very quickly</p>
 
-~~~ sdparse
-Kass nägi ka koera .
+<pre><code class="language-sdparse">Kass nägi ka koera .
 nsubj(nägi-2, Kass-1)
 advmod(koera-4, ka-3)
 dobj(nägi-2, koera-4)
 punct(nägi-2, .-5)
-~~~
-The cat saw also the dog.
+</code></pre>
+<p>The cat saw also the dog.</p>
 
 
 	</div>
@@ -335,7 +331,7 @@ The cat saw also the dog.
 	<h2><code property="oliasystem:hasTag" lang="">amod</code>: <div property="rdfs:label">adjectival modifier</div></h2>
 	<div property="rdfs:comment">
 
-An adjectival modifier of a noun is any adjectival phrase that serves to modify the meaning of the noun.
+<p>An adjectival modifier of a noun is any adjectival phrase that serves to modify the meaning of the noun.</p>
 
 
 	</div>
@@ -349,7 +345,7 @@ An adjectival modifier of a noun is any adjectival phrase that serves to modify 
 	<h2><code property="oliasystem:hasTag" lang="">appos</code>: <div property="rdfs:label">appositional modifier</div></h2>
 	<div property="rdfs:comment">
 
-An appositional modifier is a noun preceding or following the head noun that serves to define or modify that noun. Note that appositions can be both right- and left-headed in Estonian UD.
+<p>An appositional modifier is a noun preceding or following the head noun that serves to define or modify that noun. Note that appositions can be both right- and left-headed in Estonian UD.</p>
 
 
 	</div>
@@ -363,8 +359,8 @@ An appositional modifier is a noun preceding or following the head noun that ser
 	<h2><code property="oliasystem:hasTag" lang="">aux</code>: <div property="rdfs:label">auxiliary</div></h2>
 	<div property="rdfs:comment">
 
-An auxiliary of a clause is a non-main verb of the clause, e.g., a modal auxiliary, or an auxiliary in a periphrastic tense.
-'olema' and in rare occasions 'saama' are auxiliaries that form periphrastic tense forms. In the current version of Estonain UD, only 'saama', 'võima', 'pidama', 'näima', 'paistma', 'tunduma' are regarded as modal auxiliaries.
+<p>An auxiliary of a clause is a non-main verb of the clause, e.g., a modal auxiliary, or an auxiliary in a periphrastic tense.
+‘olema’ and in rare occasions ‘saama’ are auxiliaries that form periphrastic tense forms. In the current version of Estonain UD, only ‘saama’, ‘võima’, ‘pidama’, ‘näima’, ‘paistma’, ‘tunduma’ are regarded as modal auxiliaries.</p>
 
 
 	</div>
@@ -378,8 +374,8 @@ An auxiliary of a clause is a non-main verb of the clause, e.g., a modal auxilia
 	<h2><code property="oliasystem:hasTag" lang="">auxpass</code>: <div property="rdfs:label">passive auxiliary</div></h2>
 	<div property="rdfs:comment">
 
-This document is a placeholder for the language-specific documentation
-for `auxpass`.
+<p>This document is a placeholder for the language-specific documentation
+for <code>auxpass</code>.</p>
 
 
 	</div>
@@ -393,19 +389,18 @@ for `auxpass`.
 	<h2><code property="oliasystem:hasTag" lang="">case</code>: <div property="rdfs:label">case marking</div></h2>
 	<div property="rdfs:comment">
 
-case: case marking
+<p>case: case marking</p>
 
-The case relation is used to annotate prepositions and postpositions. Case-marking elements (i.e. adpositions) are treated as dependents of the noun they attach to.
+<p>The case relation is used to annotate prepositions and postpositions. Case-marking elements (i.e. adpositions) are treated as dependents of the noun they attach to.</p>
 
-~~~ sdparse
-Rüütel läks lossi juurde .
+<pre><code class="language-sdparse">Rüütel läks lossi juurde .
 nsubj(läks-2, Rüütel-1)
 nmod(läks-2, lossi-3)
 case(lossi-3, juurde-4)
 punct(läks-2, .-5)
-~~~
+</code></pre>
 
-Knight went near the castle.
+<p>Knight went near the castle.</p>
 
 
 	</div>
@@ -419,7 +414,7 @@ Knight went near the castle.
 	<h2><code property="oliasystem:hasTag" lang="">cc</code>: <div property="rdfs:label">coordinating conjunction</div></h2>
 	<div property="rdfs:comment">
 
-A `cc` is the relation between the first conjunct and the coordinating conjunction delimiting another conjunct.
+<p>A <code>cc</code> is the relation between the first conjunct and the coordinating conjunction delimiting another conjunct.</p>
 
 
 	</div>
@@ -433,10 +428,9 @@ A `cc` is the relation between the first conjunct and the coordinating conjuncti
 	<h2><code property="oliasystem:hasTag" lang="">ccomp</code>: <div property="rdfs:label">clausal complement</div></h2>
 	<div property="rdfs:comment">
 
-A clausal complement of a verb or adjective is a dependent clause which is a core argument.
+<p>A clausal complement of a verb or adjective is a dependent clause which is a core argument.</p>
 
-~~~ sdparse
-Ma usun , et kõik läheb hästi.
+<pre><code class="language-sdparse">Ma usun , et kõik läheb hästi.
 nsubj(usun-2, Ma-1)
 punct(usun-2, ,-3)
 mark(läheb-6, et-4)
@@ -444,9 +438,9 @@ nsubj(läheb-6, kõik-5)
 ccomp(usun-2, läheb-6)
 advmod(läheb-6, hästi-7)
 punct(usun-2, .-8)
-~~~
+</code></pre>
 
-I beleive, that everything goes well.
+<p>I beleive, that everything goes well.</p>
 
 
 	</div>
@@ -460,19 +454,18 @@ I beleive, that everything goes well.
 	<h2><code property="oliasystem:hasTag" lang="">compound</code>: <div property="rdfs:label">compound</div></h2>
 	<div property="rdfs:comment">
 
-The dependency relation compound is used for annotating numbers written with several words or several sequences of digits or combinations of them.
+<p>The dependency relation compound is used for annotating numbers written with several words or several sequences of digits or combinations of them.</p>
 
-~~~ sdparse
-60 000
+<pre><code class="language-sdparse">60 000
 compound(60-1, 000-2)
 ~~
 
 ~~~sdparse
 kaks tuhat
 compound(kaks-1, tuhat-2)
-~~~
+</code></pre>
 
-two thousand
+<p>two thousand</p>
 
 
 	</div>
@@ -486,7 +479,7 @@ two thousand
 	<h2><code property="oliasystem:hasTag" lang="">conj</code>: <div property="rdfs:label">conjunct</div></h2>
 	<div property="rdfs:comment">
 
-A conjunct is the relation between two elements connected by a coordinating conjunction. Coordinated elements can be words, phrases or clauses. The head of the relation is the first conjunct and all the other conjuncts depend on it via the `conj` relation.
+<p>A conjunct is the relation between two elements connected by a coordinating conjunction. Coordinated elements can be words, phrases or clauses. The head of the relation is the first conjunct and all the other conjuncts depend on it via the <code>conj</code> relation.</p>
 
 
 	</div>
@@ -500,17 +493,16 @@ A conjunct is the relation between two elements connected by a coordinating conj
 	<h2><code property="oliasystem:hasTag" lang="">cop</code>: <div property="rdfs:label">copula</div></h2>
 	<div property="rdfs:comment">
 
-A copula is the relation between the complement of a copular verb and the copular verb. 'olema' is the only copular verb in Estonian UD.
-The predicative is the head of the copular clause, and also the governor of the cop dependency.
+<p>A copula is the relation between the complement of a copular verb and the copular verb. ‘olema’ is the only copular verb in Estonian UD.
+The predicative is the head of the copular clause, and also the governor of the cop dependency.</p>
 
-~~~ sdparse
-Kass on triibuline . 
+<pre><code class="language-sdparse">Kass on triibuline . 
 nsubj:cop (triibuline-3, Kass-1)
 cop (triibuline-3, on-2)
 punct (triibuline-3, .-4) 
-~~~
+</code></pre>
 
-Cat is striped
+<p>Cat is striped</p>
 
 
 	</div>
@@ -524,16 +516,15 @@ Cat is striped
 	<h2><code property="oliasystem:hasTag" lang="">csubj</code>: <div property="rdfs:label">clausal subject</div></h2>
 	<div property="rdfs:comment">
 
-A clausal subject is a clausal syntactic subject of a clause. Both finite and non-finite clauses can act as clausal subjects.
+<p>A clausal subject is a clausal syntactic subject of a clause. Both finite and non-finite clauses can act as clausal subjects.</p>
 
-~~~ sdparse
-Mulle meeldib mõelda .
+<pre><code class="language-sdparse">Mulle meeldib mõelda .
 nmod(meeldib-2, mulle-1)
 csubj(meeldib-2, mõelda-3)
 punct(meeldib-2, .-4)
-~~~
+</code></pre>
 
-I like to think.
+<p>I like to think.</p>
 
 
 	</div>
@@ -547,8 +538,8 @@ I like to think.
 	<h2><code property="oliasystem:hasTag" lang="">csubjpass</code>: <div property="rdfs:label">clausal passive subject</div></h2>
 	<div property="rdfs:comment">
 
-This document is a placeholder for the language-specific documentation
-for `csubjpass`.
+<p>This document is a placeholder for the language-specific documentation
+for <code>csubjpass</code>.</p>
 
 
 	</div>
@@ -562,8 +553,8 @@ for `csubjpass`.
 	<h2><code property="oliasystem:hasTag" lang="">dep</code>: <div property="rdfs:label">unspecified dependency</div></h2>
 	<div property="rdfs:comment">
 
-This document is a placeholder for the language-specific documentation
-for `dep`.
+<p>This document is a placeholder for the language-specific documentation
+for <code>dep</code>.</p>
 
 
 	</div>
@@ -577,8 +568,8 @@ for `dep`.
 	<h2><code property="oliasystem:hasTag" lang="">det</code>: <div property="rdfs:label">determiner</div></h2>
 	<div property="rdfs:comment">
 
-This document is a placeholder for the language-specific documentation
-for `det`.
+<p>This document is a placeholder for the language-specific documentation
+for <code>det</code>.</p>
 
 
 	</div>
@@ -592,8 +583,8 @@ for `det`.
 	<h2><code property="oliasystem:hasTag" lang="">discourse</code>: <div property="rdfs:label">discourse element</div></h2>
 	<div property="rdfs:comment">
 
-This document is a placeholder for the language-specific documentation
-for `discourse`.
+<p>This document is a placeholder for the language-specific documentation
+for <code>discourse</code>.</p>
 
 
 	</div>
@@ -607,8 +598,8 @@ for `discourse`.
 	<h2><code property="oliasystem:hasTag" lang="">dislocated</code>: <div property="rdfs:label">dislocated elements</div></h2>
 	<div property="rdfs:comment">
 
-This document is a placeholder for the language-specific documentation
-for `dislocated`.
+<p>This document is a placeholder for the language-specific documentation
+for <code>dislocated</code>.</p>
 
 
 	</div>
@@ -622,19 +613,17 @@ for `dislocated`.
 	<h2><code property="oliasystem:hasTag" lang="">dobj</code>: <div property="rdfs:label">direct object</div></h2>
 	<div property="rdfs:comment">
 
-In Estonian, a direct object can be a noun in singular or plural nominative case, singular genitive case or singular or plural partitive case.
+<p>In Estonian, a direct object can be a noun in singular or plural nominative case, singular genitive case or singular or plural partitive case.</p>
 
-~~~ sdparse
-Kass nägi koera .
+<pre><code class="language-sdparse">Kass nägi koera .
 nsubj(nägi-2, Kass-1)
 dobj(nägi-2, koera-3)
 punct(nägi-2, .-4)
-~~~
+</code></pre>
 
-The cat saw the dog.
+<p>The cat saw the dog.</p>
 
-~~~ sdparse
-Öö jooksul olid hundid kolm lammast maha murdnud .
+<pre><code class="language-sdparse">Öö jooksul olid hundid kolm lammast maha murdnud .
 nmod(murdnud-8, Öö-1)
 case(Öö-1,jooksul-2)
 aux(murdnud-8,olid-3)
@@ -643,9 +632,9 @@ nummod(lammast-6,kolm-5)
 dobj(murdnud-8,lammast-6)
 compound:prt(murdnud-8,maha-7)
 punct(murdnud-8,.-9)
-~~~
+</code></pre>
 
-The wolves had killed three sheep during the night.
+<p>The wolves had killed three sheep during the night.</p>
 
 
 	</div>
@@ -659,8 +648,8 @@ The wolves had killed three sheep during the night.
 	<h2><code property="oliasystem:hasTag" lang="">expl</code>: <div property="rdfs:label">expletive</div></h2>
 	<div property="rdfs:comment">
 
-This document is a placeholder for the language-specific documentation
-for `expl`.
+<p>This document is a placeholder for the language-specific documentation
+for <code>expl</code>.</p>
 
 
 	</div>
@@ -674,8 +663,8 @@ for `expl`.
 	<h2><code property="oliasystem:hasTag" lang="">foreign</code>: <div property="rdfs:label">foreign words</div></h2>
 	<div property="rdfs:comment">
 
-This document is a placeholder for the language-specific documentation
-for `foreign`.
+<p>This document is a placeholder for the language-specific documentation
+for <code>foreign</code>.</p>
 
 
 	</div>
@@ -689,8 +678,8 @@ for `foreign`.
 	<h2><code property="oliasystem:hasTag" lang="">goeswith</code>: <div property="rdfs:label">goes with</div></h2>
 	<div property="rdfs:comment">
 
-This document is a placeholder for the language-specific documentation
-for `goeswith`.
+<p>This document is a placeholder for the language-specific documentation
+for <code>goeswith</code>.</p>
 
 
 	</div>
@@ -704,8 +693,8 @@ for `goeswith`.
 	<h2><code property="oliasystem:hasTag" lang="">iobj</code>: <div property="rdfs:label">indirect object</div></h2>
 	<div property="rdfs:comment">
 
-This document is a placeholder for the language-specific documentation
-for `iobj`.
+<p>This document is a placeholder for the language-specific documentation
+for <code>iobj</code>.</p>
 
 
 	</div>
@@ -719,8 +708,8 @@ for `iobj`.
 	<h2><code property="oliasystem:hasTag" lang="">list</code>: <div property="rdfs:label">list</div></h2>
 	<div property="rdfs:comment">
 
-This document is a placeholder for the language-specific documentation
-for `list`.
+<p>This document is a placeholder for the language-specific documentation
+for <code>list</code>.</p>
 
 
 	</div>
@@ -734,8 +723,8 @@ for `list`.
 	<h2><code property="oliasystem:hasTag" lang="">mark</code>: <div property="rdfs:label">marker</div></h2>
 	<div property="rdfs:comment">
 
-This document is a placeholder for the language-specific documentation
-for `mark`.
+<p>This document is a placeholder for the language-specific documentation
+for <code>mark</code>.</p>
 
 
 	</div>
@@ -749,8 +738,8 @@ for `mark`.
 	<h2><code property="oliasystem:hasTag" lang="">mwe</code>: <div property="rdfs:label">multi-word expression</div></h2>
 	<div property="rdfs:comment">
 
-This document is a placeholder for the language-specific documentation
-for `mwe`.
+<p>This document is a placeholder for the language-specific documentation
+for <code>mwe</code>.</p>
 
 
 	</div>
@@ -764,12 +753,11 @@ for `mwe`.
 	<h2><code property="oliasystem:hasTag" lang="">name</code>: <div property="rdfs:label">name</div></h2>
 	<div property="rdfs:comment">
 
-The dependency relation name is used for proper nouns constituted of multiple nominal elements. Note that names are right-headed in Estonian UD.
+<p>The dependency relation name is used for proper nouns constituted of multiple nominal elements. Note that names are right-headed in Estonian UD.</p>
 
-~~~ sdparse
-Arvo Pärt
+<pre><code class="language-sdparse">Arvo Pärt
 name(Pärt-2, Arvo-1)
-~~~
+</code></pre>
 
 
 	</div>
@@ -783,9 +771,9 @@ name(Pärt-2, Arvo-1)
 	<h2><code property="oliasystem:hasTag" lang="">neg</code>: <div property="rdfs:label">negation modifier</div></h2>
 	<div property="rdfs:comment">
 
-The negation modifier is the relation between a negation word and the word it modifies.
+<p>The negation modifier is the relation between a negation word and the word it modifies.</p>
 
-Words 'ei', 'ära' and 'ärge' as parts of negative verb form are annotated using this relation.
+<p>Words ‘ei’, ‘ära’ and ‘ärge’ as parts of negative verb form are annotated using this relation.</p>
 
 
 
@@ -800,26 +788,24 @@ Words 'ei', 'ära' and 'ärge' as parts of negative verb form are annotated usin
 	<h2><code property="oliasystem:hasTag" lang="">nmod</code>: <div property="rdfs:label">nominal modifier</div></h2>
 	<div property="rdfs:comment">
 
-The nmod relation is used for nominal modifiers. They depend either on another noun (group “noun dependents”) or on a predicate (group “non-core dependents of clausal predicates”). They can occur alone or together with an adposition in an adpositional phrase.
+<p>The nmod relation is used for nominal modifiers. They depend either on another noun (group “noun dependents”) or on a predicate (group “non-core dependents of clausal predicates”). They can occur alone or together with an adposition in an adpositional phrase.</p>
 
-~~~ sdparse
-Rüütel läks lossi .
+<pre><code class="language-sdparse">Rüütel läks lossi .
 nsubj(läks-2, Rüütel-1)
 nmod(läks-2, lossi-3)
 punct(läks-2, .-4)
-~~~
+</code></pre>
 
-Knight went into the castle.
+<p>Knight went into the castle.</p>
 
-~~~ sdparse
-Rüütel läks lossi juurde .
+<pre><code class="language-sdparse">Rüütel läks lossi juurde .
 nsubj(läks-2, Rüütel-1)
 nmod(läks-2, lossi-3)
 case(lossi-3, juurde-4)
 punct(läks-2, .-5)
-~~~
+</code></pre>
 
-Knight went near the castle.
+<p>Knight went near the castle.</p>
 
 
 	</div>
@@ -833,16 +819,15 @@ Knight went near the castle.
 	<h2><code property="oliasystem:hasTag" lang="">nsubj</code>: <div property="rdfs:label">nominal subject</div></h2>
 	<div property="rdfs:comment">
 
-The dependency type `nsubj` marks nominal subjects of the non-copular clause.
+<p>The dependency type <code>nsubj</code> marks nominal subjects of the non-copular clause.</p>
 
-~~~ sdparse
-Kass nägi koera .  
+<pre><code class="language-sdparse">Kass nägi koera .  
 nsubj (nägi-2, Kass-1)
 dobj (nägi-2, koera-3)
 punct (nägi-2, .-4)
-~~~
+</code></pre>
 
-The cat saw the dog.
+<p>The cat saw the dog.</p>
 
 
 	</div>
@@ -856,8 +841,8 @@ The cat saw the dog.
 	<h2><code property="oliasystem:hasTag" lang="">nsubjpass</code>: <div property="rdfs:label">passive nominal subject</div></h2>
 	<div property="rdfs:comment">
 
-This document is a placeholder for the language-specific documentation
-for `nsubjpass`.
+<p>This document is a placeholder for the language-specific documentation
+for <code>nsubjpass</code>.</p>
 
 
 	</div>
@@ -871,8 +856,8 @@ for `nsubjpass`.
 	<h2><code property="oliasystem:hasTag" lang="">nummod</code>: <div property="rdfs:label">numeric modifier</div></h2>
 	<div property="rdfs:comment">
 
-This document is a placeholder for the language-specific documentation
-for `nummod`.
+<p>This document is a placeholder for the language-specific documentation
+for <code>nummod</code>.</p>
 
 
 	</div>
@@ -886,8 +871,8 @@ for `nummod`.
 	<h2><code property="oliasystem:hasTag" lang="">parataxis</code>: <div property="rdfs:label">parataxis</div></h2>
 	<div property="rdfs:comment">
 
-This document is a placeholder for the language-specific documentation
-for `parataxis`.
+<p>This document is a placeholder for the language-specific documentation
+for <code>parataxis</code>.</p>
 
 
 	</div>
@@ -901,8 +886,8 @@ for `parataxis`.
 	<h2><code property="oliasystem:hasTag" lang="">punct</code>: <div property="rdfs:label">punctuation</div></h2>
 	<div property="rdfs:comment">
 
-This document is a placeholder for the language-specific documentation
-for `punct`.
+<p>This document is a placeholder for the language-specific documentation
+for <code>punct</code>.</p>
 
 
 	</div>
@@ -916,8 +901,8 @@ for `punct`.
 	<h2><code property="oliasystem:hasTag" lang="">remnant</code>: <div property="rdfs:label">remnant in ellipsis</div></h2>
 	<div property="rdfs:comment">
 
-This document is a placeholder for the language-specific documentation
-for `remnant`.
+<p>This document is a placeholder for the language-specific documentation
+for <code>remnant</code>.</p>
 
 
 	</div>
@@ -931,8 +916,8 @@ for `remnant`.
 	<h2><code property="oliasystem:hasTag" lang="">reparandum</code>: <div property="rdfs:label">overridden disfluency</div></h2>
 	<div property="rdfs:comment">
 
-This document is a placeholder for the language-specific documentation
-for `reparandum`.
+<p>This document is a placeholder for the language-specific documentation
+for <code>reparandum</code>.</p>
 
 
 	</div>
@@ -946,8 +931,8 @@ for `reparandum`.
 	<h2><code property="oliasystem:hasTag" lang="">root</code>: <div property="rdfs:label">root</div></h2>
 	<div property="rdfs:comment">
 
-This document is a placeholder for the language-specific documentation
-for `root`.
+<p>This document is a placeholder for the language-specific documentation
+for <code>root</code>.</p>
 
 
 	</div>
@@ -961,8 +946,8 @@ for `root`.
 	<h2><code property="oliasystem:hasTag" lang="">vocative</code>: <div property="rdfs:label">vocative</div></h2>
 	<div property="rdfs:comment">
 
-This document is a placeholder for the language-specific documentation
-for `vocative`.
+<p>This document is a placeholder for the language-specific documentation
+for <code>vocative</code>.</p>
 
 
 	</div>
@@ -976,8 +961,8 @@ for `vocative`.
 	<h2><code property="oliasystem:hasTag" lang="">xcomp</code>: <div property="rdfs:label">open clausal complement</div></h2>
 	<div property="rdfs:comment">
 
-This document is a placeholder for the language-specific documentation
-for `xcomp`.
+<p>This document is a placeholder for the language-specific documentation
+for <code>xcomp</code>.</p>
 
 
 	</div>

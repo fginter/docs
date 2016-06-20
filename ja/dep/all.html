@@ -250,28 +250,26 @@ in two places.</p>
 	<h2><code property="oliasystem:hasTag" lang="">acl</code>: <div property="rdfs:label">clausal modifier of noun</div></h2>
 	<div property="rdfs:comment">
 
-The dependency type `acl` is used for relative clauses and clausal complements of nouns.
+<p>The dependency type <code>acl</code> is used for relative clauses and clausal complements of nouns.
 For a relative clause, the head of the dependency is the noun modified by the clause,
-and the dependant is the main predicate of the clause.
+and the dependant is the main predicate of the clause.</p>
 
-~~~ sdparse
-太郎 が 食べ た リンゴ \n Taro NOM eat PAST apple
+<pre><code class="language-sdparse">太郎 が 食べ た リンゴ \n Taro NOM eat PAST apple
 acl(リンゴ, 食べ)
 case(太郎, が)
 aux(食べ, た)
-~~~
+</code></pre>
 
-Formal noun こと / *koto* "fact" can have a clausal complement and forms a noun phrase
+<p>Formal noun こと / <em>koto</em> “fact” can have a clausal complement and forms a noun phrase
 denoting the action expressed by the clause.
-For a example, 走る / *hashiru* "run"  こと  / *koto* "fact" 
-means running (or a fact that someone runs).
+For a example, 走る / <em>hashiru</em> “run”  こと  / <em>koto</em> “fact” 
+means running (or a fact that someone runs).</p>
 
-~~~ sdparse
-ほめ られ た こと \n praise PASSIVE PAST fact
+<pre><code class="language-sdparse">ほめ られ た こと \n praise PASSIVE PAST fact
 acl(こと, ほめ)
 auxpass(ほめ, られ)
 aux(ほめ, た)
-~~~
+</code></pre>
 
 
 	</div>
@@ -285,19 +283,18 @@ aux(ほめ, た)
 	<h2><code property="oliasystem:hasTag" lang="">advcl</code>: <div property="rdfs:label">adverbial clause modifier</div></h2>
 	<div property="rdfs:comment">
 
-The dependency type `advcl` is reserved for subordinate clauses.
+<p>The dependency type <code>advcl</code> is reserved for subordinate clauses.
 The head of the dependency is the main predicate of the main clause,
 and the dependant is the main predicate of the subordinate clause.
-A subordinate clauses consists of a clause and a word of "[SCONJ]()",
-and is typically followed by the main clause.
+A subordinate clauses consists of a clause and a word of “<a href="">SCONJ</a>”,
+and is typically followed by the main clause.</p>
 
-~~~ sdparse
-食べ た なら 行く 。 \n eat PAST if go .
+<pre><code class="language-sdparse">食べ た なら 行く 。 \n eat PAST if go .
 advcl(行く, 食べ)
 aux(食べ, た)
 mark(食べ, なら)
 punct(行く, 。)
-~~~ 
+</code></pre>
 
 
 	</div>
@@ -311,13 +308,12 @@ punct(行く, 。)
 	<h2><code property="oliasystem:hasTag" lang="">advmod</code>: <div property="rdfs:label">adverbial modifier</div></h2>
 	<div property="rdfs:comment">
 
-The dependency type `advmod` is used for adverbial modifiers of verbs, nominal verbs, adjectives and nominal adjectives.
+<p>The dependency type <code>advmod</code> is used for adverbial modifiers of verbs, nominal verbs, adjectives and nominal adjectives.</p>
 
-~~~ sdparse
-ゆっくり 走る 。 \n slowly run .
+<pre><code class="language-sdparse">ゆっくり 走る 。 \n slowly run .
 advmod(走る, ゆっくり)
 punct(走る, 。)
-~~~
+</code></pre>
 
 
 	</div>
@@ -331,15 +327,14 @@ punct(走る, 。)
 	<h2><code property="oliasystem:hasTag" lang="">amod</code>: <div property="rdfs:label">adjectival modifier</div></h2>
 	<div property="rdfs:comment">
 
-*Adjectival modifiers* (`amod`) are adjectives and nominal adjectives.
-A nominal adjective must be followed by an auxiliary な / *na* to modify a noun.
-Note that adjectival modifiers with arguments are tagged as "[acl]()".
+<p><em>Adjectival modifiers</em> (<code>amod</code>) are adjectives and nominal adjectives.
+A nominal adjective must be followed by an auxiliary な / <em>na</em> to modify a noun.
+Note that adjectival modifiers with arguments are tagged as “<a href="">acl</a>”.</p>
 
-~~~ sdparse
-きれい な リンゴ \n beautiful AUX apple
+<pre><code class="language-sdparse">きれい な リンゴ \n beautiful AUX apple
 amod(リンゴ, きれい)
 aux(きれい, な)
-~~~
+</code></pre>
 
 
 	</div>
@@ -353,14 +348,13 @@ aux(きれい, な)
 	<h2><code property="oliasystem:hasTag" lang="">appos</code>: <div property="rdfs:label">appositional modifier</div></h2>
 	<div property="rdfs:comment">
 
-Appositive relations.
+<p>Appositive relations.</p>
 
-~~~ sdparse
-形態素 解析 器 Mecab \n morpheme analysis tool Mecab
+<pre><code class="language-sdparse">形態素 解析 器 Mecab \n morpheme analysis tool Mecab
 appos(Mecab, 器)
 compound(解析, 形態素)
 compound(器, 解析)
-~~~
+</code></pre>
 
 
 	</div>
@@ -374,23 +368,21 @@ compound(器, 解析)
 	<h2><code property="oliasystem:hasTag" lang="">aux</code>: <div property="rdfs:label">auxiliary</div></h2>
 	<div property="rdfs:comment">
 
-The dependency type `aux` is used for [auxiliary verbs](AUX) and
-[particles](PART) that attach to predicates.
+<p>The dependency type <code>aux</code> is used for <a href="AUX">auxiliary verbs</a> and
+<a href="PART">particles</a> that attach to predicates.</p>
 
-~~~ sdparse
-ご飯 を 食べ た 。 \n rice ACC eat PAST .
+<pre><code class="language-sdparse">ご飯 を 食べ た 。 \n rice ACC eat PAST .
 case(ご飯, を)
 dobj(食べ, ご飯)
 aux(食べ, た)
 punct(食べ, 。)
-~~~
+</code></pre>
 
-~~~ sdparse
-行き ます か 。 \n go POLITE QUESTION .
+<pre><code class="language-sdparse">行き ます か 。 \n go POLITE QUESTION .
 aux(行き, ます)
 aux(行き, か)
 punct(行き, 。)
-~~~
+</code></pre>
 
 
 	</div>
@@ -404,18 +396,17 @@ punct(行き, 。)
 	<h2><code property="oliasystem:hasTag" lang="">auxpass</code>: <div property="rdfs:label">passive auxiliary</div></h2>
 	<div property="rdfs:comment">
 
-The passive auxiliaries in Japanese are れる / *reru* and られる / *rareru*.
+<p>The passive auxiliaries in Japanese are れる / <em>reru</em> and られる / <em>rareru</em>.
 They attach to the main verbs to form verbal phrases in the passive voice.
-Note that passivization causes case alternations.
+Note that passivization causes case alternations.</p>
 
-~~~ sdparse
-太郎 が 雇わ れ た 。 \n Taro NOM employ PASSIVE PAST .
+<pre><code class="language-sdparse">太郎 が 雇わ れ た 。 \n Taro NOM employ PASSIVE PAST .
 auxpass(雇わ, れ)
 case(太郎, が)
 nsubjpass(雇わ, 太郎)
 aux(雇わ, た)
 punct(雇わ, 。)
-~~~
+</code></pre>
 
 
 	</div>
@@ -429,30 +420,30 @@ punct(雇わ, 。)
 	<h2><code property="oliasystem:hasTag" lang="">case</code>: <div property="rdfs:label">case marking</div></h2>
 	<div property="rdfs:comment">
 
-In Japanese, case markers are particles attaching to a noun phrase.
-The particles are tagged as "[ADP]()" in UD Japanese.
+<p>In Japanese, case markers are particles attaching to a noun phrase.
+The particles are tagged as “<a href="">ADP</a>” in UD Japanese.</p>
 
-Typical case markers are as follows:
+<p>Typical case markers are as follows:</p>
 
-- が / *ga* for nominative
-- を / *o* for accusative
-- に / *ni* for dative, locative etc.
-- の / *no* for genitive
-- へ / *e* for locative etc.
+<ul>
+  <li>が / <em>ga</em> for nominative</li>
+  <li>を / <em>o</em> for accusative</li>
+  <li>に / <em>ni</em> for dative, locative etc.</li>
+  <li>の / <em>no</em> for genitive</li>
+  <li>へ / <em>e</em> for locative etc.</li>
+</ul>
 
-~~~ sdparse
-太郎 が 東京 へ 行く 。\n Taro NOM Tokyo TO go .
+<pre><code class="language-sdparse">太郎 が 東京 へ 行く 。\n Taro NOM Tokyo TO go .
 case(太郎, が)
 case(東京, へ)
 nsubj(行く, 太郎)
 nmod(行く, 東京)
-~~~
+</code></pre>
 
-~~~ sdparse
-太郎 の 家 \n Taro OF house
+<pre><code class="language-sdparse">太郎 の 家 \n Taro OF house
 case(太郎, の)
 nmod(家, 太郎)
-~~~
+</code></pre>
 
 
 	</div>
@@ -466,8 +457,8 @@ nmod(家, 太郎)
 	<h2><code property="oliasystem:hasTag" lang="">cc</code>: <div property="rdfs:label">coordinating conjunction</div></h2>
 	<div property="rdfs:comment">
 
-The dependency type `cc` is used for [CONJ](), that is, conjunction and coordinating conjunctive particle (e.g. と / *to*, や / *ya*).
-See the example of [conj]().
+<p>The dependency type <code>cc</code> is used for <a href="">CONJ</a>, that is, conjunction and coordinating conjunctive particle (e.g. と / <em>to</em>, や / <em>ya</em>).
+See the example of <a href="">conj</a>.</p>
 
 
 	</div>
@@ -481,17 +472,16 @@ See the example of [conj]().
 	<h2><code property="oliasystem:hasTag" lang="">ccomp</code>: <div property="rdfs:label">clausal complement</div></h2>
 	<div property="rdfs:comment">
 
-Clausal complements are typically introduced by a postpositional particle と / *to* "that".
-The head of the dependency `ccomp` is the main verb of the main clause, and
-the dependant is the main predicate of the complement.
+<p>Clausal complements are typically introduced by a postpositional particle と / <em>to</em> “that”.
+The head of the dependency <code>ccomp</code> is the main verb of the main clause, and
+the dependant is the main predicate of the complement.</p>
 
-~~~ sdparse
-きれい だ と 思う 。 \n beautiful AUX that think .
+<pre><code class="language-sdparse">きれい だ と 思う 。 \n beautiful AUX that think .
 ccomp(思う, きれい)
 aux(きれい, だ)
 case(きれい, と)
 punct(思う, 。)
-~~~
+</code></pre>
 
 
 	</div>
@@ -505,17 +495,15 @@ punct(思う, 。)
 	<h2><code property="oliasystem:hasTag" lang="">compound</code>: <div property="rdfs:label">compound</div></h2>
 	<div property="rdfs:comment">
 
-The dependency type `compound` in UD Japanese is used for noun compounds and verb compounds.
+<p>The dependency type <code>compound</code> in UD Japanese is used for noun compounds and verb compounds.</p>
 
-~~~ sdparse
-構文 解析 \n syntax analysis
+<pre><code class="language-sdparse">構文 解析 \n syntax analysis
 compound(解析, 構文)
-~~~
+</code></pre>
 
-~~~ sdparse
-泳ぎ 着く \n swim reach
+<pre><code class="language-sdparse">泳ぎ 着く \n swim reach
 compound(着く, 泳ぎ)
-~~~
+</code></pre>
 
 
 	</div>
@@ -529,14 +517,13 @@ compound(着く, 泳ぎ)
 	<h2><code property="oliasystem:hasTag" lang="">conj</code>: <div property="rdfs:label">conjunct</div></h2>
 	<div property="rdfs:comment">
 
-The dependency type `conj` represents coordination.
-Following the definition of UD, the head of the dependency is the first conjunct.
+<p>The dependency type <code>conj</code> represents coordination.
+Following the definition of UD, the head of the dependency is the first conjunct.</p>
 
-~~~ sdparse
-太郎 と 次郎 \n Taro and Jiro
+<pre><code class="language-sdparse">太郎 と 次郎 \n Taro and Jiro
 cc(太郎, と)
 conj(太郎, 次郎)
-~~~
+</code></pre>
 
 
 	</div>
@@ -550,32 +537,29 @@ conj(太郎, 次郎)
 	<h2><code property="oliasystem:hasTag" lang="">cop</code>: <div property="rdfs:label">copula</div></h2>
 	<div property="rdfs:comment">
 
-The dependency type `cop` is reserved for a copular auxiliary だ / *da*.
+<p>The dependency type <code>cop</code> is reserved for a copular auxiliary だ / <em>da</em>.
 The auxiliary typically follows a noun phrase to form a copular clause.
-A postpositional phrase with a nominative case is commonly needed to complete sentence.
+A postpositional phrase with a nominative case is commonly needed to complete sentence.</p>
 
-For example, 
-dependencies for 太郎 は 学生 だ 。/ *Taro ha gakusei da* "Taro is a student." are as follows.
+<p>For example, 
+dependencies for 太郎 は 学生 だ 。/ <em>Taro ha gakusei da</em> “Taro is a student.” are as follows.</p>
 
-~~~ sdparse
-太郎 は 学生 だ 。 \n Taro TOPIC student COPULA .
+<pre><code class="language-sdparse">太郎 は 学生 だ 。 \n Taro TOPIC student COPULA .
 nsubj(学生, 太郎)
 case(太郎, は)
 cop(学生, だ)
 punct(学生, 。)
-~~~
+</code></pre>
 
-Note that we treat the auxiliary だ / *da* after adjectives as [aux]().
-Therefore dependencies for さくら が きれい だ 。 / *sakura ga kirei da* "The cherry blossoms are beautiful." do not include the `cop' relation.
+<p>Note that we treat the auxiliary だ / <em>da</em> after adjectives as <a href="">aux</a>.
+Therefore dependencies for さくら が きれい だ 。 / <em>sakura ga kirei da</em> “The cherry blossoms are beautiful.” do not include the `cop’ relation.</p>
 
-~~~ sdparse
-さくら が きれい だ 。 \n cherry_blossoms NOM beautiful AUX .
+<pre><code class="language-sdparse">さくら が きれい だ 。 \n cherry_blossoms NOM beautiful AUX .
 nsubj(きれい, さくら)
 case(さくら, が)
 aux(きれい, だ)
 punct(きれい, 。)
-~~~
-
+</code></pre>
 
 
 
@@ -590,12 +574,11 @@ punct(きれい, 。)
 	<h2><code property="oliasystem:hasTag" lang="">csubj</code>: <div property="rdfs:label">clausal subject</div></h2>
 	<div property="rdfs:comment">
 
-A clausal subject (`csubj`) is commonly introduced by a pair of particles,
-a nominal marker の / *no* and a nominative case marker が / *ga*.
-When the phrase is topicalized, the nominative が / *ga* is replaced by は / *wa*.
+<p>A clausal subject (<code>csubj</code>) is commonly introduced by a pair of particles,
+a nominal marker の / <em>no</em> and a nominative case marker が / <em>ga</em>.
+When the phrase is topicalized, the nominative が / <em>ga</em> is replaced by は / <em>wa</em>.</p>
 
-~~~ sdparse
-太郎 が 怒ら れる の は いや だ 。 \n Taro NOM punish PASSIVE that TOPIC dislike AUX .
+<pre><code class="language-sdparse">太郎 が 怒ら れる の は いや だ 。 \n Taro NOM punish PASSIVE that TOPIC dislike AUX .
 csubj(いや, 怒ら)
 nsubjpass(怒ら, 太郎)
 case(太郎, が)
@@ -604,7 +587,7 @@ mark(怒ら, の)
 case(怒ら, は)
 aux(いや, だ)
 punct(いや, 。)
-~~~
+</code></pre>
 
 
 	</div>
@@ -618,17 +601,16 @@ punct(いや, 。)
 	<h2><code property="oliasystem:hasTag" lang="">csubjpass</code>: <div property="rdfs:label">clausal passive subject</div></h2>
 	<div property="rdfs:comment">
 
-The dependency type `csubjpass` is used for clausal subjects of passive verbs.
+<p>The dependency type <code>csubjpass</code> is used for clausal subjects of passive verbs.</p>
 
-~~~ sdparse
-言っ た の が 悔やま れる 。 \n say PAST that NOM regret PASSIVE .
+<pre><code class="language-sdparse">言っ た の が 悔やま れる 。 \n say PAST that NOM regret PASSIVE .
 csubjpass(悔やま, 言っ)
 auxpass(悔やま, れる)
 aux(言っ, た)
 mark(言っ, の)
 case(言っ, が)
 punct(悔やま, 。)
-~~~
+</code></pre>
 
 
 	</div>
@@ -642,7 +624,7 @@ punct(悔やま, 。)
 	<h2><code property="oliasystem:hasTag" lang="">dep</code>: <div property="rdfs:label">unspecified dependency</div></h2>
 	<div property="rdfs:comment">
 
-Undefined.
+<p>Undefined.</p>
 
 
 	</div>
@@ -656,23 +638,24 @@ Undefined.
 	<h2><code property="oliasystem:hasTag" lang="">det</code>: <div property="rdfs:label">determiner</div></h2>
 	<div property="rdfs:comment">
 
-The dependency type `det` is for a closed set of [adnominals](DET).
+<p>The dependency type <code>det</code> is for a closed set of <a href="DET">adnominals</a>.</p>
 
-The full list of the adnominals is as follows:
+<p>The full list of the adnominals is as follows:</p>
 
-- この / *kono* “this”
-- こんな / *konna* “this”
-- あの / *ano* “that”
-- あんな / *an'na* “that”
-- その / *sono* “that”
-- そんな / *son'na* “that”
-- どの / *dono* “which”
-- どんな / *don'na* “which”
+<ul>
+  <li>この / <em>kono</em> “this”</li>
+  <li>こんな / <em>konna</em> “this”</li>
+  <li>あの / <em>ano</em> “that”</li>
+  <li>あんな / <em>an’na</em> “that”</li>
+  <li>その / <em>sono</em> “that”</li>
+  <li>そんな / <em>son’na</em> “that”</li>
+  <li>どの / <em>dono</em> “which”</li>
+  <li>どんな / <em>don’na</em> “which”</li>
+</ul>
 
-~~~ sdparse
-この 本 \n this book
+<pre><code class="language-sdparse">この 本 \n this book
 det(本, この)
-~~~
+</code></pre>
 
 
 	</div>
@@ -686,14 +669,13 @@ det(本, この)
 	<h2><code property="oliasystem:hasTag" lang="">discourse</code>: <div property="rdfs:label">discourse element</div></h2>
 	<div property="rdfs:comment">
 
-Discourse elements (`discourse`) in UD Japanese is interjection and emoticons.
+<p>Discourse elements (<code>discourse</code>) in UD Japanese is interjection and emoticons.</p>
 
-~~~ sdparse
-あー つかれ た 。 \n ah tire PAST .
+<pre><code class="language-sdparse">あー つかれ た 。 \n ah tire PAST .
 discourse(つかれ, あー)
 aux(つかれ, た)
 punct(つかれ, 。)
-~~~
+</code></pre>
 
 
 	</div>
@@ -707,28 +689,26 @@ punct(つかれ, 。)
 	<h2><code property="oliasystem:hasTag" lang="">dislocated</code>: <div property="rdfs:label">dislocated elements</div></h2>
 	<div property="rdfs:comment">
 
-The dependency type `dislocated` is used for topic phrases.
-A topic phrase introduces the topic of a sentence, and are typically prepositional phrases with a topic marker は / *ha*.
-One of the most famous examples is 象 は 鼻 が 長い 。/ *zou wa hana ga nagai* "For elephants, noses are long."
+<p>The dependency type <code>dislocated</code> is used for topic phrases.
+A topic phrase introduces the topic of a sentence, and are typically prepositional phrases with a topic marker は / <em>ha</em>.
+One of the most famous examples is 象 は 鼻 が 長い 。/ <em>zou wa hana ga nagai</em> “For elephants, noses are long.”</p>
 
-~~~ sdparse
-象 は 鼻 が 長い 。 \n elephant TOPIC nose NOM long .
+<pre><code class="language-sdparse">象 は 鼻 が 長い 。 \n elephant TOPIC nose NOM long .
 dislocated(長い, 象)
 case(象, は)
 case(鼻, が)
 nsubj(長い, 鼻)
 punct(長い, 。)
-~~~
+</code></pre>
 
-Note that the relation is not used for a topicalized phrase that is also a core argument of the sentence.
+<p>Note that the relation is not used for a topicalized phrase that is also a core argument of the sentence.</p>
 
-~~~ sdparse
-太郎 は 東京 へ 行く 。\n Taro TOPIC Tokyo TO go .
+<pre><code class="language-sdparse">太郎 は 東京 へ 行く 。\n Taro TOPIC Tokyo TO go .
 case(太郎, は)
 case(東京, へ)
 nsubj(行く, 太郎)
 nmod(行く, 東京)
-~~~
+</code></pre>
 
 
 	</div>
@@ -742,14 +722,13 @@ nmod(行く, 東京)
 	<h2><code property="oliasystem:hasTag" lang="">dobj</code>: <div property="rdfs:label">direct object</div></h2>
 	<div property="rdfs:comment">
 
-Direct object (typically a postpositional phrase with a case marker を / o).
+<p>Direct object (typically a postpositional phrase with a case marker を / o).</p>
 
-~~~ sdparse
-ご飯 を 食べる 。 \n Rice ACC eat .
+<pre><code class="language-sdparse">ご飯 を 食べる 。 \n Rice ACC eat .
 dobj(食べる, ご飯)
 case(ご飯, を)
 punct(食べる, 。)
-~~~
+</code></pre>
 
 
 	</div>
@@ -763,7 +742,7 @@ punct(食べる, 。)
 	<h2><code property="oliasystem:hasTag" lang="">expl</code>: <div property="rdfs:label">expletive</div></h2>
 	<div property="rdfs:comment">
 
-Not used in Japanese.
+<p>Not used in Japanese.</p>
 
 
 	</div>
@@ -777,15 +756,14 @@ Not used in Japanese.
 	<h2><code property="oliasystem:hasTag" lang="">foreign</code>: <div property="rdfs:label">foreign words</div></h2>
 	<div property="rdfs:comment">
 
-Foreign words in non-Japanese characters.
+<p>Foreign words in non-Japanese characters.</p>
 
-~~~ sdparse
-google docs を 使う 。 \n google docs ACC use .
+<pre><code class="language-sdparse">google docs を 使う 。 \n google docs ACC use .
 foreign(docs, google)
 case(docs, を)
 dobj(使う, docs)
 punct(使う, 。)
-~~~
+</code></pre>
 
 
 	</div>
@@ -799,7 +777,7 @@ punct(使う, 。)
 	<h2><code property="oliasystem:hasTag" lang="">goeswith</code>: <div property="rdfs:label">goes with</div></h2>
 	<div property="rdfs:comment">
 
-Used when a word is somehow split into tokens.
+<p>Used when a word is somehow split into tokens.</p>
 
 
 	</div>
@@ -813,14 +791,13 @@ Used when a word is somehow split into tokens.
 	<h2><code property="oliasystem:hasTag" lang="">iobj</code>: <div property="rdfs:label">indirect object</div></h2>
 	<div property="rdfs:comment">
 
-Indirect object (typicall a postpositional phrase with a case marker に / ni).
+<p>Indirect object (typicall a postpositional phrase with a case marker に / ni).</p>
 
-~~~ sdparse
-花子 に あげる 。 \n Hanako DAT give .
+<pre><code class="language-sdparse">花子 に あげる 。 \n Hanako DAT give .
 iobj(あげる, 花子)
 case(花子, に)
 punct(あげる, 。)
-~~~
+</code></pre>
 
 
 	</div>
@@ -834,14 +811,13 @@ punct(あげる, 。)
 	<h2><code property="oliasystem:hasTag" lang="">list</code>: <div property="rdfs:label">list</div></h2>
 	<div property="rdfs:comment">
 
-Listing.
+<p>Listing.</p>
 
-~~~ sdparse
-1. 東京 2. 大阪 \n 1. Tokyo 2. Osaka
+<pre><code class="language-sdparse">1. 東京 2. 大阪 \n 1. Tokyo 2. Osaka
 list(大阪-4, 東京-2)
 appos(1.-1, 東京-2) 
 appos(2.-3, 大阪-4)
-~~~
+</code></pre>
 
 
 	</div>
@@ -855,17 +831,16 @@ appos(2.-3, 大阪-4)
 	<h2><code property="oliasystem:hasTag" lang="">mark</code>: <div property="rdfs:label">marker</div></h2>
 	<div property="rdfs:comment">
 
-Subordinating conjunction, conjunctive particle, complementizer (と / to, か / ka).
+<p>Subordinating conjunction, conjunctive particle, complementizer (と / to, か / ka).</p>
 
-~~~ sdparse
-東京 へ 行く と 言っ た 。 \n Tokyo to go that say PAST .
+<pre><code class="language-sdparse">東京 へ 行く と 言っ た 。 \n Tokyo to go that say PAST .
 nmod(行く, 東京)
 case(東京, へ)
 mark(行く, と)
 ccomp(言っ, 行く)
 aux(言っ, た)
 punct(言っ, 。)
-~~~
+</code></pre>
 
 
 	</div>
@@ -879,10 +854,9 @@ punct(言っ, 。)
 	<h2><code property="oliasystem:hasTag" lang="">mwe</code>: <div property="rdfs:label">multi-word expression</div></h2>
 	<div property="rdfs:comment">
 
-Multi-word functional expressions.
+<p>Multi-word functional expressions.</p>
 
-~~~ sdparse
-太郎 に よっ て 発見 さ れ た 。 \n Taro by _ _ discover do PASSIVE PAST
+<pre><code class="language-sdparse">太郎 に よっ て 発見 さ れ た 。 \n Taro by _ _ discover do PASSIVE PAST
 case(太郎, に)
 mwe(に, よっ)
 mwe(に, て)
@@ -891,17 +865,16 @@ aux(発見, さ)
 auxpass(発見, れ)
 aux(発見, た)
 punct(発見, 。)
-~~~
+</code></pre>
 
-~~~ sdparse
-雨 が 降る かも しれ ない 。 \n rain NOM fall maybe _ _ .
+<pre><code class="language-sdparse">雨 が 降る かも しれ ない 。 \n rain NOM fall maybe _ _ .
 nsubj(降る, 雨)
 case(雨, が)
 aux(降る, かも)
 mwe(かも, しれ)
 mwe(かも, ない)
 punct(降る, 。)
-~~~
+</code></pre>
 
 
 	</div>
@@ -915,12 +888,11 @@ punct(降る, 。)
 	<h2><code property="oliasystem:hasTag" lang="">name</code>: <div property="rdfs:label">name</div></h2>
 	<div property="rdfs:comment">
 
-Proper noun compounds.
+<p>Proper noun compounds.</p>
 
-~~~ sdparse
-山田 太郎 \n Yamada Taro
+<pre><code class="language-sdparse">山田 太郎 \n Yamada Taro
 name(山田, 太郎)
-~~~
+</code></pre>
 
 
 	</div>
@@ -934,19 +906,17 @@ name(山田, 太郎)
 	<h2><code property="oliasystem:hasTag" lang="">neg</code>: <div property="rdfs:label">negation modifier</div></h2>
 	<div property="rdfs:comment">
 
-Negation with ない / nai, ず / zu for clausal predicates.
-Negation with 不 / fu, 非 / hi for Noun dependents.
+<p>Negation with ない / nai, ず / zu for clausal predicates.
+Negation with 不 / fu, 非 / hi for Noun dependents.</p>
 
-~~~ sdparse
-食べ ない 。 \n eat not .
+<pre><code class="language-sdparse">食べ ない 。 \n eat not .
 neg(ない, 食べ)
 punct(食べ, 。)
-~~~
+</code></pre>
 
-~~~ sdparse
-不 支持 \n not support
+<pre><code class="language-sdparse">不 支持 \n not support
 neg(支持, 不)
-~~~
+</code></pre>
 
 
 	</div>
@@ -960,21 +930,19 @@ neg(支持, 不)
 	<h2><code property="oliasystem:hasTag" lang="">nmod</code>: <div property="rdfs:label">nominal modifier</div></h2>
 	<div property="rdfs:comment">
 
-Prepositional/noun phrases modifying another phrase.
+<p>Prepositional/noun phrases modifying another phrase.</p>
 
-~~~ sdparse
-明日 北海道 へ 行く 。 \n tomorrow Hokkaido TO go .
+<pre><code class="language-sdparse">明日 北海道 へ 行く 。 \n tomorrow Hokkaido TO go .
 nmod(行く, 北海道)
 case(北海道, へ)
 nmod(行く, 明日)
 punct(行く, 。)
-~~~
+</code></pre>
 
-~~~ sdparse
-リンゴ の ジュース \n apple OF juice
+<pre><code class="language-sdparse">リンゴ の ジュース \n apple OF juice
 nmod(ジュース, リンゴ)
 case(リンゴ, の)
-~~~
+</code></pre>
 
 
 	</div>
@@ -988,14 +956,13 @@ case(リンゴ, の)
 	<h2><code property="oliasystem:hasTag" lang="">nsubj</code>: <div property="rdfs:label">nominal subject</div></h2>
 	<div property="rdfs:comment">
 
-Nominal subjects (typically a postpositional phrase with a case marker "が" or sometimes with は / wa).
+<p>Nominal subjects (typically a postpositional phrase with a case marker “が” or sometimes with は / wa).</p>
 
-~~~ sdparse
-太郎 が 走る 。 \n Taro NOM runs .
+<pre><code class="language-sdparse">太郎 が 走る 。 \n Taro NOM runs .
 nsubj(走る, 太郎)
 case(太郎, が)
 punct(走る, 。)
-~~~
+</code></pre>
 
 
 	</div>
@@ -1009,15 +976,14 @@ punct(走る, 。)
 	<h2><code property="oliasystem:hasTag" lang="">nsubjpass</code>: <div property="rdfs:label">passive nominal subject</div></h2>
 	<div property="rdfs:comment">
 
-Nominal subjects in passive forms.
+<p>Nominal subjects in passive forms.</p>
 
-~~~ sdparse
-太郎 が ほめ られる 。 \n Taro NOM praise PASSIVE .
+<pre><code class="language-sdparse">太郎 が ほめ られる 。 \n Taro NOM praise PASSIVE .
 nsubjpass(ほめ, 太郎)
 auxpass(ほめ, られる)
 case(太郎, が)
 punct(ほめ, 。)
-~~~ 
+</code></pre>
 
 
 	</div>
@@ -1031,14 +997,13 @@ punct(ほめ, 。)
 	<h2><code property="oliasystem:hasTag" lang="">nummod</code>: <div property="rdfs:label">numeric modifier</div></h2>
 	<div property="rdfs:comment">
 
-Numeral classifier phrases.
+<p>Numeral classifier phrases.</p>
 
-~~~ sdparse
-3 冊 の 本 \n 3 COUNT of books
+<pre><code class="language-sdparse">3 冊 の 本 \n 3 COUNT of books
 nummod(本, 冊)
 case(冊, の)
 nummod(冊, 3)
-~~~
+</code></pre>
 
 
 	</div>
@@ -1052,10 +1017,9 @@ nummod(冊, 3)
 	<h2><code property="oliasystem:hasTag" lang="">parataxis</code>: <div property="rdfs:label">parataxis</div></h2>
 	<div property="rdfs:comment">
 
-Listing of sentences.
+<p>Listing of sentences.</p>
 
-~~~ sdparse
-「 太郎 は 花子 が 好き 。 次郎 は 梅子 が 好き 。 」 と 三郎 が 言っ た 。 \n " Taro TOPIC Hanako NOM likable . Jiro TOPIC Umeko NOM likable . " that Saburo NOM say PAST .
+<pre><code class="language-sdparse">「 太郎 は 花子 が 好き 。 次郎 は 梅子 が 好き 。 」 と 三郎 が 言っ た 。 \n " Taro TOPIC Hanako NOM likable . Jiro TOPIC Umeko NOM likable . " that Saburo NOM say PAST .
 parataxis(好き-12, 好き-6)
 punct(好き-12, 「-1)
 punct(好き-12, 」-14)
@@ -1075,7 +1039,7 @@ nsubj(言っ-18, 三郎)
 ccomp(言っ-18, 好き-12)
 aux(言っ-18, た-19)
 punct(言っ-18, 。-20)
-~~~
+</code></pre>
 
 
 	</div>
@@ -1089,20 +1053,18 @@ punct(言っ-18, 。-20)
 	<h2><code property="oliasystem:hasTag" lang="">punct</code>: <div property="rdfs:label">punctuation</div></h2>
 	<div property="rdfs:comment">
 
-Punctuations.
+<p>Punctuations.</p>
 
-~~~ sdparse
-太郎 が 走る 。 \n Taro NOM run .
+<pre><code class="language-sdparse">太郎 が 走る 。 \n Taro NOM run .
 nsubj(走る, 太郎)
 case(太郎, が)
 punct(走る, 。)
-~~~
+</code></pre>
 
-~~~ sdparse
-太郎 、 次郎 \n Taro , Jiro
+<pre><code class="language-sdparse">太郎 、 次郎 \n Taro , Jiro
 punct(太郎, 、)
 conj(太郎, 次郎)
-~~~
+</code></pre>
 
 
 	</div>
@@ -1116,7 +1078,7 @@ conj(太郎, 次郎)
 	<h2><code property="oliasystem:hasTag" lang="">remnant</code>: <div property="rdfs:label">remnant in ellipsis</div></h2>
 	<div property="rdfs:comment">
 
-Used to annotate head-less coordination (see [the definition in Universal Dependencies](u-dep/remnant) for details).
+<p>Used to annotate head-less coordination (see <a href="u-dep/remnant">the definition in Universal Dependencies</a> for details).</p>
 
 
 	</div>
@@ -1130,7 +1092,7 @@ Used to annotate head-less coordination (see [the definition in Universal Depend
 	<h2><code property="oliasystem:hasTag" lang="">reparandum</code>: <div property="rdfs:label">overridden disfluency</div></h2>
 	<div property="rdfs:comment">
 
-Speech repair.
+<p>Speech repair.</p>
 
 
 	</div>
@@ -1144,7 +1106,7 @@ Speech repair.
 	<h2><code property="oliasystem:hasTag" lang="">root</code>: <div property="rdfs:label">root</div></h2>
 	<div property="rdfs:comment">
 
-Head of a sentence.
+<p>Head of a sentence.</p>
 
 
 	</div>
@@ -1158,14 +1120,13 @@ Head of a sentence.
 	<h2><code property="oliasystem:hasTag" lang="">vocative</code>: <div property="rdfs:label">vocative</div></h2>
 	<div property="rdfs:comment">
 
-Dialogue participant names in text.
+<p>Dialogue participant names in text.</p>
 
-~~~ sdparse
-太郎 食べ なさい 。 \n Taro eat IMPERATIVE .
+<pre><code class="language-sdparse">太郎 食べ なさい 。 \n Taro eat IMPERATIVE .
 vocative(食べ, 太郎)
 aux(食べ, なさい)
 punct(食べ, 。)
-~~~
+</code></pre>
 
 
 	</div>
@@ -1179,7 +1140,7 @@ punct(食べ, 。)
 	<h2><code property="oliasystem:hasTag" lang="">xcomp</code>: <div property="rdfs:label">open clausal complement</div></h2>
 	<div property="rdfs:comment">
 
-Not used in Japanese.
+<p>Not used in Japanese.</p>
 
 
 	</div>

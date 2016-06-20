@@ -254,39 +254,33 @@ in two places.</p>
 	<h2><code property="oliasystem:hasTag" lang="">acl</code>: <div property="rdfs:label">clausal modifier of noun</div></h2>
 	<div property="rdfs:comment">
 
-`acl` stands for finite clauses that modify a nominal. The head of the `acl` relation is the noun
+<p><code>acl</code> stands for finite clauses that modify a nominal. The head of the <code>acl</code> relation is the noun
 that is modified, and the dependent is the head of the clause that modifies the noun. Greek relative 
-are assigned a specific subtype label [acl:relcl]().
+are assigned a specific subtype label <a href="">acl:relcl</a>.</p>
 
-~~~ sdparse
-το γεγονός ότι έφυγε
+<pre><code class="language-sdparse">το γεγονός ότι έφυγε
 acl(γεγονός, έφυγε)
-~~~
+</code></pre>
 
-~~~ sdparse
-η είδηση πως νίκησε
+<pre><code class="language-sdparse">η είδηση πως νίκησε
 acl(είδηση, νίκησε)
-~~~
+</code></pre>
 
-~~~ sdparse
-ο στόχος της να παραμείνει
+<pre><code class="language-sdparse">ο στόχος της να παραμείνει
 acl(στόχος, παραμείνει)
-~~~
+</code></pre>
 
-~~~ sdparse
-η αγωνία μήπως συνεχιστεί το Μνημόνιο
+<pre><code class="language-sdparse">η αγωνία μήπως συνεχιστεί το Μνημόνιο
 acl(αγωνία, συνεχιστεί)
-~~~
+</code></pre>
 
-~~~ sdparse
-στην ερώτηση γιατί θα μετακόμιζαν
+<pre><code class="language-sdparse">στην ερώτηση γιατί θα μετακόμιζαν
 acl(ερώτηση, μετακόμιζαν)
-~~~
+</code></pre>
 
-~~~ sdparse
-η χαρά που πέρασε στο Πανεπιστήμιο
+<pre><code class="language-sdparse">η χαρά που πέρασε στο Πανεπιστήμιο
 acl(χαρά, πέρασε)
-~~~
+</code></pre>
 
 <!---
 TODO: advcl from nominals
@@ -306,43 +300,38 @@ TODO: What about χαρά που πέρασε στο Πανεπιστήμιο
 	<h2><code property="oliasystem:hasTag" lang="">acl:relcl</code>: <div property="rdfs:label">relative clause modifier</div></h2>
 	<div property="rdfs:comment">
 
-A relative clause modifier of an noun is a finite clause that modifies the noun and is introduced by *που* or a (structure including) an *οποίος*-relative pronoun. The relation points from the noun that is modified to the head of the relative clause. *οποίος*-relative pronoun are assigned typical nominal relations like  [dobj](dobj), [nsubj](nsubj) and [nmod](nmod). A [det](det) relation is also possible.
+<p>A relative clause modifier of an noun is a finite clause that modifies the noun and is introduced by <em>που</em> or a (structure including) an <em>οποίος</em>-relative pronoun. The relation points from the noun that is modified to the head of the relative clause. <em>οποίος</em>-relative pronoun are assigned typical nominal relations like  <a href="dobj">dobj</a>, <a href="nsubj">nsubj</a> and <a href="nmod">nmod</a>. A <a href="det">det</a> relation is also possible.</p>
 
-~~~ sdparse
-το Όσκαρ με το οποίο τιμήθηκε
+<pre><code class="language-sdparse">το Όσκαρ με το οποίο τιμήθηκε
 acl:relcl(Όσκαρ, τιμήθηκε)
 nmod(τιμήθηκε, οποίο)
-~~~
+</code></pre>
 
-~~~ sdparse
-το έκθεμα , για τη μόνιμη θέση του οποίου διαφωνούν 
+<pre><code class="language-sdparse">το έκθεμα , για τη μόνιμη θέση του οποίου διαφωνούν 
 acl:relcl(έκθεμα, διαφωνούν)
 nmod(διαφωνούν, θέση)
 nmod(θέση, οποίου)
-~~~
+</code></pre>
 
-~~~ sdparse
-δάνειζαν ποσά σε ιδιώτες, τα οποία ποσά εκείνοι χρησιμοποιούσαν ...
+<pre><code class="language-sdparse">δάνειζαν ποσά σε ιδιώτες, τα οποία ποσά εκείνοι χρησιμοποιούσαν ...
 acl:relcl(ποσά, χρησιμοποιούσαν)
 dobj(χρησιμοποιούσαν, ποσά)
 det(ποσά, οποία)
-~~~
+</code></pre>
 
-In the current version of the UD guidelines for Greek, we use the [mark](mark) relation for the Greek relativizer *που*.
+<p>In the current version of the UD guidelines for Greek, we use the <a href="mark">mark</a> relation for the Greek relativizer <em>που</em>.</p>
 
-~~~ sdparse
-το βιβλίο που σου έδωσα
+<pre><code class="language-sdparse">το βιβλίο που σου έδωσα
 acl:relcl(βιβλίο, έδωσα)
 mark(έδωσα, που)
-~~~
+</code></pre>
 
-~~~ sdparse
-μια έκθεση που να μην περιέχει λάθη
+<pre><code class="language-sdparse">μια έκθεση που να μην περιέχει λάθη
 acl:relcl(έκθεση, περιέχει)
 mark(περιέχει, που)
 aux(περιέχει, να)
 neg(περιέχει, μην)
-~~~
+</code></pre>
 
 <!---
 TODO: Revisit arguments for pou being a marker or a relative pronoun
@@ -360,74 +349,59 @@ TODO: Revisit arguments for pou being a marker or a relative pronoun
 	<h2><code property="oliasystem:hasTag" lang="">advcl</code>: <div property="rdfs:label">adverbial clause modifier</div></h2>
 	<div property="rdfs:comment">
 
-An adverbial clause modifier is a clause which modifies a verb or other predicate (adjective, etc.),
+<p>An adverbial clause modifier is a clause which modifies a verb or other predicate (adjective, etc.),
 as a modifier not as a core complement. This includes things such as a temporal, consequence, purpose, conditional 
-clauses, etc. The dependent must be clausal (or else it is an [advmod]()) and the dependent is the main predicate of the clause.
+clauses, etc. The dependent must be clausal (or else it is an <a href="">advmod</a>) and the dependent is the main predicate of the clause.</p>
 
-~~~ sdparse
-Το ατύχημα συνέβη καθώς έπεφτε η νύχτα
+<pre><code class="language-sdparse">Το ατύχημα συνέβη καθώς έπεφτε η νύχτα
 advcl(συνέβη, έπεφτε)
-~~~
+</code></pre>
 
-~~~ sdparse
-το συνηθίσαμε τόσο πολύ ώστε δεν αντιλαμβανόμαστε 
+<pre><code class="language-sdparse">το συνηθίσαμε τόσο πολύ ώστε δεν αντιλαμβανόμαστε 
 advcl(συνηθίσαμε, αντιλαμβανόμαστε)
-~~~
+</code></pre>
 
-~~~ sdparse
-χάρηκε τόσο πολύ που ξανάνιωσε
+<pre><code class="language-sdparse">χάρηκε τόσο πολύ που ξανάνιωσε
 advcl(χάρηκε, ξανάνιωσε)
-~~~
+</code></pre>
 
-~~~ sdparse
-ήρθε για να μείνει
+<pre><code class="language-sdparse">ήρθε για να μείνει
 advcl(ήρθε, μείνει)
-~~~
+</code></pre>
 
-~~~ sdparse
-αυξήθηκαν προκειμένου να στηριχθεί το ρούβλι
+<pre><code class="language-sdparse">αυξήθηκαν προκειμένου να στηριχθεί το ρούβλι
 advcl(αυξήθηκαν, στηριχθεί)
-~~~
+</code></pre>
 
-~~~ sdparse
-να χορηγηθεί αμέσως ώστε να αντιμετωπιστεί το πρόβλημα
+<pre><code class="language-sdparse">να χορηγηθεί αμέσως ώστε να αντιμετωπιστεί το πρόβλημα
 advcl(χορηγηθεί, αντιμετωπιστεί)
-~~~
+</code></pre>
 
-~~~ sdparse
-Αν δεν βρεθούν οι 180, θα πάμε σε εκλογές
+<pre><code class="language-sdparse">Αν δεν βρεθούν οι 180, θα πάμε σε εκλογές
 advcl(πάμε, βρεθούν)
-~~~
+</code></pre>
 
-~~~ sdparse
-δεν αλλάζει γιατί θα διέλυε το σύστημα
+<pre><code class="language-sdparse">δεν αλλάζει γιατί θα διέλυε το σύστημα
 advcl(αλλάζει, διέλυε)
-~~~
+</code></pre>
 
-~~~ sdparse
-η μετοχή της υποχωρεί μολονότι ανακοίνωσε κέρδη
+<pre><code class="language-sdparse">η μετοχή της υποχωρεί μολονότι ανακοίνωσε κέρδη
 advcl(υποχωρεί, ανακοίνωσε)
-~~~
+</code></pre>
 
-~~~ sdparse
-τον ακούς ακόμα κι αν διαφωνείς μαζί του
+<pre><code class="language-sdparse">τον ακούς ακόμα κι αν διαφωνείς μαζί του
 advcl(ακούς, διαφωνείς)
-~~~
+</code></pre>
 
+<p>This relation is also used for optional avderbial predicatives like</p>
 
-This relation is also used for optional avderbial predicatives like
-
-~~~ sdparse
-έφυγε θυμωμένος
+<pre><code class="language-sdparse">έφυγε θυμωμένος
 advcl(έφυγε, θυμωμένος)
-~~~
+</code></pre>
 
-~~~ sdparse
-στέκεται αμίλητος
+<pre><code class="language-sdparse">στέκεται αμίλητος
 advcl(στέκεται, αμίλητος)
-~~~
-
-
+</code></pre>
 
 <!---
 TODO: επιρρηματικές αναφορικές όπως/καθώς/όταν/σαν/όσο σου είπα 
@@ -449,47 +423,41 @@ TODO: επιρρηματικά κατηγορούμενα έφυγε σκυφτ�
 	<h2><code property="oliasystem:hasTag" lang="">advmod</code>: <div property="rdfs:label">adverbial modifier</div></h2>
 	<div property="rdfs:comment">
 
-An adverbial modifier of a word is a (non-clausal) adverb
-or adverbial phrase that serves to modify the meaning of the word.
+<p>An adverbial modifier of a word is a (non-clausal) adverb
+or adverbial phrase that serves to modify the meaning of the word.</p>
 
-Note that in some grammatical traditions, the term _adverbial modifier_ covers
+<p>Note that in some grammatical traditions, the term <em>adverbial modifier</em> covers
 constituents that function like adverbs regardless whether they are realized
 by adverbs, adpositional phrases, or nouns in particular morphological 
 cases.
-We differentiate adverbials realized as adverbs _(advmod)_ and
+We differentiate adverbials realized as adverbs <em>(advmod)</em> and
 adverbials realized by noun phrases or adpositional phrases
-([nmod]()).
+(<a href="">nmod</a>).</p>
 
-~~~ sdparse
-ιδιαίτερα καλή τοποθέτηση 
+<pre><code class="language-sdparse">ιδιαίτερα καλή τοποθέτηση 
 advmod(ιδιαίτερα, καλή)
-~~~
+</code></pre>
 
-~~~ sdparse
-το πιο πιθανό σενάριο
+<pre><code class="language-sdparse">το πιο πιθανό σενάριο
 advmod(πιθανό, πιο)
-~~~
+</code></pre>
 
-~~~ sdparse
-πολύ συχνά
+<pre><code class="language-sdparse">πολύ συχνά
 advmod(συχνά, πολύ)
-~~~
+</code></pre>
 
-~~~ sdparse
-Πώς πήρε τη μορφή που γνωρίζουμε σήμερα ;
+<pre><code class="language-sdparse">Πώς πήρε τη μορφή που γνωρίζουμε σήμερα ;
 advmod(πήρε, Πώς)
 advmod(γνωρίζουμε, σήμερα)
-~~~
+</code></pre>
 
-~~~ sdparse
-Περίπου τρία χρόνια έλειπε
+<pre><code class="language-sdparse">Περίπου τρία χρόνια έλειπε
 advmod(τρία, Περίπου)
-~~~
+</code></pre>
 
-~~~ sdparse
-Τα τρία περίπου χρόνια που έλειπε
+<pre><code class="language-sdparse">Τα τρία περίπου χρόνια που έλειπε
 advmod(τρία, περίπου)
-~~~
+</code></pre>
 
 
 	</div>
@@ -503,35 +471,29 @@ advmod(τρία, περίπου)
 	<h2><code property="oliasystem:hasTag" lang="">amod</code>: <div property="rdfs:label">adjectival modifier</div></h2>
 	<div property="rdfs:comment">
 
-An adjectival modifier of a noun is any adjectival phrase that serves
-to modify the meaning of the noun.
+<p>An adjectival modifier of a noun is any adjectival phrase that serves
+to modify the meaning of the noun.</p>
 
-~~~ sdparse
-διάβασε το περίφημο σύγγραμα
+<pre><code class="language-sdparse">διάβασε το περίφημο σύγγραμα
 amod(σύγγραμα, περίφημο)
-~~~
+</code></pre>
 
-~~~ sdparse
-το πιθανότερο σενάριο
+<pre><code class="language-sdparse">το πιθανότερο σενάριο
 advmod(σενάριο, πιθανότερο)
-~~~
+</code></pre>
 
-~~~ sdparse
-έγραψε ένα βιβλίο απίστευτο
+<pre><code class="language-sdparse">έγραψε ένα βιβλίο απίστευτο
 amod(βιβλίο, απίστευτο)
-~~~
+</code></pre>
 
-~~~ sdparse
-ο άνθρωπος ο σωστός
+<pre><code class="language-sdparse">ο άνθρωπος ο σωστός
 amod(άνθρωπος, σωστός)
-~~~
+</code></pre>
 
-~~~ sdparse
-οργανικός ξεφλουδισμένος σπόρος
+<pre><code class="language-sdparse">οργανικός ξεφλουδισμένος σπόρος
 amod(σπόρος, οργανικός)
 amod(σπόρος, ξεφλουδισμένος)
-~~~
-
+</code></pre>
 
 <!--
 TODO 
@@ -560,6 +522,7 @@ amod(loan, $)
 ~~~
 -->
 
+
 	</div>
 	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_el-dep/amod.md" target="#">edit amod</a>
 </div>
@@ -571,30 +534,26 @@ amod(loan, $)
 	<h2><code property="oliasystem:hasTag" lang="">appos</code>: <div property="rdfs:label">appositional modifier</div></h2>
 	<div property="rdfs:comment">
 
-An appositional modifier of a noun is a nominal immediately following
+<p>An appositional modifier of a noun is a nominal immediately following
 the first noun that serves to define or modify that noun. It includes
 parenthesized examples, as well as defining abbreviations in one of
-these structures.
+these structures.</p>
 
-~~~ sdparse
-η κόκκινη ταινία , το τρίτο μέρος της τριλογίας
+<pre><code class="language-sdparse">η κόκκινη ταινία , το τρίτο μέρος της τριλογίας
 appos(ταινία, μέρος)
-~~~
+</code></pre>
 
-~~~ sdparse
-ο Όουεν Έντουαρντς ( καθηγητής Ιστορίας )
+<pre><code class="language-sdparse">ο Όουεν Έντουαρντς ( καθηγητής Ιστορίας )
 appos(Έντουαρντς, καθηγητής)
-~~~
+</code></pre>
 
-~~~ sdparse
-το θύμα της επίθεσης, ο Παπαδόπουλος
+<pre><code class="language-sdparse">το θύμα της επίθεσης, ο Παπαδόπουλος
 appos(θύμα, Παπαδόπουλος)
-~~~
+</code></pre>
 
-~~~ sdparse
-Υπηρεσία Ενημερώσεως Ενόπλων Δυνάμεων ( Υ.ΕΝ.Ε.Δ. ) 
+<pre><code class="language-sdparse">Υπηρεσία Ενημερώσεως Ενόπλων Δυνάμεων ( Υ.ΕΝ.Ε.Δ. ) 
 appos(Υπηρεσία, Υ.ΕΝ.Ε.Δ.)
-~~~
+</code></pre>
 
 <!--
 In case of more than one appositive nominal, all nouns should be marked as modifying the first noun, rather than being chained:
@@ -629,74 +588,76 @@ appos(Email:-5, jones@abc.edf-6)
 	<h2><code property="oliasystem:hasTag" lang="">aux</code>: <div property="rdfs:label">auxiliary</div></h2>
 	<div property="rdfs:comment">
 
-We use the `aux` relation for:
+<p>We use the <code>aux</code> relation for:</p>
 
-- forms of the auxiliary verb _έχω_ in periphrastic tenses. 
+<ul>
+  <li>forms of the auxiliary verb <em>έχω</em> in periphrastic tenses.</li>
+</ul>
 
-~~~ sdparse
-έχουν πάει
+<pre><code class="language-sdparse">έχουν πάει
 aux(πάει, έχουν)
-~~~
+</code></pre>
 
-~~~ sdparse
-είχαν πάει
+<pre><code class="language-sdparse">είχαν πάει
 aux(πάει, είχαν)
-~~~
+</code></pre>
 
-- the subjunctive particles  *να* and *ας*
+<ul>
+  <li>the subjunctive particles  <em>να</em> and <em>ας</em></li>
+</ul>
 
-~~~ sdparse
-ας αρχίσουν να γράφουν
+<pre><code class="language-sdparse">ας αρχίσουν να γράφουν
 aux(αρχίσουν, ας)
 aux(γράφουν, να)
-~~~
+</code></pre>
 
-- the future particle *θα*
+<ul>
+  <li>the future particle <em>θα</em></li>
+</ul>
 
-~~~ sdparse
-θα τον έχω συναντήσει μέχρι τη Δευτέρα
+<pre><code class="language-sdparse">θα τον έχω συναντήσει μέχρι τη Δευτέρα
 aux(συναντήσει, θα)
 aux(συναντήσει, έχω)
 dobj(συναντήσει, τον)
-~~~
+</code></pre>
 
-- the impersonal verb *πρέπει* expressing obligation and probability
+<ul>
+  <li>the impersonal verb <em>πρέπει</em> expressing obligation and probability</li>
+</ul>
 
-~~~ sdparse
-θα πρέπει να τον συναντήσω 
+<pre><code class="language-sdparse">θα πρέπει να τον συναντήσω 
 aux(συναντήσω, θα)
 aux(συναντήσω, πρέπει)
 aux(συναντήσω, να)
 dobj(συναντήσω, τον)
-~~~
+</code></pre>
 
-~~~ sdparse
-πρέπει να τον έχει δει
+<pre><code class="language-sdparse">πρέπει να τον έχει δει
 aux(δει, πρέπει)
 aux(δει, έχει)
 aux(δει, να)
 dobj(δει, τον)
-~~~
+</code></pre>
 
-- the impersonal verb *μπορεί* when expressing possibility. 
+<ul>
+  <li>the impersonal verb <em>μπορεί</em> when expressing possibility.</li>
+</ul>
 
-~~~ sdparse
-μπορεί να τον έχουν δει 
+<pre><code class="language-sdparse">μπορεί να τον έχουν δει 
 aux(δει, μπορεί)
 aux(δει, έχουν)
 aux(δει, να)
 dobj(δει, τον)
-~~~
+</code></pre>
 
-The personal verb *μπορώ* expressing ability or permission should be treated as a regular verb.
+<p>The personal verb <em>μπορώ</em> expressing ability or permission should be treated as a regular verb.</p>
 
-~~~ sdparse
-μπορεί να φάει
+<pre><code class="language-sdparse">μπορεί να φάει
 xcomp(μπορεί, φάει)
 aux(φάει, να)
-~~~
+</code></pre>
 
-Negative particles  *δεν* and *μην* are assigned the relation [neg](neg).
+<p>Negative particles  <em>δεν</em> and <em>μην</em> are assigned the relation <a href="neg">neg</a>.</p>
 
 <!--
 TODO 
@@ -715,9 +676,9 @@ Include φαίνεται πρόκειται?
 	<h2><code property="oliasystem:hasTag" lang="">auxpass</code>: <div property="rdfs:label">passive auxiliary</div></h2>
 	<div property="rdfs:comment">
 
-## Diffs
+<h2 id="diffs">Diffs</h2>
 
-The `auxpass` is not used for UD Greek.
+<p>The <code>auxpass</code> is not used for UD Greek.</p>
 
 
 	</div>
@@ -731,91 +692,76 @@ The `auxpass` is not used for UD Greek.
 	<h2><code property="oliasystem:hasTag" lang="">case</code>: <div property="rdfs:label">case marking</div></h2>
 	<div property="rdfs:comment">
 
-The `case` relation for Greek is used for prepositions.
+<p>The <code>case</code> relation for Greek is used for prepositions.</p>
 
-~~~ sdparse
-« Κυριαρχήσαμε σε όλο το παιχνίδι » .
+<pre><code class="language-sdparse">« Κυριαρχήσαμε σε όλο το παιχνίδι » .
 case(παιχνίδι, σε)
 nmod(Κυριαρχήσαμε, παιχνίδι)
-~~~
+</code></pre>
 
-~~~ sdparse
-Δε σταμάτησαν από την αρχή ως το τέλος 
+<pre><code class="language-sdparse">Δε σταμάτησαν από την αρχή ως το τέλος 
 case(αρχή,  από)
 case(τέλος, ως)
 nmod(σταμάτησαν, αρχή)
 nmod(σταμάτησαν, τέλος)
-~~~
+</code></pre>
 
-A small list of postpositions in fixed expressions are labeled with `case`. **TODO:** An alternative analysis would be to label them using the [mwe](mwe) relation.
+<p>A small list of postpositions in fixed expressions are labeled with <code>case</code>. <strong>TODO:</strong> An alternative analysis would be to label them using the <a href="mwe">mwe</a> relation.</p>
 
-~~~ sdparse
-λόγου χάριν 
+<pre><code class="language-sdparse">λόγου χάριν 
 case(λόγου,  χάριν)
-~~~
+</code></pre>
 
-~~~ sdparse
-παραδείγματος χάριν 
+<pre><code class="language-sdparse">παραδείγματος χάριν 
 case(παραδείγματος,  χάριν)
-~~~
+</code></pre>
 
-~~~ sdparse
-τιμής ένεκεν
+<pre><code class="language-sdparse">τιμής ένεκεν
 case(τιμής,  ένεκεν)
-~~~
- 
+</code></pre>
 
+<p>Certain adverbs may be followed by prepositions. We label these adverbs with the <code>case</code> relation and attach to them the prepositions with a [mwe] relation.</p>
 
-Certain adverbs may be followed by prepositions. We label these adverbs with the `case` relation and attach to them the prepositions with a [mwe] relation.
-
-~~~ sdparse
-ενάντια σε όλα τα εμπόδια 
+<pre><code class="language-sdparse">ενάντια σε όλα τα εμπόδια 
 case(εμπόδια, ενάντια)
 mwe(ενάντια, σε)
-~~~
+</code></pre>
 
-~~~ sdparse
-ανεξάρτητα από τη θεματική περιοχή
+<pre><code class="language-sdparse">ανεξάρτητα από τη θεματική περιοχή
 case(περιοχή, ανεξάρτητα)
 mwe(ανεξάρτητα, από)
-~~~
+</code></pre>
 
-~~~ sdparse
-μαζί μ' εκείνους
+<pre><code class="language-sdparse">μαζί μ' εκείνους
 case(εκείνους, μαζί)
 mwe(μαζί, μ')
-~~~
+</code></pre>
 
-~~~ sdparse
-πίσω από τον Γιάννη
+<pre><code class="language-sdparse">πίσω από τον Γιάννη
 case(Γιάννη, πίσω)
 mwe(πίσω, από)
-~~~
+</code></pre>
 
-We use the `case` relation when these adverbs take a clitic in genitive as a complement.
+<p>We use the <code>case</code> relation when these adverbs take a clitic in genitive as a complement.</p>
 
-~~~ sdparse
-ανάμεσά τους
+<pre><code class="language-sdparse">ανάμεσά τους
 case(τους, ανάμεσά)
-~~~
+</code></pre>
 
-~~~ sdparse
-δίπλα της
+<pre><code class="language-sdparse">δίπλα της
 case(της, δίπλα)
-~~~
+</code></pre>
 
-When prepositions are used as subordinate conjunctions to introduce clauses, they are labelled with the [mark](mark) relation. See [mark](mark) for more examples.
+<p>When prepositions are used as subordinate conjunctions to introduce clauses, they are labelled with the <a href="mark">mark</a> relation. See <a href="mark">mark</a> for more examples.</p>
 
-~~~ sdparse
-Δεν συμμετείχα πριν τη συναντήσω .
+<pre><code class="language-sdparse">Δεν συμμετείχα πριν τη συναντήσω .
 advcl(συμμετείχα, συναντήσω)
 mark(συναντήσω, πριν)
-~~~
+</code></pre>
 
+<h2 id="todo">TODO</h2>
 
-## TODO 
-
-Add guidelines on tokenization of  _στ-_ preposition+article combinations.
+<p>Add guidelines on tokenization of  <em>στ-</em> preposition+article combinations.</p>
 
 
 	</div>
@@ -829,30 +775,28 @@ Add guidelines on tokenization of  _στ-_ preposition+article combinations.
 	<h2><code property="oliasystem:hasTag" lang="">cc</code>: <div property="rdfs:label">coordinating conjunction</div></h2>
 	<div property="rdfs:comment">
 
-For more on coordination, see the [conj]() relation.
-A `cc` is the relation between the first conjunct and
+<p>For more on coordination, see the <a href="">conj</a> relation.
+A <code>cc</code> is the relation between the first conjunct and
 <!--
 TODO 
 a [coordinating conjunction](../pos/CONJ) 
 -->
-a coordinating conjunction like _και_ or _αλλά_ delimiting another conjunct.
+a coordinating conjunction like <em>και</em> or <em>αλλά</em> delimiting another conjunct.</p>
 
-~~~ sdparse
-Ο οδηγός ενοχλήθηκε και άρχισε να κορνάρει . 
+<pre><code class="language-sdparse">Ο οδηγός ενοχλήθηκε και άρχισε να κορνάρει . 
 cc(ενοχλήθηκε, και)
-~~~
+</code></pre>
 
-A coordinating conjunction may also appear at the beginning 
+<p>A coordinating conjunction may also appear at the beginning 
 or close to the beginning of a sentence. This is also called 
-a `cc`, and it depends on the root predicate of the sentence.
+a <code>cc</code>, and it depends on the root predicate of the sentence.
 (In fact there is a coordination that spans multiple sentences.
 We cannot attach a word to the first conjunct because it is in another sentence.
-Thus we attach it to the first conjunct available in the current sentence: its main predicate.)
+Thus we attach it to the first conjunct available in the current sentence: its main predicate.)</p>
 
-~~~ sdparse
-Το σύστημα , όμως , δεν εφαρμόστηκε . 
+<pre><code class="language-sdparse">Το σύστημα , όμως , δεν εφαρμόστηκε . 
 cc(εφαρμόστηκε, όμως)
-~~~
+</code></pre>
 <!--
 TODO 
 Όμως πέρασε ένας χρόνος και το σύστημα δεν εφαρμόστηκε
@@ -870,23 +814,21 @@ TODO
 	<h2><code property="oliasystem:hasTag" lang="">ccomp</code>: <div property="rdfs:label">clausal complement</div></h2>
 	<div property="rdfs:comment">
 
-A clausal complement of a verb or adjective is a finite dependent clause which functions like an object of the verb or adjective.
+<p>A clausal complement of a verb or adjective is a finite dependent clause which functions like an object of the verb or adjective.</p>
 
-~~~ sdparse
-Διαβεβαίωσε ότι οι εθελοντές θα συνεχίσουν το έργο τους .
+<pre><code class="language-sdparse">Διαβεβαίωσε ότι οι εθελοντές θα συνεχίσουν το έργο τους .
 ccomp(Διαβεβαίωσε, συνεχίσουν)
-~~~
+</code></pre>
 
-For clausal complements for nouns, see `acl` .
+<p>For clausal complements for nouns, see <code>acl</code> .</p>
 
-For clausal complements where the subject of the complement clause obligatorily 
-corefers with an argument (subject or object) of the higher clause, see `xcomp`.
+<p>For clausal complements where the subject of the complement clause obligatorily 
+corefers with an argument (subject or object) of the higher clause, see <code>xcomp</code>.</p>
 
-~~~ sdparse
-θέλει να αρχίσουν να γράφουν
+<pre><code class="language-sdparse">θέλει να αρχίσουν να γράφουν
 ccomp(θέλει, αρχίσουν)
 xcomp(αρχίσουν, γράφουν)
-~~~
+</code></pre>
 
 
 	</div>
@@ -900,44 +842,45 @@ xcomp(αρχίσουν, γράφουν)
 	<h2><code property="oliasystem:hasTag" lang="">compound</code>: <div property="rdfs:label">compound</div></h2>
 	<div property="rdfs:comment">
 
-We use the `compound` relation for 
+<p>We use the <code>compound</code> relation for</p>
 
-- the few noun noun compounds of Modern Greek:
+<ul>
+  <li>the few noun noun compounds of Modern Greek:</li>
+</ul>
 
-~~~ sdparse
-κράτος μέλος
+<pre><code class="language-sdparse">κράτος μέλος
 compound(κράτος, μέλος)
-~~~
+</code></pre>
 
-~~~ sdparse
-απόφαση - κόλαφος
+<pre><code class="language-sdparse">απόφαση - κόλαφος
 compound(απόφαση, κόλαφος)
 punct(απόφαση, -)
-~~~
+</code></pre>
 
-~~~ sdparse
-λέξης κλειδί
+<pre><code class="language-sdparse">λέξης κλειδί
 compound(λέξης, κλειδί)
-~~~
+</code></pre>
 
-- for combinations of numbers:
+<ul>
+  <li>for combinations of numbers:</li>
+</ul>
 
-~~~ sdparse
-Είκοσι χιλιάδες λεύγες
+<pre><code class="language-sdparse">Είκοσι χιλιάδες λεύγες
 compound(χιλιάδες, Είκοσι)
 nummod(χιλιάδες, λεύγες)
-~~~
+</code></pre>
 
-~~~ sdparse
-Πάνω από τρία εκατομμύρια ευρώ
+<pre><code class="language-sdparse">Πάνω από τρία εκατομμύρια ευρώ
 compound(εκατομμύρια, τρία)
 nummod(ευρώ, εκατομμύρια)
-~~~
+</code></pre>
 
-The two other compounding relations are:
+<p>The two other compounding relations are:</p>
 
-- [mwe]() for fixed grammaticized expressions with function words
-- [name]() for proper nouns constituted of multiple nominal elements
+<ul>
+  <li><a href="">mwe</a> for fixed grammaticized expressions with function words</li>
+  <li><a href="">name</a> for proper nouns constituted of multiple nominal elements</li>
+</ul>
 
 
 	</div>
@@ -951,15 +894,14 @@ The two other compounding relations are:
 	<h2><code property="oliasystem:hasTag" lang="">conj</code>: <div property="rdfs:label">conjunct</div></h2>
 	<div property="rdfs:comment">
 
-A conjunct is the relation between two elements connected by a
-coordinating conjunction, such as _και_, _αλλά_, etc.  We treat
+<p>A conjunct is the relation between two elements connected by a
+coordinating conjunction, such as <em>και</em>, <em>αλλά</em>, etc.  We treat
 conjunctions asymmetrically: The head of the relation is the first
-conjunct and all the other conjuncts depend on it via the `conj` relation.
+conjunct and all the other conjuncts depend on it via the <code>conj</code> relation.</p>
 
-~~~ sdparse
-Ακούστηκαν προτάσεις για παραγωγική ανασυγκρότηση και βιώσιμη ανάπτυξη 
+<pre><code class="language-sdparse">Ακούστηκαν προτάσεις για παραγωγική ανασυγκρότηση και βιώσιμη ανάπτυξη 
 conj(ανασυγκρότηση, ανάπτυξη)
-~~~
+</code></pre>
 
 <div id="punct1" class="sd-parse">
 των σχέσεων μεταξύ οικονομίας , πολιτικού παιγνίου , κομματικής ισορροπίας και διεθνούς παράγοντα . 
@@ -971,58 +913,50 @@ punct(οικονομίας, ,-5)
 punct(οικονομίας, ,-8)
 </div>
 
-~~~ sdparse
-Μια μικρή αλλά ανθηρή επιχείρηση . 
+<pre><code class="language-sdparse">Μια μικρή αλλά ανθηρή επιχείρηση . 
 amod(επιχείρηση, μικρή)
 cc(μικρή, αλλά)
 conj(μικρή, ανθηρή)
-~~~
+</code></pre>
 
-Coordinate clauses are treated the same way as coordination of other constituent types:
+<p>Coordinate clauses are treated the same way as coordination of other constituent types:</p>
 
-~~~ sdparse
-Ο οδηγός ενοχλήθηκε και άρχισε να κορνάρει . 
+<pre><code class="language-sdparse">Ο οδηγός ενοχλήθηκε και άρχισε να κορνάρει . 
 cc(ενοχλήθηκε, και)
 conj(ενοχλήθηκε, άρχισε)
-~~~
+</code></pre>
 
-Coordination may be _asyndetic,_ which means that the coordinating conjunction is omitted.
-Commas or other punctuation symbols will delimit the conjuncts in the typical case.
+<p>Coordination may be <em>asyndetic,</em> which means that the coordinating conjunction is omitted.
+Commas or other punctuation symbols will delimit the conjuncts in the typical case.</p>
 
-~~~ sdparse
-Θα προωθήσουν ένα ασφαλέστερο , πιο ανθεκτικό παγκόσμιο χρηματοπιστωτικό σύστημα . 
+<pre><code class="language-sdparse">Θα προωθήσουν ένα ασφαλέστερο , πιο ανθεκτικό παγκόσμιο χρηματοπιστωτικό σύστημα . 
 conj(ασφαλέστερο, ανθεκτικό)
 punct(ασφαλέστερο, ,-5)
-~~~
+</code></pre>
 
-Coordination can apply to most word categories.
+<p>Coordination can apply to most word categories.</p>
 
-~~~ sdparse
-Άνοιξαν και έκλεισαν την πόρτα . 
+<pre><code class="language-sdparse">Άνοιξαν και έκλεισαν την πόρτα . 
 conj(Άνοιξαν, έκλεισαν)
 cc(Άνοιξαν, και)
 dobj(Άνοιξαν, πόρτα)
-~~~
+</code></pre>
 
-~~~ sdparse
-από και προς το αεροδρόμιο 
+<pre><code class="language-sdparse">από και προς το αεροδρόμιο 
 case(αεροδρόμιο, από)
 cc(από, και)
 conj(από, προς)
-~~~
+</code></pre>
 
-~~~ sdparse
-εάν και εφόσον δεήσουν 
+<pre><code class="language-sdparse">εάν και εφόσον δεήσουν 
 mark(δεήσουν, εάν)
 cc(εάν, και)
 conj(εάν, εφόσον)
-~~~
+</code></pre>
 
-
-
-### TODO
-Shared dependents. 
-Nested coordination.
+<h3 id="todo">TODO</h3>
+<p>Shared dependents. 
+Nested coordination.</p>
 
 
 	</div>
@@ -1036,50 +970,43 @@ Nested coordination.
 	<h2><code property="oliasystem:hasTag" lang="">cop</code>: <div property="rdfs:label">copula</div></h2>
 	<div property="rdfs:comment">
 
-In copular clauses, the predicative acts as the head word of the clause, and the copular verb depends on it using a cop (copula) dependency. The only copular verb in the scheme for Greek is *είμαι* (*be*).
+<p>In copular clauses, the predicative acts as the head word of the clause, and the copular verb depends on it using a cop (copula) dependency. The only copular verb in the scheme for Greek is <em>είμαι</em> (<em>be</em>).</p>
 
-~~~ sdparse
-Η ρευστότητα ήταν φλέγον ζήτημα .
+<pre><code class="language-sdparse">Η ρευστότητα ήταν φλέγον ζήτημα .
 nsubj(ζήτημα, ρευστότητα)
 cop(ζήτημα, ήταν)
-~~~
+</code></pre>
 
-~~~ sdparse
-Η ρευστότητα ήταν χαμηλή .
+<pre><code class="language-sdparse">Η ρευστότητα ήταν χαμηλή .
 nsubj(χαμηλή, ρευστότητα)
 cop(χαμηλή, ήταν)
-~~~
+</code></pre>
 
-~~~ sdparse
-Ήταν από την Κρήτη .
+<pre><code class="language-sdparse">Ήταν από την Κρήτη .
 cop(Κρήτη, Ήταν)
-~~~
+</code></pre>
 
-~~~ sdparse
-Ο Νίκος είναι πάνω .
+<pre><code class="language-sdparse">Ο Νίκος είναι πάνω .
 nsubj(πάνω, Νίκος)
 cop(πάνω, είναι)
-~~~
+</code></pre>
 
-The same label is used in Greek sentences (often in informal discourse or headlines), where deletion of *είμαι*  may occur. 
+<p>The same label is used in Greek sentences (often in informal discourse or headlines), where deletion of <em>είμαι</em>  may occur.</p>
 
-~~~ sdparse
-Φοβερό το γλυκό .
+<pre><code class="language-sdparse">Φοβερό το γλυκό .
 nsubj(Φοβερό, γλυκό)
-~~~
+</code></pre>
 
-~~~ sdparse
-Αμφίβολη η συμμετοχή της Γαλλίας .
+<pre><code class="language-sdparse">Αμφίβολη η συμμετοχή της Γαλλίας .
 nsubj(συμμετοχή, Αμφίβολη)
-~~~
+</code></pre>
 
-Whenever the copula has a clausal argument, [ccomp]() is used, with the copula being the head.
+<p>Whenever the copula has a clausal argument, <a href="">ccomp</a> is used, with the copula being the head.</p>
 
-~~~ sdparse
-Αυτό που μας ενδιαφέρει είναι να μην κινδυνέψουν
+<pre><code class="language-sdparse">Αυτό που μας ενδιαφέρει είναι να μην κινδυνέψουν
 ccomp(είναι, κινδυνέψουν)
 nsubj(είναι, Αυτό)
-~~~
+</code></pre>
 
 
 
@@ -1094,28 +1021,25 @@ nsubj(είναι, Αυτό)
 	<h2><code property="oliasystem:hasTag" lang="">csubj</code>: <div property="rdfs:label">clausal subject</div></h2>
 	<div property="rdfs:comment">
 
-A clausal subject is a clausal syntactic subject of a clause, i.e.,
-the subject is itself a clause. 
+<p>A clausal subject is a clausal syntactic subject of a clause, i.e.,
+the subject is itself a clause.</p>
 
-~~~ sdparse
-Με ενδιαφέρει ότι απολύθηκαν άνθρωποι από το κανάλι
+<pre><code class="language-sdparse">Με ενδιαφέρει ότι απολύθηκαν άνθρωποι από το κανάλι
 csubj(ενδιαφέρει, απολύθηκαν)
 mark(απολύθηκαν, ότι)
-~~~
+</code></pre>
 
-~~~ sdparse
-Δεν με πειράζει να το πουν
+<pre><code class="language-sdparse">Δεν με πειράζει να το πουν
 csubj(πειράζει, πουν)
 dobj(πειράζει, με)
 aux(πειράζει, να)
-~~~
+</code></pre>
 
-~~~ sdparse
-Με στεναχωρεί που έρχεται ο χειμώνας
+<pre><code class="language-sdparse">Με στεναχωρεί που έρχεται ο χειμώνας
 csubj(στεναχωρεί, έρχεται)
 dobj(στεναχωρεί, Με)
 mark(έρχεται, που)
-~~~
+</code></pre>
 
 
 	</div>
@@ -1129,20 +1053,18 @@ mark(έρχεται, που)
 	<h2><code property="oliasystem:hasTag" lang="">csubjpass</code>: <div property="rdfs:label">clausal passive subject</div></h2>
 	<div property="rdfs:comment">
 
-A clausal passive subject is a clausal syntactic subject of a passive
+<p>A clausal passive subject is a clausal syntactic subject of a passive
 clause (or more generally, any voice where the proto-agent argument does not become the subject 
-of the clause). In the example below, *that she lied* is the subject.
+of the clause). In the example below, <em>that she lied</em> is the subject.</p>
 
-~~~ sdparse
-Ακούγεται ότι θα μεταφερθεί
+<pre><code class="language-sdparse">Ακούγεται ότι θα μεταφερθεί
 csubjpass(Ακούγεται, μεταφερθεί)
-~~~
+</code></pre>
 
-~~~ sdparse
-Αποφασίστηκε να συνεχιστούν οι συνομιλίες
+<pre><code class="language-sdparse">Αποφασίστηκε να συνεχιστούν οι συνομιλίες
 csubjpass(Αποφασίστηκε, συνεχιστούν)
 nsubj(συνεχιστούν, συνομιλίες)
-~~~
+</code></pre>
 
 
 
@@ -1157,8 +1079,8 @@ nsubj(συνεχιστούν, συνομιλίες)
 	<h2><code property="oliasystem:hasTag" lang="">dep</code>: <div property="rdfs:label">unspecified dependency</div></h2>
 	<div property="rdfs:comment">
 
-This document is a placeholder for the language-specific documentation
-for `dep`.
+<p>This document is a placeholder for the language-specific documentation
+for <code>dep</code>.</p>
 
 
 	</div>
@@ -1172,51 +1094,44 @@ for `dep`.
 	<h2><code property="oliasystem:hasTag" lang="">det</code>: <div property="rdfs:label">determiner</div></h2>
 	<div property="rdfs:comment">
 
-A determiner is the relation between the head of a noun phrase and its
-[determiner](u-pos/DET).
+<p>A determiner is the relation between the head of a noun phrase and its
+<a href="u-pos/DET">determiner</a>.</p>
 
-~~~ sdparse
-Είναι ένα έργο τέχνης 
+<pre><code class="language-sdparse">Είναι ένα έργο τέχνης 
 det(έργο, ένα)
-~~~
+</code></pre>
 
-~~~ sdparse
-Ποια ηθοποιός θα ενσαρκώσει τη μυθική Μαρλέν ;
+<pre><code class="language-sdparse">Ποια ηθοποιός θα ενσαρκώσει τη μυθική Μαρλέν ;
 det(ηθοποιός, Ποια)
 det(Μαρλέν, τη)
-~~~
+</code></pre>
 
-~~~ sdparse
-την καταπληκτική αυτή προβολή που της χάρισε
+<pre><code class="language-sdparse">την καταπληκτική αυτή προβολή που της χάρισε
 det(προβολή, αυτή-3)
 det(προβολή, την)
 amod(προβολή, καταπληκτική)
-~~~
+</code></pre>
 
-
-~~~ sdparse
-όλη αυτή την καταπληκτική προβολή που της χάρισε
+<pre><code class="language-sdparse">όλη αυτή την καταπληκτική προβολή που της χάρισε
 det(προβολή, όλη)
 det(προβολή, αυτή-2)
 det(προβολή, την)
 amod(προβολή, καταπληκτική)
-~~~
+</code></pre>
 
-In the case of polydefinites, we attach both definite articles to the nominal head.
+<p>In the case of polydefinites, we attach both definite articles to the nominal head.</p>
 
-~~~ sdparse
-το μικρό το αυτοκίνητο
+<pre><code class="language-sdparse">το μικρό το αυτοκίνητο
 det(αυτοκίνητο, το-1)
 det(αυτοκίνητο, το-3)
 amod(αυτοκίνητο, μικρό)
-~~~
+</code></pre>
 
-~~~ sdparse
-το πουκάμισο το θαλασσί
+<pre><code class="language-sdparse">το πουκάμισο το θαλασσί
 det(πουκάμισο, το-1)
 det(πουκάμισο, το-3)
 amod(πουκάμισο, θαλασσί)
-~~~
+</code></pre>
 
 
 
@@ -1231,13 +1146,12 @@ amod(πουκάμισο, θαλασσί)
 	<h2><code property="oliasystem:hasTag" lang="">discourse</code>: <div property="rdfs:label">discourse element</div></h2>
 	<div property="rdfs:comment">
 
-This is used for interjections and other discourse particles and elements (which are not clearly linked to the structure of the sentence, except in an expressive way). We generally define this to include: interjections (*ωχ*, *αχά*) and fillers (*εε*, *α*). 
+<p>This is used for interjections and other discourse particles and elements (which are not clearly linked to the structure of the sentence, except in an expressive way). We generally define this to include: interjections (<em>ωχ</em>, <em>αχά</em>) and fillers (<em>εε</em>, <em>α</em>).</p>
 
-~~~ sdparse
-Ουφ , έχασα στο φεύγα :(
+<pre><code class="language-sdparse">Ουφ , έχασα στο φεύγα :(
 discourse(έχασα, :()
 discourse(έχασα, Ουφ)
-~~~
+</code></pre>
 
 
 	</div>
@@ -1251,18 +1165,16 @@ discourse(έχασα, Ουφ)
 	<h2><code property="oliasystem:hasTag" lang="">dislocated</code>: <div property="rdfs:label">dislocated elements</div></h2>
 	<div property="rdfs:comment">
 
-The `dislocated` relation is used for fronted or postposed elements
+<p>The <code>dislocated</code> relation is used for fronted or postposed elements
 that do not fulfill the usual core grammatical relations of a
 sentence, especially in sentences from transcribed speech. 
-The dislocated elements attach to the head of the clause to which they belong:
+The dislocated elements attach to the head of the clause to which they belong:</p>
 
-
-~~~ sdparse
-Το ποδήλατο , πάντα της έλεγα ότι θέλει καινούρια λάστιχα . \n The bicycle , I always told her that it needs new tyres .
+<pre><code class="language-sdparse">Το ποδήλατο , πάντα της έλεγα ότι θέλει καινούρια λάστιχα . \n The bicycle , I always told her that it needs new tyres .
 dislocated(θέλει, ποδήλατο)
 dobj(θέλει, λάστιχα)
 ccomp(έλεγα, θέλει)
-~~~
+</code></pre>
 
 
 	</div>
@@ -1276,32 +1188,28 @@ ccomp(έλεγα, θέλει)
 	<h2><code property="oliasystem:hasTag" lang="">dobj</code>: <div property="rdfs:label">direct object</div></h2>
 	<div property="rdfs:comment">
 
-The direct object of a verb is the noun phrase that denotes the entity acted upon. The direct object is typically marked by the accusative case in Greek. 
+<p>The direct object of a verb is the noun phrase that denotes the entity acted upon. The direct object is typically marked by the accusative case in Greek.</p>
 
-~~~ sdparse
-Ο υπουργός ενημέρωσε το σώμα
+<pre><code class="language-sdparse">Ο υπουργός ενημέρωσε το σώμα
 dobj(ενημέρωσε, σώμα)
-~~~
+</code></pre>
 
-However, some verbs take objects in genitive:
+<p>However, some verbs take objects in genitive:</p>
 
-~~~ sdparse
-Η Αντιγόνη μοιάζει της Αρετής.Gen
+<pre><code class="language-sdparse">Η Αντιγόνη μοιάζει της Αρετής.Gen
 dobj(μοιάζει, Αρετής.Gen)
-~~~
+</code></pre>
 
-~~~ sdparse
-Οι συνεδριάσεις προηγούνται των αποφάσεων.Gen
+<pre><code class="language-sdparse">Οι συνεδριάσεις προηγούνται των αποφάσεων.Gen
 dobj(προηγούνται, αποφάσεων.Gen)
-~~~
+</code></pre>
 
-In general, if there is just one object, it should be labeled `dobj`,
-regardless of the morphological case or semantic role that it bears.
+<p>In general, if there is just one object, it should be labeled <code>dobj</code>,
+regardless of the morphological case or semantic role that it bears.</p>
 
-When two objects are present, one of them is labeled as `dobj` and the other as [iobj](). Generally, the most directly affected object _(patient)_ is marked as `dobj`. The one exception is when there is a clausal complement. Then the clausal complement is regarded as [iobj]() “clausal direct object” and an object nominal will be an iobj. See [iobj]() for more details.
+<p>When two objects are present, one of them is labeled as <code>dobj</code> and the other as <a href="">iobj</a>. Generally, the most directly affected object <em>(patient)</em> is marked as <code>dobj</code>. The one exception is when there is a clausal complement. Then the clausal complement is regarded as <a href="">iobj</a> “clausal direct object” and an object nominal will be an iobj. See <a href="">iobj</a> for more details.</p>
 
-See the [expl]()  relation for cases of clitic doubling.
-
+<p>See the <a href="">expl</a>  relation for cases of clitic doubling.</p>
 
 
 
@@ -1316,23 +1224,22 @@ See the [expl]()  relation for cases of clitic doubling.
 	<h2><code property="oliasystem:hasTag" lang="">expl</code>: <div property="rdfs:label">expletive</div></h2>
 	<div property="rdfs:comment">
 
-The `expl` relation is used in UD Greek for cases of clitic doubling.
+<p>The <code>expl</code> relation is used in UD Greek for cases of clitic doubling.</p>
 
-~~~ sdparse
-Της τον έδωσε της Καίτης τον αναπτήρα
+<pre><code class="language-sdparse">Της τον έδωσε της Καίτης τον αναπτήρα
 expl(έδωσε, Της-1)
 iobj(έδωσε, Καίτης)
 expl(έδωσε, τον-2)
 dobj(έδωσε, αναπτήρα)
-~~~
+</code></pre>
 
-But when clitics appear alone in the sentence, they are labeled as core arguments.
+<p>But when clitics appear alone in the sentence, they are labeled as core arguments.</p>
 
-~~~ sdparse
-Της τον έδωσε
+<pre><code class="language-sdparse">Της τον έδωσε
 iobj(έδωσε, Της)
 dobj(έδωσε, τον)
-~~~
+</code></pre>
+
 
 	</div>
 	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_el-dep/expl.md" target="#">edit expl</a>
@@ -1345,21 +1252,20 @@ dobj(έδωσε, τον)
 	<h2><code property="oliasystem:hasTag" lang="">foreign</code>: <div property="rdfs:label">foreign words</div></h2>
 	<div property="rdfs:comment">
 
-We use `foreign` to label sequences of foreign words. These are given
-a linear analysis: the head is the first token in the foreign phrase.
+<p>We use <code>foreign</code> to label sequences of foreign words. These are given
+a linear analysis: the head is the first token in the foreign phrase.</p>
 
-`foreign` does not apply to words transliterated to the Greek script, 
-loanwords or to foreign [names](name). It applies to quoted foreign text 
+<p><code>foreign</code> does not apply to words transliterated to the Greek script, 
+loanwords or to foreign <a href="name">names</a>. It applies to quoted foreign text 
 incorporated in a sentence/discourse of the host language (unless we want 
 to and know how to annotate the internal structure according 
-to the syntax of the foreign language).
+to the syntax of the foreign language).</p>
 
-~~~ sdparse
-Cogito ergo sum έλεγαν οι Λατίνοι . 
+<pre><code class="language-sdparse">Cogito ergo sum έλεγαν οι Λατίνοι . 
 parataxis(έλεγαν, Cogito)
 foreign(Cogito, ergo)
 foreign(Cogito, sum)
-~~~
+</code></pre>
 
 
 	</div>
@@ -1373,14 +1279,13 @@ foreign(Cogito, sum)
 	<h2><code property="oliasystem:hasTag" lang="">goeswith</code>: <div property="rdfs:label">goes with</div></h2>
 	<div property="rdfs:comment">
 
-This relation links two parts of a word that are separated in text
+<p>This relation links two parts of a word that are separated in text
 that is not well edited.
-The head is in some sense the “main” part, often the second part.
+The head is in some sense the “main” part, often the second part.</p>
 
-~~~ sdparse
-Ο παν ευρωπαϊκός
+<pre><code class="language-sdparse">Ο παν ευρωπαϊκός
 goeswith(ευρωπαϊκός, παν)
-~~~
+</code></pre>
 
 
 	</div>
@@ -1394,111 +1299,97 @@ goeswith(ευρωπαϊκός, παν)
 	<h2><code property="oliasystem:hasTag" lang="">iobj</code>: <div property="rdfs:label">indirect object</div></h2>
 	<div property="rdfs:comment">
 
-The indirect object of a verb is any nominal structure that is a core
-argument of the verb but is not its subject or [direct object](dobj).
+<p>The indirect object of a verb is any nominal structure that is a core
+argument of the verb but is not its subject or <a href="dobj">direct object</a>.
 The prototypical example is the recipient of ditransitive verbs of exchange,
-that is often realized as a nominal element preceded by a σε-preposition. 
+that is often realized as a nominal element preceded by a σε-preposition.</p>
 
-~~~ sdparse
-Έδωσε της Άννας αύξηση
+<pre><code class="language-sdparse">Έδωσε της Άννας αύξηση
 iobj(Έδωσε, Άννας)
 obj(Έδωσε, αύξηση)
-~~~
+</code></pre>
 
-~~~ sdparse
-Έδωσε σε όλους αύξηση
+<pre><code class="language-sdparse">Έδωσε σε όλους αύξηση
 case(όλους, σε)
 iobj(Έδωσε, όλους)
 obj(Έδωσε, αύξηση)
-~~~
+</code></pre>
 
-~~~ sdparse
-Έδωσε στην Άννα αύξηση
+<pre><code class="language-sdparse">Έδωσε στην Άννα αύξηση
 iobj(Έδωσε, Άννα)
 obj(Έδωσε, αύξηση)
-~~~
+</code></pre>
 
-Benefactives and source semantic roles are also marked as indirect objects. Recipient and source roles can be realized as nominal elements preceded by για- and από- prepositions. 
+<p>Benefactives and source semantic roles are also marked as indirect objects. Recipient and source roles can be realized as nominal elements preceded by για- and από- prepositions.</p>
 
-~~~ sdparse
-Έφτιαξε της Λίλας φακές
+<pre><code class="language-sdparse">Έφτιαξε της Λίλας φακές
 iobj(Έφτιαξε, Λίλας)
 obj(Έφτιαξε,  φακές)
-~~~
+</code></pre>
 
-~~~ sdparse
-Πήραν του Νίκου δύο χιλιάρικα
+<pre><code class="language-sdparse">Πήραν του Νίκου δύο χιλιάρικα
 iobj(Πήραν, Νίκου)
 obj(Πήραν, χιλιάρικα)
-~~~
+</code></pre>
 
-~~~ sdparse
-Πήραν από τον Νίκο δύο χιλιάρικα
+<pre><code class="language-sdparse">Πήραν από τον Νίκο δύο χιλιάρικα
 iobj(Πήραν, Νίκο)
 obj(Πήραν, χιλιάρικα)
-~~~
+</code></pre>
 
-Recipient, benefactives and source roles can be cliticized in genitive. 
+<p>Recipient, benefactives and source roles can be cliticized in genitive.</p>
 
-~~~ sdparse
-Της έδωσε αύξηση
+<pre><code class="language-sdparse">Της έδωσε αύξηση
 iobj(έδωσε, Της)
 obj(έδωσε, αύξηση)
-~~~
+</code></pre>
 
-~~~ sdparse
-Της έφτιαξε φακές
+<pre><code class="language-sdparse">Της έφτιαξε φακές
 iobj(έφτιαξε, Της)
 obj(έφτιαξε, φακές)
-~~~
+</code></pre>
 
-~~~ sdparse
-Του πήραν δυο χιλιάρικα
+<pre><code class="language-sdparse">Του πήραν δυο χιλιάρικα
 iobj(πήραν, Του)
 obj(πήραν, χιλιάρικα)
-~~~
+</code></pre>
 
-When two objects in accusative are present, one of them is annotated as `dobj` and the other as [iobj]().  Generally, the most directly affected object _(patient)_ is marked as `dobj`.
+<p>When two objects in accusative are present, one of them is annotated as <code>dobj</code> and the other as <a href="">iobj</a>.  Generally, the most directly affected object <em>(patient)</em> is marked as <code>dobj</code>.</p>
 
-~~~ sdparse
-Διδάσκει τα παιδιά.Acc ιστορία.Acc
+<pre><code class="language-sdparse">Διδάσκει τα παιδιά.Acc ιστορία.Acc
 obj(Διδάσκει, ιστορία.Acc)
 iobj(Διδάσκει, παιδιά.Acc)
-~~~
+</code></pre>
 
-If there is just one object, it should be labeled [dobj](), regardless of the morphological case or semantic role. For example,  _διδάσκω_ can take either the subject matter or the recipient as the only object, and in both cases it would be analyzed as the [dobj]():
+<p>If there is just one object, it should be labeled <a href="">dobj</a>, regardless of the morphological case or semantic role. For example,  <em>διδάσκω</em> can take either the subject matter or the recipient as the only object, and in both cases it would be analyzed as the <a href="">dobj</a>:</p>
 
-~~~ sdparse
-Διδάσκει μαθηματικά
+<pre><code class="language-sdparse">Διδάσκει μαθηματικά
 dobj(Διδάσκει, μαθηματικά)
-~~~
+</code></pre>
 
-~~~ sdparse
-Διδάσκει τους φοιτητές
+<pre><code class="language-sdparse">Διδάσκει τους φοιτητές
 dobj(Διδάσκει, φοιτητές)
-~~~
+</code></pre>
 
-The one exception is when there is a clausal complement. Then the clausal complement is regarded 
-as a [ccomp]() “clausal direct object” and an object nominal will be an iobj, parallel to the simple ditransitive case:
+<p>The one exception is when there is a clausal complement. Then the clausal complement is regarded 
+as a <a href="">ccomp</a> “clausal direct object” and an object nominal will be an iobj, parallel to the simple ditransitive case:</p>
 
-~~~ sdparse
-Είπε στους φοιτητές να διαβάσουν το δεύτερο κεφάλαιο
+<pre><code class="language-sdparse">Είπε στους φοιτητές να διαβάσουν το δεύτερο κεφάλαιο
 iobj(Είπε, φοιτητές)
 xcomp(Είπε, διαβάσουν)
-~~~
+</code></pre>
 
-~~~ sdparse
-Είπε στους φοιτητές το πρόγραμμα
+<pre><code class="language-sdparse">Είπε στους φοιτητές το πρόγραμμα
 iobj(Είπε, φοιτητές)
 dobj(Είπε, πρόγραμμα)
-~~~
+</code></pre>
 
-See the [expl]()  relation for cases of clitic doubling.
+<p>See the <a href="">expl</a>  relation for cases of clitic doubling.</p>
 
-## Diffs
+<h2 id="diffs">Diffs</h2>
 
-At present and contrary to the general UD definition of [u-dep/iobj](), in
-UD Greek we allow prepositional indirect objects.
+<p>At present and contrary to the general UD definition of <a href="">u-dep/iobj</a>, in
+UD Greek we allow prepositional indirect objects.</p>
 
 
 	</div>
@@ -1512,16 +1403,15 @@ UD Greek we allow prepositional indirect objects.
 	<h2><code property="oliasystem:hasTag" lang="">list</code>: <div property="rdfs:label">list</div></h2>
 	<div property="rdfs:comment">
 
-The `list` relation is used for chains of comparable items. In lists with more than two items, all items of the list should modify the first one. Informal and web text often contains passages which are meant to be interpreted as lists but are parsed as single sentences. Email signatures often contain these structures, in the form of contact information: the different contact information items are labeled as `list`; the key-value pair relations are labeled as [appos]().
+<p>The <code>list</code> relation is used for chains of comparable items. In lists with more than two items, all items of the list should modify the first one. Informal and web text often contains passages which are meant to be interpreted as lists but are parsed as single sentences. Email signatures often contain these structures, in the form of contact information: the different contact information items are labeled as <code>list</code>; the key-value pair relations are labeled as <a href="">appos</a>.</p>
 
-~~~ sdparse
-Γιώργος Παπαδόπουλος Τηλέφωνο 2100447000 E-mail gpapadopoulos@paradeigma.com
+<pre><code class="language-sdparse">Γιώργος Παπαδόπουλος Τηλέφωνο 2100447000 E-mail gpapadopoulos@paradeigma.com
 name(Γιώργος, Παπαδόπουλος)
 list(Γιώργος, Τηλέφωνο )
 list(Γιώργος, E-mail)
 appos(Τηλέφωνο, 2100447000)
 appos(E-mail, gpapadopoulos@paradeigma.com)
-~~~
+</code></pre>
 
 
 	</div>
@@ -1535,86 +1425,75 @@ appos(E-mail, gpapadopoulos@paradeigma.com)
 	<h2><code property="oliasystem:hasTag" lang="">mark</code>: <div property="rdfs:label">marker</div></h2>
 	<div property="rdfs:comment">
 
-A marker is the word introducing a finite clause subordinate to
-another clause. For a [complement clause](ccomp), these typically include *ότι*, *πως*, *μήπως*, *αν* etc.
-Notice that we annotate *να*, *θα* and *ας* particles as instances of [aux](aux).
+<p>A marker is the word introducing a finite clause subordinate to
+another clause. For a <a href="ccomp">complement clause</a>, these typically include <em>ότι</em>, <em>πως</em>, <em>μήπως</em>, <em>αν</em> etc.
+Notice that we annotate <em>να</em>, <em>θα</em> and <em>ας</em> particles as instances of <a href="aux">aux</a>.</p>
 
-~~~ sdparse
-Διαβεβαίωσε ότι οι εθελοντές θα συνεχίσουν το έργο τους 
+<pre><code class="language-sdparse">Διαβεβαίωσε ότι οι εθελοντές θα συνεχίσουν το έργο τους 
 ccomp(Διαβεβαίωσε, συνεχίσουν)
 mark(συνεχίσουν, ότι)
-~~~
+</code></pre>
 
-~~~ sdparse
-είπε πως άρχισαν να γράφουν
+<pre><code class="language-sdparse">είπε πως άρχισαν να γράφουν
 mark(άρχισαν, πως)
 aux(γράφουν, να)
-~~~
+</code></pre>
 
-For an [adverbial clause](advcl), the marker is typically a
-subordinating conjunction like *αφού* or *επειδή*. The marker is a dependent of the
-subordinate clause head. 
+<p>For an <a href="advcl">adverbial clause</a>, the marker is typically a
+subordinating conjunction like <em>αφού</em> or <em>επειδή</em>. The marker is a dependent of the
+subordinate clause head.</p>
 
-~~~ sdparse
-Αφού με περιμένουν δεν έχω άλλη επιλογή 
+<pre><code class="language-sdparse">Αφού με περιμένουν δεν έχω άλλη επιλογή 
 advcl(έχω, περιμένουν)
 mark(περιμένουν, Αφού)
-~~~
+</code></pre>
 
-~~~ sdparse
-Τη συνέλαβαν επειδή βιντεοσκοπούσε το περιστατικό 
+<pre><code class="language-sdparse">Τη συνέλαβαν επειδή βιντεοσκοπούσε το περιστατικό 
 advcl(συνέλαβαν, βιντεοσκοπούσε)
 mark(βιντεοσκοπούσε, επειδή)
-~~~
+</code></pre>
 
-When prepositions are used as subordinate conjunctions to introduce clauses, they are also labelled with the `mark` relation. 
+<p>When prepositions are used as subordinate conjunctions to introduce clauses, they are also labelled with the <code>mark</code> relation.</p>
 
-~~~ sdparse
-Δεν συμμετείχα πριν τη συναντήσω .
+<pre><code class="language-sdparse">Δεν συμμετείχα πριν τη συναντήσω .
 advcl(συμμετείχα, συναντήσω)
 mark(συναντήσω, πριν)
-~~~
+</code></pre>
 
-~~~ sdparse
-Δεν συμμετείχα πριν να τη συναντήσω .
+<pre><code class="language-sdparse">Δεν συμμετείχα πριν να τη συναντήσω .
 advcl(συμμετείχα, συναντήσω)
 mark(συναντήσω, πριν)
 mwe(συναντήσω, να)
-~~~
+</code></pre>
 
-~~~ sdparse
-Ψάχνουν τρόπους για να το σταματήσουν 
+<pre><code class="language-sdparse">Ψάχνουν τρόπους για να το σταματήσουν 
 advcl(Ψάχνουν, σταματήσουν)
 mark(σταματήσουν, για)
 aux(σταματήσουν, να)
-~~~
+</code></pre>
 
-~~~ sdparse
-θα καταλάβουμε το βουνό προτού να ξημερώσει
+<pre><code class="language-sdparse">θα καταλάβουμε το βουνό προτού να ξημερώσει
 advcl(καταλάβουμε, ξημερώσει)
 mark(ξημερώσει, προτού)
 aux(ξημερώσει, να)
-~~~
+</code></pre>
 
-~~~ sdparse
-Ο χρόνος επαρκεί προκειμένου να μάθει ο προπονητής το υλικό και να το δουλέψει 
+<pre><code class="language-sdparse">Ο χρόνος επαρκεί προκειμένου να μάθει ο προπονητής το υλικό και να το δουλέψει 
 advcl(επαρκεί, μάθει)
 mark(δουλέψει, προκειμένου)
 aux(μάθει, να)
 cc(μάθει, και)
 conj(μάθει, δουλέψει)
 aux(δουλέψει, να)
-~~~
+</code></pre>
 
-For certain multiword subordinate conjunctions, we use combinations of the `mark` and the [mwe](mwe) relations. 
+<p>For certain multiword subordinate conjunctions, we use combinations of the <code>mark</code> and the <a href="mwe">mwe</a> relations.</p>
 
-~~~ sdparse
-Αν και βρίσκεται στο σωστό δρόμο χρειάζεται περισσότερο χρόνο
+<pre><code class="language-sdparse">Αν και βρίσκεται στο σωστό δρόμο χρειάζεται περισσότερο χρόνο
 advcl(χρειάζεται, βρίσκεται)
 mark(βρίσκεται, Αν)
 mwe(Αν, και)
-~~~
-
+</code></pre>
 
 
 
@@ -1629,14 +1508,15 @@ mwe(Αν, και)
 	<h2><code property="oliasystem:hasTag" lang="">mwe</code>: <div property="rdfs:label">multi-word expression</div></h2>
 	<div property="rdfs:comment">
 
-For examples of multiword expressions, see and [case]() and [mark](). 
+<p>For examples of multiword expressions, see and <a href="">case</a> and <a href="">mark</a>. 
 Multiword expressions are annotated in a flat, head-initial structure,
 in which all words in the expression modify the first one using the
-`mwe` label.
+<code>mwe</code> label.</p>
 
-**TODO** 
+<p><strong>TODO</strong></p>
 
-A list of common mwe's
+<p>A list of common mwe’s</p>
+
 
 	</div>
 	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_el-dep/mwe.md" target="#">edit mwe</a>
@@ -1649,105 +1529,90 @@ A list of common mwe's
 	<h2><code property="oliasystem:hasTag" lang="">name</code>: <div property="rdfs:label">name</div></h2>
 	<div property="rdfs:comment">
 
-We use the `name` relation for proper nouns constituted of more than one words. 
-The first (leftmost) word is the head, and the other words are direct dependents of the head. 
+<p>We use the <code>name</code> relation for proper nouns constituted of more than one words. 
+The first (leftmost) word is the head, and the other words are direct dependents of the head.</p>
 
-~~~ sdparse
-Τάκης Παπαδόπουλος
+<pre><code class="language-sdparse">Τάκης Παπαδόπουλος
 name(Τάκης, Παπαδόπουλος)
-~~~
+</code></pre>
 
-~~~ sdparse
-Ρωμανός Δ' Διογένης
+<pre><code class="language-sdparse">Ρωμανός Δ' Διογένης
 name(Ρωμανός, Δ')
 name(Ρωμανός, Διογένης)
-~~~
+</code></pre>
 
-~~~ sdparse
-Μάο Τσε Τουνγκ
+<pre><code class="language-sdparse">Μάο Τσε Τουνγκ
 name(Μάο, Τσε)
 name(Μάο, Τουνγκ)
-~~~
+</code></pre>
 
-Regular syntactic relations are used for Greek:
+<p>Regular syntactic relations are used for Greek:
 (i) for a modifier word including determiners, adjectives and adverbs
-(ii) to connect together the words of a description or name which involve embedded prepositional phrases, sentences, etc.
+(ii) to connect together the words of a description or name which involve embedded prepositional phrases, sentences, etc.</p>
 
-~~~ sdparse
-την Παλιά Κοκκινιά
+<pre><code class="language-sdparse">την Παλιά Κοκκινιά
 amod(Κοκκινιά, Παλιά)
 det(Κοκκινιά, την)
-~~~
+</code></pre>
 
-~~~ sdparse
-της Νέας Υόρκης
+<pre><code class="language-sdparse">της Νέας Υόρκης
 amod(Υόρκης, Νέας)
 det(Υόρκης, της)
-~~~
+</code></pre>
 
-~~~ sdparse
-Τα Άνω Δολιανά
+<pre><code class="language-sdparse">Τα Άνω Δολιανά
 det(Δολιανά, Τα)
 advmod(Δολιανά, Άνω)
-~~~
+</code></pre>
 
-~~~ sdparse
-Ο Βασιλιάς της Αγγλίας
+<pre><code class="language-sdparse">Ο Βασιλιάς της Αγγλίας
 det(Βασιλιάς, Ο)
 nmod(Βασιλιάς, Αγγλίας)
 det(Αγγλίας, της)
-~~~
+</code></pre>
 
-This also holds for organization names with clear syntactic modification structure as in:
+<p>This also holds for organization names with clear syntactic modification structure as in:</p>
 
-~~~ sdparse
-Γενική Γραμματεία Εκπαίδευσης Ενηλίκων
+<pre><code class="language-sdparse">Γενική Γραμματεία Εκπαίδευσης Ενηλίκων
 amod(Γραμματεία, Γενική)
 nmod(Γραμματεία, Εκπαίδευσης)
 nmod(Εκπαίδευσης, Ενηλίκων)
-~~~
+</code></pre>
 
-This convention is not used for foreign names (transliterated or not), which are annotated in a flat, head-initial structure, in 
-which all words in the name modify the first one using the `name` label.
+<p>This convention is not used for foreign names (transliterated or not), which are annotated in a flat, head-initial structure, in 
+which all words in the name modify the first one using the <code>name</code> label.</p>
 
-~~~ sdparse
-Σαν Σεμπαστιάν
+<pre><code class="language-sdparse">Σαν Σεμπαστιάν
 name(Σαν, Σεμπαστιάν)
-~~~
+</code></pre>
 
-~~~ sdparse
-Στράτφορντ απόν Έιβον
+<pre><code class="language-sdparse">Στράτφορντ απόν Έιβον
 name(Στράτφορντ, απόν)
 name(Στράτφορντ, Έιβον)
-~~~
+</code></pre>
 
-~~~ sdparse
-Río de la Plata
+<pre><code class="language-sdparse">Río de la Plata
 name(Río, de)
 name(Río, la)
 name(Río, Plata)
-~~~
+</code></pre>
 
-~~~ sdparse
-Ζαν ντ' Αρκ
+<pre><code class="language-sdparse">Ζαν ντ' Αρκ
 name(Ζαν, ντ')
 name(Ζαν, Αρκ)
-~~~
+</code></pre>
 
-~~~ sdparse
-Ludwig van Beethoven
+<pre><code class="language-sdparse">Ludwig van Beethoven
 name(Ludwig, van)
 name(Ludwig, Beethoven)
-~~~
+</code></pre>
 
-~~~ sdparse
-Miguel de Cervantes y Saavedra
+<pre><code class="language-sdparse">Miguel de Cervantes y Saavedra
 name(Miguel, de)
 name(Miguel, y)
 name(Miguel, Cervantes)
 name(Miguel, Saavedra)
-~~~
-
+</code></pre>
 
 
 
@@ -1762,32 +1627,28 @@ name(Miguel, Saavedra)
 	<h2><code property="oliasystem:hasTag" lang="">neg</code>: <div property="rdfs:label">negation modifier</div></h2>
 	<div property="rdfs:comment">
 
-The negation modifier is the relation between a negation word and the
-word it modifies.
+<p>The negation modifier is the relation between a negation word and the
+word it modifies.</p>
 
-Modifiers labeled `neg` depend either on a noun (group “noun
+<p>Modifiers labeled <code>neg</code> depend either on a noun (group “noun
 dependents”) an adjective or on a predicate (group “non-core dependents of clausal
-predicates”).
+predicates”).</p>
 
-~~~ sdparse
-Δεν υπάρχει καμιά εγγύηση
+<pre><code class="language-sdparse">Δεν υπάρχει καμιά εγγύηση
 neg(υπάρχει, Δεν)
-~~~
+</code></pre>
 
-~~~ sdparse
-Ας μη μαλώσουμε μέρα που είναι
+<pre><code class="language-sdparse">Ας μη μαλώσουμε μέρα που είναι
 neg(μαλώσουμε, μη)
-~~~
+</code></pre>
 
-~~~ sdparse
-Προσφέρουν μη ανταγωνιστικές υπηρεσίες
+<pre><code class="language-sdparse">Προσφέρουν μη ανταγωνιστικές υπηρεσίες
 neg(ανταγωνιστικές, μη)
-~~~
+</code></pre>
 
-~~~ sdparse
-της μη αντικατάστασης των απολυμένων
+<pre><code class="language-sdparse">της μη αντικατάστασης των απολυμένων
 neg(αντικατάστασης, μη)
-~~~
+</code></pre>
 
 
 	</div>
@@ -1801,68 +1662,62 @@ neg(αντικατάστασης, μη)
 	<h2><code property="oliasystem:hasTag" lang="">nmod</code>: <div property="rdfs:label">nominal modifier</div></h2>
 	<div property="rdfs:comment">
 
-The `nmod` relation is used for nominal modifiers. They depend either
+<p>The <code>nmod</code> relation is used for nominal modifiers. They depend either
 on another noun (group “noun dependents”) or on a predicate (group
-“non-core dependents of clausal predicates”).
+“non-core dependents of clausal predicates”).</p>
 
-`nmod` is a [noun](u-pos/NOUN) (or noun phrase) functioning as a
+<p><code>nmod</code> is a <a href="u-pos/NOUN">noun</a> (or noun phrase) functioning as a
 non-core (oblique) argument or adjunct.
 This means that it functionally corresponds to an adverbial when it attaches to a verb, adjective or other adverb.
-But when attaching to a noun, it corresponds to an attribute, or genitive complement.
+But when attaching to a noun, it corresponds to an attribute, or genitive complement.</p>
 
-~~~ sdparse
-οι άθλοι του Ηρακλή.Gen
+<pre><code class="language-sdparse">οι άθλοι του Ηρακλή.Gen
 nmod(άθλοι, Ηρακλή.Gen)
-~~~
+</code></pre>
 
-The `nmod` relation can be further specified by the [case]() label assigned to prepositions.
+<p>The <code>nmod</code> relation can be further specified by the <a href="">case</a> label assigned to prepositions.</p>
 
-~~~ sdparse
-γράψαμε το άρθρο σε έξι ώρες
+<pre><code class="language-sdparse">γράψαμε το άρθρο σε έξι ώρες
 nmod(γράψαμε, ώρες)
 case(γράψαμε, σε)
-~~~
+</code></pre>
 
-~~~ sdparse
-είδα τις ανταποκρίσεις για το συμβάν
+<pre><code class="language-sdparse">είδα τις ανταποκρίσεις για το συμβάν
 nmod(ανταποκρίσεις, συμβάν)
 case(συμβάν, για)
-~~~
+</code></pre>
 
-~~~ sdparse
-έφυγαν από την Αλεξανδρούπολη με το αεροπλάνο
+<pre><code class="language-sdparse">έφυγαν από την Αλεξανδρούπολη με το αεροπλάνο
 nmod(έφυγαν, Αλεξανδρούπολη)
 nmod(έφυγαν, αεροπλάνο)
 case(Αλεξανδρούπολη, από)
 case(αεροπλάνο, με)
-~~~
+</code></pre>
 
-~~~ sdparse
-τελείωσε το διαγώνισμα χωρίς ένα λάθος
+<pre><code class="language-sdparse">τελείωσε το διαγώνισμα χωρίς ένα λάθος
 nmod(τελείωσε, λάθος)
 case(λάθος, χωρίς)
-~~~
+</code></pre>
 
-- An exception for Greek is the  [iobj]() label assigned to certain nominal elements preceded by _σε_, _από_ and _για_ prepositions. See  [iobj]() for more.
+<ul>
+  <li>An exception for Greek is the  <a href="">iobj</a> label assigned to certain nominal elements preceded by <em>σε</em>, <em>από</em> and <em>για</em> prepositions. See  <a href="">iobj</a> for more.</li>
+</ul>
 
-~~~ sdparse
-Έδωσε στην Άννα αύξηση
+<pre><code class="language-sdparse">Έδωσε στην Άννα αύξηση
 iobj(Έδωσε, Άννα)
 obj(Έδωσε, αύξηση)
-~~~
+</code></pre>
 
-~~~ sdparse
-Ζήτησε από την Ελένη την κούκλα
+<pre><code class="language-sdparse">Ζήτησε από την Ελένη την κούκλα
 iobj(Ζήτησε, Ελένη)
 obj(Ζήτησε, κούκλα)
-~~~
+</code></pre>
 
-`nmod` is also used for nominal modifiers indicating time, cause, amount etc.:
+<p><code>nmod</code> is also used for nominal modifiers indicating time, cause, amount etc.:</p>
 
-~~~ sdparse
-Θα σε δω την Κυριακή
+<pre><code class="language-sdparse">Θα σε δω την Κυριακή
 nmod(δω, Κυριακή)
-~~~
+</code></pre>
 
 
 
@@ -1877,7 +1732,7 @@ nmod(δω, Κυριακή)
 	<h2><code property="oliasystem:hasTag" lang="">nsubj</code>: <div property="rdfs:label">nominal subject</div></h2>
 	<div property="rdfs:comment">
 
-A nominal subject is a nominal phrase which is the syntactic subject of a clause. (See [csubj]() for cases when the subject is clausal.
+<p>A nominal subject is a nominal phrase which is the syntactic subject of a clause. (See <a href="">csubj</a> for cases when the subject is clausal.</p>
 
 <!--
 TODO
@@ -1887,10 +1742,9 @@ the verb is a copular verb, the root of the clause is the complement
 of the copular verb, which can be an adjective or noun.
 -->
 
-~~~ sdparse
-Ο υπουργός ενημέρωσε το σώμα
+<pre><code class="language-sdparse">Ο υπουργός ενημέρωσε το σώμα
 nsubj(ενημέρωσε, υπουργός)
-~~~
+</code></pre>
 
 <!--
 ~~~ sdparse
@@ -1911,39 +1765,38 @@ nsubj(red, car)
 	<h2><code property="oliasystem:hasTag" lang="">nsubjpass</code>: <div property="rdfs:label">passive nominal subject</div></h2>
 	<div property="rdfs:comment">
 
-A passive nominal subject is a noun phrase which is the syntactic
-subject of a passive clause (or more generally, any voice where the proto-agent argument does not become the subject of the clause).
+<p>A passive nominal subject is a noun phrase which is the syntactic
+subject of a passive clause (or more generally, any voice where the proto-agent argument does not become the subject of the clause).</p>
 
-~~~ sdparse
-Περιορίστηκε η μετάδοση του ιού
+<pre><code class="language-sdparse">Περιορίστηκε η μετάδοση του ιού
 nsubjpass(Περιορίστηκε, μετάδοση)
-~~~
+</code></pre>
 
-Notice that the `nsubj` relation is used for the subjects of 
+<p>Notice that the <code>nsubj</code> relation is used for the subjects of</p>
 
-- reflexive and reciprocal passive constructions
+<ul>
+  <li>reflexive and reciprocal passive constructions</li>
+</ul>
 
-~~~ sdparse
-η Νίκη ετοιμάστηκε για το πάρτι
+<pre><code class="language-sdparse">η Νίκη ετοιμάστηκε για το πάρτι
 nsubj(ετοιμάστηκε, Νίκη)
-~~~
+</code></pre>
 
-~~~ sdparse
-Το ζευγάρι αγκαλιάστηκε 
+<pre><code class="language-sdparse">Το ζευγάρι αγκαλιάστηκε 
 nsubj(αγκαλιάστηκε, ζευγάρι)
-~~~
+</code></pre>
 
-- deponent verbs (verbs that are active in meaning but have only passive voice forms)
+<ul>
+  <li>deponent verbs (verbs that are active in meaning but have only passive voice forms)</li>
+</ul>
 
-~~~ sdparse
-το παιδί κοιμάται στην κούνια του
+<pre><code class="language-sdparse">το παιδί κοιμάται στην κούνια του
 nsubj(κοιμάται, παιδί)
-~~~
+</code></pre>
 
-~~~ sdparse
-Έρχεται παγετός
+<pre><code class="language-sdparse">Έρχεται παγετός
 nsubj(Έρχεται, παγετός)
-~~~
+</code></pre>
 
 
 	</div>
@@ -1957,20 +1810,18 @@ nsubj(Έρχεται, παγετός)
 	<h2><code property="oliasystem:hasTag" lang="">nummod</code>: <div property="rdfs:label">numeric modifier</div></h2>
 	<div property="rdfs:comment">
 
-A numeric modifier of a noun is any [number](u-pos/NUM) phrase
-that serves to modify the meaning of the noun with a quantity.
+<p>A numeric modifier of a noun is any <a href="u-pos/NUM">number</a> phrase
+that serves to modify the meaning of the noun with a quantity.</p>
 
-~~~ sdparse
-Τα τρία τελευταία χρόνια
+<pre><code class="language-sdparse">Τα τρία τελευταία χρόνια
 nummod(χρόνια, τρία)
 det(χρόνια, Τα)
 amod(χρόνια, τελευταία)
-~~~
+</code></pre>
 
-~~~ sdparse
-Ξόδεψε πάνω από 10 ευρώ
+<pre><code class="language-sdparse">Ξόδεψε πάνω από 10 ευρώ
 nummod(ευρώ, 10)
-~~~
+</code></pre>
 
 
 
@@ -1985,27 +1836,23 @@ nummod(ευρώ, 10)
 	<h2><code property="oliasystem:hasTag" lang="">parataxis</code>: <div property="rdfs:label">parataxis</div></h2>
 	<div property="rdfs:comment">
 
-The parataxis relation (from Greek for "place side by side") is a relation between the main verb of a clause and other sentential elements, such as a sentential parenthetical, two sentences placed side by side without any explicit coordination or subordination, or a clause after a ":" or a "·" (_άνω τελεία_), in case a sentence splitter has recognized two different sentences.
+<p>The parataxis relation (from Greek for “place side by side”) is a relation between the main verb of a clause and other sentential elements, such as a sentential parenthetical, two sentences placed side by side without any explicit coordination or subordination, or a clause after a “:” or a “·” (<em>άνω τελεία</em>), in case a sentence splitter has recognized two different sentences.</p>
 
-~~~ sdparse
-«Το αεροσκάφος» ανέφερε ο πρωθυπουργός «δεν εξέπεμψε σήμα κινδύνου».
+<pre><code class="language-sdparse">«Το αεροσκάφος» ανέφερε ο πρωθυπουργός «δεν εξέπεμψε σήμα κινδύνου».
 parataxis(εξέπεμψε, ανέφερε)
-~~~
+</code></pre>
 
-~~~ sdparse
-Αποφάσισε να πληρώσει · δεν μπορούσε να κάνει διαφορετικά.
+<pre><code class="language-sdparse">Αποφάσισε να πληρώσει · δεν μπορούσε να κάνει διαφορετικά.
 parataxis(Αποφάσισε, μπορούσε)
-~~~
+</code></pre>
 
-~~~ sdparse
-Ας το παραδεχτούμε : αποτύχαμε να περάσουμε στο Μουντιάλ .
+<pre><code class="language-sdparse">Ας το παραδεχτούμε : αποτύχαμε να περάσουμε στο Μουντιάλ .
 parataxis(παραδεχτούμε, αποτύχαμε)
-~~~
+</code></pre>
 
-~~~ sdparse
-Ρίξε κάτι πάνω σου , κάνει κρύο .
+<pre><code class="language-sdparse">Ρίξε κάτι πάνω σου , κάνει κρύο .
 parataxis(Ρίξε, κάνει)
-~~~
+</code></pre>
 
 
 	</div>
@@ -2019,35 +1866,31 @@ parataxis(Ρίξε, κάνει)
 	<h2><code property="oliasystem:hasTag" lang="">punct</code>: <div property="rdfs:label">punctuation</div></h2>
 	<div property="rdfs:comment">
 
-A punctuation token is labeled `punct` and it is attached to the element it delimits. Thus, sentence-delimiting punctuation, such as “.”, “!” or “?” should be attached to the main verb (or predicative) of the sentence. Punctuation tokens always attach to content words and can never have dependents.
+<p>A punctuation token is labeled <code>punct</code> and it is attached to the element it delimits. Thus, sentence-delimiting punctuation, such as “.”, “!” or “?” should be attached to the main verb (or predicative) of the sentence. Punctuation tokens always attach to content words and can never have dependents.</p>
 
-~~~ sdparse
-Πήγε σπίτι .
+<pre><code class="language-sdparse">Πήγε σπίτι .
 punct(Πήγε, .)
-~~~
+</code></pre>
 
-~~~ sdparse
-Πήγαινε σπίτι !
+<pre><code class="language-sdparse">Πήγαινε σπίτι !
 punct(Πήγαινε, !)
-~~~
+</code></pre>
 
-~~~ sdparse
-Πήγες σπίτι ;
+<pre><code class="language-sdparse">Πήγες σπίτι ;
 punct(Πήγες, ;-3)
-~~~
+</code></pre>
 
-A punctuation mark delimiting a subordinate clause is attached to the head word of the clause.
+<p>A punctuation mark delimiting a subordinate clause is attached to the head word of the clause.</p>
 
-~~~ sdparse
-Στη Μαλαισία , την οποία αναφέραμε ήδη , επανήλθε η θανατική ποινή .
+<pre><code class="language-sdparse">Στη Μαλαισία , την οποία αναφέραμε ήδη , επανήλθε η θανατική ποινή .
 punct(αναφέραμε, ,-3)
 punct(αναφέραμε, ,-8)
 punct(επανήλθε, .)
-~~~
+</code></pre>
 
-If there are several subordinate clauses within each other and the punctuation could delimit any of them, the shortest-spanning (closest) clause is selected.
+<p>If there are several subordinate clauses within each other and the punctuation could delimit any of them, the shortest-spanning (closest) clause is selected.</p>
 
-A punctuation mark separating coordinated units is attached to the first conjunct.
+<p>A punctuation mark separating coordinated units is attached to the first conjunct.</p>
 
 <div id="punct1" class="sd-parse">
 οι εντυπώσεις του κοινού , των ανακριτών , των ενόρκων και των δικαστών 
@@ -2060,69 +1903,59 @@ punct(κοινού, ,-5)
 punct(κοινού, ,-8)
 </div>
 
-Punctuation items related to parataxis are attached to the head of the first clause.
+<p>Punctuation items related to parataxis are attached to the head of the first clause.</p>
 
-~~~ sdparse
-Ας το παραδεχτούμε : αποτύχαμε να περάσουμε στο Μουντιάλ .
+<pre><code class="language-sdparse">Ας το παραδεχτούμε : αποτύχαμε να περάσουμε στο Μουντιάλ .
 parataxis(παραδεχτούμε, αποτύχαμε)
 punct(παραδεχτούμε, :)
-~~~
+</code></pre>
 
-~~~ sdparse
-Ρίξε κάτι πάνω σου , κάνει κρύο .
+<pre><code class="language-sdparse">Ρίξε κάτι πάνω σου , κάνει κρύο .
 parataxis(Ρίξε, κάνει)
 punct(Ρίξε, ,-5)
-~~~
+</code></pre>
 
-In direct speech parataxis, paired punctuation marks (quotation marks) are attached to the head of the phrase enclosed in the paired punctuation.
+<p>In direct speech parataxis, paired punctuation marks (quotation marks) are attached to the head of the phrase enclosed in the paired punctuation.</p>
 
-~~~ sdparse
-« Το αεροσκάφος » ανέφερε ο πρωθυπουργός « δεν εξέπεμψε σήμα κινδύνου » .
+<pre><code class="language-sdparse">« Το αεροσκάφος » ανέφερε ο πρωθυπουργός « δεν εξέπεμψε σήμα κινδύνου » .
 parataxis(εξέπεμψε, ανέφερε)
 punct(αεροσκάφος, «)
 punct(αεροσκάφος, »)
 punct(εξέπεμψε, «)
 punct(εξέπεμψε, »)
-~~~
+</code></pre>
 
-Generally, paired punctuation marks (quotes and brackets) should be attached to the head of the clause or the phrase enclosed in the paired punctuation.
+<p>Generally, paired punctuation marks (quotes and brackets) should be attached to the head of the clause or the phrase enclosed in the paired punctuation.</p>
 
-~~~ sdparse
-« Ανέβηκαν » επίπεδο  .
+<pre><code class="language-sdparse">« Ανέβηκαν » επίπεδο  .
 punct(Ανέβηκαν, «)
 punct(Ανέβηκαν, »)
-~~~
+</code></pre>
 
-If the above rule leads to non-projectivity, the punctuation is attached to the closest enclosed element.
+<p>If the above rule leads to non-projectivity, the punctuation is attached to the closest enclosed element.</p>
 
-~~~ sdparse
-αν δεν υπήρχε αυτός ( ή αυτή )
+<pre><code class="language-sdparse">αν δεν υπήρχε αυτός ( ή αυτή )
 cc(αυτός, ή)
 punct(ή, (-5)
 punct(αυτή, )-8)
-~~~
+</code></pre>
 
-Punctuation can also delimit short additions, such as nominal modifiers or appositions, and in such cases, the punctuation should be attached to the head of the addition.
+<p>Punctuation can also delimit short additions, such as nominal modifiers or appositions, and in such cases, the punctuation should be attached to the head of the addition.</p>
 
-~~~ sdparse
-Κυνηγά την υπέρβαση , χωρίς μεγάλο άγχος
+<pre><code class="language-sdparse">Κυνηγά την υπέρβαση , χωρίς μεγάλο άγχος
 punct(άγχος, ,-4)
-~~~
+</code></pre>
 
-List item markers such as bullets of a bulleted list are marked as punctuation attached to the head of the list item.
+<p>List item markers such as bullets of a bulleted list are marked as punctuation attached to the head of the list item.</p>
 
-~~~ sdparse
-* 9 σταθμούς εργασίας
+<pre><code class="language-sdparse">* 9 σταθμούς εργασίας
 punct(σταθμούς, *)
-~~~
-
+</code></pre>
 
 <!--
 What does the following regarding ellipsis mean?
 Tokens with the relation [u-dep/punct]() always attach to content words (except in cases of ellipsis) and can never have dependents.
 -->
-
-
 
 
 
@@ -2137,19 +1970,18 @@ Tokens with the relation [u-dep/punct]() always attach to content words (except 
 	<h2><code property="oliasystem:hasTag" lang="">remnant</code>: <div property="rdfs:label">remnant in ellipsis</div></h2>
 	<div property="rdfs:comment">
 
-The `remnant` relation is used to provide a treatment of ellipsis (in
+<p>The <code>remnant</code> relation is used to provide a treatment of ellipsis (in
 the case of gapping and stripping, where a predicational or verbal
-head gets elided). A `remnant` corresponds to a *correlate* in a preceding clause. 
-The `remnant` relation connects each remnant to its correlate in the basic dependency representation. 
+head gets elided). A <code>remnant</code> corresponds to a <em>correlate</em> in a preceding clause. 
+The <code>remnant</code> relation connects each remnant to its correlate in the basic dependency representation.</p>
 
-~~~ sdparse
-Η Προοδευτική κέρδισε το Αιγάλεω , και ο Ιωνικός τη Δόξα . 
+<pre><code class="language-sdparse">Η Προοδευτική κέρδισε το Αιγάλεω , και ο Ιωνικός τη Δόξα . 
 nsubj(κέρδισε, Προοδευτική)
 dobj(κέρδισε, Αιγάλεω)
 cc(κέρδισε, και)
 remnant(Προοδευτική, Ιωνικός)
 remnant(Αιγάλεω, Δόξα)
-~~~
+</code></pre>
 
 
 
@@ -2164,16 +1996,15 @@ remnant(Αιγάλεω, Δόξα)
 	<h2><code property="oliasystem:hasTag" lang="">reparandum</code>: <div property="rdfs:label">overridden disfluency</div></h2>
 	<div property="rdfs:comment">
 
-We use `reparandum` to indicate disfluencies overridden in a speech
-repair. The disfluency is the dependent of the repair.
+<p>We use <code>reparandum</code> to indicate disfluencies overridden in a speech
+repair. The disfluency is the dependent of the repair.</p>
 
-~~~ sdparse
-Έφυγε η καρδερ- η Κατερίνα  .
+<pre><code class="language-sdparse">Έφυγε η καρδερ- η Κατερίνα  .
 nsubj(Έφυγε, Κατερίνα)
 det(Έφυγε, η-4)
 reparandum(Κατερίνα, καρδερ-)
 det(καρδερ-, η-2)
-~~~
+</code></pre>
 
 
 
@@ -2188,19 +2019,17 @@ det(καρδερ-, η-2)
 	<h2><code property="oliasystem:hasTag" lang="">root</code>: <div property="rdfs:label">root</div></h2>
 	<div property="rdfs:comment">
 
-The `root` grammatical relation points to the root of the sentence. A
-fake node `ROOT` is used as the governor. The `ROOT` node is indexed
-with 0, since the indexing of real words in the sentence starts at 1.
+<p>The <code>root</code> grammatical relation points to the root of the sentence. A
+fake node <code>ROOT</code> is used as the governor. The <code>ROOT</code> node is indexed
+with 0, since the indexing of real words in the sentence starts at 1.</p>
 
-~~~ sdparse
-ROOT Θα αποσυρθούν τρεις υπογραφές .
+<pre><code class="language-sdparse">ROOT Θα αποσυρθούν τρεις υπογραφές .
 root(ROOT, αποσυρθούν)
-~~~
+</code></pre>
 
-~~~ sdparse
-ROOT Το αίσιον τέλος .
+<pre><code class="language-sdparse">ROOT Το αίσιον τέλος .
 root(ROOT, τέλος)
-~~~
+</code></pre>
 
 
 	</div>
@@ -2214,18 +2043,16 @@ root(ROOT, τέλος)
 	<h2><code property="oliasystem:hasTag" lang="">vocative</code>: <div property="rdfs:label">vocative</div></h2>
 	<div property="rdfs:comment">
 
-The *vocative* relation is used to mark a dialogue participant addressed in text (common in emails and newsgroup postings). The relation links the addressee's name to its host sentence.
+<p>The <em>vocative</em> relation is used to mark a dialogue participant addressed in text (common in emails and newsgroup postings). The relation links the addressee’s name to its host sentence.</p>
 
-~~~ sdparse
-Κύριοι , έχετε βαριά ευθύνη 
+<pre><code class="language-sdparse">Κύριοι , έχετε βαριά ευθύνη 
 vocative(έχετε, Κύριοι)
-~~~
+</code></pre>
 
-~~~ sdparse
-ROOT Καλημέρα , συνάδελφοι 
+<pre><code class="language-sdparse">ROOT Καλημέρα , συνάδελφοι 
 vocative(Καλημέρα, συνάδελφοι)
 root(ROOT, Καλημέρα)
-~~~
+</code></pre>
 
 <!--
 TODO
@@ -2247,89 +2074,76 @@ vocative(έχετε, Πρόεδρε)
 	<h2><code property="oliasystem:hasTag" lang="">xcomp</code>: <div property="rdfs:label">open clausal complement</div></h2>
 	<div property="rdfs:comment">
 
-An (`xcomp`) label is used in cases of *obligatory coreference* between 
-the subject of a *finite* να-clause, which is not present as a separate 
-word, and an argument (subject or object) of the higher clause. 
+<p>An (<code>xcomp</code>) label is used in cases of <em>obligatory coreference</em> between 
+the subject of a <em>finite</em> να-clause, which is not present as a separate 
+word, and an argument (subject or object) of the higher clause.</p>
 
-~~~ sdparse
-Ο γιατρός δεν ήξερε να του πει την αλήθεια. 
+<pre><code class="language-sdparse">Ο γιατρός δεν ήξερε να του πει την αλήθεια. 
 xcomp(ήξερε, πει)
-~~~
+</code></pre>
 
-~~~ sdparse
-Οι μεταφορείς αναγκάζουν τους οδηγούς να οδηγούν ασταμάτητα 
+<pre><code class="language-sdparse">Οι μεταφορείς αναγκάζουν τους οδηγούς να οδηγούν ασταμάτητα 
 iobj(αναγκάζουν, οδηγούς)
 xcomp(αναγκάζουν, οδηγούν)
-~~~
+</code></pre>
 
-There are some cases where the implied subject of both clauses is present in the complement clause. In these cases, we attach the subject to the verb of the complement clause.
+<p>There are some cases where the implied subject of both clauses is present in the complement clause. In these cases, we attach the subject to the verb of the complement clause.</p>
 
-~~~ sdparse
-Άρχισαν να λένε οι πολιτικοί την αλήθεια στον κόσμο ; 
+<pre><code class="language-sdparse">Άρχισαν να λένε οι πολιτικοί την αλήθεια στον κόσμο ; 
 xcomp(Άρχισαν, λένε)
 nsubj(λένε, πολιτικοί)
-~~~
+</code></pre>
 
-The `xcomp` relation is also used for labelling *obligatory* predicatives in clauses where the verb heading the construction is not the copula *είμαι*
+<p>The <code>xcomp</code> relation is also used for labelling <em>obligatory</em> predicatives in clauses where the verb heading the construction is not the copula <em>είμαι</em></p>
 
-~~~ sdparse
-Ο Γιάννης υπήρξε πρότυπο ανθρώπου 
+<pre><code class="language-sdparse">Ο Γιάννης υπήρξε πρότυπο ανθρώπου 
 xcomp(υπήρξε, πρότυπο)
-~~~
+</code></pre>
 
-~~~ sdparse
-Αυτή η συμπεριφορά μοιάζει παρορμητική .
+<pre><code class="language-sdparse">Αυτή η συμπεριφορά μοιάζει παρορμητική .
 xcomp(μοιάζει, παρορμητική)
-~~~
+</code></pre>
 
-~~~ sdparse
-Η σημερινή ημέρα αποτελεί αφετηρία εξελίξεων 
+<pre><code class="language-sdparse">Η σημερινή ημέρα αποτελεί αφετηρία εξελίξεων 
 xcomp(αποτελεί, αφετηρία)
-~~~
+</code></pre>
 
-~~~ sdparse
-Τον εξέλεξαν βουλευτή 
+<pre><code class="language-sdparse">Τον εξέλεξαν βουλευτή 
 xcomp(εξέλεξαν, βουλευτή)
-~~~
+</code></pre>
 
-~~~ sdparse
-διορίστηκε επιστημονικός συνεργάτης 
+<pre><code class="language-sdparse">διορίστηκε επιστημονικός συνεργάτης 
 xcomp(διορίστηκε, συνεργάτης)
-~~~
+</code></pre>
 
-~~~ sdparse
-διορίστηκε ως επιστημονικός συνεργάτης 
+<pre><code class="language-sdparse">διορίστηκε ως επιστημονικός συνεργάτης 
 xcomp(διορίστηκε, συνεργάτης)
 case(συνεργάτης, ως)
-~~~
+</code></pre>
 
-~~~ sdparse
-περνιέται για ωραίος
+<pre><code class="language-sdparse">περνιέται για ωραίος
 xcomp(περνιέται, ωραίος)
 case(ωραίος, για)
-~~~
+</code></pre>
 
-This relation is also used for the small list of resultatives like 
+<p>This relation is also used for the small list of resultatives like</p>
 
-~~~ sdparse
-έβαψε το σπίτι μπλε
+<pre><code class="language-sdparse">έβαψε το σπίτι μπλε
 dobj(έβαψε, σπίτι)
 xcomp(έβαψε, μπλε)
-~~~
+</code></pre>
 
-~~~ sdparse
-έκοψε τα μαλιά της κοντά
+<pre><code class="language-sdparse">έκοψε τα μαλιά της κοντά
 dobj(έκοψε, μαλιά)
 xcomp(έκοψε, κοντά)
-~~~
+</code></pre>
 
-~~~ sdparse
-έκανε το άρθρο αγνώριστο
+<pre><code class="language-sdparse">έκανε το άρθρο αγνώριστο
 dobj(έκανε, άρθρο)
 xcomp(έκανε, αγνώριστο)
-~~~
+</code></pre>
 
-For other optional secondary predicates of an adverbial nature, see [advcl](el-dep/advcl).
+<p>For other optional secondary predicates of an adverbial nature, see <a href="el-dep/advcl">advcl</a>.</p>
 
 
 	</div>

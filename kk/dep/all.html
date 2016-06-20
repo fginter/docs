@@ -250,55 +250,51 @@ in two places.</p>
 	<h2><code property="oliasystem:hasTag" lang="">acl</code>: <div property="rdfs:label">clausal modifier of noun</div></h2>
 	<div property="rdfs:comment">
 
-`acl` stands for finite and non-finite clauses that modify a noun, in
-contrast to the [advcl]() relation which is used for adverbial clauses
-that modify a predicate. The head of the `acl` relation is the noun
+<p><code>acl</code> stands for finite and non-finite clauses that modify a noun, in
+contrast to the <a href="">advcl</a> relation which is used for adverbial clauses
+that modify a predicate. The head of the <code>acl</code> relation is the noun
 that is modified, and the dependent is the head of the clause that
-modifies the noun.
+modifies the noun.</p>
 
-We use `acl` for:
+<p>We use <code>acl</code> for:</p>
 
-Verbal adjectives that modify nouns:
+<p>Verbal adjectives that modify nouns:</p>
 
-~~~ sdparse
-Тез   жүгіретін   спортшылар   көрдін . \n Fast running athletes saw-I .
+<pre><code class="language-sdparse">Тез   жүгіретін   спортшылар   көрдін . \n Fast running athletes saw-I .
 acl(спортшылар-3, жүгіретін-2)
 advmod(жүгіретін-2, Тез-1)
 obj(көрдін-4, спортшылар-3)
 punct(көрдін-4, .-5)
-~~~
+</code></pre>
 
-This relation may be tagged with `acl:relcl` in the future, as it is the way
-in which Turkic languages do relative clauses.
+<p>This relation may be tagged with <code>acl:relcl</code> in the future, as it is the way
+in which Turkic languages do relative clauses.</p>
 
-Gerunds in genitive modifying a noun:
+<p>Gerunds in genitive modifying a noun:</p>
 
-~~~ sdparse
-Некенің тоқтатылуы жаңадан некеге тұру құқығын туғызады . \n Marriage-of terminating new-from marriage-to ? right is-born .
+<pre><code class="language-sdparse">Некенің тоқтатылуы жаңадан некеге тұру құқығын туғызады . \n Marriage-of terminating new-from marriage-to ? right is-born .
 acl(құқығын-6, тұру-5)
 
-~~~
+</code></pre>
 
-Fronted relative clauses with empty copula:
+<p>Fronted relative clauses with empty copula:</p>
 
-~~~ sdparse
-Шашы       ұзын     қызды     көрдім . \n Hair long girl saw-I .
+<pre><code class="language-sdparse">Шашы       ұзын     қызды     көрдім . \n Hair long girl saw-I .
 acl(қызды-3, ұзын-2)
 obj(көрдім-4, қызды-3)
 subj(ұзын-2, Шашы-1)
 punct(көрдім-4, .-5)
-~~~
+</code></pre>
 
-Conditional phrases with 'болса':
+<p>Conditional phrases with ‘болса’:</p>
 
-~~~ sdparse 
-Құлдық пен құл саудасына , қандай түрде болса да , тыйым салынады . \n Slavery and slave trade , whichever form-in may-be also , prohibition is-placed-on .
+<pre><code class="language-sdparse">Құлдық пен құл саудасына , қандай түрде болса да , тыйым салынады . \n Slavery and slave trade , whichever form-in may-be also , prohibition is-placed-on .
 acl(түрде-7, болса-8)
 advmod(болса-8, да-9)
 
-~~~
+</code></pre>
 
-Secondary predication:
+<p>Secondary predication:</p>
 
 
 
@@ -313,26 +309,24 @@ Secondary predication:
 	<h2><code property="oliasystem:hasTag" lang="">advcl</code>: <div property="rdfs:label">adverbial clause modifier</div></h2>
 	<div property="rdfs:comment">
 
-*Adverbial clause modifiers* (`advcl`) are subordinate clauses that
-are not complements. 
+<p><em>Adverbial clause modifiers</em> (<code>advcl</code>) are subordinate clauses that
+are not complements.</p>
 
-Note that unless there is a separate subject for the "subordinate" clause, 
-the subject will be the same as for the main clause, but is not directly connected. 
+<p>Note that unless there is a separate subject for the “subordinate” clause, 
+the subject will be the same as for the main clause, but is not directly connected.</p>
 
-~~~ sdparse
-Айгүл санап біткеннен кейін айналасына қарады . \n Aygül counting finishing-from after around looks . 
+<pre><code class="language-sdparse">Айгүл санап біткеннен кейін айналасына қарады . \n Aygül counting finishing-from after around looks . 
 advcl(қарады-6, санап-2)
 aux(санап-2, біткеннен-3)
 case(біткеннен-3, кейін-4)
 subj(қарады-6, Айгүл-1)
 obj(қарады-6, айналасына-5)
-~~~
+</code></pre>
 
-Comparison:
+<p>Comparison:</p>
 
-We also use `advcl` for the comparator in comparison constructions like "X is bigger 
-than Y", in Turkic, the "than Y" is in the ablative case and this depends on the adjective X. 
-
+<p>We also use <code>advcl</code> for the comparator in comparison constructions like “X is bigger 
+than Y”, in Turkic, the “than Y” is in the ablative case and this depends on the adjective X.</p>
 
 
 
@@ -347,29 +341,27 @@ than Y", in Turkic, the "than Y" is in the ablative case and this depends on the
 	<h2><code property="oliasystem:hasTag" lang="">advmod</code>: <div property="rdfs:label">adverb modifier</div></h2>
 	<div property="rdfs:comment">
 
-The dependency type `advmod` is used for *adverb modifiers* of verbs,
-nominals and adverbs alike.
+<p>The dependency type <code>advmod</code> is used for <em>adverb modifiers</em> of verbs,
+nominals and adverbs alike.</p>
 
-Governed by a verb:
+<p>Governed by a verb:</p>
 
-~~~ sdparse
-Бақыткүл мүлдем өзгерді . \n Baqıtkul completely changed . 
+<pre><code class="language-sdparse">Бақыткүл мүлдем өзгерді . \n Baqıtkul completely changed . 
 advmod(өзгерді-3, мүлдем-2)
 nsubj(өзгерді-3, Бақыткүл-1)
 punct(өзгерді-3, .-4)
-~~~
+</code></pre>
 
-Governed by an adjective:
+<p>Governed by an adjective:</p>
 
-~~~ sdparse 
-Бірақ кеше өте суық еді ! \n But yesterday very cold was-it !
+<pre><code class="language-sdparse">Бірақ кеше өте суық еді ! \n But yesterday very cold was-it !
 advmod(суық-4, өте-3)
 cop(суық-4, еді-5)
-~~~
+</code></pre>
 
 <!-- noun-->
 
-Note that adjectives used adverbially are also given this relation.
+<p>Note that adjectives used adverbially are also given this relation.</p>
 
 
 	</div>
@@ -383,42 +375,37 @@ Note that adjectives used adverbially are also given this relation.
 	<h2><code property="oliasystem:hasTag" lang="">amod</code>: <div property="rdfs:label">adjectival modifier</div></h2>
 	<div property="rdfs:comment">
 
-Nouns may take adjectival modifiers, which are marked with the
-dependency type `amod`. 
+<p>Nouns may take adjectival modifiers, which are marked with the
+dependency type <code>amod</code>.</p>
 
-~~~ sdparse
-Азамат үлкен бір ағаш көрді . \n Azamat big one tree sees . 
+<pre><code class="language-sdparse">Азамат үлкен бір ағаш көрді . \n Azamat big one tree sees . 
 amod(ағаш-4, үлкен-2)
 subj(көрді-5, Азамат-1)
 obj(көрді-5, ағаш-4)
-~~~
+</code></pre>
 
-Ordinal numerals:
+<p>Ordinal numerals:</p>
 
-The `amod` relation is also used for ordinal numerals. Note that these may not be explicitly marked in the morphology.
+<p>The <code>amod</code> relation is also used for ordinal numerals. Note that these may not be explicitly marked in the morphology.</p>
 
-~~~ sdparse
-1968 жылдан бастап Ширазда театр фестивалы өткізіліп тұрды . \n 1968 year-from starting Shiraz-in theatre festival take-place does .
+<pre><code class="language-sdparse">1968 жылдан бастап Ширазда театр фестивалы өткізіліп тұрды . \n 1968 year-from starting Shiraz-in theatre festival take-place does .
 amod(жылдан-2, 1968-1)
 nmod(бастап-3, жылдан-2)
-~~~
+</code></pre>
 
-~~~ sdparse
-Қызметін 1933 жылы ғана бастаған . \n His-service 1993rd year only he-began .
+<pre><code class="language-sdparse">Қызметін 1933 жылы ғана бастаған . \n His-service 1993rd year only he-began .
 amod(жылы-3, 1993-2)
-~~~
+</code></pre>
 
-Locative attributives:
+<p>Locative attributives:</p>
 
-Substantives in the attributive form of the locative (-DAGI) are also marked with `amod`. (Pending clarification)
+<p>Substantives in the attributive form of the locative (-DAGI) are also marked with <code>amod</code>. (Pending clarification)</p>
 
-~~~ sdparse
-Олар әрдайым үлкен үйдің алдындағы бақшада бірге ойнайды . \n They always big house-of front-in garden-in together play .
+<pre><code class="language-sdparse">Олар әрдайым үлкен үйдің алдындағы бақшада бірге ойнайды . \n They always big house-of front-in garden-in together play .
 amod(бақшада-6, алдындағы-5)
 nmod(ойнайды-8, бақшада-6)
 subj(ойнайды-8, Олар-1)
-~~~
-
+</code></pre>
 
 
 
@@ -433,16 +420,15 @@ subj(ойнайды-8, Олар-1)
 	<h2><code property="oliasystem:hasTag" lang="">appos</code>: <div property="rdfs:label">apposition</div></h2>
 	<div property="rdfs:comment">
 
-An appositional modifier of a noun is a nominal immediately 
+<p>An appositional modifier of a noun is a nominal immediately 
 following the first noun that serves to define or modify that noun. It 
 includes examples in parentheses, as well as defining abbreviations 
-in one of these structures. 
+in one of these structures.</p>
 
-~~~ sdparse
-Олар екеуі де көңілді үйге қарай келе жатыр . \n They both also happily house-to towards coming go .
+<pre><code class="language-sdparse">Олар екеуі де көңілді үйге қарай келе жатыр . \n They both also happily house-to towards coming go .
 appos(Олар-1, екеуі-2)
 nsubj(келе-7, Олар-1)
-~~~
+</code></pre>
 
 <!-- more examples -->
 
@@ -458,36 +444,37 @@ nsubj(келе-7, Олар-1)
 	<h2><code property="oliasystem:hasTag" lang="">aux</code>: <div property="rdfs:label">auxiliary</div></h2>
 	<div property="rdfs:comment">
 
-In Kazakh, only a closed list of verbs can act as auxiliaries. These are words
-take part in participle constructions.
+<p>In Kazakh, only a closed list of verbs can act as auxiliaries. These are words
+take part in participle constructions.</p>
 
-The full list of auxiliaries is as follows:
+<p>The full list of auxiliaries is as follows:</p>
 
-* _ал-_ "do, make"
-* _баста-_ "start"
-* _бер-_ ""
-* _біт-_ ""
-* _бітір-_ ""
-* _бол-_ "be"
-* _ет-_ ""
-* _жазда-_ ""
-* _жат-_ ""
-* _жүр-_ ""
-* _қал-_ ""
-* _кел-_ "come"
-* _кет-_ ""
-* _көр-_ "see"
-* _отыр-_ ""
-* _сал-_ ""
-* _тұр-_ "stand"
-* _шық-_ ""
+<ul>
+  <li><em>ал-</em> “do, make”</li>
+  <li><em>баста-</em> “start”</li>
+  <li><em>бер-</em> “”</li>
+  <li><em>біт-</em> “”</li>
+  <li><em>бітір-</em> “”</li>
+  <li><em>бол-</em> “be”</li>
+  <li><em>ет-</em> “”</li>
+  <li><em>жазда-</em> “”</li>
+  <li><em>жат-</em> “”</li>
+  <li><em>жүр-</em> “”</li>
+  <li><em>қал-</em> “”</li>
+  <li><em>кел-</em> “come”</li>
+  <li><em>кет-</em> “”</li>
+  <li><em>көр-</em> “see”</li>
+  <li><em>отыр-</em> “”</li>
+  <li><em>сал-</em> “”</li>
+  <li><em>тұр-</em> “stand”</li>
+  <li><em>шық-</em> “”</li>
+</ul>
 
-Note: Some of these are ambiguous with lexical verbs.
+<p>Note: Some of these are ambiguous with lexical verbs.</p>
 
-#### Examples
+<h4 id="examples">Examples</h4>
 
-~~~ sdparse
-Ол терезеден Азамат пен Айгүлдің ойнағанына қарап тұр . \n She window-through Azamat and Aygül's playing watching stands .
+<pre><code class="language-sdparse">Ол терезеден Азамат пен Айгүлдің ойнағанына қарап тұр . \n She window-through Azamat and Aygül's playing watching stands .
 nsubj(қарап-7, Ол-1)
 nsubj(ойнағанына-6, Айгүлдің-5)
 aux(қарап-7, тұр-8)
@@ -496,7 +483,7 @@ nmod(қарап-7, терезеден-2)
 cc(Айгүлдің-5, пен-4)
 conj(Азамат-3, пен-4)
 ccomp(қарап-7, ойнағанына-6)
-~~~
+</code></pre>
 
 
 
@@ -511,8 +498,8 @@ ccomp(қарап-7, ойнағанына-6)
 	<h2><code property="oliasystem:hasTag" lang="">auxpass</code>: <div property="rdfs:label">passive auxiliary</div></h2>
 	<div property="rdfs:comment">
 
-This document is a placeholder for the language-specific documentation
-for `auxpass`.
+<p>This document is a placeholder for the language-specific documentation
+for <code>auxpass</code>.</p>
 
 
 	</div>
@@ -526,38 +513,36 @@ for `auxpass`.
 	<h2><code property="oliasystem:hasTag" lang="">case</code>: <div property="rdfs:label">case marking</div></h2>
 	<div property="rdfs:comment">
 
-The dependency type `case` is used for the postposition in 
+<p>The dependency type <code>case</code> is used for the postposition in 
 postpositional phrases. The head of
 a postpositional phrase is the nominal, not the postposition, so as to
 analyse postpositional phrases similarly to nominal modifiers without a
 postposition. (Such nominal modifiers are frequent in Kazakh, as cases
 are often used for the same purpose as postpositions.) To the same end,
-the type `case` is used in combination with the type `nmod`, which is
+the type <code>case</code> is used in combination with the type <code>nmod</code>, which is
 also used for nominal modifiers when no adposition is present (see
-[nmod]()).
+<a href="">nmod</a>).</p>
 
 <!-- fname:adpos.pdf -->
-~~~ sdparse
-Азамат ағашқа қарай жүгірді . \n Azamat tree-to towards ran .
+<pre><code class="language-sdparse">Азамат ағашқа қарай жүгірді . \n Azamat tree-to towards ran .
 nsubj(жүгірді-4, Азамат-1)
 case(ағашқа-2, қарай-3)
 punct(жүгірді-4, .-5)
 nmod(жүгірді-4, ағашқа-2)
-~~~
+</code></pre>
 
-Note that case is not used with auxiliary nouns (sometimes called "postpositions") in 
+<p>Note that case is not used with auxiliary nouns (sometimes called “postpositions”) in 
 the form of N¹.gen N².poss.case, for those nmod should be used (following treatment 
-in English of prepositional constructions like "in front of"). 
+in English of prepositional constructions like “in front of”).</p>
 
-~~~ sdparse
-Айгүл бақшаның ішінде ақырын басып жүр . \n Aygül garden-of inside-in quietly walking is .
+<pre><code class="language-sdparse">Айгүл бақшаның ішінде ақырын басып жүр . \n Aygül garden-of inside-in quietly walking is .
 nsubj(басып-5, Айгүл-1)
 nmod:poss(ішінде-3, бақшаның-2)
 nmod(басып-5, ішінде-3)
 advmod(басып-5, ақырын-4)
 aux(басып-5, жүр-6)
 punct(басып-5, .-7)
-~~~
+</code></pre>
 
 
 
@@ -572,11 +557,10 @@ punct(басып-5, .-7)
 	<h2><code property="oliasystem:hasTag" lang="">cc</code>: <div property="rdfs:label">coordinating conjunction</div></h2>
 	<div property="rdfs:comment">
 
-*Coordinating conjunctions* are marked as dependents of the last 
-coordinated element, and the dependency type used is `cc`.
+<p><em>Coordinating conjunctions</em> are marked as dependents of the last 
+coordinated element, and the dependency type used is <code>cc</code>.</p>
 
-~~~ sdparse
-Олар Финляндия , Швеция және Эстонияидан кейін Ресейге барды . \n They Finland , Sweden and Estonia-from after Russia-to went .
+<pre><code class="language-sdparse">Олар Финляндия , Швеция және Эстонияидан кейін Ресейге барды . \n They Finland , Sweden and Estonia-from after Russia-to went .
 case(Эстонияидан-6, кейін-7)
 conj(Эстонияидан-6, Швеция-4)
 cc(Эстонияидан-6, және-5)
@@ -585,9 +569,9 @@ punct(Эстонияидан-6, ,-3)
 nmod(барды-9, Эстонияидан-6)
 subj(барды-9, Олар-1)
 nmod(барды-9, Ресейге-8)
-~~~
+</code></pre>
 
-Note: Coordination directionality is under discussion. 
+<p>Note: Coordination directionality is under discussion.</p>
 
 
 	</div>
@@ -601,15 +585,14 @@ Note: Coordination directionality is under discussion.
 	<h2><code property="oliasystem:hasTag" lang="">ccomp</code>: <div property="rdfs:label">clausal complement</div></h2>
 	<div property="rdfs:comment">
 
-*Clausal complement* is an object like clausal dependent. The governor is most
+<p><em>Clausal complement</em> is an object like clausal dependent. The governor is most
 commonly, although not always, the main verb or predicative of the
 main clause, and the dependent is the main verb or predicative of the
 dependent clause. The clausal complement can also modify a word other
 than a verb, most often a noun or pronoun. Most commonly clausal
-complements are verbal nouns in accusative or dative.
+complements are verbal nouns in accusative or dative.</p>
 
-~~~ sdparse
-Ол терезеден Азамат пен Айгүлдің ойнағанына қарап тұр . \n She window-through Azamat and Aygül's playing watching stands .
+<pre><code class="language-sdparse">Ол терезеден Азамат пен Айгүлдің ойнағанына қарап тұр . \n She window-through Azamat and Aygül's playing watching stands .
 nsubj(қарап-7, Ол-1)
 nsubj(ойнағанына-6, Айгүлдің-5)
 aux(қарап-7, тұр-8)
@@ -618,34 +601,32 @@ nmod(қарап-7, терезеден-2)
 cc(Айгүлдің-5, пен-4)
 conj(Азамат-3, пен-4)
 ccomp(қарап-7, ойнағанына-6)
-~~~
+</code></pre>
 
-Another example:
+<p>Another example:</p>
 
-~~~ sdparse
-Сайттың маңызды екенін түсінбей жатыр . \n Site importance being not-understanding is .
+<pre><code class="language-sdparse">Сайттың маңызды екенін түсінбей жатыр . \n Site importance being not-understanding is .
 ccomp(түсінбей-4, маңызды-2)
 cop(маңызды-2, екенін-3)
 nmod:poss(маңызды-2, Сайттың-1)
 aux(түсінбей-4, жатыр-5)
 punct(түсінбей-4, .-6)
-~~~
+</code></pre>
 
-Note that if the complement is completely controlled by the matrix verb, that
+<p>Note that if the complement is completely controlled by the matrix verb, that
 is it does not permit another subject or object, then the relation should be 
-`xcomp`.
+<code>xcomp</code>.</p>
 
-We also use `ccomp` for the complement of reported speech clauses with де- (e.g.
-деп, деген, ...)
+<p>We also use <code>ccomp</code> for the complement of reported speech clauses with де- (e.g.
+деп, деген, …)</p>
 
-~~~ sdparse
-« Төрге шық , тамақ іш » , - демепті . \n « Tör-to go-back , food drink » , - said-not-they .
+<pre><code class="language-sdparse">« Төрге шық , тамақ іш » , - демепті . \n « Tör-to go-back , food drink » , - said-not-they .
 ccomp(демепті-10, іш-6)
 obj(іш-6, тамақ-5)
 conj(іш-6, шық-3)
 nmod(шық-3, Төрге-2)
 punct(демепті-10, .-11)
-~~~
+</code></pre>
 
 
 	</div>
@@ -659,42 +640,39 @@ punct(демепті-10, .-11)
 	<h2><code property="oliasystem:hasTag" lang="">compound</code>: <div property="rdfs:label">compound</div></h2>
 	<div property="rdfs:comment">
 
-`compound` is one of the three UD relations UD for compounding,
-together with [mwe]() and [name]().
+<p><code>compound</code> is one of the three UD relations UD for compounding,
+together with <a href="">mwe</a> and <a href="">name</a>.</p>
 
-Nouns should modify appropriate noun in the compound in order to respect the branching structure.
+<p>Nouns should modify appropriate noun in the compound in order to respect the branching structure.</p>
 
-Most uses of attr will be tagged with compound.
+<p>Most uses of attr will be tagged with compound.</p>
 
-~~~ sdparse
-Қазақстан көрші елдерге үлгі бола алады . \n Kazakhstan neighbour countries-to example be can . 
+<pre><code class="language-sdparse">Қазақстан көрші елдерге үлгі бола алады . \n Kazakhstan neighbour countries-to example be can . 
 compound(елдерге-3, көрші-2)
 nsubj(бола-5, Қазақстан-1)
 aux(бола-5, алады-6)
 punct(бола-5, .-7)
-~~~
+</code></pre>
 
-Nouns in the izafet construction (e.g. possessive on the final noun) should not get the compound relation,
-they should instead be labelled `nmod:poss`, e.g.
+<p>Nouns in the izafet construction (e.g. possessive on the final noun) should not get the compound relation,
+they should instead be labelled <code>nmod:poss</code>, e.g.</p>
 
-~~~ sdparse
-Дүниежүзілік экономикалық дағдарыс Иран экономикасын тұралатып тастады . \n Global economic depression Iran-of economy declining threw .
+<pre><code class="language-sdparse">Дүниежүзілік экономикалық дағдарыс Иран экономикасын тұралатып тастады . \n Global economic depression Iran-of economy declining threw .
 nmod:poss(экономикасын-5, Иран-4)
 obj(тастады-7, экономикасын-5)
-~~~
+</code></pre>
 
-Numerical expressions consisting of multiple tokens are annotated
-using the `compound` dependency type. The last word of the numerical
-expression is the governor, and the number dependencies are chained.
+<p>Numerical expressions consisting of multiple tokens are annotated
+using the <code>compound</code> dependency type. The last word of the numerical
+expression is the governor, and the number dependencies are chained.</p>
 
-~~~ sdparse
-Мұнай экспортынан жыл сайын 16,3 миллиард АҚШ доллары түседі . \n Oil exports-from year per 16,3 milliard USA dollar falls
+<pre><code class="language-sdparse">Мұнай экспортынан жыл сайын 16,3 миллиард АҚШ доллары түседі . \n Oil exports-from year per 16,3 milliard USA dollar falls
 nmod(доллары-8, АҚШ-7)
 nummod(доллары-8, миллиард-6)
 nsubj(түседі-9, доллары-8)
 compound(миллиард-6, 16,3-5)
 punct(түседі-9, .-10)
-~~~
+</code></pre>
 
 
 	</div>
@@ -708,13 +686,12 @@ punct(түседі-9, .-10)
 	<h2><code property="oliasystem:hasTag" lang="">conj</code>: <div property="rdfs:label">coordinated element</div></h2>
 	<div property="rdfs:comment">
 
-A conjunct is the relation between two elements connected by a coordinating 
+<p>A conjunct is the relation between two elements connected by a coordinating 
 conjunction, such және, мен, немесе, etc. We treat conjunctions 
 asymmetrically: The head of the relation is the last conjunct and all the 
-other conjuncts depend on it via the `conj` relation.
+other conjuncts depend on it via the <code>conj</code> relation.</p>
 
-~~~ sdparse
-Олар Финляндия , Швеция және Эстонияидан кейін Ресейге барды . \n They Finland , Sweden and Estonia-from after Russia-to went .
+<pre><code class="language-sdparse">Олар Финляндия , Швеция және Эстонияидан кейін Ресейге барды . \n They Finland , Sweden and Estonia-from after Russia-to went .
 case(Эстонияидан-6, кейін-7)
 conj(Эстонияидан-6, Швеция-4)
 cc(Эстонияидан-6, және-5)
@@ -723,13 +700,13 @@ punct(Эстонияидан-6, ,-3)
 nmod(барды-9, Эстонияидан-6)
 subj(барды-9, Олар-1)
 nmod(барды-9, Ресейге-8)
-~~~
+</code></pre>
 
-Warning: If two sentences are joined with a comma and there is no relation between them, the relation should be parataxis. 
+<p>Warning: If two sentences are joined with a comma and there is no relation between them, the relation should be parataxis.</p>
 
-## Diffs
+<h2 id="diffs">Diffs</h2>
 
-Note: Coordination directionality is under discussion. 
+<p>Note: Coordination directionality is under discussion.</p>
 
 
 	</div>
@@ -743,62 +720,59 @@ Note: Coordination directionality is under discussion.
 	<h2><code property="oliasystem:hasTag" lang="">cop</code>: <div property="rdfs:label">copula</div></h2>
 	<div property="rdfs:comment">
 
-*Warning: DRAFT*
+<p><em>Warning: DRAFT</em></p>
 
-A copula verb is a linking verb that joins a subject with a predicate.
+<p>A copula verb is a linking verb that joins a subject with a predicate.
 Copular clauses receive a special treatment. The
 predicative acts as the head word of the clause, and the copular verb
-depends on it using a `cop` (*copula*) dependency. The `cop` relation
+depends on it using a <code>cop</code> (<em>copula</em>) dependency. The <code>cop</code> relation
 is only applied when the verb is used to link a subject to its predicate
-(although the subject may be left out).
+(although the subject may be left out).</p>
 
-The full list of copula verbs is as follows:
+<p>The full list of copula verbs is as follows:</p>
 
-* _бол-_ "be, become"
-* _е-_ "be" (defective)
+<ul>
+  <li><em>бол-</em> “be, become”</li>
+  <li><em>е-</em> “be” (defective)</li>
+</ul>
 
-If the morphological analyser used outputs an е- copula in aorist third person
-then this is attached as a leaf node.
+<p>If the morphological analyser used outputs an е- copula in aorist third person
+then this is attached as a leaf node.</p>
 
-~~~ sdparse
-Бұл ойын &lt;ø . \n It game is . 
+<pre><code class="language-sdparse">Бұл ойын &lt;ø . \n It game is . 
 cop(ойын-2, &lt;ø-3)
 nsubj(ойын-2, Бұл-1)
 punct(ойын-2, .-4)
-~~~
+</code></pre>
 
-If the copula is not third person it has overt person marking: 
+<p>If the copula is not third person it has overt person marking:</p>
 
-~~~ sdparse
-Мен студент &lt;пін . \n I student am .
+<pre><code class="language-sdparse">Мен студент &lt;пін . \n I student am .
 cop(студент-2, &lt;пін-3)
 nsubj(студент-2, Мен-1)
 punct(студент-2, .-4)
-~~~
+</code></pre>
 
-In the past it surfaces as еді-:
+<p>In the past it surfaces as еді-:</p>
 
-~~~ sdparse
-Бірақ кеше өте суық еді ! \n But yesterday very cold was-it !
+<pre><code class="language-sdparse">Бірақ кеше өте суық еді ! \n But yesterday very cold was-it !
 advmod(суық-4, өте-3)
 cop(суық-4, еді-5)
-~~~
+</code></pre>
 
-Use of "бол" without a predicate:
+<p>Use of “бол” without a predicate:</p>
 
-~~~ sdparse
-Эрте заманда Эрназар деген киши болуптур . \n Early time-in Ernazar called person was .
+<pre><code class="language-sdparse">Эрте заманда Эрназар деген киши болуптур . \n Early time-in Ernazar called person was .
 
-~~~
+</code></pre>
 
-Use of "бол" without subject or predicate:
+<p>Use of “бол” without subject or predicate:</p>
 
-~~~ sdparse 
-Шылым шегуге болмайды . \n Cigarette smoking is-allowed-not .
+<pre><code class="language-sdparse">Шылым шегуге болмайды . \n Cigarette smoking is-allowed-not .
 
-~~~
+</code></pre>
 
-*Warning: DRAFT*
+<p><em>Warning: DRAFT</em></p>
 
 
 	</div>
@@ -812,14 +786,13 @@ Use of "бол" without subject or predicate:
 	<h2><code property="oliasystem:hasTag" lang="">csubj</code>: <div property="rdfs:label">clausal subject</div></h2>
 	<div property="rdfs:comment">
 
-A *clausal subject* (`csubj`) is a clause that acts as the subject of
-another clause.
+<p>A <em>clausal subject</em> (<code>csubj</code>) is a clause that acts as the subject of
+another clause.</p>
 
-~~~ sdparse
-Мүсін жасау , жартастарға рельеф қашау елеулі орын алды . \n Sculpture making , cliffs-to reliefs carving important place took .
+<pre><code class="language-sdparse">Мүсін жасау , жартастарға рельеф қашау елеулі орын алды . \n Sculpture making , cliffs-to reliefs carving important place took .
 csubj(алды-9, қашау-6)
 dobj(алды-9, орын-8)
-~~~
+</code></pre>
 
 
 
@@ -834,8 +807,8 @@ dobj(алды-9, орын-8)
 	<h2><code property="oliasystem:hasTag" lang="">dep</code>: <div property="rdfs:label">unspecified dependency</div></h2>
 	<div property="rdfs:comment">
 
-This document is a placeholder for the language-specific documentation
-for `dep`.
+<p>This document is a placeholder for the language-specific documentation
+for <code>dep</code>.</p>
 
 
 	</div>
@@ -849,29 +822,26 @@ for `dep`.
 	<h2><code property="oliasystem:hasTag" lang="">det</code>: <div property="rdfs:label">determiner</div></h2>
 	<div property="rdfs:comment">
 
-A determiner is the relation between the head of an NP and its determiner. 
+<p>A determiner is the relation between the head of an NP and its determiner.</p>
 
-~~~ sdparse
-Тойға көп кісі жиналыпты . \n Feast-to a_lot people gathered .
+<pre><code class="language-sdparse">Тойға көп кісі жиналыпты . \n Feast-to a_lot people gathered .
 subj(жиналыпты-4, кісі-3)
 nmod(жиналыпты-4, Тойға-1)
 det(кісі-3, көп-2)
 punct(жиналыпты-4, .-5)
-~~~
+</code></pre>
 
-~~~ sdparse
-Қайсы кітапты жақсы_көресің ? \n Which book prefer-you ?
+<pre><code class="language-sdparse">Қайсы кітапты жақсы_көресің ? \n Which book prefer-you ?
 det(кітапты-2, Қайсы-1)
 punct(жақсы_көресің-3, ?-4)
 obj(жақсы_көресің-3, кітапты-2)
-~~~
+</code></pre>
 
-Another example:
+<p>Another example:</p>
 
-~~~ sdparse
-Барлық шығыстарды бұл одақ көтереді . \n All expenses this union lifts .
+<pre><code class="language-sdparse">Барлық шығыстарды бұл одақ көтереді . \n All expenses this union lifts .
 det(шығыстарды-2, Барлық-1)
-~~~
+</code></pre>
 
 
 	</div>
@@ -885,29 +855,26 @@ det(шығыстарды-2, Барлық-1)
 	<h2><code property="oliasystem:hasTag" lang="">discourse</code>: <div property="rdfs:label">discourse element</div></h2>
 	<div property="rdfs:comment">
 
-*Discourse elements* are interjections, exclamations or emoticons. They are attached to the main verb or predicative of the
-sentence with the `discourse` dependency type. 
+<p><em>Discourse elements</em> are interjections, exclamations or emoticons. They are attached to the main verb or predicative of the
+sentence with the <code>discourse</code> dependency type.</p>
 
-~~~ sdparse
-Жоқ , Айгүлдің күшігі жоқ . \n No , Aygül's dog not-existing-is . 
+<pre><code class="language-sdparse">Жоқ , Айгүлдің күшігі жоқ . \n No , Aygül's dog not-existing-is . 
 discourse(жоқ-5, Жоқ-1)
 nsubj(жоқ-5, күшігі-4)
-~~~
+</code></pre>
 
-And another example:
+<p>And another example:</p>
 
-~~~ sdparse
-Жоқ , хат жазып берейін . \n No , letter writing let-me .
+<pre><code class="language-sdparse">Жоқ , хат жазып берейін . \n No , letter writing let-me .
 discourse(жазып-4, Жоқ-1)
-~~~
+</code></pre>
 
-The `discourse` label is also used for modal words, and the question word (ма):
+<p>The <code>discourse</code> label is also used for modal words, and the question word (ма):</p>
 
-~~~ sdparse
-Ал Айгүлдің күшігі бар ма ? \n And Aygül's dog existing-is does-it ?
+<pre><code class="language-sdparse">Ал Айгүлдің күшігі бар ма ? \n And Aygül's dog existing-is does-it ?
 discourse(бар-4, ма-5)
 nsubj(бар-4, күшігі-3)
-~~~
+</code></pre>
 
 <!-- TODO: more modals -->
 
@@ -923,8 +890,8 @@ nsubj(бар-4, күшігі-3)
 	<h2><code property="oliasystem:hasTag" lang="">dislocated</code>: <div property="rdfs:label">dislocated elements</div></h2>
 	<div property="rdfs:comment">
 
-This document is a placeholder for the language-specific documentation
-for `dislocated`.
+<p>This document is a placeholder for the language-specific documentation
+for <code>dislocated</code>.</p>
 
 
 	</div>
@@ -938,37 +905,34 @@ for `dislocated`.
 	<h2><code property="oliasystem:hasTag" lang="">dobj</code>: <div property="rdfs:label">direct object</div></h2>
 	<div property="rdfs:comment">
 
-The dependency type `dobj` is used for (nominal) direct objects of the
-verb. 
+<p>The dependency type <code>dobj</code> is used for (nominal) direct objects of the
+verb.</p>
 
-Direct objects are typically in "nominative" (unmarked, indefinite
-accusative) or "accusative" (marked, definite accusative), but may be
-in other cases (e.g. dative).
+<p>Direct objects are typically in “nominative” (unmarked, indefinite
+accusative) or “accusative” (marked, definite accusative), but may be
+in other cases (e.g. dative).</p>
 
-~~~ sdparse
-Ол барлық жерді қарап жүр . \n She all place-in looking is .
+<pre><code class="language-sdparse">Ол барлық жерді қарап жүр . \n She all place-in looking is .
 dobj(қарап-4, жерді-3)
 aux(қарап-4, жүр-5)
-~~~
+</code></pre>
 
-Another example:
+<p>Another example:</p>
 
-~~~ sdparse
-Бұл көрсеткіш 75 пайызды құрайды . \n This indicator 75 percent makes-up-for . 
+<pre><code class="language-sdparse">Бұл көрсеткіш 75 пайызды құрайды . \n This indicator 75 percent makes-up-for . 
 dobj(құрайды-5, пайызды-4)
 nummod(пайызды-4, 75-4)
-~~~
+</code></pre>
 
-A dative direct object:
+<p>A dative direct object:</p>
 
-~~~ sdparse
-Айгүл терезеде тұрған анасына қарайды . \n Aygül window-in standing mother-her watches .
+<pre><code class="language-sdparse">Айгүл терезеде тұрған анасына қарайды . \n Aygül window-in standing mother-her watches .
 dobj(қарайды-5, анасына-4)
 acl(анасына-4, тұрған-3)
 nmod(тұрған-3, терезеде-2)
 nsubj(қарайды-5, Айгүл-1)
 punct(қарайды-5, .-6)
-~~~
+</code></pre>
 
 
 
@@ -983,8 +947,8 @@ punct(қарайды-5, .-6)
 	<h2><code property="oliasystem:hasTag" lang="">expl</code>: <div property="rdfs:label">expletive</div></h2>
 	<div property="rdfs:comment">
 
-This document is a placeholder for the language-specific documentation
-for `expl`.
+<p>This document is a placeholder for the language-specific documentation
+for <code>expl</code>.</p>
 
 
 	</div>
@@ -998,8 +962,8 @@ for `expl`.
 	<h2><code property="oliasystem:hasTag" lang="">foreign</code>: <div property="rdfs:label">foreign words</div></h2>
 	<div property="rdfs:comment">
 
-This document is a placeholder for the language-specific documentation
-for `foreign`.
+<p>This document is a placeholder for the language-specific documentation
+for <code>foreign</code>.</p>
 
 
 	</div>
@@ -1013,8 +977,8 @@ for `foreign`.
 	<h2><code property="oliasystem:hasTag" lang="">goeswith</code>: <div property="rdfs:label">goes with</div></h2>
 	<div property="rdfs:comment">
 
-This document is a placeholder for the language-specific documentation
-for `goeswith`.
+<p>This document is a placeholder for the language-specific documentation
+for <code>goeswith</code>.</p>
 
 
 	</div>
@@ -1028,19 +992,18 @@ for `goeswith`.
 	<h2><code property="oliasystem:hasTag" lang="">iobj</code>: <div property="rdfs:label">indirect object</div></h2>
 	<div property="rdfs:comment">
 
-The indirect object of a verb is any nominal phrase that is a core
-argument of the verb but is not its subject or [direct object](dobj).
+<p>The indirect object of a verb is any nominal phrase that is a core
+argument of the verb but is not its subject or <a href="dobj">direct object</a>.
 The prototypical example is the recipient of ditransitive verbs of
-exchange:
+exchange:</p>
 
-~~~ sdparse
-19 ғасырдың 2 жартысынан Иран музыкасына еуропалық музыка мәдениеті әсер етті . \n 19 century's 2nd part-from Iran music-to European music culture impression made .
+<pre><code class="language-sdparse">19 ғасырдың 2 жартысынан Иран музыкасына еуропалық музыка мәдениеті әсер етті . \n 19 century's 2nd part-from Iran music-to European music culture impression made .
 iobj(етті-11, музыкасына-6)
 obj(етті-11, әсер-10)
-~~~
+</code></pre>
 
-*Note:* Discussion of what constitutes a core argument in Kazakh is ongoing. The `iobj` relation will
-probably be discarded in favour of subcategorising `nmod`.
+<p><em>Note:</em> Discussion of what constitutes a core argument in Kazakh is ongoing. The <code>iobj</code> relation will
+probably be discarded in favour of subcategorising <code>nmod</code>.</p>
 
 
 	</div>
@@ -1054,8 +1017,8 @@ probably be discarded in favour of subcategorising `nmod`.
 	<h2><code property="oliasystem:hasTag" lang="">list</code>: <div property="rdfs:label">list</div></h2>
 	<div property="rdfs:comment">
 
-This document is a placeholder for the language-specific documentation
-for `list`.
+<p>This document is a placeholder for the language-specific documentation
+for <code>list</code>.</p>
 
 
 	</div>
@@ -1069,24 +1032,25 @@ for `list`.
 	<h2><code property="oliasystem:hasTag" lang="">mark</code>: <div property="rdfs:label">marker</div></h2>
 	<div property="rdfs:comment">
 
-A *marker* (`mark`) is the subordinating conjunction in a
-non-complement subordinate clause.
+<p>A <em>marker</em> (<code>mark</code>) is the subordinating conjunction in a
+non-complement subordinate clause.</p>
 
-The subordinating conjunctions in Kazakh are:
+<p>The subordinating conjunctions in Kazakh are:</p>
 
-* _егер_ "if"
-* _өйткені_ "because"
+<ul>
+  <li><em>егер</em> “if”</li>
+  <li><em>өйткені</em> “because”</li>
+</ul>
 
-~~~ sdparse
-Егер көп жаңбыр жауса , түсімнің бәрі өледі . \n If much rain rain-CND , crop's all die-will
+<pre><code class="language-sdparse">Егер көп жаңбыр жауса , түсімнің бәрі өледі . \n If much rain rain-CND , crop's all die-will
 mark(жауса-4, Егер-1)
 det(жаңбыр-3, көп-2)
 subj(жауса-4, жаңбыр-3)
-~~~
+</code></pre>
 
-The dependency relation `mark` is also used to identify the
-*complementiser* appearing in most clausal complements, where the head
-of the dependency is the main verb of the subordinate clause. 
+<p>The dependency relation <code>mark</code> is also used to identify the
+<em>complementiser</em> appearing in most clausal complements, where the head
+of the dependency is the main verb of the subordinate clause.</p>
 
 
 	</div>
@@ -1100,8 +1064,8 @@ of the dependency is the main verb of the subordinate clause.
 	<h2><code property="oliasystem:hasTag" lang="">mwe</code>: <div property="rdfs:label">multi-word expression</div></h2>
 	<div property="rdfs:comment">
 
-This document is a placeholder for the language-specific documentation
-for `mwe`.
+<p>This document is a placeholder for the language-specific documentation
+for <code>mwe</code>.</p>
 
 
 	</div>
@@ -1115,23 +1079,22 @@ for `mwe`.
 	<h2><code property="oliasystem:hasTag" lang="">name</code>: <div property="rdfs:label">name</div></h2>
 	<div property="rdfs:comment">
 
-Proper names constituted of more than one word are annotated using the dependency type `name`. The last (rightmost) word is the head, and the other words are direct dependents of the head. The last word is chosen to be the head because in Kazakh the last word carries the inflectional information of the whole structure.
+<p>Proper names constituted of more than one word are annotated using the dependency type <code>name</code>. The last (rightmost) word is the head, and the other words are direct dependents of the head. The last word is chosen to be the head because in Kazakh the last word carries the inflectional information of the whole structure.</p>
 
-The `name` dependency relation is used in cases where the multi-word name does not have an obvious internal syntactic structure, as is the case with for instance names of people (**).
+<p>The <code>name</code> dependency relation is used in cases where the multi-word name does not have an obvious internal syntactic structure, as is the case with for instance names of people (**).</p>
 
-If a name has an obvious internal structure, as is often the case in names of books and movies for instance, this structure is marked instead. 
+<p>If a name has an obvious internal structure, as is often the case in names of books and movies for instance, this structure is marked instead.</p>
 
-~~~ sdparse
-Соғыстан кейін Федор Федорович Қарағандыда тұрды . \n War-from after Fëdor Fëdorovič Qarağandı-in stood .
+<pre><code class="language-sdparse">Соғыстан кейін Федор Федорович Қарағандыда тұрды . \n War-from after Fëdor Fëdorovič Qarağandı-in stood .
 name(Федорович-4, Федор-3)
 nsubj(тұрды-6, Федорович-4)
-~~~
+</code></pre>
 
-## Diffs
+<h2 id="diffs">Diffs</h2>
 
-Contrary to the general UD definition of [u-dep/name](), in
+<p>Contrary to the general UD definition of <a href="">u-dep/name</a>, in
 UD Kazakh the last word of the multi-word name expression is
-considered the head.
+considered the head.</p>
 
 
 	</div>
@@ -1145,7 +1108,7 @@ considered the head.
 	<h2><code property="oliasystem:hasTag" lang="">neg</code>: <div property="rdfs:label">negation modifier</div></h2>
 	<div property="rdfs:comment">
 
-The `neg` relation is not used in Kazakh.
+<p>The <code>neg</code> relation is not used in Kazakh.</p>
 
 
 	</div>
@@ -1159,34 +1122,31 @@ The `neg` relation is not used in Kazakh.
 	<h2><code property="oliasystem:hasTag" lang="">nmod</code>: <div property="rdfs:label">nominal modifier</div></h2>
 	<div property="rdfs:comment">
 
-*Nominal modifiers* are inflected nominals which modify most commonly a verb or a noun phrase. They can occur alone or 
+<p><em>Nominal modifiers</em> are inflected nominals which modify most commonly a verb or a noun phrase. They can occur alone or 
 together with an postposition in an postpositional phrase. Both cases are analysed similarly, as semantically 
-nominal modifiers and postpositional phrases are similar.
+nominal modifiers and postpositional phrases are similar.</p>
 
-`nmod` is by far the most used relation in UD Kazakh.
+<p><code>nmod</code> is by far the most used relation in UD Kazakh.</p>
 
-*Postpositional phrases:*
+<p><em>Postpositional phrases:</em></p>
 
-~~~ sdparse
-Азамат ағашқа қарай жүгірді . \n Azamat tree-to towards ran .
+<pre><code class="language-sdparse">Азамат ағашқа қарай жүгірді . \n Azamat tree-to towards ran .
 nsubj(жүгірді-4, Азамат-1)
 case(ағашқа-2, қарай-3)
 punct(жүгірді-4, .-5)
 nmod(жүгірді-4, ағашқа-2)
-~~~
+</code></pre>
 
-*Izafet construction:*
+<p><em>Izafet construction:</em></p>
 
-Genitive nouns in the izafet construction get a special relation, `nmod:poss`, be they indefinite:
+<p>Genitive nouns in the izafet construction get a special relation, <code>nmod:poss</code>, be they indefinite:</p>
 
-~~~ sdparse
-Дүниежүзілік экономикалық дағдарыс Иран экономикасын тұралатып тастады . \n Global economic depression Iran-of economy declining threw .
+<pre><code class="language-sdparse">Дүниежүзілік экономикалық дағдарыс Иран экономикасын тұралатып тастады . \n Global economic depression Iran-of economy declining threw .
 nmod:poss(экономикасын-5, Иран-4)
 obj(тастады-7, экономикасын-5)
-~~~
+</code></pre>
 
-or definite:
-
+<p>or definite:</p>
 
 
 
@@ -1201,35 +1161,32 @@ or definite:
 	<h2><code property="oliasystem:hasTag" lang="">nsubj</code>: <div property="rdfs:label">nominal subject</div></h2>
 	<div property="rdfs:comment">
 
-The dependency type `nsubj` marks nominal subjects a clause.
+<p>The dependency type <code>nsubj</code> marks nominal subjects a clause.</p>
 
-~~~ sdparse
-Азамат ағашқа қарай жүгірді . \n Azamat tree-to towards ran .
+<pre><code class="language-sdparse">Азамат ағашқа қарай жүгірді . \n Azamat tree-to towards ran .
 nsubj(жүгірді-4, Азамат-1)
 case(ағашқа-2, қарай-3)
 punct(жүгірді-4, .-5)
 nmod(жүгірді-4, ағашқа-2)
-~~~
+</code></pre>
 
-Another example:
+<p>Another example:</p>
 
-~~~ sdparse
-Мұнда үлкен шара өтеді . \n Here big event takes-place .
+<pre><code class="language-sdparse">Мұнда үлкен шара өтеді . \n Here big event takes-place .
 nsubj(өтеді-4, шара-3)
 amod(шара-3, үлкен-2)
 advmod(өтеді-4, Мұнда-1) 
 punct(өтеді-4, .-5)
-~~~
+</code></pre>
 
-Note that the governor may not always be a verb, in copula 
-predication, non-verbal predicates are possible:
+<p>Note that the governor may not always be a verb, in copula 
+predication, non-verbal predicates are possible:</p>
 
-~~~ sdparse
-Сары  жылы түс . \n Yellow warm colour .
+<pre><code class="language-sdparse">Сары  жылы түс . \n Yellow warm colour .
 nsubj(түс-3, Сары-1)
 amod(түс-3, жылы-2)
 punct(түс-3, .-4)
-~~~
+</code></pre>
 
 
 	</div>
@@ -1243,25 +1200,23 @@ punct(түс-3, .-4)
 	<h2><code property="oliasystem:hasTag" lang="">nummod</code>: <div property="rdfs:label">numeric modifier</div></h2>
 	<div property="rdfs:comment">
 
-*Numeric modifiers* of a noun or NP, when they function as quantifiers
-are marked with the `nummod` dependency type. 
+<p><em>Numeric modifiers</em> of a noun or NP, when they function as quantifiers
+are marked with the <code>nummod</code> dependency type.</p>
 
-Ordinal numbers should get the `amod` type.
+<p>Ordinal numbers should get the <code>amod</code> type.</p>
 
 <!-- fname:num.pdf -->
-~~~ sdparse
-Бразилия өз жерінде чемпионатты екі рет өткізген бесінші ел болды . \n Brazil own land-in championship two times XX fifth country was .
+<pre><code class="language-sdparse">Бразилия өз жерінде чемпионатты екі рет өткізген бесінші ел болды . \n Brazil own land-in championship two times XX fifth country was .
 nummod(рет-6, екі-5)
 nmod(ел-9, рет-6)
 amod(ел-9, бесінші-8)
-~~~
+</code></pre>
 
-Another example:
+<p>Another example:</p>
 
-~~~ sdparse 
-Баба-атаға да үш күн түнеді . \n Baba-ata-to also three days slept-over .
+<pre><code class="language-sdparse">Баба-атаға да үш күн түнеді . \n Baba-ata-to also three days slept-over .
 nummod(күн-4, үш-3)
-~~~
+</code></pre>
 
 
 	</div>
@@ -1275,15 +1230,14 @@ nummod(күн-4, үш-3)
 	<h2><code property="oliasystem:hasTag" lang="">parataxis</code>: <div property="rdfs:label">parataxis</div></h2>
 	<div property="rdfs:comment">
 
-When two sentences share no relation but are written together in a single 
+<p>When two sentences share no relation but are written together in a single 
 sentence (delimited by comma, dash, semicolon or other punctuation) then we use the relation parataxis. 
 As with explicit coordinations, the last element is the governor. 
-Also parenthetical and interjected clauses can receive the `parataxis` dependency. 
+Also parenthetical and interjected clauses can receive the <code>parataxis</code> dependency.</p>
 
-~~~ sdparse
-Азамат пен Айгүл ойнағанды жақсы көреді , олар әрдайым бақшада бірге ойнайды . \n Azamat and Aygül playing XX see , they always garden-in together play .
+<pre><code class="language-sdparse">Азамат пен Айгүл ойнағанды жақсы көреді , олар әрдайым бақшада бірге ойнайды . \n Azamat and Aygül playing XX see , they always garden-in together play .
 parataxis(ойнайды-12, көреді-6)
-~~~
+</code></pre>
 
 
 	</div>
@@ -1297,17 +1251,16 @@ parataxis(ойнайды-12, көреді-6)
 	<h2><code property="oliasystem:hasTag" lang="">punct</code>: <div property="rdfs:label">punctuation</div></h2>
 	<div property="rdfs:comment">
 
-The dependency type `punct` is used to mark punctuation. The dependent is the punctuation 
+<p>The dependency type <code>punct</code> is used to mark punctuation. The dependent is the punctuation 
 symbol, and the governor is the element which the punctuation symbol delimits. For instance, 
-with coordination, the last coordinated element is the head of all `punct` dependencies 
-in the coordination.
+with coordination, the last coordinated element is the head of all <code>punct</code> dependencies 
+in the coordination.</p>
 
-*Coordination and parataxis:*
+<p><em>Coordination and parataxis:</em></p>
 
-The punctuation attaches to the governor.
+<p>The punctuation attaches to the governor.</p>
 
-~~~ sdparse
-Олар Финляндия , Швеция және Эстонияидан кейін Ресейге барды . \n They Finland , Sweden and Estonia-from after Russia-to went .
+<pre><code class="language-sdparse">Олар Финляндия , Швеция және Эстонияидан кейін Ресейге барды . \n They Finland , Sweden and Estonia-from after Russia-to went .
 case(Эстонияидан-6, кейін-7)
 conj(Эстонияидан-6, Швеция-4)
 cc(Эстонияидан-6, және-5)
@@ -1316,12 +1269,11 @@ punct(Эстонияидан-6, ,-3)
 nmod(барды-9, Эстонияидан-6)
 subj(барды-9, Олар-1)
 nmod(барды-9, Ресейге-8)
-~~~
+</code></pre>
 
-*Adverbial clauses:*
+<p><em>Adverbial clauses:</em></p>
 
-The punctuation attaches to the head of the adverbial phrase.
-
+<p>The punctuation attaches to the head of the adverbial phrase.</p>
 
 
 
@@ -1336,19 +1288,18 @@ The punctuation attaches to the head of the adverbial phrase.
 	<h2><code property="oliasystem:hasTag" lang="">remnant</code>: <div property="rdfs:label">remnant in ellipsis</div></h2>
 	<div property="rdfs:comment">
 
-The `remnant` relation is used to provide a treatment of ellipsis (in
+<p>The <code>remnant</code> relation is used to provide a treatment of ellipsis (in
 the case of gapping and stripping, where a predicational or verbal
-head gets elided). In particular, `remnant` aims to provide analyses
-that do not postulate empty nodes.
+head gets elided). In particular, <code>remnant</code> aims to provide analyses
+that do not postulate empty nodes.</p>
 
-~~~ sdparse
-Ашылу матчы Сан-Паулуда , ал финалы Рио-де-Жанейрода орын алды . \n Opening match São-Paulo-in , and final Rio-de-Janeiro-in place took .
+<pre><code class="language-sdparse">Ашылу матчы Сан-Паулуда , ал финалы Рио-де-Жанейрода орын алды . \n Opening match São-Paulo-in , and final Rio-de-Janeiro-in place took .
 remnant(Рио-де-Жанейрода-7, Сан-Паулуда-3)
 remnant(финалы-6 ,матчы-2)
 nmod(алды-9, Рио-де-Жанейрода-7)
 nsubj(алды-9, финалы-6)
 nmod(матчы-2, Ашылу-1)
-~~~
+</code></pre>
 
 
 	</div>
@@ -1362,8 +1313,8 @@ nmod(матчы-2, Ашылу-1)
 	<h2><code property="oliasystem:hasTag" lang="">reparandum</code>: <div property="rdfs:label">overridden disfluency</div></h2>
 	<div property="rdfs:comment">
 
-This document is a placeholder for the language-specific documentation
-for `reparandum`.
+<p>This document is a placeholder for the language-specific documentation
+for <code>reparandum</code>.</p>
 
 
 	</div>
@@ -1377,17 +1328,16 @@ for `reparandum`.
 	<h2><code property="oliasystem:hasTag" lang="">root</code>: <div property="rdfs:label">root</div></h2>
 	<div property="rdfs:comment">
 
-The `root` grammatical relation points to the root of the sentence. A
-fake node `ROOT` is used as the governor.
+<p>The <code>root</code> grammatical relation points to the root of the sentence. A
+fake node <code>ROOT</code> is used as the governor.</p>
 
-~~~ sdparse
-ROOT Азамат ағашқа қарай жүгірді . \n ROOT Azamat tree-to towards ran .
+<pre><code class="language-sdparse">ROOT Азамат ағашқа қарай жүгірді . \n ROOT Azamat tree-to towards ran .
 root(ROOT-1, жүгірді-5)
 nsubj(жүгірді-5, Азамат-2)
 case(ағашқа-3, қарай-4)
 punct(жүгірді-5, .-6)
 nmod(жүгірді-5, ағашқа-3)
-~~~
+</code></pre>
 
 
 
@@ -1402,18 +1352,17 @@ nmod(жүгірді-5, ағашқа-3)
 	<h2><code property="oliasystem:hasTag" lang="">vocative</code>: <div property="rdfs:label">vocative modifier</div></h2>
 	<div property="rdfs:comment">
 
-The dependency type `vocative` is used for *vocatives*, that is,
+<p>The dependency type <code>vocative</code> is used for <em>vocatives</em>, that is,
 expressions where someone is being addressed. The governor of the
 dependency is the main predicate of the clause where the addressing
-occurs.
+occurs.</p>
 
 <!-- fname:voc.pdf -->
-~~~ sdparse
-Жоқ , Айгүл , айта алмаймын . \n No , Aygül , say can-not-I . 
+<pre><code class="language-sdparse">Жоқ , Айгүл , айта алмаймын . \n No , Aygül , say can-not-I . 
 vocative(айта-5, Айгүл-3)
 discourse(айта-5, Жоқ-1)
 aux(айта-5, алмаймын-6)
-~~~
+</code></pre>
 
 
 
@@ -1428,20 +1377,19 @@ aux(айта-5, алмаймын-6)
 	<h2><code property="oliasystem:hasTag" lang="">xcomp</code>: <div property="rdfs:label">open clausal complement</div></h2>
 	<div property="rdfs:comment">
 
-The dependency type `xcomp` is reserved for clausal complements which have an external 
+<p>The dependency type <code>xcomp</code> is reserved for clausal complements which have an external 
 subject, that is, whose subject is shared with the complemented verb (a phenomenon also 
 known as subject control). Note that the subject of the complementing clause must be 
-the *subject* of the complemented verb, not any other sentence element.
+the <em>subject</em> of the complemented verb, not any other sentence element.</p>
 
-~~~ sdparse
-Ол Азаматты табуға әрекет етіп жүр . \n She Azamat finding activity doing is . 
+<pre><code class="language-sdparse">Ол Азаматты табуға әрекет етіп жүр . \n She Azamat finding activity doing is . 
 xcomp(етіп-5, табуға-3)
 nsubj(етіп-5, Ол-1)
 dobj(табуға-3, Азаматты-2)
-~~~
+</code></pre>
 
-*Note:* The existence of `xcomp` is uncertain in Kazakh, the vast majority of clausal
-complements are not controlled and should get `ccomp` instead.
+<p><em>Note:</em> The existence of <code>xcomp</code> is uncertain in Kazakh, the vast majority of clausal
+complements are not controlled and should get <code>ccomp</code> instead.</p>
 
 
 	</div>
