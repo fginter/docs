@@ -128,3 +128,12 @@ parataxis(confirmed, let)
 
 In the second example, we treat the second half as the head of the dependency
 because the first half feels like a whole clause interjection, not like the main clause of the utterance.
+
+### Tag questions
+
+We also use the parataxis relation for tag questions such as _isn't it?_ or _haven't you?_.
+
+~~~ sdparse
+It 's not me , is it ?
+parataxis(me, is)
+~~~
