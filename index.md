@@ -101,4 +101,3 @@ there are direct links to our treebank search that you can use to browse the sus
 Check that the [list of contributors](contributors.html) is correct; this is gathered from the [metadata](language_metadata.html) in the READMEs. General instructions for contributing to the online documentation can be found [here](contributing.html).
 
 There is a separate [page about tools](tools.html) that are available for work with UD data.
-</span>
