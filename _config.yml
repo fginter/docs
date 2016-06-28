@@ -668,6 +668,20 @@ collections:
   vi-overview:
     output: true
 #
+# Uralic
+#
+  urj-pos:
+    output: true
+    permalink: /urj/pos/:path.html
+  urj-feat:
+    output: true
+    permalink: /urj/feat/:path.html
+  urj-dep:
+    output: true
+    permalink: /urj/dep/:path.html
+  urj-overview:
+    output: true
+#
 # Template
 #
   template-pos:
@@ -693,6 +707,9 @@ collections:
   2015-08-23-uppsala:
     output: true
     permalink: /2015-08-23-uppsala/:path.html
+  v2:
+    output: true
+    permalink: /v2/:path.html
 
 excerpt_separator: "\n\n"
 
