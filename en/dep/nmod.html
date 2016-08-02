@@ -50,7 +50,7 @@ predicates. <code>nmod</code> is a noun functioning as a non-core (oblique)
 argument or adjunct. In English, <code>nmod</code> is used</p>
 
 <ul>
-  <li>for prepositional complements:</li>
+  <li>for prepositional complements (including datives and partitives):</li>
 </ul>
 
 <pre><code class="language-sdparse">the office of the Chair
@@ -66,6 +66,12 @@ nmod(give, children)
 case(children, to)
 </code></pre>
 
+<pre><code class="language-sdparse">some of the toys
+nmod(some, toys)
+case(toys, of)
+det(toys, the)
+</code></pre>
+
 <p>The <code>nmod</code> relation holds between the noun/predicate modified by the
 prepositional complement and the noun introduced by the preposition.</p>
 
@@ -79,7 +85,7 @@ nmod(office-4, Chair-2)
 case(Chair-2, 's-3)
 </code></pre>
 
-<p>Nominal modifiers not introduced by a preposition or not ‘s genitives
+<p>Nominal modifiers not marked by a preposition or ‘s genitive
 are tagged <a href="">nmod:npmod</a>, a subtype of <code>nmod</code>. Temporal nominal
 modifiers are also marked with a separate relation <a href="">nmod:tmod</a>. See
 the definitions of these relations.</p>

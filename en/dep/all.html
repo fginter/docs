@@ -172,9 +172,11 @@ in two places.</p>
 	</tr>	
 	<tr>
 	  <td><a>appos</a></td>
+	  <td>&nbsp;</td>
 	  <td><a>det</a></td>
 	</tr>
 	<tr>
+	  <td>&nbsp;</td>
 	  <td>&nbsp;</td>
 	  <td>↳<a>det:predet</a></td>
 	</tr>	
@@ -395,8 +397,9 @@ advmod(often, less)
 	<h2><code property="oliasystem:hasTag" lang="">amod</code>: <div property="rdfs:label">adjectival modifier</div></h2>
 	<div property="rdfs:comment">
 
-<p>An adjectival modifier of an NP is any adjectival phrase that serves
-to modify the meaning of the NP.</p>
+<p>An adjectival modifier of a nominal is any adjective or adjectival phrase that serves
+to modify the meaning of the nominal. This includes always or sometimes postposed 
+modifiers, such as <em>else</em> and <em>nice</em> in the examples below.</p>
 
 <pre><code class="language-sdparse">Sam eats red meat
 amod(meat, red)
@@ -409,6 +412,15 @@ amod(loan, dollar)
 <pre><code class="language-sdparse">Sam took out  a $ 3 million loan
 amod(loan, $)
 </code></pre>
+
+<pre><code class="language-sdparse">Anything else for me ?
+amod(Anything, else)
+</code></pre>
+
+<pre><code class="language-sdparse">We can go somewhere nice .
+amod(somewhere, nice)
+</code></pre>
+
 
 
 	</div>
@@ -547,6 +559,8 @@ nmod(speech, head)
 cc(left, And)
 </code></pre>
 
+<p>See also: <a href="conj.html"><code>conj</code></a></p>
+
 
 	</div>
 	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_en-dep/cc.md" target="#">edit cc</a>
@@ -583,12 +597,24 @@ cc:preconj(boys, Both)
 
 <pre><code class="language-sdparse">He says that you like to swim
 ccomp(says, like)
+mark(like, that)
+</code></pre>
+
+<pre><code class="language-sdparse">He says you like to swim
+ccomp(says, like)
 </code></pre>
 
 <pre><code class="language-sdparse">I am certain that he did it 
 ccomp(certain, did) 
 mark(did, that) 
 </code></pre>
+
+<pre><code class="language-sdparse">The boss said to start digging
+ccomp(said, start)
+mark(start, to)
+</code></pre>
+
+<p>See <a href="http://universaldependencies.org/u/dep/ccomp.html">this page</a> for additional explanation and examples.</p>
 
 
 	</div>
@@ -602,10 +628,10 @@ mark(did, that)
 	<h2><code property="oliasystem:hasTag" lang="">compound</code>: <div property="rdfs:label">compound</div></h2>
 	<div property="rdfs:comment">
 
-<p><em>compound</em> is used for</p>
+<p><em>compound</em> is used for:</p>
 
 <ul>
-  <li>noun compounds (Note that in the current system for dependency extraction, all nouns modify the rightmost noun of the noun phrase – there is no intelligent noun compound analysis.  This is likely to be fixed once the Penn Treebank represents the branching structure of noun phrases.)</li>
+  <li>noun compounds. (These should show the correct modification structure of noun compounds, and do - or should - in the English UD treebank. Note, however, that the current automatic Stanford UD converter still makes all nouns modify the rightmost noun of the noun phrase when run on corpora like the 1999 Penn Treebank 3 which do not show noun compound structure - there is no intelligent noun compound analysis.  The correct results are achieved when run on corpora like OntoNotes which do represent the branching structure of noun phrases.)</li>
 </ul>
 
 <pre><code class="language-sdparse">phone book
@@ -613,7 +639,20 @@ compound(book, phone)
 </code></pre>
 
 <pre><code class="language-sdparse">oil price futures
-nn(futures, oil)
+compound(price, oil)
+compound(futures, price)
+</code></pre>
+
+<p>This includes proper names that use regular syntactic relations—contrast with <a href="">name</a>:</p>
+
+<pre><code class="language-sdparse">Wall Street
+compound(Street, Wall)
+</code></pre>
+
+<pre><code class="language-sdparse">Natural Resources Conservation Service
+amod(Resources-2, Natural-1)
+compound(Conservation-3, Resources-2)
+compound(Service-4, Conservation-3)
 </code></pre>
 
 <ul>
@@ -628,6 +667,39 @@ compound(thousand, four)
 compound(billion, 3.2)
 </code></pre>
 
+<ul>
+  <li>adjectival compounds</li>
+</ul>
+
+<pre><code class="language-sdparse">a medium - large company
+amod (company, large)
+compound(large, medium)
+punct(large, -)
+</code></pre>
+
+<pre><code class="language-sdparse">a self - driven research strategy
+compound(strategy, research)
+amod(strategy, driven)
+compound(driven, self)
+punct(driven, -)
+</code></pre>
+
+<ul>
+  <li>imitative reduplication</li>
+</ul>
+
+<pre><code class="language-sdparse">Does he go oink oink ?
+compound(oink-5, oink-4)
+</code></pre>
+
+<ul>
+  <li>idiomatic phrasal verbs are analyzed as a language-specific subrelation of <em>compound</em></li>
+</ul>
+
+<pre><code class="language-sdparse">She just made up the answer .
+compound:prt(made, up)
+</code></pre>
+
 
 	</div>
 	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_en-dep/compound.md" target="#">edit compound</a>
@@ -640,8 +712,8 @@ compound(billion, 3.2)
 	<h2><code property="oliasystem:hasTag" lang="">compound:prt</code>: <div property="rdfs:label">phrasal verb particle</div></h2>
 	<div property="rdfs:comment">
 
-<p>The phrasal verb particle relation identifies a phrasal verb, and
-holds between the verb and its particle. It is a subtype of the
+<p>The phrasal verb particle relation identifies an idiomatic phrasal verb, and
+holds between the verb and its particle (tagged as <a href="">ADP</a>). It is a subtype of the
 <a href="">compound</a> relation.</p>
 
 <pre><code class="language-sdparse">They shut down the station
@@ -650,6 +722,17 @@ compound:prt(shut, down)
 
 <pre><code class="language-sdparse">They shut the station down
 compound:prt(shut, down)
+</code></pre>
+
+<p>This relation excludes literal/directional uses of prepositions/particles, such as <em>up</em>, <em>down</em>, <em>in</em>, <em>out</em>, etc.
+These would typically become an ADV with the relation <a href="">advmod</a>:</p>
+
+<pre><code class="language-sdparse">The dentist pulled out the tooth
+advmod(pulled, out)
+</code></pre>
+
+<pre><code class="language-sdparse">The dentist pulled the tooth out
+advmod(pulled, out)
 </code></pre>
 
 
@@ -672,6 +755,8 @@ conjunct and other conjunctions depend on it via the <code>conj</code> relation.
 <pre><code class="language-sdparse">Bill is big and honest
 conj(big, honest)
 </code></pre>
+
+<p>See also: <a href="cc.html"><code>cc</code></a></p>
 
 
 	</div>
@@ -869,6 +954,12 @@ det(man, The)
 
 <pre><code class="language-sdparse">Which book do you prefer ?
 det(book, Which)
+</code></pre>
+
+<pre><code class="language-sdparse">You 've all won !
+nsubj(won, You)
+det(You, all)
+aux(won, 've)
 </code></pre>
 
 
@@ -1505,22 +1596,8 @@ compound(Service-4, Conservation-3)
 </code></pre>
 
 <p>In addition, regular syntactic relations are used:
-(i) for a modifying determiner or
-(ii) to connect together the words of a description or name which involve embedded prepositional phrases, sentences, etc.</p>
-
-<pre><code class="language-sdparse">Le Japon
-det(Japon-2, Le-1)
-</code></pre>
-
-<pre><code class="language-sdparse">Ludwig van Beethoven
-case(Beethoven, van)
-</code></pre>
-
-<pre><code class="language-sdparse">Miguel de Cervantes y Saavedra
-conj(Cervantes, Saavedra)
-cc(Cervantes, y)
-case(Cervantes, de)
-</code></pre>
+(i) for a modifying English determiner or
+(ii) to connect together the words of a description or name which involve English embedded prepositional phrases, sentences, etc.</p>
 
 <pre><code class="language-sdparse">The king of Sweden
 det(king-2, The-1)
@@ -1528,10 +1605,29 @@ nmod(king-2, Sweden-4)
 case(Sweden-4, of-3)
 </code></pre>
 
+<p>If a name contains a function word in another language than English, we also use the <code>name</code> relation.</p>
+
 <pre><code class="language-sdparse">Río de la Plata
-case(Plata-4, de-2)
-det(Plata-4, la-3)
-nmod(Río-1, Plata-4)
+name(Río-1, de-2)
+name(Río-1, la-3)
+name(Río-1, Plata-4)
+</code></pre>
+
+<pre><code class="language-sdparse">Ludwig van Beethoven
+name(Ludwig, van)
+name(Ludwig, Beethoven)
+
+</code></pre>
+
+<pre><code class="language-sdparse">Miguel de Cervantes y Saavedra
+name(Miguel, de)
+name(Miguel, Cervantes)
+name(Miguel, y)
+name(Miguel, Saavedra)
+</code></pre>
+
+<pre><code class="language-sdparse">San Francisco
+name(San, Francisco)
 </code></pre>
 
 
@@ -1578,7 +1674,7 @@ predicates. <code>nmod</code> is a noun functioning as a non-core (oblique)
 argument or adjunct. In English, <code>nmod</code> is used</p>
 
 <ul>
-  <li>for prepositional complements:</li>
+  <li>for prepositional complements (including datives and partitives):</li>
 </ul>
 
 <pre><code class="language-sdparse">the office of the Chair
@@ -1594,6 +1690,12 @@ nmod(give, children)
 case(children, to)
 </code></pre>
 
+<pre><code class="language-sdparse">some of the toys
+nmod(some, toys)
+case(toys, of)
+det(toys, the)
+</code></pre>
+
 <p>The <code>nmod</code> relation holds between the noun/predicate modified by the
 prepositional complement and the noun introduced by the preposition.</p>
 
@@ -1607,7 +1709,7 @@ nmod(office-4, Chair-2)
 case(Chair-2, 's-3)
 </code></pre>
 
-<p>Nominal modifiers not introduced by a preposition or not ‘s genitives
+<p>Nominal modifiers not marked by a preposition or ‘s genitive
 are tagged <a href="">nmod:npmod</a>, a subtype of <code>nmod</code>. Temporal nominal
 modifiers are also marked with a separate relation <a href="">nmod:tmod</a>. See
 the definitions of these relations.</p>
@@ -1846,6 +1948,7 @@ parataxis(walk, kidding)
 parataxis(left, said)
 </code></pre>
 
+<p>See also: <a href="/u/dep/parataxis.html">language-general documentation of <code>parataxis</code></a></p>
 
 
 	</div>

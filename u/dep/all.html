@@ -721,6 +721,11 @@ adjective.</p>
 
 <pre><code class="language-sdparse">He says that you like to swim
 ccomp(says, like)
+mark(like, that)
+</code></pre>
+
+<pre><code class="language-sdparse">He says you like to swim
+ccomp(says, like)
 </code></pre>
 
 <p>Such clausal complements may be finite or nonfinite. However, if the
@@ -730,6 +735,7 @@ the appropriate relation is <a href="">xcomp</a>.</p>
 
 <pre><code class="language-sdparse">The boss said to start digging
 ccomp(said, start)
+mark(start, to)
 </code></pre>
 
 <pre><code class="language-sdparse">We started digging
@@ -1950,6 +1956,14 @@ parataxis(confirmed, let)
 <p>In the second example, we treat the second half as the head of the dependency
 because the first half feels like a whole clause interjection, not like the main clause of the utterance.</p>
 
+<h3 id="tag-questions">Tag questions</h3>
+
+<p>We also use the parataxis relation for tag questions such as <em>isn’t it?</em> or <em>haven’t you?</em>.</p>
+
+<pre><code class="language-sdparse">It 's not me , is it ?
+parataxis(me, is)
+</code></pre>
+
 
 	</div>
 	<a href="https://github.com/universaldependencies/docs/edit/pages-source/_u-dep/parataxis.md" target="#">edit parataxis</a>
@@ -2192,7 +2206,7 @@ det(place, the)
 	<h2><code property="rdfs:label" lang="">vocative</code>: <div property="rdfs:label">vocative</div></h2>
 	<div property="rdfs:comment">
 
-<p>The <em>vocative</em> relation is used to mark dialogue participant addressed in text (common in conversations, emails and newsgroup postings). The relation links the addressee’s name to its host sentence.</p>
+<p>The <em>vocative</em> relation is used to mark a dialogue participant addressed in a text (common in conversations, dialogue, emails, newsgroup postings, etc.). The relation links the addressee’s name to its host sentence. A vocative commonly co-occurs with a null subject, as in the first example below. If the nominal is clearly vocative in intent, the preference is to use the vocative relation.</p>
 
 <pre><code class="language-sdparse">Guys , take it easy!
 vocative(take, Guys)
