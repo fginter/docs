@@ -34,7 +34,7 @@ Some quick links:
 1. **[Functional labels.](function_dependents.html)**
    Cross-linguistic guidelines for the use of the functional labels such as `aux`, `det`, `cop`.
    There is currently a lot of variation around this.
-   Representing lexical heads promotes crosslinguistic parallelism, but only if we can agree on what lexical heads *are*.
+   Representing lexical heads promotes cross-linguistic parallelism, but only if we can agree on what lexical heads *are*.
 1. **[Tokenization](tokenization.html)** (or perhaps better, word segmentation).
    We need to be able to handle the whole spectrum from multitoken words in Vietnamese to multiword
    tokens in Turkish. Ideally, we should also set up more substantial criteria for when to split
@@ -46,7 +46,7 @@ Some quick links:
    but also because it has implications for the basic dependencies. If we know that something
    can be captured in the enhanced dependencies, we don’t need to clutter the basic dependencies with
    this information. Examples of constructions that can benefit from this are control verbs and light verb
-   constructions. Report from Uppsala meeting: [future](../2015-08-23-uppsala/future.html).
+   constructions. In this connection, it would also be relevant to discuss what language-specific subtypes can and cannot be used for. We seem to have a lot of inconsistencies here. Report from Uppsala meeting: [future](../2015-08-23-uppsala/future.html).
 1. **[Ellipsis.](ellipsis.html)**
    There seems to be a consensus that we should get rid of the remnant relation, but it is still unclear
    what we should put in its place.
@@ -56,3 +56,12 @@ Some quick links:
    predictable from the syntactic relation and vice versa? For example, does “det” imply “DET” (rather than “PRON”)
    or does “DET” imply “det” (or both or neither)? Coming up with a more consistent set of principles for making
    these decisions will be important to achieve (better) cross-language consistency.
+1. **[Features.](features.html)** Check the [language-specific features](/ext-feat-index.html) and values defined so far in our treebanks. Add new values to existing features where necessary. Do we need entire new features as well? Evidentiality perhaps?
+1. **[CoNLL-U.](conllu.html)** The definition of the CoNLL-U format may have to be revised in the light of decisions about tokenization (see above). In addition, we should standardize comments for sentence ids, etc.
+
+## Proposed revisions
+
+1. Remove [u-dep/nsubjpass](), [u-dep/csubjpass](), and [u-dep/auxpass]() from the list of universal relations. [Discussion](core_dependents.html)
+1. Require language-specific subtypes to be used for true syntactic subtypes, not cross-classification of syntax/semantics.  [Discussion](enhanced.html)
+1. Remove [u-dep/remnant]() from universal relations. Use promotion + enhanced representation to annotate ellipsis. [Discussion](ellipsis.html)
+1. New general principles for form vs. function in POS assignment, and new proposal for categorizing the pronominal words. [Discussion](form_vs_function.html)
