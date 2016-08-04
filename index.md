@@ -56,9 +56,9 @@ so that we can avoid problems with conflicting versions.
 
 # UD Treebanks
 
-<div id="accordion" class="jquery-ui-accordion">
+
 {% include at_glance.html %}
-</div>
+
 
 
 
