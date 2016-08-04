@@ -1,6 +1,10 @@
 /* -*- Mode: CSS; tab-width: 4; indent-tabs-mode: nil; -*- */
 /* vim:set ft=css ts=4 sw=4 sts=4 autoindent: */
 
+
+/* moves the accordion tab arrows to the first line in each block */
+.ui-accordion .ui-accordion-header .ui-icon { top: 6pt }
+
 /* style for home page and manual. */
 
 /* @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,400italic,600italic,700italic&subset=latin&effect=smoothing); */
