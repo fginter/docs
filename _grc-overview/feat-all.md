@@ -36,6 +36,7 @@ https://www.w3.org/2012/pyRdfa/extract?uri=http://universaldependencies.org/docs
 	{% for par in pars %}
 		{% assign cand_feats = par | split: ":" %}
 		{% for cand_feat in cand_feats %}
+			<span style="visibility:hidden">cand_feat {{ cand_feat }}</span>
 			{% if cand_feat contains "`" %}
 				{% if cand_feat contains " " %}{% else %}
 					{% assign feat = cand_feat | replace: "`","" %}
