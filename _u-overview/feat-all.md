@@ -30,8 +30,10 @@ permalink: u/feat/all.html
 		<code>[</code>
 	{% assign pars = p.content | split: "### " %}
 	{% for par in pars %}
+		<span style="visibility:hidden"><PAR>{{ par }}</PAR></span>
 		{% assign cand_feats = par | split: ":" %}
 		{% for cand_feat in cand_feats %}
+			<span style="visibility:hidden"><CAND_FEAT>{{ cand_feat }}</CAND_FEAT></span>
 			{% if cand_feat contains "`" %}
 				{% if cand_feat contains " " %}{% else %}
 					{% assign feat = cand_feat | replace: "`","" %}
